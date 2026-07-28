@@ -890,6 +890,313 @@ figure.chart,
 }
 .memo-item:nth-child(even) .memo-num{color:var(--red)}
 
+/* Editorial photography: process, order book, demand pools and finale. */
+.photo-credit{
+  margin-top:10px;
+  color:#8f8783;
+  font-size:11px;
+  line-height:1.55;
+}
+.photo-credit a{color:#c8bfbb;text-decoration-color:rgba(200,191,187,.45)}
+.value-journey{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+  margin-top:34px;
+}
+.value-journey figure{
+  position:relative;
+  min-height:300px;
+  overflow:hidden;
+  border-radius:9px;
+  background:#181719;
+}
+.value-journey img{
+  width:100%;
+  height:100%;
+  min-height:300px;
+  display:block;
+  object-fit:cover;
+  filter:saturate(.82) contrast(1.04);
+  transition:transform .55s ease,filter .55s ease;
+}
+.value-journey figure:hover img{
+  transform:scale(1.035);
+  filter:saturate(1) contrast(1.03);
+}
+.value-journey figure::after{
+  content:"";
+  position:absolute;
+  inset:38% 0 0;
+  background:linear-gradient(180deg,transparent,rgba(8,8,10,.90));
+  pointer-events:none;
+}
+.value-journey figcaption{
+  position:absolute;
+  z-index:1;
+  right:14px;
+  bottom:15px;
+  left:14px;
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  line-height:1.25;
+}
+.value-journey figcaption span{
+  display:block;
+  margin-bottom:5px;
+  color:var(--salmon);
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.operational-photo{
+  position:relative;
+  min-height:390px;
+  margin:54px 0 0;
+  overflow:hidden;
+  border-radius:12px;
+  background:#181719;
+}
+.operational-photo img{
+  width:100%;
+  height:390px;
+  display:block;
+  object-fit:cover;
+  object-position:center 56%;
+  filter:saturate(.78) contrast(1.08);
+}
+.operational-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(7,7,9,.76),rgba(7,7,9,.08) 65%),linear-gradient(0deg,rgba(7,7,9,.58),transparent 55%);
+}
+.operational-photo figcaption{
+  position:absolute;
+  z-index:1;
+  right:32px;
+  bottom:28px;
+  left:32px;
+  max-width:600px;
+  color:#f4efec;
+  font-size:15px;
+  font-weight:600;
+  line-height:1.55;
+}
+.operational-photo figcaption span{
+  display:block;
+  margin-bottom:7px;
+  color:var(--salmon);
+  font-size:10.5px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.orderbook-note{
+  margin-top:30px;
+  padding:22px 0;
+  border-top:1px solid rgba(255,255,255,.17);
+  border-bottom:1px solid rgba(255,255,255,.17);
+  color:#d6cfcb;
+  font-size:14.5px;
+  line-height:1.7;
+}
+.orderbook-note .tag{
+  margin-bottom:6px;
+  color:var(--salmon);
+  font-size:10.5px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.orderbook-note b{color:#fff}
+.rws-feature{
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr);
+  margin-top:30px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;
+  background:linear-gradient(145deg,rgba(42,24,22,.84),rgba(15,15,17,.92));
+  box-shadow:0 18px 44px rgba(0,0,0,.22);
+}
+.rws-visual{
+  position:relative;
+  min-height:100%;
+  margin:0;
+  overflow:hidden;
+}
+.rws-visual img{
+  width:100%;
+  height:100%;
+  min-height:430px;
+  display:block;
+  object-fit:cover;
+  filter:saturate(.86) contrast(1.06);
+}
+.rws-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,rgba(7,7,9,.78),transparent 55%);
+}
+.rws-visual figcaption{
+  position:absolute;
+  z-index:1;
+  right:22px;
+  bottom:19px;
+  left:22px;
+  color:#ddd5d1;
+  font-size:10.5px;
+  line-height:1.5;
+}
+.rws-copy{padding:34px 34px 32px}
+.rws-copy .tag{
+  color:var(--salmon);
+  font-size:10.5px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.rws-value{
+  margin:9px 0 8px;
+  color:#fff;
+  font-size:clamp(46px,6vw,72px);
+  font-weight:800;
+  line-height:.95;
+  letter-spacing:-.045em;
+}
+.rws-copy h3{margin-bottom:18px;font-size:21px}
+.rws-facts{display:grid;margin:0}
+.rws-facts div{
+  display:grid;
+  grid-template-columns:128px 1fr;
+  gap:14px;
+  padding:13px 0;
+  border-top:1px solid rgba(255,255,255,.13);
+}
+.rws-facts dt{
+  color:#978f8b;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.rws-facts dd{
+  margin:0;
+  color:#eee8e5;
+  font-size:12.5px;
+  line-height:1.55;
+}
+.rws-caveat{
+  margin-top:15px;
+  color:#a9a09c;
+  font-size:10.5px;
+  line-height:1.55;
+}
+.industry-strip{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:11px;
+  margin-top:34px;
+}
+.industry-strip figure{
+  position:relative;
+  min-height:330px;
+  overflow:hidden;
+  border-radius:9px;
+  background:#181719;
+}
+.industry-strip img{
+  width:100%;
+  height:330px;
+  display:block;
+  object-fit:cover;
+  filter:saturate(.82) contrast(1.05);
+}
+.industry-strip figure::after{
+  content:"";
+  position:absolute;
+  inset:28% 0 0;
+  background:linear-gradient(180deg,transparent,rgba(7,7,9,.94));
+}
+.industry-strip figcaption{
+  position:absolute;
+  z-index:1;
+  right:20px;
+  bottom:20px;
+  left:20px;
+}
+.industry-strip figcaption b{
+  display:block;
+  color:#fff;
+  font-size:17px;
+  line-height:1.3;
+}
+.industry-strip figcaption span{
+  display:block;
+  margin-top:7px;
+  padding-top:8px;
+  border-top:2px solid var(--red);
+  color:#d3cbc7;
+  font-size:11.5px;
+  font-weight:600;
+  line-height:1.45;
+}
+.strategy-finale{
+  position:relative;
+  min-height:500px;
+  margin:62px 0 0;
+  overflow:hidden;
+  border-radius:14px;
+  background:#121214;
+}
+.strategy-finale img{
+  width:100%;
+  height:500px;
+  display:block;
+  object-fit:cover;
+  object-position:center center;
+  filter:saturate(.82) contrast(1.05);
+}
+.strategy-finale::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(7,7,9,.88),rgba(7,7,9,.20) 72%),linear-gradient(0deg,rgba(7,7,9,.66),transparent 55%);
+}
+.strategy-finale figcaption{
+  position:absolute;
+  z-index:1;
+  right:42px;
+  bottom:38px;
+  left:42px;
+  max-width:760px;
+}
+.strategy-finale .tag{
+  color:var(--salmon);
+  font-size:10.5px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.strategy-finale strong{
+  display:block;
+  margin-top:9px;
+  color:#fff;
+  font-size:clamp(25px,3.6vw,39px);
+  font-weight:700;
+  line-height:1.13;
+  letter-spacing:-.02em;
+}
+.strategy-finale small{
+  display:block;
+  margin-top:14px;
+  color:#bcb3af;
+  font-size:10.5px;
+}
+
 /* Semantic colour is reserved for an analytical point, never decoration. */
 .financial-metrics .card:nth-child(2) .v,
 .profit-bridge .card:last-child .v,
@@ -1122,6 +1429,10 @@ footer b{color:#ddd6d2}
   .position-grid,
   .model-steps,
   .signal-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .value-journey{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rws-feature{grid-template-columns:1fr}
+  .rws-visual img{min-height:360px}
+  .industry-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
   .demand-chain .card:nth-child(3),
   .signal-list .card:nth-child(3){border-left:0 !important}
   .switching-case{grid-template-columns:1fr 1fr}
@@ -1151,6 +1462,20 @@ footer b{color:#ddd6d2}
   .model-steps,
   .signal-list,
   .switching-case{grid-template-columns:1fr}
+  .value-journey{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .value-journey figure,
+  .value-journey img{min-height:280px}
+  .industry-strip{grid-template-columns:1fr}
+  .industry-strip figure,
+  .industry-strip img{height:310px;min-height:310px}
+  .rws-copy{padding:28px 24px 26px}
+  .rws-facts div{grid-template-columns:104px 1fr}
+  .operational-photo,
+  .operational-photo img{height:340px;min-height:340px}
+  .operational-photo figcaption{right:22px;bottom:22px;left:22px}
+  .strategy-finale,
+  .strategy-finale img{height:470px;min-height:470px}
+  .strategy-finale figcaption{right:24px;bottom:27px;left:24px}
   .showgrid > .show:first-child,
   .showgrid > .show:last-child{grid-column:auto}
   .showgrid > .show:first-child{padding:24px 20px}
@@ -1197,6 +1522,12 @@ footer b{color:#ddd6d2}
     bottom:-13px;
   }
   .switching-case .card:last-child{grid-column:auto}
+}
+@media(max-width:480px){
+  .value-journey{grid-template-columns:1fr}
+  .value-journey figure,
+  .value-journey img{min-height:320px}
+  .rws-facts div{grid-template-columns:1fr;gap:5px}
 }
 </style>
 </head>
@@ -1389,6 +1720,14 @@ footer b{color:#ddd6d2}
     <div class="card"><div class="num">03</div><h3>Fabricate &amp; install</h3><p>Procurement, production, fit-out, logistics, site management and delivery.</p><div class="yield">Revenue scale</div></div>
     <div class="card"><div class="num">04</div><h3>Activate &amp; operate</h3><p>Events, ticketed experiences, maintenance, programming and audience measurement.</p><div class="yield">Continuity</div></div>
   </div>
+  <div class="value-journey" aria-label="The progression from design to visitor experience">
+    <figure><img src="assets/value-design.jpg" alt="Kingsmen designers reviewing work together in the KR+D studio" loading="lazy"><figcaption><span>01 · Define</span>Design</figcaption></figure>
+    <figure><img src="assets/value-fabrication.jpg" alt="Technicians fabricating interior components in a workshop" loading="lazy"><figcaption><span>02 · Make</span>Fabrication</figcaption></figure>
+    <figure><img src="assets/value-construction.jpg" alt="Exhibition structures being built on site" loading="lazy"><figcaption><span>03 · Build</span>On-site construction</figcaption></figure>
+    <figure><img src="assets/value-installation.jpg" alt="Installation team positioning exhibition elements inside a museum" loading="lazy"><figcaption><span>04 · Finish</span>Installation</figcaption></figure>
+    <figure><img src="assets/eta-oceanarium.jpg" alt="Visitors experiencing the Singapore Oceanarium" loading="lazy"><figcaption><span>05 · Engage</span>Visitor experience</figcaption></figure>
+  </div>
+  <p class="photo-credit">Design and completed-experience imagery: Kingsmen Creatives. Fabrication: <a href="https://www.merservices.co.uk/about/" target="_blank" rel="noopener">MER Services</a>; on-site build: <a href="https://www.itb.com/en/itb-berlin-for-exhibitors/messeplanung/standbau" target="_blank" rel="noopener">ITB Berlin</a>; installation: <a href="https://exhibits.si.edu/portfolio/prestonsingletaryraven/" target="_blank" rel="noopener">Smithsonian Exhibits</a>. Industry process photographs illustrate comparable work and are not presented as Kingsmen projects.</p>
 </div></section>
 
 <!-- ============ FINANCIALS ============ -->
@@ -1429,6 +1768,13 @@ footer b{color:#ddd6d2}
       <tr><td>2025</td><td>372.5</td><td>92.2</td><td>24.7%</td><td>16.8</td><td>13.7</td><td>3.7%</td><td>6.78¢</td><td>3.00¢</td></tr>
     </tbody>
   </table></div>
+
+  <figure class="operational-photo">
+    <img src="assets/financial-operations.jpg" alt="Exhibition installation in progress inside a convention hall" loading="lazy">
+    <figcaption><span>The operating reality behind the margin</span>Physical delivery ties revenue to labour, materials, sequencing and site access. Small execution gains therefore matter disproportionately to profit.</figcaption>
+  </figure>
+  <p class="photo-credit">Illustrative on-site process photography: <a href="https://www.itb.com/en/itb-berlin-for-exhibitors/messeplanung/standbau" target="_blank" rel="noopener">ITB Berlin</a>.</p>
+
   <h3 style="margin-top:56px">FY2025 profit was economically stronger than the headline +4.2% suggests</h3>
   <p class="lede">Headline comparisons are distorted by a S$5.3m property-disposal gain booked in FY2024. Strip it out and the underlying improvement is ≈75%.</p>
 
@@ -1487,12 +1833,29 @@ footer b{color:#ddd6d2}
     </tbody>
   </table></div>
 
-  <div class="grid g2">
-    <div class="card"><div class="tag">FY2025 remaining performance obligations</div>
-      <p style="font-size:15px"><b style="color:var(--ink)">S$80.4m</b> expected in 2026 · <b style="color:var(--ink)">S$56.5m</b> expected in 2027 · <b style="color:var(--ink)">S$13.2m</b> expected in 2028, with a further S$10.7m thereafter.</p></div>
-    <div class="card"><div class="tag">New award — not in the 31 January 2026 book</div>
-      <h3>S$80.8m · Resorts World Sentosa</h3><p>Thematic attraction design-and-build award to Kingsmen Exhibits, announced 22 April 2026 and recognised across FY2026–FY2029. Signed after the 31 January snapshot, it sits on top of the S$151m secured book — an addition worth roughly half that book again.</p></div>
-  </div>
+  <aside class="orderbook-note">
+    <div class="tag">FY2025 remaining performance obligations</div>
+    <b>S$80.4m</b> expected in 2026 · <b>S$56.5m</b> expected in 2027 · <b>S$13.2m</b> expected in 2028, with a further <b>S$10.7m</b> thereafter.
+  </aside>
+
+  <article class="rws-feature">
+    <figure class="rws-visual">
+      <img src="assets/rws-concept-rendering.jpg" alt="Resorts World Sentosa concept art for an immersive adventure dining environment" loading="lazy">
+      <figcaption>Representative RWS 2.0 concept rendering · artist’s impression, not a completed project · Credit: Resorts World Sentosa.</figcaption>
+    </figure>
+    <div class="rws-copy">
+      <div class="tag">New award · outside the 31 January 2026 order book</div>
+      <div class="rws-value">S$80.8m</div>
+      <h3>Resorts World Sentosa thematic attraction</h3>
+      <dl class="rws-facts">
+        <div><dt>Scope</dt><dd>Design-and-build award to Kingsmen Exhibits, announced 22 April 2026.</dd></div>
+        <div><dt>Recognition</dt><dd>Expected across FY2026–FY2029.</dd></div>
+        <div><dt>Scenario input</dt><dd>FY2026 assumes S$12.0m in bear/base and S$17.5m in bull.</dd></div>
+        <div><dt>Scale</dt><dd>Approximately 54% of the S$151m secured book reported at 31 January 2026.</dd></div>
+      </dl>
+      <p class="rws-caveat">The specific attraction covered by Kingsmen’s contract has not been publicly identified. This official RWS rendering is shown as representative context only. Sources: <a href="https://links.sgx.com/FileOpen/KingsmenContractRWS.ashx?App=Announcement&amp;FileID=885068" target="_blank" rel="noopener">Kingsmen contract announcement</a> · <a href="https://www.rwsentosa.com/-/jssmedia/project/non-gaming/rwsentosa/press-release/pdf/en/2019/20190403-press-release--rws-embarks-on-mega-expansion-plans.pdf" target="_blank" rel="noopener">RWS concept release</a>.</p>
+    </div>
+  </article>
 
   <h3 style="margin-top:56px">Illustrative FY2026 revenue scenarios</h3>
   <figure class="chart">
@@ -1563,6 +1926,13 @@ footer b{color:#ddd6d2}
   <div class="slabel">06 · Demand Economics</div>
   <h2>One company, three different demand logics</h2>
   <p class="lede">One GDP beta cannot explain Kingsmen. Revenue follows three systems — corporate budgets, prestige-led retail and civic commissions — each with a different trigger and lag.</p>
+
+  <div class="industry-strip" aria-label="Kingsmen's three principal demand pools">
+    <figure><img src="assets/eta-oceanarium.jpg" alt="Visitors inside the Singapore Oceanarium" loading="lazy"><figcaption><b>Attractions &amp; museums</b><span>Tourism and destination investment</span></figcaption></figure>
+    <figure><img src="assets/rci-on-running.jpg" alt="On flagship store interior delivered by Kingsmen" loading="lazy"><figcaption><b>Luxury flagship retail</b><span>Luxury and retail capital expenditure</span></figcaption></figure>
+    <figure><img src="assets/exm-krisflyer.jpg" alt="Visitors participating in a live KrisFlyer brand event" loading="lazy"><figcaption><b>Exhibitions &amp; live events</b><span>MICE and corporate marketing expenditure</span></figcaption></figure>
+  </div>
+  <p class="photo-credit">Project imagery: Kingsmen Creatives. The strip links each physical format to the budget pool that funds it.</p>
 
   <div class="grid g3 demand-logics">
     <div class="card"><div class="tag">B2B derived demand</div><h3>Budgets, not consumers</h3><p>Revenue depends on clients' annual capex and marketing decisions. Demand is approved, tendered and built — never sold directly.</p></div>
@@ -1747,6 +2117,15 @@ footer b{color:#ddd6d2}
       <div class="memo-meta"><span>Expected impact<b>Strategic · pricing power and lower acquisition cost</b></span><span>Implementation difficulty<b>Medium</b></span></div>
     </article>
   </div>
+
+  <figure class="strategy-finale">
+    <img src="assets/strategy-visitors.jpg" alt="Families and visitors moving through a Kingsmen-created General Post Office environment" loading="lazy">
+    <figcaption>
+      <span class="tag">Strategic conclusion</span>
+      <strong>Kingsmen ultimately sells the moment a designed space becomes a lived experience.</strong>
+      <small>General Post Office visitor environment · Kingsmen Creatives 45th Anniversary publication.</small>
+    </figcaption>
+  </figure>
 </div></section>
 
 <footer><div class="wrap">
