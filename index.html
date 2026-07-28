@@ -228,6 +228,8 @@ footer b{color:var(--salmon)}
   --red:#cf453e;
   --deepred:#8e2620;
   --redtext:#b93630;
+  --blue:#3e78bd;
+  --blue-soft:#91bde9;
   --white:#fbfaf9;
   --lightink:#d6d0cd;
   --pagemuted:#9d9692;
@@ -240,7 +242,7 @@ footer b{color:var(--salmon)}
   --baseline:#cbc2be;
   --ring:rgba(23,20,20,.08);
   --s1:#c93e36;
-  --s2:#49464a;
+  --s2:#3e78bd;
   --s3:#e2847c;
   --s4:#8f5c57;
   --seq250:#d98b83;
@@ -255,8 +257,8 @@ footer b{color:var(--salmon)}
 body{
   background:
     radial-gradient(1100px 750px at 78% 30%,rgba(207,69,62,.42),transparent 62%),
-    radial-gradient(900px 650px at 8% 95%,rgba(142,38,32,.24),transparent 60%),
-    radial-gradient(800px 500px at 90% 92%,rgba(207,69,62,.16),transparent 60%),
+    radial-gradient(900px 650px at 8% 95%,rgba(62,120,189,.30),transparent 60%),
+    radial-gradient(800px 500px at 90% 92%,rgba(62,120,189,.18),transparent 60%),
     linear-gradient(165deg,#0a0909 0%,#241210 48%,#101010 100%);
   background-attachment:fixed;
   color:var(--white);
@@ -329,7 +331,7 @@ h1 .rule{
   width:72px;
   height:4px;
   margin-top:30px;
-  background:var(--red);
+  background:linear-gradient(90deg,var(--red) 0 58%,var(--blue) 58% 100%);
   border-radius:999px;
 }
 .hero p.sub{
@@ -402,11 +404,22 @@ figure.chart,
 .fact-v{font-size:29px;margin-bottom:12px}
 .bignum{font-size:42px;letter-spacing:-.04em}
 .card.outline{
+  position:relative;
+  overflow:hidden;
   background:rgba(255,255,255,.045);
   border:1px solid rgba(255,255,255,.16);
   box-shadow:0 18px 46px rgba(0,0,0,.15);
   color:#e8e1de;
 }
+.card.outline::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:2px;
+  background:var(--red);
+}
+.card.outline:nth-child(even)::before{background:var(--blue)}
+.card.outline:nth-child(even) .tag{color:var(--blue-soft)}
 .card.outline .tag{color:#f0a19a}
 .card.outline p{color:#bdb5b1}
 .card.outline .v{color:#fff}
@@ -437,7 +450,10 @@ tr.total td{border-top:2px solid #cfc6c2}
 .chain .num{font-size:11px;letter-spacing:.14em}
 .formula{padding:26px}
 .showgrid{gap:20px}
-.show{padding:28px}
+.show{padding:28px;border-top:3px solid var(--red)}
+.show:nth-child(even){border-top-color:var(--blue)}
+.show:nth-child(even) .share b,
+.show:nth-child(even) .incl{color:#326ca8}
 .showhead .tag{line-height:1.4}
 .share b{font-size:38px}
 .showbody{grid-template-columns:190px 1fr;gap:26px;margin-top:18px}
