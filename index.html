@@ -7,7 +7,7 @@
 <meta name="description" content="Beyond the Gallery: an independent strategy and commercial review of Kingsmen Creatives (SGX: 5MZ) — FY2025 analytics, segment economics, order book, valuation and strategy. By Jiarun Yang, 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;family=STIX+Two+Text:wght@500;600&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/kingsmen-logo.png">
 <style>
 :root{
@@ -1371,13 +1371,44 @@ figure.chart svg .dot{stroke:#1d1515}
 
 #demand .formula{
   background:
+    radial-gradient(600px 260px at 100% 0%,rgba(207,69,62,.18),transparent 68%),
     linear-gradient(145deg,rgba(32,25,25,.96),rgba(15,15,17,.94));
   border:1px solid rgba(255,255,255,.12);
-  border-left:3px solid var(--red);
+  border-left:4px solid var(--red);
+  padding:40px 42px 34px;
   color:#f7f3f1;
+  scrollbar-color:rgba(240,161,154,.65) rgba(255,255,255,.08);
 }
-#demand .formula code{color:#fff}
-#demand .formula .leg{color:#bdb5b1}
+#demand .formula code.equation{
+  display:grid;
+  width:max-content;
+  min-width:100%;
+  gap:8px;
+  color:#fff;
+  font-family:"STIX Two Text",Georgia,"Times New Roman",serif;
+  font-size:clamp(23px,2.25vw,30px);
+  font-weight:600;
+  line-height:1.42;
+  letter-spacing:.005em;
+  white-space:normal;
+}
+#demand .formula .equation span{
+  display:block;
+  white-space:nowrap;
+}
+#demand .formula .equation .continuation{
+  padding-left:clamp(24px,4.2vw,58px);
+}
+#demand .formula .equation sub{
+  font-size:.64em;
+  vertical-align:-.27em;
+}
+#demand .formula .leg{
+  margin-top:30px;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.14);
+  color:#bdb5b1;
+}
 #demand .formula .leg b{color:#f1ece9}
 .model-steps{
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -1679,6 +1710,12 @@ footer b{color:#ddd6d2}
   .hero .byline .btg{display:block;margin:5px 0 0;padding:0;border:0}
   .card{padding:24px}
   figure.chart{padding:24px}
+  #demand .formula{padding:30px 24px 28px}
+  #demand .formula code.equation{
+    gap:6px;
+    font-size:20px;
+  }
+  #demand .formula .equation .continuation{padding-left:18px}
   .grid,
   .chain{gap:24px}
   section > .wrap > h3{margin-top:56px}
@@ -2212,7 +2249,11 @@ footer b{color:#ddd6d2}
 
   <h3 style="margin-top:56px">A regional distributed-lag model</h3>
   <div class="formula">
-    <code>Δ ln(Revenue<sub>r,t</sub>) = α<sub>r</sub> + β₁ Δ ln(Tourism<sub>r,t−1</sub>) + β₂ Δ ln(Retail/Luxury<sub>r,t−1</sub>) + β₃ Δ ln(GDP<sub>r,t−1</sub>) + β₄ Pipeline<sub>t−1</sub> + ε<sub>r,t</sub></code>
+    <code class="equation" aria-label="Change in regional revenue equals the regional fixed effect plus lagged tourism, retail and luxury, GDP, and pipeline factors, plus an error term">
+      <span>Δ ln(Revenue<sub>r,t</sub>) = α<sub>r</sub> + β₁ Δ ln(Tourism<sub>r,t−1</sub>)</span>
+      <span class="continuation">+ β₂ Δ ln(Retail/Luxury<sub>r,t−1</sub>) + β₃ Δ ln(GDP<sub>r,t−1</sub>)</span>
+      <span class="continuation">+ β₄ Pipeline<sub>t−1</sub> + ε<sub>r,t</sub></span>
+    </code>
     <div class="leg">
       <div><b>Δ ln(x)</b> — annual log change; the growth rate of x</div>
       <div><b>Revenue<sub>r,t</sub></b> — Kingsmen revenue in region r, year t</div>
