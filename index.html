@@ -480,6 +480,69 @@ tr.total td{border-top:2px solid #cfc6c2}
 .showrev b{font-size:42px}
 #tip{background:#171313;border-color:rgba(255,255,255,.12);border-radius:7px}
 
+/* translucent report panels with explicit high-contrast copy */
+.card{
+  background:
+    linear-gradient(145deg,rgba(39,22,20,.88),rgba(17,18,22,.84));
+  border-color:rgba(255,255,255,.14);
+  box-shadow:0 16px 42px rgba(0,0,0,.24);
+  backdrop-filter:blur(14px) saturate(120%);
+  color:#fbfaf9;
+}
+.card:nth-child(even){
+  background:
+    linear-gradient(145deg,rgba(22,30,42,.88),rgba(16,18,22,.84));
+  border-color:rgba(104,159,214,.24);
+}
+.card h3,
+.card.stat .l,
+.card .fact-v,
+.card.stat .v,
+.card .srow b{color:#fff}
+.card p,
+.card .showdesc p{color:#d9d3d0}
+.card p b{color:#fff}
+.card .tag{color:#ff938b}
+.card:nth-child(even) .tag{color:#9dc8f1}
+.card .num{color:#ff938b}
+.card:nth-child(even) .num{color:#9dc8f1}
+.card .yield{color:#96dc88}
+.card .delta-up{color:#96dc88}
+.card .delta-down{color:#ff8c83}
+.card [style*="redtext"]{color:#ff766e !important}
+.card [style*="var(--ink)"]{color:#fff !important}
+.card .srow{
+  border-bottom-color:rgba(255,255,255,.14);
+}
+.card .srow span,
+.card .share span,
+.card .showrev span{color:#bdb5b1}
+.card .showrev{border-top-color:rgba(255,255,255,.14)}
+.card .share b,
+.card .showrev b,
+.card .incl{color:#ff766e}
+.card:nth-child(even) .share b,
+.card:nth-child(even) .showrev b,
+.card:nth-child(even) .incl{color:#76afe5}
+.card .projs figcaption{color:#d1c9c5}
+.card.outline{
+  background:
+    linear-gradient(145deg,rgba(49,24,21,.78),rgba(14,15,18,.76));
+  border-color:rgba(255,255,255,.16);
+}
+.card.outline:nth-child(even){
+  background:
+    linear-gradient(145deg,rgba(22,36,52,.80),rgba(14,16,20,.76));
+}
+figure.chart,
+.formula,
+.tblwrap{
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.96),rgba(239,242,247,.90));
+  border-color:rgba(255,255,255,.55);
+  backdrop-filter:blur(14px);
+}
+
 [data-reveal]{
   transform:translateY(16px);
   transition:opacity .55s ease,transform .55s cubic-bezier(.22,.75,.25,1);
