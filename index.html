@@ -5,133 +5,165 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beyond the Gallery — A Strategy &amp; Commercial Review of Kingsmen Creatives</title>
 <meta name="description" content="Beyond the Gallery: an independent strategy and commercial review of Kingsmen Creatives (SGX: 5MZ) — FY2025 analytics, segment economics, order book, valuation and strategy. By Jiarun Yang, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  color-scheme: light;
-  --page:#f9f9f7; --surface:#fcfcfb;
-  --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
-  --grid:#e1e0d9; --baseline:#c3c2b7; --ring:rgba(11,11,11,.10);
-  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100;
-  --seq250:#86b6ef; --seq400:#3987e5; --seq550:#1c5cab;
-  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --critical:#d03b3b;
-  --goodtext:#006300;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    color-scheme: dark;
-    --page:#0d0d0d; --surface:#1a1a19;
-    --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
-    --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
-    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
-    --goodtext:#0ca30c;
-  }
+  color-scheme: dark;
+  /* deck page: dark slate + ember glow */
+  --page:#10141c;
+  --line:rgba(255,255,255,.10);
+  /* deck accents */
+  --salmon:#f09a93; --red:#cf453e; --deepred:#8e2620; --redtext:#e2564e;
+  --white:#ffffff; --lightink:#ded8d4; --pagemuted:#a09a94;
+  /* light card surfaces (the deck's silver panels) */
+  --surface:#f3efed; --surface2:#e6e2e0;
+  --ink:#17181a; --ink2:#55524f; --muted:#8b8781;
+  --grid:#ded8d4; --baseline:#c4beb9; --ring:rgba(23,24,26,.08);
+  /* validated chart palette on the light card surface */
+  --s1:#cf453e; --s2:#3e78bd; --s3:#eb8a80; --s4:#a06c2e;
+  --seq250:#e78d84; --seq400:#d9574f; --seq550:#8e2620;
+  --good:#3e7d32; --warn:#a06400; --serious:#c25a2e; --critical:#c9302b;
+  --goodtext:#3e7d32;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--page);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-.serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+body{
+  background:
+    radial-gradient(1100px 750px at 78% 30%, rgba(207,69,62,.42), transparent 62%),
+    radial-gradient(900px 650px at 8% 95%, rgba(62,90,120,.38), transparent 60%),
+    radial-gradient(800px 500px at 90% 92%, rgba(62,90,120,.30), transparent 60%),
+    linear-gradient(165deg,#0d1117 0%,#221512 48%,#131a24 100%);
+  background-attachment:fixed;
+  color:var(--white);
+  font:16px/1.55 "League Spartan",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-weight:500;-webkit-font-smoothing:antialiased;
+}
 a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 
 /* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--page) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--grid)}
+nav{position:sticky;top:0;z-index:50;background:rgba(11,13,18,.78);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;gap:20px;height:56px;overflow-x:auto;white-space:nowrap}
-nav .brand{font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-right:auto}
-nav a{font-size:13px;color:var(--ink2);text-decoration:none;padding:4px 0}
-nav a:hover{color:var(--ink)}
+nav .brand{font-weight:800;font-size:14px;letter-spacing:.10em;text-transform:uppercase;margin-right:auto;color:var(--white)}
+nav .brand i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:9px}
+nav a{font-size:13px;font-weight:600;color:var(--pagemuted);text-decoration:none;padding:4px 0}
+nav a:hover{color:var(--salmon)}
 
 /* ---------- hero ---------- */
-header.hero{padding:88px 0 64px;border-bottom:1px solid var(--grid)}
-.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
-h1{font-size:clamp(40px,7vw,76px);line-height:1.04;font-weight:600;letter-spacing:-.01em}
-.hero p.sub{margin-top:22px;font-size:19px;color:var(--ink2);max-width:680px}
-.hero .byline{margin-top:26px;font-size:13px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-.hero .byline b{color:var(--ink2)}
+header.hero{padding:92px 0 64px;border-bottom:1px solid var(--line)}
+.dots3{display:flex;gap:10px;margin-bottom:26px}
+.dots3 i{width:13px;height:13px;border-radius:50%;background:var(--red)}
+.kicker{font-size:15px;letter-spacing:.06em;font-weight:700;color:var(--salmon);margin-bottom:16px}
+h1{font-size:clamp(44px,7.5vw,84px);line-height:.98;font-weight:800;letter-spacing:.005em;text-transform:uppercase;color:var(--white)}
+h1 .rule{display:block;width:min(420px,70%);height:3px;background:var(--white);margin-top:26px}
+.hero p.sub{margin-top:26px;font-size:18px;line-height:1.6;color:var(--lightink);max-width:680px;font-weight:500}
+.hero .byline{margin-top:26px;font-size:16px;font-weight:700;color:var(--salmon)}
+.hero .byline .btg{display:block;font-size:14px;color:var(--redtext);margin-top:4px;font-weight:700}
 
 /* ---------- sections ---------- */
-section{padding:64px 0;border-bottom:1px solid var(--grid)}
-.slabel{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-h2{font-size:clamp(26px,3.6vw,38px);line-height:1.15;font-weight:600;max-width:820px;letter-spacing:-.01em}
-.lede{margin-top:14px;font-size:17px;color:var(--ink2);max-width:760px}
-h3{font-size:19px;font-weight:650;margin:0 0 6px}
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.slabel{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--salmon);margin-bottom:10px}
+.slabel::before{content:"BEYOND THE GALLERY | ";color:var(--pagemuted)}
+h2{font-size:clamp(26px,3.6vw,38px);line-height:1.12;font-weight:700;max-width:860px;color:var(--salmon)}
+.lede{margin-top:14px;font-size:16.5px;color:var(--lightink);max-width:780px;font-weight:500}
+h3{font-size:20px;font-weight:700;margin:0 0 6px;color:var(--white)}
 
 /* ---------- cards & grids ---------- */
 .grid{display:grid;gap:14px;margin-top:32px}
 .g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .g4{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
-.card{background:var(--surface);border:1px solid var(--ring);border-radius:12px;padding:22px}
-.card .tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.card p{font-size:14.5px;color:var(--ink2)}
-.stat .v{font-size:34px;font-weight:650;letter-spacing:-.01em;line-height:1.1}
-.stat .l{font-size:13.5px;font-weight:600;margin-top:6px}
-.stat p{font-size:13.5px;margin-top:4px}
-.delta-up{color:var(--goodtext);font-weight:600}
-.delta-down{color:var(--critical);font-weight:600}
+.card{background:linear-gradient(180deg,#faf7f6 0%,#e9e4e2 100%);border-radius:16px;padding:22px;color:var(--ink);box-shadow:0 10px 30px rgba(0,0,0,.28)}
+.card h3{color:var(--ink)}
+.card .tag{font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;color:var(--redtext);margin-bottom:8px}
+.card .tag .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;vertical-align:baseline}
+.card p{font-size:14.5px;color:#5f5c59;font-weight:500}
+.stat .v{font-size:36px;font-weight:800;letter-spacing:-.01em;line-height:1.05;color:var(--ink)}
+.stat .l{font-size:13.5px;font-weight:700;margin-top:6px}
+.stat p{font-size:13.5px;margin-top:6px}
+/* deck-style outlined dark tiles (slide 4 top row) */
+.card.outline{background:rgba(15,10,10,.35);border:2.5px solid var(--salmon);box-shadow:none;color:var(--lightink)}
+.card.outline .v{color:var(--white)}
+.card.outline .tag{color:var(--salmon)}
+.card.outline p{color:var(--lightink)}
+.delta-up{color:var(--goodtext);font-weight:700}
+.delta-down{color:var(--critical);font-weight:700}
+.card.outline .delta-up{color:#8fd07c}
+.card.outline .delta-down{color:var(--salmon)}
 
 /* ---------- chart blocks ---------- */
-figure.chart{background:var(--surface);border:1px solid var(--ring);border-radius:12px;padding:22px;margin-top:32px}
+figure.chart{background:linear-gradient(180deg,#faf7f6 0%,#e9e4e2 100%);border-radius:16px;padding:22px;margin-top:32px;color:var(--ink);box-shadow:0 10px 30px rgba(0,0,0,.28)}
 figure.chart figcaption{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;margin-bottom:14px}
-figure.chart .ct{font-size:15px;font-weight:650}
-figure.chart .cs{font-size:12.5px;color:var(--muted)}
-.legend{display:flex;flex-wrap:wrap;gap:14px;margin:2px 0 10px;font-size:12.5px;color:var(--ink2)}
+figure.chart .ct{font-size:16px;font-weight:700;color:var(--ink)}
+figure.chart .cs{font-size:12.5px;font-weight:600;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin:2px 0 10px;font-size:12.5px;font-weight:600;color:var(--ink2)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
 svg.viz{width:100%;height:auto;display:block}
-svg.viz text{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
-.tick{font-size:11px;fill:var(--muted)}
-.vlab{font-size:11px;font-weight:600;fill:var(--ink2)}
+svg.viz text{font-family:"League Spartan",system-ui,sans-serif}
+.tick{font-size:11px;font-weight:600;fill:var(--muted)}
+.vlab{font-size:11px;font-weight:700;fill:#3a3735}
 .gl{stroke:var(--grid);stroke-width:1}
 .bl{stroke:var(--baseline);stroke-width:1}
-#tip{position:fixed;z-index:99;pointer-events:none;background:var(--surface);border:1px solid var(--ring);box-shadow:0 4px 16px rgba(0,0,0,.12);border-radius:8px;padding:8px 11px;font-size:12.5px;color:var(--ink);opacity:0;transition:opacity .12s}
-#tip .t1{font-weight:650}
-#tip .t2{color:var(--ink2)}
+#tip{position:fixed;z-index:99;pointer-events:none;background:#14161a;border:1px solid rgba(255,255,255,.16);box-shadow:0 6px 20px rgba(0,0,0,.4);border-radius:8px;padding:8px 11px;font-size:12.5px;color:var(--white);opacity:0;transition:opacity .12s}
+#tip .t1{font-weight:700}
+#tip .t2{color:#c9c3bf}
 
 /* ---------- tables ---------- */
-.tblwrap{overflow-x:auto;margin-top:24px;background:var(--surface);border:1px solid var(--ring);border-radius:12px}
+.tblwrap{overflow-x:auto;margin-top:24px;background:linear-gradient(180deg,#faf7f6 0%,#eae5e3 100%);border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.28)}
 table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
-th,td{text-align:right;padding:11px 16px;border-bottom:1px solid var(--grid);white-space:nowrap}
-th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+th,td{text-align:right;padding:12px 16px;white-space:nowrap}
+thead th{background:linear-gradient(180deg,#d4544c,#c03c35);color:var(--white);font-size:13px;font-weight:700}
+thead th:first-child{border-top-left-radius:16px}
+thead th:last-child{border-top-right-radius:16px}
 th:first-child,td:first-child{text-align:left}
-td{font-variant-numeric:tabular-nums;color:var(--ink2)}
-td:first-child{color:var(--ink);font-weight:550}
+tbody tr:nth-child(odd) td{background:#f1edeb}
+tbody tr:nth-child(even) td{background:#e6e1df}
+td{font-variant-numeric:tabular-nums;color:#454240;font-weight:600;border-bottom:2px solid #faf7f6}
+td:first-child{color:var(--ink);font-weight:700}
 tr:last-child td{border-bottom:none}
-tr.total td{font-weight:650;color:var(--ink);border-top:1px solid var(--baseline)}
-td .note{display:block;white-space:normal;font-weight:400;font-size:12.5px;color:var(--muted);max-width:320px}
+tr.total td{font-weight:800;color:var(--ink);border-top:2px solid #c4beb9}
+td .note{display:block;white-space:normal;font-weight:500;font-size:12.5px;color:var(--muted);max-width:320px}
 
 /* badges */
-.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:650;letter-spacing:.04em}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;letter-spacing:.04em}
 .badge i{width:9px;height:9px;border-radius:50%;display:inline-block}
-.b-high i{background:var(--critical)} .b-mod i{background:var(--warn)} .b-low i{background:var(--good)} .b-rise i{background:var(--serious)}
+.b-high{color:var(--critical)} .b-high i{background:var(--critical)}
+.b-mod{color:var(--warn)} .b-mod i{background:var(--warn)}
+.b-low{color:var(--good)} .b-low i{background:var(--good)}
+.b-rise{color:var(--serious)} .b-rise i{background:var(--serious)}
 
 /* value chain */
-.chain{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:32px;counter-reset:step}
-.chain .card{position:relative}
-.chain .num{font-size:12px;color:var(--muted);letter-spacing:.16em}
-.chain .yield{margin-top:12px;font-size:12.5px;font-weight:650;color:var(--goodtext)}
+.chain{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:32px}
+.chain .num{font-size:12.5px;font-weight:800;letter-spacing:.14em;color:var(--redtext);margin-bottom:6px}
+.chain .yield{margin-top:12px;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--goodtext)}
 
 /* formula */
-.formula{background:var(--surface);border:1px solid var(--ring);border-radius:12px;padding:22px;margin-top:28px;overflow-x:auto}
-.formula code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;color:var(--ink);white-space:nowrap}
-.formula .leg{margin-top:12px;font-size:13px;color:var(--ink2);columns:2;column-gap:32px}
+.formula{background:linear-gradient(180deg,#faf7f6 0%,#e9e4e2 100%);border-radius:16px;padding:22px;margin-top:28px;overflow-x:auto;color:var(--ink);box-shadow:0 10px 30px rgba(0,0,0,.28)}
+.formula code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;color:var(--ink);white-space:nowrap;font-weight:600}
+.formula .leg{margin-top:12px;font-size:13px;color:#5f5c59;columns:2;column-gap:32px}
 .formula .leg div{break-inside:avoid;margin-bottom:4px}
+.formula .leg b{color:var(--ink)}
 @media(max-width:640px){.formula .leg{columns:1}}
 
 /* strength dots for competitor matrix */
 .dots{display:inline-flex;gap:3px;align-items:center}
 .dots i{width:8px;height:8px;border-radius:50%;background:var(--s1);display:inline-block}
-.dots i.off{background:var(--grid)}
+.dots i.off{background:#d4cecb}
 .dots.dev i{background:var(--s2)}
-.dlab{font-size:11.5px;color:var(--muted);margin-left:7px}
+.dlab{font-size:11.5px;font-weight:600;color:var(--muted);margin-left:7px}
 
-footer{padding:48px 0 72px;font-size:13px;color:var(--muted)}
+footer{padding:48px 0 72px;font-size:13px;color:var(--pagemuted);font-weight:500}
 footer p{max-width:760px;margin-bottom:8px}
+footer b{color:var(--salmon)}
 </style>
 </head>
 <body>
 
 <nav><div class="wrap">
-  <span class="brand">Beyond the Gallery</span>
+  <span class="brand"><i></i>Beyond the Gallery</span>
   <a href="#overview">Overview</a>
   <a href="#segments">Segments</a>
   <a href="#financials">Financials</a>
@@ -144,10 +176,11 @@ footer p{max-width:760px;margin-bottom:8px}
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <div class="kicker">A strategy &amp; commercial review of</div>
-  <h1 class="serif">Kingsmen<br>Creatives</h1>
+  <div class="dots3"><i></i><i></i><i></i></div>
+  <div class="kicker">A strategy and commercial review of</div>
+  <h1>Kingsmen<br>Creatives<span class="rule"></span></h1>
   <p class="sub">Kingsmen Creatives designs and builds the places where brands meet people — museum galleries, theme-park attractions, interactive flagship stores and live brand events. A design-and-build contractor for the experience economy: the client buys a finished, fitted-out space, and Kingsmen carries the creative work, fabrication, logistics and installation risk needed to deliver it.</p>
-  <div class="byline">Beyond the Gallery · By <b>Jiarun Yang</b> · 2026 · SGX: 5MZ</div>
+  <div class="byline">By Jiarun Yang, 2026 · SGX: 5MZ<span class="btg">Beyond the Gallery</span></div>
 </div></header>
 
 <!-- ============ OVERVIEW ============ -->
@@ -156,10 +189,10 @@ footer p{max-width:760px;margin-bottom:8px}
   <h2>A founder-controlled small-cap with 18 offices and four operating segments</h2>
 
   <div class="grid g4">
-    <div class="card stat"><div class="tag">FY2025 revenue</div><div class="v">S$372.5m</div><p>Contract-based revenue across exhibitions, attractions, interiors and experiential marketing.</p></div>
-    <div class="card stat"><div class="tag">Attributable profit</div><div class="v">S$13.7m</div><p>Net margin reached 3.7% — the strongest of the past five years.</p></div>
-    <div class="card stat"><div class="tag">Net cash</div><div class="v">S$79.3m</div><p>Unpledged cash less bank and term loans; leases excluded.</p></div>
-    <div class="card stat"><div class="tag">Revenue from Asia</div><div class="v">93.7%</div><p>South and North Asia dominate; Singapore alone is 42.3% of group revenue.</p></div>
+    <div class="card stat outline"><div class="v">S$372.5m</div><div class="tag" style="margin-top:6px">FY2025 revenue</div><p>Contract-based revenue across exhibitions, attractions, interiors and experiential marketing.</p></div>
+    <div class="card stat outline"><div class="v">S$13.7m</div><div class="tag" style="margin-top:6px">Attributable profit</div><p>Net margin reached 3.7% — the strongest of the past five years.</p></div>
+    <div class="card stat outline"><div class="v">S$79.3m</div><div class="tag" style="margin-top:6px">Net cash</div><p>Unpledged cash less bank and term loans; leases excluded.</p></div>
+    <div class="card stat outline"><div class="v">93.7%</div><div class="tag" style="margin-top:6px">Revenue from Asia</div><p>South and North Asia dominate; Singapore alone is 42.3% of group revenue.</p></div>
   </div>
 
   <div class="grid g4">
@@ -189,17 +222,17 @@ footer p{max-width:760px;margin-bottom:8px}
   </figure>
 
   <div class="grid g4">
-    <div class="card"><div class="tag" style="color:var(--s1)">■ Exhibitions, Thematic &amp; Attractions</div>
-      <div class="stat"><div class="v" style="font-size:26px">S$172.4m</div></div>
+    <div class="card"><div class="tag"><span class="sw" style="background:var(--s1)"></span>Exhibitions, Thematic &amp; Attractions</div>
+      <div class="stat"><div class="v" style="font-size:27px">S$172.4m</div></div>
       <p style="margin-top:8px">Large, often one-off projects for governments, tourism operators, entertainment companies and major brands — exhibition booths, museums, theme parks, visitor attractions, pavilions.<br><br><b>Including:</b> Singapore Oceanarium · Singapore Pavilion at Expo 2025 Osaka</p></div>
-    <div class="card"><div class="tag" style="color:var(--s2)">■ Retail &amp; Corporate Interiors</div>
-      <div class="stat"><div class="v" style="font-size:26px">S$170.2m</div></div>
+    <div class="card"><div class="tag"><span class="sw" style="background:var(--s2)"></span>Retail &amp; Corporate Interiors</div>
+      <div class="stat"><div class="v" style="font-size:27px">S$170.2m</div></div>
       <p style="margin-top:8px">A specialised design-and-build contractor for branded commercial spaces, translating a brand's identity into a physical environment: stores, offices, showrooms, flagships.<br><br><b>Including:</b> On Running flagship store · Singtel Learning Centre</p></div>
-    <div class="card"><div class="tag" style="color:var(--s3)">■ Research &amp; Design</div>
-      <div class="stat"><div class="v" style="font-size:26px">S$20.0m</div></div>
+    <div class="card"><div class="tag"><span class="sw" style="background:var(--s3)"></span>Research &amp; Design</div>
+      <div class="stat"><div class="v" style="font-size:27px">S$20.0m</div></div>
       <p style="margin-top:8px">The higher-level creative capability, housed principally under KR+D. It researches audiences and develops the narrative, layout and visitor journey behind a space.<br><br><b>Including:</b> DHL Americas Innovation Center · The Bicentennial Experience</p></div>
-    <div class="card"><div class="tag" style="color:var(--s4)">■ Experiential Marketing</div>
-      <div class="stat"><div class="v" style="font-size:26px">S$10.0m</div></div>
+    <div class="card"><div class="tag"><span class="sw" style="background:var(--s4)"></span>Experiential Marketing</div>
+      <div class="stat"><div class="v" style="font-size:27px">S$10.0m</div></div>
       <p style="margin-top:8px">Temporary brand experiences: product launches, pop-up installations, luxury-brand events, gala dinners, roadshows and interactive campaigns.<br><br><b>Including:</b> Rings of Power S2 launch · KrisFlyer Fest 2024</p></div>
   </div>
 
@@ -236,9 +269,9 @@ footer p{max-width:760px;margin-bottom:8px}
   <h2>Revenue recovered after the pandemic — but gross-margin expansion explains the stronger earnings base</h2>
 
   <div class="grid g3">
-    <div class="card stat"><div class="tag">Revenue CAGR</div><div class="v">8.1%</div><p>FY2021–FY2025: S$273.2m → S$372.5m.</p></div>
-    <div class="card stat"><div class="tag">Gross-profit CAGR</div><div class="v">11.8%</div><p>Gross profit grew faster than revenue as gross margin expanded 3.1 points.</p></div>
-    <div class="card stat"><div class="tag">PBT operating leverage</div><div class="v">5.5×</div><p>At the FY2025 cost structure, a 1% revenue change produces roughly a 5.5% PBT change.</p></div>
+    <div class="card stat"><div class="v">8.1%</div><div class="tag" style="margin-top:6px">Revenue CAGR</div><p>FY2021–FY2025: S$273.2m → S$372.5m.</p></div>
+    <div class="card stat"><div class="v" style="color:var(--redtext)">11.8%</div><div class="tag" style="margin-top:6px">Gross-profit CAGR</div><p>Gross profit grew faster than revenue as gross margin expanded 3.1 points.</p></div>
+    <div class="card stat"><div class="v">5.5×</div><div class="tag" style="margin-top:6px">PBT operating leverage</div><p>At the FY2025 cost structure, a 1% revenue change produces roughly a 5.5% PBT change.</p></div>
   </div>
 
   <div class="grid g2">
@@ -262,18 +295,18 @@ footer p{max-width:760px;margin-bottom:8px}
       <tr><td>2025</td><td>372.5</td><td>92.2</td><td>24.7%</td><td>16.8</td><td>13.7</td><td>3.7%</td><td>6.78¢</td><td>3.00¢</td></tr>
     </tbody>
   </table></div>
-  <p class="lede" style="font-size:14.5px"><b>Current strategy:</b> the group has moved from recovery to optimisation — future value depends less on restoring volume and more on sustaining the 24–25% gross-margin range. FY2025 revenue fell 4.1%, yet gross profit hit a five-year high of S$92.2m. A point of gross margin is worth ~S$3.7m, roughly 4× what 1% more revenue delivers at 5.5× leverage — and extra volume must be won in ETA and RCI at 3.5–5.6% margins, where tender pricing sets the price.</p>
+  <p class="lede" style="font-size:14.5px"><b style="color:var(--salmon)">Current strategy:</b> the group has moved from recovery to optimisation — future value depends less on restoring volume and more on sustaining the 24–25% gross-margin range. FY2025 revenue fell 4.1%, yet gross profit hit a five-year high of S$92.2m. A point of gross margin is worth ~S$3.7m, roughly 4× what 1% more revenue delivers at 5.5× leverage — and extra volume must be won in ETA and RCI at 3.5–5.6% margins, where tender pricing sets the price.</p>
 
   <h3 style="margin-top:56px">FY2025 profit was economically stronger than the headline +4.2% suggests</h3>
   <p class="lede">Headline comparisons are distorted by a S$5.3m property-disposal gain booked in FY2024. Strip it out and the underlying improvement is ≈75%.</p>
 
   <div class="grid g4">
-    <div class="card stat"><div class="tag">FY2024 attributable profit</div><div class="v">S$13.1m</div><p>As reported.</p></div>
-    <div class="card stat"><div class="tag">Less: disposal gain</div><div class="v">−S$5.3m</div><p>One-off property-disposal gain.</p></div>
-    <div class="card stat"><div class="tag">FY2024 ex-gain</div><div class="v">≈S$7.8m</div><p>The true comparison base.</p></div>
-    <div class="card stat"><div class="tag">FY2025 attributable profit</div><div class="v">S$13.7m</div><p class="delta-up">≈75% above the ex-gain base</p></div>
+    <div class="card stat"><div class="v">S$13.1m</div><div class="tag" style="margin-top:6px">FY2024 attributable profit</div><p>As reported.</p></div>
+    <div class="card stat"><div class="v" style="color:var(--redtext)">−S$5.3m</div><div class="tag" style="margin-top:6px">Less: disposal gain</div><p>One-off property-disposal gain.</p></div>
+    <div class="card stat"><div class="v">≈S$7.8m</div><div class="tag" style="margin-top:6px">FY2024 ex-gain</div><p>The true comparison base.</p></div>
+    <div class="card stat"><div class="v">S$13.7m</div><div class="tag" style="margin-top:6px">FY2025 attributable profit</div><p class="delta-up">≈75% above the ex-gain base</p></div>
   </div>
-  <p class="lede" style="font-size:13.5px;color:var(--muted)">Not a fully normalised earnings calculation: it removes only the disclosed disposal gain and leaves all other year-specific project effects intact.</p>
+  <p class="lede" style="font-size:13.5px;color:var(--pagemuted)">Not a fully normalised earnings calculation: it removes only the disclosed disposal gain and leaves all other year-specific project effects intact.</p>
 
   <figure class="chart">
     <figcaption><span class="ct">Segment profit — FY2024 reported vs FY2024 adjusted vs FY2025</span><span class="cs">S$ million · FY2024 adjusted removes the S$5.3m property-disposal gain from RCI</span></figcaption>
@@ -282,21 +315,21 @@ footer p{max-width:760px;margin-bottom:8px}
   </figure>
 
   <div class="grid g3">
-    <div class="card"><div class="tag delta-up">+S$4.7m</div><h3>ETA profit improvement</h3><p>Revenue fell S$14.8m as 2024's big completions ended and new work was scheduled later. The gain is mainly margin, 0.9% → 3.5%: low-margin completion work rolled off and the group booked higher margins on certain events and projects.</p></div>
-    <div class="card"><div class="tag delta-up">+S$1.8m</div><h3>RCI adjusted improvement</h3><p>Reported RCI profit looks like it fell, S$13.2m → S$9.6m, but S$5.3m of FY2024 was a one-off property-disposal gain, so the true base was S$7.8m. Revenue was flat at −0.6%, so the S$1.8m is pure execution, with margin 4.6% → 5.6%.</p></div>
+    <div class="card"><div class="tag delta-up" style="color:var(--goodtext)">+S$4.7m</div><h3>ETA profit improvement</h3><p>Revenue fell S$14.8m as 2024's big completions ended and new work was scheduled later. The gain is mainly margin, 0.9% → 3.5%: low-margin completion work rolled off and the group booked higher margins on certain events and projects.</p></div>
+    <div class="card"><div class="tag delta-up" style="color:var(--goodtext)">+S$1.8m</div><h3>RCI adjusted improvement</h3><p>Reported RCI profit looks like it fell, S$13.2m → S$9.6m, but S$5.3m of FY2024 was a one-off property-disposal gain, so the true base was S$7.8m. Revenue was flat at −0.6%, so the S$1.8m is pure execution, with margin 4.6% → 5.6%.</p></div>
     <div class="card"><div class="tag delta-down">−S$0.9m</div><h3>Experiential swing</h3><p>Revenue fell ~S$1.0m and profit fell S$0.9m: roughly 90% of lost sales dropped straight to the bottom line. At S$10m of revenue, the creative and production base is largely fixed and too small to flex with a 9% decline.</p></div>
   </div>
 
   <h3 style="margin-top:56px">Exceptional FY2025 free cash flow, partly a working-capital release</h3>
   <figure class="chart">
     <figcaption><span class="ct">Operating vs free cash flow, FY2021–25</span><span class="cs">S$ million</span></figcaption>
-    <div class="legend"><span><i style="background:var(--s1)"></i>Operating cash flow</span><span><i style="background:var(--s2)"></i>Free cash flow</span></div>
+    <div class="legend"><span><i style="background:var(--s2)"></i>Operating cash flow</span><span><i style="background:var(--s1)"></i>Free cash flow</span></div>
     <div id="cashchart"></div>
   </figure>
   <div class="grid g3">
-    <div class="card stat"><div class="tag">FY2025 free cash flow</div><div class="v">S$27.5m</div><p>Approximately 2.0× attributable net profit.</p></div>
-    <div class="card stat"><div class="tag">Net working-capital release</div><div class="v">≈S$11.9m</div><p>Contract assets fell sharply, partly offset by higher receivables and lower contract liabilities.</p></div>
-    <div class="card stat"><div class="tag">Capital expenditure</div><div class="v">S$6.0m</div><p>Higher than the early recovery years but below operating cash generation.</p></div>
+    <div class="card stat"><div class="v">S$27.5m</div><div class="tag" style="margin-top:6px">FY2025 free cash flow</div><p>Approximately 2.0× attributable net profit.</p></div>
+    <div class="card stat"><div class="v">≈S$11.9m</div><div class="tag" style="margin-top:6px">Net working-capital release</div><p>Contract assets fell sharply, partly offset by higher receivables and lower contract liabilities.</p></div>
+    <div class="card stat"><div class="v">S$6.0m</div><div class="tag" style="margin-top:6px">Capital expenditure</div><p>Higher than the early recovery years but below operating cash generation.</p></div>
   </div>
 </div></section>
 
@@ -308,7 +341,7 @@ footer p{max-width:760px;margin-bottom:8px}
 
   <figure class="chart">
     <figcaption><span class="ct">Revenue composition: opening expected recognition vs in-year conversion</span><span class="cs">S$ million</span></figcaption>
-    <div class="legend"><span><i style="background:var(--s1)"></i>Opening expected recognition</span><span><i style="background:var(--s2)"></i>Residual / in-year conversion</span></div>
+    <div class="legend"><span><i style="background:var(--s2)"></i>Opening expected recognition</span><span><i style="background:var(--s1)"></i>Residual / in-year conversion</span></div>
     <div id="bookchart"></div>
   </figure>
 
@@ -332,7 +365,7 @@ footer p{max-width:760px;margin-bottom:8px}
   <h3 style="margin-top:56px">Illustrative FY2026 revenue scenarios</h3>
   <figure class="chart">
     <figcaption><span class="ct">FY2026 modelled revenue — bear / base / bull</span><span class="cs">S$ million</span></figcaption>
-    <div class="legend"><span><i style="background:var(--s1)"></i>Opening expected recognition</span><span><i style="background:var(--s2)"></i>Other conversion / short-cycle</span><span><i style="background:var(--s3)"></i>RWS recognition assumed</span></div>
+    <div class="legend"><span><i style="background:var(--s2)"></i>Opening expected recognition</span><span><i style="background:var(--s1)"></i>Other conversion / short-cycle</span><span><i style="background:var(--s3)"></i>RWS recognition assumed</span></div>
     <div id="scenchart"></div>
   </figure>
 
@@ -356,14 +389,14 @@ footer p{max-width:760px;margin-bottom:8px}
   <p class="lede">Kingsmen participates in a competitive market: group revenue is a small fraction of the ~US$16.5bn global exhibition-services pool. The market is fragmented; no participant is a price setter.</p>
 
   <div class="grid g4">
-    <div class="card stat"><div class="tag">Share price</div><div class="v">S$0.54</div><p>SGX: 5MZ; market data is date-sensitive.</p></div>
-    <div class="card stat"><div class="tag">Market cap</div><div class="v">S$109m</div><p>Approximately 201.9m issued shares.</p></div>
-    <div class="card stat"><div class="tag">P/E</div><div class="v">≈8.0×</div><p>Market cap ÷ FY2025 attributable profit.</p></div>
-    <div class="card stat"><div class="tag">P/B</div><div class="v">≈0.85×</div><p>Market cap ÷ attributable equity.</p></div>
-    <div class="card stat"><div class="tag">Dividend yield</div><div class="v">5.6%</div><p>3.0¢ FY2025 dividend ÷ S$0.54.</p></div>
-    <div class="card stat"><div class="tag">Enterprise value</div><div class="v">≈S$29.7m</div><p>After subtracting analytical net cash.</p></div>
-    <div class="card stat"><div class="tag">EV / EBITDA</div><div class="v">≈1.4×</div><p>The enterprise-value lens on a cash-heavy balance sheet.</p></div>
-    <div class="card stat"><div class="tag">Global market share</div><div class="v">≈2.2%</div><p>Of the ~US$16.5bn exhibition-services pool.</p></div>
+    <div class="card stat"><div class="v">S$0.54</div><div class="tag" style="margin-top:6px">Share price</div><p>SGX: 5MZ; market data is date-sensitive.</p></div>
+    <div class="card stat"><div class="v">S$109m</div><div class="tag" style="margin-top:6px">Market cap</div><p>Approximately 201.9m issued shares.</p></div>
+    <div class="card stat"><div class="v">≈8.0×</div><div class="tag" style="margin-top:6px">P/E</div><p>Market cap ÷ FY2025 attributable profit.</p></div>
+    <div class="card stat"><div class="v">≈0.85×</div><div class="tag" style="margin-top:6px">P/B</div><p>Market cap ÷ attributable equity.</p></div>
+    <div class="card stat"><div class="v" style="color:var(--redtext)">5.6%</div><div class="tag" style="margin-top:6px">Dividend yield</div><p>3.0¢ FY2025 dividend ÷ S$0.54.</p></div>
+    <div class="card stat"><div class="v">≈S$29.7m</div><div class="tag" style="margin-top:6px">Enterprise value</div><p>After subtracting analytical net cash.</p></div>
+    <div class="card stat"><div class="v">≈1.4×</div><div class="tag" style="margin-top:6px">EV / EBITDA</div><p>The enterprise-value lens on a cash-heavy balance sheet.</p></div>
+    <div class="card stat"><div class="v" style="color:var(--redtext)">≈2.2%</div><div class="tag" style="margin-top:6px">Global market share</div><p>Of the ~US$16.5bn exhibition-services pool.</p></div>
   </div>
 
   <div class="card" style="margin-top:14px"><div class="tag">Why the discount can persist</div>
@@ -379,7 +412,7 @@ footer p{max-width:760px;margin-bottom:8px}
       <tr><td>P/E</td><td>≈8.0×</td><td>≈8.7×</td></tr>
     </tbody>
   </table></div>
-  <p class="lede" style="font-size:14.5px">Kingsmen's P/E sits just under Pico's — but Pico earns a 6.0% net margin against Kingsmen's 3.7%, so the gap reflects profitability, not a hidden discount. Pico also positions around CRM, audience data, digital engagement, AI and measurable outcomes — capabilities that attach higher-value revenue to physical delivery. <b>Strategic implication:</b> as Kingsmen loses on scale, its strategy should shift toward differentiation rooted in novel art forms and an artistic style that acts as "market power" unique to this industry — and toward a comparable story on measurement, repeat relationships and technology-enabled value.</p>
+  <p class="lede" style="font-size:14.5px">Kingsmen's P/E sits just under Pico's — but Pico earns a 6.0% net margin against Kingsmen's 3.7%, so the gap reflects profitability, not a hidden discount. Pico also positions around CRM, audience data, digital engagement, AI and measurable outcomes — capabilities that attach higher-value revenue to physical delivery. <b style="color:var(--salmon)">Strategic implication:</b> as Kingsmen loses on scale, its strategy should shift toward differentiation rooted in novel art forms and an artistic style that acts as "market power" unique to this industry — and toward a comparable story on measurement, repeat relationships and technology-enabled value.</p>
 </div></section>
 
 <!-- ============ DEMAND ============ -->
@@ -460,10 +493,10 @@ footer p{max-width:760px;margin-bottom:8px}
   <div class="card" style="margin-top:14px"><div class="tag">Future value pools</div><p>Experience strategy · visitor analytics · interactive content · IP partnerships · operation and optimisation · sustainability measurement</p></div>
 
   <h3 style="margin-top:56px">Taste and preference as market power: the switching-cost moat</h3>
-  <p class="lede">Switch supplier only if: <b>price saving &gt; onboarding cost + redesign cost + delay risk + brand-inconsistency risk</b>.</p>
+  <p class="lede">Switch supplier only if: <b style="color:var(--salmon)">price saving &gt; onboarding cost + redesign cost + delay risk + brand-inconsistency risk</b>.</p>
   <div class="grid g3">
     <div class="card"><div class="tag">Illustrative project</div><h3>S$5m flagship store</h3><p>A competing bid 4% lower saves S$200,000. Expected delay loss: 15% × 30 days × S$25k = S$112,500. Redesign = S$70,000. Internal onboarding = S$50,000.</p></div>
-    <div class="card stat"><div class="tag">Expected switching cost</div><div class="v">S$232,500</div><p>Exceeds the S$200,000 price saving. Remaining with the incumbent is economically rational — even before reputational damage or executive attention.</p></div>
+    <div class="card stat"><div class="v" style="color:var(--redtext)">S$232,500</div><div class="tag" style="margin-top:6px">Expected switching cost</div><p>Exceeds the S$200,000 price saving. Remaining with the incumbent is economically rational — even before reputational damage or executive attention.</p></div>
     <div class="card"><div class="tag">How the moat compounds</div><h3>Creative memory becomes relational capital</h3><p>Each project teaches Kingsmen the client's materials, approval rules, brand codes, regional adaptations and decision-makers — making the next project faster and less risky.</p></div>
   </div>
 </div></section>
@@ -486,9 +519,9 @@ footer p{max-width:760px;margin-bottom:8px}
 
   <h3 style="margin-top:48px">The five forces explain exactly where the margin is</h3>
   <div class="grid g3">
-    <div class="card stat"><div class="tag">Upstream · Research &amp; Design</div><div class="v">8.6%</div><p>Differentiation, reputation and switching costs all bite here. Buyer power is weaker because the alternative is not another bidder — it is a worse idea. But this is only 5.4% of revenue.</p></div>
-    <div class="card stat"><div class="tag">Midstream · ETA and RCI</div><div class="v">3.5% / 5.6%</div><p>Where rivalry and buyer power are both high, on 92% of revenue. Fixed-price tenders, many capable bidders, clients who can and do compare. Price is taken here, not made.</p></div>
-    <div class="card stat"><div class="tag">Downstream · Operate</div><div class="v">n/d</div><p>Events, maintenance, programming, audience measurement. Recurring by nature and stickier — but not reported separately, so the economics remain unproven.</p></div>
+    <div class="card stat"><div class="v">8.6%</div><div class="tag" style="margin-top:6px">Upstream · Research &amp; Design</div><p>Differentiation, reputation and switching costs all bite here. Buyer power is weaker because the alternative is not another bidder — it is a worse idea. But this is only 5.4% of revenue.</p></div>
+    <div class="card stat"><div class="v" style="color:var(--redtext)">3.5% / 5.6%</div><div class="tag" style="margin-top:6px">Midstream · ETA and RCI</div><p>Where rivalry and buyer power are both high, on 92% of revenue. Fixed-price tenders, many capable bidders, clients who can and do compare. Price is taken here, not made.</p></div>
+    <div class="card stat"><div class="v">n/d</div><div class="tag" style="margin-top:6px">Downstream · Operate</div><p>Events, maintenance, programming, audience measurement. Recurring by nature and stickier — but not reported separately, so the economics remain unproven.</p></div>
   </div>
   <div class="card" style="margin-top:14px"><div class="tag">Verdict</div><p>Kingsmen is a price-taker where 92% of its revenue sits and a price-influencer where 5.4% does. Every strategic option on the table — scaling R&amp;D, attaching design to build contracts, monetising operations — is an attempt to move revenue out of the middle of its own value chain. The margin data reached the same conclusion independently.</p></div>
 
@@ -540,10 +573,10 @@ footer p{max-width:760px;margin-bottom:8px}
 
   <h3 style="margin-top:56px">Sustainability and cyber resilience</h3>
   <div class="grid g4">
-    <div class="card stat"><div class="tag">Scope 1 + 2 emissions</div><div class="v">594.1&nbsp;t</div><p>Down 3.1% YoY, but intensity rose 1.1% to 1.59 tCO₂e per S$m.</p></div>
-    <div class="card stat"><div class="tag">Waste generated</div><div class="v">72.0&nbsp;t</div><p>Down 4.9%; only 1.4 tonnes recycled — a low reported recycling share.</p></div>
-    <div class="card stat"><div class="tag">EcoVadis rating</div><div class="v">Silver</div><p>Supported by ISO 14001 and ISO 20121 management systems.</p></div>
-    <div class="card stat"><div class="tag">Ransomware incident</div><div class="v">May 2025</div><p>No significant operational or financial impact reported; controls subsequently strengthened.</p></div>
+    <div class="card stat"><div class="v">594.1&nbsp;t</div><div class="tag" style="margin-top:6px">Scope 1 + 2 emissions</div><p>Down 3.1% YoY, but intensity rose 1.1% to 1.59 tCO₂e per S$m.</p></div>
+    <div class="card stat"><div class="v">72.0&nbsp;t</div><div class="tag" style="margin-top:6px">Waste generated</div><p>Down 4.9%; only 1.4 tonnes recycled — a low reported recycling share.</p></div>
+    <div class="card stat"><div class="v">Silver</div><div class="tag" style="margin-top:6px">EcoVadis rating</div><p>Supported by ISO 14001 and ISO 20121 management systems.</p></div>
+    <div class="card stat"><div class="v">May 2025</div><div class="tag" style="margin-top:6px">Ransomware incident</div><p>No significant operational or financial impact reported; controls subsequently strengthened.</p></div>
   </div>
   <div class="grid g4">
     <div class="card"><div class="tag">Bid access</div><p>Certifications can be a prerequisite or differentiator for public, MICE and multinational work.</p></div>
@@ -729,22 +762,22 @@ vbar('bridgechart',{aria:'Segment profit: FY2024 reported, FY2024 adjusted and F
 vbar('cashchart',{aria:'Operating and free cash flow FY2021 to FY2025, S$ million',
   groups:['FY2021','FY2022','FY2023','FY2024','FY2025'],
   series:[
-    {name:'Operating cash flow',color:'--s1',values:[6.5,4.3,0.6,13.1,33.5]},
-    {name:'Free cash flow',color:'--s2',values:[5.8,2.5,-0.4,5.5,27.5]}
+    {name:'Operating cash flow',color:'--s2',values:[6.5,4.3,0.6,13.1,33.5]},
+    {name:'Free cash flow',color:'--s1',values:[5.8,2.5,-0.4,5.5,27.5]}
   ],bw:24,labels:true,vfmt:v=>v.toFixed(1),fmt:v=>v});
 
 vbar('bookchart',{aria:'Revenue composition FY2023 to FY2025: opening expected recognition versus in-year conversion, S$ million',
   groups:['FY2023','FY2024','FY2025'],
   series:[
-    {name:'Opening expected recognition',color:'--s1',values:[125.0,152.0,136.0]},
-    {name:'In-year conversion',color:'--s2',values:[236.5,236.4,236.5]}
+    {name:'Opening expected recognition',color:'--s2',values:[125.0,152.0,136.0]},
+    {name:'In-year conversion',color:'--s1',values:[236.5,236.4,236.5]}
   ],stacked:true,totalLabels:true,bw:56,vfmt:v=>v.toFixed(1),fmt:v=>v});
 
 vbar('scenchart',{aria:'FY2026 modelled revenue scenarios: bear 352, base 364, bull 381 S$ million',
   groups:['Bear −5.5%','Base −2.3%','Bull +2.3%'],
   series:[
-    {name:'Opening expected recognition',color:'--s1',values:[127,127,127]},
-    {name:'Other conversion / short-cycle',color:'--s2',values:[213,225,236.5]},
+    {name:'Opening expected recognition',color:'--s2',values:[127,127,127]},
+    {name:'Other conversion / short-cycle',color:'--s1',values:[213,225,236.5]},
     {name:'RWS recognition assumed',color:'--s3',values:[12,12,17.5]}
   ],stacked:true,totalLabels:true,bw:56,vfmt:v=>v.toFixed(1),fmt:v=>v});
 
