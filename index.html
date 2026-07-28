@@ -7,7 +7,7 @@
 <meta name="description" content="Beyond the Gallery: an independent strategy and commercial review of Kingsmen Creatives (SGX: 5MZ) — FY2025 analytics, segment economics, order book, valuation and strategy. By Jiarun Yang, 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=League+Spartan:wght@600;700;800&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/kingsmen-logo.png">
 <style>
 :root{
@@ -253,6 +253,9 @@ footer b{color:var(--salmon)}
   --serious:#b45309;
   --critical:#b42318;
   --goodtext:#2f6b3b;
+  --font-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"League Spartan","Arial Black",sans-serif;
+  --font-label:"Montserrat","Arial",sans-serif;
 }
 body{
   background:
@@ -262,10 +265,26 @@ body{
     linear-gradient(165deg,#0a0909 0%,#241210 48%,#101010 100%);
   background-attachment:fixed;
   color:var(--white);
-  font:15.5px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font:15.5px/1.65 var(--font-body);
   font-weight:400;
   letter-spacing:-.005em;
 }
+h1,h2,
+.stat .v,.fact-v,.bignum,.share b,.showrev b,
+.memo-num,.rws-value,.strategy-finale strong{
+  font-family:var(--font-display);
+  font-variant-numeric:tabular-nums;
+}
+h3,
+nav .brand,nav a,.kicker,.slabel,.tag,
+.chain .num,.chain .yield,
+figure.chart .ct,figure.chart .cs,.legend,
+thead th,.badge,.memo-meta span,
+.value-journey figcaption,.industry-strip figcaption,
+.showrev span,.chips span,.projs figcaption{
+  font-family:var(--font-label);
+}
+svg.viz text{font-family:var(--font-label)}
 ::selection{background:rgba(242,184,179,.28);color:#fff}
 .wrap{max-width:1180px;padding:0 32px}
 section[id]{scroll-margin-top:72px}
@@ -334,8 +353,9 @@ header.hero{
 h1{
   max-width:800px;
   font-size:clamp(48px,7vw,82px);
-  line-height:.96;
-  letter-spacing:-.055em;
+  line-height:.92;
+  letter-spacing:-.035em;
+  font-weight:800;
   text-transform:none;
 }
 h1 .title-line{display:inline-block}
@@ -431,8 +451,9 @@ h2{
   max-width:920px;
   color:#fbfaf9;
   font-size:clamp(30px,3.8vw,46px);
-  line-height:1.13;
-  letter-spacing:-.035em;
+  line-height:1.06;
+  letter-spacing:-.02em;
+  font-weight:700;
 }
 .lede{
   max-width:820px;
@@ -441,7 +462,7 @@ h2{
   font-size:16px;
   line-height:1.75;
 }
-h3{font-size:18px;line-height:1.35;letter-spacing:-.018em}
+h3{font-size:18px;line-height:1.35;letter-spacing:-.012em;font-weight:700}
 
 .grid{gap:18px;margin-top:36px}
 .card,
@@ -461,10 +482,10 @@ figure.chart,
   letter-spacing:.11em;
 }
 .card p{color:#5f5956;font-size:14px;line-height:1.65}
-.stat .v,.fact-v{letter-spacing:-.035em}
+.stat .v,.fact-v{letter-spacing:-.018em}
 .stat .v{font-size:34px}
 .fact-v{font-size:29px;margin-bottom:12px}
-.bignum{font-size:42px;letter-spacing:-.04em}
+.bignum{font-size:42px;letter-spacing:-.02em}
 .card.outline{
   position:relative;
   overflow:hidden;
