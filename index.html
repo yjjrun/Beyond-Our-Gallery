@@ -151,7 +151,7 @@ td .note{display:block;white-space:normal;font-weight:500;font-size:12.5px;color
 .dots{display:inline-flex;gap:3px;align-items:center}
 .dots i{width:8px;height:8px;border-radius:50%;background:var(--s1);display:inline-block}
 .dots i.off{background:#d4cecb}
-.dots.dev i{background:var(--s2)}
+.dots.dev i{background:var(--warn)}
 .dlab{font-size:11.5px;font-weight:600;color:var(--muted);margin-left:7px}
 
 /* ---------- fact values & big deltas ---------- */
@@ -228,8 +228,8 @@ footer b{color:var(--salmon)}
   --red:#cf453e;
   --deepred:#8e2620;
   --redtext:#b93630;
-  --blue:#3e78bd;
-  --blue-soft:#91bde9;
+  --positive:#96dc88;
+  --caution:#e1b84c;
   --white:#fbfaf9;
   --lightink:#d6d0cd;
   --pagemuted:#9d9692;
@@ -257,8 +257,8 @@ footer b{color:var(--salmon)}
 body{
   background:
     radial-gradient(1100px 750px at 78% 30%,rgba(207,69,62,.42),transparent 62%),
-    radial-gradient(900px 650px at 8% 95%,rgba(62,120,189,.30),transparent 60%),
-    radial-gradient(800px 500px at 90% 92%,rgba(62,120,189,.18),transparent 60%),
+    radial-gradient(900px 650px at 8% 95%,rgba(100,94,92,.22),transparent 60%),
+    radial-gradient(800px 500px at 90% 92%,rgba(84,78,76,.16),transparent 60%),
     linear-gradient(165deg,#0a0909 0%,#241210 48%,#101010 100%);
   background-attachment:fixed;
   color:var(--white);
@@ -422,8 +422,8 @@ figure.chart,
   height:2px;
   background:var(--red);
 }
-.card.outline:nth-child(even)::before{background:var(--blue)}
-.card.outline:nth-child(even) .tag{color:var(--blue-soft)}
+.card.outline:nth-child(even)::before{background:var(--red)}
+.card.outline:nth-child(even) .tag{color:#f0a19a}
 .card.outline .tag{color:#f0a19a}
 .card.outline p{color:#bdb5b1}
 .card.outline .v{color:#fff}
@@ -455,9 +455,9 @@ tr.total td{border-top:2px solid #cfc6c2}
 .formula{padding:26px}
 .showgrid{gap:20px}
 .show{padding:28px;border-top:3px solid var(--red)}
-.show:nth-child(even){border-top-color:var(--blue)}
+.show:nth-child(even){border-top-color:var(--red)}
 .show:nth-child(even) .share b,
-.show:nth-child(even) .incl{color:#326ca8}
+.show:nth-child(even) .incl{color:var(--redtext)}
 .showhead .tag{line-height:1.4}
 .share b{font-size:38px}
 .showbody{grid-template-columns:190px 1fr;gap:26px;margin-top:18px}
@@ -492,8 +492,8 @@ tr.total td{border-top:2px solid #cfc6c2}
 }
 .card:nth-child(even){
   background:
-    linear-gradient(145deg,rgba(22,30,42,.88),rgba(16,18,22,.84));
-  border-color:rgba(104,159,214,.24);
+    linear-gradient(145deg,rgba(39,22,20,.88),rgba(17,18,22,.84));
+  border-color:rgba(255,255,255,.14);
 }
 .card h3,
 .card.stat .l,
@@ -504,11 +504,11 @@ tr.total td{border-top:2px solid #cfc6c2}
 .card .showdesc p{color:#d9d3d0}
 .card p b{color:#fff}
 .card .tag{color:#ff938b}
-.card:nth-child(even) .tag{color:#9dc8f1}
+.card:nth-child(even) .tag{color:#ff938b}
 .card .num{color:#ff938b}
-.card:nth-child(even) .num{color:#9dc8f1}
+.card:nth-child(even) .num{color:#ff938b}
 .card .yield{color:#96dc88}
-.card .delta-up{color:#96dc88}
+.card .delta-up{color:var(--positive)}
 .card .delta-down{color:#ff8c83}
 .card [style*="redtext"]{color:#ff766e !important}
 .card [style*="var(--ink)"]{color:#fff !important}
@@ -524,7 +524,7 @@ tr.total td{border-top:2px solid #cfc6c2}
 .card .incl{color:#ff766e}
 .card:nth-child(even) .share b,
 .card:nth-child(even) .showrev b,
-.card:nth-child(even) .incl{color:#76afe5}
+.card:nth-child(even) .incl{color:#ff766e}
 .card .projs figcaption{color:#d1c9c5}
 .card.outline{
   background:
@@ -533,7 +533,7 @@ tr.total td{border-top:2px solid #cfc6c2}
 }
 .card.outline:nth-child(even){
   background:
-    linear-gradient(145deg,rgba(22,36,52,.80),rgba(14,16,20,.76));
+    linear-gradient(145deg,rgba(49,24,21,.78),rgba(14,15,18,.76));
 }
 figure.chart,
 .formula,
@@ -560,12 +560,12 @@ section{
 }
 #financials{
   background:
-    radial-gradient(820px 560px at 100% 30%,rgba(62,120,189,.13),transparent 67%);
+    radial-gradient(820px 560px at 100% 30%,rgba(207,69,62,.08),transparent 67%);
 }
 #market{
   background:
-    radial-gradient(780px 500px at 0% 24%,rgba(62,120,189,.15),transparent 68%),
-    linear-gradient(180deg,rgba(10,16,24,.20),rgba(16,10,10,.12));
+    radial-gradient(780px 500px at 0% 24%,rgba(207,69,62,.09),transparent 68%),
+    linear-gradient(180deg,rgba(18,12,12,.20),rgba(16,10,10,.12));
 }
 #strategy{
   background:
@@ -590,7 +590,7 @@ section > .wrap > .card:not(.stat){
 .chain > .card:nth-child(even),
 section > .wrap > .card:not(.stat):nth-child(even){
   background:transparent;
-  border-color:rgba(116,174,228,.35);
+  border-color:rgba(255,255,255,.18);
 }
 .grid > .card:not(.stat):not(.show) h3,
 .chain > .card h3,
@@ -761,7 +761,7 @@ figure.chart,
   margin-top:30px;
 }
 .market-matrix thead th{
-  background:#172230;
+  background:#211b1b;
 }
 .positioning-notes{
   grid-template-columns:1fr 1fr;
@@ -830,7 +830,22 @@ figure.chart,
   letter-spacing:0;
   text-transform:none;
 }
-.memo-item:nth-child(even) .memo-num{color:var(--blue-soft)}
+.memo-item:nth-child(even) .memo-num{color:var(--red)}
+
+/* Semantic colour is reserved for an analytical point, never decoration. */
+.financial-metrics .card:nth-child(2) .v,
+.profit-bridge .card:last-child .v,
+.market-tape .card:nth-child(5) .v{
+  color:var(--positive) !important;
+}
+.market-tape .card:nth-child(8) .v{
+  color:#fff !important;
+}
+#segments .segment-notes .card:last-child .tag,
+.positioning-notes .card:last-child .tag,
+.memo-item:nth-child(3) .memo-meta span:last-child b{
+  color:var(--caution);
+}
 
 [data-reveal]{
   transform:translateY(16px);
