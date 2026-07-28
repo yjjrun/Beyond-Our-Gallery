@@ -544,6 +544,294 @@ figure.chart,
   backdrop-filter:blur(14px);
 }
 
+/* ---------- editorial chapter system ---------- */
+section{
+  position:relative;
+  overflow:hidden;
+}
+#overview{
+  background:
+    radial-gradient(700px 420px at 92% 8%,rgba(207,69,62,.11),transparent 68%);
+}
+#segments{
+  background:
+    radial-gradient(880px 560px at 0% 35%,rgba(207,69,62,.12),transparent 66%),
+    linear-gradient(180deg,rgba(15,10,10,.18),rgba(12,14,18,.10));
+}
+#financials{
+  background:
+    radial-gradient(820px 560px at 100% 30%,rgba(62,120,189,.13),transparent 67%);
+}
+#market{
+  background:
+    radial-gradient(780px 500px at 0% 24%,rgba(62,120,189,.15),transparent 68%),
+    linear-gradient(180deg,rgba(10,16,24,.20),rgba(16,10,10,.12));
+}
+#strategy{
+  background:
+    radial-gradient(900px 520px at 88% 12%,rgba(207,69,62,.18),transparent 68%),
+    linear-gradient(155deg,rgba(34,12,11,.36),rgba(8,10,14,.15));
+}
+
+/* Narrative content is set as editorial notes, not bordered cards. */
+.grid > .card:not(.stat):not(.show),
+.chain > .card,
+section > .wrap > .card:not(.stat){
+  background:transparent;
+  border:0;
+  border-top:1px solid rgba(255,255,255,.18);
+  border-radius:0;
+  box-shadow:none;
+  backdrop-filter:none;
+  padding:22px 16px 12px 0;
+  color:#fbfaf9;
+}
+.grid > .card:not(.stat):not(.show):nth-child(even),
+.chain > .card:nth-child(even),
+section > .wrap > .card:not(.stat):nth-child(even){
+  background:transparent;
+  border-color:rgba(116,174,228,.35);
+}
+.grid > .card:not(.stat):not(.show) h3,
+.chain > .card h3,
+section > .wrap > .card:not(.stat) h3{color:#fff}
+.grid > .card:not(.stat):not(.show) p,
+.chain > .card p,
+section > .wrap > .card:not(.stat) p{color:#cfc7c3}
+
+figure.chart,
+.tblwrap,
+.formula{
+  border:0;
+  border-radius:4px;
+  box-shadow:none;
+}
+
+/* Overview: a four-fact KPI strip, profile notes, then the thesis mechanism. */
+.overview-facts{
+  padding:0;
+  gap:12px;
+}
+.overview-facts .card{
+  min-height:200px;
+  border-radius:8px;
+}
+.overview-profile{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:28px;
+  margin-top:54px;
+}
+.overview-profile .card{
+  padding-top:20px;
+}
+.overview-profile .fact-v{
+  margin:4px 0 14px;
+  font-size:clamp(28px,3vw,38px);
+}
+.thesis-flow{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:28px;
+}
+.thesis-flow .card{
+  min-height:205px;
+}
+
+/* Segments: one full-width chart and one dominant photographic case study. */
+.segment-chart{
+  width:100%;
+  padding:34px 38px;
+}
+.showgrid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:start;
+  gap:28px;
+}
+.showgrid > .show:first-child{
+  grid-column:1 / -1;
+  padding:34px;
+  border:0;
+  border-left:4px solid var(--red);
+  border-radius:6px;
+}
+.showgrid > .show:first-child .showbody{
+  grid-template-columns:minmax(210px,.45fr) minmax(0,1.55fr);
+  gap:38px;
+}
+.showgrid > .show:first-child .projs img{
+  aspect-ratio:16/9;
+}
+.showgrid > .show:not(:first-child){
+  background:transparent !important;
+  border:0;
+  border-top:1px solid rgba(255,255,255,.20);
+  border-radius:0;
+  box-shadow:none;
+  backdrop-filter:none;
+  padding:24px 8px 10px 0;
+}
+.showgrid > .show:not(:first-child) .showhead{
+  min-height:92px;
+}
+.showgrid > .show:not(:first-child) .showbody{
+  display:block;
+}
+.showgrid > .show:not(:first-child) .showstats{
+  margin-bottom:22px;
+}
+.showgrid > .show:not(:first-child) .showdesc p,
+.showgrid > .show:not(:first-child) .projs figcaption{color:#d1c9c5}
+.showgrid > .show:not(:first-child) .srow{
+  border-bottom-color:rgba(255,255,255,.14);
+}
+.showgrid > .show:not(:first-child) .srow span,
+.showgrid > .show:not(:first-child) .showrev span{color:#aca39f}
+.showgrid > .show:not(:first-child) .srow b{color:#fff}
+.showgrid > .show:not(:first-child) .showrev{
+  border-top-color:rgba(255,255,255,.16);
+}
+
+/* Financials: one dominant chart with a commentary rail. */
+.financial-metrics{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.financial-lead{
+  display:grid;
+  grid-template-columns:minmax(0,1.65fr) minmax(270px,.7fr);
+  gap:34px;
+  align-items:stretch;
+  margin-top:38px;
+}
+.financial-lead .financial-dominant{
+  margin:0;
+  padding:34px;
+}
+.financial-commentary{
+  align-self:stretch;
+  padding:10px 0 10px 28px;
+  border-left:2px solid var(--red);
+}
+.financial-commentary .tag{
+  margin-bottom:14px;
+  color:var(--salmon);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.financial-commentary h3{
+  max-width:300px;
+  margin-bottom:16px;
+  font-size:25px;
+}
+.financial-commentary p{
+  color:#cfc7c3;
+  font-size:14px;
+  line-height:1.75;
+}
+.financial-commentary p b{color:#fff}
+.financial-supporting{
+  width:min(68%,740px);
+  margin:28px 0 0 auto;
+}
+
+/* Market: valuation tape followed by the capability-positioning matrix. */
+.market-tape{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:0;
+  border-top:1px solid rgba(255,255,255,.18);
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.market-tape .card.stat{
+  min-height:178px;
+  background:transparent;
+  border:0;
+  border-right:1px solid rgba(255,255,255,.14);
+  border-radius:0;
+  box-shadow:none;
+  backdrop-filter:none;
+  padding:25px 24px 22px 0;
+}
+.market-tape .card.stat:nth-child(4n){
+  border-right:0;
+  padding-left:24px;
+}
+.market-tape .card.stat:not(:nth-child(4n+1)){padding-left:24px}
+.market-tape .card.stat:nth-child(n+5){border-top:1px solid rgba(255,255,255,.14)}
+.market-matrix{
+  margin-top:30px;
+}
+.market-matrix thead th{
+  background:#172230;
+}
+.positioning-notes{
+  grid-template-columns:1fr 1fr;
+  gap:36px;
+  margin-top:26px;
+}
+
+/* Strategy: numbered investment memo with explicit impact and effort. */
+.strategy-memo{
+  margin-top:42px;
+  border-top:1px solid rgba(255,255,255,.22);
+}
+.memo-item{
+  display:grid;
+  grid-template-columns:88px minmax(0,1fr) minmax(250px,.58fr);
+  gap:30px;
+  align-items:start;
+  padding:34px 0 36px;
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.memo-num{
+  color:var(--red);
+  font-size:42px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.045em;
+}
+.memo-copy .tag{
+  margin-bottom:8px;
+  color:var(--salmon);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.memo-copy h3{
+  margin-bottom:10px;
+  font-size:24px;
+}
+.memo-copy p{
+  max-width:610px;
+  color:#cec6c2;
+  font-size:14.5px;
+  line-height:1.72;
+}
+.memo-copy p b{color:#fff}
+.memo-meta{
+  display:grid;
+  gap:18px;
+  padding-left:24px;
+  border-left:1px solid rgba(255,255,255,.18);
+}
+.memo-meta span{
+  color:#968e8a;
+  font-size:10.5px;
+  font-weight:700;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.memo-meta b{
+  display:block;
+  margin-top:5px;
+  color:#fff;
+  font-size:13px;
+  line-height:1.45;
+  letter-spacing:0;
+  text-transform:none;
+}
+.memo-item:nth-child(even) .memo-num{color:var(--blue-soft)}
+
 [data-reveal]{
   transform:translateY(16px);
   transition:opacity .55s ease,transform .55s cubic-bezier(.22,.75,.25,1);
@@ -556,6 +844,20 @@ footer b{color:#ddd6d2}
   nav .wrap{gap:18px}
   .hero .wrap{grid-template-columns:minmax(0,1fr) 190px;gap:44px}
   .herologo{width:190px;border-radius:50%}
+  .overview-profile,
+  .thesis-flow{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .showgrid{grid-template-columns:1fr 1fr}
+  .showgrid > .show:first-child{grid-column:1 / -1}
+  .showgrid > .show:last-child{grid-column:1 / -1}
+  .financial-lead{grid-template-columns:1fr}
+  .financial-commentary{padding:24px 0 0;border-left:0;border-top:2px solid var(--red)}
+  .financial-supporting{width:100%}
+  .market-tape{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .market-tape .card.stat:nth-child(2n){border-right:0}
+  .market-tape .card.stat:nth-child(n+3){border-top:1px solid rgba(255,255,255,.14)}
+  .market-tape .card.stat:nth-child(4n){padding-left:24px}
+  .memo-item{grid-template-columns:70px minmax(0,1fr)}
+  .memo-meta{grid-column:2;padding:18px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.14)}
 }
 @media(max-width:720px){
   .wrap{padding:0 20px}
@@ -566,6 +868,25 @@ footer b{color:#ddd6d2}
   .hero .byline .btg{display:block;margin:5px 0 0;padding:0;border:0}
   .card{padding:21px}
   figure.chart{padding:20px}
+  .overview-profile,
+  .thesis-flow,
+  .financial-metrics,
+  .showgrid,
+  .positioning-notes{grid-template-columns:1fr}
+  .showgrid > .show:first-child,
+  .showgrid > .show:last-child{grid-column:auto}
+  .showgrid > .show:first-child{padding:24px 20px}
+  .showgrid > .show:first-child .showbody{grid-template-columns:1fr;gap:22px}
+  .market-tape{grid-template-columns:1fr}
+  .market-tape .card.stat{
+    border-right:0;
+    border-top:1px solid rgba(255,255,255,.14);
+    padding:22px 0 !important;
+  }
+  .market-tape .card.stat:first-child{border-top:0}
+  .memo-item{grid-template-columns:52px minmax(0,1fr);gap:16px}
+  .memo-num{font-size:30px}
+  .memo-copy h3{font-size:20px}
 }
 </style>
 </head>
@@ -599,14 +920,14 @@ footer b{color:#ddd6d2}
   <div class="slabel">01 · The Group</div>
   <h2>A founder-controlled small-cap with 18 offices and four operating segments</h2>
 
-  <div class="grid g4">
+  <div class="grid g4 overview-facts">
     <div class="card stat outline"><div class="v">S$372.5m</div><div class="tag" style="margin-top:6px">FY2025 revenue</div><p>Contract-based revenue across exhibitions, attractions, interiors and experiential marketing.</p></div>
     <div class="card stat outline"><div class="v">S$13.7m</div><div class="tag" style="margin-top:6px">Attributable profit</div><p>Net margin reached 3.7% — the strongest of the past five years.</p></div>
     <div class="card stat outline"><div class="v">S$79.3m</div><div class="tag" style="margin-top:6px">Net cash</div><p>Unpledged cash less bank and term loans; leases excluded.</p></div>
     <div class="card stat outline"><div class="v">93.7%</div><div class="tag" style="margin-top:6px">Revenue from Asia</div><p>South and North Asia dominate; Singapore alone is 42.3% of group revenue.</p></div>
   </div>
 
-  <div class="grid g4">
+  <div class="grid g4 overview-profile">
     <div class="card"><div class="tag">Founded</div><div class="fact-v">1976</div><p>Started in Singapore by Benedict Soh and Simon Ong. Both still sit on the board and between them hold close to half the shares — this is still a founder-controlled company.</p></div>
     <div class="card"><div class="tag">Listed</div><div class="fact-v">SGX: 5MZ</div><p>On the SGX Mainboard since September 2003 at an IPO price of 19.8¢. A small-cap: closely held, thinly traded and lightly covered by analysts.</p></div>
     <div class="card"><div class="tag">What it sells</div><div class="fact-v">Design → Build</div><p>Four operating segments: Exhibitions, Thematic &amp; Attractions; Retail &amp; Corporate Interiors; Research &amp; Design; and Experiential Marketing.</p></div>
@@ -614,7 +935,7 @@ footer b{color:#ddd6d2}
   </div>
 
   <h3 style="margin-top:48px">How the opportunity becomes value</h3>
-  <div class="chain">
+  <div class="chain thesis-flow">
     <div class="card"><div class="num">1 · OPPORTUNITY</div><h3>Macro demand</h3><p>Tourism, luxury investment, destination capex and corporate confidence determine how many projects enter the market.</p></div>
     <div class="card"><div class="num">2 · CAPTURE</div><h3>Brand fit &amp; trust</h3><p>Creative compatibility, references and consistent regional execution influence whether Kingsmen wins the brief — and whether the client returns.</p></div>
     <div class="card"><div class="num">3 · RECOGNITION</div><h3>Project timing</h3><p>Awards become design work, fabrication, installation and milestone revenue over months or years. Annual revenue therefore lags the demand signal.</p></div>
@@ -627,7 +948,7 @@ footer b{color:#ddd6d2}
   <div class="slabel">02 · Segments</div>
   <h2>Two execution-heavy divisions generate 92% of revenue; the smaller design arm has the highest margin</h2>
 
-  <figure class="chart">
+  <figure class="chart segment-chart">
     <figcaption><span class="ct">FY2025 external revenue by segment</span><span class="cs">S$ million · bar labels show segment margin</span></figcaption>
     <div id="segchart"></div>
   </figure>
@@ -734,7 +1055,7 @@ footer b{color:#ddd6d2}
     </tbody>
   </table></div>
 
-  <div class="grid g3">
+  <div class="grid g3 segment-notes">
     <div class="card"><div class="tag">Concentration</div><h3>Execution carries the group</h3><p>ETA and RCI supply 92% of revenue at just 3.5% and 5.6% margins, so profit swings with project timing, tender pricing and site execution. Winning bigger jobs adds turnover, and one slipped handover can move group earnings.</p></div>
     <div class="card"><div class="tag">Value density</div><h3>R&amp;D is strategically scarce</h3><p>At an 8.6% margin, R&amp;D earns roughly 2.5× more profit per revenue dollar than ETA, yet it is only 5.4% of sales and grew 5.0%. Scaling design-led work — or attaching it to more build contracts — is the cheapest route to a higher group margin.</p></div>
     <div class="card"><div class="tag">Portfolio issue</div><h3>Marketing lost money</h3><p>Experiential Marketing swung to a −S$0.3m loss on 2.7% of revenue, with sales down 9.0%. The drag on group PBT is small, but a sub-scale unit still absorbs management time — the question is whether to reprice it, fold it into ETA, or exit.</p></div>
@@ -755,22 +1076,28 @@ footer b{color:#ddd6d2}
   <div class="slabel">03 · Five-Year Financials</div>
   <h2>Revenue recovered after the pandemic — but gross-margin expansion explains the stronger earnings base</h2>
 
-  <div class="grid g3">
+  <div class="grid g3 financial-metrics">
     <div class="card stat"><div class="v">8.1%</div><div class="tag" style="margin-top:6px">Revenue CAGR</div><p>FY2021–FY2025: S$273.2m → S$372.5m.</p></div>
     <div class="card stat"><div class="v" style="color:var(--redtext)">11.8%</div><div class="tag" style="margin-top:6px">Gross-profit CAGR</div><p>Gross profit grew faster than revenue as gross margin expanded 3.1 points.</p></div>
     <div class="card stat"><div class="v">5.5×</div><div class="tag" style="margin-top:6px">PBT operating leverage</div><p>At the FY2025 cost structure, a 1% revenue change produces roughly a 5.5% PBT change.</p></div>
   </div>
 
-  <div class="grid g2">
-    <figure class="chart" style="margin-top:14px">
+  <div class="financial-lead">
+    <figure class="chart financial-dominant">
       <figcaption><span class="ct">Revenue, FY2021–25</span><span class="cs">S$ million</span></figcaption>
       <div id="revchart"></div>
     </figure>
-    <figure class="chart" style="margin-top:14px">
-      <figcaption><span class="ct">Gross margin, FY2021–25</span><span class="cs">% of revenue</span></figcaption>
-      <div id="gmchart"></div>
-    </figure>
+    <aside class="financial-commentary">
+      <div class="tag">Reading the chart</div>
+      <h3>Margin, not volume, is the earnings story</h3>
+      <p><b>Current strategy:</b> the group has moved from recovery to optimisation — future value depends less on restoring volume and more on sustaining the 24–25% gross-margin range. FY2025 revenue fell 4.1%, yet gross profit hit a five-year high of S$92.2m. A point of gross margin is worth ~S$3.7m, roughly 4× what 1% more revenue delivers at 5.5× leverage — and extra volume must be won in ETA and RCI at 3.5–5.6% margins, where tender pricing sets the price.</p>
+    </aside>
   </div>
+
+  <figure class="chart financial-supporting">
+    <figcaption><span class="ct">Gross margin, FY2021–25</span><span class="cs">% of revenue</span></figcaption>
+    <div id="gmchart"></div>
+  </figure>
 
   <div class="tblwrap"><table>
     <thead><tr><th>FY</th><th>Revenue</th><th>Gross profit</th><th>Gross margin</th><th>PBT</th><th>Net profit</th><th>Net margin</th><th>EPS</th><th>DPS</th></tr></thead>
@@ -782,12 +1109,10 @@ footer b{color:#ddd6d2}
       <tr><td>2025</td><td>372.5</td><td>92.2</td><td>24.7%</td><td>16.8</td><td>13.7</td><td>3.7%</td><td>6.78¢</td><td>3.00¢</td></tr>
     </tbody>
   </table></div>
-  <p class="lede" style="font-size:14.5px"><b style="color:var(--salmon)">Current strategy:</b> the group has moved from recovery to optimisation — future value depends less on restoring volume and more on sustaining the 24–25% gross-margin range. FY2025 revenue fell 4.1%, yet gross profit hit a five-year high of S$92.2m. A point of gross margin is worth ~S$3.7m, roughly 4× what 1% more revenue delivers at 5.5× leverage — and extra volume must be won in ETA and RCI at 3.5–5.6% margins, where tender pricing sets the price.</p>
-
   <h3 style="margin-top:56px">FY2025 profit was economically stronger than the headline +4.2% suggests</h3>
   <p class="lede">Headline comparisons are distorted by a S$5.3m property-disposal gain booked in FY2024. Strip it out and the underlying improvement is ≈75%.</p>
 
-  <div class="grid g4">
+  <div class="grid g4 profit-bridge">
     <div class="card stat"><div class="v">S$13.1m</div><div class="tag" style="margin-top:6px">FY2024 attributable profit</div><p>As reported.</p></div>
     <div class="card stat"><div class="v" style="color:var(--redtext)">−S$5.3m</div><div class="tag" style="margin-top:6px">Less: disposal gain</div><p>One-off property-disposal gain.</p></div>
     <div class="card stat"><div class="v">≈S$7.8m</div><div class="tag" style="margin-top:6px">FY2024 ex-gain</div><p>The true comparison base.</p></div>
@@ -875,7 +1200,7 @@ footer b{color:#ddd6d2}
   <h2>A ~2.2% participant in a fragmented US$16.5bn pool — priced just under its closest peer</h2>
   <p class="lede">Kingsmen participates in a competitive market: group revenue is a small fraction of the ~US$16.5bn global exhibition-services pool. The market is fragmented; no participant is a price setter.</p>
 
-  <div class="grid g4">
+  <div class="grid g4 market-tape">
     <div class="card stat"><div class="v">S$0.54</div><div class="tag" style="margin-top:6px">Share price</div><p>SGX: 5MZ; market data is date-sensitive.</p></div>
     <div class="card stat"><div class="v">S$109m</div><div class="tag" style="margin-top:6px">Market cap</div><p>Approximately 201.9m issued shares.</p></div>
     <div class="card stat"><div class="v">≈8.0×</div><div class="tag" style="margin-top:6px">P/E</div><p>Market cap ÷ FY2025 attributable profit.</p></div>
@@ -900,6 +1225,17 @@ footer b{color:#ddd6d2}
     </tbody>
   </table></div>
   <p class="lede" style="font-size:14.5px">Kingsmen's P/E sits just under Pico's — but Pico earns a 6.0% net margin against Kingsmen's 3.7%, so the gap reflects profitability, not a hidden discount. Pico also positions around CRM, audience data, digital engagement, AI and measurable outcomes — capabilities that attach higher-value revenue to physical delivery. <b style="color:var(--salmon)">Strategic implication:</b> as Kingsmen loses on scale, its strategy should shift toward differentiation rooted in novel art forms and an artistic style that acts as "market power" unique to this industry — and toward a comparable story on measurement, repeat relationships and technology-enabled value.</p>
+
+  <h3 style="margin-top:56px">Competitor positioning by capability</h3>
+  <p class="lede">Kingsmen's defensible position is the combination of Asian execution depth and end-to-end physical delivery. Its exposed flank is upstream strategy, data and measurable commercial outcomes.</p>
+  <div class="tblwrap market-matrix"><table id="compmatrix">
+    <thead><tr><th style="text-align:left">Capability</th><th>Kingsmen</th><th>Pico</th><th>Uniplan</th><th>NEON</th><th>GPJ / Jack Morton</th><th>Sunray</th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+  <div class="grid g2 positioning-notes">
+    <div class="card"><div class="tag">Defensible combination</div><p>Asian execution depth + end-to-end accountability. This vertical integration has yet to be assumed by its competitors.</p></div>
+    <div class="card"><div class="tag">Exposed flank</div><p>Strategy, data and measurable commercial outcomes — precisely where Pico, NEON and GPJ position hardest.</p></div>
+  </div>
 </div></section>
 
 <!-- ============ DEMAND ============ -->
@@ -1023,15 +1359,6 @@ footer b{color:#ddd6d2}
     <div class="card"><div class="tag">Environmental</div><p>Sustainability measurement is on Kingsmen's own list of future value pools. Client ESG reporting is creating demand for modular, reusable exhibition systems and embodied-carbon accounting — the rare area where regulation creates a billable service.</p></div>
   </div>
 
-  <h3 style="margin-top:56px">Competitor capability matrix</h3>
-  <div class="tblwrap"><table id="compmatrix">
-    <thead><tr><th style="text-align:left">Capability</th><th>Kingsmen</th><th>Pico</th><th>Uniplan</th><th>NEON</th><th>GPJ / Jack Morton</th><th>Sunray</th></tr></thead>
-    <tbody></tbody>
-  </table></div>
-  <div class="grid g2">
-    <div class="card"><div class="tag">Defensible combination</div><p>Asian execution depth + end-to-end accountability. This vertical integration has yet to be assumed by its competitors.</p></div>
-    <div class="card"><div class="tag">Exposed flank</div><p>Strategy, data and measurable commercial outcomes — precisely where Pico, NEON and GPJ position hardest.</p></div>
-  </div>
 </div></section>
 
 <!-- ============ RISK ============ -->
@@ -1078,11 +1405,27 @@ footer b{color:#ddd6d2}
   <div class="slabel">09 · Proposed Strategy</div>
   <h2>Four moves to shift revenue out of the middle of the value chain</h2>
 
-  <div class="grid g4">
-    <div class="card"><div class="tag">1 · Margin discipline</div><h3>Defend the 24–25% gross-margin base</h3><p>Prioritise bid/no-bid discipline, change-order recovery, procurement timing and segment-level post-mortems.<br><br><b>Illustrative value:</b> +2 points of gross margin = S$7.45m gross profit — up to 44% of FY2025 PBT.</p></div>
-    <div class="card"><div class="tag">2 · Data attachment</div><h3>Sell measurement with the build</h3><p>Attach visitor analytics, CRM, carbon and post-event reporting to major projects.<br><br><b>Illustrative value:</b> a 2% fee on 25% of revenue = S$1.86m revenue; at 50% gross margin ≈ S$0.93m gross profit.</p></div>
-    <div class="card"><div class="tag">3 · Mix upgrade</div><h3>Grow R&amp;D and operations</h3><p>R&amp;D has the highest disclosed segment margin. Use strategy and design as a wedge into execution and ongoing optimisation.<br><br><b>Illustrative value:</b> R&amp;D share from 5.4% to 8% at flat revenue adds ≈S$9.8m design revenue.</p></div>
-    <div class="card"><div class="tag">4 · Relationship moat</div><h3>Measure repeat economics</h3><p>Track repeat-client revenue, existing-client win rate, cross-division penetration, margin by tenure and renewal.<br><br><b>Economic objective:</b> turn tacit aesthetic trust into observable pricing power and lower acquisition cost.</p></div>
+  <div class="strategy-memo">
+    <article class="memo-item">
+      <div class="memo-num">01</div>
+      <div class="memo-copy"><div class="tag">Margin discipline</div><h3>Defend the 24–25% gross-margin base</h3><p>Prioritise bid/no-bid discipline, change-order recovery, procurement timing and segment-level post-mortems.<br><br><b>Illustrative value:</b> +2 points of gross margin = S$7.45m gross profit — up to 44% of FY2025 PBT.</p></div>
+      <div class="memo-meta"><span>Expected impact<b>High · up to S$7.45m gross profit</b></span><span>Implementation difficulty<b>Medium</b></span></div>
+    </article>
+    <article class="memo-item">
+      <div class="memo-num">02</div>
+      <div class="memo-copy"><div class="tag">Data attachment</div><h3>Sell measurement with the build</h3><p>Attach visitor analytics, CRM, carbon and post-event reporting to major projects.<br><br><b>Illustrative value:</b> a 2% fee on 25% of revenue = S$1.86m revenue; at 50% gross margin ≈ S$0.93m gross profit.</p></div>
+      <div class="memo-meta"><span>Expected impact<b>Medium · ≈S$0.93m gross profit</b></span><span>Implementation difficulty<b>Medium</b></span></div>
+    </article>
+    <article class="memo-item">
+      <div class="memo-num">03</div>
+      <div class="memo-copy"><div class="tag">Mix upgrade</div><h3>Grow R&amp;D and operations</h3><p>R&amp;D has the highest disclosed segment margin. Use strategy and design as a wedge into execution and ongoing optimisation.<br><br><b>Illustrative value:</b> R&amp;D share from 5.4% to 8% at flat revenue adds ≈S$9.8m design revenue.</p></div>
+      <div class="memo-meta"><span>Expected impact<b>High · ≈S$9.8m design revenue</b></span><span>Implementation difficulty<b>High</b></span></div>
+    </article>
+    <article class="memo-item">
+      <div class="memo-num">04</div>
+      <div class="memo-copy"><div class="tag">Relationship moat</div><h3>Measure repeat economics</h3><p>Track repeat-client revenue, existing-client win rate, cross-division penetration, margin by tenure and renewal.<br><br><b>Economic objective:</b> turn tacit aesthetic trust into observable pricing power and lower acquisition cost.</p></div>
+      <div class="memo-meta"><span>Expected impact<b>Strategic · pricing power and lower acquisition cost</b></span><span>Implementation difficulty<b>Medium</b></span></div>
+    </article>
   </div>
 </div></section>
 
@@ -1310,8 +1653,8 @@ comp.forEach(row=>{
 });
 
 /* ---------- scroll reveals & count-ups ---------- */
-document.querySelectorAll('.card,figure.chart,.tblwrap,.formula,section h2,section .lede,section .slabel,section h3').forEach(el=>el.setAttribute('data-reveal',''));
-document.querySelectorAll('.grid,.chain').forEach(g=>{[...g.children].forEach((c,i)=>c.style.transitionDelay=(i*90)+'ms');});
+document.querySelectorAll('.card,figure.chart,.tblwrap,.formula,.financial-commentary,.memo-item,section h2,section .lede,section .slabel,section h3').forEach(el=>el.setAttribute('data-reveal',''));
+document.querySelectorAll('.grid,.chain,.strategy-memo').forEach(g=>{[...g.children].forEach((c,i)=>c.style.transitionDelay=(i*90)+'ms');});
 
 function countUp(elm){
   if(elm.hasAttribute('data-nocount'))return;
