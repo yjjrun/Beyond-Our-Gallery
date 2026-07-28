@@ -399,10 +399,10 @@ h1 .rule{
     linear-gradient(145deg,#241715,#111214);
 }
 .hero-slide.logo-slide img{
-  object-fit:contain;
-  padding:18%;
-  clip-path:circle(48.5% at 50% 50%);
-  filter:drop-shadow(0 22px 32px rgba(0,0,0,.34));
+  object-fit:cover;
+  padding:0;
+  clip-path:none;
+  filter:none;
 }
 .hero-slide::after{
   content:"";
@@ -412,20 +412,6 @@ h1 .rule{
     linear-gradient(180deg,rgba(8,8,9,.10) 20%,rgba(8,8,9,.48) 100%),
     linear-gradient(90deg,rgba(18,10,10,.16),transparent 42%);
   pointer-events:none;
-}
-.hero-slide figcaption{
-  position:absolute;
-  z-index:2;
-  left:48px;
-  right:48px;
-  bottom:42px;
-  text-align:center;
-  color:#f7f3f1;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  text-shadow:0 2px 12px rgba(0,0,0,.70);
 }
 @keyframes heroCycle{
   0%,28%{opacity:1;transform:scale(1)}
@@ -1239,15 +1225,12 @@ footer b{color:#ddd6d2}
   <div class="hero-media" aria-label="Featured Kingsmen projects">
     <figure class="hero-slide logo-slide">
       <img src="assets/kingsmen-logo.png" alt="Kingsmen Creatives logo">
-      <figcaption>Kingsmen Creatives</figcaption>
     </figure>
     <figure class="hero-slide">
       <img src="assets/eta-oceanarium.jpg" alt="Visitors at the Singapore Oceanarium">
-      <figcaption>Singapore Oceanarium</figcaption>
     </figure>
     <figure class="hero-slide">
       <img src="assets/eta-expo-pavilion.jpg" alt="Singapore Pavilion at Expo 2025 Osaka">
-      <figcaption>Singapore Pavilion · Expo 2025 Osaka</figcaption>
     </figure>
   </div>
 </div></header>
