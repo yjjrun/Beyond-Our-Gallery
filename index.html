@@ -310,7 +310,7 @@ nav a:hover::after{transform:scaleX(1)}
 
 header.hero{
   padding:112px 0 96px;
-  border-bottom:1px solid var(--line);
+  border-bottom:0;
   background:linear-gradient(120deg,rgba(255,255,255,.018),transparent 55%);
 }
 .hero .wrap{grid-template-columns:minmax(0,1fr) 290px;gap:80px}
@@ -328,11 +328,12 @@ h1{
   letter-spacing:-.055em;
   text-transform:none;
 }
+h1 .title-line{display:inline-block}
 h1 .rule{
-  width:72px;
+  width:100%;
   height:4px;
   margin-top:30px;
-  background:linear-gradient(90deg,var(--red) 0 58%,var(--blue) 58% 100%);
+  background:var(--red);
   border-radius:999px;
 }
 .hero p.sub{
@@ -360,7 +361,7 @@ h1 .rule{
   animation:fadeUp .7s ease .45s backwards;
 }
 
-section{padding:88px 0;border-bottom:1px solid var(--line)}
+section{padding:88px 0;border-bottom:0}
 .slabel{
   margin-bottom:14px;
   color:var(--salmon);
@@ -586,7 +587,7 @@ footer b{color:#ddd6d2}
 <header class="hero"><div class="wrap">
   <div>
     <div class="kicker">A strategy and commercial review of</div>
-    <h1>Kingsmen<br>Creatives<span class="rule"></span></h1>
+    <h1>Kingsmen<br><span class="title-line">Creatives<span class="rule"></span></span></h1>
     <p class="sub">Kingsmen Creatives designs and builds the places where brands meet people — museum galleries, theme-park attractions, interactive flagship stores and live brand events. A design-and-build contractor for the experience economy: the client buys a finished, fitted-out space, and Kingsmen carries the creative work, fabrication, logistics and installation risk needed to deliver it.</p>
     <div class="byline">By Jiarun Yang, 2026<span class="btg">Beyond the Gallery</span></div>
   </div>
