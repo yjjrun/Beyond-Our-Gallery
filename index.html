@@ -23,7 +23,7 @@
   --ink:#17181a; --ink2:#55524f; --muted:#8b8781;
   --grid:#ded8d4; --baseline:#c4beb9; --ring:rgba(23,24,26,.08);
   /* validated chart palette on the light card surface */
-  --s1:#cf453e; --s2:#3e78bd; --s3:#eb8a80; --s4:#a06c2e;
+  --s1:#cf453e; --s2:#b8ada8; --s3:#eb8a80; --s4:#a06c2e;
   --seq250:#e78d84; --seq400:#d9574f; --seq550:#8e2620;
   --good:#3e7d32; --warn:#a06400; --serious:#c25a2e; --critical:#c9302b;
   --goodtext:#3e7d32;
@@ -242,7 +242,7 @@ footer b{color:var(--salmon)}
   --baseline:#cbc2be;
   --ring:rgba(23,20,20,.08);
   --s1:#c93e36;
-  --s2:#3e78bd;
+  --s2:#b8ada8;
   --s3:#e2847c;
   --s4:#8f5c57;
   --seq250:#d98b83;
@@ -873,33 +873,37 @@ figure.chart svg .dot{stroke:#1d1515}
 .demand-logics{
   counter-reset:demand-logic;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:0;
-  border-top:1px solid rgba(255,255,255,.20);
-  border-bottom:1px solid rgba(255,255,255,.20);
+  gap:16px;
 }
 .demand-logics .card{
   counter-increment:demand-logic;
   position:relative;
   min-height:250px;
-  padding:78px 30px 28px 0 !important;
-  border:0 !important;
+  padding:78px 25px 28px !important;
+  background:
+    linear-gradient(145deg,rgba(42,24,22,.82),rgba(18,18,20,.76)) !important;
+  border:1px solid rgba(255,255,255,.13) !important;
+  border-top:2px solid var(--red) !important;
+  border-radius:9px !important;
+  box-shadow:0 14px 34px rgba(0,0,0,.16) !important;
+  backdrop-filter:blur(12px);
 }
 .demand-logics .card:not(:first-child){
-  padding-left:30px !important;
-  border-left:1px solid rgba(255,255,255,.15) !important;
+  padding-left:25px !important;
+  border-left:1px solid rgba(255,255,255,.13) !important;
 }
 .demand-logics .card::before{
   content:"0" counter(demand-logic);
   position:absolute;
   top:22px;
-  left:0;
+  left:25px;
   color:rgba(255,255,255,.22);
   font-size:42px;
   font-weight:800;
   line-height:1;
   letter-spacing:-.05em;
 }
-.demand-logics .card:not(:first-child)::before{left:30px}
+.demand-logics .card:not(:first-child)::before{left:25px}
 .demand-logics h3{
   margin-bottom:12px;
   font-size:23px;
@@ -935,9 +939,13 @@ figure.chart svg .dot{stroke:#1d1515}
   margin-top:28px;
 }
 .demand-contrast .card{
-  padding-left:22px !important;
-  border-top:0 !important;
+  padding:25px 26px !important;
+  background:
+    linear-gradient(145deg,rgba(38,23,22,.74),rgba(18,18,20,.70)) !important;
+  border:1px solid rgba(255,255,255,.12) !important;
   border-left:2px solid var(--red) !important;
+  border-radius:8px !important;
+  box-shadow:0 12px 28px rgba(0,0,0,.13) !important;
 }
 .demand-contrast .card:last-child{
   border-left-color:var(--caution) !important;
@@ -1056,7 +1064,6 @@ footer b{color:#ddd6d2}
   .position-grid,
   .model-steps,
   .signal-list{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .demand-logics .card:nth-child(3),
   .demand-chain .card:nth-child(3),
   .signal-list .card:nth-child(3){border-left:0 !important}
   .switching-case{grid-template-columns:1fr 1fr}
@@ -1098,7 +1105,15 @@ footer b{color:#ddd6d2}
   .memo-num{font-size:30px}
   .memo-copy h3{font-size:20px}
   .demand-logics .card,
-  .demand-logics .card:not(:first-child),
+  .demand-logics .card:not(:first-child){
+    min-height:0;
+    padding:72px 22px 24px !important;
+    border:1px solid rgba(255,255,255,.13) !important;
+    border-top:2px solid var(--red) !important;
+  }
+  .demand-logics .card:first-child{border-top:2px solid var(--red) !important}
+  .demand-logics .card::before,
+  .demand-logics .card:not(:first-child)::before{left:22px}
   .signal-list .card,
   .signal-list .card:not(:first-child){
     min-height:0;
@@ -1106,9 +1121,7 @@ footer b{color:#ddd6d2}
     border-left:0 !important;
     border-top:1px solid rgba(255,255,255,.15) !important;
   }
-  .demand-logics .card:first-child,
   .signal-list .card:first-child{border-top:0 !important}
-  .demand-logics .card:not(:first-child)::before{left:0}
   .demand-chain .card,
   .demand-chain .card:not(:first-child){
     min-height:0;
