@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/kingsmen-logo.png">
 <style>
 :root{
   color-scheme: dark;
@@ -155,7 +156,23 @@ td .note{display:block;white-space:normal;font-weight:500;font-size:12.5px;color
 .dots.dev i{background:var(--s2)}
 .dlab{font-size:11.5px;font-weight:600;color:var(--muted);margin-left:7px}
 
+/* ---------- fact values & big deltas ---------- */
+.fact-v{font-size:31px;font-weight:800;color:var(--ink);line-height:1.05;margin:2px 0 10px;letter-spacing:-.01em}
+.bignum{font-size:40px;font-weight:800;line-height:1;margin-bottom:12px;letter-spacing:-.01em}
+
+/* ---------- logo & project photos ---------- */
+.navlogo{width:22px;height:22px;border-radius:50%;margin-right:10px;vertical-align:-5px}
+.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.herologo{width:min(230px,26vw);height:auto;border-radius:50%;box-shadow:0 0 0 12px rgba(255,255,255,.95),0 24px 70px rgba(0,0,0,.55);animation:pop .7s cubic-bezier(.3,1.3,.4,1) .5s backwards}
+@media(max-width:720px){.hero .wrap{grid-template-columns:1fr}.herologo{display:none}}
+.projs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+.projs figure{margin:0;text-align:center}
+.projs img{width:min(100%,150px);aspect-ratio:1;object-fit:cover;border-radius:50%;border:4px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+.projs figcaption{margin-top:9px;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
+
 /* ---------- division showcases (slides 5–8) ---------- */
+.showgrid{grid-template-columns:repeat(2,1fr)}
+@media(max-width:760px){.showgrid{grid-template-columns:1fr}}
 .show{padding:26px}
 .showhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .showhead .tag{max-width:70%}
@@ -212,7 +229,7 @@ footer b{color:var(--salmon)}
 <body>
 
 <nav><div class="wrap">
-  <span class="brand"><i></i>Beyond the Gallery</span>
+  <span class="brand"><img class="navlogo" src="assets/kingsmen-logo.png" alt="">Beyond the Gallery</span>
   <a href="#overview">Overview</a>
   <a href="#segments">Segments</a>
   <a href="#financials">Financials</a>
@@ -225,11 +242,14 @@ footer b{color:var(--salmon)}
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <div class="dots3"><i></i><i></i><i></i></div>
-  <div class="kicker">A strategy and commercial review of</div>
-  <h1>Kingsmen<br>Creatives<span class="rule"></span></h1>
-  <p class="sub">Kingsmen Creatives designs and builds the places where brands meet people — museum galleries, theme-park attractions, interactive flagship stores and live brand events. A design-and-build contractor for the experience economy: the client buys a finished, fitted-out space, and Kingsmen carries the creative work, fabrication, logistics and installation risk needed to deliver it.</p>
-  <div class="byline">By Jiarun Yang, 2026<span class="btg">Beyond the Gallery</span></div>
+  <div>
+    <div class="dots3"><i></i><i></i><i></i></div>
+    <div class="kicker">A strategy and commercial review of</div>
+    <h1>Kingsmen<br>Creatives<span class="rule"></span></h1>
+    <p class="sub">Kingsmen Creatives designs and builds the places where brands meet people — museum galleries, theme-park attractions, interactive flagship stores and live brand events. A design-and-build contractor for the experience economy: the client buys a finished, fitted-out space, and Kingsmen carries the creative work, fabrication, logistics and installation risk needed to deliver it.</p>
+    <div class="byline">By Jiarun Yang, 2026<span class="btg">Beyond the Gallery</span></div>
+  </div>
+  <img class="herologo" src="assets/kingsmen-logo.png" alt="Kingsmen Creatives logo">
 </div></header>
 
 <!-- ============ OVERVIEW ============ -->
@@ -245,10 +265,10 @@ footer b{color:var(--salmon)}
   </div>
 
   <div class="grid g4">
-    <div class="card"><div class="tag">Founded · 1976</div><p>Started in Singapore by Benedict Soh and Simon Ong. Both still sit on the board and between them hold close to half the shares — this is still a founder-controlled company.</p></div>
-    <div class="card"><div class="tag">Listed · SGX: 5MZ</div><p>On the SGX Mainboard since September 2003 at an IPO price of 19.8¢. A small-cap: closely held, thinly traded and lightly covered by analysts.</p></div>
-    <div class="card"><div class="tag">What it sells · Design → Build</div><p>Four operating segments: Exhibitions, Thematic &amp; Attractions; Retail &amp; Corporate Interiors; Research &amp; Design; and Experiential Marketing.</p></div>
-    <div class="card"><div class="tag">Where it works · 18 offices</div><p>A global network of offices and full-service production facilities across Asia, the Middle East, Europe and North America.</p></div>
+    <div class="card"><div class="tag">Founded</div><div class="fact-v">1976</div><p>Started in Singapore by Benedict Soh and Simon Ong. Both still sit on the board and between them hold close to half the shares — this is still a founder-controlled company.</p></div>
+    <div class="card"><div class="tag">Listed</div><div class="fact-v">SGX: 5MZ</div><p>On the SGX Mainboard since September 2003 at an IPO price of 19.8¢. A small-cap: closely held, thinly traded and lightly covered by analysts.</p></div>
+    <div class="card"><div class="tag">What it sells</div><div class="fact-v">Design → Build</div><p>Four operating segments: Exhibitions, Thematic &amp; Attractions; Retail &amp; Corporate Interiors; Research &amp; Design; and Experiential Marketing.</p></div>
+    <div class="card"><div class="tag">Where it works</div><div class="fact-v">18 offices</div><p>A global network of offices and full-service production facilities across Asia, the Middle East, Europe and North America.</p></div>
   </div>
 
   <h3 style="margin-top:48px">How the opportunity becomes value</h3>
@@ -270,7 +290,7 @@ footer b{color:var(--salmon)}
     <div id="segchart"></div>
   </figure>
 
-  <div class="grid g2">
+  <div class="grid showgrid">
     <div class="card show">
       <div class="showhead">
         <div class="tag"><span class="sw" style="background:var(--s1)"></span>Exhibitions, Thematic &amp; Attractions</div>
@@ -285,7 +305,10 @@ footer b{color:var(--salmon)}
         <div class="showdesc">
           <p>This division undertakes large, often one-off projects for governments, tourism operators, entertainment companies and major brands — exhibition booths, museums, theme-park environments, visitor attractions and major pavilions.</p>
           <div class="incl">INCLUDING:</div>
-          <div class="chips"><span>Singapore Oceanarium</span><span>Singapore Pavilion at Expo 2025 Osaka</span></div>
+          <div class="projs">
+            <figure><img src="assets/eta-oceanarium.jpg" alt="Visitors at the Singapore Oceanarium" loading="lazy"><figcaption>Singapore Oceanarium</figcaption></figure>
+            <figure><img src="assets/eta-expo-pavilion.jpg" alt="Singapore Pavilion at Expo 2025 Osaka" loading="lazy"><figcaption>Singapore Pavilion, Expo 2025 Osaka</figcaption></figure>
+          </div>
         </div>
       </div>
       <div class="showrev"><span>FY2025 revenue</span><b>S$172.4m</b></div>
@@ -304,7 +327,10 @@ footer b{color:var(--salmon)}
         <div class="showdesc">
           <p>A specialised design-and-build contractor for branded commercial spaces. Kingsmen works with retail and corporate clients to translate a brand's identity into a physical environment — stores, offices, showrooms and flagship locations.</p>
           <div class="incl">INCLUDING:</div>
-          <div class="chips"><span>On Running Flagship Store</span><span>Singtel Learning Centre</span></div>
+          <div class="projs">
+            <figure><img src="assets/rci-on-running.jpg" alt="On Running flagship store interior" loading="lazy"><figcaption>On Running Flagship Store</figcaption></figure>
+            <figure><img src="assets/rci-singtel.jpg" alt="Singtel Learning Centre interior" loading="lazy"><figcaption>Singtel Learning Centre</figcaption></figure>
+          </div>
         </div>
       </div>
       <div class="showrev"><span>FY2025 revenue</span><b>S$170.2m</b></div>
@@ -323,7 +349,10 @@ footer b{color:var(--salmon)}
         <div class="showdesc">
           <p>Kingsmen's higher-level creative capability, housed principally under KR+D. It researches audiences and develops the narrative, layout and visitor journey behind a space — consumer research, storytelling, spatial and experience design.</p>
           <div class="incl">INCLUDING:</div>
-          <div class="chips"><span>DHL Americas Innovation Center</span><span>The Bicentennial Experience</span></div>
+          <div class="projs">
+            <figure><img src="assets/rd-dhl.jpg" alt="DHL Americas Innovation Center facade" loading="lazy"><figcaption>DHL Americas Innovation Center</figcaption></figure>
+            <figure><img src="assets/rd-bicentennial.jpg" alt="Immersive theatre at The Bicentennial Experience" loading="lazy"><figcaption>The Bicentennial Experience</figcaption></figure>
+          </div>
         </div>
       </div>
       <div class="showrev"><span>FY2025 revenue</span><b>S$20.0m</b></div>
@@ -342,7 +371,10 @@ footer b{color:var(--salmon)}
         <div class="showdesc">
           <p>Temporary brand experiences, including product launches, pop-up installations, luxury-brand events, gala dinners, roadshows, and interactive marketing campaigns.</p>
           <div class="incl">INCLUDING:</div>
-          <div class="chips"><span>Rings of Power S2 Launch</span><span>KrisFlyer Fest 2024</span></div>
+          <div class="projs">
+            <figure><img src="assets/exm-rings-of-power.jpg" alt="Rings of Power season 2 launch installation" loading="lazy"><figcaption>Rings of Power S2 Launch</figcaption></figure>
+            <figure><img src="assets/exm-krisflyer.jpg" alt="KrisFlyer Fest 2024 at Jewel Changi" loading="lazy"><figcaption>KrisFlyer Fest 2024</figcaption></figure>
+          </div>
         </div>
       </div>
       <div class="showrev"><span>FY2025 revenue</span><b>S$10.0m</b></div>
@@ -428,9 +460,9 @@ footer b{color:var(--salmon)}
   </figure>
 
   <div class="grid g3">
-    <div class="card"><div class="tag delta-up" style="color:var(--goodtext)">+S$4.7m</div><h3>ETA profit improvement</h3><p>Revenue fell S$14.8m as 2024's big completions ended and new work was scheduled later. The gain is mainly margin, 0.9% → 3.5%: low-margin completion work rolled off and the group booked higher margins on certain events and projects.</p></div>
-    <div class="card"><div class="tag delta-up" style="color:var(--goodtext)">+S$1.8m</div><h3>RCI adjusted improvement</h3><p>Reported RCI profit looks like it fell, S$13.2m → S$9.6m, but S$5.3m of FY2024 was a one-off property-disposal gain, so the true base was S$7.8m. Revenue was flat at −0.6%, so the S$1.8m is pure execution, with margin 4.6% → 5.6%.</p></div>
-    <div class="card"><div class="tag delta-down">−S$0.9m</div><h3>Experiential swing</h3><p>Revenue fell ~S$1.0m and profit fell S$0.9m: roughly 90% of lost sales dropped straight to the bottom line. At S$10m of revenue, the creative and production base is largely fixed and too small to flex with a 9% decline.</p></div>
+    <div class="card"><div class="bignum delta-up">+S$4.7m</div><h3>ETA profit improvement</h3><p>Revenue fell S$14.8m as 2024's big completions ended and new work was scheduled later. The gain is mainly margin, 0.9% → 3.5%: low-margin completion work rolled off and the group booked higher margins on certain events and projects.</p></div>
+    <div class="card"><div class="bignum delta-up">+S$1.8m</div><h3>RCI adjusted improvement</h3><p>Reported RCI profit looks like it fell, S$13.2m → S$9.6m, but S$5.3m of FY2024 was a one-off property-disposal gain, so the true base was S$7.8m. Revenue was flat at −0.6%, so the S$1.8m is pure execution, with margin 4.6% → 5.6%.</p></div>
+    <div class="card"><div class="bignum delta-down">−S$0.9m</div><h3>Experiential swing</h3><p>Revenue fell ~S$1.0m and profit fell S$0.9m: roughly 90% of lost sales dropped straight to the bottom line. At S$10m of revenue, the creative and production base is largely fixed and too small to flex with a 9% decline.</p></div>
   </div>
 
   <h3 style="margin-top:56px">Exceptional FY2025 free cash flow, partly a working-capital release</h3>
@@ -971,7 +1003,7 @@ if(REDUCE){
   const cio=new IntersectionObserver(es=>{es.forEach(en=>{
     if(en.isIntersecting){countUp(en.target);cio.unobserve(en.target);}
   });},{threshold:.6});
-  document.querySelectorAll('.stat .v,.showrev b,.share b').forEach(elm=>cio.observe(elm));
+  document.querySelectorAll('.stat .v,.showrev b,.share b,.bignum').forEach(elm=>cio.observe(elm));
 }
 </script>
 </body>
