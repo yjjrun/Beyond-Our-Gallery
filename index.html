@@ -847,6 +847,184 @@ figure.chart,
   color:var(--caution);
 }
 
+/* Charts sit inside the report rather than on stark white canvases. */
+figure.chart{
+  background:
+    radial-gradient(520px 260px at 100% 0%,rgba(207,69,62,.14),transparent 70%),
+    linear-gradient(145deg,rgba(39,22,20,.94),rgba(15,15,17,.92));
+  border:1px solid rgba(255,255,255,.12);
+  color:#f7f3f1;
+  backdrop-filter:blur(14px) saturate(115%);
+}
+figure.chart .ct{color:#fff}
+figure.chart .cs,
+figure.chart .legend{color:#bdb5b1}
+figure.chart .tick{fill:#aaa19d}
+figure.chart .vlab{fill:#f1ece9}
+figure.chart .gl{stroke:rgba(255,255,255,.11)}
+figure.chart .bl{stroke:rgba(255,255,255,.24)}
+figure.chart svg .dot{stroke:#1d1515}
+
+/* Demand Economics: visual sequence, concise signal briefs and takeaway bands. */
+#demand{
+  background:
+    radial-gradient(850px 620px at 100% 16%,rgba(207,69,62,.10),transparent 70%);
+}
+.demand-logics{
+  counter-reset:demand-logic;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:0;
+  border-top:1px solid rgba(255,255,255,.20);
+  border-bottom:1px solid rgba(255,255,255,.20);
+}
+.demand-logics .card{
+  counter-increment:demand-logic;
+  position:relative;
+  min-height:250px;
+  padding:78px 30px 28px 0 !important;
+  border:0 !important;
+}
+.demand-logics .card:not(:first-child){
+  padding-left:30px !important;
+  border-left:1px solid rgba(255,255,255,.15) !important;
+}
+.demand-logics .card::before{
+  content:"0" counter(demand-logic);
+  position:absolute;
+  top:22px;
+  left:0;
+  color:rgba(255,255,255,.22);
+  font-size:42px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.05em;
+}
+.demand-logics .card:not(:first-child)::before{left:30px}
+.demand-logics h3{
+  margin-bottom:12px;
+  font-size:23px;
+}
+
+.demand-chain{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:0;
+  border-top:1px solid rgba(255,255,255,.18);
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.demand-chain .card{
+  position:relative;
+  min-height:185px;
+  padding:28px 32px 26px 0;
+  border:0;
+}
+.demand-chain .card:not(:first-child){padding-left:32px}
+.demand-chain .card:not(:last-child)::after{
+  content:"→";
+  position:absolute;
+  top:24px;
+  right:12px;
+  color:var(--red);
+  font-size:20px;
+  font-weight:700;
+}
+.demand-chain .num{max-width:140px}
+
+.demand-contrast{
+  grid-template-columns:1fr 1fr;
+  gap:36px;
+  margin-top:28px;
+}
+.demand-contrast .card{
+  padding-left:22px !important;
+  border-top:0 !important;
+  border-left:2px solid var(--red) !important;
+}
+.demand-contrast .card:last-child{
+  border-left-color:var(--caution) !important;
+}
+.demand-contrast .card:last-child .tag{color:var(--caution)}
+
+.position-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+}
+.position-grid .card{
+  min-height:190px;
+}
+.position-grid .card:nth-child(2){
+  border-top-color:var(--red);
+}
+.demand-thesis{
+  margin-top:30px !important;
+  padding:25px 28px !important;
+  background:
+    linear-gradient(100deg,rgba(207,69,62,.17),rgba(18,15,16,.36)) !important;
+  border:0 !important;
+  border-left:3px solid var(--red) !important;
+}
+.demand-thesis p{
+  max-width:900px;
+  color:#ebe4e1 !important;
+  font-size:16px !important;
+}
+
+#demand .formula{
+  background:
+    linear-gradient(145deg,rgba(32,25,25,.96),rgba(15,15,17,.94));
+  border:1px solid rgba(255,255,255,.12);
+  border-left:3px solid var(--red);
+  color:#f7f3f1;
+}
+#demand .formula code{color:#fff}
+#demand .formula .leg{color:#bdb5b1}
+#demand .formula .leg b{color:#f1ece9}
+.model-steps{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+}
+.model-steps .card{min-height:165px}
+
+.signal-list{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:0;
+  border-top:1px solid rgba(255,255,255,.20);
+}
+.signal-list .card{
+  min-height:215px;
+  padding:26px 28px 16px 0 !important;
+  border:0 !important;
+}
+.signal-list .card:not(:first-child){
+  padding-left:28px !important;
+  border-left:1px solid rgba(255,255,255,.15) !important;
+}
+.signal-list h3{
+  margin:8px 0 14px;
+  font-size:clamp(25px,3vw,34px);
+}
+.signal-list .card:first-child h3{color:var(--positive)}
+.signal-list .card:nth-child(2) h3{color:var(--caution)}
+.value-pools{
+  margin-top:22px !important;
+  padding:23px 26px !important;
+  background:rgba(207,69,62,.14) !important;
+  border:0 !important;
+  border-top:1px solid rgba(240,161,154,.55) !important;
+}
+.value-pools p{
+  color:#eee7e4 !important;
+  font-size:15px !important;
+  letter-spacing:.01em;
+}
+.switching-case{
+  grid-template-columns:1fr .8fr 1fr;
+  align-items:stretch;
+}
+.switching-case .card.stat{
+  border-color:rgba(207,69,62,.48);
+  background:linear-gradient(145deg,rgba(48,24,21,.94),rgba(18,17,18,.91));
+}
+
 [data-reveal]{
   transform:translateY(16px);
   transition:opacity .55s ease,transform .55s cubic-bezier(.22,.75,.25,1);
@@ -873,6 +1051,16 @@ footer b{color:#ddd6d2}
   .market-tape .card.stat:nth-child(4n){padding-left:24px}
   .memo-item{grid-template-columns:70px minmax(0,1fr)}
   .memo-meta{grid-column:2;padding:18px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+  .demand-logics,
+  .demand-chain,
+  .position-grid,
+  .model-steps,
+  .signal-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .demand-logics .card:nth-child(3),
+  .demand-chain .card:nth-child(3),
+  .signal-list .card:nth-child(3){border-left:0 !important}
+  .switching-case{grid-template-columns:1fr 1fr}
+  .switching-case .card:last-child{grid-column:1 / -1}
 }
 @media(max-width:720px){
   .wrap{padding:0 20px}
@@ -887,7 +1075,14 @@ footer b{color:#ddd6d2}
   .thesis-flow,
   .financial-metrics,
   .showgrid,
-  .positioning-notes{grid-template-columns:1fr}
+  .positioning-notes,
+  .demand-logics,
+  .demand-chain,
+  .demand-contrast,
+  .position-grid,
+  .model-steps,
+  .signal-list,
+  .switching-case{grid-template-columns:1fr}
   .showgrid > .show:first-child,
   .showgrid > .show:last-child{grid-column:auto}
   .showgrid > .show:first-child{padding:24px 20px}
@@ -902,6 +1097,32 @@ footer b{color:#ddd6d2}
   .memo-item{grid-template-columns:52px minmax(0,1fr);gap:16px}
   .memo-num{font-size:30px}
   .memo-copy h3{font-size:20px}
+  .demand-logics .card,
+  .demand-logics .card:not(:first-child),
+  .signal-list .card,
+  .signal-list .card:not(:first-child){
+    min-height:0;
+    padding:72px 0 24px !important;
+    border-left:0 !important;
+    border-top:1px solid rgba(255,255,255,.15) !important;
+  }
+  .demand-logics .card:first-child,
+  .signal-list .card:first-child{border-top:0 !important}
+  .demand-logics .card:not(:first-child)::before{left:0}
+  .demand-chain .card,
+  .demand-chain .card:not(:first-child){
+    min-height:0;
+    padding:24px 0 !important;
+    border-top:1px solid rgba(255,255,255,.14) !important;
+  }
+  .demand-chain .card:first-child{border-top:0 !important}
+  .demand-chain .card:not(:last-child)::after{
+    content:"↓";
+    top:auto;
+    right:4px;
+    bottom:-13px;
+  }
+  .switching-case .card:last-child{grid-column:auto}
 }
 </style>
 </head>
@@ -1257,38 +1478,38 @@ footer b{color:#ddd6d2}
 <section id="demand"><div class="wrap">
   <div class="slabel">06 · Demand Economics</div>
   <h2>One company, three different demand logics</h2>
-  <p class="lede">Kingsmen is filed as a B2B contractor. That label explains less than half of how its revenue actually behaves — and no single macro variable governs all three logics. That is the case for a multi-driver, multi-lag model rather than one GDP beta.</p>
+  <p class="lede">One GDP beta cannot explain Kingsmen. Revenue follows three systems — corporate budgets, prestige-led retail and civic commissions — each with a different trigger and lag.</p>
 
-  <div class="grid g3">
-    <div class="card"><div class="tag">B2B derived demand</div><p>No consumer buys from Kingsmen. Revenue depends on other firms' capex and marketing budgets — approved annually, tendered, then built. Demand arrives as a decision, not a purchase: it can be forecast but never sold directly.</p></div>
-    <div class="card"><div class="tag">Luxury-adjacent</div><p>RCI is 45.7% of revenue and serves brands whose own demand is status-driven: Dior, Fendi, Tiffany, Van Cleef, Ralph Lauren. Their spend follows brand-positioning cycles and network strategy, not weekly retail volumes.</p></div>
-    <div class="card"><div class="tag">Cultural and civic</div><p>Museums, national pavilions, oceanariums and bicentennial exhibitions are commissioned by states and institutions. Demand follows policy, prestige and anniversary calendars — often counter-cyclical to private capex.</p></div>
+  <div class="grid g3 demand-logics">
+    <div class="card"><div class="tag">B2B derived demand</div><h3>Budgets, not consumers</h3><p>Revenue depends on clients' annual capex and marketing decisions. Demand is approved, tendered and built — never sold directly.</p></div>
+    <div class="card"><div class="tag">Luxury-adjacent</div><h3>Prestige-led retail</h3><p>RCI is 45.7% of revenue. Its clients spend around brand positioning and network strategy, not weekly retail volumes.</p></div>
+    <div class="card"><div class="tag">Cultural and civic</div><h3>Policy-led commissions</h3><p>Museums, pavilions and attractions follow policy, prestige and anniversary calendars — sometimes counter-cyclical to private capex.</p></div>
   </div>
 
   <h3 style="margin-top:56px">Derived demand amplifies economic shifts</h3>
-  <p class="lede">Kingsmen's revenue is a second-order effect of consumer and visitor demand — and second-order effects move further than first-order ones.</p>
-  <div class="chain">
-    <div class="card"><div class="num">END DEMAND</div><p>Consumer wealth, tourist arrivals and brand confidence. Singapore arrivals reached 16.9m in 2025 (+2.3%), with S$2.3bn of MICE receipts.</p></div>
-    <div class="card"><div class="num">CAPEX DECISION</div><p>A brand or institution decides to build, refurbish or stage something. This runs on an annual budget cycle; approval is discrete, not continuous.</p></div>
-    <div class="card"><div class="num">TENDER &amp; AWARD</div><p>Competitive bid, then contract. This is where Kingsmen's revenue is actually created — and the only point at which price is set.</p></div>
-    <div class="card"><div class="num">RECOGNITION</div><p>Revenue booked over 12–36 months on percentage of completion. Only here does the original macro signal finally reach the P&amp;L.</p></div>
+  <p class="lede">Consumer demand reaches Kingsmen only after three commercial decisions — which magnifies shocks and delays their arrival in reported revenue.</p>
+  <div class="chain demand-chain">
+    <div class="card"><div class="num">END DEMAND</div><p>Wealth, tourism and brand confidence. Singapore arrivals reached 16.9m in 2025, with S$2.3bn of MICE receipts.</p></div>
+    <div class="card"><div class="num">CAPEX DECISION</div><p>A client chooses to build, refurbish or stage something through a discrete annual budget.</p></div>
+    <div class="card"><div class="num">TENDER &amp; AWARD</div><p>The brief becomes a competitive bid and contract. This is where price is set.</p></div>
+    <div class="card"><div class="num">RECOGNITION</div><p>Revenue reaches the P&amp;L over 12–36 months through percentage of completion.</p></div>
   </div>
 
-  <div class="grid g2">
-    <div class="card"><h3>Why the swing is bigger than the shock</h3><p>Capex is a change in the <i>stock</i> of stores and attractions, not a flow of sales. A brand with a stable network can cut new-build spending to almost nothing without closing a single shop — so a modest move in end demand produces a far larger move in Kingsmen's order book. The accelerator effect.</p></div>
-    <div class="card"><h3>FY2025 shows the disconnect</h3><p>Singapore arrivals rose 2.3% and MICE receipts hit S$2.3bn, yet ETA revenue fell 7.9% and group revenue fell 4.1%. The end market grew while recognised revenue shrank, because 2024's awards had already been built out. Revenue tracks past decisions, not present conditions.</p></div>
+  <div class="grid g2 demand-contrast">
+    <div class="card"><div class="tag">Amplifier</div><h3>Why the swing exceeds the shock</h3><p>A stable retail network can halt new builds without closing a shop. A modest demand move can therefore create a much larger order-book swing: the accelerator effect.</p></div>
+    <div class="card"><div class="tag">FY2025 proof</div><h3>The end market grew; revenue fell</h3><p>Arrivals rose 2.3%, yet ETA revenue fell 7.9% and group revenue fell 4.1%. Revenue tracks past awards, not present conditions.</p></div>
   </div>
 
   <h3 style="margin-top:56px">What Kingsmen builds is a positional good for its client</h3>
-  <div class="grid g3">
-    <div class="card"><div class="tag">The Veblen mechanism</div><p>A Veblen good is one whose appeal rises with its price, because price is the signal of desirability. A flagship boutique, a national pavilion or a themed attraction works the same way: part of its value to the client is that it is visibly expensive to have built.</p></div>
-    <div class="card"><div class="tag">Budgets follow positioning</div><p>The brief for a flagship store acts as a competitive position, and underspending defeats the purpose. That sustains willingness to pay for design — and is why R&amp;D earns 8.6% while build earns 3.5–5.6%.</p></div>
-    <div class="card"><div class="tag">Budget cuts both ways</div><p>Positional spending is discretionary and confidence-linked. When brand or state confidence falls, the flagship is postponed well before the supply chain is cut. Prestige demand is not defensive demand — it is among the first to be deferred.</p></div>
+  <div class="grid g3 position-grid">
+    <div class="card"><div class="tag">The Veblen mechanism</div><h3>Visible expense signals status</h3><p>A flagship, national pavilion or attraction creates value partly because it looks costly and difficult to reproduce.</p></div>
+    <div class="card"><div class="tag">Budgets follow positioning</div><h3>Design captures the premium</h3><p>Underspending defeats the brief. That helps explain why R&amp;D earns 8.6% while build earns 3.5–5.6%.</p></div>
+    <div class="card"><div class="tag">Budget cuts both ways</div><h3>Prestige is still discretionary</h3><p>When confidence falls, flagship projects are deferred early. Positional demand is valuable, but not defensive.</p></div>
   </div>
-  <div class="card" style="margin-top:14px"><div class="tag">The capture problem</div><p>The premium accrues to the brand that owns the luxury signal. Kingsmen sits closest to that premium in Research &amp; Design — 5.4% of revenue at an 8.6% margin — and furthest from it in fabrication and fit-out, 92% of revenue at 3.5–5.6%. The economics of moving upstream are not a preference; they are where the Veblen rent actually is.</p></div>
+  <div class="card demand-thesis"><div class="tag">The capture problem</div><p>Kingsmen is closest to the premium in Research &amp; Design — 5.4% of revenue at an 8.6% margin — and furthest from it in fabrication and fit-out, 92% of revenue at 3.5–5.6%. Moving upstream is where the Veblen rent sits.</p></div>
 
   <h3 style="margin-top:56px">How economic shocks reach each division</h3>
-  <p class="lede">Though Kingsmen is B2B, its demand is ultimately derived from consumer wealth, tourism, brand investment and institutional capex.</p>
+  <p class="lede">Four end markets transmit through different divisions and on different clocks.</p>
   <div class="tblwrap"><table>
     <thead><tr><th>Economic variable</th><th style="text-align:left">Primary transmission channel</th><th style="text-align:left">Most exposed divisions</th><th>Likely lag</th><th style="text-align:left">Kingsmen consequence</th></tr></thead>
     <tbody>
@@ -1316,23 +1537,23 @@ footer b{color:#ddd6d2}
       <div><b>ε<sub>r,t</sub></b> — residual; everything the model does not explain</div>
     </div>
   </div>
-  <div class="grid g3">
-    <div class="card"><div class="tag">1 · Sample</div><h3>Extend the history</h3><p>Recover 10–20 years of annual country or regional revenue, or use half-year data. A longer panel matters more than adding variables.</p></div>
-    <div class="card"><div class="tag">2 · Specification</div><h3>Test 0–2 year lags</h3><p>Demand converts slowly, so the effect may not land in year 0. Testing lags 0, 1 and 2 locates the real driver, yields a cumulative elasticity and leaves a lead indicator for forecasting.</p></div>
-    <div class="card"><div class="tag">3 · Project noise</div><h3>Control the pipeline</h3><p>Use prior order book, contract assets, announcements or rolling three-year revenue to reduce distortion from individual project timing.</p></div>
+  <div class="grid g3 model-steps">
+    <div class="card"><div class="tag">1 · Sample</div><h3>Extend the history</h3><p>Use 10–20 years of regional or half-year revenue. More observations matter more than more variables.</p></div>
+    <div class="card"><div class="tag">2 · Specification</div><h3>Test 0–2 year lags</h3><p>Locate when demand converts, then estimate cumulative elasticity and a usable lead indicator.</p></div>
+    <div class="card"><div class="tag">3 · Project noise</div><h3>Control the pipeline</h3><p>Use order book, contract assets or rolling revenue to reduce single-project distortion.</p></div>
   </div>
 
   <h3 style="margin-top:56px">Industry growth signals</h3>
-  <div class="grid g3">
-    <div class="card"><div class="tag">Destination investment</div><h3>Singapore is expanding the experience economy</h3><p>2025 visitor arrivals reached 16.9m (+2.3%). STB reported S$2.3bn of MICE receipts and highlighted major attractions, luxury activations and venue investment. Supports ETA and Experiential demand — but project awards remain cyclical.</p></div>
-    <div class="card"><div class="tag">Luxury</div><h3>Experiences are outperforming goods</h3><p>Global personal luxury goods stabilised in 2025 while consumers kept prioritising travel, hospitality and experiences. In China, luxury goods declined 3–5%, reinforcing the need to sell retail spaces as destinations rather than conventional fit-outs.</p></div>
-    <div class="card"><div class="tag">Art-market analogy</div><h3>Reputation and taste shape market power</h3><p>Global art sales rose 4% to US$59.6bn in 2025, with value heavily influenced by reputation, networks and scarce expertise. Kingsmen is not an art-market company, but similar preference economics operate in high-stakes creative procurement.</p></div>
+  <div class="grid g3 signal-list">
+    <div class="card"><div class="tag">Destination investment</div><h3>16.9m visitors</h3><p>Singapore arrivals rose 2.3%; MICE receipts reached S$2.3bn. Supportive for ETA and Experiential, though awards remain cyclical.</p></div>
+    <div class="card"><div class="tag">Luxury</div><h3>Experiences over goods</h3><p>Luxury goods stabilised, while travel and hospitality held preference. China luxury declined 3–5%, making destination-style retail more important.</p></div>
+    <div class="card"><div class="tag">Art-market analogy</div><h3>US$59.6bn market</h3><p>Global art sales rose 4%. Reputation and scarce expertise similarly shape high-stakes creative procurement.</p></div>
   </div>
-  <div class="card" style="margin-top:14px"><div class="tag">Future value pools</div><p>Experience strategy · visitor analytics · interactive content · IP partnerships · operation and optimisation · sustainability measurement</p></div>
+  <div class="card value-pools"><div class="tag">Future value pools</div><p>Experience strategy · visitor analytics · interactive content · IP partnerships · operation and optimisation · sustainability measurement</p></div>
 
   <h3 style="margin-top:56px">Taste and preference as market power: the switching-cost moat</h3>
   <p class="lede">Switch supplier only if: <b style="color:var(--salmon)">price saving &gt; onboarding cost + redesign cost + delay risk + brand-inconsistency risk</b>.</p>
-  <div class="grid g3">
+  <div class="grid g3 switching-case">
     <div class="card"><div class="tag">Illustrative project</div><h3>S$5m flagship store</h3><p>A competing bid 4% lower saves S$200,000. Expected delay loss: 15% × 30 days × S$25k = S$112,500. Redesign = S$70,000. Internal onboarding = S$50,000.</p></div>
     <div class="card stat"><div class="v" style="color:var(--redtext)">S$232,500</div><div class="tag" style="margin-top:6px">Expected switching cost</div><p>Exceeds the S$200,000 price saving. Remaining with the incumbent is economically rational — even before reputational damage or executive attention.</p></div>
     <div class="card"><div class="tag">How the moat compounds</div><h3>Creative memory becomes relational capital</h3><p>Each project teaches Kingsmen the client's materials, approval rules, brand codes, regional adaptations and decision-makers — making the next project faster and less risky.</p></div>
