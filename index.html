@@ -460,6 +460,46 @@ button,input{font:inherit}
   vertical-align:middle;
 }
 .score-ring.is-decimal{font-size:22px}
+
+/* ---------- blooming lotus decorations ---------- */
+.section{position:relative}
+.section > .wrap{position:relative;z-index:1}
+.bloom-layer{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+.lotus{position:absolute;width:var(--w);aspect-ratio:6/5;opacity:var(--o)}
+.lotus svg{width:100%;height:100%;display:block;transform:rotate(var(--rot))}
+.lotus .petal,
+.lotus .leaf,
+.lotus .core{
+  transform-box:view-box;
+  transform-origin:120px 168px;
+  opacity:0;
+  transition:
+    transform 1.9s cubic-bezier(.34,1.18,.36,1) calc(var(--i) * 95ms),
+    opacity .5s ease calc(var(--i) * 34ms);
+}
+/* closed bud: petals stacked upright and narrowed */
+.lotus .petal{transform:rotate(var(--a0)) scale(.46,.9)}
+.lotus .leaf{transform:rotate(var(--a)) scale(.3)}
+.lotus .core{transform:scale(.2)}
+.lotus.bloomed .petal{transform:rotate(var(--a)) scale(1);opacity:1}
+.lotus.bloomed .leaf{transform:rotate(var(--a)) scale(1);opacity:1}
+.lotus.bloomed .core{transform:scale(1);opacity:1}
+.lotus.bloomed svg{animation:lotusSway 13s ease-in-out 2.6s infinite}
+@keyframes lotusSway{
+  0%,100%{transform:rotate(var(--rot)) scale(1)}
+  50%{transform:rotate(calc(var(--rot) + 2.4deg)) scale(1.018)}
+}
+@media(max-width:900px){.lotus.hide-sm{display:none}.lotus{--w:min(var(--wsm),46vw)}}
+@media (prefers-reduced-motion: reduce){
+  .lotus .petal,.lotus .leaf,.lotus .core{transform:rotate(var(--a)) scale(1)!important;opacity:1!important;transition:none}
+  .lotus.bloomed svg{animation:none}
+}
 .feature-dots{display:flex;gap:9px;margin-top:20px}
 .feature-dots button{
   width:30px;height:5px;border:0;border-radius:999px;background:#e2cfd7;
@@ -1315,6 +1355,107 @@ body.modal-open::before{
 </dialog>
 
 <script>
+/* ---- blooming lotuses on scroll ---- */
+(function(){
+  const PAL={
+    plum :{outer:"#8f5177",mid:"#c6658c",inner:"#e2cdd9",leaf:"#0d7377"},
+    pink :{outer:"#c6658c",mid:"#ef7f9f",inner:"#f3dbe4",leaf:"#0d7377"},
+    blush:{outer:"#d79ab4",mid:"#f0a6bd",inner:"#f6e6ec",leaf:"#1e3d34"},
+    teal :{outer:"#0d7377",mid:"#57a5a1",inner:"#cfe3e0",leaf:"#1e3d34"},
+    glow :{outer:"#ef7f9f",mid:"#f5a9bd",inner:"#fbe3ea",leaf:"#0d9b96"},
+    glow2:{outer:"#c6658c",mid:"#ef7f9f",inner:"#f3dbe4",leaf:"#0d9b96"}
+  };
+  const FLOWERS=[
+    {sec:"featured-analysis",side:"left", w:260,wsm:200,top:"6%", rot:-12,o:.58,pal:"plum"},
+    {sec:"featured-analysis",side:"right",w:168,wsm:140,top:"58%",rot:14, o:.47,pal:"blush",sm:true},
+    {sec:"company-gallery",  side:"right",w:300,wsm:210,top:"3%", rot:10, o:.47,pal:"pink"},
+    {sec:"company-gallery",  side:"left", w:180,wsm:150,top:"74%",rot:-16,o:.40,pal:"teal",sm:true},
+    {sec:"methodology",      side:"left", w:320,wsm:220,top:"10%",rot:-8, o:.85,pal:"glow"},
+    {sec:"methodology",      side:"right",w:210,wsm:170,top:"54%",rot:12, o:.68,pal:"glow2",sm:true},
+    {sec:"latest-research",  side:"left", w:240,wsm:190,top:"14%",rot:-14,o:.52,pal:"plum"},
+    {sec:"standards",        side:"right",w:280,wsm:200,top:"8%", rot:12, o:.55,pal:"pink"}
+  ];
+  const RING=[
+    {n:9,spread:84,d:"M120,168 C 96,140 92,86 120,52 C 148,86 144,140 120,168 Z",key:"outer"},
+    {n:7,spread:62,d:"M120,168 C 102,146 100,104 120,78 C 140,104 138,146 120,168 Z",key:"mid"},
+    {n:5,spread:34,d:"M120,168 C 109,150 108,120 120,100 C 132,120 131,150 120,168 Z",key:"inner"}
+  ];
+  const NS="http://www.w3.org/2000/svg";
+  function make(cfg){
+    const c=PAL[cfg.pal];
+    const svg=document.createElementNS(NS,"svg");
+    svg.setAttribute("viewBox","0 0 240 200");
+    svg.setAttribute("aria-hidden","true");
+    svg.setAttribute("focusable","false");
+    let i=0;
+    // leaves first, behind the bloom
+    [[-96,"leaf"],[96,"leaf"]].forEach(([a])=>{
+      const l=document.createElementNS(NS,"path");
+      l.setAttribute("class","leaf");
+      l.setAttribute("d","M120,168 C 100,158 66,152 44,160 C 70,176 100,180 120,168 Z");
+      l.setAttribute("fill",c.leaf);
+      l.style.setProperty("--a",a+"deg");
+      l.style.setProperty("--i",i++);
+      l.style.transformOrigin="120px 168px";
+      if(a>0)l.setAttribute("transform","translate(240,0) scale(-1,1)");
+      svg.appendChild(l);
+    });
+    RING.forEach(r=>{
+      const step=r.n>1?(r.spread*2)/(r.n-1):0;
+      for(let k=0;k<r.n;k++){
+        const a=-r.spread+step*k;
+        const pth=document.createElementNS(NS,"path");
+        pth.setAttribute("class","petal");
+        pth.setAttribute("d",r.d);
+        pth.setAttribute("fill",c[r.key]);
+        pth.style.setProperty("--a",a.toFixed(1)+"deg");
+        pth.style.setProperty("--a0",(a*0.11).toFixed(1)+"deg");
+        pth.style.setProperty("--i",i++);
+        svg.appendChild(pth);
+      }
+    });
+    const core=document.createElementNS(NS,"ellipse");
+    core.setAttribute("class","core");
+    core.setAttribute("cx","120");core.setAttribute("cy","116");
+    core.setAttribute("rx","13");core.setAttribute("ry","10");
+    core.setAttribute("fill","#f8ecc9");
+    core.style.setProperty("--a","0deg");
+    core.style.setProperty("--i",i++);
+    svg.appendChild(core);
+
+    const wrap=document.createElement("div");
+    wrap.className="lotus"+(cfg.sm?" hide-sm":"");
+    wrap.style.setProperty("--w",cfg.w+"px");
+    wrap.style.setProperty("--wsm",cfg.wsm+"px");
+    wrap.style.setProperty("--rot",cfg.rot+"deg");
+    wrap.style.setProperty("--o",cfg.o);
+    wrap.style.top=cfg.top;
+    wrap.style[cfg.side]="calc(var(--w) * -0.17)";
+    wrap.appendChild(svg);
+    return wrap;
+  }
+
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const io=reduce?null:new IntersectionObserver(es=>{
+    es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("bloomed");io.unobserve(en.target);}});
+  },{threshold:.18,rootMargin:"0px 0px -40px 0px"});
+
+  const layers={};
+  FLOWERS.forEach(cfg=>{
+    const sec=document.getElementById(cfg.sec);
+    if(!sec)return;
+    if(!layers[cfg.sec]){
+      const L=document.createElement("div");
+      L.className="bloom-layer";
+      sec.insertBefore(L,sec.firstChild);
+      layers[cfg.sec]=L;
+    }
+    const f=make(cfg);
+    layers[cfg.sec].appendChild(f);
+    if(reduce)f.classList.add("bloomed"); else io.observe(f);
+  });
+})();
+
 /* ---- rotating featured analysis (5s) ---- */
 (function(){
   const items=[
