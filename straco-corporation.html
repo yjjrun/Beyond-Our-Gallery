@@ -279,6 +279,68 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
   svg.viz .bar{transform:none}
   svg.viz .vlab,svg.viz .dot{opacity:1}
 }
+
+:root{
+  --sum-accent:var(--orangetext);
+  --sum-accent-soft:rgba(179,92,0,.34);
+  --sum-accent-ink:#fff7e9;
+  --sum-accent-hi:var(--orangedeep);
+  --sum-rule:rgba(42,28,10,.22);
+  --sum-divider:rgba(42,28,10,.14);
+  --sum-value:var(--ink);
+  --sum-text:var(--ink2);
+  --sum-label-c:var(--muted);
+  --sum-display:var(--display);
+  --sum-label:var(--body);
+}
+/* ============ SECTION SUMMARY + READ MORE ============ */
+.tldr{margin-top:22px;max-width:900px}
+.tldr-text{font-size:17px;line-height:1.62;color:var(--sum-text);font-weight:500;max-width:830px;margin:0}
+.keyfigs{list-style:none;display:flex;flex-wrap:wrap;margin:28px 0 0;padding:0;
+  border-top:1px solid var(--sum-rule)}
+.keyfigs li{flex:1 1 170px;min-width:150px;padding:16px 22px 4px 0;margin-right:22px;
+  border-right:1px solid var(--sum-divider)}
+.keyfigs li:last-child{border-right:0;margin-right:0;padding-right:0}
+.keyfigs b{display:block;font-family:var(--sum-display);font-size:27px;line-height:1.04;
+  letter-spacing:-.012em;color:var(--sum-value);font-weight:700}
+.keyfigs span{display:block;margin-top:8px;font-family:var(--sum-label);font-size:11.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--sum-label-c);font-weight:700;line-height:1.45}
+
+.expand{margin-top:28px}
+.expand > summary{display:inline-flex;align-items:center;gap:10px;cursor:pointer;list-style:none;
+  font-family:var(--sum-label);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--sum-accent);background:transparent;border:1px solid var(--sum-accent-soft);border-radius:999px;
+  padding:11px 21px;transition:background .18s ease,color .18s ease,border-color .18s ease;
+  -webkit-tap-highlight-color:transparent}
+.expand > summary::-webkit-details-marker{display:none}
+.expand > summary::marker{content:""}
+.expand > summary:hover{background:var(--sum-accent);color:var(--sum-accent-ink);border-color:var(--sum-accent)}
+.expand > summary:focus-visible{outline:2px solid var(--sum-accent);outline-offset:3px}
+.expand .chev{width:13px;height:13px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;
+  stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease}
+.expand[open] > summary .chev{transform:rotate(180deg)}
+.expand .less-lbl{display:none}
+.expand[open] > summary .more-lbl{display:none}
+.expand[open] > summary .less-lbl{display:inline}
+.expand-body{margin-top:8px}
+.expand[open] > .expand-body{animation:expandIn .26s ease both}
+@keyframes expandIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){
+  .expand[open] > .expand-body{animation:none}
+  .expand .chev{transition:none}
+}
+nav a.navexpand{color:var(--sum-accent);font-weight:700}
+nav a.navexpand:hover{color:var(--sum-accent-hi)}
+@media(max-width:720px){
+  .tldr-text{font-size:16px}
+  .keyfigs li{flex:1 1 45%;min-width:0;padding-right:16px;margin-right:16px}
+  .keyfigs li:nth-child(2n){border-right:0;margin-right:0;padding-right:0}
+  .keyfigs b{font-size:23px}
+}
+@media print{
+  .expand > summary,nav a.navexpand{display:none !important}
+  .expand-body{display:block !important}
+}
 </style>
 </head>
 <body>
@@ -295,6 +357,7 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
   <a href="#risk">Risk</a>
   <a href="#strategy">Strategy</a>
   <a href="#outlook">Outlook</a>
+  <a class="navexpand" href="#" role="button" aria-pressed="false">Expand all</a>
   <a class="navhome" href="index.html">&#8592; Back Home</a>
 </div></nav>
 
@@ -339,13 +402,26 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     <div class="card"><div class="tag">What holds it back</div><p>It sits 2.7 points below the 70-point &ldquo;Strong&rdquo; threshold. Concentrated assets, cyclical visitor demand and limited evidence of substantial new growth engines cap the result &mdash; Growth Opportunities scores just 10.6 of 25.</p></div>
   </div>
 
-  <p class="srcline"><a href="#component-scoring">See the full component scoring &darr;</a></p>
+  <p class="srcline"><a href="#component-scoring-full">See the full component scoring &darr;</a></p>
 </div></section>
 
 <!-- ============ OVERVIEW ============ -->
 <section id="overview"><div class="wrap">
   <div class="slabel">01 Company overview</div>
   <h2>Four scarce-location attractions, strong margins — and a demand base still a third below FY2019</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Four attractions in China and Singapore, about 450 staff, and net cash equal to two-thirds of the market capitalisation. Revenue is still 31.7% below FY2019 and visitor numbers only 64% of pre-pandemic levels. The question this report sets: can an ageing four-asset portfolio become a repeatable platform before the lease clocks run down?</p>
+    <ul class="keyfigs"><li><b>S$74.4m</b><span>FY2025 revenue</span></li><li><b>2.95m</b><span>FY2025 visitors</span></li><li><b>46.9%</b><span>EBITDA margin</span></li><li><b>S$176.4m</b><span>Net cash</span></li></ul>
+  </div>
+
+  <details class="expand" id="overview-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <div class="grid g4">
     <div class="card stat outline"><div class="v">S$74.4m</div><div class="tag" style="margin-top:6px">FY2025 revenue</div><p>−8.7% YoY, and 31.7% below FY2019.</p></div>
@@ -395,12 +471,27 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     <div class="card"><div class="num">4 · OPERATE</div><h3>Availability</h3><p>Maintenance, animal care, utilities and safety keep capacity online; downtime destroys high-margin volume.</p></div>
     <div class="card"><div class="num">5 · RENEW</div><h3>Asset duration</h3><p>Concessions and leases define the years available to recover enhancement capital and terminal value.</p></div>
   </div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ ASSETS ============ -->
 <section id="assets"><div class="wrap">
   <div class="slabel">02 Portfolio &amp; asset review</div>
   <h2>Aquariums provide 58% of revenue and 85% of segment profit; the Flyer supplies scale but volatile returns</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Shanghai Ocean Aquarium is the group — S$26.3m of PBT at a 65.6% margin — while the Singapore Flyer turns almost every lost revenue dollar into a lost profit dollar. Xiamen is constrained by a 2034 lease and the cable car is a cash harvest. Two rules follow: treat the Flyer as a turnaround, and make lease duration a capital gate.</p>
+    <ul class="keyfigs"><li><b>56.8%</b><span>Aquarium PBT margin</span></li><li><b>11.4%</b><span>Singapore Flyer PBT margin</span></li><li><b>95.6%</b><span>Flyer decremental margin</span></li><li><b>2034–37</b><span>Weighted lease cliff</span></li></ul>
+  </div>
+
+  <details class="expand" id="assets-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <div class="grid g2">
     <figure class="chart" style="margin-top:14px">
@@ -514,12 +605,27 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     <div class="card"><div class="tag">Decision one</div><h3>Treat the Flyer as a turnaround</h3><p>Recovery should carry explicit return thresholds rather than being reported as a market-volume problem.</p></div>
     <div class="card"><div class="tag">Decision two</div><h3>Make lease duration a capital gate</h3><p>No major enhancement or acquisition should outrun the legal right to operate the asset it improves.</p></div>
   </div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ FINANCIALS ============ -->
 <section id="financials"><div class="wrap">
   <div class="slabel">03 Financial profile</div>
   <h2>The 2023 rebound plateaued: FY2025 profit fell faster than revenue because Flyer operating leverage overwhelmed stable aquarium margins</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">The 2023 rebound plateaued: revenue has compounded at −4.8% since FY2023 and normalised PBT fell 21.9%. Free cash flow dropped 41% to S$19.8m against S$17.1m of dividends. H1 FY2026 was sharper still — revenue down 19.3%, PBT down 43.1%, and operating costs down only 1.7%.</p>
+    <ul class="keyfigs"><li><b>−4.8%</b><span>Revenue CAGR since FY2023</span></li><li><b>S$27.3m</b><span>Normalised PBT</span></li><li><b>S$19.8m</b><span>Free cash flow</span></li><li><b>−19.3%</b><span>H1 FY2026 revenue</span></li></ul>
+  </div>
+
+  <details class="expand" id="financials-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <figure class="chart">
     <figcaption><span class="ct">Revenue and EBITDA, FY2021–25</span><span class="cs">S$ million</span></figcaption>
@@ -619,12 +725,27 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
       <tr><td>Free cash flow</td><td>8.0</td><td>1.2</td><td class="delta-down">−84.9%</td></tr>
     </tbody>
   </table></div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ VALUATION ============ -->
 <section id="valuation"><div class="wrap">
   <div class="slabel">04 Market position &amp; valuation</div>
   <h2>At S$0.31, cash covers two-thirds of equity value and lease-adjusted EV is 3.6× FY2025 EBITDA</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">At 31.0 cents the market pays roughly S$89m for the operating business — 3.6× EBITDA on a lease-adjusted basis — because net cash covers 66.5% of the market capitalisation. The catch: 54.6% of that cash sits in China under exchange controls, and only 12.45% of the shares float.</p>
+    <ul class="keyfigs"><li><b>S$265.1m</b><span>Market cap</span></li><li><b>20.6c</b><span>Net cash per share</span></li><li><b>3.6×</b><span>Lease-adjusted EV / EBITDA</span></li><li><b>54.6%</b><span>Cash held in China</span></li></ul>
+  </div>
+
+  <details class="expand" id="valuation-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <div class="grid g4">
     <div class="card stat"><div class="v">S$0.310</div><div class="tag" style="margin-top:6px">Share price</div><p>52-week range S$0.265–S$0.405; data at 31 Aug 2026.</p></div>
@@ -656,12 +777,27 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
       <tr><td>Haichang</td><td>n/m</td><td style="text-align:left;white-space:normal">Loss-making</td><td style="text-align:left;white-space:normal">High leverage</td><td style="text-align:left;white-space:normal">Reject leverage-led scale</td></tr>
     </tbody>
   </table></div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ DEMAND ============ -->
 <section id="demand"><div class="wrap">
   <div class="slabel">05 Demand economics</div>
   <h2>The market is not waiting for Straco: tourism recovered faster than its own attendance</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">The recovery happened without Straco. China domestic trips ran at 108.6 against a FY2019 base of 100 while Straco's visitors reached only 64.0 — a gap that points at asset relevance rather than macro conditions. Yield rose to S$22.29 per visitor, but that cannot offset a 12.2% fall in volume.</p>
+    <ul class="keyfigs"><li><b>64.0</b><span>Visitor index, FY2019 = 100</span></li><li><b>108.6</b><span>China domestic trips index</span></li><li><b>S$22.29</b><span>Ticket yield per visitor</span></li><li><b>7.9 yrs</b><span>Shortest lease runway</span></li></ul>
+  </div>
+
+  <details class="expand" id="demand-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
   <p class="lede">FY2025 yield improved, but volume erosion explains almost all of the revenue gap. The attendance shortfall is an asset relevance problem, not only a macro one.</p>
 
   <div class="barlist">
@@ -727,12 +863,27 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     </tbody>
   </table></div>
   <p class="srcline">Group revenue per visitor was S$25.21 in FY2025. Contribution per lost visit is an illustrative S$11–S$14 at a 45–55% incremental margin. Attendance break-even cannot be calculated from public disclosure without Flyer visitors, realised yield and a fixed/variable cost split.</p>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ FRAMEWORKS ============ -->
 <section id="frameworks"><div class="wrap">
   <div class="slabel">06 Competitive position</div>
   <h2>High substitutes and buyer power cap ticket pricing; location and permits protect supply, not demand</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">The moat is the site, not the customer. Location and permits score 4.5 out of 5 and the balance sheet a full 5.0, but proprietary IP, first-party data and switching costs all score 1.5 or below — so demand has to be won again every season. The implication is to buy one portable capability rather than more square metres.</p>
+    <ul class="keyfigs"><li><b>5.0</b><span>Balance-sheet capability</span></li><li><b>4.5</b><span>Location and permits</span></li><li><b>1.5</b><span>Proprietary IP and data</span></li><li><b>1.0</b><span>Customer switching cost</span></li></ul>
+  </div>
+
+  <details class="expand" id="frameworks-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <div class="tblwrap"><table>
     <thead><tr><th>Force</th><th>Intensity</th><th style="text-align:left">Evidence</th><th style="text-align:left">Strategic implication</th></tr></thead>
@@ -784,12 +935,27 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     <div class="card"><div class="tag">Legal</div><p>Leases, safety, wildlife and CITES, food, labour and personal-data rules set operating limits.<br><br><b>Response:</b> make renewal and compliance board-level gates.</p></div>
     <div class="card"><div class="tag">Environment</div><p>Energy, water, heat, animal welfare and weather affect cost and licence to operate.<br><br><b>Response:</b> publish welfare outcomes and energy intensity.</p></div>
   </div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ RISK ============ -->
 <section id="risk"><div class="wrap">
   <div class="slabel">07 Risk</div>
   <h2>Lease renewal and capital misallocation carry more permanent downside than a weak tourism quarter</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Eight risks, two of them very-high impact: lease renewal and capital misallocation. Each carries a named early indicator — no binding Xiamen renewal path by FY2028, Flyer availability below 98%, a deal failing the 10% free-cash-flow yield test — so the board can act before the number moves.</p>
+    <ul class="keyfigs"><li><b>8</b><span>Risks in the matrix</span></li><li><b>2</b><span>Rated very-high impact</span></li><li><b>98%</b><span>Flyer availability threshold</span></li><li><b>FY2028</b><span>Xiamen renewal milestone</span></li></ul>
+  </div>
+
+  <details class="expand" id="risk-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <div class="tblwrap"><table>
     <thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th style="text-align:left">Early indicator / trigger</th><th style="text-align:left">Mitigation</th></tr></thead>
@@ -805,12 +971,27 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     </tbody>
   </table></div>
   <div class="card" style="margin-top:14px"><div class="tag">Board rule</div><p>Every risk owner reports a leading KPI, a threshold and a pre-approved action — not only a narrative status.</p></div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ STRATEGY ============ -->
 <section id="strategy"><div class="wrap">
   <div class="slabel">08 Strategy</div>
   <h2>Four proofs: capture, yield, duration and allocation</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Four proofs in sequence — capture, yield, duration, allocation. Fix the Flyer first with S$3–5m over two years targeting an 18–22% PBT margin, lift non-ticket revenue from 11.6% to 15%, settle the leases before any large capex, then deploy S$96.4m against hard gates or return at least S$40m by FY2028.</p>
+    <ul class="keyfigs"><li><b>S$3–5m</b><span>Flyer recovery investment</span></li><li><b>11.6% → 15%</b><span>Non-ticket revenue mix</span></li><li><b>S$96.4m</b><span>Deployable cash</span></li><li><b>S$40m</b><span>Minimum return if no deal</span></li></ul>
+  </div>
+
+  <details class="expand" id="strategy-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
   <p class="lede">Sequence matters. Restore Flyer reliability and secure duration before committing surplus cash to another owned asset.</p>
 
   <div class="grid g4">
@@ -888,12 +1069,27 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
       <tr><td>24–36 months</td><td style="text-align:left;white-space:normal">One acquisition only if all gates clear; otherwise capital return</td><td style="text-align:left;white-space:normal">Disciplined deployment or cash release</td></tr>
     </tbody>
   </table></div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ OUTLOOK ============ -->
 <section id="outlook"><div class="wrap">
   <div class="slabel">09 Scenarios &amp; valuation</div>
   <h2>FY2026 revenue is likely S$61.8m–S$69.2m; the second half must prove the Flyer can normalize</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Probability-weighted fair value of 34.1 cents against 31.0 today — about 10% upside, cross-checked by a DCF at 31.1–38.1 cents. Even the base case leaves FY2030 revenue 25.1% below FY2019. Fair value exists, but the return is catalyst-dependent.</p>
+    <ul class="keyfigs"><li><b>25.0c</b><span>Bear</span></li><li><b>34.4c</b><span>Base</span></li><li><b>42.7c</b><span>Bull</span></li><li><b>34.1c</b><span>Probability-weighted</span></li></ul>
+  </div>
+
+  <details class="expand" id="outlook-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <figure class="chart">
     <figcaption><span class="ct">FY2026 modelled revenue</span><span class="cs">S$ million</span></figcaption>
@@ -962,12 +1158,27 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
 
   <p class="srcline"><b style="color:var(--white)">Core sources:</b> Straco FY2025 Annual Report (16 Mar 2026) · Straco 1H FY2026 Results (14 Aug 2026) · Straco 2021 AGM responses on the SOA lease · World Bank China Economic Update (7 Jul 2026) · Singapore MTI 2Q 2026 Economic Survey · Singapore Tourism Board 2025 performance and 2026 outlook · China 2025 tourism statistics, State Council · IAAPA State of the Global Attractions Industry 2025.<br>
   Market data at 31 August 2026. Normalized figures, scenarios, sensitivities, capability scores and valuation ranges are the author's calculations and assumptions — not company guidance, consensus estimates or a price target.</p>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ COMPONENT SCORING ============ -->
 <section id="component-scoring"><div class="wrap">
   <div class="slabel">10 Component scoring</div>
   <h2>How the 67.3 breaks down across twenty scored components</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Twenty weighted components sit behind the 67.3. Balance-sheet strength, median net margin and five-year revenue CAGR all score a full 5.0 — though that 15.4% CAGR flatters, starting from a pandemic base. Technology adoption and new-market expansion score 1.0 and pull growth down to 10.6 out of 25.</p>
+    <ul class="keyfigs"><li><b>35.3 / 40</b><span>Financial strength</span></li><li><b>11.6 / 20</b><span>Market position</span></li><li><b>10.6 / 25</b><span>Growth opportunities</span></li><li><b>9.8 / 15</b><span>Risk resilience</span></li></ul>
+  </div>
+
+  <details class="expand" id="component-scoring-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
   <p class="lede">Each component is rated out of five and multiplied by its weight. The four category totals shown at the top of this report are the sums of the components below.</p>
 
   <div class="tblwrap"><table>
@@ -1017,6 +1228,8 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
 
   <p class="srcline"><b>Sources:</b> financial calculations use FY2021&ndash;25 figures from Straco's <a href="https://links.sgx.com/1.0.0/corporate-announcements/I20OI0RWTYFMJ72S/882754_Straco%20AR2025.pdf" target="_blank" rel="noopener">FY2025 audited annual report</a>, cross-checked against the company's <a href="https://stockanalysis.com/quote/sgx/S85/financials/" target="_blank" rel="noopener">five-year financial history</a>, <a href="https://stockanalysis.com/quote/sgx/S85/financials/ratios/" target="_blank" rel="noopener">ROIC data</a> and <a href="https://stockanalysis.com/quote/sgx/S85/financials/cash-flow-statement/" target="_blank" rel="noopener">cash-flow history</a>. The industry score uses the lower forecast from <a href="https://wttc.org/news/us%2412-5-trillion-in-travel-tourism-investment-drive-to-shape-g20-competitiveness-through-2035" target="_blank" rel="noopener">WTTC's 2026 tourism outlook</a> and the <a href="https://www.marketresearch.com/Mordor-Intelligence-LLP-v4018/China-Tourism-Hotel-Share-Trends-46070106/" target="_blank" rel="noopener">2026&ndash;31 China tourism forecast</a>.<br>
   Evidence grade B: financial information is well supported, but market share, repeat-visitor retention, supplier concentration and technology returns remain undisclosed.</p>
+    </div>
+  </details>
 </div></section>
 
 <footer><div class="wrap">
@@ -1167,6 +1380,7 @@ document.querySelectorAll('.card,figure.chart,.tblwrap,.verdict,.barlist,.scoreh
 document.querySelectorAll('.grid,.chain').forEach(g=>{[...g.children].forEach((c,i)=>c.style.transitionDelay=(i*80)+'ms');});
 
 function countUp(elm){
+  /* exposed for the expand handler */
   if(elm.hasAttribute('data-nocount'))return;
   const t=elm.textContent;
   const m=t.match(/-?[\d,]+(\.\d+)?/g);
@@ -1183,6 +1397,7 @@ function countUp(elm){
   })(t0);
 }
 
+window.__bogCountUp = countUp;
 if(REDUCE){
   document.querySelectorAll('[data-reveal],svg.viz').forEach(e=>e.classList.add('in'));
 }else{
@@ -1196,5 +1411,85 @@ if(REDUCE){
   document.querySelectorAll('.stat .v,.showrev b,.own b,.dialinner b').forEach(e=>cio.observe(e));
 }
 </script>
+<script>
+/* ---------- section expand / collapse ---------- */
+(function(){
+  var all = function(){ return Array.prototype.slice.call(document.querySelectorAll('details.expand')); };
+
+  /* Content inside a closed <details> is display:none when the reveal
+     observer first runs, so it never receives its .in class and would
+     stay at opacity:0 after expanding. Reveal it explicitly on open. */
+  function revealInside(d){
+    d.querySelectorAll('[data-reveal],svg.viz').forEach(function(el){ el.classList.add('in'); });
+    d.querySelectorAll('.stat .v,.showrev b,.own b,.dialinner b,.bignum,.share b').forEach(function(el){
+      if(el.dataset.counted) return;
+      el.dataset.counted = '1';
+      if(typeof window.__bogCountUp === 'function') window.__bogCountUp(el);
+    });
+  }
+  all().forEach(function(d){
+    d.addEventListener('toggle', function(){ if(d.open) revealInside(d); });
+    if(d.open) revealInside(d);
+  });
+
+  /* Keep the section heading in view when a long section is collapsed. */
+  all().forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open) return;
+      var sec = d.closest('section');
+      if(!sec) return;
+      var top = sec.getBoundingClientRect().top;
+      if(top < 0) sec.scrollIntoView({block:'start', behavior:'auto'});
+    });
+  });
+
+  /* Open the section a deep link points into, then re-anchor.
+     A bare section id (#risk) lands on the summary; #risk-full opens the analysis. */
+  function openForHash(){
+    var id = location.hash.slice(1);
+    if(!id) return;
+    var target = document.getElementById(id);
+    if(!target) return;
+    var d = target.matches('details.expand') ? target : target.closest('details.expand');
+    if(!d) return;
+    if(!d.open) d.open = true;
+    var anchor = target.closest('section') || target;
+    requestAnimationFrame(function(){ anchor.scrollIntoView({block:'start'}); });
+  }
+  window.addEventListener('hashchange', openForHash);
+  openForHash();
+
+  /* Expand-all control in the nav. */
+  var toggle = document.querySelector('.navexpand');
+  function sync(){
+    if(!toggle) return;
+    var open = all().every(function(d){ return d.open; });
+    toggle.textContent = open ? 'Collapse all' : 'Expand all';
+    toggle.setAttribute('aria-pressed', open ? 'true' : 'false');
+  }
+  if(toggle){
+    toggle.addEventListener('click', function(e){
+      e.preventDefault();
+      var open = all().every(function(d){ return d.open; });
+      all().forEach(function(d){ d.open = !open; });
+      sync();
+    });
+    all().forEach(function(d){ d.addEventListener('toggle', sync); });
+    sync();
+  }
+
+  /* Print and PDF export should contain the whole report. */
+  var restore = [];
+  window.addEventListener('beforeprint', function(){
+    restore = all().map(function(d){ var was = d.open; d.open = true; return [d, was]; });
+  });
+  window.addEventListener('afterprint', function(){
+    restore.forEach(function(p){ p[0].open = p[1]; });
+    restore = [];
+    sync();
+  });
+})();
+</script>
+
 </body>
 </html>

@@ -681,7 +681,7 @@ section{
 /* Narrative content is set as editorial notes, not bordered cards. */
 .grid > .card:not(.stat):not(.show),
 .chain > .card,
-section > .wrap > .card:not(.stat){
+section :is(.wrap,.expand-body) > .card:not(.stat){
   background:transparent;
   border:0;
   border-top:1px solid rgba(255,255,255,.18);
@@ -693,16 +693,16 @@ section > .wrap > .card:not(.stat){
 }
 .grid > .card:not(.stat):not(.show):nth-child(even),
 .chain > .card:nth-child(even),
-section > .wrap > .card:not(.stat):nth-child(even){
+section :is(.wrap,.expand-body) > .card:not(.stat):nth-child(even){
   background:transparent;
   border-color:rgba(255,255,255,.18);
 }
 .grid > .card:not(.stat):not(.show) h3,
 .chain > .card h3,
-section > .wrap > .card:not(.stat) h3{color:#fff}
+section :is(.wrap,.expand-body) > .card:not(.stat) h3{color:#fff}
 .grid > .card:not(.stat):not(.show) p,
 .chain > .card p,
-section > .wrap > .card:not(.stat) p{color:#cfc7c3}
+section :is(.wrap,.expand-body) > .card:not(.stat) p{color:#cfc7c3}
 
 figure.chart,
 .tblwrap,
@@ -1542,12 +1542,12 @@ td .note{font-size:13.5px}
   line-height:1.65;
 }
 
-section > .wrap > h3{
+section :is(.wrap,.expand-body) > h3{
   margin-top:72px;
   margin-bottom:0;
 }
-section > .wrap > h3 + .lede{margin-top:14px}
-section > .wrap > h3 + :is(.grid,.chain,figure.chart,.tblwrap,.formula){
+section :is(.wrap,.expand-body) > h3 + .lede{margin-top:14px}
+section :is(.wrap,.expand-body) > h3 + :is(.grid,.chain,figure.chart,.tblwrap,.formula){
   margin-top:34px;
 }
 
@@ -1737,7 +1737,7 @@ footer b{color:#ddd6d2}
   #demand .formula .equation .continuation{padding-left:18px}
   .grid,
   .chain{gap:24px}
-  section > .wrap > h3{margin-top:56px}
+  section :is(.wrap,.expand-body) > h3{margin-top:56px}
   .overview-profile,
   .thesis-flow,
   .financial-metrics,
@@ -1922,6 +1922,68 @@ footer b{color:#ddd6d2}
   .scorehero{grid-template-columns:1fr;gap:26px}
   .dialinner b{font-size:48px}
 }
+
+:root{
+  --sum-accent:var(--salmon);
+  --sum-accent-soft:rgba(240,161,154,.40);
+  --sum-accent-ink:#0b0a0a;
+  --sum-accent-hi:#ffffff;
+  --sum-rule:rgba(255,255,255,.20);
+  --sum-divider:rgba(255,255,255,.12);
+  --sum-value:var(--white);
+  --sum-text:var(--lightink);
+  --sum-label-c:var(--pagemuted);
+  --sum-display:var(--font-display);
+  --sum-label:var(--font-label);
+}
+/* ============ SECTION SUMMARY + READ MORE ============ */
+.tldr{margin-top:22px;max-width:900px}
+.tldr-text{font-size:17px;line-height:1.62;color:var(--sum-text);font-weight:500;max-width:830px;margin:0}
+.keyfigs{list-style:none;display:flex;flex-wrap:wrap;margin:28px 0 0;padding:0;
+  border-top:1px solid var(--sum-rule)}
+.keyfigs li{flex:1 1 170px;min-width:150px;padding:16px 22px 4px 0;margin-right:22px;
+  border-right:1px solid var(--sum-divider)}
+.keyfigs li:last-child{border-right:0;margin-right:0;padding-right:0}
+.keyfigs b{display:block;font-family:var(--sum-display);font-size:27px;line-height:1.04;
+  letter-spacing:-.012em;color:var(--sum-value);font-weight:700}
+.keyfigs span{display:block;margin-top:8px;font-family:var(--sum-label);font-size:11.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--sum-label-c);font-weight:700;line-height:1.45}
+
+.expand{margin-top:28px}
+.expand > summary{display:inline-flex;align-items:center;gap:10px;cursor:pointer;list-style:none;
+  font-family:var(--sum-label);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--sum-accent);background:transparent;border:1px solid var(--sum-accent-soft);border-radius:999px;
+  padding:11px 21px;transition:background .18s ease,color .18s ease,border-color .18s ease;
+  -webkit-tap-highlight-color:transparent}
+.expand > summary::-webkit-details-marker{display:none}
+.expand > summary::marker{content:""}
+.expand > summary:hover{background:var(--sum-accent);color:var(--sum-accent-ink);border-color:var(--sum-accent)}
+.expand > summary:focus-visible{outline:2px solid var(--sum-accent);outline-offset:3px}
+.expand .chev{width:13px;height:13px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;
+  stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease}
+.expand[open] > summary .chev{transform:rotate(180deg)}
+.expand .less-lbl{display:none}
+.expand[open] > summary .more-lbl{display:none}
+.expand[open] > summary .less-lbl{display:inline}
+.expand-body{margin-top:8px}
+.expand[open] > .expand-body{animation:expandIn .26s ease both}
+@keyframes expandIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){
+  .expand[open] > .expand-body{animation:none}
+  .expand .chev{transition:none}
+}
+nav a.navexpand{color:var(--sum-accent);font-weight:700}
+nav a.navexpand:hover{color:var(--sum-accent-hi)}
+@media(max-width:720px){
+  .tldr-text{font-size:16px}
+  .keyfigs li{flex:1 1 45%;min-width:0;padding-right:16px;margin-right:16px}
+  .keyfigs li:nth-child(2n){border-right:0;margin-right:0;padding-right:0}
+  .keyfigs b{font-size:23px}
+}
+@media print{
+  .expand > summary,nav a.navexpand{display:none !important}
+  .expand-body{display:block !important}
+}
 </style>
 </head>
 <body>
@@ -1938,6 +2000,7 @@ footer b{color:#ddd6d2}
   <a href="#frameworks">Frameworks</a>
   <a href="#risk">Risk</a>
   <a href="#strategy">Strategy</a>
+  <a class="navexpand" href="#" role="button" aria-pressed="false">Expand all</a>
   <a class="navhome" href="index.html">&#8592; Back Home</a>
 </div></nav>
 
@@ -1999,13 +2062,26 @@ footer b{color:#ddd6d2}
 
   <div class="card" style="margin-top:34px"><div class="tag">The latest half-year is encouraging but mixed</div><p>1H2026 revenue increased 3.9%, attributable profit increased 49.9%, and secured contracts reached S$392m. However, gross margin declined to 23.3% and operating cash flow was negative S$12.5m because of working-capital absorption. The five-year score is therefore left unchanged until full-year results establish whether the improvement is durable.</p></div>
 
-  <p class="srcline"><a href="#component-scoring">See the full component scoring &#8595;</a></p>
+  <p class="srcline"><a href="#component-scoring-full">See the full component scoring &#8595;</a></p>
 </div></section>
 
 <!-- ============ OVERVIEW ============ -->
 <section id="overview"><div class="wrap">
   <div class="slabel">01 The Group</div>
   <h2>A founder-controlled small-cap with 18 offices and four operating segments</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">A founder-controlled Singapore small-cap, fifty years old, running design-and-build out of 18 offices — and earning a 3.7% net margin on S$372.5m of revenue. Almost all of that revenue is Asian and two-fifths is Singapore. The balance sheet is the standout: S$79.3m of net cash against a market capitalisation of roughly S$109m.</p>
+    <ul class="keyfigs"><li><b>S$372.5m</b><span>FY2025 revenue</span></li><li><b>3.7%</b><span>Net margin</span></li><li><b>S$79.3m</b><span>Net cash</span></li><li><b>18</b><span>Offices worldwide</span></li></ul>
+  </div>
+
+  <details class="expand" id="overview-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <div class="grid g4 overview-facts">
     <div class="card stat outline"><div class="v">S$372.5m</div><div class="tag" style="margin-top:6px">FY2025 revenue</div><p>Contract-based revenue across exhibitions, attractions, interiors and experiential marketing.</p></div>
@@ -2028,12 +2104,27 @@ footer b{color:#ddd6d2}
     <div class="card"><div class="num">3 · RECOGNITION</div><h3>Project timing</h3><p>Awards become design work, fabrication, installation and milestone revenue over months or years. Annual revenue therefore lags the demand signal.</p></div>
     <div class="card"><div class="num">4 · VALUE</div><h3>Margin &amp; cash</h3><p>Mix, change orders, procurement, working capital and repeat work determine whether revenue becomes profit, free cash flow and shareholder value.</p></div>
   </div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ SEGMENTS ============ -->
 <section id="segments"><div class="wrap">
   <div class="slabel">02 Segments</div>
   <h2>Two execution-heavy divisions generate 92% of revenue; the smaller design arm has the highest margin</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Two execution-heavy divisions produce 92% of revenue at 3.5–5.6% margins, while the design arm turns 5.4% of sales into the group's best margin — roughly 2.5× more profit per revenue dollar. Experiential Marketing swung to a loss. Scaling design-led work is the cheapest available route to a higher group margin.</p>
+    <ul class="keyfigs"><li><b>92%</b><span>From the two build divisions</span></li><li><b>8.6%</b><span>Research &amp; Design</span></li><li><b>3.5%</b><span>Exhibitions &amp; attractions</span></li><li><b>−S$0.3m</b><span>Experiential Marketing PBT</span></li></ul>
+  </div>
+
+  <details class="expand" id="segments-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <figure class="chart segment-chart">
     <figcaption><span class="ct">FY2025 external revenue by segment</span><span class="cs">S$ million · bar labels show segment margin</span></figcaption>
@@ -2164,12 +2255,27 @@ footer b{color:#ddd6d2}
     <figure><img src="assets/eta-oceanarium.jpg" alt="Visitors experiencing the Singapore Oceanarium" loading="lazy"><figcaption><span>05 · Engage</span>Visitor experience</figcaption></figure>
   </div>
   <p class="photo-credit">Design and completed-experience imagery: Kingsmen Creatives. Fabrication: <a href="https://www.merservices.co.uk/about/" target="_blank" rel="noopener">MER Services</a>; on-site build: <a href="https://www.itb.com/en/itb-berlin-for-exhibitors/messeplanung/standbau" target="_blank" rel="noopener">ITB Berlin</a>; installation: <a href="https://exhibits.si.edu/portfolio/prestonsingletaryraven/" target="_blank" rel="noopener">Smithsonian Exhibits</a>. Industry process photographs illustrate comparable work and are not presented as Kingsmen projects.</p>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ FINANCIALS ============ -->
 <section id="financials"><div class="wrap">
   <div class="slabel">03 Five-Year Financials</div>
   <h2>Revenue recovered after the pandemic — but gross-margin expansion explains the stronger earnings base</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Revenue fell 4.1% in FY2025 yet gross profit reached a five-year high — margin, not volume, is what moves earnings here. One point of gross margin is worth about S$3.7m, roughly four times a point of revenue at 5.5× operating leverage. Strip out FY2024's S$5.3m property gain and underlying profit improved about 75%.</p>
+    <ul class="keyfigs"><li><b>8.1%</b><span>Five-year revenue CAGR</span></li><li><b>24.7%</b><span>FY2025 gross margin</span></li><li><b>5.5×</b><span>PBT operating leverage</span></li><li><b>S$27.5m</b><span>Free cash flow</span></li></ul>
+  </div>
+
+  <details class="expand" id="financials-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <div class="grid g3 financial-metrics">
     <div class="card stat"><div class="v">8.1%</div><div class="tag" style="margin-top:6px">Revenue CAGR</div><p>FY2021–FY2025: S$273.2m → S$372.5m.</p></div>
@@ -2245,12 +2351,27 @@ footer b{color:#ddd6d2}
     <div class="card stat"><div class="v">≈S$11.9m</div><div class="tag" style="margin-top:6px">Net working-capital release</div><p>Contract assets fell sharply, partly offset by higher receivables and lower contract liabilities.</p></div>
     <div class="card stat"><div class="v">S$6.0m</div><div class="tag" style="margin-top:6px">Capital expenditure</div><p>Higher than the early recovery years but below operating cash generation.</p></div>
   </div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ ORDER BOOK ============ -->
 <section id="orderbook"><div class="wrap">
   <div class="slabel">04 Order Book &amp; Outlook</div>
   <h2>Three years of reported revenue imply a remarkably stable S$236.5m "in-year conversion" component</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Kingsmen opens each year with only 34–42% of revenue secured, but the unsecured remainder has landed within S$0.1m of S$236.5m three years running — which turns a speculative-looking book into a planning number. The S$80.8m Resorts World Sentosa award, booked after year-end, is worth 54% of the opening order book.</p>
+    <ul class="keyfigs"><li><b>S$151m</b><span>Secured at 31 Jan 2026</span></li><li><b>34%</b><span>Coverage of FY2026</span></li><li><b>S$236.5m</b><span>In-year conversion</span></li><li><b>S$80.8m</b><span>RWS award</span></li></ul>
+  </div>
+
+  <details class="expand" id="orderbook-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
   <p class="lede">Kingsmen enters each year with only 34–42% of prior-year revenue secured. But the unsecured remainder — in-year conversion — landed at S$236.5m, S$236.4m and S$236.5m across FY2023–25, a spread of S$0.1m. That turns a speculative-looking book into a planning number, and lets Kingsmen hold delivery capacity through a thin January instead of cutting and rehiring, protecting the execution margin.</p>
 
   <figure class="chart">
@@ -2311,12 +2432,27 @@ footer b{color:#ddd6d2}
     </tbody>
   </table></div>
   <div class="card" style="margin-top:14px"><div class="tag">Scenario discipline</div><p>1 · Start with the S$127m already expected for FY2026. &nbsp;2 · Estimate post-January and short-cycle conversion below or near the historical S$236.5m residual. &nbsp;3 · Add RWS cautiously — some recognition may substitute for ordinary conversion capacity.</p></div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ MARKET ============ -->
 <section id="market"><div class="wrap">
   <div class="slabel">05 Market Position &amp; Valuation</div>
   <h2>A ~2.2% participant in a fragmented US$16.5bn pool — priced just under its closest peer</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">About 2.2% of a fragmented US$16.5bn market, priced at roughly 8.0× earnings — almost identical to Pico Far East, which earns a 6.0% net margin against Kingsmen's 3.7%. The discount reflects that profitability gap rather than hidden upside; Pico's edge sits upstream, in data and measurement.</p>
+    <ul class="keyfigs"><li><b>~S$109m</b><span>Market cap</span></li><li><b>~8.0×</b><span>Price / earnings</span></li><li><b>~1.4×</b><span>EV / EBITDA</span></li><li><b>5.6%</b><span>Dividend yield</span></li></ul>
+  </div>
+
+  <details class="expand" id="market-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
   <p class="lede">Kingsmen participates in a competitive market: group revenue is a small fraction of the ~US$16.5bn global exhibition-services pool. The market is fragmented; no participant is a price setter.</p>
 
   <div class="grid g4 market-tape">
@@ -2355,12 +2491,27 @@ footer b{color:#ddd6d2}
     <div class="card"><div class="tag">Defensible combination</div><p>Asian execution depth + end-to-end accountability. This vertical integration has yet to be assumed by its competitors.</p></div>
     <div class="card"><div class="tag">Exposed flank</div><p>Strategy, data and measurable commercial outcomes — precisely where Pico, NEON and GPJ position hardest.</p></div>
   </div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ DEMAND ============ -->
 <section id="demand"><div class="wrap">
   <div class="slabel">06 Demand Economics</div>
   <h2>One company, three different demand logics</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">One company, three demand logics — attractions, luxury retail and exhibitions — each with its own trigger and a 12–36 month lag between end demand and recognised revenue. FY2025 showed it plainly: Singapore arrivals rose 2.3% while attractions revenue fell 7.9%. Positional-goods economics then explain why design earns 8.6% and build earns 3.5%.</p>
+    <ul class="keyfigs"><li><b>3</b><span>Separate demand systems</span></li><li><b>12–36 mths</b><span>Lag from demand to revenue</span></li><li><b>−7.9%</b><span>ETA revenue in FY2025</span></li><li><b>S$232.5k</b><span>Switching cost, S$5m fit-out</span></li></ul>
+  </div>
+
+  <details class="expand" id="demand-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
   <p class="lede">One GDP beta cannot explain Kingsmen. Revenue follows three systems — corporate budgets, prestige-led retail and civic commissions — each with a different trigger and lag.</p>
 
   <div class="industry-strip" aria-label="Kingsmen's three principal demand pools">
@@ -2452,12 +2603,27 @@ footer b{color:#ddd6d2}
     <div class="card stat"><div class="v" style="color:var(--redtext)">S$232,500</div><div class="tag" style="margin-top:6px">Expected switching cost</div><p>Exceeds the S$200,000 price saving. Remaining with the incumbent is economically rational — even before reputational damage or executive attention.</p></div>
     <div class="card"><div class="tag">How the moat compounds</div><h3>Creative memory becomes relational capital</h3><p>Each project teaches Kingsmen the client's materials, approval rules, brand codes, regional adaptations and decision-makers — making the next project faster and less risky.</p></div>
   </div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ FRAMEWORKS ============ -->
 <section id="frameworks"><div class="wrap">
   <div class="slabel">07 Strategic Frameworks</div>
   <h2>Porter's Five Forces: squeezed from both sides at once</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Porter's Five Forces and PESTLE converge on one diagnosis: high buyer and supplier power squeeze the midstream 92% of revenue, while genuine differentiation sits upstream where only 5.4% does. Kingsmen is a price-taker where the volume is and a price-influencer where the margin is — which is why every strategic option is an attempt to move revenue upstream.</p>
+    <ul class="keyfigs"><li><b>HIGH</b><span>Buyer power</span></li><li><b>HIGH</b><span>Competitive rivalry</span></li><li><b>92%</b><span>Revenue in the squeezed middle</span></li><li><b>8.6% vs 3.5%</b><span>Upstream vs midstream margin</span></li></ul>
+  </div>
+
+  <details class="expand" id="frameworks-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <div class="tblwrap"><table>
     <thead><tr><th>Force</th><th>Intensity</th><th style="text-align:left">Evidence in Kingsmen's numbers</th></tr></thead>
@@ -2489,12 +2655,27 @@ footer b{color:#ddd6d2}
     <div class="card"><div class="tag">Environmental</div><p>Sustainability measurement is on Kingsmen's own list of future value pools. Client ESG reporting is creating demand for modular, reusable exhibition systems and embodied-carbon accounting — the rare area where regulation creates a billable service.</p></div>
   </div>
 
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ RISK ============ -->
 <section id="risk"><div class="wrap">
   <div class="slabel">08 Risk &amp; Sensitivity</div>
   <h2>Risk register: where the economics can break</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Six material risks, all pointed at the margin expansion FY2025's result rests on. Operating leverage cuts both ways: a 5% revenue fall takes PBT from S$16.8m to S$12.2m, and a 3% input-cost shock is worth S$8.4m — about half of PBT — if none of it passes through to clients.</p>
+    <ul class="keyfigs"><li><b>6</b><span>Risks in the register</span></li><li><b>S$12.2m</b><span>PBT if revenue falls 5%</span></li><li><b>S$8.4m</b><span>Cost of a 3% input shock</span></li><li><b>S$3.73m</b><span>Value of 1% price retention</span></li></ul>
+  </div>
+
+  <details class="expand" id="risk-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <div class="tblwrap"><table>
     <thead><tr><th style="text-align:left">Risk</th><th>Probability</th><th>Impact</th><th style="text-align:left">How it damages economics</th><th style="text-align:left">Leading indicators</th><th style="text-align:left">Primary mitigants</th></tr></thead>
@@ -2528,12 +2709,27 @@ footer b{color:#ddd6d2}
     <div class="card"><div class="tag">Data limitation</div><p>Scope 1 and 2 cover Singapore operations; Scope 3 and full project-material impacts are not yet quantified.</p></div>
     <div class="card"><div class="tag">Cyber trust</div><p>MFA, SIEM, segmentation and training reduce risk where client plans, IP and operational systems are sensitive.</p></div>
   </div>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ STRATEGY ============ -->
 <section id="strategy"><div class="wrap">
   <div class="slabel">09 Proposed Strategy</div>
   <h2>Four moves to shift revenue out of the middle of the value chain</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Four moves to shift revenue out of the commoditised middle: hold the 24–25% gross-margin base, sell measurement alongside the build, grow the design arm, and prove the repeat-client economics. Margin discipline alone is worth up to 44% of FY2025 PBT.</p>
+    <ul class="keyfigs"><li><b>S$7.45m</b><span>From +2 gross-margin points</span></li><li><b>+S$9.8m</b><span>If R&amp;D reaches 8% of sales</span></li><li><b>~S$1.86m</b><span>From attaching measurement</span></li><li><b>44%</b><span>Potential PBT upside</span></li></ul>
+  </div>
+
+  <details class="expand" id="strategy-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
 
   <div class="strategy-memo">
     <article class="memo-item">
@@ -2566,12 +2762,27 @@ footer b{color:#ddd6d2}
       <small>The Bicentennial Experience · Act 5 · Kingsmen Creatives.</small>
     </figcaption>
   </figure>
+    </div>
+  </details>
 </div></section>
 
 <!-- ============ COMPONENT SCORING ============ -->
 <section id="component-scoring"><div class="wrap">
   <div class="slabel">10 Component scoring</div>
   <h2>How the 59.3 breaks down across twenty scored components</h2>
+
+  <div class="tldr">
+    <p class="tldr-text">Twenty weighted components sit behind the 59.3. Balance-sheet strength (5.0/5) and cash-flow stability (4.0/5) carry the score; net margin, ROE, market share and technology adoption each rate 1.0–1.4 and hold it down.</p>
+    <ul class="keyfigs"><li><b>24.3 / 40</b><span>Financial strength</span></li><li><b>10.8 / 20</b><span>Market position</span></li><li><b>15.2 / 25</b><span>Growth opportunities</span></li><li><b>9.0 / 15</b><span>Risk resilience</span></li></ul>
+  </div>
+
+  <details class="expand" id="component-scoring-full">
+    <summary>
+      <span class="more-lbl">Read the full analysis</span>
+      <span class="less-lbl">Collapse this section</span>
+      <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg>
+    </summary>
+    <div class="expand-body">
   <p class="lede">Each component is rated out of five and multiplied by its weight. The four category totals shown at the top of this report are the sums of the components below.</p>
 
   <div class="tblwrap"><table>
@@ -2607,6 +2818,8 @@ footer b{color:#ddd6d2}
     <a href="https://links.sgx.com/1.0.0/corporate-announcements/FL76N0O2VUMH6M9E/900833_KingsmenNewsRelease1H2026.pdf" target="_blank" rel="noopener">1H2026 results release</a> ·
     <a href="https://links.sgx.com/1.0.0/corporate-announcements/FL76N0O2VUMH6M9E/900832_KingsmenResultAnnouncement1H2026.pdf" target="_blank" rel="noopener">Detailed 1H2026 financials</a><br>
     Evidence grade B: audited financial evidence is strong, but several qualitative inputs — peer percentiles, retention, technology economics and operational concentration — remain partially evidenced.</p>
+    </div>
+  </details>
 </div></section>
 
 <footer><div class="wrap">
@@ -2838,6 +3051,7 @@ document.querySelectorAll('.card,figure.chart,.tblwrap,.formula,.financial-comme
 document.querySelectorAll('.grid,.chain,.strategy-memo').forEach(g=>{[...g.children].forEach((c,i)=>c.style.transitionDelay=(i*90)+'ms');});
 
 function countUp(elm){
+  /* exposed for the expand handler */
   if(elm.hasAttribute('data-nocount'))return;
   const t=elm.textContent;
   const m=t.match(/-?[\d,]+(\.\d+)?/g);
@@ -2855,6 +3069,7 @@ function countUp(elm){
   })(t0);
 }
 
+window.__bogCountUp = countUp;
 if(REDUCE){
   document.querySelectorAll('[data-reveal],svg.viz').forEach(elm=>elm.classList.add('in'));
 }else{
@@ -2872,5 +3087,85 @@ if(REDUCE){
   document.querySelectorAll('.stat .v,.showrev b,.share b,.bignum,.dialinner b').forEach(elm=>cio.observe(elm));
 }
 </script>
+<script>
+/* ---------- section expand / collapse ---------- */
+(function(){
+  var all = function(){ return Array.prototype.slice.call(document.querySelectorAll('details.expand')); };
+
+  /* Content inside a closed <details> is display:none when the reveal
+     observer first runs, so it never receives its .in class and would
+     stay at opacity:0 after expanding. Reveal it explicitly on open. */
+  function revealInside(d){
+    d.querySelectorAll('[data-reveal],svg.viz').forEach(function(el){ el.classList.add('in'); });
+    d.querySelectorAll('.stat .v,.showrev b,.own b,.dialinner b,.bignum,.share b').forEach(function(el){
+      if(el.dataset.counted) return;
+      el.dataset.counted = '1';
+      if(typeof window.__bogCountUp === 'function') window.__bogCountUp(el);
+    });
+  }
+  all().forEach(function(d){
+    d.addEventListener('toggle', function(){ if(d.open) revealInside(d); });
+    if(d.open) revealInside(d);
+  });
+
+  /* Keep the section heading in view when a long section is collapsed. */
+  all().forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open) return;
+      var sec = d.closest('section');
+      if(!sec) return;
+      var top = sec.getBoundingClientRect().top;
+      if(top < 0) sec.scrollIntoView({block:'start', behavior:'auto'});
+    });
+  });
+
+  /* Open the section a deep link points into, then re-anchor.
+     A bare section id (#risk) lands on the summary; #risk-full opens the analysis. */
+  function openForHash(){
+    var id = location.hash.slice(1);
+    if(!id) return;
+    var target = document.getElementById(id);
+    if(!target) return;
+    var d = target.matches('details.expand') ? target : target.closest('details.expand');
+    if(!d) return;
+    if(!d.open) d.open = true;
+    var anchor = target.closest('section') || target;
+    requestAnimationFrame(function(){ anchor.scrollIntoView({block:'start'}); });
+  }
+  window.addEventListener('hashchange', openForHash);
+  openForHash();
+
+  /* Expand-all control in the nav. */
+  var toggle = document.querySelector('.navexpand');
+  function sync(){
+    if(!toggle) return;
+    var open = all().every(function(d){ return d.open; });
+    toggle.textContent = open ? 'Collapse all' : 'Expand all';
+    toggle.setAttribute('aria-pressed', open ? 'true' : 'false');
+  }
+  if(toggle){
+    toggle.addEventListener('click', function(e){
+      e.preventDefault();
+      var open = all().every(function(d){ return d.open; });
+      all().forEach(function(d){ d.open = !open; });
+      sync();
+    });
+    all().forEach(function(d){ d.addEventListener('toggle', sync); });
+    sync();
+  }
+
+  /* Print and PDF export should contain the whole report. */
+  var restore = [];
+  window.addEventListener('beforeprint', function(){
+    restore = all().map(function(d){ var was = d.open; d.open = true; return [d, was]; });
+  });
+  window.addEventListener('afterprint', function(){
+    restore.forEach(function(p){ p[0].open = p[1]; });
+    restore = [];
+    sync();
+  });
+})();
+</script>
+
 </body>
 </html>
