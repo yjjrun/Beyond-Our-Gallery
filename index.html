@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/bog-logo-mark.png">
+<link rel="icon" type="image/svg+xml" href="assets/bog-mark.svg">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 <style>
 :root{
@@ -460,6 +460,14 @@ button,input{font:inherit}
   vertical-align:middle;
 }
 .score-ring.is-decimal{font-size:22px}
+.feature-dots{display:flex;gap:9px;margin-top:20px}
+.feature-dots button{
+  width:30px;height:5px;border:0;border-radius:999px;background:#e2cfd7;
+  padding:0;cursor:pointer;transition:background .25s ease;
+}
+.feature-dots button[aria-selected="true"]{background:var(--rose)}
+.feature-fade{transition:opacity .45s ease}
+.feature-fade.is-out{opacity:0}
 .gallery-head{
   display:grid;
   grid-template-columns:minmax(0, 1fr) minmax(300px, 520px);
@@ -927,7 +935,7 @@ body.modal-open::before{
 <header class="site-header" id="top">
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Beyond Our Gallery home">
-      <img src="assets/bog-logo-mark.png" alt="">
+      <img src="assets/bog-mark.svg" alt="">
       <span class="brand-wordmark">
         <strong>BEYOND OUR <span>GALLERY</span></strong>
         <small>SGX ART &amp; MEDIA RESEARCH</small>
@@ -950,7 +958,7 @@ body.modal-open::before{
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <h1>Research the companies <span>others overlook.</span></h1>
+        <h1>See beyond <span>the gallery.</span></h1>
         <p>Research on Singapore's overlooked art, media, attractions and live entertainment companies.</p>
         <div class="hero-actions">
           <a class="btn" href="#company-gallery">Explore companies <i data-lucide="arrow-right" aria-hidden="true"></i></a>
@@ -968,7 +976,7 @@ body.modal-open::before{
   <section class="section" id="featured-analysis" aria-labelledby="featured-title">
     <div class="wrap featured-grid">
       <div class="feature-image">
-        <img src="assets/strategy-visitors.jpg" alt="Visitors inside an immersive exhibition space">
+        <img id="feature-photo" src="assets/strategy-visitors.jpg" alt="Visitors inside an immersive exhibition space">
         <div class="feature-ribbon">
           <strong>People<br>Spaces<br>Stories<br>Value</strong>
           <em>The business of experiences moves people and markets.</em>
@@ -978,8 +986,8 @@ body.modal-open::before{
         <div>
           <p class="eyebrow">Featured analysis</p>
           <h2 id="featured-title">Kingsmen Creatives</h2>
-          <p class="thesis">A diversified experience-design platform with exposure to exhibitions, theme parks and brand environments, underpinned by a strengthening regional footprint.</p>
-          <div class="feature-meta">
+          <p class="thesis" id="feature-thesis">A diversified experience-design platform with exposure to exhibitions, theme parks and brand environments, underpinned by a strengthening regional footprint.</p>
+          <div class="feature-meta" id="feature-meta">
             <span class="pill">SGX: 5MZ</span>
             <span class="pill">Experiential</span>
             <span class="pill">Updated 13 Sep 2026</span>
@@ -988,11 +996,12 @@ body.modal-open::before{
         <div class="score-row">
           <div>
             <span>Overall research score</span>
-            <strong class="score-band">59.3 / 100 <em>Satisfactory</em></strong>
-            <a class="text-link" href="kingsmen-creatives.html">Read analysis <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            <strong class="score-band" id="feature-band">59.3 / 100 <em>Satisfactory</em></strong>
+            <a class="text-link" id="feature-link" href="kingsmen-creatives.html">Read analysis <i data-lucide="arrow-right" aria-hidden="true"></i></a>
           </div>
-          <div class="score-ring is-decimal" style="--score:59.3" aria-label="Overall research score 59.3 out of 100">59.3</div>
+          <div class="score-ring is-decimal" id="feature-ring" style="--score:59.3" aria-label="Overall research score 59.3 out of 100">59.3</div>
         </div>
+        <div class="feature-dots" id="feature-dots" role="tablist" aria-label="Featured analyses"></div>
       </article>
     </div>
   </section>
@@ -1049,17 +1058,17 @@ body.modal-open::before{
           <div class="company-media">
             <img src="assets/eta-oceanarium.jpg" alt="A spherical attraction pavilion representing destination attractions">
             <span class="sector-badge">Attractions</span>
-            <span class="card-score"><span>Score</span><b>72</b></span>
+            <span class="card-score"><span>Score</span><b>67.3</b></span>
           </div>
           <div class="company-body">
             <span class="ticker">SGX: S85</span>
             <h3>Straco Corporation</h3>
             <p>Owner-operator of tourism attractions where visitor recovery supports a patient quality case.</p>
             <div class="mini-scores" aria-label="Miniature research scores">
-              <span class="mini-score"><span>Fin</span><i style="--mini:78"></i><b>78</b></span>
-              <span class="mini-score"><span>Mkt</span><i style="--mini:75"></i><b>75</b></span>
-              <span class="mini-score"><span>Grw</span><i style="--mini:64"></i><b>64</b></span>
-              <span class="mini-score"><span>Risk</span><i style="--mini:71"></i><b>71</b></span>
+              <span class="mini-score"><span>Fin</span><i style="--mini:88"></i><b>88</b></span>
+              <span class="mini-score"><span>Mkt</span><i style="--mini:58"></i><b>58</b></span>
+              <span class="mini-score"><span>Grw</span><i style="--mini:42"></i><b>42</b></span>
+              <span class="mini-score"><span>Risk</span><i style="--mini:65"></i><b>65</b></span>
             </div>
             <div class="card-foot">
               <span class="updated">Updated 1 Sep 2026</span>
@@ -1306,6 +1315,67 @@ body.modal-open::before{
 </dialog>
 
 <script>
+/* ---- rotating featured analysis (5s) ---- */
+(function(){
+  const items=[
+    {name:"Kingsmen Creatives",thesis:"A diversified experience-design platform with exposure to exhibitions, theme parks and brand environments, underpinned by a strengthening regional footprint.",
+     pills:["SGX: 5MZ","Experiential","Updated 13 Sep 2026"],score:"59.3",band:"Satisfactory",href:"kingsmen-creatives.html",
+     img:"assets/strategy-visitors.jpg",alt:"Visitors inside an immersive exhibition space"},
+    {name:"Straco Corporation",thesis:"Exceptional financial resilience and asset economics, constrained by geographic concentration, tourism cyclicality and an underdeveloped expansion pipeline.",
+     pills:["SGX: S85","Attractions","Updated 1 Sep 2026"],score:"67.3",band:"Satisfactory",href:"straco-corporation.html",
+     img:"assets/straco-soa.jpg",alt:"Shanghai Ocean Aquarium beside the Oriental Pearl Tower"}
+  ];
+  const elTitle=document.getElementById("featured-title"),
+        elThesis=document.getElementById("feature-thesis"),
+        elMeta=document.getElementById("feature-meta"),
+        elBand=document.getElementById("feature-band"),
+        elLink=document.getElementById("feature-link"),
+        elRing=document.getElementById("feature-ring"),
+        elPhoto=document.getElementById("feature-photo"),
+        elDots=document.getElementById("feature-dots");
+  if(!elTitle||!elDots)return;
+  const fade=[elTitle,elThesis,elMeta,elBand,elRing,elPhoto];
+  fade.forEach(e=>e&&e.classList.add("feature-fade"));
+  let i=0,timer=null;
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  items.forEach((it,n)=>{
+    const b=document.createElement("button");
+    b.type="button";b.setAttribute("role","tab");
+    b.setAttribute("aria-label","Show "+it.name);
+    b.addEventListener("click",()=>{show(n);restart();});
+    elDots.appendChild(b);
+  });
+
+  function paint(n){
+    const it=items[n];
+    elTitle.textContent=it.name;
+    elThesis.textContent=it.thesis;
+    elMeta.innerHTML=it.pills.map(p=>'<span class="pill">'+p+'</span>').join("");
+    elBand.innerHTML=it.score+' / 100 <em>'+it.band+'</em>';
+    elLink.setAttribute("href",it.href);
+    elRing.textContent=it.score;
+    elRing.style.setProperty("--score",it.score);
+    elRing.setAttribute("aria-label","Overall research score "+it.score+" out of 100");
+    elPhoto.setAttribute("src",it.img);
+    elPhoto.setAttribute("alt",it.alt);
+    [...elDots.children].forEach((d,k)=>d.setAttribute("aria-selected",k===n?"true":"false"));
+  }
+  function show(n){
+    i=n;
+    if(reduce){paint(n);return;}
+    fade.forEach(e=>e&&e.classList.add("is-out"));
+    setTimeout(()=>{paint(n);fade.forEach(e=>e&&e.classList.remove("is-out"));},450);
+  }
+  function restart(){if(timer)clearInterval(timer);timer=setInterval(()=>show((i+1)%items.length),5000);}
+  paint(0);
+  if(!reduce)restart();
+  document.addEventListener("visibilitychange",()=>{
+    if(document.hidden){if(timer)clearInterval(timer);timer=null;}
+    else if(!reduce&&!timer)restart();
+  });
+})();
+
 const analysisData = {
   straco: {
     title: "Straco Corporation",

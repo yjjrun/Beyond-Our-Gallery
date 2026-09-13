@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" role="img" aria-label="Straco Corporation">
+  <rect width="440" height="440" fill="#f29100"/>
+  <circle cx="220" cy="220" r="125" fill="#eff3fa"/>
+  <g fill="#f29100">
+    <!-- central bud -->
+    <ellipse cx="220" cy="141" rx="22" ry="30"/>
+    <!-- left leaf with eye -->
+    <path d="M150 163c-20 2-30 16-28 33 2 18 18 30 36 28 16-2 26-14 27-29 1-18-14-34-35-32z"/>
+    <!-- right leaf with eye -->
+    <path d="M290 163c20 2 30 16 28 33-2 18-18 30-36 28-16-2-26-14-27-29-1-18 14-34 35-32z"/>
+    <!-- trunk -->
+    <rect x="210" y="168" width="20" height="140" rx="4"/>
+    <!-- upper branches meeting the trunk -->
+    <path d="M168 203c14 14 26 24 42 28v18c-22-4-38-16-53-32z"/>
+    <path d="M272 203c-14 14-26 24-42 28v18c22-4 38-16 53-32z"/>
+    <!-- ground strokes -->
+    <path d="M156 243c26-4 44-2 56 4l-2 17c-16-6-34-6-56-3z"/>
+    <path d="M284 243c-26-4-44-2-56 4l2 17c16-6 34-6 56-3z"/>
+    <path d="M154 274c24-3 42-2 56 3v18c-18-5-34-5-56-2z"/>
+    <path d="M286 274c-24-3-42-2-56 3v18c18-5 34-5 56-2z"/>
+    <path d="M152 302h136v20H152z"/>
+  </g>
+  <!-- eyes cut back to the pale emblem colour -->
+  <ellipse cx="158" cy="186" rx="13" ry="11" fill="#eff3fa" transform="rotate(-18 158 186)"/>
+  <ellipse cx="282" cy="186" rx="13" ry="11" fill="#eff3fa" transform="rotate(18 282 186)"/>
+  <ellipse cx="220" cy="138" rx="9" ry="14" fill="#eff3fa"/>
+</svg>

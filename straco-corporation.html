@@ -3,38 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beyond the Gallery — A Strategy &amp; Commercial Review of Straco Corporation</title>
-<meta name="description" content="Beyond the Gallery: an independent strategy and commercial review of Straco Corporation (SGX: S85) — asset economics, capital allocation and the path beyond recovery. By Jiaren Yang, 2026.">
+<title>Beyond Our Gallery — A Strategy &amp; Commercial Review of Straco Corporation</title>
+<meta name="description" content="Beyond Our Gallery: an independent strategy and commercial review of Straco Corporation (SGX: S85) — asset economics, capital allocation and the path beyond recovery. By Jiarun Yang, 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/bog-logo-mark.png">
 <style>
 :root{
-  color-scheme:dark;
-  /* Straco brand: logo orange on a warm near-black stage */
-  --page:#0c0a06;
-  --line:rgba(255,255,255,.09);
+  color-scheme:light;
+  /* Straco brand: logo orange on a bright sunlit ground */
+  --page:#fff7e9;
+  --line:rgba(42,28,10,.13);
   --orange:#ef8a00;
-  --orangelight:#f7b45c;
+  --orangelight:#f9a825;
   --orangedeep:#a85c10;
-  --orangetext:#c96f00;
+  --orangetext:#b35c00;
   --emblem:#eff3fa;
-  --positive:#3e7d32;
+  --positive:#2f7d32;
   --caution:#a06400;
   --critical:#c0392b;
-  --white:#fdfbf8;
-  --lightink:#ded5cb;
-  --pagemuted:#a2978b;
-  --surface:#fbf7f2;
-  --surface2:#f3ece3;
-  --ink:#1a1510;
-  --ink2:#57504a;
-  --muted:#7d746b;
-  --grid:#e6ded3;
-  --baseline:#cfc5b8;
-  --ring:rgba(26,21,16,.08);
-  /* validated categorical palette on the warm card surface */
+  --white:#2a1c0a;
+  --lightink:#4f3f2a;
+  --pagemuted:#8a7761;
+  --surface:#ffffff;
+  --surface2:#fff8ec;
+  --ink:#2a1c0a;
+  --ink2:#5c4a33;
+  --muted:#8a7761;
+  --grid:#eadfcc;
+  --baseline:#d6c7ac;
+  --ring:rgba(42,28,10,.10);
+  /* validated categorical palette on the white card surface */
   --s1:#d97400; --s2:#1f6fb5; --s3:#e8a13a; --s4:#7d4b96;
   --seq250:#e59a45; --seq400:#d97400; --seq550:#8f4e05;
   --display:"League Spartan", system-ui, sans-serif;
@@ -44,12 +44,11 @@
 html{scroll-behavior:smooth}
 body{
   background:
-    radial-gradient(1100px 720px at 76% 24%, rgba(239,138,0,.30), transparent 62%),
-    radial-gradient(880px 620px at 6% 92%, rgba(125,75,150,.16), transparent 60%),
-    radial-gradient(760px 520px at 92% 94%, rgba(31,111,181,.14), transparent 62%),
-    linear-gradient(168deg,#0b0906 0%,#1d1207 46%,#0a0a0d 100%);
+    radial-gradient(1150px 760px at 78% 16%, rgba(249,168,37,.42), transparent 62%),
+    radial-gradient(900px 620px at 4% 88%, rgba(239,138,0,.20), transparent 62%),
+    linear-gradient(170deg,#fffdf6 0%,#fff2d8 42%,#ffe9c4 100%);
   background-attachment:fixed;
-  color:var(--white);
+  color:var(--ink);
   font:16px/1.6 var(--body);
   font-weight:500;
   -webkit-font-smoothing:antialiased;
@@ -59,68 +58,72 @@ img{max-width:100%;display:block}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 
 /* nav */
-nav{position:sticky;top:0;z-index:50;background:rgba(8,7,5,.90);backdrop-filter:blur(18px) saturate(130%);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,250,240,.92);backdrop-filter:blur(18px) saturate(130%);border-bottom:1px solid var(--line);box-shadow:0 2px 18px rgba(140,90,10,.07)}
 nav .wrap{display:flex;align-items:center;gap:16px;height:64px;overflow-x:auto;white-space:nowrap}
-nav .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:800;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;margin-right:auto;color:var(--white)}
+nav .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:800;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;margin-right:auto;color:var(--ink)}
 nav .brand i{width:9px;height:9px;border-radius:50%;background:var(--orange);display:inline-block}
-nav a{color:#aaa199;font-size:12.5px;font-weight:600;text-decoration:none;padding:4px 0;transition:color .18s ease}
-nav a:hover{color:#fff}
+nav a{color:#6d5b43;font-size:12.5px;font-weight:600;text-decoration:none;padding:4px 0;transition:color .18s ease}
+nav a:hover{color:var(--orangetext)}
 nav a.navhome{
   display:inline-flex;align-items:center;gap:7px;flex:0 0 auto;margin-left:3px;
-  border:1px solid rgba(247,180,92,.45);border-radius:999px;color:var(--orangelight);
+  border:1.5px solid var(--orange);border-radius:999px;color:var(--orangetext);
   padding:7px 13px;font-weight:700;
 }
-nav a.navhome:hover{background:rgba(247,180,92,.13);border-color:var(--orangelight);color:#fff}
+nav a.navhome:hover{background:var(--orange);border-color:var(--orange);color:#fff}
 
 /* hero */
 header.hero{padding:84px 0 62px;border-bottom:1px solid var(--line)}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,290px);gap:44px;align-items:center}
-.kicker{font-size:14px;font-weight:700;letter-spacing:.05em;color:var(--orangelight);margin-bottom:14px}
+.kicker{font-size:14px;font-weight:700;letter-spacing:.05em;color:var(--orangetext);margin-bottom:14px}
 h1{font-family:var(--display);font-size:clamp(42px,6.4vw,74px);line-height:.92;font-weight:800;text-transform:uppercase;letter-spacing:.004em}
-h1 .rule{display:block;width:min(360px,64%);height:3px;background:var(--white);margin-top:24px}
-.hero .sub{margin-top:24px;font-size:17.5px;line-height:1.62;color:var(--lightink);max-width:640px}
-.hero .byline{margin-top:24px;font-size:15px;font-weight:700;color:var(--orangelight)}
-.hero .byline span{display:block;font-size:13px;color:var(--pagemuted);margin-top:5px;font-weight:600}
-.tickerbadge{
-  display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
-  aspect-ratio:1;border-radius:50%;background:var(--orange);color:#fff;
-  font-family:var(--display);font-weight:800;text-align:center;box-shadow:0 24px 60px rgba(239,138,0,.32);
+h1 .rule{display:block;width:min(360px,64%);height:4px;background:var(--orange);margin-top:24px}
+.hero .sub{margin-top:24px;font-size:17.5px;line-height:1.62;color:var(--ink2);max-width:640px}
+.hero .byline{margin-top:24px;font-size:15px;font-weight:700;color:var(--orangetext)}
+.hero .byline span{display:block;font-size:13px;color:var(--muted);margin-top:5px;font-weight:600}
+.brandcircle{
+  position:relative;aspect-ratio:1;border-radius:50%;overflow:hidden;
+  box-shadow:0 26px 62px rgba(239,138,0,.34);
 }
-.tickerbadge b{font-size:46px;line-height:1;letter-spacing:.02em}
-.tickerbadge em{font-style:normal;font-size:11px;letter-spacing:.18em;font-weight:700}
-@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.tickerbadge{max-width:190px}}
+.brandcircle img{width:100%;height:100%;object-fit:cover;display:block}
+.tickerchip{
+  position:absolute;left:50%;bottom:14px;transform:translateX(-50%);
+  background:rgba(42,28,10,.82);color:#fff;border-radius:999px;
+  padding:7px 16px;font-family:var(--display);font-weight:800;
+  font-size:12.5px;letter-spacing:.14em;white-space:nowrap;
+}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.brandcircle{max-width:200px}}
 
 /* sections */
 section{padding:62px 0;border-bottom:1px solid var(--line)}
-.slabel{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--orangelight);margin-bottom:10px}
-.slabel::before{content:"BEYOND THE GALLERY | ";color:var(--pagemuted)}
-h2{font-family:var(--display);font-size:clamp(25px,3.5vw,37px);line-height:1.12;font-weight:700;max-width:900px;color:var(--orangelight)}
-.lede{margin-top:14px;font-size:16.5px;color:var(--lightink);max-width:800px}
-h3{font-family:var(--display);font-size:20px;font-weight:700;margin:0 0 6px;color:var(--white)}
+.slabel{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--orangetext);margin-bottom:10px}
+.slabel::before{content:"BEYOND OUR GALLERY | ";color:var(--pagemuted)}
+h2{font-family:var(--display);font-size:clamp(25px,3.5vw,37px);line-height:1.12;font-weight:700;max-width:900px;color:var(--ink)}
+.lede{margin-top:14px;font-size:16.5px;color:var(--ink2);max-width:800px}
+h3{font-family:var(--display);font-size:20px;font-weight:700;margin:0 0 6px;color:var(--ink)}
 
 /* cards */
 .grid{display:grid;gap:14px;margin-top:30px}
 .g2{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
 .g3{grid-template-columns:repeat(auto-fit,minmax(245px,1fr))}
 .g4{grid-template-columns:repeat(auto-fit,minmax(212px,1fr))}
-.card{background:linear-gradient(180deg,#fffdfa 0%,#f1eae1 100%);border-radius:16px;padding:22px;color:var(--ink);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.card{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:22px;color:var(--ink);box-shadow:0 8px 24px rgba(140,90,10,.09)}
 .card h3{color:var(--ink)}
 .card .tag{font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--orangetext);margin-bottom:8px}
 .card .tag .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px}
 .card p{font-size:14.5px;color:#5d564f}
 .stat .v{font-family:var(--display);font-size:34px;font-weight:800;line-height:1.05;letter-spacing:-.01em;color:var(--ink)}
 .stat p{font-size:13.5px;margin-top:6px}
-.card.outline{background:rgba(30,18,8,.42);border:2.5px solid var(--orangelight);box-shadow:none;color:var(--lightink)}
-.card.outline .v{color:var(--white)}
-.card.outline .tag{color:var(--orangelight)}
-.card.outline p{color:var(--lightink)}
+.card.outline{background:linear-gradient(165deg,#ef8a00,#f9a825);border:0;box-shadow:0 12px 30px rgba(239,138,0,.3);color:#fff8ec}
+.card.outline .v{color:#fff}
+.card.outline .tag{color:#fff2d4}
+.card.outline p{color:#ffeccd}
 .delta-up{color:var(--positive);font-weight:700}
 .delta-down{color:var(--critical);font-weight:700}
-.card.outline .delta-up{color:#8fd07c}
-.card.outline .delta-down{color:var(--orangelight)}
+.card.outline .delta-up{color:#eafce4}
+.card.outline .delta-down{color:#fff0d0}
 
 /* charts */
-figure.chart{background:linear-gradient(180deg,#fffdfa 0%,#f1eae1 100%);border-radius:16px;padding:22px;margin-top:30px;color:var(--ink);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+figure.chart{background:#fff;border:1px solid var(--ring);border-radius:16px;padding:22px;margin-top:30px;color:var(--ink);box-shadow:0 8px 24px rgba(140,90,10,.09)}
 figure.chart figcaption{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;margin-bottom:12px}
 figure.chart .ct{font-family:var(--display);font-size:16px;font-weight:700}
 figure.chart .cs{font-size:12.5px;font-weight:600;color:var(--muted)}
@@ -130,24 +133,24 @@ figure.chart .cs{font-size:12.5px;font-weight:600;color:var(--muted)}
 svg.viz{width:100%;height:auto;display:block}
 svg.viz text{font-family:var(--body)}
 .tick{font-size:11px;font-weight:600;fill:var(--muted)}
-.vlab{font-size:11px;font-weight:700;fill:#3d3731}
+.vlab{font-size:11px;font-weight:700;fill:#4a3a24}
 .gl{stroke:var(--grid);stroke-width:1}
 .bl{stroke:var(--baseline);stroke-width:1}
-#tip{position:fixed;z-index:99;pointer-events:none;background:#14110c;border:1px solid rgba(255,255,255,.16);box-shadow:0 6px 20px rgba(0,0,0,.45);border-radius:8px;padding:8px 11px;font-size:12.5px;color:var(--white);opacity:0;transition:opacity .12s}
-#tip .t1{font-weight:700}
-#tip .t2{color:#c9c1b8}
+#tip{position:fixed;z-index:99;pointer-events:none;background:#2a1c0a;border:1px solid rgba(255,255,255,.16);box-shadow:0 6px 20px rgba(0,0,0,.45);border-radius:8px;padding:8px 11px;font-size:12.5px;color:var(--white);opacity:0;transition:opacity .12s}
+#tip .t1{font-weight:700;color:#fff}
+#tip .t2{color:#e4d8c4}
 
 /* tables */
-.tblwrap{overflow-x:auto;margin-top:24px;background:linear-gradient(180deg,#fffdfa 0%,#f2ebe2 100%);border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.tblwrap{overflow-x:auto;margin-top:24px;background:#fff;border:1px solid var(--ring);border-radius:16px;box-shadow:0 8px 24px rgba(140,90,10,.09)}
 table{border-collapse:collapse;width:100%;font-size:14px;min-width:660px}
 th,td{text-align:right;padding:12px 16px;white-space:nowrap}
 thead th{background:linear-gradient(180deg,#ef8a00,#d97400);color:#fff;font-size:13px;font-weight:700}
 thead th:first-child{border-top-left-radius:16px}
 thead th:last-child{border-top-right-radius:16px}
 th:first-child,td:first-child{text-align:left}
-tbody tr:nth-child(odd) td{background:#f8f3ec}
-tbody tr:nth-child(even) td{background:#efe7dc}
-td{font-variant-numeric:tabular-nums;color:#4a443e;font-weight:600;border-bottom:2px solid #fffdfa}
+tbody tr:nth-child(odd) td{background:#fffdf8}
+tbody tr:nth-child(even) td{background:#fff5e4}
+td{font-variant-numeric:tabular-nums;color:#4f4132;font-weight:600;border-bottom:2px solid #fff}
 td:first-child{color:var(--ink);font-weight:700}
 tr:last-child td{border-bottom:none}
 tr.total td{font-weight:800;color:var(--ink);border-top:2px solid var(--baseline)}
@@ -181,41 +184,76 @@ tr.total td{font-weight:800;color:var(--ink);border-top:2px solid var(--baseline
 .showrev span{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
 .showrev b{font-family:var(--display);font-size:clamp(30px,4.4vw,44px);font-weight:800;color:var(--orangetext);line-height:1}
 
+
+.showphoto{margin:-26px -26px 18px;height:190px;overflow:hidden;border-radius:16px 16px 0 0;position:relative}
+.showphoto img{width:100%;height:100%;object-fit:cover;display:block}
+.showphoto figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:22px 16px 9px;
+  background:linear-gradient(transparent,rgba(24,15,4,.82));
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+}
+.herostrip{margin-top:30px;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(140,90,10,.16)}
+.herostrip img{width:100%;height:clamp(200px,30vw,320px);object-fit:cover;display:block}
+.herostrip figcaption{padding:11px 16px;background:#fff;border-top:1px solid var(--ring);font-size:12px;color:var(--muted);font-weight:600}
+
+
+/* research scorecard */
+.scorehero{display:grid;grid-template-columns:minmax(0,250px) minmax(0,1fr);gap:34px;align-items:center;margin-top:30px}
+.scoredial{
+  position:relative;width:100%;max-width:230px;aspect-ratio:1;margin:0 auto;border-radius:50%;
+  display:grid;place-items:center;
+  background:conic-gradient(var(--orange) calc(var(--score) * 1%), #f0e4cf 0);
+}
+.scoredial::before{content:"";position:absolute;inset:15px;border-radius:50%;background:#fff;box-shadow:inset 0 2px 10px rgba(140,90,10,.08)}
+.dialinner{position:relative;text-align:center}
+.dialinner b{display:block;font-family:var(--display);font-size:54px;font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--ink)}
+.dialinner span{display:block;margin-top:5px;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.dialinner em{display:block;margin-top:10px;font-size:12.5px;font-style:normal;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--orangetext)}
+.catbars{display:grid;gap:16px}
+.catbar>span{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:7px;font-size:13.5px;font-weight:700;color:var(--ink2)}
+.catbar>span b{color:var(--ink);font-weight:800;white-space:nowrap}
+.catbar i{display:block;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--orange) calc(var(--pct) * 1%), #f0e4cf 0)}
+.gradebox{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:baseline;margin-top:16px}
+.gradebox div{font-size:13.5px;color:var(--muted)}
+.gradebox b{color:var(--ink);font-weight:800}
+.cmp td b{color:var(--orangetext)}
+@media(max-width:760px){.scorehero{grid-template-columns:1fr;gap:26px}.dialinner b{font-size:48px}}
+
 /* chain / verdict */
 .chain{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:14px;margin-top:30px}
 .chain .num{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--orangetext);margin-bottom:6px}
 .verdict{
-  margin-top:30px;border-radius:16px;padding:26px;
-  background:linear-gradient(135deg,rgba(239,138,0,.18),rgba(30,18,8,.5));
-  border:1px solid rgba(247,180,92,.4);
+  margin-top:30px;border-radius:16px;padding:28px;
+  background:linear-gradient(140deg,#2a1c0a,#4a3110);
+  border:0;box-shadow:0 14px 34px rgba(80,50,10,.28);
 }
 .verdict .tag{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--orangelight);margin-bottom:9px}
-.verdict strong{display:block;font-family:var(--display);font-size:clamp(21px,2.7vw,28px);font-weight:700;color:var(--white);line-height:1.22;margin-bottom:11px}
-.verdict p{font-size:15px;color:var(--lightink)}
+.verdict strong{display:block;font-family:var(--display);font-size:clamp(21px,2.7vw,28px);font-weight:700;color:#fff;line-height:1.22;margin-bottom:11px}
+.verdict p{font-size:15px;color:#e8dcc6}
 .proofs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:18px}
-.proofs div{background:rgba(0,0,0,.26);border-radius:11px;padding:14px 16px;font-size:13.5px;color:var(--lightink)}
+.proofs div{background:rgba(255,255,255,.09);border-radius:11px;padding:14px 16px;font-size:13.5px;color:#e8dcc6}
 .proofs b{display:block;color:var(--orangelight);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
 
 /* bar list (moat, recovery) */
 .barlist{display:grid;gap:14px;margin-top:26px}
-.barrow>span{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px;font-size:13.5px;font-weight:700;color:var(--lightink)}
-.barrow>span b{color:var(--white);font-weight:800;white-space:nowrap}
-.barrow i{display:block;height:9px;border-radius:999px;background:linear-gradient(90deg,var(--orange) calc(var(--pct) * 1%), rgba(255,255,255,.11) 0)}
-.barrow.alt i{background:linear-gradient(90deg,#1f6fb5 calc(var(--pct) * 1%), rgba(255,255,255,.11) 0)}
+.barrow>span{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px;font-size:13.5px;font-weight:700;color:var(--ink2)}
+.barrow>span b{color:var(--ink);font-weight:800;white-space:nowrap}
+.barrow i{display:block;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--orange) calc(var(--pct) * 1%), #f0e4cf 0)}
+.barrow.alt i{background:linear-gradient(90deg,#1f6fb5 calc(var(--pct) * 1%), #f0e4cf 0)}
 
 .srcline{margin-top:16px;font-size:12.5px;color:var(--pagemuted);line-height:1.7}
 .srcline a{color:var(--orangelight);text-decoration:underline;text-underline-offset:3px}
 .backhome{
   display:inline-flex;align-items:center;gap:9px;margin-top:24px;
-  border:1px solid rgba(247,180,92,.45);border-radius:999px;color:var(--orangelight);
+  border:1.5px solid var(--orange);border-radius:999px;color:var(--orangetext);
   padding:12px 24px;font-size:13.5px;font-weight:800;letter-spacing:.04em;text-decoration:none;
   transition:background .18s ease,color .18s ease,border-color .18s ease;
 }
-.backhome:hover{background:rgba(247,180,92,.13);border-color:var(--orangelight);color:#fff}
+.backhome:hover{background:var(--orange);border-color:var(--orange);color:#fff}
 
 footer{padding:46px 0 70px;font-size:13px;color:var(--pagemuted)}
 footer p{max-width:780px;margin-bottom:8px}
-footer b{color:var(--orangelight)}
+footer b{color:var(--orangetext)}
 
 /* motion */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -246,7 +284,8 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
 <body>
 
 <nav><div class="wrap">
-  <span class="brand"><i></i>Beyond the Gallery</span>
+  <span class="brand"><i></i>Beyond Our Gallery</span>
+  <a href="#score">Score</a>
   <a href="#overview">Overview</a>
   <a href="#assets">Assets</a>
   <a href="#financials">Financials</a>
@@ -264,10 +303,44 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     <div class="kicker">A strategy and commercial review of</div>
     <h1>Straco<br>Corporation<span class="rule"></span></h1>
     <p class="sub">Straco develops, operates and invests in tourism attractions that combine entertainment, education and culture. Its four operating assets sit in high-traffic tourism nodes in China and Singapore — but the portfolio has not regained pre-COVID demand, and the lease clock is now a strategic variable.</p>
-    <div class="byline">By Jiaren Yang, 1 September 2026<span>Beyond the Gallery · Asset economics, capital allocation and the path beyond recovery</span></div>
+    <div class="byline">By Jiarun Yang, 1 September 2026<span>Beyond Our Gallery · Asset economics, capital allocation and the path beyond recovery</span></div>
   </div>
-  <div class="tickerbadge"><b>S85</b><em>SGX MAINBOARD</em></div>
+  <div class="brandcircle">
+    <img src="assets/straco-mark.svg" alt="Straco Corporation logo">
+    <span class="tickerchip">SGX: S85</span>
+  </div>
 </div></header>
+
+<!-- ============ RESEARCH SCORE ============ -->
+<section id="score"><div class="wrap">
+  <div class="slabel">Research score</div>
+  <h2>Straco Corporation scores 67.3 out of 100 &mdash; Satisfactory</h2>
+  <p class="lede">Exceptional financial resilience and asset economics, constrained by geographic concentration, tourism cyclicality and an underdeveloped expansion pipeline. This is a business-quality score, not a valuation or investment recommendation.</p>
+
+  <div class="scorehero">
+    <div class="scoredial" style="--score:67.3" role="img" aria-label="Overall research score 67.3 out of 100, rated Satisfactory">
+      <div class="dialinner"><b>67.3</b><span>out of 100</span><em>Satisfactory</em></div>
+    </div>
+    <div class="catbars">
+      <div class="catbar" style="--pct:88.3"><span>Financial Strength <b>35.3 / 40</b></span><i></i></div>
+      <div class="catbar" style="--pct:58"><span>Market Position <b>11.6 / 20</b></span><i></i></div>
+      <div class="catbar" style="--pct:42.4"><span>Growth Opportunities <b>10.6 / 25</b></span><i></i></div>
+      <div class="catbar" style="--pct:65.3"><span>Risk Resilience <b>9.8 / 15</b></span><i></i></div>
+      <div class="gradebox">
+        <div>Evidence grade <b>B</b></div>
+        <div>Versus Kingsmen <b>+8.0</b></div>
+        <div>&ldquo;Strong&rdquo; threshold <b>70</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card"><div class="tag">What lifts the score</div><p>Straco's balance sheet, margins and cash generation are its defining strength &mdash; 35.3 of a possible 40 for Financial Strength, with full marks for both median net margin and balance-sheet strength.</p></div>
+    <div class="card"><div class="tag">What holds it back</div><p>It sits 2.7 points below the 70-point &ldquo;Strong&rdquo; threshold. Concentrated assets, cyclical visitor demand and limited evidence of substantial new growth engines cap the result &mdash; Growth Opportunities scores just 10.6 of 25.</p></div>
+  </div>
+
+  <p class="srcline"><a href="#component-scoring">See the full component scoring &darr;</a></p>
+</div></section>
 
 <!-- ============ OVERVIEW ============ -->
 <section id="overview"><div class="wrap">
@@ -295,6 +368,11 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     <div class="card"><div class="tag"><span class="sw" style="background:var(--s3)"></span>Flyer · Singapore · 90%</div><p>165 m observation wheel at Marina Bay with 28 capsules, Time Capsule, premium dining, events and retail property.</p></div>
     <div class="card"><div class="tag"><span class="sw" style="background:var(--s4)"></span>LCC · Xi'an · 95%</div><p>A 1.5 km cable car linking the base of Mount Lishan to its mid-level, near Hua Qing Palace.</p></div>
   </div>
+
+  <figure class="herostrip">
+    <img src="assets/straco-flyer-hero.jpg" alt="A Singapore Flyer capsule seen from below against the wheel structure" loading="lazy">
+    <figcaption>Singapore Flyer, Marina Bay — the group's largest single asset by revenue. Photo: Dietmar Rabich / Wikimedia Commons / CC BY-SA 4.0.</figcaption>
+  </figure>
 
   <div class="verdict">
     <div class="tag">Executive thesis · the core question</div>
@@ -337,6 +415,7 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
 
   <div class="grid showgrid">
     <div class="card show">
+      <figure class="showphoto"><img src="assets/straco-soa.jpg" alt="Shanghai Ocean Aquarium beside the Oriental Pearl Tower" loading="lazy"><figcaption>Shanghai Ocean Aquarium, Lujiazui</figcaption></figure>
       <div class="showhead">
         <div class="tag"><span class="sw" style="background:var(--s1)"></span>Shanghai Ocean Aquarium · Lujiazui</div>
         <div class="own"><span>Owned</span><b>95%</b></div>
@@ -357,6 +436,7 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     </div>
 
     <div class="card show">
+      <figure class="showphoto"><img src="assets/straco-uwx.jpg" alt="Octopus sculpture at the Underwater World Xiamen entrance" loading="lazy"><figcaption>Underwater World Xiamen, Gulangyu</figcaption></figure>
       <div class="showhead">
         <div class="tag"><span class="sw" style="background:var(--s2)"></span>Underwater World Xiamen · Gulangyu</div>
         <div class="own"><span>Owned</span><b>100%</b></div>
@@ -377,6 +457,7 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     </div>
 
     <div class="card show">
+      <figure class="showphoto"><img src="assets/straco-flyer-capsule.jpg" alt="A themed Singapore Flyer capsule interior" loading="lazy"><figcaption>Singapore Flyer capsule, Marina Bay</figcaption></figure>
       <div class="showhead">
         <div class="tag"><span class="sw" style="background:var(--s3)"></span>Singapore Flyer · Marina Bay</div>
         <div class="own"><span>Owned</span><b>90%</b></div>
@@ -397,6 +478,7 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
     </div>
 
     <div class="card show">
+      <figure class="showphoto"><img src="assets/straco-lcc.jpg" alt="The Lintong Lixing cable car station at Mount Lishan" loading="lazy"><figcaption>Lintong Lixing Cable Car, Mount Lishan</figcaption></figure>
       <div class="showhead">
         <div class="tag"><span class="sw" style="background:var(--s4)"></span>Lintong Lixing Cable Car · Mount Lishan</div>
         <div class="own"><span>Owned</span><b>95%</b></div>
@@ -882,8 +964,63 @@ svg.viz.in .vlab,svg.viz.in .dot{opacity:1}
   Market data at 31 August 2026. Normalized figures, scenarios, sensitivities, capability scores and valuation ranges are the author's calculations and assumptions — not company guidance, consensus estimates or a price target.</p>
 </div></section>
 
+<!-- ============ COMPONENT SCORING ============ -->
+<section id="component-scoring"><div class="wrap">
+  <div class="slabel">10 Component scoring</div>
+  <h2>How the 67.3 breaks down across twenty scored components</h2>
+  <p class="lede">Each component is rated out of five and multiplied by its weight. The four category totals shown at the top of this report are the sums of the components below.</p>
+
+  <div class="tblwrap"><table>
+    <thead><tr><th style="text-align:left">Component</th><th>Weight</th><th>Score /5</th><th>Points</th><th style="text-align:left">Assessment</th></tr></thead>
+    <tbody>
+      <tr class="total"><td colspan="5" style="text-align:left">Financial Strength</td></tr>
+      <tr><td>Five-year revenue CAGR</td><td>6</td><td>5.0</td><td>6.0</td><td style="text-align:left;white-space:normal">FY2021&ndash;25 CAGR was approximately 15.4%, although heavily inflated by the pandemic-depressed FY2021 base.</td></tr>
+      <tr><td>Median net margin</td><td>7</td><td>5.0</td><td>7.0</td><td style="text-align:left;white-space:normal">Five-year median was approximately 27.6%, comfortably above the rubric's 20% top threshold.</td></tr>
+      <tr><td>Median ROIC</td><td>9</td><td>3.4</td><td>6.1</td><td style="text-align:left;white-space:normal">Median ROIC was 12.36%: 3/5 absolutely, adjusted upward for comparatively strong industry profitability.</td></tr>
+      <tr><td>Cash-flow stability</td><td>9</td><td>4.0</td><td>7.2</td><td style="text-align:left;white-space:normal">Free cash flow was positive in four of five years, with median cash conversion above 100%.</td></tr>
+      <tr><td>Balance-sheet strength</td><td>9</td><td>5.0</td><td>9.0</td><td style="text-align:left;white-space:normal">FY2025 cash was S$187.1m against only S$2.9m of reported borrowings; management reported net cash of S$183.1m.</td></tr>
+      <tr class="total"><td colspan="5" style="text-align:left">Market Position</td></tr>
+      <tr><td>Brand recognition</td><td>2</td><td>3.0</td><td>1.2</td><td style="text-align:left;white-space:normal">Singapore Flyer and Shanghai Ocean Aquarium are recognisable destination assets; the Flyer ranked within Tripadvisor's top 1% of global attractions.</td></tr>
+      <tr><td>Competitive advantage</td><td>7</td><td>4.0</td><td>5.6</td><td style="text-align:left;white-space:normal">Prime locations, difficult-to-replicate physical assets, long operating history and unusually strong margins create a meaningful moat.</td></tr>
+      <tr><td>Market share</td><td>4</td><td>2.0</td><td>1.6</td><td style="text-align:left;white-space:normal">Comparable attraction-level market-share data are unavailable, triggering the rubric's 2/5 default.</td></tr>
+      <tr><td>Customer relationships</td><td>5</td><td>2.0</td><td>2.0</td><td style="text-align:left;white-space:normal">Strong consumer reach, but no quantified repeat-visitation, retention or membership data.</td></tr>
+      <tr><td>Geographic reach</td><td>2</td><td>3.0</td><td>1.2</td><td style="text-align:left;white-space:normal">Operates meaningfully in China and Singapore; China generated 62.9% and Singapore 37.1% of FY2025 revenue.</td></tr>
+      <tr class="total"><td colspan="5" style="text-align:left">Growth Opportunities</td></tr>
+      <tr><td>Industry growth potential</td><td>6</td><td>2.0</td><td>2.4</td><td style="text-align:left;white-space:normal">Conservative benchmark is the lower of the 3.3% global tourism-demand forecast and the 5.26% China tourism forecast.</td></tr>
+      <tr><td>Technology adoption</td><td>4</td><td>1.0</td><td>0.8</td><td style="text-align:left;white-space:normal">Uses digital ticketing, Douyin, WeChat, Meituan and Ctrip, but provides no quantified group-level productivity or margin benefit.</td></tr>
+      <tr><td>New-market expansion</td><td>6</td><td>1.0</td><td>1.2</td><td style="text-align:left;white-space:normal">Chao Yuan Ge represents committed development activity, but remains unlaunched with no independently demonstrated revenue pipeline.</td></tr>
+      <tr><td>Revenue diversification</td><td>5</td><td>3.0</td><td>3.0</td><td style="text-align:left;white-space:normal">Aquariums contributed 58.4% of revenue, the Singapore Flyer 37.1%, and other activities 4.5%.</td></tr>
+      <tr><td>Strategic partnerships</td><td>4</td><td>4.0</td><td>3.2</td><td style="text-align:left;white-space:normal">Active, scalable partnerships with Douyin, Meituan and Ctrip are operational, though their revenue contribution is unquantified.</td></tr>
+      <tr class="total"><td colspan="5" style="text-align:left">Risk Resilience</td></tr>
+      <tr><td>Economic sensitivity</td><td>3</td><td>1.0</td><td>0.6</td><td style="text-align:left;white-space:normal">Revenue fell 32.7% and the company recorded a loss in FY2022, demonstrating high exposure to tourism disruptions.</td></tr>
+      <tr><td>Customer diversification</td><td>4</td><td>5.0</td><td>4.0</td><td style="text-align:left;white-space:normal">Mass-market visitor base with no material reliance on an individual customer.</td></tr>
+      <tr><td>Technological resilience</td><td>3</td><td>4.0</td><td>2.4</td><td style="text-align:left;white-space:normal">Physical destination experiences are difficult to automate; Straco has also launched digital sales channels and enhanced attractions.</td></tr>
+      <tr><td>Regulatory resilience</td><td>2</td><td>4.0</td><td>1.6</td><td style="text-align:left;white-space:normal">Operates across two regulatory systems, with no disclosed material investigation or recent compliance failure.</td></tr>
+      <tr><td>Operational resilience</td><td>3</td><td>2.0</td><td>1.2</td><td style="text-align:left;white-space:normal">Emergency and continuity controls are established, but revenue remains concentrated in a small number of irreplaceable physical attractions.</td></tr>
+      <tr class="total"><td>Total</td><td>100</td><td>&mdash;</td><td>67.3</td><td style="text-align:left;white-space:normal">Satisfactory</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 style="margin-top:52px">Straco versus Kingsmen Creatives</h3>
+  <div class="tblwrap"><table class="cmp">
+    <thead><tr><th style="text-align:left">Category</th><th>Kingsmen</th><th>Straco</th><th>Difference</th></tr></thead>
+    <tbody>
+      <tr><td>Financial Strength</td><td>24.3</td><td><b>35.3</b></td><td><b>+11.0</b></td></tr>
+      <tr><td>Market Position</td><td>10.8</td><td><b>11.6</b></td><td><b>+0.8</b></td></tr>
+      <tr><td>Growth Opportunities</td><td><b>15.2</b></td><td>10.6</td><td>&minus;4.6</td></tr>
+      <tr><td>Risk Resilience</td><td>9.0</td><td><b>9.8</b></td><td><b>+0.8</b></td></tr>
+      <tr class="total"><td>Overall</td><td>59.3</td><td>67.3</td><td>+8.0</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="card" style="margin-top:14px"><div class="tag">Interpretation</div><p>Straco is best characterised as a financially excellent but strategically concentrated attraction operator. Its margins, free cash flow and net-cash position are substantially stronger than Kingsmen's. However, the mechanical 15.4% revenue CAGR exaggerates its underlying growth because it begins from a pandemic-affected base: FY2025 revenue was still 8.7% below FY2024, while trailing revenue through June 2026 fell further to S$68.1m.</p></div>
+
+  <p class="srcline"><b>Sources:</b> financial calculations use FY2021&ndash;25 figures from Straco's <a href="https://links.sgx.com/1.0.0/corporate-announcements/I20OI0RWTYFMJ72S/882754_Straco%20AR2025.pdf" target="_blank" rel="noopener">FY2025 audited annual report</a>, cross-checked against the company's <a href="https://stockanalysis.com/quote/sgx/S85/financials/" target="_blank" rel="noopener">five-year financial history</a>, <a href="https://stockanalysis.com/quote/sgx/S85/financials/ratios/" target="_blank" rel="noopener">ROIC data</a> and <a href="https://stockanalysis.com/quote/sgx/S85/financials/cash-flow-statement/" target="_blank" rel="noopener">cash-flow history</a>. The industry score uses the lower forecast from <a href="https://wttc.org/news/us%2412-5-trillion-in-travel-tourism-investment-drive-to-shape-g20-competitiveness-through-2035" target="_blank" rel="noopener">WTTC's 2026 tourism outlook</a> and the <a href="https://www.marketresearch.com/Mordor-Intelligence-LLP-v4018/China-Tourism-Hotel-Share-Trends-46070106/" target="_blank" rel="noopener">2026&ndash;31 China tourism forecast</a>.<br>
+  Evidence grade B: financial information is well supported, but market share, repeat-visitor retention, supplier concentration and technology returns remain undisclosed.</p>
+</div></section>
+
 <footer><div class="wrap">
-  <p><b>Beyond the Gallery</b> — a strategy and commercial review of Straco Corporation Limited (SGX: S85) by Jiaren Yang, 1 September 2026.</p>
+  <p><b>Beyond Our Gallery</b> — a strategy and commercial review of Straco Corporation Limited (SGX: S85) by Jiarun Yang, 1 September 2026.</p>
   <p>All currency is Singapore dollars unless stated. Independent analysis based on public information. Forecasts and recommendations are analytical scenarios, not company guidance or investment advice.</p>
   <p>beyondourgallery.com</p>
   <a class="backhome" href="index.html">&#8592; Back Home</a>
@@ -1026,7 +1163,7 @@ vbar('valchart',{aria:'Lease-adjusted fair value per share by scenario, Singapor
   bw:54,labels:true,vfmt:v=>v.toFixed(1)+'c',fmt:v=>v+'c'});
 
 /* ---- reveals & count-ups ---- */
-document.querySelectorAll('.card,figure.chart,.tblwrap,.verdict,.barlist,section h2,section .lede,section .slabel,section h3').forEach(e=>e.setAttribute('data-reveal',''));
+document.querySelectorAll('.card,figure.chart,.tblwrap,.verdict,.barlist,.scorehero,.herostrip,section h2,section .lede,section .slabel,section h3').forEach(e=>e.setAttribute('data-reveal',''));
 document.querySelectorAll('.grid,.chain').forEach(g=>{[...g.children].forEach((c,i)=>c.style.transitionDelay=(i*80)+'ms');});
 
 function countUp(elm){
@@ -1056,7 +1193,7 @@ if(REDUCE){
   const cio=new IntersectionObserver(es=>{es.forEach(en=>{
     if(en.isIntersecting){countUp(en.target);cio.unobserve(en.target);}
   });},{threshold:.6});
-  document.querySelectorAll('.stat .v,.showrev b,.own b').forEach(e=>cio.observe(e));
+  document.querySelectorAll('.stat .v,.showrev b,.own b,.dialinner b').forEach(e=>cio.observe(e));
 }
 </script>
 </body>

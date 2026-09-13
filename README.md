@@ -1,4 +1,4 @@
-# Beyond the Gallery
+# Beyond Our Gallery
 
 A strategy and commercial review of **Kingsmen Creatives Ltd.** (SGX: 5MZ) — presented as a single-page analytics site.
 
