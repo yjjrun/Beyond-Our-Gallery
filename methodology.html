@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scoring Methodology - Beyond Our Gallery</title>
+<meta name="description" content="Beyond Our Gallery's 100-point Business Quality and Future Potential scoring methodology for SGX art, media, attractions and live entertainment companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/bog-logo-mark.png">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<style>
+:root{
+  color-scheme:light;
+  --ink:#092f2d;
+  --deep:#062f2b;
+  --teal:#077a78;
+  --rose:#c6658c;
+  --rose-2:#ef91b1;
+  --plum:#8f5177;
+  --paper:#fbf8f6;
+  --paper-2:#f4ecee;
+  --line:#d8c8ce;
+  --muted:#5f706d;
+  --white:#fffdfb;
+  --shadow:0 22px 70px rgba(9,47,45,.14);
+  --display:"Cormorant Garamond", Georgia, serif;
+  --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(239,145,177,.18), transparent 28rem),
+    linear-gradient(180deg, #fffdfb 0%, #f8f3f2 48%, #fffdfb 100%);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px, calc(100% - 40px));margin:0 auto}
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,253,251,.9);
+  border-bottom:1px solid rgba(9,47,45,.12);
+  backdrop-filter:blur(18px);
+}
+.nav{
+  min-height:74px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:28px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:220px;
+}
+.brand img{
+  width:42px;
+  height:42px;
+  object-fit:cover;
+  border:1px solid rgba(9,47,45,.16);
+  background:#f4dce5;
+}
+.brand-wordmark{
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+}
+.brand-wordmark strong{
+  font-size:17px;
+  font-weight:900;
+  letter-spacing:-.01em;
+  line-height:1;
+}
+.brand-wordmark strong span{color:var(--rose)}
+.brand-wordmark small{
+  color:var(--teal);
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.33em;
+  line-height:1;
+}
+.nav-links{
+  display:flex;
+  justify-content:center;
+  gap:26px;
+}
+.nav-links a{
+  color:#263c3b;
+  font-size:14px;
+  font-weight:700;
+  padding:8px 0;
+}
+.nav-links a[aria-current="page"],
+.nav-links a:hover{color:var(--rose)}
+.back-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  min-height:42px;
+  border:1px solid rgba(9,47,45,.16);
+  border-radius:8px;
+  padding:0 14px;
+  color:var(--ink);
+  font-size:14px;
+  font-weight:800;
+  background:#fff;
+}
+.back-link .lucide{width:17px;height:17px}
+.hero{
+  color:#fff;
+  background:
+    linear-gradient(90deg, rgba(6,47,43,.98), rgba(6,47,43,.88)),
+    url("assets/strategy-visitors.jpg") center/cover;
+}
+.hero .wrap{
+  padding:72px 0 58px;
+}
+.eyebrow{
+  margin:0 0 12px;
+  color:var(--rose-2);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+}
+h1{
+  max-width:980px;
+  margin:0;
+  font-family:var(--display);
+  font-size:clamp(50px, 7vw, 92px);
+  line-height:.9;
+  letter-spacing:0;
+}
+.hero p{
+  max-width:820px;
+  margin:22px 0 0;
+  color:#e8f3f0;
+  font-size:clamp(17px, 1.7vw, 21px);
+}
+.summary-grid{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:1px;
+  margin-top:34px;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.2);
+}
+.summary-card{
+  min-height:154px;
+  padding:24px;
+  background:rgba(255,255,255,.08);
+}
+.summary-card b{
+  display:block;
+  color:var(--rose-2);
+  font-family:var(--display);
+  font-size:48px;
+  line-height:1;
+}
+.summary-card span{
+  display:block;
+  margin-top:14px;
+  color:#fff;
+  font-weight:900;
+}
+.layout{
+  display:grid;
+  grid-template-columns:250px minmax(0, 1fr);
+  gap:46px;
+  padding:64px 0 84px;
+}
+.toc{
+  position:sticky;
+  top:100px;
+  align-self:start;
+  padding:20px;
+  border:1px solid rgba(9,47,45,.13);
+  background:#fff;
+  box-shadow:0 12px 40px rgba(9,47,45,.08);
+}
+.toc strong{
+  display:block;
+  margin-bottom:14px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--plum);
+}
+.toc a{
+  display:block;
+  padding:8px 0;
+  border-top:1px solid #eadde1;
+  color:#405856;
+  font-size:13px;
+  font-weight:800;
+}
+.toc a:hover{color:var(--rose)}
+.content{
+  display:grid;
+  gap:28px;
+  min-width:0;
+}
+.section{
+  border:1px solid rgba(9,47,45,.13);
+  background:rgba(255,255,255,.92);
+  box-shadow:var(--shadow);
+  padding:32px;
+  min-width:0;
+}
+.section h2{
+  margin:0;
+  font-family:var(--display);
+  font-size:clamp(34px, 4vw, 52px);
+  line-height:.95;
+  letter-spacing:0;
+}
+.section h3{
+  margin:28px 0 10px;
+  color:var(--ink);
+  font-size:20px;
+  line-height:1.25;
+}
+.section p{
+  margin:14px 0 0;
+  color:#405856;
+}
+.note{
+  margin-top:18px;
+  padding:18px 20px;
+  border-left:4px solid var(--rose);
+  background:#f8eef2;
+  color:#354d49;
+}
+.formula{
+  margin-top:18px;
+  padding:20px;
+  border:1px solid #eadde1;
+  background:#fbf5f7;
+  overflow-x:auto;
+}
+.formula code{
+  color:var(--ink);
+  font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size:14px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.table-wrap{
+  overflow-x:auto;
+  margin-top:18px;
+  border:1px solid #eadde1;
+  background:#fff;
+  max-width:100%;
+  min-width:0;
+}
+table{
+  width:100%;
+  min-width:620px;
+  border-collapse:collapse;
+  font-size:14px;
+}
+th,td{
+  padding:12px 14px;
+  border-bottom:1px solid #eadde1;
+  text-align:left;
+  vertical-align:top;
+}
+th{
+  background:#f5e9ee;
+  color:var(--ink);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+td:first-child{font-weight:800;color:var(--ink)}
+tr:last-child td{border-bottom:0}
+.criteria{
+  display:grid;
+  gap:10px;
+  margin:16px 0 0;
+  padding:0;
+  list-style:none;
+}
+.criteria li{
+  position:relative;
+  padding-left:20px;
+  color:#405856;
+}
+.criteria li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.7em;
+  width:7px;
+  height:7px;
+  background:var(--rose);
+}
+.score-labels{
+  display:grid;
+  grid-template-columns:repeat(5, minmax(0, 1fr));
+  gap:12px;
+  margin-top:18px;
+}
+.score-label{
+  padding:18px;
+  background:var(--deep);
+  color:#fff;
+}
+.score-label b{
+  display:block;
+  color:var(--rose-2);
+  font-family:var(--display);
+  font-size:36px;
+  line-height:1;
+}
+.score-label span{
+  display:block;
+  margin-top:8px;
+  font-size:13px;
+  font-weight:900;
+}
+.site-footer{
+  background:#061f1d;
+  color:#c9dbd8;
+  padding:44px 0;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:minmax(260px, 1fr) auto;
+  gap:30px;
+  align-items:start;
+}
+.footer-logo{
+  width:250px;
+  max-width:100%;
+  margin-bottom:18px;
+  border:1px solid rgba(255,255,255,.12);
+}
+.site-footer p{
+  margin:0;
+  max-width:760px;
+  font-size:13px;
+}
+.footer-links{
+  display:grid;
+  grid-template-columns:repeat(2, max-content);
+  gap:10px 26px;
+}
+.footer-links a{
+  font-size:13px;
+  font-weight:800;
+}
+.footer-links a:hover{color:var(--rose-2)}
+@media (max-width:900px){
+  .nav{grid-template-columns:1fr;gap:12px;padding:14px 0}
+  .nav-links{justify-content:flex-start;flex-wrap:wrap;gap:18px;overflow:visible}
+  .back-link{width:max-content}
+  .summary-grid{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  .layout{grid-template-columns:1fr;padding-top:38px}
+  .toc{position:relative;top:auto}
+  .score-labels{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .wrap{width:min(100% - 28px, 1120px)}
+  .hero .wrap{padding:48px 0}
+  h1{font-size:46px}
+  .summary-grid{grid-template-columns:1fr}
+  .section{padding:24px}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Beyond Our Gallery home">
+      <img src="assets/bog-logo-mark.png" alt="">
+      <span class="brand-wordmark">
+        <strong>BEYOND OUR <span>GALLERY</span></strong>
+        <small>SGX ART &amp; MEDIA RESEARCH</small>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html#company-gallery">Companies</a>
+      <a href="index.html#latest-research">Research</a>
+      <a href="methodology.html" aria-current="page">Methodology</a>
+      <a href="index.html#standards">About</a>
+    </nav>
+    <a class="back-link" href="index.html"><i data-lucide="arrow-left" aria-hidden="true"></i> Home</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Scoring methodology</p>
+      <h1>Business Quality and Future Potential score.</h1>
+      <p>Beyond Our Gallery uses a fixed 100-point framework that favours demonstrated financial quality while still giving meaningful weight to future opportunities.</p>
+      <div class="summary-grid" aria-label="Category weights">
+        <div class="summary-card"><b>40%</b><span>Financial Strength</span></div>
+        <div class="summary-card"><b>20%</b><span>Market Position</span></div>
+        <div class="summary-card"><b>25%</b><span>Growth Opportunities</span></div>
+        <div class="summary-card"><b>15%</b><span>Risk Resilience</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <aside class="toc" aria-label="Methodology contents">
+      <strong>Contents</strong>
+      <a href="#overview">Overview</a>
+      <a href="#weights">Component weights</a>
+      <a href="#calculation">Calculation method</a>
+      <a href="#financial-strength">Financial strength</a>
+      <a href="#market-position">Market position</a>
+      <a href="#growth-opportunities">Growth opportunities</a>
+      <a href="#risk-resilience">Risk resilience</a>
+      <a href="#interpretation">Score interpretation</a>
+    </aside>
+
+    <div class="content">
+      <section class="section" id="overview">
+        <h2>Overview</h2>
+        <p>The overall score is a fixed 100-point <strong>Business Quality and Future Potential</strong> score. It is designed to compare SGX-listed art, media, attractions and live entertainment businesses on evidence rather than excitement alone.</p>
+        <p>The framework uses <strong>Risk Resilience</strong> instead of Risk Exposure, so a higher score is always better and users do not have to interpret that category in reverse.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Category</th><th>Weight</th></tr></thead>
+            <tbody>
+              <tr><td>Financial Strength</td><td>40%</td></tr>
+              <tr><td>Market Position</td><td>20%</td></tr>
+              <tr><td>Growth Opportunities</td><td>25%</td></tr>
+              <tr><td>Risk Resilience</td><td>15%</td></tr>
+              <tr><td>Total</td><td>100%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="weights">
+        <h2>1. Recommended component weights</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Category</th><th>Component</th><th>Weight</th></tr></thead>
+            <tbody>
+              <tr><td>Financial Strength</td><td>Five-year revenue CAGR</td><td>6%</td></tr>
+              <tr><td>Financial Strength</td><td>Net profit margin</td><td>7%</td></tr>
+              <tr><td>Financial Strength</td><td>ROIC/ROE</td><td>9%</td></tr>
+              <tr><td>Financial Strength</td><td>Cash-flow stability</td><td>9%</td></tr>
+              <tr><td>Financial Strength</td><td>Balance-sheet strength</td><td>9%</td></tr>
+              <tr><td>Market Position</td><td>Brand recognition</td><td>2%</td></tr>
+              <tr><td>Market Position</td><td>Competitive advantage</td><td>7%</td></tr>
+              <tr><td>Market Position</td><td>Market share</td><td>4%</td></tr>
+              <tr><td>Market Position</td><td>Customer relationships</td><td>5%</td></tr>
+              <tr><td>Market Position</td><td>Geographic reach</td><td>2%</td></tr>
+              <tr><td>Growth Opportunities</td><td>Industry growth potential</td><td>6%</td></tr>
+              <tr><td>Growth Opportunities</td><td>Technology adoption</td><td>4%</td></tr>
+              <tr><td>Growth Opportunities</td><td>New-market expansion</td><td>6%</td></tr>
+              <tr><td>Growth Opportunities</td><td>Revenue diversification</td><td>5%</td></tr>
+              <tr><td>Growth Opportunities</td><td>Strategic partnerships</td><td>4%</td></tr>
+              <tr><td>Risk Resilience</td><td>Economic resilience</td><td>3%</td></tr>
+              <tr><td>Risk Resilience</td><td>Customer diversification</td><td>4%</td></tr>
+              <tr><td>Risk Resilience</td><td>Technological resilience</td><td>3%</td></tr>
+              <tr><td>Risk Resilience</td><td>Regulatory resilience</td><td>2%</td></tr>
+              <tr><td>Risk Resilience</td><td>Operational resilience</td><td>3%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>This deliberately gives more weight to ROIC, cash flow, balance sheets and competitive advantages than to brand recognition or announced partnerships. Otherwise, companies with exciting narratives could outrank businesses with much stronger underlying economics.</p>
+      </section>
+
+      <section class="section" id="calculation">
+        <h2>2. Calculation method</h2>
+        <p>Every component is scored from 0 to 5.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>Exceptional</td></tr>
+              <tr><td>4</td><td>Strong</td></tr>
+              <tr><td>3</td><td>Satisfactory</td></tr>
+              <tr><td>2</td><td>Weak</td></tr>
+              <tr><td>1</td><td>Very weak</td></tr>
+              <tr><td>0</td><td>Materially adverse</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="formula"><code>Overall Score = sum(Component Weight x Component Score / 5)</code></div>
+        <p>For example, a company scoring 4/5 for ROIC receives 9 x 4/5 = 7.2 points. Publish the final score to one decimal place, not two, because several components necessarily involve judgement.</p>
+      </section>
+
+      <section class="section" id="financial-strength">
+        <h2>3. Financial-strength hard lines</h2>
+        <p>Use five-year medians where possible and remove clearly identified exceptional gains, impairments and discontinued operations.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Component</th><th>5</th><th>4</th><th>3</th><th>2</th><th>1</th><th>0</th></tr></thead>
+            <tbody>
+              <tr><td>Five-year revenue CAGR</td><td>&ge;15%</td><td>10-14.9%</td><td>5-9.9%</td><td>0-4.9%</td><td>-5-0%</td><td>Below -5%</td></tr>
+              <tr><td>Median net margin</td><td>&ge;20%</td><td>12-19.9%</td><td>7-11.9%</td><td>3-6.9%</td><td>0-2.9%</td><td>Negative</td></tr>
+              <tr><td>Median ROIC</td><td>&ge;20%</td><td>15-19.9%</td><td>10-14.9%</td><td>6-9.9%</td><td>0-5.9%</td><td>Negative</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">For banks, insurers and REITs, this framework would require a separate financial model. ROE, capital adequacy, book value, occupancy and interest coverage are not directly comparable with ordinary operating companies.</div>
+
+        <h3>Cash-flow stability</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Hard line</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>Positive free cash flow in 5/5 years and median cash conversion of at least 100%</td></tr>
+              <tr><td>4</td><td>Positive FCF in 5/5 years with 80-99% conversion, or 4/5 years with at least 100% conversion</td></tr>
+              <tr><td>3</td><td>Positive FCF in 4/5 years and 70-99% conversion</td></tr>
+              <tr><td>2</td><td>Positive FCF in 3/5 years or 50-69% conversion</td></tr>
+              <tr><td>1</td><td>Positive FCF in only 1-2 years or conversion below 50%</td></tr>
+              <tr><td>0</td><td>No positive FCF years or persistently negative operating cash flow</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="formula"><code>Cash conversion = Operating Cash Flow / Adjusted Net Profit</code></div>
+
+        <h3>Balance-sheet strength</h3>
+        <p>Use the weaker result from net debt/EBITDA and interest coverage.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Net debt/EBITDA and interest coverage</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>Net cash, adequate liquidity and interest coverage above 10x</td></tr>
+              <tr><td>4</td><td>Below 1x debt/EBITDA and coverage above 8x</td></tr>
+              <tr><td>3</td><td>1-2x and coverage of 4-8x</td></tr>
+              <tr><td>2</td><td>2-3x and coverage of 2.5-4x</td></tr>
+              <tr><td>1</td><td>3-4x or coverage of 1.5-2.5x</td></tr>
+              <tr><td>0</td><td>Above 4x, coverage below 1.5x, covenant breach or going-concern concern</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>For net margin and ROIC, blend the absolute result with the company's industry position.</p>
+        <div class="formula"><code>Final Metric Score = 60% absolute score + 40% peer-percentile score</code></div>
+        <p>This prevents a structurally low-margin industry such as contracting or retail from being unfairly compared with an asset-light software company.</p>
+      </section>
+
+      <section class="section" id="market-position">
+        <h2>4. Market-position hard lines</h2>
+        <h3>Brand recognition</h3>
+        <p>Award one point for each evidenced condition.</p>
+        <ul class="criteria">
+          <li>Independent brand recognition, rankings or awards.</li>
+          <li>Top-three recognition within its principal niche.</li>
+          <li>Evidence that customers specifically select the company because of its brand.</li>
+          <li>Sustained pricing premium or stronger demand than close competitors.</li>
+          <li>Recognition across more than one meaningful market.</li>
+        </ul>
+        <p>For a B2B company such as Kingsmen, reputation among clients and tender invitations should replace consumer-awareness surveys.</p>
+
+        <h3>Competitive advantage</h3>
+        <p>Award one point for each.</p>
+        <ul class="criteria">
+          <li>An identifiable moat: cost advantage, IP, switching costs, network effects, scale, proprietary data or specialised expertise.</li>
+          <li>A relevant KPI at least 20% better than the peer median.</li>
+          <li>Evidence that the advantage has persisted for at least three years.</li>
+          <li>The advantage would be expensive or take more than three years to reproduce.</li>
+          <li>ROIC exceeded estimated cost of capital by at least five percentage points in three of the last five years.</li>
+        </ul>
+        <p>This receives the largest market-position weight because it is more consequential than simple brand visibility.</p>
+
+        <h3>Market share</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Hard line</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>Ranked first or second and gained at least two percentage points in three years</td></tr>
+              <tr><td>4</td><td>Top three and stable or gaining share</td></tr>
+              <tr><td>3</td><td>Top five, or share broadly stable</td></tr>
+              <tr><td>2</td><td>Smaller participant but gaining at least two percentage points</td></tr>
+              <tr><td>1</td><td>Small and stagnant or gradually losing share</td></tr>
+              <tr><td>0</td><td>Lost more than five percentage points or exited a core market</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Customer relationships</h3>
+        <p>Use retention, renewal or repeat-purchase data, whichever best suits the business.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Retention or repeat/recurring revenue</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>&ge;95% retention or &ge;80% repeat/recurring revenue</td></tr>
+              <tr><td>4</td><td>&ge;90% or &ge;65%</td></tr>
+              <tr><td>3</td><td>&ge;80% or &ge;50%</td></tr>
+              <tr><td>2</td><td>&ge;70% or &ge;30%</td></tr>
+              <tr><td>1</td><td>Below those levels</td></tr>
+              <tr><td>0</td><td>Severe churn or loss of several major customers</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Long contracts, growing order books and measurable increases in customer spending can justify one additional point, capped at 5.</p>
+
+        <h3>Geographic reach</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Hard line</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>At least three regions and no country contributes over 40% of revenue</td></tr>
+              <tr><td>4</td><td>At least three regions and no country contributes over 60%</td></tr>
+              <tr><td>3</td><td>At least two meaningful countries, with foreign revenue above 25%</td></tr>
+              <tr><td>2</td><td>Foreign revenue of 10-25%</td></tr>
+              <tr><td>1</td><td>Home market contributes over 90%</td></tr>
+              <tr><td>0</td><td>Dependence on one site or location with no credible expansion route</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="growth-opportunities">
+        <h2>5. Growth-opportunity hard lines</h2>
+        <h3>Industry growth potential</h3>
+        <p>Use at least two credible external forecasts and take the more conservative estimate.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Forecast three-to-five-year industry CAGR</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>&ge;12%</td></tr>
+              <tr><td>4</td><td>8-11.9%</td></tr>
+              <tr><td>3</td><td>4-7.9%</td></tr>
+              <tr><td>2</td><td>1-3.9%</td></tr>
+              <tr><td>1</td><td>0-0.9%</td></tr>
+              <tr><td>0</td><td>Contracting industry</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Technology adoption</h3>
+        <p>Award one point for each.</p>
+        <ul class="criteria">
+          <li>Technology has moved beyond a pilot into normal operations.</li>
+          <li>It affects at least 25% of transactions, employees or core processes.</li>
+          <li>Management reports a quantified revenue or cost benefit of at least 3%.</li>
+          <li>The company possesses proprietary data, IP or difficult-to-reproduce integrations.</li>
+          <li>Benefits have persisted or increased for at least two years.</li>
+        </ul>
+        <p>Technology should only score highly when it creates an economic benefit, not merely because management mentions AI or digitalisation.</p>
+
+        <h3>New-market expansion</h3>
+        <p>Award one point for each.</p>
+        <ul class="criteria">
+          <li>The new market is clearly defined and independently sized.</li>
+          <li>Management has committed capital and personnel.</li>
+          <li>The product or operation has already launched.</li>
+          <li>It generates at least 5% of revenue, or its contracted pipeline exceeds 10% of current revenue.</li>
+          <li>Early customers demonstrate positive unit economics or repeat purchases.</li>
+        </ul>
+
+        <h3>Revenue diversification</h3>
+        <p>Define a meaningful segment as one generating at least 10% of revenue.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Largest revenue segment</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>Below 35%, with at least three meaningful segments</td></tr>
+              <tr><td>4</td><td>35-49%</td></tr>
+              <tr><td>3</td><td>50-64%</td></tr>
+              <tr><td>2</td><td>65-79%</td></tr>
+              <tr><td>1</td><td>80-90%</td></tr>
+              <tr><td>0</td><td>Above 90% and the dominant segment is declining</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Strategic partnerships</h3>
+        <p>Award one point for each.</p>
+        <ul class="criteria">
+          <li>A binding commercial agreement rather than an MOU.</li>
+          <li>A credible partner with relevant capabilities or distribution.</li>
+          <li>The joint offering has launched.</li>
+          <li>Quantified revenue, savings or pipeline equal to at least 2% of revenue.</li>
+          <li>The partnership is exclusive, renewed, scalable or contributes over 5% of revenue.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="risk-resilience">
+        <h2>6. Risk-resilience hard lines</h2>
+        <h3>Economic resilience</h3>
+        <p>Use the company's worst year during the most recent genuine industry downturn.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Worst annual revenue decline</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>Below 5% and remained profitable</td></tr>
+              <tr><td>4</td><td>5-10% and remained profitable</td></tr>
+              <tr><td>3</td><td>10-20%</td></tr>
+              <tr><td>2</td><td>20-30% or one loss-making year</td></tr>
+              <tr><td>1</td><td>Above 30% or two loss-making years</td></tr>
+              <tr><td>0</td><td>Required emergency financing, breached covenants or faced insolvency</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Customer diversification</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Score</th><th>Largest customer / top five customers</th></tr></thead>
+            <tbody>
+              <tr><td>5</td><td>Below 10% / below 25%</td></tr>
+              <tr><td>4</td><td>Below 15% / below 35%</td></tr>
+              <tr><td>3</td><td>Below 20% / below 50%</td></tr>
+              <tr><td>2</td><td>20-30% / 50-65%</td></tr>
+              <tr><td>1</td><td>30-50% / above 65%</td></tr>
+              <tr><td>0</td><td>One customer contributes over 50%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A mass-market consumer company with thousands of unrelated customers would normally score 5.</p>
+
+        <h3>Technological resilience</h3>
+        <p>Award one point for each.</p>
+        <ul class="criteria">
+          <li>Less than half of revenue is vulnerable to foreseeable substitution.</li>
+          <li>A response product or technology has already launched.</li>
+          <li>Technology investment is at least comparable with peers.</li>
+          <li>The company's principal customer value cannot be cheaply automated or replicated.</li>
+          <li>Technological change is already producing revenue or measurable savings.</li>
+        </ul>
+        <p>This differs from Technology Adoption: adoption measures upside, while resilience measures the danger of being displaced.</p>
+
+        <h3>Regulatory resilience</h3>
+        <p>Award one point for each.</p>
+        <ul class="criteria">
+          <li>No dependence on a single irreplaceable licence.</li>
+          <li>No unresolved material regulatory investigation.</li>
+          <li>Less than 30% of revenue is exposed to a significant proposed rule change.</li>
+          <li>Operations are diversified across regulatory regimes.</li>
+          <li>At least three years without a material compliance failure.</li>
+        </ul>
+
+        <h3>Operational resilience</h3>
+        <p>Award one point for each.</p>
+        <ul class="criteria">
+          <li>No single site produces over 40% of output or revenue.</li>
+          <li>No irreplaceable supplier provides over 25% of critical inputs.</li>
+          <li>Tested business-continuity and cybersecurity procedures.</li>
+          <li>No material safety, cyber or operational incident in three years.</li>
+          <li>Adequate insurance, backup capacity and management succession.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="interpretation">
+        <h2>7. Score interpretation</h2>
+        <div class="score-labels">
+          <div class="score-label"><b>85-100</b><span>Exceptional</span></div>
+          <div class="score-label"><b>70-84.9</b><span>Strong</span></div>
+          <div class="score-label"><b>55-69.9</b><span>Satisfactory</span></div>
+          <div class="score-label"><b>40-54.9</b><span>Weak</span></div>
+          <div class="score-label"><b>&lt;40</b><span>Fragile</span></div>
+        </div>
+        <p>These labels describe the company. They do not automatically imply buy, hold or sell.</p>
+
+        <h3>Evidence grade</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Grade</th><th>Evidence standard</th></tr></thead>
+            <tbody>
+              <tr><td>A</td><td>At least 85% of weighted evidence is audited or independently verified.</td></tr>
+              <tr><td>B</td><td>70-84% is verified.</td></tr>
+              <tr><td>C</td><td>Below 70%; score is provisional.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>If information is unavailable, assign 2/5 and mark it as undisclosed, rather than silently assuming either average performance or failure.</p>
+        <div class="note">This score remains separate from valuation. It answers, "How strong is the business and its future potential?" It does not answer, "Is the share attractively priced today?" Beyond Our Gallery could later add a separate valuation score based on free-cash-flow yield, valuation against peers and history, and reverse-DCF expectations. That separation makes the system more intellectually credible.</div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <img class="footer-logo" src="assets/bog-logo-lockup.png" alt="Beyond Our Gallery, SGX Art and Media Research">
+      <p>Investment disclaimer: Beyond Our Gallery is published for general information and education only. Nothing on this site is financial advice, a recommendation, an offer or a solicitation to buy or sell securities.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="index.html#standards">About</a>
+      <a href="mailto:hello@beyondourgallery.com">Contact</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="index.html#standards">Privacy policy</a>
+      <a href="index.html#standards">Terms</a>
+      <a href="#">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  if (window.lucide) window.lucide.createIcons();
+});
+</script>
+</body>
+</html>
