@@ -324,6 +324,25 @@ nav a::after{
   transition:transform .18s ease;
 }
 nav a:hover{color:#fff}
+nav .wrap{gap:17px}
+nav a.navhome{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  flex:0 0 auto;
+  margin-left:3px;
+  border:1px solid rgba(240,161,154,.42);
+  border-radius:999px;
+  color:var(--salmon);
+  padding:7px 13px;
+  font-weight:700;
+}
+nav a.navhome:hover{
+  background:rgba(240,161,154,.13);
+  border-color:var(--salmon);
+  color:#fff;
+}
+nav a.navhome::after{display:none}
 nav a:hover::after{transform:scaleX(1)}
 .navlogo{
   width:24px;
@@ -1799,12 +1818,117 @@ footer b{color:#ddd6d2}
   .value-journey img{min-height:320px}
   .rws-facts div{grid-template-columns:1fr;gap:5px}
 }
+
+/* ---------- research scorecard ---------- */
+.scorehero{
+  display:grid;
+  grid-template-columns:minmax(0,250px) minmax(0,1fr);
+  gap:34px;
+  align-items:center;
+  margin-top:30px;
+}
+.scoredial{
+  position:relative;
+  width:100%;
+  max-width:230px;
+  aspect-ratio:1;
+  margin:0 auto;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:conic-gradient(var(--red) calc(var(--score) * 1%), rgba(255,255,255,.11) 0);
+}
+.scoredial::before{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border-radius:50%;
+  background:var(--page);
+}
+.dialinner{position:relative;text-align:center}
+.dialinner b{
+  display:block;
+  font-size:54px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.02em;
+  color:var(--white);
+}
+.dialinner span{
+  display:block;
+  margin-top:5px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--pagemuted);
+}
+.dialinner em{
+  display:block;
+  margin-top:10px;
+  font-size:12.5px;
+  font-style:normal;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--salmon);
+}
+.catbars{display:grid;gap:16px}
+.catbar>span{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:12px;
+  margin-bottom:7px;
+  font-size:13.5px;
+  font-weight:700;
+  color:var(--lightink);
+}
+.catbar>span b{color:var(--white);font-weight:800;white-space:nowrap}
+.catbar i{
+  display:block;
+  height:9px;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--red) calc(var(--pct) * 1%), rgba(255,255,255,.11) 0);
+}
+.gradebox{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 26px;
+  align-items:baseline;
+  margin-top:16px;
+}
+.gradebox div{font-size:13.5px;color:var(--pagemuted)}
+.gradebox b{color:var(--white);font-weight:800}
+.srcline{margin-top:14px;font-size:13px;color:var(--pagemuted);line-height:1.7}
+.srcline a{color:var(--salmon);text-decoration:underline;text-underline-offset:3px}
+.backhome{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  margin-top:26px;
+  border:1px solid rgba(240,161,154,.45);
+  border-radius:999px;
+  color:var(--salmon);
+  padding:12px 24px;
+  font-size:13.5px;
+  font-weight:800;
+  letter-spacing:.04em;
+  text-decoration:none;
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+.backhome:hover{background:rgba(240,161,154,.13);border-color:var(--salmon);color:#fff}
+@media(max-width:760px){
+  .scorehero{grid-template-columns:1fr;gap:26px}
+  .dialinner b{font-size:48px}
+}
 </style>
 </head>
 <body>
 
 <nav><div class="wrap">
   <span class="brand"><img class="navlogo" src="assets/kingsmen-logo.png" alt="">Beyond the Gallery</span>
+  <a href="#score">Score</a>
   <a href="#overview">Overview</a>
   <a href="#segments">Segments</a>
   <a href="#financials">Financials</a>
@@ -1814,6 +1938,7 @@ footer b{color:#ddd6d2}
   <a href="#frameworks">Frameworks</a>
   <a href="#risk">Risk</a>
   <a href="#strategy">Strategy</a>
+  <a class="navhome" href="index.html">&#8592; Back Home</a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
@@ -1835,6 +1960,85 @@ footer b{color:#ddd6d2}
     </figure>
   </div>
 </div></header>
+
+<!-- ============ RESEARCH SCORE ============ -->
+<section id="score"><div class="wrap">
+  <div class="slabel">Research score</div>
+  <h2>Kingsmen Creatives scores 59.3 out of 100 — Satisfactory</h2>
+  <p class="lede">This scores the underlying business quality and future potential, not the share valuation. It uses FY2021–FY2025 audited results and incorporates the latest 1H2026 disclosures.</p>
+
+  <div class="scorehero">
+    <div class="scoredial" style="--score:59.3" role="img" aria-label="Overall research score 59.3 out of 100, rated Satisfactory">
+      <div class="dialinner">
+        <b>59.3</b>
+        <span>out of 100</span>
+        <em>Satisfactory</em>
+      </div>
+    </div>
+    <div class="catbars">
+      <div class="catbar" style="--pct:60.8">
+        <span>Financial Strength <b>24.3 / 40</b></span><i></i>
+      </div>
+      <div class="catbar" style="--pct:54">
+        <span>Market Position <b>10.8 / 20</b></span><i></i>
+      </div>
+      <div class="catbar" style="--pct:60.8">
+        <span>Growth Opportunities <b>15.2 / 25</b></span><i></i>
+      </div>
+      <div class="catbar" style="--pct:60">
+        <span>Risk Resilience <b>9.0 / 15</b></span><i></i>
+      </div>
+      <div class="gradebox">
+        <div>Evidence grade <b>B</b></div>
+        <div>Sensitivity range <b>56–63</b></div>
+        <div>Central score <b>59.3</b></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:52px">Component scoring</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th style="text-align:left">Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th style="text-align:left">Assessment</th></tr></thead>
+    <tbody>
+      <tr><td>Five-year revenue CAGR</td><td>6</td><td>3.0</td><td>3.6</td><td style="text-align:left;white-space:normal">FY2021–25 CAGR of approximately 8.1%</td></tr>
+      <tr><td>Net profit margin</td><td>7</td><td>1.4</td><td>2.0</td><td style="text-align:left;white-space:normal">Five-year median approximately 1.4%; materially below Pico's FY2025 margin</td></tr>
+      <tr><td>ROIC / ROE</td><td>9</td><td>1.4</td><td>2.5</td><td style="text-align:left;white-space:normal">Five-year median reported ROE approximately 4.2%</td></tr>
+      <tr><td>Cash-flow stability</td><td>9</td><td>4.0</td><td>7.2</td><td style="text-align:left;white-space:normal">Positive FCF in four of five years, with strong FY2025 conversion</td></tr>
+      <tr><td>Balance-sheet strength</td><td>9</td><td>5.0</td><td>9.0</td><td style="text-align:left;white-space:normal">S$91.1m cash versus S$11.7m borrowings at FY2025</td></tr>
+      <tr><td>Brand recognition</td><td>2</td><td>3.0</td><td>1.2</td><td style="text-align:left;white-space:normal">50-year history, major international clients and independent awards</td></tr>
+      <tr><td>Competitive advantage</td><td>7</td><td>3.0</td><td>4.2</td><td style="text-align:left;white-space:normal">Integrated Asian delivery network and execution record, but limited proof of pricing power</td></tr>
+      <tr><td>Market share</td><td>4</td><td>1.0</td><td>0.8</td><td style="text-align:left;white-space:normal">Approximately 2.2% of the addressable market; not a price setter</td></tr>
+      <tr><td>Customer relationships</td><td>5</td><td>3.0</td><td>3.0</td><td style="text-align:left;white-space:normal">Long-standing marquee clients and strong order book, but retention metrics are undisclosed</td></tr>
+      <tr><td>Geographic reach</td><td>2</td><td>4.0</td><td>1.6</td><td style="text-align:left;white-space:normal">18 offices and revenue across several regions; Singapore remains 42.3%</td></tr>
+      <tr><td>Industry growth</td><td>6</td><td>3.0</td><td>3.6</td><td style="text-align:left;white-space:normal">Relevant exhibition and events markets are forecast to grow about 5% annually</td></tr>
+      <tr><td>Technology adoption</td><td>4</td><td>1.0</td><td>0.8</td><td style="text-align:left;white-space:normal">Digital and experiential capabilities exist, but adoption and economic benefits are unquantified</td></tr>
+      <tr><td>New-market expansion</td><td>6</td><td>3.0</td><td>3.6</td><td style="text-align:left;white-space:normal">Location-based entertainment has launched internationally, without proven unit economics yet</td></tr>
+      <tr><td>Revenue diversification</td><td>5</td><td>4.0</td><td>4.0</td><td style="text-align:left;white-space:normal">Largest segment contributes 46.3%; two principal segments provide balance</td></tr>
+      <tr><td>Strategic partnerships</td><td>4</td><td>4.0</td><td>3.2</td><td style="text-align:left;white-space:normal">Commercial projects with Netflix and other credible partners have progressed beyond pilots</td></tr>
+      <tr><td>Economic resilience</td><td>3</td><td>2.0</td><td>1.2</td><td style="text-align:left;white-space:normal">Revenue fell 21.6% and the group recorded a loss during FY2020</td></tr>
+      <tr><td>Customer diversification</td><td>4</td><td>4.0</td><td>3.2</td><td style="text-align:left;white-space:normal">No individual customer represents 10% or more; top-five concentration is undisclosed</td></tr>
+      <tr><td>Technology resilience</td><td>3</td><td>3.0</td><td>1.8</td><td style="text-align:left;white-space:normal">Physical execution is difficult to automate, although peers may be further ahead digitally</td></tr>
+      <tr><td>Regulatory resilience</td><td>2</td><td>4.0</td><td>1.6</td><td style="text-align:left;white-space:normal">Diversified jurisdictions, reduced by the 2025 ransomware / PDPC matter</td></tr>
+      <tr><td>Operational resilience</td><td>3</td><td>2.0</td><td>1.2</td><td style="text-align:left;white-space:normal">Distributed network helps, but cyber and Malaysian subsidiary incidents expose control risks</td></tr>
+      <tr class="total"><td>Total</td><td>100</td><td>—</td><td>59.3</td><td style="text-align:left;white-space:normal">Satisfactory</td></tr>
+    </tbody>
+  </table></div>
+  <p class="lede" style="font-size:13.5px">The fractional profitability ratings apply the rubric's prescribed <b style="color:var(--salmon)">60% absolute performance and 40% peer positioning</b> blend.</p>
+
+  <h3 style="margin-top:52px">Interpretation</h3>
+  <div class="grid g2">
+    <div class="card"><div class="tag">Strongest attributes</div><p>A net-cash balance sheet, an established Asian delivery network, a diversified client base and a healthy secured pipeline. Balance-sheet strength is the only component to score full marks, at 9.0 of 9.</p></div>
+    <div class="card"><div class="tag">What caps the score</div><p>Historically thin margins and modest returns on equity · small global market share and limited pricing power · little quantified evidence that technology is improving productivity or margins · undisclosed customer-retention and top-five concentration data · recent cyber and subsidiary-control incidents.</p></div>
+  </div>
+
+  <div class="card" style="margin-top:14px"><div class="tag">The latest half-year is encouraging but mixed</div><p>1H2026 revenue increased 3.9%, attributable profit increased 49.9%, and secured contracts reached S$392m. However, gross margin declined to 23.3% and operating cash flow was negative S$12.5m because of working-capital absorption. The five-year score is therefore left unchanged until full-year results establish whether the improvement is durable.</p></div>
+
+  <p class="srcline"><b style="color:var(--white)">Sources:</b>
+    <a href="https://links.sgx.com/1.0.0/corporate-announcements/523UPVCSWTGTKOIG/883691_KingsmenAR2025.pdf" target="_blank" rel="noopener">FY2025 Annual Report</a> ·
+    <a href="https://links.sgx.com/1.0.0/corporate-announcements/FL76N0O2VUMH6M9E/900833_KingsmenNewsRelease1H2026.pdf" target="_blank" rel="noopener">1H2026 results release</a> ·
+    <a href="https://links.sgx.com/1.0.0/corporate-announcements/FL76N0O2VUMH6M9E/900832_KingsmenResultAnnouncement1H2026.pdf" target="_blank" rel="noopener">Detailed 1H2026 financials</a><br>
+    Evidence grade B: audited financial evidence is strong, but several qualitative inputs — peer percentiles, retention, technology economics and operational concentration — remain partially evidenced.</p>
+</div></section>
 
 <!-- ============ OVERVIEW ============ -->
 <section id="overview"><div class="wrap">
@@ -2406,6 +2610,7 @@ footer b{color:#ddd6d2}
   <p><b>Beyond the Gallery</b> — a strategy and commercial review of Kingsmen Creatives Ltd. (SGX: 5MZ) by Jiarun Yang, 2026.</p>
   <p>All figures in Singapore dollars unless stated. Based on FY2025 reported results and public disclosures; market data is date-sensitive. This is an independent analytical review, not affiliated with Kingsmen Creatives Ltd., and nothing here is investment advice.</p>
   <p>beyondourgallery.com</p>
+  <a class="backhome" href="index.html">&#8592; Back Home</a>
 </div></footer>
 
 <div id="tip"></div>
@@ -2626,7 +2831,7 @@ comp.forEach(row=>{
 });
 
 /* ---------- scroll reveals & count-ups ---------- */
-document.querySelectorAll('.card,figure.chart,.tblwrap,.formula,.financial-commentary,.memo-item,section h2,section .lede,section .slabel,section h3').forEach(el=>el.setAttribute('data-reveal',''));
+document.querySelectorAll('.card,figure.chart,.tblwrap,.formula,.financial-commentary,.memo-item,.scorehero,section h2,section .lede,section .slabel,section h3').forEach(el=>el.setAttribute('data-reveal',''));
 document.querySelectorAll('.grid,.chain,.strategy-memo').forEach(g=>{[...g.children].forEach((c,i)=>c.style.transitionDelay=(i*90)+'ms');});
 
 function countUp(elm){
@@ -2661,7 +2866,7 @@ if(REDUCE){
   const cio=new IntersectionObserver(es=>{es.forEach(en=>{
     if(en.isIntersecting){countUp(en.target);cio.unobserve(en.target);}
   });},{threshold:.6});
-  document.querySelectorAll('.stat .v,.showrev b,.share b,.bignum').forEach(elm=>cio.observe(elm));
+  document.querySelectorAll('.stat .v,.showrev b,.share b,.bignum,.dialinner b').forEach(elm=>cio.observe(elm));
 }
 </script>
 </body>

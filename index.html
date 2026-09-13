@@ -434,6 +434,27 @@ button,input{font:inherit}
   letter-spacing:.14em;
   text-transform:uppercase;
 }
+.score-band{
+  display:block;
+  margin:9px 0 13px;
+  font-family:var(--display);
+  font-size:30px;
+  font-weight:700;
+  line-height:1;
+}
+.score-band em{
+  display:inline-block;
+  margin-left:9px;
+  color:var(--plum);
+  font-family:var(--body);
+  font-size:11px;
+  font-style:normal;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  vertical-align:middle;
+}
+.score-ring.is-decimal{font-size:22px}
 .gallery-head{
   display:grid;
   grid-template-columns:minmax(0, 1fr) minmax(300px, 520px);
@@ -961,9 +982,10 @@ body.modal-open::before{
         <div class="score-row">
           <div>
             <span>Overall research score</span>
+            <strong class="score-band">59.3 / 100 <em>Satisfactory</em></strong>
             <a class="text-link" href="kingsmen-creatives.html">Read analysis <i data-lucide="arrow-right" aria-hidden="true"></i></a>
           </div>
-          <div class="score-ring" style="--score:78" aria-label="Overall research score 78 out of 100">78</div>
+          <div class="score-ring is-decimal" style="--score:59.3" aria-label="Overall research score 59.3 out of 100">59.3</div>
         </div>
       </article>
     </div>
@@ -998,17 +1020,17 @@ body.modal-open::before{
           <div class="company-media">
             <img src="assets/strategy-visitors.jpg" alt="Immersive exhibition environment for an experiential company card">
             <span class="sector-badge">Experiential</span>
-            <span class="card-score"><span>Score</span><b>78</b></span>
+            <span class="card-score"><span>Score</span><b>59.3</b></span>
           </div>
           <div class="company-body">
             <span class="ticker">SGX: 5MZ</span>
             <h3>Kingsmen Creatives</h3>
             <p>Experience-design group with regional exhibitions, museums and brand activation exposure.</p>
             <div class="mini-scores" aria-label="Miniature research scores">
-              <span class="mini-score"><span>Fin</span><i style="--mini:76"></i><b>76</b></span>
-              <span class="mini-score"><span>Mkt</span><i style="--mini:82"></i><b>82</b></span>
-              <span class="mini-score"><span>Grw</span><i style="--mini:74"></i><b>74</b></span>
-              <span class="mini-score"><span>Risk</span><i style="--mini:79"></i><b>79</b></span>
+              <span class="mini-score"><span>Fin</span><i style="--mini:61"></i><b>61</b></span>
+              <span class="mini-score"><span>Mkt</span><i style="--mini:54"></i><b>54</b></span>
+              <span class="mini-score"><span>Grw</span><i style="--mini:61"></i><b>61</b></span>
+              <span class="mini-score"><span>Risk</span><i style="--mini:60"></i><b>60</b></span>
             </div>
             <div class="card-foot">
               <span class="updated">Updated 13 Sep 2026</span>
