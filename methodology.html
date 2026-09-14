@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/bog-logo-mark.png">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<script src="assets/parallax.js" defer></script>
 <style>
 :root{
   color-scheme:light;
@@ -118,10 +119,14 @@ a{color:inherit;text-decoration:none}
 }
 .back-link .lucide{width:17px;height:17px}
 .hero{
+  --parallax-bg:0px;
   color:#fff;
-  background:
+  background-image:
     linear-gradient(90deg, rgba(6,47,43,.98), rgba(6,47,43,.88)),
-    url("assets/strategy-visitors.jpg") center/cover;
+    url("assets/strategy-visitors.jpg");
+  background-position:center, center calc(50% + var(--parallax-bg));
+  background-size:auto, cover;
+  background-repeat:no-repeat;
 }
 .hero .wrap{
   padding:72px 0 58px;
@@ -155,6 +160,10 @@ h1{
   margin-top:34px;
   background:rgba(255,255,255,.18);
   border:1px solid rgba(255,255,255,.2);
+}
+[data-parallax-speed]{--parallax-y:0px;will-change:transform}
+.summary-grid[data-parallax-speed]{
+  transform:translate3d(0,var(--parallax-y),0);
 }
 .summary-card{
   min-height:154px;
@@ -381,6 +390,15 @@ tr:last-child td{border-bottom:0}
   .summary-grid{grid-template-columns:1fr}
   .section{padding:24px}
 }
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:.01ms !important;
+  }
+  [data-parallax-speed]{transform:none !important}
+}
 </style>
 </head>
 <body>
@@ -404,12 +422,12 @@ tr:last-child td{border-bottom:0}
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero" data-parallax-bg data-parallax-bg-speed="58">
     <div class="wrap">
       <p class="eyebrow">Scoring methodology</p>
       <h1>Business Quality and Future Potential score.</h1>
       <p>Beyond Our Gallery uses a fixed 100-point framework that favours demonstrated financial quality while still giving meaningful weight to future opportunities.</p>
-      <div class="summary-grid" aria-label="Category weights">
+      <div class="summary-grid" aria-label="Category weights" data-parallax-speed="22">
         <div class="summary-card"><b>40%</b><span>Financial Strength</span></div>
         <div class="summary-card"><b>20%</b><span>Market Position</span></div>
         <div class="summary-card"><b>25%</b><span>Growth Opportunities</span></div>

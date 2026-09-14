@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/bog-mark.svg">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<script src="assets/parallax.js" defer></script>
 <style>
 :root{
   color-scheme: light;
@@ -168,12 +169,16 @@ button,input{font:inherit}
   background:#fff;
 }
 .hero{
+  --parallax-bg:0px;
   min-height:500px;
   overflow:hidden;
   color:#fff;
-  background:
+  background-image:
     linear-gradient(90deg, rgba(6,47,43,.98) 0%, rgba(6,47,43,.93) 42%, rgba(6,47,43,.72) 100%),
-    url("assets/strategy-visitors.jpg") center/cover;
+    url("assets/strategy-visitors.jpg");
+  background-position:center, center calc(50% + var(--parallax-bg));
+  background-size:auto, cover;
+  background-repeat:no-repeat;
 }
 .hero .wrap{
   display:grid;
@@ -252,6 +257,7 @@ button,input{font:inherit}
 }
 .text-link:hover,
 .text-link:focus-visible{color:var(--rose)}
+[data-parallax-speed]{--parallax-y:0px;will-change:transform}
 .hero-art{
   position:relative;
   height:380px;
@@ -282,6 +288,7 @@ button,input{font:inherit}
   overflow:hidden;
   border:1px solid rgba(255,255,255,.12);
   box-shadow:0 28px 80px rgba(0,0,0,.28);
+  transform:translate3d(0,var(--parallax-y),0);
 }
 .art-tile img{
   width:100%;
@@ -333,6 +340,12 @@ button,input{font:inherit}
   height:100%;
   min-height:480px;
   object-fit:cover;
+}
+.feature-image img[data-parallax-speed]{
+  height:108%;
+  min-height:520px;
+  transform:translate3d(0,var(--parallax-y),0) scale(1.06);
+  transform-origin:center;
 }
 .feature-image::after{
   content:"";
@@ -684,9 +697,13 @@ button,input{font:inherit}
   font-size:13px;
 }
 .methodology{
-  background:
+  --parallax-bg:0px;
+  background-image:
     linear-gradient(90deg, rgba(6,47,43,.96), rgba(6,47,43,.9)),
-    url("assets/rd-bicentennial.jpg") center/cover;
+    url("assets/rd-bicentennial.jpg");
+  background-position:center, center calc(50% + var(--parallax-bg));
+  background-size:auto, cover;
+  background-repeat:no-repeat;
   color:#fff;
 }
 .methodology .section-copy{color:#d9efec}
@@ -955,6 +972,7 @@ body.modal-open::before{
   .feature-ribbon{position:relative;width:100%;min-height:220px}
   .feature-image{display:flex;flex-direction:column}
   .feature-image img{min-height:300px}
+  .feature-image img[data-parallax-speed]{height:100%;min-height:300px;transform:none}
   .company-grid,
   .research-grid,
   .standards-grid,
@@ -968,6 +986,8 @@ body.modal-open::before{
     scroll-behavior:auto !important;
     transition-duration:.01ms !important;
   }
+  [data-parallax-speed]{transform:none !important}
+  .feature-image img[data-parallax-speed]{height:100%;min-height:480px;transform:none !important}
 }
 </style>
 </head>
@@ -995,7 +1015,7 @@ body.modal-open::before{
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero" data-parallax-bg data-parallax-bg-speed="60">
     <div class="wrap">
       <div class="hero-copy">
         <h1>See beyond <span>the gallery.</span></h1>
@@ -1006,9 +1026,9 @@ body.modal-open::before{
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
-        <div class="art-tile tile-large"><img src="assets/strategy-visitors.jpg" alt=""></div>
-        <div class="art-tile tile-tall"><img src="assets/exm-rings-of-power.jpg" alt=""></div>
-        <div class="art-tile tile-small"><img src="assets/eta-oceanarium.jpg" alt=""></div>
+        <div class="art-tile tile-large" data-parallax-speed="34"><img src="assets/strategy-visitors.jpg" alt=""></div>
+        <div class="art-tile tile-tall" data-parallax-speed="52"><img src="assets/exm-rings-of-power.jpg" alt=""></div>
+        <div class="art-tile tile-small" data-parallax-speed="76"><img src="assets/eta-oceanarium.jpg" alt=""></div>
       </div>
     </div>
   </section>
@@ -1016,7 +1036,7 @@ body.modal-open::before{
   <section class="section" id="featured-analysis" aria-labelledby="featured-title">
     <div class="wrap featured-grid">
       <div class="feature-image">
-        <img id="feature-photo" src="assets/strategy-visitors.jpg" alt="Visitors inside an immersive exhibition space">
+        <img id="feature-photo" src="assets/strategy-visitors.jpg" alt="Visitors inside an immersive exhibition space" data-parallax-speed="34">
         <div class="feature-ribbon">
           <strong>People<br>Spaces<br>Stories<br>Value</strong>
           <em>The business of experiences moves people and markets.</em>
@@ -1212,7 +1232,7 @@ body.modal-open::before{
     </div>
   </section>
 
-  <section class="section methodology" id="methodology" aria-labelledby="methodology-title">
+  <section class="section methodology" id="methodology" aria-labelledby="methodology-title" data-parallax-bg data-parallax-bg-speed="44">
     <div class="wrap">
       <p class="eyebrow">How we score</p>
       <h2 class="section-title" id="methodology-title">A 100-point scorecard for creative businesses.</h2>
