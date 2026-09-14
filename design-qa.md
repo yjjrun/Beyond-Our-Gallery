@@ -27,3 +27,21 @@
 - The side rail is intentionally desktop-only to avoid crowding mobile reading.
 
 final result: passed
+
+**Mockup Opening Update**
+- Rebuilt `/mockup` Act I from a 540vh sequence to a 190vh desktop / 180vh mobile sequence, preserving the stronger research, company-card, method, and closing sections below.
+- Removed the right rail, masthead slogan, hero slogan overload, and edge-on 180-degree card rotation.
+- Replaced the reverse-canvas reveal with a front-facing evidence placard: thesis, BOG score, revenue, P/E, revenue bars, gross-margin line, and three supporting metrics.
+- Mobile uses a compact mark-only header, three primary links, and a taller evidence placard so the chart and stats are not clipped.
+
+**Mockup Scroll Storyboard**
+- 0-30%: one clear opening composition; visitor exits right; painting stays front-facing.
+- 30-58%: headline and claim leave; canvas makes only a shallow 2.5D turn and resolves into evidence.
+- 58-78%: thesis, score, financial metrics, and chart animate in.
+- 78-100%: evidence remains visible while the research section enters the bottom of the viewport.
+
+**Mockup Checks Run**
+- Desktop viewport 1363 x 936: opening height 1.9 screens, no horizontal overflow, no console errors.
+- Desktop handoff frame: research section visible at the bottom; no blank transition viewport.
+- Mobile viewport 390 x 844: opening height 1.8 screens, no horizontal overflow, no console errors.
+- Mobile header and evidence placard visually checked with saved screenshots.

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beyond Our Gallery — See the whole picture</title>
-<meta name="description" content="Independent research on under-covered SGX art, media and attractions companies. The art is visible. The economics rarely is.">
+<title>Beyond Our Gallery — Research the companies others overlook</title>
+<meta name="description" content="Independent research on under-covered SGX art, media and attractions companies, presented through a tighter gallery-to-evidence scroll study.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -34,9 +34,6 @@
     <a href="#method">Method</a>
     <a href="../index.html">Live site</a>
   </nav>
-  <div class="mast-end">
-    <span class="mast-tag">IDEAS FOR A<br>RICHER TOMORROW</span>
-  </div>
 </header>
 
 <!-- ═══════════ ACT I — the gallery ═══════════ -->
@@ -52,13 +49,13 @@
     </div>
 
     <h1 class="mega" id="mega">
-      <span class="l1">SEE</span>
+      <span class="l1">RESEARCH</span>
       <span class="l2">THE</span>
-      <span class="l3">WHOLE</span>
-      <span class="l4">PICTURE<em>.</em></span>
+      <span class="l3">OVERLOOKED</span>
+      <span class="l4">COMPANIES<em>.</em></span>
     </h1>
 
-    <!-- the painting: a two-sided CSS-3D canvas -->
+    <!-- the painting: a front-facing 2.5D canvas that resolves into evidence -->
     <div class="stagewrap" id="stagewrap">
       <div class="artwork" id="artwork">
         <div class="rotor" id="rotor">
@@ -69,16 +66,47 @@
           <div class="edge edge-right"></div>
           <div class="edge edge-top"></div>
           <figure class="face back">
-            <div class="stretcher"></div>
             <div class="linen">
-              <p class="back-eyebrow">Beyond Our Gallery · Exhibit 01</p>
-              <h2 class="back-name">Kingsmen<br>Creatives</h2>
-              <div class="back-stats">
-                <div><span>BOG score</span><b data-count="59.3">0</b></div>
-                <div><span>FY25 revenue</span><b data-count="372.5" data-prefix="S$" data-suffix="m">S$0m</b></div>
-                <div><span>Gross margin</span><b data-count="24.7" data-suffix="%">0%</b></div>
+              <p class="back-eyebrow">Exhibit 01 · Kingsmen Creatives</p>
+              <div class="back-grid">
+                <div>
+                  <h2 class="back-name">When does the artwork become a business?</h2>
+                  <p class="back-thesis">FY2025 revenue softened, but gross margin reached a five-year high. The research question is margin durability, not spectacle.</p>
+                </div>
+                <div class="back-stats">
+                  <div><span>BOG score</span><b data-count="59.3">0</b></div>
+                  <div><span>Revenue</span><b data-count="372.5" data-prefix="S$" data-suffix="m">S$0m</b></div>
+                  <div><span>P/E</span><b data-count="8.0" data-prefix="~" data-suffix="×">~0×</b></div>
+                </div>
               </div>
-              <p class="back-line">From surface to structure.</p>
+              <figure class="hero-chart" aria-label="Kingsmen revenue and gross margin from FY2021 to FY2025">
+                <figcaption>Revenue and gross margin, FY2021-FY2025</figcaption>
+                <svg viewBox="0 0 460 168" role="img">
+                  <g class="gridlines">
+                    <path d="M42 22H432M42 72H432M42 122H432"/>
+                  </g>
+                  <g class="bars">
+                    <rect x="68" y="76" width="34" height="58" rx="4"/>
+                    <rect x="142" y="60" width="34" height="74" rx="4"/>
+                    <rect x="216" y="50" width="34" height="84" rx="4"/>
+                    <rect x="290" y="42" width="34" height="92" rx="4"/>
+                    <rect x="364" y="48" width="34" height="86" rx="4"/>
+                  </g>
+                  <path class="margin-line" d="M85 94L159 97L233 94L307 77L381 63"/>
+                  <g class="dots">
+                    <circle cx="85" cy="94" r="4"/><circle cx="159" cy="97" r="4"/><circle cx="233" cy="94" r="4"/><circle cx="307" cy="77" r="4"/><circle cx="381" cy="63" r="4"/>
+                  </g>
+                  <g class="x">
+                    <text x="85" y="156">21</text><text x="159" y="156">22</text><text x="233" y="156">23</text><text x="307" y="156">24</text><text x="381" y="156">25</text>
+                  </g>
+                  <text class="callout" x="322" y="40">24.7% margin</text>
+                </svg>
+              </figure>
+              <div class="evidence-strip">
+                <span><b>S$79.3m</b> net cash</span>
+                <span><b>24.7%</b> gross margin</span>
+                <span><b>~S$109m</b> market cap</span>
+              </div>
             </div>
           </figure>
         </div>
@@ -92,15 +120,9 @@
       <span class="visitor-shadow"></span>
     </figure>
 
-    <!-- right rail -->
-    <aside class="rail rail-r" id="railR" aria-hidden="true">
-      <div class="rail-list"><span>ART</span><span>MEDIA</span><span>PEOPLE</span><span>CAPITAL</span><span>OPPORTUNITY</span></div>
-      <div class="rail-note">SAME<br>MARKET.<br>A DEEPER<br>VIEW.</div>
-    </aside>
-
     <div class="hero-claim" id="heroClaim">
-      <p>The art is visible.<br>The economics rarely is.</p>
-      <a class="claim-link" href="#research">Discover what sits behind it
+      <p>Gallery language, investment evidence.</p>
+      <a class="claim-link" href="#research">Jump to the research
         <svg viewBox="0 0 20 12" aria-hidden="true"><path d="M0 6h17M13 1l5 5-5 5"/></svg>
       </a>
     </div>
@@ -173,7 +195,7 @@
   <section id="companies" class="companies">
     <div class="wrap">
       <p class="eyebrow" data-rev>The atlas</p>
-      <h2 class="display" data-rev>Hang the numbers<br>on the wall.</h2>
+      <h2 class="display" data-rev>Explore the coverage<br>universe.</h2>
       <div class="cards" id="cards"></div>
     </div>
   </section>
