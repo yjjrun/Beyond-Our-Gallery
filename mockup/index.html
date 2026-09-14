@@ -3,152 +3,208 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beyond Our Gallery — Landing Concept</title>
-<meta name="description" content="A concept landing page for Beyond Our Gallery: a gallery visit that turns into a research platform.">
+<title>Beyond Our Gallery — See the whole picture</title>
+<meta name="description" content="Independent research on under-covered SGX art, media and attractions companies. The art is visible. The economics rarely is.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="../assets/bog-mark.svg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- museum floor route -->
-<div class="route" aria-hidden="true"><i id="routeFill"></i></div>
+<div class="progress" aria-hidden="true"><i id="progressFill"></i></div>
 
-<!-- ============ ACT ONE: the pinned gallery sequence ============ -->
-<section id="stage" aria-label="Gallery introduction">
-  <div class="stage-pin">
+<!-- ───────────── left rail ───────────── -->
+<aside class="rail rail-l" aria-hidden="true">
+  <div class="rail-top">SGX<br>ART &amp; MEDIA<br><span>/ 01</span></div>
+  <div class="rail-mid"><span class="rail-dot"></span><span class="rail-word">SCROLL</span></div>
+  <div class="rail-bot">ART<br>FINANCE<br>A BRIGHTER<br>CANVAS</div>
+</aside>
 
-    <!-- depth layer 1: the wall -->
-    <div class="wall" id="wall">
-      <div class="wall-seam"></div>
-      <div class="wall-plaque">
-        <b>BEYOND OUR GALLERY</b>
-        <span>Room I · Singapore Exchange</span>
+<!-- ───────────── masthead ───────────── -->
+<header class="masthead">
+  <a class="logo" href="../index.html">
+    <img src="../assets/bog-mark.svg" alt="">
+    <span>BEYOND OUR <i>GALLERY</i></span>
+  </a>
+  <nav class="mast-nav">
+    <a href="#research">Research</a>
+    <a href="#companies">Companies</a>
+    <a href="#method">Method</a>
+    <a href="../index.html">Live site</a>
+  </nav>
+  <div class="mast-end">
+    <span class="mast-tag">IDEAS FOR A<br>RICHER TOMORROW</span>
+  </div>
+</header>
+
+<!-- ═══════════ ACT I — the gallery ═══════════ -->
+<section id="act1" aria-label="See the whole picture">
+  <div class="act1-pin">
+
+    <div class="room" id="room">
+      <div class="room-wall"></div>
+      <div class="room-light room-light-a"></div>
+      <div class="room-light room-light-b"></div>
+      <div class="room-floor"></div>
+      <div class="room-contact"></div>
+    </div>
+
+    <h1 class="mega" id="mega">
+      <span class="l1">SEE</span>
+      <span class="l2">THE</span>
+      <span class="l3">WHOLE</span>
+      <span class="l4">PICTURE<em>.</em></span>
+    </h1>
+
+    <!-- the painting: a two-sided CSS-3D canvas -->
+    <div class="stagewrap" id="stagewrap">
+      <div class="artwork" id="artwork">
+        <div class="rotor" id="rotor">
+          <figure class="face front">
+            <img id="artImg" src="assets/painting.jpg" alt="An impasto painting in deep green and pink">
+            <span class="glaze"></span>
+          </figure>
+          <div class="edge edge-right"></div>
+          <div class="edge edge-top"></div>
+          <figure class="face back">
+            <div class="stretcher"></div>
+            <div class="linen">
+              <p class="back-eyebrow">Beyond Our Gallery · Exhibit 01</p>
+              <h2 class="back-name">Kingsmen<br>Creatives</h2>
+              <div class="back-stats">
+                <div><span>BOG score</span><b data-count="59.3">0</b></div>
+                <div><span>FY25 revenue</span><b data-count="372.5" data-prefix="S$" data-suffix="m">S$0m</b></div>
+                <div><span>Gross margin</span><b data-count="24.7" data-suffix="%">0%</b></div>
+              </div>
+              <p class="back-line">From surface to structure.</p>
+            </div>
+          </figure>
+        </div>
+        <div class="art-shadow" id="artShadow"></div>
       </div>
     </div>
 
-    <!-- depth layer 2: the painting, rendered in WebGL -->
-    <canvas id="gl"></canvas>
-    <div class="gl-fallback" id="glFallback" hidden>
-      <div class="fallback-art"></div>
-    </div>
+    <!-- the visitor -->
+    <figure class="visitor" id="visitor">
+      <img id="visitorImg" src="assets/visitor.png" alt="A visitor looking at the painting">
+      <span class="visitor-shadow"></span>
+    </figure>
 
-    <!-- depth layer 3: the visitor -->
-    <div class="visitor" id="visitor">
-      <svg viewBox="0 0 120 340" aria-label="A visitor looking at the painting">
-        <defs>
-          <linearGradient id="figG" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#123f39"/>
-            <stop offset="1" stop-color="#07231f"/>
-          </linearGradient>
-        </defs>
-        <g fill="url(#figG)">
-          <!-- hair gathered low, head turned slightly to the painting -->
-          <path d="M62 6c-11 0-19 8-19 19 0 5 1 9 3 13-4 2-6 5-6 9 0 5 4 8 8 8 1 4 6 7 12 7 10 0 18-8 18-20V27c0-12-6-21-16-21z"/>
-          <!-- neck and shoulders -->
-          <path d="M56 60h12v10c8 2 14 6 17 13l-23 9-24-8c3-8 10-13 18-15z"/>
-          <!-- coat: a long, quiet silhouette -->
-          <path d="M62 92l24-9c6 4 9 11 10 20 3 22 4 46 3 66 0 5-3 8-8 8H33c-5 0-8-3-8-8-1-20 0-44 3-66 1-9 4-16 10-20z"/>
-          <!-- arm falling to the side, slight bend -->
-          <path d="M88 105c5 15 8 30 9 45 0 4-3 7-6 7s-6-3-6-7c-1-13-3-26-7-38z"/>
-          <!-- legs -->
-          <path d="M50 177h9l-2 89c0 6-3 9-7 9s-7-3-7-9z"/>
-          <path d="M66 177h9l7 89c0 6-3 9-7 9s-7-3-7-9z"/>
-          <!-- shoes -->
-          <path d="M41 268h16v8H39c-3 0-4-3-2-5z"/>
-          <path d="M68 268h16l3 3c2 2 1 5-2 5H69z"/>
-        </g>
-      </svg>
-      <div class="visitor-shadow"></div>
-    </div>
+    <!-- right rail -->
+    <aside class="rail rail-r" id="railR" aria-hidden="true">
+      <div class="rail-list"><span>ART</span><span>MEDIA</span><span>PEOPLE</span><span>CAPITAL</span><span>OPPORTUNITY</span></div>
+      <div class="rail-note">SAME<br>MARKET.<br>A DEEPER<br>VIEW.</div>
+    </aside>
 
-    <!-- opening titles -->
-    <div class="opening" id="opening">
-      <p class="eyebrow">Beyond Our Gallery</p>
-      <h1>Every company<br><span>is a composition.</span></h1>
-      <p class="lede">Singapore's art, media and attractions businesses, read the way you would read a painting — then priced the way you would price an asset.</p>
-      <div class="scroll-cue"><span>Scroll</span><i></i></div>
-    </div>
-
-    <!-- act four: the data surfacing on the painting's reverse -->
-    <div class="hud" id="hud" aria-hidden="true">
-      <div class="hud-row">
-        <div class="hud-stat"><b data-count="372.5" data-prefix="S$" data-suffix="m">S$0m</b><span>FY2025 revenue</span></div>
-        <div class="hud-stat"><b data-count="24.7" data-suffix="%">0%</b><span>Gross margin</span></div>
-        <div class="hud-stat"><b data-count="79.3" data-prefix="S$" data-suffix="m">S$0m</b><span>Net cash</span></div>
-      </div>
-      <div class="hud-score">
-        <svg viewBox="0 0 120 120" class="hud-ring">
-          <circle class="ring-bg" cx="60" cy="60" r="52"/>
-          <circle class="ring-fg" id="hudRing" cx="60" cy="60" r="52"/>
-        </svg>
-        <div class="hud-score-v"><b data-count="59.3">0</b><span>Research score</span></div>
-      </div>
+    <div class="hero-claim" id="heroClaim">
+      <p>The art is visible.<br>The economics rarely is.</p>
+      <a class="claim-link" href="#research">Discover what sits behind it
+        <svg viewBox="0 0 20 12" aria-hidden="true"><path d="M0 6h17M13 1l5 5-5 5"/></svg>
+      </a>
     </div>
 
   </div>
 </section>
 
-<!-- ============ ACT TWO: the platform ============ -->
-<main id="site">
+<!-- ═══════════ ACT II — the research ═══════════ -->
+<main id="platform">
 
-  <header class="site-head">
-    <a class="brand" href="../index.html">
-      <img src="../assets/bog-mark.svg" alt="">
-      <span><b>Beyond Our <i>Gallery</i></b><small>SGX ART &amp; MEDIA RESEARCH</small></span>
-    </a>
-    <nav>
-      <a href="#atlas">The Atlas</a>
-      <a href="#method">Method</a>
-      <a href="../index.html">Live site</a>
-    </nav>
-  </header>
-
-  <section class="intro reveal">
-    <p class="eyebrow">The collection</p>
-    <h2>Six companies. Four sectors.<br>One way of looking.</h2>
-    <p class="lede">We score business quality out of one hundred — financial strength, market position, growth and resilience — and publish the working behind every number.</p>
-  </section>
-
-  <section id="atlas" aria-labelledby="atlas-h">
-    <div class="atlas-head reveal">
+  <section id="research" class="research">
+    <div class="wrap res-head">
       <div>
-        <p class="eyebrow">The atlas</p>
-        <h2 id="atlas-h">Hang the numbers on the wall</h2>
+        <p class="eyebrow" data-rev>Our research</p>
+        <h2 class="display" data-rev>Companies worth<br>a closer look.</h2>
       </div>
-      <div class="viewtoggle" role="tablist" aria-label="View mode">
-        <button class="vt is-on" data-view="gallery" role="tab" aria-selected="true">Gallery view</button>
-        <button class="vt" data-view="analyst" role="tab" aria-selected="false">Analyst view</button>
-        <i class="vt-pill" aria-hidden="true"></i>
+      <div class="res-intro" data-rev>
+        <p>Independent research on under-covered SGX art, media and attractions companies. Deeper analysis, broader context, a more complete picture.</p>
+        <span class="res-side">SMALL STORIES<br>BIG POTENTIAL</span>
       </div>
     </div>
 
-    <div class="cards" id="cards"></div>
-  </section>
-
-  <section id="method" class="method" aria-labelledby="method-h">
-    <div class="reveal">
-      <p class="eyebrow">The method</p>
-      <h2 id="method-h">A hundred points, and the working shown</h2>
-      <p class="lede">Click a category to open the components beneath it. Every weight is fixed before a company is scored.</p>
+    <div class="wrap feature" data-rev>
+      <div class="feature-no">01</div>
+      <div class="feature-body">
+        <p class="feature-tk">Kingsmen Creatives</p>
+        <h3>Experiences, engineered.</h3>
+        <p class="feature-copy">Asia's leading creative solutions group, transforming spaces, brands and experiences across exhibitions, retail and thematic environments.</p>
+        <a class="claim-link dark" href="../kingsmen-creatives.html">Read our full research
+          <svg viewBox="0 0 20 12" aria-hidden="true"><path d="M0 6h17M13 1l5 5-5 5"/></svg>
+        </a>
+      </div>
+      <div class="feature-data">
+        <div class="donut-row">
+          <svg class="donut" viewBox="0 0 120 120" aria-label="BOG score 59.3">
+            <circle class="d-bg" cx="60" cy="60" r="50"/>
+            <circle class="d-fg" cx="60" cy="60" r="50" data-score="59.3"/>
+          </svg>
+          <div class="donut-v"><span>BOG score</span><b data-count="59.3">0</b></div>
+        </div>
+        <figure class="mini-chart">
+          <figcaption>Revenue (S$m) <em>+8.1% CAGR</em></figcaption>
+          <svg viewBox="0 0 320 110" preserveAspectRatio="none" class="spark">
+            <path class="sp-area" d=""></path>
+            <path class="sp-line" d=""></path>
+          </svg>
+          <div class="chart-x"><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span></div>
+        </figure>
+      </div>
     </div>
-    <div class="cats" id="cats"></div>
+
+    <div class="wrap rows">
+      <a class="row" href="../straco-corporation.html" data-rev>
+        <span class="row-no">02</span>
+        <span class="row-name">Straco Corporation<em>Scarce locations. Patient capital.</em></span>
+        <span class="row-score" data-count="67.3">0</span>
+        <span class="row-thumb"><img src="../assets/straco-flyer-skyline.webp" alt="" loading="lazy"></span>
+        <svg class="row-arrow" viewBox="0 0 20 12" aria-hidden="true"><path d="M0 6h17M13 1l5 5-5 5"/></svg>
+      </a>
+      <a class="row" href="../index.html#company-gallery" data-rev>
+        <span class="row-no">03</span>
+        <span class="row-name">mm2 Asia<em>Stories for a wider tomorrow.</em></span>
+        <span class="row-score" data-count="68">0</span>
+        <span class="row-thumb"><img src="../assets/rd-bicentennial.jpg" alt="" loading="lazy"></span>
+        <svg class="row-arrow" viewBox="0 0 20 12" aria-hidden="true"><path d="M0 6h17M13 1l5 5-5 5"/></svg>
+      </a>
+    </div>
   </section>
 
-  <section class="closing reveal">
-    <h2>See beyond <span>the gallery.</span></h2>
-    <a class="cta" href="../index.html">Enter the live site <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4"/></svg></a>
-    <p class="fine">Concept mockup · Beyond Our Gallery · research, not investment advice.</p>
+  <section id="companies" class="companies">
+    <div class="wrap">
+      <p class="eyebrow" data-rev>The atlas</p>
+      <h2 class="display" data-rev>Hang the numbers<br>on the wall.</h2>
+      <div class="cards" id="cards"></div>
+    </div>
+  </section>
+
+  <section id="method" class="method">
+    <div class="wrap">
+      <p class="eyebrow" data-rev>The method</p>
+      <h2 class="display" data-rev>A hundred points,<br>and the working shown.</h2>
+      <div class="cats" id="cats"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ white → green closing panel ═══════ -->
+  <section id="closing" class="closing">
+    <div class="closing-veil" id="closingVeil"></div>
+    <div class="wrap closing-inner">
+      <h2 class="closing-h" id="closingH">See beyond <em>the gallery.</em></h2>
+      <p class="closing-p">Same companies. Different perspective.</p>
+      <a class="cta" href="../index.html">Enter the live site
+        <svg viewBox="0 0 20 12" aria-hidden="true"><path d="M0 6h17M13 1l5 5-5 5"/></svg>
+      </a>
+      <p class="closing-fine">Beyond Our Gallery · SGX art &amp; media research · Research, not investment advice.</p>
+    </div>
   </section>
 </main>
 
 <div class="tooltip" id="tip" role="status" aria-live="polite"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="paint.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
