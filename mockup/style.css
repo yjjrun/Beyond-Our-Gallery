@@ -181,7 +181,10 @@ button{font:inherit;cursor:pointer}
 .evidence-strip b{display:block;font-family:var(--display);font-size:clamp(18px,1.65vw,25px);font-weight:600;color:#3f321f}
 
 /* the visitor */
-.visitor{position:absolute;right:8.5%;bottom:18%;height:55vh;z-index:6;will-change:transform}
+/* an explicit aspect-ratio is required: an auto-width figure holding
+   img{max-width:100%} is a circular constraint and mis-sizes her */
+.visitor{position:absolute;right:8.5%;bottom:18%;height:min(55vh,520px);
+  aspect-ratio:368/1280;z-index:6;will-change:transform}
 .visitor::before{
   content:"";position:absolute;inset:12% 10% 0 4%;
   background:linear-gradient(160deg,rgba(198,101,140,.32),rgba(6,43,36,.16));
@@ -189,7 +192,7 @@ button{font:inherit;cursor:pointer}
   z-index:-1;
 }
 .visitor img{
-  height:100%;width:auto;object-fit:contain;
+  height:100%;width:100%;max-width:none;object-fit:contain;
   filter:grayscale(1) contrast(1.62) brightness(.72) sepia(.26) hue-rotate(118deg) drop-shadow(0 26px 30px rgba(30,22,20,.24));
   opacity:.9;
   mix-blend-mode:multiply;
