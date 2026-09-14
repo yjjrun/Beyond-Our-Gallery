@@ -14,7 +14,7 @@ By Jiarun Yang, 2026 · Live at [beyondourgallery.com](https://beyondourgallery.
 
 ## Stack
 
-The root homepage source lives in `site/` and uses Next.js, Tailwind CSS, React Three Fiber, GSAP ScrollTrigger and Framer Motion. GitHub Pages serves the static export from the repository root alongside the existing research pages.
+The immersive mockup source lives in `site/` and uses Next.js, Tailwind CSS, React Three Fiber, GSAP ScrollTrigger and Framer Motion. GitHub Pages serves its static export from `/mockup`, alongside the original homepage and existing research pages.
 
 ```bash
 cd site
@@ -23,7 +23,7 @@ pnpm dev
 pnpm build:pages
 ```
 
-The production export keeps `.nojekyll`, `CNAME`, the existing `assets/` directory and all standalone analysis pages intact.
+The production export replaces only the `mockup/` directory. It leaves the root homepage, `.nojekyll`, `CNAME`, the existing `assets/` directory and all standalone analysis pages intact.
 
 ## Disclaimer
 

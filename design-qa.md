@@ -1,12 +1,12 @@
 **Findings**
 
-- No actionable P0/P1/P2 findings remain for the rebuilt root homepage.
+- No actionable P0/P1/P2 findings remain for the rebuilt `/mockup` experience.
 - [P3] React Three Fiber emits a Three.js `Clock` deprecation warning from its internal render loop. It does not affect visuals, input, animation timing, or the static export; there are no browser console errors.
 
 **Source And Capture**
 
-- Source visual truth: `/Users/yjr/Downloads/ChatGPT Image Sep 14, 2026, 03_44_59 PM.png` (1488 x 1058) for the exhibit/chart art direction, `/Users/yjr/Documents/Beyond Our Gallery/mockup/assets/painting.jpg` (1254 x 1254), and `/Users/yjr/Documents/Beyond Our Gallery/mockup/assets/visitor-half.png` (1024 x 1536).
-- Browser-rendered implementation: `http://localhost:4173/`.
+- Source visual truth: `/Users/yjr/Downloads/ChatGPT Image Sep 14, 2026, 03_44_59 PM.png` (1488 x 1058) for the exhibit/chart art direction, `/Users/yjr/Documents/Beyond Our Gallery/site/public/media/painting.jpg` (1254 x 1254), and `/Users/yjr/Documents/Beyond Our Gallery/site/public/media/visitor-half.png` (1024 x 1536).
+- Browser-rendered implementation: `http://localhost:4190/mockup/`.
 - Desktop captures: `/private/tmp/bog-desktop-frame.png`, `/private/tmp/bog-rotation-frame.png`, and `/private/tmp/bog-evidence-frame.png` at 1265 x 712 CSS pixels and 1265 x 712 output pixels, device density 1.
 - Mobile capture: `/private/tmp/bog-mobile-frame.png` at a 390 x 844 iframe viewport and 391 x 844 cropped output pixels, device density 1. The one-pixel width difference is the normalized iframe edge.
 - Full comparison board: `/private/tmp/bog-design-comparison.png`, with the source and fully drawn financial reveal in one image.

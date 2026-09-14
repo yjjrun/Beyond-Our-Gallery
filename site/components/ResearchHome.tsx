@@ -214,7 +214,7 @@ export function SiteHeader({ visible }: { visible: boolean }) {
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
     >
       <a className="brand" href="#home" aria-label="Beyond Our Gallery home">
-        <Image src="/media/bog-logo-lockup.png" alt="Beyond Our Gallery" width={180} height={60} priority />
+        <Image src="/mockup/media/bog-logo-lockup.png" alt="Beyond Our Gallery" width={180} height={60} priority />
       </a>
       <nav className="desktop-nav" aria-label="Primary navigation">
         <a href="#company-gallery">Companies</a>
@@ -290,7 +290,7 @@ export function ResearchHome() {
           </div>
           <div className="featured-grid">
             <motion.div className="featured-image" initial={{ clipPath: "inset(0 100% 0 0)" }} whileInView={{ clipPath: "inset(0 0% 0 0)" }} viewport={{ once: true }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}>
-              <Image src="/media/strategy-visitors.jpg" alt="Visitors inside an immersive Kingsmen exhibition environment" fill sizes="(max-width: 800px) 100vw, 65vw" />
+              <Image src="/mockup/media/strategy-visitors.jpg" alt="Visitors inside an immersive Kingsmen exhibition environment" fill sizes="(max-width: 800px) 100vw, 65vw" />
               <div className="image-annotation"><span>Project format</span><strong>Immersive civic exhibition</strong><span>Economic relevance</span><strong>High-value design and build</strong></div>
             </motion.div>
             <div className="featured-analysis">
@@ -376,9 +376,9 @@ export function ResearchHome() {
           <div className="section-heading-row"><div><p className="eyebrow">Our insights</p><h2 id="latest-heading">Latest research</h2></div><a className="text-link" href="#research">View all research <ArrowRight size={16} /></a></div>
           <div className="research-list">
             {[
-              ["Sector deep dive", "The next chapter for Singapore's live events", "/media/eta-expo-pavilion.jpg", "11 Sep 2026"],
-              ["Company update", "mm2 Asia: a broader stage ahead", "/media/rws-concept-rendering.jpg", "04 Sep 2026"],
-              ["Thematic insight", "Why the creative economy deserves a closer look", "/media/rd-bicentennial.jpg", "28 Aug 2026"],
+              ["Sector deep dive", "The next chapter for Singapore's live events", "/mockup/media/eta-expo-pavilion.jpg", "11 Sep 2026"],
+              ["Company update", "mm2 Asia: a broader stage ahead", "/mockup/media/rws-concept-rendering.jpg", "04 Sep 2026"],
+              ["Thematic insight", "Why the creative economy deserves a closer look", "/mockup/media/rd-bicentennial.jpg", "28 Aug 2026"],
             ].map(([type, title, image, date], index) => (
               <motion.article key={title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }}>
                 <div className="research-image"><Image src={image} alt="" fill sizes="(max-width: 760px) 100vw, 33vw" /></div>
@@ -403,7 +403,7 @@ export function ResearchHome() {
 
       <footer className="site-footer">
         <div className="section-shell footer-top">
-          <div><Image src="/media/bog-logo-lockup.png" alt="Beyond Our Gallery" width={218} height={73} /><p>SGX art & media research</p></div>
+          <div><Image src="/mockup/media/bog-logo-lockup.png" alt="Beyond Our Gallery" width={218} height={73} /><p>SGX art & media research</p></div>
           <nav aria-label="Footer navigation"><a href="#standards">About</a><a href="mailto:hello@beyondourgallery.com">Contact</a><a href="/methodology.html">Methodology</a><a href="#privacy">Privacy policy</a><a href="#terms">Terms</a></nav>
         </div>
         <div className="section-shell footer-bottom"><p>© 2026 Beyond Our Gallery</p><p>Research is for informational purposes only and is not investment advice. Markets involve risk, including loss of capital.</p></div>

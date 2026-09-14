@@ -119,8 +119,8 @@ function GalleryRoom({ progress }: SceneProps) {
   const particles = useRef<THREE.Points>(null);
   const pinkLight = useRef<THREE.PointLight>(null);
   const { camera, viewport, gl } = useThree();
-  const paintingTexture = useTexture("/media/painting.jpg");
-  const visitorSource = useTexture("/media/visitor-half.png");
+  const paintingTexture = useTexture("/mockup/media/painting.jpg");
+  const visitorSource = useTexture("/mockup/media/visitor-half.png");
   const financialTexture = useMemo(() => createFinancialTexture(), []);
   const lastChartReveal = useRef(-1);
   const visitorTexture = useMemo(() => {
