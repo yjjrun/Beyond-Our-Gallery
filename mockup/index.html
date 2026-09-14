@@ -9,21 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="../assets/bog-mark.svg">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=20260914e">
 </head>
 <body>
 
-<div class="progress" aria-hidden="true"><i id="progressFill"></i></div>
-
-<!-- ───────────── left rail ───────────── -->
-<aside class="rail rail-l" aria-hidden="true">
-  <div class="rail-top">SGX<br>ART &amp; MEDIA<br><span>/ 01</span></div>
-  <div class="rail-mid"><span class="rail-dot"></span><span class="rail-word">SCROLL</span></div>
-  <div class="rail-bot">ART<br>FINANCE<br>A BRIGHTER<br>CANVAS</div>
-</aside>
-
 <!-- ───────────── masthead ───────────── -->
-<header class="masthead">
+<header class="masthead" id="masthead">
   <a class="logo" href="../index.html">
     <img src="../assets/bog-mark.svg" alt="">
     <span>BEYOND OUR <i>GALLERY</i></span>
@@ -40,98 +31,59 @@
 <section id="act1" aria-label="See the whole picture">
   <div class="act1-pin">
 
-    <div class="room" id="room">
-      <div class="room-wall"></div>
-      <div class="room-light room-light-a"></div>
-      <div class="room-light room-light-b"></div>
-      <div class="room-floor"></div>
-      <div class="room-contact"></div>
+    <div class="room" id="room" aria-hidden="true">
+      <img class="room-photo" src="assets/gallery-room.png" alt="">
+      <div class="room-shade"></div>
     </div>
+    <div class="green-wash" id="greenWash" aria-hidden="true"></div>
 
     <h1 class="mega" id="mega">
-      <span class="l1">RESEARCH</span>
-      <span class="l2">THE</span>
-      <span class="l3">OVERLOOKED</span>
-      <span class="l4">COMPANIES<em>.</em></span>
+      <span>See the</span>
+      <span>whole</span>
+      <span class="accent">picture<em>.</em></span>
     </h1>
 
-    <!-- the painting: a front-facing 2.5D canvas that resolves into evidence -->
+    <!-- The supplied film carries the canvas from art to evidence. -->
     <div class="stagewrap" id="stagewrap">
-      <div class="artwork" id="artwork">
-        <div class="rotor" id="rotor">
-          <figure class="face front">
-            <img id="artImg" src="assets/painting.jpg" alt="An impasto painting in deep green and pink">
-            <span class="glaze"></span>
-          </figure>
-          <div class="edge edge-right"></div>
-          <div class="edge edge-top"></div>
-          <figure class="face back">
-            <div class="linen">
-              <p class="back-eyebrow">Exhibit 01 · Kingsmen Creatives</p>
-              <div class="back-grid">
-                <div>
-                  <h2 class="back-name">When does the artwork become a business?</h2>
-                  <p class="back-thesis">FY2025 revenue softened, but gross margin reached a five-year high. The research question is margin durability, not spectacle.</p>
-                </div>
-                <div class="back-stats">
-                  <div><span>BOG score</span><b data-count="59.3">0</b></div>
-                  <div><span>Revenue</span><b data-count="372.5" data-prefix="S$" data-suffix="m">S$0m</b></div>
-                  <div><span>P/E</span><b data-count="8.0" data-prefix="~" data-suffix="×">~0×</b></div>
-                </div>
-              </div>
-              <figure class="hero-chart" aria-label="Kingsmen revenue and gross margin from FY2021 to FY2025">
-                <figcaption>Revenue and gross margin, FY2021-FY2025</figcaption>
-                <svg viewBox="0 0 460 168" role="img">
-                  <g class="gridlines">
-                    <path d="M42 22H432M42 72H432M42 122H432"/>
-                  </g>
-                  <g class="bars">
-                    <rect x="68" y="76" width="34" height="58" rx="4"/>
-                    <rect x="142" y="60" width="34" height="74" rx="4"/>
-                    <rect x="216" y="50" width="34" height="84" rx="4"/>
-                    <rect x="290" y="42" width="34" height="92" rx="4"/>
-                    <rect x="364" y="48" width="34" height="86" rx="4"/>
-                  </g>
-                  <path class="margin-line" d="M85 94L159 97L233 94L307 77L381 63"/>
-                  <g class="dots">
-                    <circle cx="85" cy="94" r="4"/><circle cx="159" cy="97" r="4"/><circle cx="233" cy="94" r="4"/><circle cx="307" cy="77" r="4"/><circle cx="381" cy="63" r="4"/>
-                  </g>
-                  <g class="x">
-                    <text x="85" y="156">21</text><text x="159" y="156">22</text><text x="233" y="156">23</text><text x="307" y="156">24</text><text x="381" y="156">25</text>
-                  </g>
-                  <text class="callout" x="322" y="40">24.7% margin</text>
-                </svg>
-              </figure>
-              <div class="evidence-strip">
-                <span><b>S$79.3m</b> net cash</span>
-                <span><b>24.7%</b> gross margin</span>
-                <span><b>~S$109m</b> market cap</span>
-              </div>
-            </div>
-          </figure>
-        </div>
-        <div class="art-shadow" id="artShadow"></div>
-      </div>
+      <video id="artVideo" class="art-video" muted playsinline preload="auto" poster="assets/painting.jpg" aria-label="A painted canvas rotates to reveal research evidence on its reverse">
+        <source src="assets/canvas-rotation.mp4" type="video/mp4">
+      </video>
     </div>
 
-    <!-- the visitor -->
+    <!-- The reference figure is deliberately cropped to an upper-body silhouette. -->
     <figure class="visitor" id="visitor">
-      <img id="visitorImg" src="assets/visitor.png" alt="A visitor looking at the painting">
-      <span class="visitor-shadow"></span>
+      <img id="visitorImg" src="assets/visitor-half.png" alt="A woman seen from behind, looking at the artwork">
     </figure>
 
-    <div class="hero-claim" id="heroClaim">
-      <p>Gallery language, investment evidence.</p>
-      <a class="claim-link" href="#research">Jump to the research
-        <svg viewBox="0 0 20 12" aria-hidden="true"><path d="M0 6h17M13 1l5 5-5 5"/></svg>
-      </a>
-    </div>
+    <button class="scroll-cue" id="scrollCue" type="button" aria-label="Scroll to the Beyond Our Gallery homepage">
+      <span>Scroll</span>
+      <i aria-hidden="true"><b id="scrollFill"></b></i>
+    </button>
 
   </div>
 </section>
 
 <!-- ═══════════ ACT II — the research ═══════════ -->
 <main id="platform">
+
+  <section class="home-panel" id="homePanel" aria-labelledby="homePanelTitle">
+    <div class="wrap home-panel-grid">
+      <div class="home-panel-copy">
+        <p class="home-kicker">Beyond Our Gallery · SGX research</p>
+        <h2 id="homePanelTitle">See beyond<br><em>the gallery.</em></h2>
+        <p>Research on Singapore's overlooked art, media, attractions and live entertainment companies.</p>
+        <div class="home-actions">
+          <a class="home-button" href="#companies">Explore companies</a>
+          <a class="home-link" href="../methodology.html">View methodology</a>
+        </div>
+      </div>
+      <div class="home-panel-art" aria-hidden="true">
+        <figure class="portal-image portal-main"><img src="../assets/strategy-visitors.jpg" alt=""></figure>
+        <figure class="portal-image portal-top"><img src="../assets/straco-flyer-skyline.webp" alt=""></figure>
+        <figure class="portal-image portal-bottom"><img src="../assets/rd-bicentennial.jpg" alt=""></figure>
+      </div>
+    </div>
+  </section>
 
   <section id="research" class="research">
     <div class="wrap res-head">
@@ -226,7 +178,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="paint.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=20260914e"></script>
 </body>
 </html>

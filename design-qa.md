@@ -1,47 +1,36 @@
 **Findings**
-- No actionable P0/P1/P2 findings remain for the Kingsmen analysis-page update.
 
-**Implementation Checklist**
-- Navigation simplified to five primary links, a full Sections menu, a Back Home control, and a reading-progress indicator.
-- Desktop and mobile checks show no horizontal page overflow.
-- Expanded sections no longer produce S$0.0m, 0.0%, or 0.0x values; expanded metrics resolve immediately to their final values.
-- Major visual sections now use exhibit-style figure labels, framed chart canvases, curator notes, and source/date captions.
-- Risk matrix and bear/base/bull outlook selector were tested as interactive controls.
-- Persistent research takeaway rail updates from section metadata on desktop and is hidden on narrower screens.
+- No actionable P0/P1/P2 findings remain for the `/mockup` opening sequence.
+- [P3] The supplied gallery-room image is 326 x 155 pixels, so it looks deliberately soft when enlarged to a desktop background. The composition and crop match the source; a larger original would improve sharpness without changing the design.
 
-**Reference And Evidence**
-- Source visual direction: `/Users/yjr/Downloads/ChatGPT Image Sep 14, 2026, 03_44_59 PM.png`.
-- Desktop implementation screenshot: `/private/tmp/kingsmen-desktop-revchart.png`.
-- Desktop section screenshot: `/private/tmp/kingsmen-desktop-financials.png`.
-- Mobile screenshots: `/private/tmp/kingsmen-mobile-top.png`, `/private/tmp/kingsmen-mobile-top2.png`, `/private/tmp/kingsmen-mobile-financials.png`.
+**Source And Capture**
+
+- Source visual truth: `/var/folders/1m/8lwr5ftd27n79d4bt9shmrk80000gn/T/codex-clipboard-b5ed67f7-43f4-4a22-9189-8423f61347be.png` (326 x 155), `/var/folders/1m/8lwr5ftd27n79d4bt9shmrk80000gn/T/codex-clipboard-02703e4d-f49c-495e-992b-3dbd2886d672.png` (1024 x 1536), and `/Users/yjr/beyondourgallery/assets/beyond-our-gallery-canvas-rotation.mp4` (six-second source film).
+- Implementation captures: `/private/tmp/bog-qa-top.png`, `/private/tmp/bog-qa-turn.png`, and `/private/tmp/bog-qa-panel.png`.
+- Full comparison board: `/private/tmp/bog-design-qa-comparison.jpg`.
+- Viewport and density: 1265 x 712 CSS pixels, captured at 1265 x 712 pixels in the in-app browser. No density normalization was needed.
+- States: opening frame, edge-on depth swap, and settled green homepage panel.
+
+**Fidelity Review**
+
+- Fonts and typography: Cormorant Garamond and Manrope preserve the editorial serif/sans pairing. “See the whole picture.” remains readable in the opening frame and is intentionally masked only after the artwork comes forward.
+- Spacing and layout: the title overlaps the canvas, the visitor is cropped at the waist, the bottom line stays clear of the artwork, and the following green panel enters before the pinned sequence ends.
+- Colors and tokens: the white gallery shifts into the established deep green, pink, and plum system. Text contrast is strong in both the white and green states.
+- Image quality and assets: the supplied room, transparent visitor, and rotation video are used directly. The source film provides the canvas edge and chart-backed reverse rather than a recreated CSS object.
+- Copy and content: the previous four-line research headline, left rail, top progress bar, and extra opening slogans are removed. The requested headline is the only opening message.
+
+**Comparison History**
+
+- Pass 1 found a blank green handoff after the canvas disappeared. Fix: overlap the green homepage panel with the final 68vh of Act I so its content rises into the transition. Post-fix evidence: `/private/tmp/bog-qa-panel.png`.
+- Pass 1 found the title and artwork adjacent rather than layered. Fix: widen and move the film left, then swap its z-index at 28% scroll. Post-fix evidence: `/private/tmp/bog-qa-top.png` and `/private/tmp/bog-qa-turn.png`.
+- Pass 1 found the bottom scroll control needed a deterministic destination. Fix: use a real button with an explicit smooth-scroll target. Browser activation landed on `#homePanel` and exposed the homepage actions.
 
 **Checks Run**
-- Browser console errors: none.
-- Desktop overflow: `scrollWidth` equals viewport width.
-- Mobile overflow at 390 x 844 test viewport: none.
-- Expanded-section values sampled after opening all details: correct final values, no zero placeholders.
-- Interaction checks: risk matrix updates trigger/mitigation detail; outlook selector updates revenue, illustrative PBT, and research score.
 
-**Residual Risk**
-- The analysis still uses inline SVG charts, so future data changes should update the chart data and the supporting tables together.
-- The side rail is intentionally desktop-only to avoid crowding mobile reading.
+- Browser console errors: none.
+- Primary interaction: bottom gradient scroll button reaches the green homepage panel.
+- Scroll sequence: visitor exit, title/artwork depth swap, video reverse reveal, white-to-green handoff, and header slide-in all observed.
+- Responsive rules remain in place for widths below 900px and reduced-motion users; this pass used the desktop visual target.
+- JavaScript syntax and `git diff --check`: passed.
 
 final result: passed
-
-**Mockup Opening Update**
-- Rebuilt `/mockup` Act I from a 540vh sequence to a 190vh desktop / 180vh mobile sequence, preserving the stronger research, company-card, method, and closing sections below.
-- Removed the right rail, masthead slogan, hero slogan overload, and edge-on 180-degree card rotation.
-- Replaced the reverse-canvas reveal with a front-facing evidence placard: thesis, BOG score, revenue, P/E, revenue bars, gross-margin line, and three supporting metrics.
-- Mobile uses a compact mark-only header, three primary links, and a taller evidence placard so the chart and stats are not clipped.
-
-**Mockup Scroll Storyboard**
-- 0-30%: one clear opening composition; visitor exits right; painting stays front-facing.
-- 30-58%: headline and claim leave; canvas makes only a shallow 2.5D turn and resolves into evidence.
-- 58-78%: thesis, score, financial metrics, and chart animate in.
-- 78-100%: evidence remains visible while the research section enters the bottom of the viewport.
-
-**Mockup Checks Run**
-- Desktop viewport 1363 x 936: opening height 1.9 screens, no horizontal overflow, no console errors.
-- Desktop handoff frame: research section visible at the bottom; no blank transition viewport.
-- Mobile viewport 390 x 844: opening height 1.8 screens, no horizontal overflow, no console errors.
-- Mobile header and evidence placard visually checked with saved screenshots.

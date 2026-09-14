@@ -12,18 +12,6 @@
   var hasGSAP = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
   if (hasGSAP) gsap.registerPlugin(ScrollTrigger);
 
-  /* ---------- if no painting was supplied, generate one ---------- */
-  (function ensureArt() {
-    var img = document.getElementById('artImg');
-    if (!img) return;
-    img.addEventListener('error', function () {
-      if (!window.BOGPaint) return;
-      var made = BOGPaint.build(1200);
-      img.replaceWith(Object.assign(made.colour, { className: 'gen-art' }));
-      made.colour.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block';
-    });
-  })();
-
   /* ---------- count-ups ---------- */
   var counted = new WeakSet();
   function countUp(el) {
@@ -56,61 +44,51 @@
     var room = document.getElementById('room'),
         mega = document.getElementById('mega'),
         stagewrap = document.getElementById('stagewrap'),
-        rotor = document.getElementById('rotor'),
-        front = document.querySelector('.face.front'),
-        back = document.querySelector('.face.back'),
+        artVideo = document.getElementById('artVideo'),
         visitor = document.getElementById('visitor'),
-        claim = document.getElementById('heroClaim'),
-        shadow = document.getElementById('artShadow');
+        masthead = document.getElementById('masthead'),
+        greenWash = document.getElementById('greenWash'),
+        scrollCue = document.getElementById('scrollCue'),
+        scrollFill = document.getElementById('scrollFill');
 
-    gsap.set(rotor, { rotateY: 0, rotateX: 0, rotateZ: 0 });
     gsap.set(stagewrap, { xPercent: -50, yPercent: -50, scale: 1 });
-    gsap.set(front, { opacity: 1, scale: 1 });
-    gsap.set(back, { opacity: 0, scale: .985, y: 18 });
-    gsap.set('.hero-chart .bars rect', { transformOrigin: '50% 100%', scaleY: .12 });
-    gsap.set('.hero-chart .margin-line', { strokeDasharray: 520, strokeDashoffset: 520 });
-    gsap.set('.hero-chart .dots circle,.evidence-strip span,.back-stats div,.back-thesis', { opacity: 0, y: 10 });
+    gsap.set(masthead, { yPercent: -112 });
+    gsap.set(greenWash, { opacity: 0 });
+
+    var videoPlayhead = { progress: 0 };
+    function syncArtVideo() {
+      if (!artVideo || artVideo.readyState < 1) return;
+      var duration = Number.isFinite(artVideo.duration) ? artVideo.duration : 6;
+      artVideo.currentTime = Math.min(Math.max(0, duration - .04), videoPlayhead.progress * duration);
+    }
+    if (artVideo) {
+      artVideo.pause();
+      artVideo.addEventListener('loadedmetadata', syncArtVideo, { once: true });
+    }
 
     var tl = gsap.timeline({
-      scrollTrigger: { trigger: '#act1', start: 'top top', end: 'bottom bottom', scrub: .72 }
-    });
-
-    /* 0–30% · establish one hierarchy, then complete the visitor exit. */
-    tl.to(room,      { yPercent: -2.2, scale: 1.025, ease: 'none', duration: 30 }, 0)
-      .to(stagewrap, { yPercent: -52, xPercent: -51, ease: 'none', duration: 30 }, 0)
-      .to(visitor,   { xPercent: 168, yPercent: -5, opacity: 0, ease: 'power1.in', duration: 30 }, 0)
-      .to(claim,     { yPercent: -14, opacity: .82, ease: 'none', duration: 24 }, 0)
-      .to(mega,      { yPercent: -8, ease: 'none', duration: 24 }, 0);
-
-    /* 30–58% · a fast 2.5D turn, never lingering edge-on. */
-    tl.to(mega,      { opacity: 0, yPercent: -34, ease: 'power1.in', duration: 18 }, 24)
-      .to(claim,     { opacity: 0, yPercent: -30, ease: 'power1.in', duration: 14 }, 26)
-      .to(stagewrap, { scale: 1.1, xPercent: -55, yPercent: -52, ease: 'power1.inOut', duration: 28 }, 30)
-      .to(rotor,     { rotateY: -24, rotateX: 2, rotateZ: -.6, ease: 'power2.inOut', duration: 13 }, 30)
-      .to(rotor,     { rotateY: 0, rotateX: 0, rotateZ: 0, ease: 'power2.out', duration: 15 }, 43)
-      .to(front,     { opacity: 0, scale: .985, ease: 'power1.inOut', duration: 19 }, 34)
-      .to(back,      { opacity: 1, y: 0, scale: 1, ease: 'power1.out', duration: 21 }, 37)
-      .to(shadow,    { opacity: .28, scaleX: 1.08, ease: 'none', duration: 24 }, 34)
-      .to(room,      { opacity: .64, scale: 1.055, ease: 'none', duration: 28 }, 30);
-
-    /* 58–100% · useful evidence stays on screen until the research section arrives. */
-    tl.to('.back-stats div', { opacity: 1, y: 0, stagger: .04, ease: 'power1.out', duration: 9 }, 50)
-      .to('.back-thesis', { opacity: 1, y: 0, ease: 'power1.out', duration: 8 }, 52)
-      .to('.hero-chart .bars rect', { scaleY: 1, stagger: .035, ease: 'power2.out', duration: 14 }, 56)
-      .to('.hero-chart .margin-line', { strokeDashoffset: 0, ease: 'power1.out', duration: 16 }, 59)
-      .to('.hero-chart .dots circle', { opacity: 1, y: 0, stagger: .02, ease: 'power1.out', duration: 7 }, 63)
-      .to('.evidence-strip span', { opacity: 1, y: 0, stagger: .035, ease: 'power1.out', duration: 10 }, 68)
-      .to(stagewrap, { scale: 1.03, xPercent: -55, yPercent: -57, ease: 'none', duration: 28 }, 72)
-      .to(room,      { opacity: .38, ease: 'none', duration: 28 }, 72);
-
-    ScrollTrigger.create({
-      trigger: '#act1', start: 'top top', end: 'bottom bottom',
-      onUpdate: function (self) {
-        if (self.progress > .50) {
-          document.querySelectorAll('.linen [data-count]').forEach(countUp);
+      scrollTrigger: {
+        trigger: '#act1', start: 'top top', end: 'bottom bottom', scrub: .5,
+        onUpdate: function (self) {
+          stagewrap.style.zIndex = self.progress >= .28 ? '7' : '5';
+          if (scrollFill) scrollFill.style.transform = 'scaleX(' + Math.max(.08, self.progress).toFixed(3) + ')';
         }
       }
     });
+
+    /* The title owns the first frame; the canvas then crosses in front. */
+    tl.to(room, { scale: 1.045, yPercent: -1.5, ease: 'none', duration: 100 }, 0)
+      .to(mega, { yPercent: -6, xPercent: 1.5, ease: 'none', duration: 56 }, 0)
+      .to(visitor, { xPercent: 142, yPercent: -2, opacity: 0, ease: 'power1.in', duration: 28 }, 2)
+      .to(stagewrap, { scale: 1.12, xPercent: -50, yPercent: -51, ease: 'power1.inOut', duration: 52 }, 12)
+      .to(videoPlayhead, { progress: 1, ease: 'none', duration: 48, onUpdate: syncArtVideo }, 18)
+      .to(mega, { opacity: .92, ease: 'none', duration: 34 }, 18)
+      .to(mega, { opacity: 0, yPercent: -24, ease: 'power1.in', duration: 17 }, 55)
+      .to(stagewrap, { scale: .94, yPercent: -58, opacity: 0, ease: 'power1.inOut', duration: 23 }, 66)
+      .to(room, { opacity: 0, ease: 'none', duration: 24 }, 68)
+      .to(greenWash, { opacity: 1, ease: 'none', duration: 23 }, 67)
+      .to(scrollCue, { opacity: 0, y: 10, ease: 'power1.in', duration: 13 }, 73)
+      .to(masthead, { yPercent: 0, ease: 'power2.out', duration: 18 }, 79);
 
     /* ---------- closing wipe: white → green ---------- */
     /* Drive the wipe and the text colour from ONE progress value. A
@@ -136,14 +114,17 @@
     if (cl) cl.classList.add('lit');
   }
 
-  /* progress hairline */
-  var pf = document.getElementById('progressFill');
-  function progress() {
-    var max = document.documentElement.scrollHeight - innerHeight;
-    if (pf && max > 0) pf.style.width = (scrollY / max * 100) + '%';
+  var cueButton = document.getElementById('scrollCue');
+  if (cueButton) {
+    cueButton.addEventListener('click', function (event) {
+      var target = document.getElementById('homePanel');
+      if (!target) return;
+      event.preventDefault();
+      var top = target.getBoundingClientRect().top + window.scrollY - 66;
+      window.scrollTo({ top: top, behavior: REDUCE ? 'auto' : 'smooth' });
+      if (history.replaceState) history.replaceState(null, '', '#homePanel');
+    });
   }
-  addEventListener('scroll', progress, { passive: true });
-  progress();
 
   /* ============================================================
      ACT II — the platform
