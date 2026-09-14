@@ -1,23 +1,30 @@
 # Beyond Our Gallery
 
-A strategy and commercial review of **Kingsmen Creatives Ltd.** (SGX: 5MZ) — presented as a single-page analytics site.
+An editorial research gallery for overlooked SGX art, experience, attractions, media and live-events companies.
 
 By Jiarun Yang, 2026 · Live at [beyondourgallery.com](https://beyondourgallery.com)
 
-## What's inside
+## Experience
 
-- FY2021–25 financial performance (revenue, gross margin, PBT, EPS/DPS)
-- FY2025 segment economics for the four divisions (ETA, RCI, Research & Design, Experiential Marketing)
-- Earnings-quality bridge, cash-flow analysis and the S$236.5m "in-year conversion" order-book finding
-- FY2026 revenue scenarios including the S$80.8m Resorts World Sentosa award
-- Market position, valuation and the Pico Far East peer benchmark
-- Demand economics (derived demand, Veblen dynamics, distributed-lag model)
-- Porter's Five Forces, PESTLE, competitor capability matrix, risk register and proposed strategy
+- Scroll-directed museum opening with a physical 3D painting and financial reverse
+- Searchable company gallery with Gallery and Analyst views
+- Animated evidence charts, score rings and methodology details
+- Responsive layouts with reduced-motion support
+- Standalone Kingsmen Creatives, Straco Corporation and scoring-methodology pages
 
-## Tech
+## Stack
 
-A single self-contained `index.html` — no build step, no dependencies, hand-rolled inline SVG charts, automatic light/dark mode. Hosted on GitHub Pages with a custom domain (`CNAME`).
+The root homepage source lives in `site/` and uses Next.js, Tailwind CSS, React Three Fiber, GSAP ScrollTrigger and Framer Motion. GitHub Pages serves the static export from the repository root alongside the existing research pages.
+
+```bash
+cd site
+pnpm install
+pnpm dev
+pnpm build:pages
+```
+
+The production export keeps `.nojekyll`, `CNAME`, the existing `assets/` directory and all standalone analysis pages intact.
 
 ## Disclaimer
 
-Independent analytical review based on public FY2025 disclosures. Not affiliated with Kingsmen Creatives Ltd. Not investment advice.
+Research is based on public disclosures, is not affiliated with covered companies and is not investment advice.
