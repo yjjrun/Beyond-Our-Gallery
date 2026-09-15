@@ -324,11 +324,11 @@ export function ResearchHome() {
           <div className="gallery-controls">
             <label className="gallery-search"><Search size={18} /><input value={query} onChange={(event) => setQuery(event.target.value)} type="search" placeholder="Search companies" aria-label="Search covered companies" /></label>
             <div className="sector-filters" aria-label="Filter by sector">
-              {sectors.map((item) => <button key={item} className={sector === item ? "active" : ""} onClick={() => setSector(item)}>{item}</button>)}
+              {sectors.map((item) => <button key={item} className={sector === item ? "active" : ""} aria-pressed={sector === item} onClick={() => setSector(item)}>{item}</button>)}
             </div>
             <div className="view-toggle" aria-label="Company display mode">
-              <button className={viewMode === "gallery" ? "active" : ""} onClick={() => setViewMode("gallery")} aria-label="Gallery view"><Grid2X2 size={16} />Gallery</button>
-              <button className={viewMode === "analyst" ? "active" : ""} onClick={() => setViewMode("analyst")} aria-label="Analyst view"><BarChart3 size={16} />Analyst</button>
+              <button className={viewMode === "gallery" ? "active" : ""} aria-pressed={viewMode === "gallery"} onClick={() => setViewMode("gallery")} aria-label="Gallery view"><Grid2X2 size={16} />Gallery</button>
+              <button className={viewMode === "analyst" ? "active" : ""} aria-pressed={viewMode === "analyst"} onClick={() => setViewMode("analyst")} aria-label="Analyst view"><BarChart3 size={16} />Analyst</button>
             </div>
           </div>
           <motion.div layout className={`company-grid ${viewMode}`}>

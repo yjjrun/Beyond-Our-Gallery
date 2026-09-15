@@ -174,7 +174,7 @@ function GalleryRoom({ progress }: SceneProps) {
     }
 
     if (visitor.current) {
-      const startX = mobile ? 1.08 : 3.15;
+      const startX = mobile ? 1.08 : 3.45;
       visitor.current.position.x = THREE.MathUtils.lerp(startX, mobile ? 5.2 : 7.4, exit);
       visitor.current.position.y = mobile ? -0.92 : -0.66;
       visitor.current.position.z = 1.35 + introduction * 0.3;
@@ -183,16 +183,17 @@ function GalleryRoom({ progress }: SceneProps) {
     }
 
     if (painting.current) {
-      painting.current.rotation.y = rotate * Math.PI;
+      painting.current.rotation.y = THREE.MathUtils.lerp(-0.075, Math.PI, rotate);
       painting.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.42) * 0.004 * (1 - rotate);
       const scale = 1 + exit * (mobile ? 0.08 : 0.24) + passThrough * 0.5;
       painting.current.scale.setScalar(scale);
-      painting.current.position.x = mobile ? THREE.MathUtils.lerp(-0.34, 0, exit) : THREE.MathUtils.lerp(0.58, 0, exit);
-      painting.current.position.y = mobile ? THREE.MathUtils.lerp(-0.48, 0, exit) : 0.05;
+      painting.current.position.x = mobile ? THREE.MathUtils.lerp(-0.24, 0, exit) : THREE.MathUtils.lerp(0.48, 0, exit);
+      painting.current.position.y = mobile ? THREE.MathUtils.lerp(-1.88, -0.08, exit) : 0.05;
     }
 
     camera.position.z = THREE.MathUtils.lerp(mobile ? 11.3 : 7.1, mobile ? 5.1 : 4.15, exit);
     camera.position.z = THREE.MathUtils.lerp(camera.position.z, 1.35, passThrough);
+    camera.position.x = THREE.MathUtils.lerp(-0.06, 0.12, passThrough);
     camera.position.y = THREE.MathUtils.lerp(0.05, 0, passThrough);
     camera.lookAt(0, 0, 0);
 
@@ -251,11 +252,25 @@ function GalleryRoom({ progress }: SceneProps) {
       <group ref={room}>
         <mesh position={[0, 0.1, -0.34]} receiveShadow>
           <planeGeometry args={[18, 10]} />
-          <meshStandardMaterial color="#f3efeb" roughness={0.82} />
+          <meshStandardMaterial color="#f7f4f0" roughness={0.86} />
+        </mesh>
+        <mesh position={[5.75, 0.1, -0.315]} receiveShadow>
+          <planeGeometry args={[3.45, 10]} />
+          <meshStandardMaterial color="#052f2b" roughness={0.72} />
+        </mesh>
+        {[-3.4, 3.55].map((x) => (
+          <mesh key={x} position={[x, 0.1, -0.285]}>
+            <boxGeometry args={[0.012, 10, 0.012]} />
+            <meshStandardMaterial color="#d8d3ce" roughness={0.8} />
+          </mesh>
+        ))}
+        <mesh position={[0, 3.13, -0.27]}>
+          <boxGeometry args={[18, 0.012, 0.012]} />
+          <meshStandardMaterial color="#ded9d4" roughness={0.8} />
         </mesh>
         <mesh position={[0, -2.38, 2.4]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
           <planeGeometry args={[18, 14]} />
-          <meshPhysicalMaterial color="#dad6d1" roughness={0.28} metalness={0.06} clearcoat={0.22} />
+          <meshPhysicalMaterial color="#e7e3df" roughness={0.22} metalness={0.04} clearcoat={0.32} />
         </mesh>
         <mesh position={[-6.2, 0, 2.2]} rotation={[0, Math.PI / 2, 0]} receiveShadow>
           <planeGeometry args={[9, 9]} />
@@ -266,7 +281,7 @@ function GalleryRoom({ progress }: SceneProps) {
           <meshStandardMaterial color="#eeeae6" roughness={0.85} />
         </mesh>
 
-        <group ref={painting} position={[0.58, 0.05, 0]}>
+        <group ref={painting} position={[0.48, 0.05, 0]}>
           <mesh position={[0, 0, -0.18]} scale={1.055}>
             <planeGeometry args={[3.72, 3.72]} />
             <meshBasicMaterial color="#df6f9a" transparent opacity={0.12} />
@@ -302,8 +317,8 @@ function GalleryRoom({ progress }: SceneProps) {
           </mesh>
         </group>
 
-        <mesh ref={visitor} position={[3.15, -0.66, 1.35]} castShadow>
-          <planeGeometry args={[2.05, 3.08]} />
+        <mesh ref={visitor} position={[3.45, -0.66, 1.35]} castShadow>
+          <planeGeometry args={[2.18, 3.27]} />
           <meshStandardMaterial map={visitorTexture} transparent alphaTest={0.08} roughness={0.72} />
         </mesh>
 

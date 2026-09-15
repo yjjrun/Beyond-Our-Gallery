@@ -14,10 +14,10 @@ type HeroExperienceProps = {
 };
 
 const stages = [
-  "Look beyond the surface",
+  "The bigger picture",
   "The observer steps away",
-  "The canvas turns",
-  "Evidence comes into view",
+  "From artwork to evidence",
+  "The numbers come forward",
   "Enter the research gallery",
 ];
 
@@ -92,6 +92,16 @@ export function HeroExperience({ onReleaseChange }: HeroExperienceProps) {
           <GalleryScene progress={progress} />
         </div>
 
+        <motion.div className="portal-nav" initial={false} animate={{ opacity: released ? 0 : 1, y: released ? -18 : 0 }} aria-hidden={released}>
+          <a className="portal-brand" href="#home" aria-label="Beyond Our Gallery home">Beyond Our Gallery</a>
+          <nav aria-label="Opening navigation">
+            <a href="#company-gallery">Companies</a>
+            <a href="#research">Research</a>
+            <a href="/methodology.html">Methodology</a>
+            <a href="#standards">About</a>
+          </nav>
+        </motion.div>
+
         <motion.div
           className="hero-copy"
           initial={false}
@@ -99,8 +109,23 @@ export function HeroExperience({ onReleaseChange }: HeroExperienceProps) {
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="eyebrow text-forest">Beyond Our Gallery / Exhibit 01</p>
-          <h1><span>See the whole</span><span>picture.</span></h1>
-          <p className="hero-deck">Where visual culture becomes investable evidence.</p>
+          <h1><span>See the</span><span><em className="pink-word">whole</em></span><span>picture.</span></h1>
+          <p className="hero-deck">Research the companies others overlook.</p>
+          <a className="hero-action" href="#company-gallery">Explore the research <ArrowRight size={18} /></a>
+        </motion.div>
+
+        <motion.aside
+          className="portal-callouts"
+          initial={false}
+          animate={{ opacity: stage < 2 ? 1 : 0, y: stage < 2 ? 0 : -14 }}
+          aria-hidden={stage >= 2}
+        >
+          <span className="callout callout-art">Art / Asset</span>
+          <span className="callout callout-evidence">Research / Evidence</span>
+        </motion.aside>
+
+        <motion.div className="portal-preview" initial={false} animate={{ opacity: stage < 2 ? 1 : 0 }} aria-hidden="true">
+          <span>A deeper</span><span>look</span><span>ahead</span><ArrowRight size={22} />
         </motion.div>
 
         <motion.aside
@@ -111,6 +136,7 @@ export function HeroExperience({ onReleaseChange }: HeroExperienceProps) {
           aria-hidden={stage !== 3}
         >
           <p className="eyebrow">Analysis 01 / Kingsmen Creatives</p>
+          <h2>The picture changes when the economics appear.</h2>
           <div className="evidence-stat"><span>FY2025 revenue</span><strong><CountUp active={stage >= 3} target={372.5} decimals={1} prefix="S$" suffix="m" /></strong></div>
           <div className="evidence-stat"><span>Gross margin</span><strong><CountUp active={stage >= 3} target={24.7} decimals={1} suffix="%" /></strong></div>
           <div className="evidence-score"><span>Beyond Our Gallery score</span><strong><CountUp active={stage >= 3} target={78} /></strong></div>
@@ -119,13 +145,13 @@ export function HeroExperience({ onReleaseChange }: HeroExperienceProps) {
         <motion.div
           className="hero-release"
           initial={false}
-          animate={{ opacity: released ? 1 : 0 }}
-          transition={{ duration: 0.42 }}
+          animate={{ opacity: released ? 1 : 0, clipPath: released ? "inset(0 0 0 0%)" : "inset(0 0 0 100%)" }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           aria-hidden={!released}
         >
           <motion.div className="hero-release-shell" initial={false} animate={{ y: released ? 0 : 28, opacity: released ? 1 : 0 }} transition={{ duration: 0.55, delay: released ? 0.1 : 0 }}>
             <div className="release-brand">
-              <p className="eyebrow pink">SGX Art & Media Research</p>
+              <p className="eyebrow pink">The research gallery</p>
               <h2>Beyond Our<br />Gallery</h2>
             </div>
             <div className="release-statement">
@@ -144,15 +170,17 @@ export function HeroExperience({ onReleaseChange }: HeroExperienceProps) {
           </motion.div>
         </motion.div>
 
-        <motion.div className="hero-stage" aria-live="polite" initial={false} animate={{ opacity: released ? 0 : 1 }}>
-          <span>0{stage + 1}</span>
-          <p>{stages[stage]}</p>
+        <motion.div className="portal-route" aria-live="polite" initial={false} animate={{ opacity: released ? 0 : 1 }}>
+          {stages.slice(0, 4).map((label, index) => (
+            <div className={stage === index ? "active" : stage > index ? "complete" : ""} key={label}>
+              <span>0{index + 1}</span><i /><p>{label}</p>
+            </div>
+          ))}
         </motion.div>
 
         <motion.div className="hero-scroll-cue" aria-hidden="true" initial={false} animate={{ opacity: released ? 0 : 1 }}>
-          <span>Scroll to reveal</span>
           <ArrowDown size={16} strokeWidth={1.5} />
-          <i />
+          <span>Scroll to reveal</span>
         </motion.div>
       </div>
     </section>
