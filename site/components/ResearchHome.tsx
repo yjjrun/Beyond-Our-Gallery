@@ -207,12 +207,7 @@ export function SiteHeader({ visible }: { visible: boolean }) {
   };
 
   return (
-    <motion.header
-      className="site-header"
-      initial={false}
-      animate={{ y: visible ? 0 : -92, opacity: visible ? 1 : 0 }}
-      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-    >
+    <header className="site-header" aria-hidden={!visible}>
       <a className="brand" href="#home" aria-label="Beyond Our Gallery home">
         <Image src="/mockup/media/bog-logo-lockup.png" alt="Beyond Our Gallery" width={180} height={60} priority />
       </a>
@@ -247,7 +242,7 @@ export function SiteHeader({ visible }: { visible: boolean }) {
           </motion.nav>
         )}
       </AnimatePresence>
-    </motion.header>
+    </header>
   );
 }
 

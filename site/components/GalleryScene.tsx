@@ -161,45 +161,45 @@ function GalleryRoom({ progress }: SceneProps) {
 
   useFrame((state, delta) => {
     const p = progress.current;
-    const introduction = ease(range(p, 0, 0.2));
-    const exit = ease(range(p, 0.2, 0.45));
-    const rotate = ease(range(p, 0.45, 0.7));
-    const reveal = ease(range(p, 0.7, 0.9));
-    const passThrough = ease(range(p, 0.9, 1));
+    const establish = ease(range(p, 0, 0.22));
+    const observer = ease(range(p, 0.12, 0.4));
+    const flip = ease(range(p, 0.3, 0.62));
+    const evidence = ease(range(p, 0.5, 0.82));
+    const release = ease(range(p, 0.74, 0.92));
     const mobile = viewport.width < 7;
 
     if (room.current) {
-      room.current.position.x = THREE.MathUtils.lerp(-0.12, 0.08, introduction);
-      room.current.position.z = THREE.MathUtils.lerp(-0.22, -0.04, introduction);
+      room.current.position.x = THREE.MathUtils.lerp(-0.12, 0.08, establish);
+      room.current.position.z = THREE.MathUtils.lerp(-0.22, -0.04, establish);
     }
 
     if (visitor.current) {
       const startX = mobile ? 1.08 : 3.45;
-      visitor.current.position.x = THREE.MathUtils.lerp(startX, mobile ? 5.2 : 7.4, exit);
+      visitor.current.position.x = THREE.MathUtils.lerp(startX, mobile ? 5.2 : 7.4, observer);
       visitor.current.position.y = mobile ? -0.92 : -0.66;
-      visitor.current.position.z = 1.35 + introduction * 0.3;
-      visitor.current.rotation.z = Math.sin(state.clock.elapsedTime * 1.9) * 0.005 * (1 - exit);
-      visitor.current.visible = exit < 0.995;
+      visitor.current.position.z = 1.35 + establish * 0.3;
+      visitor.current.rotation.z = Math.sin(state.clock.elapsedTime * 1.9) * 0.005 * (1 - observer);
+      visitor.current.visible = observer < 0.995;
     }
 
     if (painting.current) {
-      painting.current.rotation.y = THREE.MathUtils.lerp(-0.075, Math.PI, rotate);
-      painting.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.42) * 0.004 * (1 - rotate);
-      const scale = 1 + exit * (mobile ? 0.08 : 0.24) + passThrough * 0.5;
+      painting.current.rotation.y = THREE.MathUtils.lerp(-0.075, Math.PI, flip);
+      painting.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.42) * 0.004 * (1 - flip);
+      const scale = 1 + observer * (mobile ? 0.08 : 0.24) + release * 0.5;
       painting.current.scale.setScalar(scale);
-      painting.current.position.x = mobile ? THREE.MathUtils.lerp(-0.24, 0, exit) : THREE.MathUtils.lerp(0.48, 0, exit);
-      painting.current.position.y = mobile ? THREE.MathUtils.lerp(-1.88, -0.08, exit) : 0.05;
+      painting.current.position.x = mobile ? THREE.MathUtils.lerp(-0.24, 0, observer) : THREE.MathUtils.lerp(0.48, 0, observer);
+      painting.current.position.y = mobile ? THREE.MathUtils.lerp(-1.88, -0.08, observer) : 0.05;
     }
 
-    camera.position.z = THREE.MathUtils.lerp(mobile ? 11.3 : 7.1, mobile ? 5.1 : 4.15, exit);
-    camera.position.z = THREE.MathUtils.lerp(camera.position.z, 1.35, passThrough);
-    camera.position.x = THREE.MathUtils.lerp(-0.06, 0.12, passThrough);
-    camera.position.y = THREE.MathUtils.lerp(0.05, 0, passThrough);
+    camera.position.z = THREE.MathUtils.lerp(mobile ? 11.3 : 7.1, mobile ? 5.1 : 4.15, observer);
+    camera.position.z = THREE.MathUtils.lerp(camera.position.z, 1.35, release);
+    camera.position.x = THREE.MathUtils.lerp(-0.06, 0.12, release);
+    camera.position.y = THREE.MathUtils.lerp(0.05, 0, release);
     camera.lookAt(0, 0, 0);
 
     if (particles.current) {
       const positions = particles.current.geometry.attributes.position.array as Float32Array;
-      const morph = ease(range(p, 0.48, 0.78));
+      const morph = evidence;
       for (let index = 0; index < positions.length; index += 3) {
         const drift = Math.sin(state.clock.elapsedTime * 0.35 + index) * 0.012;
         positions[index] = THREE.MathUtils.lerp(particleData.initial[index], particleData.target[index], morph) + drift;
@@ -216,20 +216,20 @@ function GalleryRoom({ progress }: SceneProps) {
       }
       particles.current.geometry.attributes.position.needsUpdate = true;
       const material = particles.current.material as THREE.PointsMaterial;
-      material.opacity = THREE.MathUtils.damp(material.opacity, 0.22 + reveal * 0.64, 3, delta);
-      material.size = THREE.MathUtils.lerp(0.028, 0.045, reveal);
+      material.opacity = THREE.MathUtils.damp(material.opacity, 0.22 + evidence * 0.64, 3, delta);
+      material.size = THREE.MathUtils.lerp(0.028, 0.045, evidence);
     }
 
     if (pinkLight.current) {
-      pinkLight.current.intensity = 10 + rotate * 22 + reveal * 16;
+      pinkLight.current.intensity = 10 + flip * 22 + evidence * 16;
       pinkLight.current.position.x = Math.sin(state.clock.elapsedTime * 0.28) * 1.2;
     }
-    if (Math.abs(lastChartReveal.current - reveal) > 0.012) {
-      drawFinancialTexture(financialTexture.userData.context, reveal);
+    if (Math.abs(lastChartReveal.current - evidence) > 0.012) {
+      drawFinancialTexture(financialTexture.userData.context, evidence);
       financialTexture.needsUpdate = true;
-      lastChartReveal.current = reveal;
+      lastChartReveal.current = evidence;
     }
-    gl.toneMappingExposure = THREE.MathUtils.lerp(1.08, 0.9, passThrough);
+    gl.toneMappingExposure = THREE.MathUtils.lerp(1.08, 0.9, release);
   });
 
   return (

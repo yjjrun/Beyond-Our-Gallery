@@ -17,12 +17,17 @@ The implementation preserves the selected direction's dominant museum object, wh
 - P2: A CSS green panel masked the visitor. Removed the duplicate fill and retained the actual 3D wall.
 - P2: Mobile copy and CTA overlapped the painting. Lowered the canvas artwork on narrow screens and kept the brand on one line.
 - P2: Gallery and sector controls changed visually without exposing selection state. Added `aria-pressed`.
+- P2: The 230svh hero gave the five scenes too little controllable distance and the final screen almost no hold. Rebuilt it as one 560svh desktop / 420svh mobile GSAP timeline with overlapping ranges and a held final state.
+- P2: Three.js received raw scroll while DOM layers used separate Framer Motion transitions. Moved the canvas progress, captions, evidence card, counters, release wipe, and header crossfade onto one scrubbed playhead.
+- P2: The four-part rail and right preview competed with the artwork. Removed the preview and replaced the rail with one active chapter caption and a thin progress line.
 
 ## Verification
 
 - Production build and TypeScript completed successfully.
 - Intermediate hero frames contain a focal object or financial evidence; no blank handoff frame remains.
 - Financial counters resolve to `S$372.5m`, `24.7%`, and `78`.
+- Counter values, canvas progress, and DOM transitions advance and reverse from the same GSAP timeline.
+- The release starts at 78%, completes at 92%, and remains stationary through the final 8% before unpinning.
 - Film & Media filtering returns mm2 Asia, G.H.Y Culture & Media, and NoonTalk Media.
 - Analyst mode and methodology expansion respond correctly.
 - Root `index.html` is unchanged; redesign files are isolated to `/mockup/` and `site/`.
