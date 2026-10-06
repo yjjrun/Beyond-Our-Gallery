@@ -10,7 +10,7 @@
 <meta property="og:image" content="assets/bog-reference-atlas.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/bog-mark.svg">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 <script src="assets/parallax.js" defer></script>
@@ -32,6 +32,7 @@
   --white:#fffdfb;
   --shadow:0 22px 70px rgba(9,47,45,.18);
   --display:"Cormorant Garamond", Georgia, serif;
+  --script:"Allura", "Brush Script MT", cursive;
   --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
@@ -191,16 +192,27 @@ button,input{font:inherit}
 .hero-copy{position:relative;z-index:2}
 .hero h1{
   margin:0;
+  color:#fff;
   font-family:var(--display);
   font-size:clamp(48px, 5.4vw, 68px);
-  line-height:.86;
+  line-height:.9;
   max-width:760px;
   letter-spacing:-.015em;
   text-shadow:0 2px 28px rgba(6,47,43,.6);
 }
 .hero h1 span{
   display:block;
+  width:max-content;
+  max-width:100%;
+  margin-top:.02em;
   color:var(--rose-2);
+  font-family:var(--script);
+  font-size:1.7em;
+  font-weight:400;
+  line-height:.72;
+  letter-spacing:0;
+  white-space:nowrap;
+  text-shadow:0 4px 32px rgba(239,145,177,.22), 0 2px 24px rgba(6,47,43,.55);
 }
 .hero p{
   margin:18px 0 0;
@@ -1018,7 +1030,7 @@ body.modal-open::before{
   <section class="hero" data-parallax-bg data-parallax-bg-speed="60">
     <div class="wrap">
       <div class="hero-copy">
-        <h1>See beyond <span>the gallery.</span></h1>
+        <h1>See beyond the <span>gallery.</span></h1>
         <p>Research on Singapore's overlooked art, games, media, attractions and live entertainment companies.</p>
         <div class="hero-actions">
           <a class="btn" href="#company-gallery">Explore companies <i data-lucide="arrow-right" aria-hidden="true"></i></a>
