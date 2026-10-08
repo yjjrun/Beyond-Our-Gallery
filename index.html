@@ -1084,7 +1084,7 @@ body.modal-open::before{
         <div>
           <p class="eyebrow">The company atlas</p>
           <h2 class="section-title" id="gallery-title">Explore the companies</h2>
-          <p class="section-copy">Seven companies, five sectors and one clearer view of Singapore's creative economy.</p>
+          <p class="section-copy">Eight companies, six sectors and one clearer view of Singapore's creative economy.</p>
         </div>
         <div class="gallery-controls">
           <label class="gallery-search" aria-label="Search the company gallery">
@@ -1096,10 +1096,11 @@ body.modal-open::before{
             <button class="filter-btn" type="button" data-filter="Experiential">Experiential</button>
             <button class="filter-btn" type="button" data-filter="Attractions">Attractions</button>
             <button class="filter-btn" type="button" data-filter="Games & Digital">Games &amp; Digital</button>
+            <button class="filter-btn" type="button" data-filter="Built Environment">Built Environment</button>
             <button class="filter-btn" type="button" data-filter="Film & Media">Film &amp; Media</button>
             <button class="filter-btn" type="button" data-filter="Live Events">Live Events</button>
           </div>
-          <div class="results-note" id="results-note" aria-live="polite">Showing 7 companies</div>
+          <div class="results-note" id="results-note" aria-live="polite">Showing 8 companies</div>
         </div>
       </div>
 
@@ -1169,6 +1170,29 @@ body.modal-open::before{
             <div class="card-foot">
               <span class="updated">Updated 2 Oct 2026</span>
               <a class="text-link" href="winking-studios.html">View analysis <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="company-card" data-sector="Built Environment" data-company="Lum Chang Creations LCC built environment conservation restoration heritage fit-out urban revitalisation">
+          <div class="company-media">
+            <img src="assets/lum-chang-temasek-shophouse.webp" alt="Restored Temasek Shophouse facades along Orchard Road">
+            <span class="sector-badge">Built Environment</span>
+            <span class="card-score"><span>Score</span><b>66.0</b></span>
+          </div>
+          <div class="company-body">
+            <span class="ticker">SGX: LCC</span>
+            <h3>Lum Chang Creations</h3>
+            <p>Heritage-restoration specialist with exceptional finances and one unproven year of peak margins.</p>
+            <div class="mini-scores" aria-label="Miniature research scores">
+              <span class="mini-score"><span>Fin</span><i style="--mini:90"></i><b>90</b></span>
+              <span class="mini-score"><span>Mkt</span><i style="--mini:67"></i><b>67</b></span>
+              <span class="mini-score"><span>Grw</span><i style="--mini:36"></i><b>36</b></span>
+              <span class="mini-score"><span>Risk</span><i style="--mini:51"></i><b>51</b></span>
+            </div>
+            <div class="card-foot">
+              <span class="updated">Updated 6 Oct 2026</span>
+              <a class="text-link" href="lum-chang-creations.html">View analysis <i data-lucide="arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </article>
@@ -1304,14 +1328,14 @@ body.modal-open::before{
       <p class="eyebrow">Latest research and sector insights</p>
       <h2 class="section-title" id="research-title">Fresh notes from the creative economy.</h2>
       <div class="research-grid">
-        <article class="research-card">
-          <img src="assets/exm-krisflyer.jpg" alt="Visitors at a brand activation event">
+        <a class="research-card" href="lum-chang-creations.html">
+          <img src="assets/lum-chang-st-james.webp" alt="Restored St James Power Station building">
           <div>
-            <p class="eyebrow">Sector deep dive</p>
-            <h3>The next chapter for Singapore's live events</h3>
-            <p>Touring calendars, sponsor budgets and venue utilization are reshaping the event earnings cycle.</p>
+            <p class="eyebrow">Company analysis</p>
+            <h3>Lum Chang Creations: can the margin repeat?</h3>
+            <p>Net cash and heritage credentials are proven. FY2026's 35.5% gross margin is not yet.</p>
           </div>
-        </article>
+        </a>
         <article class="research-card">
           <img src="assets/rci-singtel.jpg" alt="Digital display in a corporate retail interior">
           <div>
@@ -1523,7 +1547,10 @@ body.modal-open::before{
      img:"assets/straco-flyer-skyline.webp",alt:"The Singapore Flyer lit at dusk above the city skyline"},
     {name:"Winking Studios",thesis:"A cash-rich game-art platform scaling AAA and Western work while profit per artist absorbs the cost of transformation.",
      pills:["SGX & AIM: WKS","Games & Digital","Updated 2 Oct 2026"],score:"67.4",band:"Satisfactory",href:"winking-studios.html",
-     img:"assets/winking-silver-and-blood.webp",alt:"Silver and Blood underwater game artwork from Winking Studios' portfolio"}
+     img:"assets/winking-silver-and-blood.webp",alt:"Silver and Blood underwater game artwork from Winking Studios' portfolio"},
+    {name:"Lum Chang Creations",thesis:"A licensed heritage niche with exceptional finances, priced as if FY2026's 35.5% gross margin will not repeat.",
+     pills:["SGX: LCC","Built Environment","Updated 6 Oct 2026"],score:"66.0",band:"Satisfactory",href:"lum-chang-creations.html",
+     img:"assets/lum-chang-temasek-shophouse.webp",alt:"Restored Temasek Shophouse facades along Orchard Road"}
   ];
   const elTitle=document.getElementById("featured-title"),
         elThesis=document.getElementById("feature-thesis"),
