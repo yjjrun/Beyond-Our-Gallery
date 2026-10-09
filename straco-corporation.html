@@ -554,6 +554,32 @@ thead th{background:var(--deep)}
   .moat-profile{padding:18px}.moat-profile>div{grid-template-columns:112px 1fr 28px;gap:8px}
   .risk-chip{font-size:8px;padding:6px}.summary-roadmap>div{min-height:130px;border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}
 }
+
+/* Persistent research takeaway */
+.research-rail{display:none}
+@media(min-width:1180px){
+  header.hero>.wrap,body>section>.wrap,footer>.wrap{
+    width:calc(100% - 320px);max-width:1120px;margin-left:clamp(40px,5vw,80px);margin-right:0
+  }
+  .research-rail{
+    position:fixed;z-index:35;top:88px;right:18px;display:block;width:220px;
+    padding:18px 17px 16px;background:rgba(255,255,255,.96);border:1px solid rgba(9,47,45,.16);
+    border-top:3px solid var(--wine);border-radius:4px;box-shadow:0 16px 44px rgba(9,47,45,.14);
+    backdrop-filter:blur(14px);transition:opacity .14s ease,transform .14s ease
+  }
+}
+.research-rail.is-changing{opacity:.55;transform:translateY(3px)}
+.takeaway-eyebrow{color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.takeaway-route{display:flex;align-items:baseline;gap:9px;margin:8px 0 15px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.takeaway-route span{color:var(--pink);font:700 24px/1 var(--editorial)}
+.takeaway-route b{color:var(--deep);font-size:11px;line-height:1.25;text-transform:uppercase;letter-spacing:.06em}
+.takeaway-list{display:grid;gap:13px}
+.takeaway-list div{padding-left:10px;border-left:2px solid #e7d8dd}
+.takeaway-list div:nth-child(2){border-color:var(--deep2)}
+.takeaway-list div:nth-child(3){border-color:var(--orange)}
+.takeaway-list div:nth-child(4){border-color:var(--pink)}
+.takeaway-list dt{color:var(--muted);font-size:8px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.takeaway-list dd{margin-top:3px;color:var(--deep);font-size:10.5px;line-height:1.45;font-weight:650}
 </style>
 </head>
 <body>
@@ -576,6 +602,17 @@ thead th{background:var(--deep)}
   <span class="readingprogress"><b id="section-current">00</b><span>/ 10</span></span>
   <a class="navhome" href="index.html">&#8592; Back Home</a>
 </div></nav>
+
+<aside class="research-rail" id="research-takeaway" aria-label="Current research takeaway">
+  <p class="takeaway-eyebrow">Research takeaway</p>
+  <div class="takeaway-route"><span id="takeaway-index">00</span><b id="takeaway-section">Research score</b></div>
+  <dl class="takeaway-list">
+    <div><dt>Current thesis</dt><dd id="takeaway-thesis">Excellent financial resilience is offset by concentrated assets, weak utilisation and a shortening lease runway.</dd></div>
+    <div><dt>Strongest evidence</dt><dd id="takeaway-evidence">A 67.3 score led by 35.3 out of 40 for Financial Strength.</dd></div>
+    <div><dt>Main uncertainty</dt><dd id="takeaway-uncertainty">Whether lease renewals and attraction demand arrive before the portfolio needs major reinvestment.</dd></div>
+    <div><dt>What would change the score</dt><dd id="takeaway-change">Binding renewals, sustained visitor recovery and disciplined deployment of net cash.</dd></div>
+  </dl>
+</aside>
 
 <header class="hero"><div class="wrap">
   <div>
@@ -1763,6 +1800,35 @@ if(REDUCE){
   var progress=document.getElementById('route-progress');
   var current=document.getElementById('section-current');
   var numbered=['score','overview','assets','financials','valuation','demand','frameworks','risk','strategy','outlook','component-scoring'];
+  var takeawayData={
+    score:{title:'Research score',thesis:'Excellent financial resilience is offset by concentrated assets, weak utilisation and a shortening lease runway.',evidence:'A 67.3 score led by 35.3 out of 40 for Financial Strength.',uncertainty:'Whether lease renewals and attraction demand arrive before the portfolio needs major reinvestment.',change:'Binding renewals, sustained visitor recovery and disciplined deployment of net cash.'},
+    overview:{title:'Operating model',thesis:'Straco owns scarce destination assets, but earnings depend on a small number of physical attractions.',evidence:'Aquariums generated 58.4% of FY2025 revenue and most of the group profit pool.',uncertainty:'How much pricing power remains when attendance is below the pre-pandemic base.',change:'A broader earnings base with measurable returns from new attractions.'},
+    assets:{title:'Portfolio assets',thesis:'The aquariums are the economic core; the Singapore Flyer is a turnaround asset rather than a growth engine.',evidence:'Shanghai Ocean Aquarium produced S$26.3m of PBT at a 65.6% margin.',uncertainty:'Flyer uptime, Xiamen renewal terms and the 2034-37 weighted lease cliff.',change:'Renew leases before committing major capital and restore Flyer availability above 98%.'},
+    financials:{title:'Financial profile',thesis:'High margins survived the recovery plateau, but lower utilisation is exposing the Flyer\'s operating leverage.',evidence:'FY2025 revenue was S$74.4m while normalised PBT fell 21.9% to S$27.3m.',uncertainty:'Whether H1 FY2026 weakness is temporary or the start of a lower demand base.',change:'A return to visitor-led growth without sacrificing free-cash-flow conversion.'},
+    valuation:{title:'Market valuation',thesis:'Most of the equity value is cash, so the market assigns modest value to the operating portfolio.',evidence:'Net cash accounts for 66.5% of the equity-value decomposition at S$0.31 per share.',uncertainty:'How much of the cash is truly distributable before lease and renewal obligations.',change:'Accretive capital deployment or a clearer return-of-capital framework.'},
+    demand:{title:'Demand recovery',thesis:'The tourism market recovered faster than Straco\'s own visitor volumes, pointing to asset-specific friction.',evidence:'China domestic trips reached 108.6% of the 2019 level while Straco visitors remained at 64.0%.',uncertainty:'The split between weak attraction appeal, capacity constraints and operating downtime.',change:'Sustained attendance gains that close the gap with destination tourism volumes.'},
+    frameworks:{title:'Competitive moat',thesis:'Scarce sites and hard-to-replicate assets support margins, but leases limit the duration of the moat.',evidence:'Prime-location attractions retain strong unit economics despite incomplete demand recovery.',uncertainty:'Whether the legal right to operate lasts long enough to justify fresh investment.',change:'Longer operating rights and quantified returns from digital distribution and partnerships.'},
+    risk:{title:'Risk register',thesis:'Lease renewal and capital allocation can permanently impair value; a weak tourism quarter usually cannot.',evidence:'The two very-high-impact risks are lease renewal and capital misallocation.',uncertainty:'A binding Xiamen renewal path by FY2028 and the board\'s hurdle rate for new deals.',change:'Documented renewals, explicit return gates and Flyer availability consistently above 98%.'},
+    strategy:{title:'Strategic roadmap',thesis:'Sequence matters: repair operations, secure tenure, prove returns, then expand.',evidence:'Each proposed growth action is gated by uptime, lease duration and free-cash-flow yield.',uncertainty:'Whether management will favour disciplined sequencing over asset accumulation.',change:'Passing the operating and lease gates before committing expansion capital.'},
+    outlook:{title:'Scenario outlook',thesis:'The base case preserves a profitable core, but upside depends on recovery rather than balance-sheet strength alone.',evidence:'The scenario range separates visitor recovery, lease duration and capital deployment assumptions.',uncertainty:'The pace of attendance normalisation and the terminal value of leased assets.',change:'Two reporting periods of stronger visitors, earnings and evidence of lease progress.'},
+    'component-scoring':{title:'Score components',thesis:'Financial quality is already recognised; future score gains must come from growth evidence and reduced concentration.',evidence:'Financial Strength contributes 35.3 points, while Growth Opportunities contributes only 10.6.',uncertainty:'Limited disclosure on market share, repeat visitors and returns from technology.',change:'Auditable growth KPIs, a credible expansion pipeline and longer asset tenure.'}
+  };
+  var takeawayTimer;
+  function updateTakeaway(id,index){
+    var data=takeawayData[id],rail=document.getElementById('research-takeaway');
+    if(!data||!rail)return;
+    clearTimeout(takeawayTimer);
+    rail.classList.add('is-changing');
+    takeawayTimer=setTimeout(function(){
+      document.getElementById('takeaway-index').textContent=String(index).padStart(2,'0');
+      document.getElementById('takeaway-section').textContent=data.title;
+      document.getElementById('takeaway-thesis').textContent=data.thesis;
+      document.getElementById('takeaway-evidence').textContent=data.evidence;
+      document.getElementById('takeaway-uncertainty').textContent=data.uncertainty;
+      document.getElementById('takeaway-change').textContent=data.change;
+      rail.classList.remove('is-changing');
+    },window.matchMedia('(prefers-reduced-motion: reduce)').matches?0:90);
+  }
   function updateProgress(){
     var max=document.documentElement.scrollHeight-window.innerHeight;
     if(progress)progress.style.width=(max>0?window.scrollY/max*100:0)+'%';
@@ -1773,10 +1839,13 @@ if(REDUCE){
     var sectionObserver=new IntersectionObserver(function(entries){
       var visible=entries.filter(function(e){return e.isIntersecting;}).sort(function(a,b){return b.intersectionRatio-a.intersectionRatio;})[0];
       if(!visible)return;
-      current.textContent=String(numbered.indexOf(visible.target.id)).padStart(2,'0');
+      var index=numbered.indexOf(visible.target.id);
+      current.textContent=String(index).padStart(2,'0');
+      updateTakeaway(visible.target.id,index);
     },{threshold:[.16,.35,.55],rootMargin:'-18% 0px -55%'});
     numbered.forEach(function(id){var section=document.getElementById(id);if(section)sectionObserver.observe(section);});
   }
+  updateTakeaway('score',0);
   document.querySelectorAll('.navpopover a:not(.navexpand)').forEach(function(link){
     link.addEventListener('click',function(){var menu=link.closest('details');if(menu)menu.removeAttribute('open');});
   });
