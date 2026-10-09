@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vividthree Holdings Analysis | Beyond Our Gallery</title>
+<meta name="description" content="Beyond Our Gallery's strategy and commercial analysis of Vividthree Holdings (SGX: OMK), including its 22.6 research score, financials, funding risks and FY2027 scenarios.">
+<meta property="og:title" content="Vividthree Holdings Analysis | Beyond Our Gallery">
+<meta property="og:description" content="A 22.6/100 business-quality analysis of Vividthree Holdings: strong creative work, insufficient scale, negative equity and a venue-led turnaround.">
+<meta property="og:image" content="assets/vividthree-chingay.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/bog-mark.svg">
+<style>
+:root{
+  color-scheme:light;
+  --ink:#092f2d;
+  --ink-2:#35504d;
+  --deep:#062f2b;
+  --wine:#900031;
+  --wine-2:#b20c4b;
+  --pink:#ef91b1;
+  --pink-soft:#f6dce5;
+  --paper:#fbf8f6;
+  --paper-2:#f2e9ec;
+  --line:#d8c8ce;
+  --muted:#687674;
+  --positive:#16705f;
+  --caution:#9b5a00;
+  --critical:#b12a35;
+  --display:"Cormorant Garamond", Georgia, serif;
+  --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#fff 0%,var(--paper) 58%,#fff 100%);
+  color:var(--ink);
+  font:500 16px/1.6 var(--body);
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input{font:inherit}
+button{color:inherit}
+.wrap{width:min(1220px,calc(100% - 40px));margin:0 auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.route-progress{position:fixed;inset:0 auto auto 0;z-index:90;width:0;height:3px;background:linear-gradient(90deg,var(--wine),var(--pink),#098c84);box-shadow:0 0 14px rgba(239,145,177,.5)}
+.site-nav{position:sticky;top:0;z-index:80;background:rgba(255,253,251,.92);border-bottom:1px solid rgba(9,47,45,.12);backdrop-filter:blur(18px)}
+.nav-inner{min-height:68px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none;white-space:nowrap}
+.brand img{width:36px;height:36px;object-fit:cover;border:1px solid rgba(9,47,45,.14)}
+.brand strong{font-size:13px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.primary-nav{display:flex;align-items:center;gap:22px}
+.primary-nav>a,.sections-menu>summary{font-size:12px;font-weight:800;text-decoration:none;cursor:pointer;white-space:nowrap}
+.primary-nav>a:hover,.primary-nav>a:focus-visible,.sections-menu>summary:hover,.sections-menu>summary:focus-visible{color:var(--wine)}
+.sections-menu{position:relative}
+.sections-menu>summary{list-style:none;display:flex;align-items:center;gap:6px}
+.sections-menu>summary::-webkit-details-marker{display:none}
+.sections-menu>summary::after{content:"+";font-size:16px;color:var(--wine)}
+.sections-menu[open]>summary::after{content:"-"}
+.sections-popover{position:absolute;right:0;top:36px;width:245px;padding:12px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px rgba(9,47,45,.18)}
+.sections-popover a{display:block;padding:8px 10px;font-size:12px;font-weight:750;text-decoration:none}
+.sections-popover a:hover,.sections-popover a:focus-visible{background:var(--paper-2);color:var(--wine)}
+.reading-progress{display:flex;align-items:center;gap:6px;border-left:1px solid var(--line);padding-left:16px;color:var(--muted);font-size:11px;font-weight:900;letter-spacing:.12em}
+.reading-progress b{color:var(--wine)}
+.back-home{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(144,0,49,.3);padding:7px 11px;text-decoration:none;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.back-home:hover,.back-home:focus-visible{background:var(--wine);border-color:var(--wine);color:#fff}
+
+.hero{position:relative;overflow:hidden;min-height:720px;border-bottom:1px solid var(--line);background:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 0 54%,rgba(239,145,177,.12) 54% 72%,rgba(6,47,43,.06) 72%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,.92fr) minmax(430px,1.08fr);align-items:center;gap:58px;min-height:720px;padding:76px 0 66px}
+.eyebrow{margin:0 0 12px;color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1{margin-bottom:0;font:700 clamp(58px,7.3vw,102px)/.82 var(--display);letter-spacing:0}
+.hero-thesis{max-width:650px;margin:24px 0 0;font:600 clamp(24px,3vw,39px)/1.04 var(--display);color:var(--wine)}
+.hero-copy>p:not(.eyebrow):not(.hero-thesis){max-width:650px;margin:20px 0 0;color:var(--ink-2);font-size:16px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero-meta span{border:1px solid rgba(9,47,45,.18);padding:7px 10px;background:rgba(255,255,255,.8);font-size:11px;font-weight:850;letter-spacing:.07em;text-transform:uppercase}
+.hero-actions{display:flex;align-items:center;gap:18px;margin-top:30px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;background:var(--wine);border:1px solid var(--wine);color:#fff;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;transition:transform .18s ease,background .18s ease}
+.button:hover,.button:focus-visible{background:var(--deep);border-color:var(--deep);transform:translateY(-2px)}
+.text-link{color:var(--wine);font-size:12px;font-weight:900;text-underline-offset:4px}
+.hero-art{position:relative;min-height:520px}
+.hero-image{position:absolute;inset:0 0 0 6%;overflow:hidden;box-shadow:0 28px 90px rgba(6,47,43,.2)}
+.hero-image img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.hero:hover .hero-image img{transform:scale(1.025)}
+.hero-logo{position:absolute;left:-12px;top:48px;width:112px;height:112px;padding:18px;background:var(--wine);box-shadow:0 18px 40px rgba(144,0,49,.27)}
+.hero-logo img{width:100%;height:100%;object-fit:cover}
+.hero-logo.wide{left:-20px;top:42px;width:198px;height:92px;padding:16px 18px;background:#fff}
+.hero-logo.wide img{object-fit:contain}
+.hero-logo.wide.vivid{width:228px;background:var(--deep)}
+.hero-logo.wide.vivid img{filter:none}
+.hero-score{position:absolute;right:-8px;bottom:38px;width:188px;min-height:188px;padding:26px;background:var(--deep);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 22px 60px rgba(6,47,43,.3)}
+.hero-score span{font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#c9e0dc}
+.hero-score b{font:700 61px/.9 var(--display);color:var(--pink)}
+.hero-score em{margin-top:7px;font-size:11px;font-style:normal;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.hero-caption{position:absolute;left:0;bottom:22px;max-width:250px;padding:12px 14px;background:#fff;border-left:3px solid var(--wine);font-size:10px;font-weight:750;color:var(--muted)}
+
+.reading-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:46px;align-items:start;width:min(1220px,calc(100% - 40px));margin:0 auto}
+.analysis-main{min-width:0}
+.analysis-section{position:relative;padding:74px 0;border-bottom:1px solid var(--line);scroll-margin-top:70px}
+.analysis-section::before{content:attr(data-number);position:absolute;right:0;top:69px;color:rgba(144,0,49,.14);font:700 54px/1 var(--display)}
+.section-kicker{margin:0 0 10px;color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+h2{max-width:850px;margin-bottom:0;font:700 clamp(36px,4.9vw,62px)/.93 var(--display);letter-spacing:0}
+.lede{max-width:780px;margin:16px 0 0;color:var(--ink-2);font-size:16px}
+.section-grid{display:grid;gap:18px;margin-top:30px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.metric{padding:20px 0;border-top:2px solid var(--wine)}
+.metric b{display:block;font:700 35px/1 var(--display);color:var(--wine)}
+.metric span{display:block;margin-top:7px;color:var(--muted);font-size:11px;font-weight:800;line-height:1.45;text-transform:uppercase;letter-spacing:.07em}
+.callout{margin-top:28px;padding:24px 26px;border-left:4px solid var(--pink);background:var(--paper-2)}
+.callout strong{display:block;font:700 24px/1.08 var(--display)}
+.callout p{margin:8px 0 0;color:var(--ink-2);font-size:14px}
+
+.thesis-rail{position:sticky;top:96px;margin-top:74px;border-top:4px solid var(--wine);padding-top:18px}
+.thesis-rail .rail-label{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.rail-item{padding:14px 0;border-bottom:1px solid var(--line)}
+.rail-item span{display:block;margin-bottom:5px;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+.rail-item strong{display:block;font-size:12px;line-height:1.5}
+
+.figure{min-width:0;max-width:100%;margin:34px 0 0;border:1px solid rgba(9,47,45,.16);background:#fff;box-shadow:0 14px 44px rgba(9,47,45,.08)}
+.figure-head{display:flex;align-items:start;justify-content:space-between;gap:20px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.figure-label{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.figure-head h3{margin:5px 0 0;font:700 24px/1.02 var(--display)}
+.figure-source{max-width:240px;text-align:right;color:var(--muted);font-size:10px;line-height:1.5}
+.figure-canvas{width:100%;min-width:0;max-width:100%;padding:24px;overflow-x:auto}
+.curator-note{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:18px 20px;border-top:1px solid var(--line);background:var(--paper)}
+.curator-note b{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.curator-note p{margin:0;color:var(--ink-2);font:600 19px/1.2 var(--display)}
+.benchmark{display:grid;gap:18px;min-width:560px}
+.benchmark-row{display:grid;grid-template-columns:160px 1fr 52px;align-items:center;gap:14px;font-size:12px;font-weight:800}
+.benchmark-track{position:relative;height:2px;background:#d8cecf}
+.benchmark-track::after{content:"";position:absolute;left:0;top:-2px;width:calc(var(--value) * 1%);height:6px;background:linear-gradient(90deg,var(--deep),var(--wine));transform-origin:left;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.benchmark-track i{position:absolute;z-index:2;left:calc(var(--value) * 1%);top:50%;width:15px;height:15px;border:4px solid #fff;border-radius:50%;background:var(--wine);box-shadow:0 0 0 1px var(--wine);transform:translate(-50%,-50%) scale(0);transition:transform .6s .45s ease}
+.is-visible .benchmark-track::after{transform:scaleX(1)}
+.is-visible .benchmark-track i{transform:translate(-50%,-50%) scale(1)}
+
+.category-bars{display:grid;gap:16px}
+.category-bar{display:grid;grid-template-columns:175px 1fr 74px;align-items:center;gap:14px;font-size:12px;font-weight:800}
+.bar-track{height:8px;background:#e5dadd;overflow:hidden}
+.bar-fill{display:block;width:calc(var(--pct) * 1%);height:100%;background:linear-gradient(90deg,var(--wine),var(--pink));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.is-visible .bar-fill{transform:scaleX(1)}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px}
+.project{position:relative;min-height:360px;overflow:hidden;background:var(--deep);color:#fff}
+.project img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease,filter .55s ease}
+.project::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(3,26,24,.93))}
+.project:hover img,.project:focus-within img{transform:scale(1.045);filter:saturate(1.06)}
+.project-info{position:absolute;z-index:2;inset:auto 20px 18px}
+.project-info span{font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:#ffd1e0}
+.project-info h3{margin:5px 0 5px;font:700 28px/1 var(--display)}
+.project-info p{margin:0;color:#e3efed;font-size:12px;line-height:1.5}
+
+.segment-split{display:grid;grid-template-columns:1.45fr .55fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.segment-block{min-height:230px;padding:26px;background:#fff}
+.segment-block.art{background:var(--deep);color:#fff}
+.segment-block b{font:700 51px/1 var(--display);color:var(--pink)}
+.segment-block h3{margin:13px 0 8px;font:700 25px/1 var(--display)}
+.segment-block p{margin:0;color:var(--ink-2);font-size:13px}
+.segment-block.art p{color:#cfdfdd}
+.segment-growth{display:flex;gap:16px;margin-top:20px;padding-top:14px;border-top:1px solid rgba(255,255,255,.17)}
+.segment-growth span{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+
+.financial-svg{display:block;width:100%;min-width:660px;height:auto}
+.financial-svg text{font-family:var(--body);fill:var(--muted);font-size:11px;font-weight:700}
+.financial-svg .gridline{stroke:#e7dddf;stroke-width:1}
+.financial-svg .bar{fill:var(--wine);transform-box:fill-box;transform-origin:center bottom;transform:scaleY(0);transition:transform .8s ease}
+.financial-svg .line{fill:none;stroke:var(--deep);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s .3s ease}
+.financial-svg .dot{fill:var(--pink);stroke:#fff;stroke-width:3;opacity:0;transition:opacity .2s 1s ease}
+.is-visible .financial-svg .bar{transform:scaleY(1)}
+.is-visible .financial-svg .line{stroke-dashoffset:0}
+.is-visible .financial-svg .dot{opacity:1}
+
+.cash-bridge{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px;min-width:660px}
+.bridge-step{min-height:155px;padding:20px;background:var(--paper);border-top:3px solid var(--wine)}
+.bridge-step strong{display:block;font:700 35px/1 var(--display);color:var(--wine)}
+.bridge-step span{display:block;margin-top:9px;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.bridge-arrow{color:var(--pink);font-size:28px;font-weight:900}
+
+.booking-bars{display:grid;grid-template-columns:repeat(3,1fr);align-items:end;gap:34px;height:260px;min-width:560px;padding:0 28px 28px;border-bottom:1px solid var(--line)}
+.booking-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.booking-col b{font:700 24px/1 var(--display);color:var(--wine)}
+.booking-col i{display:block;width:min(100%,90px);height:calc(var(--height) * 1%);min-height:30px;background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.booking-col span{font-size:11px;font-weight:800;color:var(--muted)}
+.is-visible .booking-col i{transform:scaleY(1)}
+.funding-list{display:grid;gap:0;margin-top:28px;border-top:1px solid var(--line)}
+.funding-row{display:grid;grid-template-columns:95px 1fr 110px 115px;gap:18px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.funding-row time{color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
+.funding-row strong{font-size:12px}.funding-row span{color:var(--ink-2);font-size:11px}.funding-row b{font:700 21px/1 var(--display);color:var(--wine);text-align:right}
+
+.peer-plot{position:relative;min-width:620px;height:300px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);background:repeating-linear-gradient(to top,transparent 0 59px,rgba(9,47,45,.07) 59px 60px)}
+.peer-point{position:absolute;left:var(--x);bottom:var(--y);transform:translate(-50%,50%);display:flex;align-items:center;gap:8px}
+.peer-point i{width:18px;height:18px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 6px rgba(144,0,49,.12)}
+.peer-point.keywords i{background:var(--deep);box-shadow:0 0 0 6px rgba(6,47,43,.12)}
+.peer-point span{padding:5px 7px;background:#fff;border:1px solid var(--line);font-size:10px;font-weight:900;white-space:nowrap}
+.axis-label{position:absolute;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.axis-label.x{right:0;bottom:-27px}.axis-label.y{left:-16px;top:-22px}
+
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);margin-top:32px;border-top:3px solid var(--deep)}
+.timeline-step{position:relative;padding:24px 18px 0 0}
+.timeline-step::before{content:"";position:absolute;left:0;top:-8px;width:13px;height:13px;border-radius:50%;background:var(--pink);border:2px solid #fff;box-shadow:0 0 0 1px var(--deep)}
+.timeline-step b{font-size:10px;color:var(--wine);letter-spacing:.14em;text-transform:uppercase}
+.timeline-step h3{margin:7px 0;font:700 22px/1 var(--display)}
+.timeline-step p{margin:0;color:var(--ink-2);font-size:12px}
+
+.force-grid{display:grid;gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.force-row{display:grid;grid-template-columns:180px 120px 1fr;gap:18px;padding:15px 18px;background:#fff;align-items:center}
+.force-row b{font-size:12px}.force-row span{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:var(--critical)}
+.force-row p{margin:0;color:var(--ink-2);font-size:12px}
+
+.risk-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.64fr);gap:24px;margin-top:30px}
+.risk-matrix{position:relative;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,104px);gap:1px;background:var(--line);border:1px solid var(--line)}
+.risk-cell{background:#fff}
+.risk-cell:nth-child(3),.risk-cell:nth-child(6),.risk-cell:nth-child(9){background:#fbf1f3}
+.risk-cell:nth-child(1),.risk-cell:nth-child(2),.risk-cell:nth-child(4){background:#f3f8f6}
+.risk-dot{position:absolute;border:1px solid rgba(144,0,49,.35);background:rgba(255,255,255,.95);padding:7px 9px;cursor:pointer;font-size:10px;font-weight:900;box-shadow:0 6px 16px rgba(9,47,45,.12)}
+.risk-dot:hover,.risk-dot:focus-visible,.risk-dot[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.risk-detail{min-height:314px;padding:24px;background:var(--deep);color:#fff}
+.risk-detail .risk-level{color:var(--pink);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.risk-detail h3{margin:12px 0 18px;font:700 31px/1 var(--display)}
+.risk-detail dl{margin:0}.risk-detail dt{margin-top:14px;color:#a9c9c4;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.risk-detail dd{margin:4px 0 0;font-size:12px;line-height:1.55}
+.matrix-label{margin-top:8px;color:var(--muted);font-size:10px;font-weight:800;text-align:center;text-transform:uppercase;letter-spacing:.08em}
+
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px}
+.gate{position:relative;min-height:280px;padding:24px 20px;border:1px solid var(--line);background:#fff}
+.gate+.gate{border-left:0}
+.gate::after{content:"";position:absolute;right:-8px;top:42px;z-index:2;width:14px;height:14px;border-top:2px solid var(--wine);border-right:2px solid var(--wine);transform:rotate(45deg);background:#fff}
+.gate:last-child::after{display:none}
+.gate-num{color:var(--wine);font:700 34px/1 var(--display)}
+.gate h3{margin:14px 0 9px;font:700 23px/1 var(--display)}
+.gate p{margin:0;color:var(--ink-2);font-size:12px}
+.gate-exit{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:10px;font-weight:850;line-height:1.5;text-transform:uppercase;letter-spacing:.06em}
+
+.scenario-control{display:flex;gap:8px;margin-top:28px}
+.scenario-control button{min-width:104px;padding:9px 13px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+.scenario-control button:hover,.scenario-control button:focus-visible,.scenario-control button[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.scenario-output{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:1px;margin-top:12px;background:var(--line);border:1px solid var(--line)}
+.scenario-lead,.scenario-stat{padding:24px;background:#fff}
+.scenario-lead{background:var(--deep);color:#fff}
+.scenario-lead span,.scenario-stat span{display:block;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.scenario-lead span{color:#a9c9c4}
+.scenario-lead strong,.scenario-stat strong{display:block;margin-top:9px;font:700 36px/1 var(--display);color:var(--pink)}
+.scenario-stat strong{color:var(--wine)}
+.scenario-lead p,.scenario-stat p{margin:9px 0 0;font-size:11px;color:#d9e7e5}.scenario-stat p{color:var(--ink-2)}
+
+.score-details{min-width:0;max-width:100%;margin-top:12px;border:1px solid var(--line);background:#fff;overflow:hidden}
+.score-details summary{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:17px 18px;cursor:pointer;font-size:13px;font-weight:850;list-style:none}
+.score-details summary::-webkit-details-marker{display:none}
+.score-details summary b{color:var(--wine)}
+.score-details[open] summary{border-bottom:1px solid var(--line);background:var(--paper-2)}
+.score-table-wrap{width:100%;max-width:100%;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:650px;font-size:12px}
+th,td{padding:11px 14px;border-bottom:1px solid #eadfe2;text-align:right;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+th:last-child,td:last-child{text-align:left;white-space:normal}
+thead th{background:var(--deep);color:#fff;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+tbody tr:last-child td{border-bottom:0}
+
+.sources{padding:72px 0;background:var(--deep);color:#fff}
+.sources-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px}
+.sources h2{font-size:44px}.sources p,.sources li{color:#c9dbd8;font-size:12px}.sources a{color:#fff;text-underline-offset:3px}.sources ul{margin:22px 0 0;padding-left:18px}.sources .disclaimer{padding-left:24px;border-left:3px solid var(--pink)}
+.page-footer{padding:28px 0;background:#032522;color:#abc4c0;font-size:11px}
+.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center}.footer-row a{color:#fff}
+
+[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+[data-reveal].is-visible{opacity:1;transform:none}
+:focus-visible{outline:3px solid rgba(239,145,177,.75);outline-offset:3px}
+
+@media(max-width:1060px){
+  .primary-nav>a:nth-of-type(2),.primary-nav>a:nth-of-type(4){display:none}
+  .reading-layout{grid-template-columns:1fr}.thesis-rail{display:none}
+  .hero-grid{grid-template-columns:minmax(0,.9fr) minmax(380px,1.1fr);gap:34px}
+}
+@media(max-width:820px){
+  .wrap,.reading-layout{width:min(100% - 28px,1220px)}
+  .site-nav .primary-nav>a{display:none}.reading-progress{display:none}.nav-inner{gap:13px}.brand strong{display:none}
+  .hero{min-height:0}.hero-grid{grid-template-columns:1fr;min-height:0;padding:56px 0 48px}.hero-art{min-height:490px}.hero-image{left:0}.hero-logo{left:12px}.hero-score{right:12px}
+  .analysis-section{padding:58px 0}.analysis-section::before{top:55px;font-size:42px}
+  .g4,.g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .portfolio-grid,.g2,.risk-layout,.sources-grid{grid-template-columns:1fr}
+  .roadmap{grid-template-columns:1fr 1fr}.gate:nth-child(3){border-left:1px solid var(--line)}.gate::after{display:none}
+  .timeline{grid-template-columns:1fr 1fr;gap:24px 0}.scenario-output{grid-template-columns:1fr 1fr}.force-row{grid-template-columns:130px 95px 1fr}
+}
+@media(max-width:560px){
+  .back-home{padding:7px 8px}.back-home span{display:none}.back-home span:first-child{display:inline}.sections-popover{position:fixed;right:14px;top:61px}
+  .hero-grid{padding-top:42px}.hero-art{min-height:390px}.hero-logo{width:78px;height:78px;padding:12px;top:24px}.hero-logo.wide{left:12px;top:24px;width:150px;height:70px;padding:12px 14px}.hero-score{width:148px;min-height:148px;padding:19px}.hero-score b{font-size:48px}.hero-caption{display:none}
+  .hero-thesis{font-size:28px}.hero-actions{align-items:flex-start;flex-direction:column;gap:12px}
+  .g4,.g3,.portfolio-grid,.roadmap,.scenario-output{grid-template-columns:1fr}
+  .project{min-height:330px}.curator-note{grid-template-columns:1fr;gap:6px}.figure-head{display:block}.figure-source{margin-top:8px;text-align:left}
+  .segment-split{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.force-row{grid-template-columns:1fr;gap:5px}.risk-matrix{grid-template-rows:repeat(3,116px)}
+  .cash-bridge{grid-template-columns:1fr;min-width:0}.bridge-arrow{justify-self:center;line-height:1;transform:rotate(90deg)}
+  .benchmark,.booking-bars{min-width:0}.benchmark-row{grid-template-columns:112px 1fr 42px;gap:8px}.booking-bars{gap:12px;padding-inline:8px}
+  .scenario-control{display:grid;grid-template-columns:repeat(3,1fr)}.scenario-control button{min-width:0}.footer-row{display:block}.footer-row a{display:inline-block;margin-top:12px}
+  .funding-row{grid-template-columns:76px 1fr}.funding-row span,.funding-row b{text-align:left}.funding-row b{grid-column:2}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}.bar-fill,.benchmark-track::after,.booking-col i,.financial-svg .bar{transform:none}.benchmark-track i{transform:translate(-50%,-50%) scale(1)}.financial-svg .line{stroke-dashoffset:0}.financial-svg .dot{opacity:1}}
+</style>
+</head>
+<body>
+<div class="route-progress" id="route-progress" aria-hidden="true"></div>
+
+<nav class="site-nav" aria-label="Vividthree Holdings analysis navigation">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Beyond Our Gallery home">
+      <img src="assets/bog-logo-mark.png" alt="">
+      <strong>Beyond Our Gallery</strong>
+    </a>
+    <div class="primary-nav">
+      <a href="#score">Score</a>
+      <a href="#business">Business</a>
+      <a href="#financials">Financials</a>
+      <a href="#risk">Risk</a>
+      <a href="#outlook">Outlook</a>
+      <details class="sections-menu">
+        <summary>Sections</summary>
+        <div class="sections-popover">
+          <a href="#score">01 Score</a><a href="#business">02 Business</a><a href="#portfolio">03 Portfolio</a><a href="#financials">04 Financials</a><a href="#funding">05 Funding</a><a href="#market">06 Market</a><a href="#demand">07 Demand</a><a href="#frameworks">08 Frameworks</a><a href="#risk">09 Risk</a><a href="#outlook">10 Strategy &amp; outlook</a>
+        </div>
+      </details>
+    </div>
+    <div class="reading-progress" aria-label="Reading progress"><b id="section-current">01</b><span>/ 10</span></div>
+    <a class="back-home" href="index.html"><span aria-hidden="true">&#8592;</span><span>Back home</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow">Strategy &amp; commercial review &middot; SGX: OMK</p>
+      <h1>Vividthree<br>Holdings</h1>
+      <p class="hero-thesis">Award-winning work. Distressed economics.</p>
+      <p>Vividthree has transformed from a VFX studio into a digital-content, PR and music-venue group. Its creative credentials are real; its operating scale, balance sheet and audit trail are not yet investable.</p>
+      <div class="hero-meta"><span>Film &amp; Media</span><span>Evidence grade C</span><span>Updated 8 Oct 2026</span></div>
+      <div class="hero-actions"><a class="button" href="#score">Enter the analysis</a><a class="text-link" href="https://www.vividthree.com/" target="_blank" rel="noopener">Company website &#8599;</a></div>
+    </div>
+    <div class="hero-art" data-reveal>
+      <figure class="hero-image"><img src="assets/vividthree-chingay.jpg" alt="Chingay 2024 Blossom floor projection created by Vividthree"></figure>
+      <div class="hero-logo wide vivid"><img src="assets/vividthree-logo.png" alt="Vividthree logo"></div>
+      <div class="hero-score"><span>Business quality score</span><b>22.6</b><em>Fragile</em></div>
+      <div class="hero-caption">Exhibit 00 &middot; Chingay 2024. Singapore's 230-metre projected parade floor.</div>
+    </div>
+  </div>
+</header>
+
+<div class="reading-layout">
+<main class="analysis-main">
+  <section class="analysis-section" id="score" data-number="01" data-index="1" data-thesis="Vividthree is a funding story more than an operating one." data-evidence="Two audit disclaimers and equity falling from S$20.2m to negative S$4.0m in five years." data-uncertainty="Whether the new *SCAPE venue can earn more than it costs." data-change="An unmodified audit and positive equity lift the score; a missed payment or lost venue right lowers it.">
+    <p class="section-kicker">01 &middot; Evidence &middot; Research score</p>
+    <h2>22.6 out of 100: creativity cannot fund the gap</h2>
+    <p class="lede">Vividthree sits in the Fragile band. Growth optionality contributes almost half the score; Financial Strength contributes just 1.8 points out of 40.</p>
+    <div class="section-grid g2">
+      <figure class="figure" data-reveal>
+        <div class="figure-head"><div><span class="figure-label">Figure 01.1</span><h3>How far is Vividthree from the field?</h3></div><span class="figure-source">Beyond Our Gallery rubric &middot; 8 Oct 2026</span></div>
+        <div class="figure-canvas benchmark">
+          <div class="benchmark-row"><span>Vividthree Holdings</span><div class="benchmark-track" style="--value:22.6"><i></i></div><b>22.6</b></div>
+          <div class="benchmark-row"><span>Kingsmen Creatives</span><div class="benchmark-track" style="--value:59.3"><i></i></div><b>59.3</b></div>
+          <div class="benchmark-row"><span>Lum Chang Creations</span><div class="benchmark-track" style="--value:66"><i></i></div><b>66.0</b></div>
+          <div class="benchmark-row"><span>Winking Studios</span><div class="benchmark-track" style="--value:67.4"><i></i></div><b>67.4</b></div>
+          <div class="benchmark-row"><span>Strong threshold</span><div class="benchmark-track" style="--value:70"><i></i></div><b>70.0</b></div>
+        </div>
+        <figcaption class="curator-note"><b>Curator's note</b><p>The 37-point gap to Kingsmen is balance-sheet and operating evidence, not a judgement on the quality of Vividthree's creative output.</p></figcaption>
+      </figure>
+      <figure class="figure" data-reveal>
+        <div class="figure-head"><div><span class="figure-label">Figure 01.2</span><h3>What lifts and holds back the score?</h3></div><span class="figure-source">Points earned / category weight</span></div>
+        <div class="figure-canvas category-bars">
+          <div class="category-bar"><span>Financial Strength</span><div class="bar-track"><i class="bar-fill" style="--pct:4.5"></i></div><b>1.8 / 40</b></div>
+          <div class="category-bar"><span>Market Position</span><div class="bar-track"><i class="bar-fill" style="--pct:24"></i></div><b>4.8 / 20</b></div>
+          <div class="category-bar"><span>Growth Opportunities</span><div class="bar-track"><i class="bar-fill" style="--pct:44"></i></div><b>11.0 / 25</b></div>
+          <div class="category-bar"><span>Risk Resilience</span><div class="bar-track"><i class="bar-fill" style="--pct:33.3"></i></div><b>5.0 / 15</b></div>
+        </div>
+        <figcaption class="curator-note"><b>Lift / drag</b><p>PR, immersive media and venue options create possibility. Negative equity, cash burn and two audit disclaimers overwhelm it.</p></figcaption>
+      </figure>
+    </div>
+    <div class="callout"><strong>Sensitivity range: 18-27.</strong><p>The next audit opinion matters more than the next MOU. Positive working capital and an unmodified audit can move the score; another funding failure can erase what remains.</p></div>
+
+    <div style="margin-top:30px">
+      <details class="score-details"><summary><span>Financial Strength</span><b>1.8 / 40</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Five-year revenue CAGR</td><td>6</td><td>0</td><td>0.0</td><td>Revenue fell at a 10.1% CAGR.</td></tr><tr><td>Net profit margin</td><td>7</td><td>0</td><td>0.0</td><td>Five straight losses; FY2026 net margin was negative 502%.</td></tr><tr><td>ROIC / ROE</td><td>9</td><td>0</td><td>0.0</td><td>Negative returns and negative equity.</td></tr><tr><td>Cash-flow stability</td><td>9</td><td>1</td><td>1.8</td><td>Operating cash flow was positive in two of five years.</td></tr><tr><td>Balance-sheet strength</td><td>9</td><td>0</td><td>0.0</td><td>S$0.09m cash, S$1.94m borrowings and negative equity.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Market Position</span><b>4.8 / 20</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Brand recognition</td><td>2</td><td>2</td><td>0.8</td><td>Award-winning VFX and immersive projects.</td></tr><tr><td>Competitive advantage</td><td>7</td><td>0</td><td>0.0</td><td>No evidence of durable pricing power or returns.</td></tr><tr><td>Market share</td><td>4</td><td>1</td><td>0.8</td><td>A micro player across content and PR.</td></tr><tr><td>Customer relationships</td><td>5</td><td>2</td><td>2.0</td><td>Recognisable clients, but no recurring order book.</td></tr><tr><td>Geographic reach</td><td>2</td><td>3</td><td>1.2</td><td>Malaysia, Singapore, Japan and other markets.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Growth Opportunities</span><b>11.0 / 25</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Industry growth</td><td>6</td><td>2</td><td>2.4</td><td>Media and location-based entertainment are growing.</td></tr><tr><td>Technology adoption</td><td>4</td><td>2</td><td>1.6</td><td>VFX, projection, VR and anamorphic displays.</td></tr><tr><td>New-market expansion</td><td>6</td><td>2</td><td>2.4</td><td>*SCAPE venues add a new model with unproven economics.</td></tr><tr><td>Revenue diversification</td><td>5</td><td>3</td><td>3.0</td><td>Digital content, PR and out-of-home entertainment.</td></tr><tr><td>Strategic partnerships</td><td>4</td><td>2</td><td>1.6</td><td>Partnerships exist, but mm2 Asia adds counterparty risk.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Risk Resilience</span><b>5.0 / 15</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Economic resilience</td><td>3</td><td>0</td><td>0.0</td><td>Loss-making before and after demand shocks.</td></tr><tr><td>Customer diversification</td><td>4</td><td>2</td><td>1.6</td><td>Projects span clients, but no recurring base is disclosed.</td></tr><tr><td>Technology resilience</td><td>3</td><td>2</td><td>1.2</td><td>Technical capability exists; the economics remain weak.</td></tr><tr><td>Regulatory resilience</td><td>2</td><td>4</td><td>1.6</td><td>Diversified jurisdictions, with Catalist compliance pressure.</td></tr><tr><td>Operational resilience</td><td>3</td><td>1</td><td>0.6</td><td>Funding, partner and key-person risks are material.</td></tr></tbody></table></div></details>
+    </div>
+  </section>
+
+  <section class="analysis-section" id="business" data-number="02" data-index="2" data-thesis="The group sells creative projects but must fund its studio every month." data-evidence="FY2026 gross profit of S$0.98m covered less than half of S$2.20m overheads." data-uncertainty="Whether venue income can become recurring before liquidity runs out." data-change="Gross profit covering overheads for two consecutive halves would alter the operating thesis.">
+    <p class="section-kicker">02 &middot; Evidence &middot; The group</p>
+    <h2>A three-business group without one self-funding engine</h2>
+    <p class="lede">The original VFX studio, a 30%-owned PR firm and a new venue strategy create breadth. None yet produces enough group-level gross profit to carry fixed costs.</p>
+    <div class="section-grid g4" data-reveal>
+      <div class="metric"><b>S$1.87m</b><span>FY2026 revenue &middot; down 53%</span></div><div class="metric"><b>-S$9.37m</b><span>FY2026 net loss</span></div><div class="metric"><b>-S$3.96m</b><span>Shareholders' equity</span></div><div class="metric"><b>S$0.09m</b><span>Cash vs S$1.94m borrowings</span></div>
+    </div>
+    <figure class="figure" data-reveal>
+      <div class="figure-head"><div><span class="figure-label">Figure 02.1</span><h3>Where does the value chain break?</h3></div><span class="figure-source">FY2026 audited figures &middot; BOG analysis</span></div>
+      <div class="figure-canvas cash-bridge">
+        <div class="bridge-step"><strong>Demand</strong><span>Opportunity</span><p>Campaigns, immersive content, PR retainers and music audiences.</p></div><div class="bridge-arrow">&#8594;</div>
+        <div class="bridge-step"><strong>S$1.87m</strong><span>Recognition</span><p>Project revenue, with no disclosed order book or recurring revenue base.</p></div><div class="bridge-arrow">&#8594;</div>
+        <div class="bridge-step"><strong>-S$1.22m</strong><span>Value gap</span><p>S$0.98m gross profit minus S$2.20m of overhead before finance costs.</p></div>
+      </div>
+      <figcaption class="curator-note"><b>Decision lens</b><p>Gross profit failed to cover overheads in every one of the last five years.</p></figcaption>
+    </figure>
+  </section>
+
+  <section class="analysis-section" id="portfolio" data-number="03" data-index="3" data-thesis="The portfolio proves creative capability, not durable economics." data-evidence="Vividthree has delivered VFX, projection and immersive work for recognised public and commercial clients." data-uncertainty="Project awards do not reveal contribution margin, cash collection or repeat rate." data-change="Project-level contribution and repeat-client disclosure would connect the gallery to the accounts.">
+    <p class="section-kicker">03 &middot; Exhibit &middot; Portfolio and segments</p>
+    <h2>The work is vivid. The revenue base is fading.</h2>
+    <p class="lede">Each exhibit is labelled for economic relevance: what the project proves, and what the financial statements still do not.</p>
+    <div class="portfolio-grid">
+      <article class="project" data-reveal><img src="assets/vividthree-chingay.jpg" alt="Chingay 2024 Blossom projected parade floor"><div class="project-info"><span>Singapore &middot; Live experience &middot; 2024</span><h3>Chingay Blossom</h3><p>A 230-metre floor projection demonstrates public-scale execution; contract value and margin are undisclosed.</p></div></article>
+      <article class="project" data-reveal><img src="assets/vividthree-vibransea.jpg" alt="VibranSea immersive underwater artwork"><div class="project-info"><span>Singapore &middot; Immersive media &middot; 2023</span><h3>VibranSea</h3><p>RWS aquarium work connects VFX capability to destination media, but not to recurring ownership economics.</p></div></article>
+      <article class="project" data-reveal><img src="assets/vividthree-disney.webp" alt="Disney Plus Hotstar anamorphic display at Pavilion Kuala Lumpur"><div class="project-info"><span>Malaysia &middot; Digital media &middot; 2021</span><h3>Disney+ Hotstar launch</h3><p>A marquee campaign validates regional client access and anamorphic-content capability.</p></div></article>
+      <article class="project" data-reveal><img src="assets/vividthree-golden-bull.jpg" alt="Golden Bull anamorphic display at Pavilion Kuala Lumpur"><div class="project-info"><span>Malaysia &middot; Out-of-home media &middot; 2021</span><h3>Pavilion Golden Bull</h3><p>High-visibility work generated project leads; it did not create a disclosed recurring base.</p></div></article>
+    </div>
+    <div class="segment-split" style="margin-top:18px" data-reveal>
+      <div class="segment-block art"><b>S$1.12m</b><h3>Public relations</h3><p>Elliot Communications, in which Vividthree owns 30%, supplied about 60% of FY2026 revenue.</p><div class="segment-growth"><span>FY2024 S$2.68m</span><span>FY2026 S$1.12m</span><span>Down 58%</span></div></div>
+      <div class="segment-block"><b>S$0.75m</b><h3>Digital media &amp; live experience</h3><p>The original studio generated only about one-third of group overheads.</p><div class="segment-growth"><span>Down 83% since FY2024</span></div></div>
+    </div>
+  </section>
+
+  <section class="analysis-section" id="financials" data-number="04" data-index="4" data-thesis="Cost cuts improved the underlying loss, but write-downs exposed the capital already lost." data-evidence="Revenue fell 74% in two years while FY2026 write-downs reached S$8.42m." data-uncertainty="Whether remaining assets and receivables can be converted to cash at carrying value." data-change="Revenue above S$4.4m at current margin and no further material write-downs would matter.">
+    <p class="section-kicker">04 &middot; Evidence &middot; Financials</p>
+    <h2>Revenue peaked in FY2024; losses peaked a year later</h2>
+    <p class="lede">The five-year picture is not one bad year. Vividthree lost S$31.8m in aggregate and ended FY2026 with negative equity.</p>
+    <figure class="figure" data-reveal>
+      <div class="figure-head"><div><span class="figure-label">Figure 04.1</span><h3>Did cost cuts repair the economics?</h3></div><span class="figure-source">S$ million &middot; FY March &middot; audited where available</span></div>
+      <div class="figure-canvas">
+        <svg class="financial-svg" viewBox="0 0 700 330" role="img" aria-labelledby="financial-title financial-desc">
+          <title id="financial-title">Revenue and net loss, FY2022 to FY2026</title><desc id="financial-desc">Revenue rose to 7.09 million dollars in FY2024 then fell to 1.87 million in FY2026. Net losses were recorded in all five years.</desc>
+          <line class="gridline" x1="64" y1="60" x2="660" y2="60"/><line class="gridline" x1="64" y1="130" x2="660" y2="130"/><line class="gridline" x1="64" y1="200" x2="660" y2="200"/><line class="gridline" x1="64" y1="270" x2="660" y2="270"/>
+          <rect class="bar" x="92" y="190" width="54" height="80"/><rect class="bar" x="207" y="188" width="54" height="82"/><rect class="bar" x="322" y="70" width="54" height="200"/><rect class="bar" x="437" y="158" width="54" height="112"/><rect class="bar" x="552" y="217" width="54" height="53"/>
+          <path class="line" pathLength="1" d="M119 153 L234 188 L349 217 L464 67 L579 99"/><circle class="dot" cx="119" cy="153" r="6"/><circle class="dot" cx="234" cy="188" r="6"/><circle class="dot" cx="349" cy="217" r="6"/><circle class="dot" cx="464" cy="67" r="6"/><circle class="dot" cx="579" cy="99" r="6"/>
+          <text x="119" y="290" text-anchor="middle">FY22</text><text x="234" y="290" text-anchor="middle">FY23</text><text x="349" y="290" text-anchor="middle">FY24</text><text x="464" y="290" text-anchor="middle">FY25</text><text x="579" y="290" text-anchor="middle">FY26</text>
+          <text x="119" y="182" text-anchor="middle">2.86</text><text x="234" y="180" text-anchor="middle">2.91</text><text x="349" y="62" text-anchor="middle">7.09</text><text x="464" y="150" text-anchor="middle">3.96</text><text x="579" y="209" text-anchor="middle">1.87</text>
+          <text x="119" y="143" text-anchor="middle">-5.83</text><text x="234" y="178" text-anchor="middle">-3.45</text><text x="349" y="207" text-anchor="middle">-1.56</text><text x="464" y="57" text-anchor="middle">-11.55</text><text x="579" y="89" text-anchor="middle">-9.37</text>
+          <text x="64" y="316">Bars: revenue &middot; Line: net loss</text>
+        </svg>
+      </div>
+      <figcaption class="curator-note"><b>Turning point</b><p>Cost cuts narrowed the loss before write-downs from S$2.53m to S$0.96m. That is progress, but not break-even.</p></figcaption>
+    </figure>
+    <figure class="figure" data-reveal>
+      <div class="figure-head"><div><span class="figure-label">Figure 04.2</span><h3>What turned a S$0.96m operating loss into S$9.37m?</h3></div><span class="figure-source">FY2026 &middot; S$ million</span></div>
+      <div class="figure-canvas cash-bridge"><div class="bridge-step"><strong>S$0.96m</strong><span>Loss before write-downs</span><p>After S$1.31m of overhead reductions.</p></div><div class="bridge-arrow">+</div><div class="bridge-step"><strong>S$8.42m</strong><span>Write-downs</span><p>Films S$7.23m, goodwill S$0.64m and credit S$0.55m.</p></div><div class="bridge-arrow">=</div><div class="bridge-step"><strong>S$9.37m</strong><span>Net loss</span><p>About five times FY2026 revenue.</p></div></div>
+    </figure>
+  </section>
+
+  <section class="analysis-section" id="funding" data-number="05" data-index="5" data-thesis="Five years of operating gaps have been financed, not earned." data-evidence="Shares rose from 334m to 602m, with 728m possible if both 2026 bonds convert." data-uncertainty="The bonds convert 65% above the current share price and may need cash repayment in 2028." data-change="One adequately sized equity raise that clears current liabilities would be more credible than another small instrument.">
+    <p class="section-kicker">05 &middot; Evidence &middot; Funding and dilution</p>
+    <h2>Each raise has been cheaper than the last</h2>
+    <p class="lede">Vividthree entered the market at S$0.25. The latest placements and convertible bonds were priced near S$0.016, while the share price stood at S$0.010.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 05.1</span><h3>How much ownership has the funding gap consumed?</h3></div><span class="figure-source">Shares outstanding &middot; millions</span></div><div class="figure-canvas booking-bars"><div class="booking-col"><b>334m</b><i style="--height:46"></i><span>Mar 2021</span></div><div class="booking-col"><b>602m</b><i style="--height:83"></i><span>Mar 2026</span></div><div class="booking-col"><b>728m</b><i style="--height:100"></i><span>Fully diluted</span></div></div><figcaption class="curator-note"><b>Curator's note</b><p>Both 2026 bonds convert at S$0.0165. If the shares do not recover, S$2.0m may instead fall due in mid-2028.</p></figcaption></figure>
+    <div class="funding-list" data-reveal>
+      <div class="funding-row"><time>Sep 2018</time><strong>IPO &middot; 51.8m shares</strong><span>Price S$0.25</span><b>S$12.95m</b></div>
+      <div class="funding-row"><time>Dec 2021</time><strong>Placement &middot; 37.5m shares</strong><span>Price S$0.0583</span><b>S$2.19m</b></div>
+      <div class="funding-row"><time>Sep 2024</time><strong>Placement &middot; 92.6m shares</strong><span>Price S$0.027</span><b>S$2.50m</b></div>
+      <div class="funding-row"><time>Oct 2025</time><strong>Placement &middot; 137.4m shares</strong><span>Price S$0.01615</span><b>S$2.22m</b></div>
+      <div class="funding-row"><time>Jun-Jul 2026</time><strong>Two convertible bonds</strong><span>2% &middot; S$0.0165 conversion</span><b>S$2.00m</b></div>
+    </div>
+    <div class="section-grid g3" data-reveal><div class="metric"><b>S$1.09m</b><span>Borrowings due within 12 months</span></div><div class="metric"><b>S$3.27m</b><span>Net current liabilities</span></div><div class="metric"><b>S$0.08m</b><span>Bond cash left at 31 Aug 2026</span></div></div>
+  </section>
+
+  <section class="analysis-section" id="market" data-number="06" data-index="6" data-thesis="Vividthree has the best gross margin in the comparison set and the least gross profit." data-evidence="A 52.7% margin produced only S$0.98m, less than half the cost of running the group." data-uncertainty="The S$6m market value reflects survival risk more than conventional valuation." data-change="Scale above break-even matters before any earnings multiple becomes useful.">
+    <p class="section-kicker">06 &middot; Evidence &middot; Market and peers</p>
+    <h2>Margin is not the problem. Scale is.</h2>
+    <p class="lede">A high percentage on a tiny revenue base does not fund a public company. Vividthree's S$0.98m gross profit cannot cover S$2.20m of overhead.</p>
+    <figure class="figure" data-reveal>
+      <div class="figure-head"><div><span class="figure-label">Figure 06.1</span><h3>Who combines scale with profitability?</h3></div><span class="figure-source">Illustrative peer map &middot; latest reported year</span></div>
+      <div class="figure-canvas"><div class="peer-plot" aria-label="Peer comparison of revenue scale and net profitability"><span class="axis-label y">Net profitability rises</span><span class="axis-label x">Revenue scale rises &#8594;</span><div class="peer-point" style="--x:9%;--y:8%"><i></i><span>Vividthree &middot; -502%</span></div><div class="peer-point" style="--x:27%;--y:18%"><i></i><span>UnUsUaL &middot; -20.9%</span></div><div class="peer-point keywords" style="--x:40%;--y:50%"><i></i><span>Winking &middot; 0.7%</span></div><div class="peer-point keywords" style="--x:63%;--y:82%"><i></i><span>LCC &middot; 21.9%</span></div><div class="peer-point keywords" style="--x:86%;--y:60%"><i></i><span>Kingsmen &middot; 3.7%</span></div></div></div>
+      <figcaption class="curator-note"><b>Valuation lens</b><p>At S$0.010, market value is about S$6m and enterprise value about S$7.9m, or 4.2 times FY2026 revenue. The multiple is not cheap when revenue is shrinking and equity is negative.</p></figcaption>
+    </figure>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>S$0.010</b><span>Share price &middot; 8 Oct 2026</span></div><div class="metric"><b>S$6m</b><span>Market value</span></div><div class="metric"><b>4.2x</b><span>Enterprise value / revenue</span></div><div class="metric"><b>-96%</b><span>Since S$0.25 IPO</span></div></div>
+  </section>
+
+  <section class="analysis-section" id="demand" data-number="07" data-index="7" data-thesis="Demand exists across PR, immersive campaigns and music, but revenue arrives by project." data-evidence="Group revenue fell from S$7.09m to S$1.87m in two years with no disclosed order book." data-uncertainty="The *SCAPE Livehouse opens into a cash-constrained group under a distressed partner's agreement." data-change="Two quarters of positive venue contribution and disclosed utilisation would validate the recurring-revenue thesis.">
+    <p class="section-kicker">07 &middot; Evidence &middot; Demand economics</p>
+    <h2>Three demand engines, none yet carrying the studio</h2>
+    <p class="lede">PR work is short-cycle, digital experience projects are lumpy and venues require upfront fit-out. The clocks differ; the monthly payroll does not.</p>
+    <div class="timeline" data-reveal><article class="timeline-step"><b>1-6 months</b><h3>PR retainers</h3><p>Elliot supplied about 60% of FY2026 revenue across Singapore and Malaysia.</p></article><article class="timeline-step"><b>3-12 months</b><h3>Digital campaigns</h3><p>VFX, launches and immersive displays convert through project awards.</p></article><article class="timeline-step"><b>0-6 months</b><h3>Venue ramp</h3><p>*SCAPE Music Studio is open; Livehouse was due in Q4 2026.</p></article><article class="timeline-step"><b>Every month</b><h3>Fixed cost</h3><p>S$2.20m of annual overhead remains even after a 37% cut.</p></article></div>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 07.1</span><h3>What revenue would cover today's cost base?</h3></div><span class="figure-source">Arithmetic on FY2026 figures</span></div><div class="figure-canvas cash-bridge"><div class="bridge-step"><strong>S$2.33m</strong><span>Overhead + finance</span><p>The annual cash-cost hurdle before growth investment.</p></div><div class="bridge-arrow">&divide;</div><div class="bridge-step"><strong>52.7%</strong><span>Gross margin</span><p>FY2026's strongest percentage in five years.</p></div><div class="bridge-arrow">=</div><div class="bridge-step"><strong>~S$4.4m</strong><span>Break-even revenue</span><p>About 2.4 times FY2026 revenue.</p></div></div><figcaption class="curator-note"><b>Mechanism</b><p>At a 50% margin, each extra S$1m of revenue cuts the loss by about S$0.5m.</p></figcaption></figure>
+  </section>
+
+  <section class="analysis-section" id="frameworks" data-number="08" data-index="8" data-thesis="Creative credits form a reputation asset; they have not formed an economic moat." data-evidence="All five industry forces remain unfavourable, while venue rights are tied to an mm2 Asia agreement." data-uncertainty="Whether exclusive *SCAPE rights can survive partner distress and produce pricing power." data-change="Recurring venue economics and repeat-client data would make the moat measurable.">
+    <p class="section-kicker">08 &middot; Decision &middot; Strategic frameworks</p>
+    <h2>A creative reputation without financial protection</h2>
+    <p class="lede">Twenty years of credits, Elliot's client base and three-year *SCAPE operator rights are useful assets. None yet protects group cash flow.</p>
+    <div class="force-grid" data-reveal><div class="force-row"><b>Competitive rivalry</b><span>High</span><p>Content, VFX and PR compete with larger agencies and specialist studios.</p></div><div class="force-row"><b>Buyer power</b><span>High</span><p>Project clients can tender work and impose payment terms.</p></div><div class="force-row"><b>Supplier power</b><span>Moderate-high</span><p>Creative talent and venue staff must be retained before revenue arrives.</p></div><div class="force-row"><b>New entrants</b><span>High</span><p>Production tools are increasingly accessible and portfolios travel globally.</p></div><div class="force-row"><b>Substitutes</b><span>High</span><p>Clients can choose traditional media, in-house teams or lower-cost digital formats.</p></div></div>
+    <div class="callout"><strong>Defensible: credits, regional clients and temporary venue rights.</strong><p>Exposed: every opportunity that requires cash before delivery, especially venue fit-out, staffing and the 2028 bond maturities.</p></div>
+  </section>
+
+  <section class="analysis-section" id="risk" data-number="09" data-index="9" data-thesis="Funding risk is the operating risk." data-evidence="Cash was S$0.09m against S$3.27m of net current liabilities and S$1.09m of near-term borrowings." data-uncertainty="Strategic-investor talks may not close on time or on terms that preserve existing ownership." data-change="A S$3-4m equity raise, cleared overdue bills and an unmodified audit would reset the matrix.">
+    <p class="section-kicker">09 &middot; Decision &middot; Risk matrix</p>
+    <h2>Seven risks, led by survival capital</h2>
+    <p class="lede">Select a risk to inspect its trigger and mitigation. The matrix uses written labels as well as position so meaning does not depend on colour.</p>
+    <div class="risk-layout">
+      <div><div class="risk-matrix" aria-label="Likelihood and impact matrix">
+        <div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div>
+        <button class="risk-dot" style="left:74%;top:13%" data-risk="funding" aria-pressed="true">Funding</button><button class="risk-dot" style="left:59%;top:24%" data-risk="partner" aria-pressed="false">Partner</button><button class="risk-dot" style="left:69%;top:38%" data-risk="venue" aria-pressed="false">Venue</button><button class="risk-dot" style="left:78%;top:51%" data-risk="revenue" aria-pressed="false">Revenue</button><button class="risk-dot" style="left:72%;top:67%" data-risk="dilution" aria-pressed="false">Dilution</button><button class="risk-dot" style="left:48%;top:35%" data-risk="reporting" aria-pressed="false">Reporting</button><button class="risk-dot" style="left:46%;top:76%" data-risk="people" aria-pressed="false">People</button>
+      </div><div class="matrix-label">Likelihood &#8594; &middot; Impact rises upward</div></div>
+      <aside class="risk-detail" aria-live="polite"><span class="risk-level" id="risk-level">High likelihood &middot; High impact</span><h3 id="risk-title">Funding gap</h3><dl><dt>What goes wrong</dt><dd id="risk-desc">Available cash runs out before a sufficiently large equity raise closes.</dd><dt>Trigger</dt><dd id="risk-trigger">Delayed strategic funding, overdue obligations or another going-concern qualification.</dd><dt>Mitigation</dt><dd id="risk-mitigation">Raise S$3-4m of equity in one round and clear near-term liabilities.</dd></dl></aside>
+    </div>
+  </section>
+
+  <section class="analysis-section" id="outlook" data-number="10" data-index="10" data-thesis="Vividthree does not need another idea; it needs eighteen months of funding and one venue that pays." data-evidence="Even the bull case remains loss-making before write-downs and requires about S$1.6m of funding." data-uncertainty="Venue capex, operating cost and rights durability are not sufficiently disclosed." data-change="Complete the four gates in order: fund, prove, fit costs, then restore reporting credibility.">
+    <p class="section-kicker">10 &middot; Decision &middot; Strategy &amp; outlook</p>
+    <h2>Four gates, in the order a distressed company must take them</h2>
+    <p class="lede">Funding comes first. A venue launch without liquidity or cost discipline would add activity without solving the business.</p>
+    <div class="roadmap" data-reveal><article class="gate"><span class="gate-num">01</span><h3>Fund 18 months</h3><p>Raise S$3-4m of equity and clear overdue bills.</p><div class="gate-exit">Exit proof: positive working capital and no going-concern disclaimer</div></article><article class="gate"><span class="gate-num">02</span><h3>Prove one venue</h3><p>Open Livehouse and report monthly use and contribution.</p><div class="gate-exit">Exit proof: two quarters of positive venue contribution</div></article><article class="gate"><span class="gate-num">03</span><h3>Fit costs to gross profit</h3><p>Drop subscale lines and size overheads to what the portfolio earns.</p><div class="gate-exit">Exit proof: EBITDA at or above zero</div></article><article class="gate"><span class="gate-num">04</span><h3>Report like a going concern</h3><p>File on time and disclose segment cash flow and Elliot economics.</p><div class="gate-exit">Exit proof: an unmodified audit opinion</div></article></div>
+
+    <p class="section-kicker" style="margin-top:54px">Interactive FY2027 scenario</p>
+    <h2 style="font-size:clamp(31px,4vw,50px)">How much funding does each path consume?</h2>
+    <div class="scenario-control" role="group" aria-label="FY2027 scenario selector"><button type="button" data-scenario="bear" aria-pressed="false">Bear</button><button type="button" data-scenario="base" aria-pressed="true">Base</button><button type="button" data-scenario="bull" aria-pressed="false">Bull</button></div>
+    <div class="scenario-output" aria-live="polite"><div class="scenario-lead"><span>Selected case</span><strong id="scenario-name">Base</strong><p id="scenario-note">Revenue recovers 18% with a 45% margin; venue contribution is neutral and the group remains loss-making.</p></div><div class="scenario-stat"><span>FY2027 revenue</span><strong id="scenario-revenue">S$2.20m</strong><p>Illustrative model</p></div><div class="scenario-stat"><span>Pre-write-down loss</span><strong id="scenario-growth">-S$1.18m</strong><p id="scenario-funding">Funding need ~S$2.3m</p></div><div class="scenario-stat"><span>Score sensitivity</span><strong id="scenario-score">22.6</strong><p id="scenario-score-note">Current score</p></div></div>
+    <div class="callout"><strong>Final view: the company needs proof of solvency before proof of concept.</strong><p>The *SCAPE plan may be strategically sensible. It cannot carry an S$8m asset write-down history, negative equity and a near-empty cash balance without fresh capital and much tighter disclosure.</p></div>
+  </section>
+</main>
+
+<aside class="thesis-rail" aria-label="Current research takeaway">
+  <span class="rail-label">Research takeaway</span>
+  <div class="rail-item"><span>Current thesis</span><strong id="rail-thesis">Vividthree is a funding story more than an operating one.</strong></div>
+  <div class="rail-item"><span>Strongest evidence</span><strong id="rail-evidence">Two audit disclaimers and equity falling from S$20.2m to negative S$4.0m in five years.</strong></div>
+  <div class="rail-item"><span>Main uncertainty</span><strong id="rail-uncertainty">Whether the new *SCAPE venue can earn more than it costs.</strong></div>
+  <div class="rail-item"><span>What changes the score</span><strong id="rail-change">An unmodified audit and positive equity lift the score; a missed payment or lost venue right lowers it.</strong></div>
+</aside>
+</div>
+
+<section class="sources" id="sources"><div class="wrap sources-grid"><div><p class="eyebrow" style="color:var(--pink)">Sources &amp; evidence</p><h2>What this analysis rests on</h2><ul><li>Vividthree FY2022-FY2026 results and FY2026 annual report</li><li>SGX placement, bond, management and filing announcements</li><li>Vividthree Holdings and Vividthree Productions official materials</li><li>Sector and peer data cited in the supplied strategic analysis</li><li>Project images from Vividthree's official portfolio</li></ul><p>Evidence grade C. The audit disclaimer, unresolved financing verification, absent order book and limited segment cash-flow disclosure materially constrain confidence.</p></div><div class="disclaimer"><p class="eyebrow" style="color:var(--pink)">Research standard</p><p>Figures are in Singapore dollars and financial years end 31 March unless stated. Market data are as of 8 October 2026. This is an independent strategy and commercial review based on public information and the supplied research, not an investment recommendation or price target.</p><p>Project images are presented as analytical exhibits; image rights remain with their respective owners.</p></div></div></section>
+
+<footer class="page-footer"><div class="wrap footer-row"><span>Beyond Our Gallery &middot; Vividthree Holdings Ltd. (SGX: OMK) &middot; Jiarun Yang &middot; 8 October 2026</span><a href="index.html">Back to company gallery</a></div></footer>
+
+<script>
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const revealItems=document.querySelectorAll('[data-reveal], .figure');
+if(reduceMotion){revealItems.forEach(el=>el.classList.add('is-visible'));}else{
+  const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}}),{threshold:.16,rootMargin:'0px 0px -45px'});
+  revealItems.forEach(el=>revealObserver.observe(el));
+}
+
+const sections=[...document.querySelectorAll('.analysis-section')];
+const rail={thesis:document.getElementById('rail-thesis'),evidence:document.getElementById('rail-evidence'),uncertainty:document.getElementById('rail-uncertainty'),change:document.getElementById('rail-change')};
+const current=document.getElementById('section-current');
+const sectionObserver=new IntersectionObserver(entries=>{
+  const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+  if(!visible)return;
+  const s=visible.target;
+  current.textContent=String(s.dataset.index).padStart(2,'0');
+  rail.thesis.textContent=s.dataset.thesis;rail.evidence.textContent=s.dataset.evidence;rail.uncertainty.textContent=s.dataset.uncertainty;rail.change.textContent=s.dataset.change;
+},{threshold:[.15,.3,.5],rootMargin:'-18% 0px -52%'});
+sections.forEach(s=>sectionObserver.observe(s));
+
+const route=document.getElementById('route-progress');
+function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;route.style.width=(max>0?scrollY/max*100:0)+'%';}
+addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+document.querySelectorAll('.sections-popover a').forEach(a=>a.addEventListener('click',()=>a.closest('details').removeAttribute('open')));
+
+const risks={
+  funding:{level:'High likelihood / High impact',title:'Funding gap',desc:'Available cash runs out before a sufficiently large equity raise closes.',trigger:'Delayed strategic funding, overdue obligations or another going-concern qualification.',mitigation:'Raise S$3-4m of equity in one round and clear near-term liabilities.'},
+  partner:{level:'Medium-high likelihood / High impact',title:'Partner distress',desc:'Venue rights or operating support weaken because the underlying agreement involves suspended shareholder mm2 Asia.',trigger:'A restructuring, amendment or challenge to the *SCAPE rights.',mitigation:'Secure direct, transferable operating rights and disclose the legal chain.'},
+  venue:{level:'Medium-high likelihood / High impact',title:'Venue execution',desc:'Livehouse fit-out and staffing consume cash without positive contribution.',trigger:'Opening delay, undisclosed capex overrun or negative contribution after two quarters.',mitigation:'Stage investment, publish utilisation and gate expansion on venue-level cash profit.'},
+  revenue:{level:'High likelihood / Medium-high impact',title:'Revenue erosion',desc:'Project and PR revenue continue falling faster than costs can be removed.',trigger:'Trailing revenue falls below S$1.5m or studio revenue declines again.',mitigation:'Prioritise gross profit, exit subscale lines and secure recurring retainers.'},
+  dilution:{level:'High likelihood / Medium impact',title:'Dilution',desc:'New capital is raised at progressively lower prices or bonds convert into 126m shares.',trigger:'A raise below S$0.016 or full bond conversion without operating improvement.',mitigation:'Raise one adequate equity round tied to explicit operating milestones.'},
+  reporting:{level:'Medium likelihood / Medium-high impact',title:'Reporting and listing',desc:'Late filing or another disclaimer reduces access to capital and confidence.',trigger:'A further AGM delay, unresolved audit evidence or modified opinion.',mitigation:'Fund finance controls, verify balances early and publish segment cash flows.'},
+  people:{level:'Medium likelihood / Medium impact',title:'Key people',desc:'Leadership churn disrupts a small organisation already executing a turnaround.',trigger:'Further senior departures after the 2026 CFO and COO changes.',mitigation:'Tie retention to funded milestones and document client and venue ownership.'}
+};
+document.querySelectorAll('[data-risk]').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('[data-risk]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');
+  const r=risks[btn.dataset.risk];document.getElementById('risk-level').textContent=r.level;document.getElementById('risk-title').textContent=r.title;document.getElementById('risk-desc').textContent=r.desc;document.getElementById('risk-trigger').textContent=r.trigger;document.getElementById('risk-mitigation').textContent=r.mitigation;
+}));
+
+const scenarios={
+  bear:{name:'Bear',revenue:'S$1.50m',growth:'-S$2.07m',funding:'Funding need ~S$3.2m',score:'18.0',scoreNote:'Low end of sensitivity',note:'Revenue falls 20%, margin slips to 40% and the venue loses S$0.30m.'},
+  base:{name:'Base',revenue:'S$2.20m',growth:'-S$1.18m',funding:'Funding need ~S$2.3m',score:'22.6',scoreNote:'Current score',note:'Revenue recovers 18% with a 45% margin; venue contribution is neutral and the group remains loss-making.'},
+  bull:{name:'Bull',revenue:'S$3.00m',growth:'-S$0.47m',funding:'Funding need ~S$1.6m',score:'27.0',scoreNote:'High end of sensitivity',note:'Revenue grows 61%, margin reaches 50% and the venue contributes S$0.20m, but break-even still stays out of reach.'}
+};
+document.querySelectorAll('[data-scenario]').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('[data-scenario]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');const s=scenarios[btn.dataset.scenario];
+  document.getElementById('scenario-name').textContent=s.name;document.getElementById('scenario-revenue').textContent=s.revenue;document.getElementById('scenario-growth').textContent=s.growth;document.getElementById('scenario-funding').textContent=s.funding;document.getElementById('scenario-score').textContent=s.score;document.getElementById('scenario-score-note').textContent=s.scoreNote;document.getElementById('scenario-note').textContent=s.note;
+}));
+</script>
+</body>
+</html>

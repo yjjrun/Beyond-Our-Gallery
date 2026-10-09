@@ -1084,7 +1084,7 @@ body.modal-open::before{
         <div>
           <p class="eyebrow">The company atlas</p>
           <h2 class="section-title" id="gallery-title">Explore the companies</h2>
-          <p class="section-copy">Eight companies, six sectors and one clearer view of Singapore's creative economy.</p>
+          <p class="section-copy">Nine companies, six sectors and one clearer view of Singapore's creative economy.</p>
         </div>
         <div class="gallery-controls">
           <label class="gallery-search" aria-label="Search the company gallery">
@@ -1100,7 +1100,7 @@ body.modal-open::before{
             <button class="filter-btn" type="button" data-filter="Film & Media">Film &amp; Media</button>
             <button class="filter-btn" type="button" data-filter="Live Events">Live Events</button>
           </div>
-          <div class="results-note" id="results-note" aria-live="polite">Showing 8 companies</div>
+          <div class="results-note" id="results-note" aria-live="polite">Showing 9 companies</div>
         </div>
       </div>
 
@@ -1170,6 +1170,29 @@ body.modal-open::before{
             <div class="card-foot">
               <span class="updated">Updated 2 Oct 2026</span>
               <a class="text-link" href="winking-studios.html">View analysis <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="company-card" data-sector="Film & Media" data-company="Vividthree Holdings OMK film media VFX immersive public relations PR live music venue SCAPE">
+          <div class="company-media">
+            <img src="assets/vividthree-chingay.jpg" alt="Chingay 2024 Blossom floor projection created by Vividthree">
+            <span class="sector-badge">Film &amp; Media</span>
+            <span class="card-score"><span>Score</span><b>22.6</b></span>
+          </div>
+          <div class="company-body">
+            <span class="ticker">SGX: OMK</span>
+            <h3>Vividthree Holdings</h3>
+            <p>Award-winning digital-content and PR group whose venue plan cannot outrun its funding gap.</p>
+            <div class="mini-scores" aria-label="Miniature research scores">
+              <span class="mini-score"><span>Fin</span><i style="--mini:5"></i><b>5</b></span>
+              <span class="mini-score"><span>Mkt</span><i style="--mini:24"></i><b>24</b></span>
+              <span class="mini-score"><span>Grw</span><i style="--mini:44"></i><b>44</b></span>
+              <span class="mini-score"><span>Risk</span><i style="--mini:33"></i><b>33</b></span>
+            </div>
+            <div class="card-foot">
+              <span class="updated">Updated 8 Oct 2026</span>
+              <a class="text-link" href="vividthree-holdings.html">View analysis <i data-lucide="arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </article>
@@ -1336,14 +1359,14 @@ body.modal-open::before{
             <p>Net cash and heritage credentials are proven. FY2026's 35.5% gross margin is not yet.</p>
           </div>
         </a>
-        <article class="research-card">
-          <img src="assets/rci-singtel.jpg" alt="Digital display in a corporate retail interior">
+        <a class="research-card" href="vividthree-holdings.html">
+          <img src="assets/vividthree-vibransea.jpg" alt="VibranSea immersive underwater artwork from Vividthree's portfolio">
           <div>
-            <p class="eyebrow">Thematic insight</p>
-            <h3>Why experience design is more than decoration</h3>
-            <p>Physical spaces are becoming measurable media channels for brands, institutions and tourism operators.</p>
+            <p class="eyebrow">Company analysis</p>
+            <h3>Vividthree: can the venue outrun the funding gap?</h3>
+            <p>A 52.7% gross margin cannot offset shrinking revenue, negative equity and two audit disclaimers.</p>
           </div>
-        </article>
+        </a>
         <article class="research-card">
           <img src="assets/rws-concept-rendering.jpg" alt="Concept rendering of an attraction interior">
           <div>
@@ -1550,7 +1573,10 @@ body.modal-open::before{
      img:"assets/winking-silver-and-blood.webp",alt:"Silver and Blood underwater game artwork from Winking Studios' portfolio"},
     {name:"Lum Chang Creations",thesis:"A licensed heritage niche with exceptional finances, priced as if FY2026's 35.5% gross margin will not repeat.",
      pills:["SGX: LCC","Built Environment","Updated 6 Oct 2026"],score:"66.0",band:"Satisfactory",href:"lum-chang-creations.html",
-     img:"assets/lum-chang-temasek-shophouse.webp",alt:"Restored Temasek Shophouse facades along Orchard Road"}
+     img:"assets/lum-chang-temasek-shophouse.webp",alt:"Restored Temasek Shophouse facades along Orchard Road"},
+    {name:"Vividthree Holdings",thesis:"Award-winning content and a venue-led turnaround cannot yet offset negative equity, two audit disclaimers and an immediate funding gap.",
+     pills:["SGX: OMK","Film & Media","Updated 8 Oct 2026"],score:"22.6",band:"Fragile",href:"vividthree-holdings.html",
+     img:"assets/vividthree-chingay.jpg",alt:"Chingay 2024 Blossom floor projection created by Vividthree"}
   ];
   const elTitle=document.getElementById("featured-title"),
         elThesis=document.getElementById("feature-thesis"),
