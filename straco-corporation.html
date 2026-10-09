@@ -7,7 +7,7 @@
 <meta name="description" content="Beyond Our Gallery: an independent strategy and commercial review of Straco Corporation (SGX: S85) — asset economics, capital allocation and the path beyond recovery. By Jiarun Yang, 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=League+Spartan:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/bog-logo-mark.png">
 <style>
 :root{
@@ -341,23 +341,239 @@ nav a.navexpand:hover{color:var(--sum-accent-hi)}
   .expand > summary,nav a.navexpand{display:none !important}
   .expand-body{display:block !important}
 }
+
+/* ============ 2026 editorial refresh ============ */
+:root{
+  --page:#fbf8f6;
+  --surface:#fff;
+  --surface2:#f5ecef;
+  --ink:#092f2d;
+  --ink2:#3f5653;
+  --muted:#6f7d7a;
+  --pagemuted:#73817e;
+  --line:rgba(9,47,45,.15);
+  --ring:rgba(9,47,45,.15);
+  --grid:#e6dadd;
+  --baseline:#ccbfc4;
+  --deep:#073b37;
+  --deep2:#0b4c47;
+  --wine:#98234f;
+  --pink:#ec8bae;
+  --pinksoft:#f8e8ee;
+  --orange:#f29927;
+  --orangelight:#ffb44c;
+  --orangedeep:#b66000;
+  --orangetext:#a64d00;
+  --white:#fff;
+  --lightink:#dbe9e6;
+  --s1:#98234f;--s2:#0d736d;--s3:#f29927;--s4:#785a91;
+  --seq250:#efa9c0;--seq400:#c24f78;--seq550:#7f163c;
+  --editorial:"Cormorant Garamond",Georgia,serif;
+  --sum-accent:var(--wine);
+  --sum-accent-soft:rgba(152,35,79,.3);
+  --sum-accent-ink:#fff;
+  --sum-accent-hi:#6f173a;
+  --sum-rule:rgba(9,47,45,.24);
+  --sum-divider:rgba(9,47,45,.14);
+  --sum-value:var(--ink);
+  --sum-text:var(--ink2);
+  --sum-label-c:var(--muted);
+}
+html{background:var(--page)}
+body{background:var(--page);color:var(--ink);letter-spacing:0}
+.route-progress{position:fixed;z-index:100;left:0;top:0;width:0;height:3px;background:linear-gradient(90deg,var(--wine),var(--pink),var(--orange));box-shadow:0 0 13px rgba(236,139,174,.45)}
+.wrap{max-width:1220px}
+nav{background:rgba(255,253,251,.94);border-color:var(--line);box-shadow:none}
+nav .wrap{height:68px;overflow:visible;gap:20px}
+nav .brand{margin-right:auto;color:var(--ink);text-decoration:none}
+nav .brand img{width:34px;height:34px;object-fit:cover;border:1px solid var(--line)}
+nav .brand span{font-family:var(--body);font-size:12px;font-weight:900;letter-spacing:.1em}
+nav .brand i{display:none}
+nav a{color:var(--ink2);font-size:12px;font-weight:750}
+nav a:hover,nav a:focus-visible{color:var(--wine)}
+nav a.navhome{border-color:rgba(152,35,79,.35);border-radius:2px;color:var(--wine);padding:7px 11px;text-transform:uppercase;letter-spacing:.06em;font-size:10px}
+nav a.navhome:hover{background:var(--wine);border-color:var(--wine)}
+.navsections{position:relative}
+.navsections>summary{list-style:none;cursor:pointer;color:var(--ink);font-size:12px;font-weight:800}
+.navsections>summary::-webkit-details-marker{display:none}
+.navsections>summary::after{content:" +";color:var(--wine)}
+.navsections[open]>summary::after{content:" -"}
+.navpopover{position:absolute;right:0;top:35px;width:235px;padding:10px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 60px rgba(9,47,45,.2)}
+.navpopover a{display:block;padding:7px 9px}
+.navpopover a:hover,.navpopover a:focus-visible{background:var(--pinksoft)}
+.navpopover .navexpand{margin-top:6px;padding-top:10px;border-top:1px solid var(--line);color:var(--wine)}
+.readingprogress{display:flex;gap:6px;align-items:center;padding-left:15px;border-left:1px solid var(--line);color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.12em}
+.readingprogress b{color:var(--wine)}
+
+header.hero{
+  position:relative;display:flex;align-items:flex-end;min-height:680px;padding:92px 0 72px;
+  border-bottom:0;color:#fff;
+  background:
+    linear-gradient(90deg,rgba(3,37,34,.96) 0%,rgba(3,37,34,.82) 43%,rgba(3,37,34,.18) 75%,rgba(3,37,34,.28) 100%),
+    url("assets/straco-flyer-skyline.webp") center 58%/cover no-repeat;
+}
+header.hero::after{content:"";position:absolute;inset:auto 0 0;height:3px;background:linear-gradient(90deg,var(--wine),var(--pink),var(--orange))}
+.hero .wrap{position:relative;z-index:1;grid-template-columns:minmax(0,1fr) 250px;gap:70px}
+.kicker{color:#ffc35f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+h1{max-width:780px;color:#fff;font-size:clamp(58px,7.3vw,105px);line-height:.82}
+h1 .rule{width:120px;height:4px;background:var(--pink)}
+.hero .sub{max-width:670px;color:#e5efed;font-size:16px}
+.hero .byline{color:#ffc35f;font-size:13px}.hero .byline span{color:#c5d8d5;font-size:11px}
+.brandcircle{max-width:230px;border:1px solid rgba(255,255,255,.3);box-shadow:0 28px 80px rgba(0,0,0,.32);background:rgba(255,255,255,.92)}
+.tickerchip{bottom:12px;border-radius:2px;background:var(--wine);font-size:11px}
+
+section{position:relative;overflow:hidden;padding:72px 0;border-color:var(--line);background:#fff;scroll-margin-top:67px}
+section .wrap{position:relative;z-index:1}
+.slabel{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.18em}
+.slabel::before{color:var(--muted)}
+h2{max-width:980px;color:var(--ink);font-family:var(--editorial);font-size:clamp(38px,5vw,61px);line-height:.94;font-weight:700}
+h3{font-family:var(--editorial);font-size:25px}
+.lede{color:var(--ink2)}
+#score,#financials,#component-scoring{background:var(--page)}
+#valuation,#risk{background:var(--pinksoft)}
+#overview,#frameworks,#outlook{background:#fff}
+#assets,#demand,#strategy{background:var(--deep);color:#fff}
+#assets::after,#demand::after,#strategy::after{
+  content:"";position:absolute;inset:0 0 auto auto;width:38%;height:560px;pointer-events:none;
+  background:linear-gradient(90deg,var(--deep),rgba(7,59,55,.16)),var(--section-image) center/cover no-repeat;
+  opacity:.42;
+}
+#assets{--section-image:url("assets/straco-soa.jpg")}
+#demand{--section-image:url("assets/straco-flyer-capsule.jpg")}
+#strategy{--section-image:url("assets/straco-flyer-skyline.webp")}
+#assets h2,#demand h2,#strategy h2,#assets h3,#demand h3,#strategy h3{color:#fff}
+#assets>.wrap>h2,#demand>.wrap>h2,#strategy>.wrap>h2{max-width:820px}
+#assets .slabel,#demand .slabel,#strategy .slabel{color:var(--pink)}
+#assets .slabel::before,#demand .slabel::before,#strategy .slabel::before{color:#a8c6c1}
+#assets .tldr-text,#demand .tldr-text,#strategy .tldr-text{color:#dceae7}
+#assets .keyfigs,#demand .keyfigs,#strategy .keyfigs{border-color:rgba(255,255,255,.25)}
+#assets .keyfigs li,#demand .keyfigs li,#strategy .keyfigs li{border-color:rgba(255,255,255,.15)}
+#assets .keyfigs b,#demand .keyfigs b,#strategy .keyfigs b{color:#fff}
+#assets .keyfigs span,#demand .keyfigs span,#strategy .keyfigs span{color:#b8ceca}
+#assets .expand>summary,#demand .expand>summary,#strategy .expand>summary{color:#ffd1df;border-color:rgba(255,209,223,.5)}
+#assets .expand>summary:hover,#demand .expand>summary:hover,#strategy .expand>summary:hover{background:var(--pink);color:var(--deep)}
+#assets .srcline,#demand .srcline,#strategy .srcline{color:#b8ceca}
+
+.tldr{max-width:980px;margin-top:20px}.tldr-text{max-width:880px;font-size:16px}
+.keyfigs{margin-top:24px}
+.keyfigs li{padding-top:14px}.keyfigs b{font-size:30px}
+.expand>summary{border-radius:2px;padding:11px 16px}
+.card,figure.chart,.tblwrap,.herostrip,.verdict{border-radius:6px}
+.card{box-shadow:0 10px 30px rgba(9,47,45,.08)}
+.card.outline{background:var(--deep);box-shadow:none}
+.card .tag,.readthru b,.showrev b,.own b{color:var(--wine)}
+.card.outline .tag{color:var(--pink)}
+figure.chart{box-shadow:0 12px 38px rgba(9,47,45,.1)}
+thead th{background:var(--deep)}
+.scoredial{background:conic-gradient(var(--wine) calc(var(--score)*1%),#e6dadd 0);border-radius:50%}
+.scoredial::before{background:#fff}
+.catbar i,.barrow i{border-radius:0;background:linear-gradient(90deg,var(--wine) calc(var(--pct)*1%),#e6dadd 0)}
+.barrow.alt i{background:linear-gradient(90deg,var(--deep2) calc(var(--pct)*1%),#e6dadd 0)}
+.verdict{background:var(--deep);box-shadow:none}
+.verdict .tag,.proofs b{color:var(--pink)}
+.proofs div{border-radius:2px}
+
+.asset-rail{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:32px}
+.asset-rail figure{position:relative;height:250px;overflow:hidden;background:#041f1d}
+.asset-rail img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease,filter .55s ease}
+.asset-rail figure::after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(3,28,26,.94))}
+.asset-rail figure:hover img{transform:scale(1.04);filter:saturate(1.12)}
+.asset-rail figcaption{position:absolute;z-index:1;inset:auto 15px 14px}
+.asset-rail figcaption b{display:block;color:#fff;font:700 28px/1 var(--editorial)}
+.asset-rail figcaption span{display:block;margin-top:5px;color:#ffd2df;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+
+.summary-canvas{display:grid;grid-template-columns:220px minmax(0,1fr);gap:26px;margin-top:30px;padding:24px;border:1px solid var(--line);background:#fff}
+.summary-canvas figcaption span{display:block;color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.summary-canvas figcaption b{display:block;margin-top:6px;font:700 24px/1 var(--editorial)}
+.summary-canvas figcaption em{display:block;margin-top:8px;color:var(--muted);font-size:10px;font-style:normal;text-transform:uppercase}
+.summary-canvas>p{grid-column:1/-1;margin:0;padding-top:14px;border-top:1px solid var(--line);color:var(--ink2);font-size:12px}
+.summary-canvas>p strong{color:var(--wine)}
+.summary-bars{display:grid;grid-template-columns:repeat(4,1fr);align-items:end;gap:12px;height:176px;border-bottom:1px solid var(--line)}
+.summary-bars div{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px}
+.summary-bars i{display:block;width:min(62px,80%);height:var(--h);background:linear-gradient(180deg,var(--pink),var(--wine));transform-origin:bottom;animation:summaryGrow .9s ease both}
+.summary-bars .warning i{background:linear-gradient(180deg,#ffc268,var(--orange))}
+.summary-bars b{font:700 20px/1 var(--editorial)}.summary-bars span{font-size:9px;font-weight:900;color:var(--muted)}
+@keyframes summaryGrow{from{transform:scaleY(0)}to{transform:none}}
+.value-stack{display:flex;min-height:138px;color:#fff}
+.value-stack>span{width:var(--w);display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background:var(--deep)}
+.value-stack>span+span{background:var(--wine)}
+.value-stack b{font:700 31px/1 var(--editorial)}.value-stack small{margin-top:7px;font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+
+.demand-gap{max-width:820px;margin-top:30px;padding:24px 0;border-top:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}
+.demand-gap>div{display:grid;grid-template-columns:170px 1fr 58px;gap:14px;align-items:center;margin:13px 0}
+.demand-gap>div span{font-size:11px;font-weight:800;color:#dceae7}.demand-gap>div strong{color:#fff;font:700 22px/1 var(--editorial)}
+.demand-gap>div i{height:8px;background:rgba(255,255,255,.13)}.demand-gap>div i b{display:block;width:var(--w);height:100%;background:linear-gradient(90deg,var(--pink),var(--orange))}
+.demand-gap>p{display:flex;justify-content:space-between;gap:20px;margin:20px 0 0;color:#c5d8d5;font-size:11px}.demand-gap>p b{color:var(--pink);font-size:14px}
+
+.moat-profile{display:grid;gap:12px;max-width:760px;margin-top:30px;padding:23px;background:var(--page);border-left:4px solid var(--wine)}
+.moat-profile>div{display:grid;grid-template-columns:170px 1fr 38px;align-items:center;gap:14px;font-size:11px;font-weight:800}
+.moat-profile i{height:7px;background:#e5dadd}.moat-profile i b{display:block;width:var(--w);height:100%;background:var(--deep)}
+.moat-profile .weak i b{background:var(--wine)}.moat-profile strong{font:700 18px/1 var(--editorial);color:var(--wine)}
+
+.summary-risk{position:relative;width:min(100%,780px);height:330px;margin-top:30px;border-left:1px solid rgba(9,47,45,.25);border-bottom:1px solid rgba(9,47,45,.25);background:linear-gradient(90deg,transparent 66%,rgba(152,35,79,.07) 66%),linear-gradient(0deg,transparent 66%,rgba(152,35,79,.07) 66%),repeating-linear-gradient(90deg,transparent 0 33%,rgba(9,47,45,.09) 33% calc(33% + 1px)),repeating-linear-gradient(0deg,transparent 0 33%,rgba(9,47,45,.09) 33% calc(33% + 1px))}
+.summary-risk .axis{position:absolute;color:var(--muted);font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.11em}
+.summary-risk .impact{left:0;top:-22px}.summary-risk .likelihood{right:0;bottom:-24px}
+.risk-chip{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);padding:7px 9px;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px rgba(9,47,45,.12);font-size:10px;font-style:normal;font-weight:900;white-space:nowrap}
+.risk-chip.critical{background:var(--wine);color:#fff}.risk-chip.high{border-color:var(--wine);color:var(--wine)}.risk-chip.medium{color:var(--deep)}
+
+.summary-roadmap{display:grid;grid-template-columns:repeat(4,1fr);max-width:980px;margin-top:32px;border-top:2px solid var(--pink)}
+.summary-roadmap>div{position:relative;min-height:178px;padding:24px 18px 18px 0;border-right:1px solid rgba(255,255,255,.18)}
+.summary-roadmap>div::before{content:"";position:absolute;left:0;top:-7px;width:12px;height:12px;background:var(--orange);border:2px solid var(--deep)}
+.summary-roadmap b{display:block;color:var(--pink);font:700 28px/1 var(--editorial)}.summary-roadmap span{display:block;margin-top:16px;color:#fff;font:700 21px/1 var(--editorial)}.summary-roadmap em{display:block;margin-top:11px;color:#adc8c4;font-size:9px;font-style:normal;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+
+.scenario-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:900px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.scenario-strip>div{padding:22px;background:#fff}.scenario-strip>div.base{background:var(--deep);color:#fff}
+.scenario-strip span{font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--wine)}
+.scenario-strip .base span{color:var(--pink)}.scenario-strip b{display:block;margin-top:7px;font:700 39px/1 var(--editorial)}
+.scenario-strip i{display:block;width:var(--p);height:5px;margin-top:16px;background:linear-gradient(90deg,var(--wine),var(--pink))}
+.scenario-strip em{display:block;margin-top:9px;color:var(--muted);font-size:10px;font-style:normal}.scenario-strip .base em{color:#bad0cc}
+
+@media(max-width:980px){
+  nav .wrap>a:not(.brand):not(.navhome){display:none}
+  .readingprogress{display:none}
+  .asset-rail{grid-template-columns:repeat(2,1fr)}
+  #assets::after,#demand::after,#strategy::after{width:52%;opacity:.22}
+}
+@media(max-width:720px){
+  nav .wrap{gap:12px}.brand span{display:none}nav a.navhome{font-size:0!important;width:34px;height:34px;padding:0;display:grid;place-items:center}nav a.navhome::before{content:"\2190";font-size:14px}
+  header.hero{min-height:700px;padding:65px 0 45px;background-position:64% center}
+  .hero .wrap{grid-template-columns:1fr;gap:28px}.brandcircle{max-width:135px}.hero .sub{font-size:15px}h1{font-size:59px}
+  section{padding:56px 0}h2{font-size:39px}
+  #assets::after,#demand::after,#strategy::after{display:none}
+  .keyfigs li{flex-basis:42%}
+  .asset-rail{grid-template-columns:1fr 1fr}.asset-rail figure{height:190px}
+  .summary-canvas{grid-template-columns:1fr}.summary-canvas>p{grid-column:1}.summary-bars{height:150px}
+  .demand-gap>div{grid-template-columns:125px 1fr 48px}.demand-gap>p{display:block}.demand-gap>p span{display:block;margin-top:5px}
+  .moat-profile>div{grid-template-columns:130px 1fr 32px}
+  .summary-risk{height:300px}
+  .summary-roadmap,.scenario-strip{grid-template-columns:1fr 1fr}.summary-roadmap>div{min-height:145px}
+}
+@media(max-width:480px){
+  h1{font-size:50px}.asset-rail,.scenario-strip,.summary-roadmap{grid-template-columns:1fr}
+  .asset-rail figure{height:220px}.summary-bars{gap:5px}.summary-bars b{font-size:17px}
+  .moat-profile{padding:18px}.moat-profile>div{grid-template-columns:112px 1fr 28px;gap:8px}
+  .risk-chip{font-size:8px;padding:6px}.summary-roadmap>div{min-height:130px;border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}
+}
 </style>
 </head>
 <body>
+<div class="route-progress" id="route-progress" aria-hidden="true"></div>
 
 <nav><div class="wrap">
-  <span class="brand"><i></i>Beyond Our Gallery</span>
+  <a class="brand" href="index.html" aria-label="Beyond Our Gallery home"><img src="assets/bog-logo-mark.png" alt=""><span>Beyond Our Gallery</span></a>
   <a href="#score">Score</a>
-  <a href="#overview">Overview</a>
   <a href="#assets">Assets</a>
   <a href="#financials">Financials</a>
-  <a href="#valuation">Valuation</a>
-  <a href="#demand">Demand</a>
-  <a href="#frameworks">Frameworks</a>
   <a href="#risk">Risk</a>
-  <a href="#strategy">Strategy</a>
   <a href="#outlook">Outlook</a>
-  <a class="navexpand" href="#" role="button" aria-pressed="false">Expand all</a>
+  <details class="navsections">
+    <summary>Sections</summary>
+    <div class="navpopover">
+      <a href="#score">00 Research score</a><a href="#overview">01 Overview</a><a href="#assets">02 Assets</a><a href="#financials">03 Financials</a><a href="#valuation">04 Valuation</a><a href="#demand">05 Demand</a><a href="#frameworks">06 Frameworks</a><a href="#risk">07 Risk</a><a href="#strategy">08 Strategy</a><a href="#outlook">09 Outlook</a><a href="#component-scoring">10 Components</a>
+      <a class="navexpand" href="#" role="button" aria-pressed="false">Expand all analysis</a>
+    </div>
+  </details>
+  <span class="readingprogress"><b id="section-current">00</b><span>/ 10</span></span>
   <a class="navhome" href="index.html">&#8592; Back Home</a>
 </div></nav>
 
@@ -483,6 +699,12 @@ nav a.navexpand:hover{color:var(--sum-accent-hi)}
   <div class="tldr">
     <p class="tldr-text">Shanghai Ocean Aquarium is the group — S$26.3m of PBT at a 65.6% margin — while the Singapore Flyer turns almost every lost revenue dollar into a lost profit dollar. Xiamen is constrained by a 2034 lease and the cable car is a cash harvest. Two rules follow: treat the Flyer as a turnaround, and make lease duration a capital gate.</p>
     <ul class="keyfigs"><li><b>56.8%</b><span>Aquarium PBT margin</span></li><li><b>11.4%</b><span>Singapore Flyer PBT margin</span></li><li><b>95.6%</b><span>Flyer decremental margin</span></li><li><b>2034–37</b><span>Weighted lease cliff</span></li></ul>
+  </div>
+  <div class="asset-rail" aria-label="Straco operating asset exhibits">
+    <figure><img src="assets/straco-soa.jpg" alt="Shanghai Ocean Aquarium beside the Oriental Pearl Tower"><figcaption><b>SOA</b><span>65.6% PBT margin</span></figcaption></figure>
+    <figure><img src="assets/straco-uwx.jpg" alt="Underwater World Xiamen entrance"><figcaption><b>UWX</b><span>Lease to 2034</span></figcaption></figure>
+    <figure><img src="assets/straco-flyer-capsule.jpg" alt="Singapore Flyer capsule interior"><figcaption><b>Flyer</b><span>Turnaround asset</span></figcaption></figure>
+    <figure><img src="assets/straco-lcc.jpg" alt="Lintong Lixing cable car station"><figcaption><b>LCC</b><span>Cash harvest</span></figcaption></figure>
   </div>
 
   <details class="expand" id="assets-full">
@@ -618,6 +840,16 @@ nav a.navexpand:hover{color:var(--sum-accent-hi)}
     <p class="tldr-text">The 2023 rebound plateaued: revenue has compounded at −4.8% since FY2023 and normalised PBT fell 21.9%. Free cash flow dropped 41% to S$19.8m against S$17.1m of dividends. H1 FY2026 was sharper still — revenue down 19.3%, PBT down 43.1%, and operating costs down only 1.7%.</p>
     <ul class="keyfigs"><li><b>−4.8%</b><span>Revenue CAGR since FY2023</span></li><li><b>S$27.3m</b><span>Normalised PBT</span></li><li><b>S$19.8m</b><span>Free cash flow</span></li><li><b>−19.3%</b><span>H1 FY2026 revenue</span></li></ul>
   </div>
+  <figure class="summary-canvas finance-summary" aria-labelledby="finance-summary-title">
+    <figcaption><span>Figure 03.0</span><b id="finance-summary-title">Did the post-reopening recovery hold?</b><em>Revenue, S$ million</em></figcaption>
+    <div class="summary-bars">
+      <div><i style="--h:116px"></i><b>82.1</b><span>FY23</span></div>
+      <div><i style="--h:115px"></i><b>81.5</b><span>FY24</span></div>
+      <div><i style="--h:105px"></i><b>74.4</b><span>FY25</span></div>
+      <div class="warning"><i style="--h:37px"></i><b>26.4</b><span>H1 FY26</span></div>
+    </div>
+    <p><strong>Curator's note:</strong> high margins survived; utilisation did not. The Flyer turned a volume decline into a much larger profit decline.</p>
+  </figure>
 
   <details class="expand" id="financials-full">
     <summary>
@@ -738,6 +970,11 @@ nav a.navexpand:hover{color:var(--sum-accent-hi)}
     <p class="tldr-text">At 31.0 cents the market pays roughly S$89m for the operating business — 3.6× EBITDA on a lease-adjusted basis — because net cash covers 66.5% of the market capitalisation. The catch: 54.6% of that cash sits in China under exchange controls, and only 12.45% of the shares float.</p>
     <ul class="keyfigs"><li><b>S$265.1m</b><span>Market cap</span></li><li><b>20.6c</b><span>Net cash per share</span></li><li><b>3.6×</b><span>Lease-adjusted EV / EBITDA</span></li><li><b>54.6%</b><span>Cash held in China</span></li></ul>
   </div>
+  <figure class="summary-canvas valuation-summary" aria-labelledby="valuation-summary-title">
+    <figcaption><span>Figure 04.0</span><b id="valuation-summary-title">What does the share price actually buy?</b><em>Share of S$265.1m equity value</em></figcaption>
+    <div class="value-stack"><span style="--w:66.5%"><b>S$176.4m</b><small>Net cash</small></span><span style="--w:33.5%"><b>S$88.7m</b><small>Operating business</small></span></div>
+    <p><strong>Decision lens:</strong> the cash protects downside, but mobility, lease liabilities and the Flyer recovery decide whether the apparent discount closes.</p>
+  </figure>
 
   <details class="expand" id="valuation-full">
     <summary>
@@ -789,6 +1026,11 @@ nav a.navexpand:hover{color:var(--sum-accent-hi)}
   <div class="tldr">
     <p class="tldr-text">The recovery happened without Straco. China domestic trips ran at 108.6 against a FY2019 base of 100 while Straco's visitors reached only 64.0 — a gap that points at asset relevance rather than macro conditions. Yield rose to S$22.29 per visitor, but that cannot offset a 12.2% fall in volume.</p>
     <ul class="keyfigs"><li><b>64.0</b><span>Visitor index, FY2019 = 100</span></li><li><b>108.6</b><span>China domestic trips index</span></li><li><b>S$22.29</b><span>Ticket yield per visitor</span></li><li><b>7.9 yrs</b><span>Shortest lease runway</span></li></ul>
+  </div>
+  <div class="demand-gap" aria-label="Tourism demand versus Straco visitor recovery">
+    <div><span>China domestic trips</span><i><b style="--w:90%"></b></i><strong>108.6</strong></div>
+    <div><span>Straco visitors</span><i><b style="--w:53%"></b></i><strong>64.0</strong></div>
+    <p><b>44.6-point capture gap</b><span>Destination recovery did not become Straco attendance.</span></p>
   </div>
 
   <details class="expand" id="demand-full">
@@ -876,6 +1118,13 @@ nav a.navexpand:hover{color:var(--sum-accent-hi)}
     <p class="tldr-text">The moat is the site, not the customer. Location and permits score 4.5 out of 5 and the balance sheet a full 5.0, but proprietary IP, first-party data and switching costs all score 1.5 or below — so demand has to be won again every season. The implication is to buy one portable capability rather than more square metres.</p>
     <ul class="keyfigs"><li><b>5.0</b><span>Balance-sheet capability</span></li><li><b>4.5</b><span>Location and permits</span></li><li><b>1.5</b><span>Proprietary IP and data</span></li><li><b>1.0</b><span>Customer switching cost</span></li></ul>
   </div>
+  <div class="moat-profile" aria-label="Straco moat profile">
+    <div><span>Balance sheet</span><i><b style="--w:100%"></b></i><strong>5.0</strong></div>
+    <div><span>Location &amp; permits</span><i><b style="--w:90%"></b></i><strong>4.5</strong></div>
+    <div><span>Operating know-how</span><i><b style="--w:80%"></b></i><strong>4.0</strong></div>
+    <div class="weak"><span>Proprietary IP &amp; data</span><i><b style="--w:30%"></b></i><strong>1.5</strong></div>
+    <div class="weak"><span>Switching cost</span><i><b style="--w:20%"></b></i><strong>1.0</strong></div>
+  </div>
 
   <details class="expand" id="frameworks-full">
     <summary>
@@ -948,6 +1197,14 @@ nav a.navexpand:hover{color:var(--sum-accent-hi)}
     <p class="tldr-text">Eight risks, two of them very-high impact: lease renewal and capital misallocation. Each carries a named early indicator — no binding Xiamen renewal path by FY2028, Flyer availability below 98%, a deal failing the 10% free-cash-flow yield test — so the board can act before the number moves.</p>
     <ul class="keyfigs"><li><b>8</b><span>Risks in the matrix</span></li><li><b>2</b><span>Rated very-high impact</span></li><li><b>98%</b><span>Flyer availability threshold</span></li><li><b>FY2028</b><span>Xiamen renewal milestone</span></li></ul>
   </div>
+  <div class="summary-risk" aria-label="Likelihood and impact matrix">
+    <span class="axis impact">Impact</span><span class="axis likelihood">Likelihood</span>
+    <i class="risk-chip critical" style="--x:72%;--y:18%">Lease renewal</i>
+    <i class="risk-chip critical" style="--x:48%;--y:12%">Capital allocation</i>
+    <i class="risk-chip high" style="--x:76%;--y:42%">Attendance</i>
+    <i class="risk-chip high" style="--x:48%;--y:48%">Flyer downtime</i>
+    <i class="risk-chip medium" style="--x:37%;--y:73%">FX / cash</i>
+  </div>
 
   <details class="expand" id="risk-full">
     <summary>
@@ -983,6 +1240,12 @@ nav a.navexpand:hover{color:var(--sum-accent-hi)}
   <div class="tldr">
     <p class="tldr-text">Four proofs in sequence — capture, yield, duration, allocation. Fix the Flyer first with S$3–5m over two years targeting an 18–22% PBT margin, lift non-ticket revenue from 11.6% to 15%, settle the leases before any large capex, then deploy S$96.4m against hard gates or return at least S$40m by FY2028.</p>
     <ul class="keyfigs"><li><b>S$3–5m</b><span>Flyer recovery investment</span></li><li><b>11.6% → 15%</b><span>Non-ticket revenue mix</span></li><li><b>S$96.4m</b><span>Deployable cash</span></li><li><b>S$40m</b><span>Minimum return if no deal</span></li></ul>
+  </div>
+  <div class="summary-roadmap" aria-label="Straco strategic roadmap">
+    <div><b>01</b><span>Restore Flyer availability</span><em>0-6 months</em></div>
+    <div><b>02</b><span>Build yield and CRM</span><em>6-12 months</em></div>
+    <div><b>03</b><span>Secure asset duration</span><em>12-24 months</em></div>
+    <div><b>04</b><span>Deploy or return cash</span><em>24-36 months</em></div>
   </div>
 
   <details class="expand" id="strategy-full">
@@ -1081,6 +1344,11 @@ nav a.navexpand:hover{color:var(--sum-accent-hi)}
   <div class="tldr">
     <p class="tldr-text">Probability-weighted fair value of 34.1 cents against 31.0 today — about 10% upside, cross-checked by a DCF at 31.1–38.1 cents. Even the base case leaves FY2030 revenue 25.1% below FY2019. Fair value exists, but the return is catalyst-dependent.</p>
     <ul class="keyfigs"><li><b>25.0c</b><span>Bear</span></li><li><b>34.4c</b><span>Base</span></li><li><b>42.7c</b><span>Bull</span></li><li><b>34.1c</b><span>Probability-weighted</span></li></ul>
+  </div>
+  <div class="scenario-strip" aria-label="Straco valuation scenarios">
+    <div><span>Bear</span><b>25.0c</b><i style="--p:58%"></i><em>Lease and demand pressure</em></div>
+    <div class="base"><span>Base</span><b>34.4c</b><i style="--p:80%"></i><em>Flyer normalises</em></div>
+    <div><span>Bull</span><b>42.7c</b><i style="--p:100%"></i><em>Recovery plus cash action</em></div>
   </div>
 
   <details class="expand" id="outlook-full">
@@ -1487,6 +1755,30 @@ if(REDUCE){
     restore.forEach(function(p){ p[0].open = p[1]; });
     restore = [];
     sync();
+  });
+})();
+</script>
+<script>
+(function(){
+  var progress=document.getElementById('route-progress');
+  var current=document.getElementById('section-current');
+  var numbered=['score','overview','assets','financials','valuation','demand','frameworks','risk','strategy','outlook','component-scoring'];
+  function updateProgress(){
+    var max=document.documentElement.scrollHeight-window.innerHeight;
+    if(progress)progress.style.width=(max>0?window.scrollY/max*100:0)+'%';
+  }
+  window.addEventListener('scroll',updateProgress,{passive:true});
+  updateProgress();
+  if(current&&'IntersectionObserver' in window){
+    var sectionObserver=new IntersectionObserver(function(entries){
+      var visible=entries.filter(function(e){return e.isIntersecting;}).sort(function(a,b){return b.intersectionRatio-a.intersectionRatio;})[0];
+      if(!visible)return;
+      current.textContent=String(numbered.indexOf(visible.target.id)).padStart(2,'0');
+    },{threshold:[.16,.35,.55],rootMargin:'-18% 0px -55%'});
+    numbered.forEach(function(id){var section=document.getElementById(id);if(section)sectionObserver.observe(section);});
+  }
+  document.querySelectorAll('.navpopover a:not(.navexpand)').forEach(function(link){
+    link.addEventListener('click',function(){var menu=link.closest('details');if(menu)menu.removeAttribute('open');});
   });
 })();
 </script>
