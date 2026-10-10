@@ -11,7 +11,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="assets/bog-mark.svg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/bog-logo-mark.png">
+<meta name="theme-color" content="#ecd9e8">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 <script src="assets/parallax.js" defer></script>
 <link rel="stylesheet" href="assets/garden/garden.css">
@@ -1030,6 +1032,17 @@ body.modal-open::before{
   background:linear-gradient(90deg,transparent 0%,rgba(255,251,248,.08) 42%,rgba(255,251,248,.77) 68%,rgba(255,251,248,.94) 100%);
   pointer-events:none
 }
+.has-garden .hero::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  right:0;
+  bottom:0;
+  left:0;
+  height:clamp(210px,30vh,320px);
+  background:linear-gradient(180deg,transparent 0%,rgba(251,248,246,.22) 38%,rgba(251,248,246,.94) 100%);
+  pointer-events:none
+}
 .has-garden .hero .wrap{
   min-height:calc(100svh - 75px);
   grid-template-columns:minmax(0,1fr) minmax(420px,560px);
@@ -1042,8 +1055,16 @@ body.modal-open::before{
 .has-garden .hero h1 span{color:var(--rose);text-shadow:0 2px 20px rgba(255,255,255,.5)}
 .has-garden .hero p{color:#274b47}
 .has-garden .garden-window--after-hero{
-  height:clamp(300px,58vh,610px);
-  background:linear-gradient(180deg,transparent calc(100% - 120px),var(--garden-veil))
+  height:clamp(760px,115vh,1080px);
+  background:linear-gradient(180deg,
+    rgba(251,248,246,.94) 0,
+    rgba(251,248,246,.58) 8%,
+    rgba(251,248,246,.16) 18%,
+    transparent 30%,
+    transparent 62%,
+    rgba(251,248,246,.18) 72%,
+    rgba(251,248,246,.62) 87%,
+    var(--garden-veil) 100%)
 }
 .has-garden .garden-window--pond{
   height:clamp(340px,66vh,700px);
@@ -1058,7 +1079,7 @@ body.modal-open::before{
   .has-garden .hero{min-height:calc(100svh - 150px)}
   .has-garden .hero .wrap{min-height:calc(100svh - 150px);padding:32px 0 38px}
   .has-garden .hero-copy{padding:0}
-  .has-garden .garden-window--after-hero{height:42vh;min-height:280px}
+  .has-garden .garden-window--after-hero{height:110svh;min-height:720px;max-height:940px}
   .has-garden .garden-window--pond{height:54vh;min-height:360px}
   .has-garden .site-footer{
     padding-bottom:calc(46px + 22vh);
