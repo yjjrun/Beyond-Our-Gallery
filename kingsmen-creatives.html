@@ -2093,13 +2093,14 @@ nav .brand{
 }
 .takeaway-rail{
   position:fixed;
-  right:22px;
-  top:92px;
+  right:18px;
+  top:88px;
   z-index:35;
-  width:250px;
-  padding:18px 18px 16px;
-  border-left:2px solid rgba(240,161,154,.75);
-  background:linear-gradient(145deg,rgba(13,10,10,.82),rgba(23,18,18,.68));
+  width:220px;
+  padding:17px 16px 15px;
+  border-top:3px solid rgba(240,161,154,.85);
+  border-radius:4px;
+  background:linear-gradient(145deg,rgba(13,10,10,.94),rgba(23,18,18,.86));
   color:#efe9e6;
   backdrop-filter:blur(18px) saturate(120%);
   box-shadow:0 18px 50px rgba(0,0,0,.24);
@@ -2112,11 +2113,14 @@ nav .brand{
   letter-spacing:.16em;
   text-transform:uppercase;
 }
-.takeaway-rail dl{display:grid;gap:13px;margin-top:15px}
+.rail-route{display:flex;align-items:baseline;gap:9px;margin:8px 0 14px;padding-bottom:11px;border-bottom:1px solid rgba(255,255,255,.13)}
+.rail-route span{color:var(--salmon);font:700 23px/1 var(--font-display)}
+.rail-route b{color:#eee7e3;font-family:var(--font-label);font-size:10px;line-height:1.25;letter-spacing:.07em;text-transform:uppercase}
+.takeaway-rail dl{display:grid;gap:12px;margin-top:0}
 .takeaway-rail dt{
   color:#a69d99;
   font-family:var(--font-label);
-  font-size:9.8px;
+  font-size:9px;
   font-weight:800;
   letter-spacing:.12em;
   text-transform:uppercase;
@@ -2124,14 +2128,19 @@ nav .brand{
 .takeaway-rail dd{
   margin:4px 0 0;
   color:#f5efec;
-  font-size:12.5px;
+  font-size:10.7px;
   line-height:1.45;
 }
-@media(max-width:1320px){
+@media(max-width:1179px){
   .takeaway-rail{display:none}
 }
-@media(min-width:1321px){
-  .wrap{max-width:1120px}
+@media(min-width:1180px){
+  header.hero>.wrap,body>section>.wrap,body>footer>.wrap{
+    width:calc(100% - 320px);
+    max-width:1120px;
+    margin-left:clamp(40px,5vw,80px);
+    margin-right:0
+  }
 }
 
 body{
@@ -2537,6 +2546,7 @@ svg.viz .soft{fill:#bdb5b1}
 
 <aside class="takeaway-rail" aria-label="Persistent research takeaway">
   <div class="rail-eyebrow">Research takeaway</div>
+  <div class="rail-route"><span id="railIndex">00</span><b id="railSection">Evidence / Research score</b></div>
   <dl>
     <div><dt>Current thesis</dt><dd id="railThesis">Balance-sheet strength offsets thin project margins.</dd></div>
     <div><dt>Strongest evidence</dt><dd id="railEvidence">Net cash and FY2025 margin recovery carry the score.</dd></div>
@@ -4106,6 +4116,8 @@ if(REDUCE){
   var sections = Array.prototype.slice.call(document.querySelectorAll('section[id][data-index]'));
   var progress = document.getElementById('readProgress');
   var rail = {
+    index: document.getElementById('railIndex'),
+    section: document.getElementById('railSection'),
     thesis: document.getElementById('railThesis'),
     evidence: document.getElementById('railEvidence'),
     uncertainty: document.getElementById('railUncertainty'),
@@ -4115,6 +4127,11 @@ if(REDUCE){
     if(!sec) return;
     var idx = sec.dataset.index || '00';
     if(progress) progress.textContent = idx.padStart(2,'0') + ' / 10';
+    if(rail.index) rail.index.textContent = idx.padStart(2,'0');
+    if(rail.section){
+      var label = sec.querySelector('.slabel');
+      rail.section.textContent = (sec.dataset.format || 'Analysis') + ' / ' + (label ? label.textContent.trim().replace(/^\d+\s*/, '') : sec.id);
+    }
     if(rail.thesis) rail.thesis.textContent = sec.dataset.thesis || '';
     if(rail.evidence) rail.evidence.textContent = sec.dataset.evidence || '';
     if(rail.uncertainty) rail.uncertainty.textContent = sec.dataset.uncertainty || '';
