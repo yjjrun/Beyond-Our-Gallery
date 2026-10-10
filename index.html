@@ -14,6 +14,10 @@
 <link rel="icon" type="image/svg+xml" href="assets/bog-mark.svg">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 <script src="assets/parallax.js" defer></script>
+<link rel="stylesheet" href="assets/garden/garden.css">
+<script>document.documentElement.classList.add("has-garden");window.BOG_GARDEN_CONFIG={petals:8,fall:.12,koiSpeed:[.07,.08,.06],koiIdle:[0,0,0],flight:1.5,idle:false};</script>
+<script src="assets/garden/garden-data.js" defer></script>
+<script src="assets/garden/garden.js" defer></script>
 <style>
 :root{
   color-scheme: light;
@@ -1001,6 +1005,66 @@ body.modal-open::before{
   [data-parallax-speed]{transform:none !important}
   .feature-image img[data-parallax-speed]{height:100%;min-height:480px;transform:none !important}
 }
+
+/* ---------- scroll-driven living painting ---------- */
+.has-garden{--garden-veil:rgba(251,248,246,.88)}
+.has-garden .section{
+  background:var(--garden-veil);
+  -webkit-backdrop-filter:blur(1.5px);
+  backdrop-filter:blur(1.5px)
+}
+.has-garden #company-gallery,.has-garden #latest-research{background:rgba(255,253,251,.92)}
+.has-garden .methodology{background:rgba(6,47,43,.91)}
+.has-garden .standards{background:rgba(251,248,246,.89)}
+.has-garden .site-footer{background:rgba(4,27,25,.88)}
+.has-garden .hero{
+  position:relative;
+  min-height:calc(100svh - 75px);
+  color:var(--ink);
+  background:none
+}
+.has-garden .hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent 0%,rgba(255,251,248,.08) 42%,rgba(255,251,248,.77) 68%,rgba(255,251,248,.94) 100%);
+  pointer-events:none
+}
+.has-garden .hero .wrap{
+  min-height:calc(100svh - 75px);
+  grid-template-columns:minmax(0,1fr) minmax(420px,560px);
+  align-items:center;
+  padding:56px 0 64px
+}
+.has-garden .hero-copy{grid-column:2;max-width:560px;padding:18px 0}
+.has-garden .hero-art{display:none}
+.has-garden .hero h1{color:var(--ink);text-shadow:0 1px 0 rgba(255,255,255,.45)}
+.has-garden .hero h1 span{color:var(--rose);text-shadow:0 2px 20px rgba(255,255,255,.5)}
+.has-garden .hero p{color:#274b47}
+.has-garden .garden-window--after-hero{
+  height:clamp(300px,58vh,610px);
+  background:linear-gradient(180deg,transparent calc(100% - 120px),var(--garden-veil))
+}
+.has-garden .garden-window--pond{
+  height:clamp(340px,66vh,700px);
+  background:linear-gradient(180deg,var(--garden-veil) 0,transparent 120px,transparent calc(100% - 170px),rgba(4,27,25,.88) 100%)
+}
+@media (max-width:1040px){
+  .has-garden .hero::before{background:linear-gradient(180deg,transparent 0%,rgba(255,251,248,.26) 36%,rgba(255,251,248,.92) 70%)}
+  .has-garden .hero .wrap{grid-template-columns:1fr;align-items:end}
+  .has-garden .hero-copy{grid-column:1;max-width:590px}
+}
+@media (max-width:760px){
+  .has-garden .hero{min-height:calc(100svh - 150px)}
+  .has-garden .hero .wrap{min-height:calc(100svh - 150px);padding:32px 0 38px}
+  .has-garden .hero-copy{padding:0}
+  .has-garden .garden-window--after-hero{height:42vh;min-height:280px}
+  .has-garden .garden-window--pond{height:54vh;min-height:360px}
+  .has-garden .site-footer{
+    padding-bottom:calc(46px + 22vh);
+    background:linear-gradient(180deg,rgba(4,27,25,.88) 0,rgba(4,27,25,.88) calc(100% - 22vh),rgba(4,27,25,.18) 100%)
+  }
+}
 </style>
 </head>
 <body>
@@ -1027,7 +1091,7 @@ body.modal-open::before{
 </header>
 
 <main>
-  <section class="hero" data-parallax-bg data-parallax-bg-speed="60">
+  <section class="hero" data-parallax-bg data-parallax-bg-speed="60" data-garden-focus="0">
     <div class="wrap">
       <div class="hero-copy">
         <h1>See beyond our <span>gallery.</span></h1>
@@ -1045,7 +1109,9 @@ body.modal-open::before{
     </div>
   </section>
 
-  <section class="section" id="featured-analysis" aria-labelledby="featured-title">
+  <div class="garden-window garden-window--after-hero" data-garden-focus="0.2" aria-hidden="true"></div>
+
+  <section class="section" id="featured-analysis" aria-labelledby="featured-title" data-garden-focus="0.32">
     <div class="wrap featured-grid">
       <div class="feature-image">
         <img id="feature-photo" src="assets/strategy-visitors.jpg" alt="Visitors inside an immersive exhibition space" data-parallax-speed="34">
@@ -1078,7 +1144,7 @@ body.modal-open::before{
     </div>
   </section>
 
-  <section class="section" id="company-gallery" aria-labelledby="gallery-title">
+  <section class="section" id="company-gallery" aria-labelledby="gallery-title" data-garden-focus="0.48">
     <div class="wrap">
       <div class="gallery-head">
         <div>
@@ -1315,7 +1381,7 @@ body.modal-open::before{
     </div>
   </section>
 
-  <section class="section methodology" id="methodology" aria-labelledby="methodology-title" data-parallax-bg data-parallax-bg-speed="44">
+  <section class="section methodology" id="methodology" aria-labelledby="methodology-title" data-parallax-bg data-parallax-bg-speed="44" data-garden-focus="0.64">
     <div class="wrap">
       <p class="eyebrow">How we score</p>
       <h2 class="section-title" id="methodology-title">A 100-point scorecard for creative businesses.</h2>
@@ -1346,7 +1412,7 @@ body.modal-open::before{
     </div>
   </section>
 
-  <section class="section" id="latest-research" aria-labelledby="research-title">
+  <section class="section" id="latest-research" aria-labelledby="research-title" data-garden-focus="0.78">
     <div class="wrap">
       <p class="eyebrow">Latest research and sector insights</p>
       <h2 class="section-title" id="research-title">Fresh notes from the creative economy.</h2>
@@ -1387,7 +1453,7 @@ body.modal-open::before{
     </div>
   </section>
 
-  <section class="section standards" id="standards" aria-labelledby="standards-title">
+  <section class="section standards" id="standards" aria-labelledby="standards-title" data-garden-focus="0.9">
     <div class="wrap">
       <p class="eyebrow">Research standards</p>
       <h2 class="section-title" id="standards-title">Independent, source-led and updated with care.</h2>
@@ -1413,6 +1479,8 @@ body.modal-open::before{
       </div>
     </div>
   </section>
+
+  <div class="garden-window garden-window--pond" data-garden-focus="1" aria-hidden="true"></div>
 </main>
 
 <footer class="site-footer">

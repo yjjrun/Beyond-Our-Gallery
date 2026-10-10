@@ -1,0 +1,53 @@
+/* Living painting background - layer styles (see garden.js) */
+
+/* The fixed stage behind everything. 100lvh so it doesn't jump when a mobile
+   browser's toolbar slides away. */
+.garden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  height: 100lvh;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .9s ease;
+}
+.garden.is-ready { opacity: 1; }
+
+.garden__plate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: none;
+  transform-origin: 0 0;
+  will-change: transform;
+  user-select: none;
+}
+.garden__fx {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Page helpers --------------------------------------------------------- */
+
+/* The page's own background would hide the layer. */
+html.has-garden { background: #f4e4e7; }
+html.has-garden body { background: transparent; }
+
+/* A clear pane in the page where the painting shows through untouched.
+   Its edges fade into the frosted sections around it. */
+.garden-window {
+  --veil-edge: var(--garden-veil, rgba(251, 248, 246, .9));
+  height: clamp(280px, 58vh, 620px);
+  background: linear-gradient(180deg, var(--veil-edge) 0, transparent 110px, transparent calc(100% - 110px), var(--veil-edge) 100%);
+}
+.garden-window:not(.has-garden *) { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .garden { transition: none; }
+}
