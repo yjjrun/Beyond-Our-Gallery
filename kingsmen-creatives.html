@@ -2596,6 +2596,13 @@ svg.viz .soft{fill:#bdb5b1}
   top:24px;
   bottom:auto;
 }
+.financial-preview .preview-foot{top:44px}
+.bubble-preview .preview-foot,
+.scatter-preview .preview-foot{
+  top:auto;
+  right:82px;
+  bottom:19px;
+}
 
 .preview-stage{
   position:absolute;
@@ -2799,6 +2806,137 @@ svg.viz .soft{fill:#bdb5b1}
   .mini-financials path{stroke-dashoffset:0}
   .mini-financials circle{opacity:1}
 }
+
+/* ---------- Beyond Our Gallery green + pink palette ---------- */
+:root{
+  --salmon:#ef91b1;
+  --red:#c6658c;
+  --deepred:#7a365f;
+  --redtext:#ef91b1;
+  --positive:#8bd7c7;
+  --caution:#f0ca72;
+  --s1:#c6658c;
+  --s2:#1c9189;
+  --s3:#ef91b1;
+  --s4:#8f5177;
+  --seq250:#efb0c6;
+  --seq400:#c6658c;
+  --seq550:#7a365f;
+  --good:#378b7e;
+  --goodtext:#8bd7c7;
+}
+body{
+  background:
+    radial-gradient(980px 620px at 17% 28%,rgba(198,101,140,.24),transparent 66%),
+    radial-gradient(860px 560px at 88% 7%,rgba(7,122,120,.20),transparent 68%),
+    linear-gradient(160deg,#041f1e 0%,#0a3532 45%,#201020 100%);
+}
+nav{
+  background:rgba(4,31,30,.93);
+  border-bottom-color:rgba(239,145,177,.16);
+}
+nav a{color:#bed0cc}
+nav a:hover,nav a[aria-current="true"]{color:#fff}
+nav a.navhome{border-color:rgba(239,145,177,.52);color:var(--salmon)}
+.hero-slide.logo-slide{
+  background:
+    radial-gradient(circle at 50% 42%,rgba(239,145,177,.22),transparent 48%),
+    linear-gradient(145deg,#123f3b,#071f1e);
+}
+.hero-slide::after{
+  background:
+    linear-gradient(180deg,rgba(4,31,30,.06) 20%,rgba(4,31,30,.52) 100%),
+    linear-gradient(90deg,rgba(41,13,34,.16),transparent 42%);
+}
+#overview{background:radial-gradient(700px 420px at 92% 8%,rgba(239,145,177,.11),transparent 68%)}
+#segments{
+  background:
+    radial-gradient(880px 560px at 0% 35%,rgba(7,122,120,.14),transparent 66%),
+    linear-gradient(180deg,rgba(3,27,26,.16),rgba(29,12,28,.10));
+}
+#financials{background:radial-gradient(820px 560px at 100% 30%,rgba(198,101,140,.11),transparent 67%)}
+#market{
+  background:
+    radial-gradient(780px 500px at 0% 24%,rgba(7,122,120,.13),transparent 68%),
+    linear-gradient(180deg,rgba(6,43,40,.18),rgba(29,12,28,.10));
+}
+#strategy{
+  background:
+    radial-gradient(900px 520px at 88% 12%,rgba(239,145,177,.17),transparent 68%),
+    linear-gradient(155deg,rgba(29,12,28,.31),rgba(4,31,30,.14));
+}
+.card,
+.card:nth-child(even),
+.card.outline,
+.card.outline:nth-child(even){
+  background:linear-gradient(145deg,rgba(8,54,50,.88),rgba(28,14,28,.86));
+  border-color:rgba(239,145,177,.16);
+}
+.card .tag,.card:nth-child(even) .tag,
+.card .num,.card:nth-child(even) .num,
+.card .share b,.card .showrev b,.card .incl,
+.card:nth-child(even) .share b,.card:nth-child(even) .showrev b,.card:nth-child(even) .incl{
+  color:var(--salmon);
+}
+.card .yield,.card .delta-up{color:var(--positive)}
+.card .delta-down,.card [style*="redtext"]{color:#f3a3bc !important}
+.grid > .card:not(.stat):not(.show),
+.chain > .card,
+section :is(.wrap,.expand-body) > .card:not(.stat),
+.grid > .card:not(.stat):not(.show):nth-child(even),
+.chain > .card:nth-child(even),
+section :is(.wrap,.expand-body) > .card:not(.stat):nth-child(even){
+  background:transparent;
+  border:0;
+  border-top:1px solid rgba(239,145,177,.20);
+  border-radius:0;
+  box-shadow:none;
+  backdrop-filter:none;
+}
+figure.chart{
+  background:
+    radial-gradient(800px 420px at 0% 100%,rgba(198,101,140,.19),transparent 66%),
+    radial-gradient(740px 360px at 95% 5%,rgba(7,122,120,.13),transparent 62%),
+    linear-gradient(145deg,rgba(5,42,39,.97),rgba(22,10,23,.96));
+  border-color:rgba(239,145,177,.18);
+}
+figure.chart::after{background:radial-gradient(ellipse at center,rgba(198,101,140,.17),transparent 68%)}
+.takeaway-rail{
+  background:linear-gradient(145deg,rgba(5,42,39,.96),rgba(31,14,29,.91));
+  border-top-color:rgba(239,145,177,.92);
+}
+.section-menu .menu-panel{background:rgba(4,31,30,.98)}
+.chapter-preview{
+  border-color:rgba(239,145,177,.20);
+  background:
+    radial-gradient(circle at 80% 12%,rgba(239,145,177,.20),transparent 42%),
+    linear-gradient(145deg,rgba(7,58,53,.98),rgba(28,11,28,.98));
+}
+.chapter-preview::before{border-color:rgba(239,145,177,.24)}
+.bubble{background:rgba(198,101,140,.86);box-shadow:0 0 28px rgba(198,101,140,.20)}
+.bubble:nth-of-type(2){background:rgba(239,145,177,.72)}
+.bubble:nth-of-type(3){background:rgba(14,125,117,.70)}
+.bubble:nth-of-type(4){background:rgba(122,54,95,.90)}
+.mini-financials span{background:linear-gradient(180deg,#ef91b1,#8f3f70)}
+.force-row i::after,.score-strip i::after{background:linear-gradient(90deg,#0b7771,#ef91b1)}
+.risk-grid{background:linear-gradient(135deg,rgba(7,122,120,.08),rgba(198,101,140,.22))}
+.risk-point{background:#ef91b1;box-shadow:0 0 0 6px rgba(239,145,177,.16)}
+.risk-point.hot{background:#c6658c;box-shadow:0 0 0 8px rgba(198,101,140,.20)}
+.scoredial::before{background:conic-gradient(var(--salmon) calc(var(--score)*1%),rgba(239,145,177,.14) 0)}
+.catbar i::after{background:linear-gradient(90deg,#0b7771,var(--salmon))}
+.strategy-gates span{border-top-color:var(--salmon)}
+.showgrid > .show:first-child,
+.switching-case .card.stat{
+  background:linear-gradient(145deg,rgba(8,54,50,.94),rgba(28,14,28,.91));
+  border-color:rgba(239,145,177,.22);
+}
+#demand .formula,.rws-feature{
+  background:linear-gradient(145deg,rgba(7,58,53,.96),rgba(28,11,28,.94));
+  border-color:rgba(239,145,177,.18);
+}
+thead th{background:linear-gradient(180deg,#0d5a54,#073a37)}
+#tip{background:#052f2c;border-color:rgba(239,145,177,.22)}
+::selection{background:rgba(239,145,177,.30);color:#fff}
 </style>
 </head>
 <body>
