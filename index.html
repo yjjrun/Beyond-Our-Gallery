@@ -1015,6 +1015,13 @@ body.modal-open::before{
   -webkit-backdrop-filter:blur(1.5px);
   backdrop-filter:blur(1.5px)
 }
+.has-garden #featured-analysis{
+  background:linear-gradient(180deg,
+    rgba(251,248,246,.70) 0,
+    rgba(251,248,246,.76) 110px,
+    rgba(251,248,246,.82) 220px,
+    var(--garden-veil) 340px)
+}
 .has-garden #company-gallery,.has-garden #latest-research{background:rgba(255,253,251,.92)}
 .has-garden .methodology{background:rgba(6,47,43,.91)}
 .has-garden .standards{background:rgba(251,248,246,.89)}
@@ -1030,6 +1037,8 @@ body.modal-open::before{
   position:absolute;
   inset:0;
   background:linear-gradient(90deg,transparent 0%,rgba(255,251,248,.08) 42%,rgba(255,251,248,.77) 68%,rgba(255,251,248,.94) 100%);
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 42%,rgba(0,0,0,.92) 55%,rgba(0,0,0,.56) 74%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 0%,#000 42%,rgba(0,0,0,.92) 55%,rgba(0,0,0,.56) 74%,transparent 100%);
   pointer-events:none
 }
 .has-garden .hero::after{
@@ -1039,8 +1048,15 @@ body.modal-open::before{
   right:0;
   bottom:0;
   left:0;
-  height:clamp(210px,30vh,320px);
-  background:linear-gradient(180deg,transparent 0%,rgba(251,248,246,.22) 38%,rgba(251,248,246,.94) 100%);
+  height:clamp(380px,58vh,640px);
+  background:linear-gradient(180deg,
+    transparent 0%,
+    rgba(251,248,246,.025) 16%,
+    rgba(251,248,246,.08) 32%,
+    rgba(251,248,246,.18) 48%,
+    rgba(251,248,246,.31) 64%,
+    rgba(251,248,246,.48) 80%,
+    rgba(251,248,246,.68) 100%);
   pointer-events:none
 }
 .has-garden .hero .wrap{
@@ -1057,21 +1073,30 @@ body.modal-open::before{
 .has-garden .garden-window--after-hero{
   height:clamp(760px,115vh,1080px);
   background:linear-gradient(180deg,
-    rgba(251,248,246,.94) 0,
-    rgba(251,248,246,.58) 8%,
-    rgba(251,248,246,.16) 18%,
-    transparent 30%,
-    transparent 62%,
-    rgba(251,248,246,.18) 72%,
-    rgba(251,248,246,.62) 87%,
-    var(--garden-veil) 100%)
+    rgba(251,248,246,.68) 0,
+    rgba(251,248,246,.56) 8%,
+    rgba(251,248,246,.42) 17%,
+    rgba(251,248,246,.27) 27%,
+    rgba(251,248,246,.13) 38%,
+    transparent 50%,
+    transparent 58%,
+    rgba(251,248,246,.06) 66%,
+    rgba(251,248,246,.17) 74%,
+    rgba(251,248,246,.34) 82%,
+    rgba(251,248,246,.56) 90%,
+    rgba(251,248,246,.64) 96%,
+    rgba(251,248,246,.70) 100%)
 }
 .has-garden .garden-window--pond{
   height:clamp(340px,66vh,700px);
   background:linear-gradient(180deg,var(--garden-veil) 0,transparent 120px,transparent calc(100% - 170px),rgba(4,27,25,.88) 100%)
 }
 @media (max-width:1040px){
-  .has-garden .hero::before{background:linear-gradient(180deg,transparent 0%,rgba(255,251,248,.26) 36%,rgba(255,251,248,.92) 70%)}
+  .has-garden .hero::before{
+    background:linear-gradient(180deg,rgba(255,251,248,.02) 0%,rgba(255,251,248,.18) 28%,rgba(255,251,248,.76) 58%,rgba(255,251,248,.84) 74%,transparent 100%);
+    -webkit-mask-image:none;
+    mask-image:none
+  }
   .has-garden .hero .wrap{grid-template-columns:1fr;align-items:end}
   .has-garden .hero-copy{grid-column:1;max-width:590px}
 }
