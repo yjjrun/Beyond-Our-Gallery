@@ -1,0 +1,20 @@
+{
+  "name": "Beyond Our Gallery",
+  "short_name": "Beyond Our Gallery",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ecd9e8",
+  "theme_color": "#ecd9e8",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
