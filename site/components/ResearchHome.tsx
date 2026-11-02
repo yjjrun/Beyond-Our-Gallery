@@ -188,7 +188,7 @@ function FinancialChart() {
       </div>
       <figcaption>
         <p><strong>Curator&apos;s note.</strong> Volume explains the recovery; margin explains why the recovered business is more valuable.</p>
-        <span>Source: Kingsmen Creatives annual reports, FY2021–FY2025 · Updated September 2026</span>
+        <span>Source: Kingsmen Creatives annual reports, FY2021–FY2025 · Updated 29 September 2026</span>
       </figcaption>
     </figure>
   );
@@ -292,7 +292,7 @@ export function ResearchHome() {
               <div className="featured-score"><ScoreRing score={78} size={110} /><span>Overall research score</span></div>
               <h3>Designing experiences.<br /><em>Delivering more than events.</em></h3>
               <p>A diversified platform with exposure to exhibitions, theme parks and brand environments, underpinned by a strengthening regional footprint.</p>
-              <div className="featured-meta"><span>SGX: 5MZ</span><span>Updated 12 Sep 2026</span></div>
+              <div className="featured-meta"><span>SGX: 5MZ</span><span>Updated 29 Sep 2026</span></div>
               <a className="button button-green" href="/kingsmen-creatives.html">Read analysis <ArrowRight size={18} /></a>
             </div>
           </div>
@@ -371,9 +371,9 @@ export function ResearchHome() {
           <div className="section-heading-row"><div><p className="eyebrow">Our insights</p><h2 id="latest-heading">Latest research</h2></div><a className="text-link" href="#research">View all research <ArrowRight size={16} /></a></div>
           <div className="research-list">
             {[
-              ["Sector deep dive", "The next chapter for Singapore's live events", "/mockup/media/eta-expo-pavilion.jpg", "11 Sep 2026"],
-              ["Company update", "mm2 Asia: a broader stage ahead", "/mockup/media/rws-concept-rendering.jpg", "04 Sep 2026"],
-              ["Thematic insight", "Why the creative economy deserves a closer look", "/mockup/media/rd-bicentennial.jpg", "28 Aug 2026"],
+              ["Sector deep dive", "The next chapter for Singapore's live events", "/mockup/media/eta-expo-pavilion.jpg", "01 Nov 2026"],
+              ["Company update", "mm2 Asia: a broader stage ahead", "/mockup/media/rws-concept-rendering.jpg", "01 Oct 2026"],
+              ["Thematic insight", "Why the creative economy deserves a closer look", "/mockup/media/rd-bicentennial.jpg", "28 Sep 2026"],
             ].map(([type, title, image, date], index) => (
               <motion.article key={title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }}>
                 <div className="research-image"><Image src={image} alt="" fill sizes="(max-width: 760px) 100vw, 33vw" /></div>
