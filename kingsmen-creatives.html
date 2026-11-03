@@ -2940,6 +2940,264 @@ figure.chart::after{background:radial-gradient(ellipse at center,rgba(198,101,14
 thead th{background:linear-gradient(180deg,#0d5a54,#073a37)}
 #tip{background:#052f2c;border-color:rgba(239,145,177,.22)}
 ::selection{background:rgba(239,145,177,.30);color:#fff}
+
+/* ---------- white, green + pink editorial balance ---------- */
+:root{
+  color-scheme:light;
+  --bog-paper:#fffdfb;
+  --bog-paper-2:#f7f5f2;
+  --bog-blush:#f7e5ed;
+  --bog-blush-2:#f0d3df;
+  --bog-forest:#063f3a;
+  --bog-forest-2:#0a5b53;
+  --bog-ink:#092f2d;
+  --bog-copy:#405d59;
+  --bog-rule:rgba(6,63,58,.16);
+}
+body{
+  background:var(--bog-paper);
+  color:var(--bog-ink);
+}
+nav{
+  background:rgba(255,253,251,.94);
+  border-bottom-color:var(--bog-rule);
+  box-shadow:0 8px 28px rgba(6,63,58,.06);
+}
+nav .brand{color:var(--bog-forest)}
+nav a{color:#52706c}
+nav a:hover,
+nav a[aria-current="true"]{color:#a54771}
+nav a.navhome{border-color:rgba(198,101,140,.48);color:#9d416a}
+.navsearch{border-color:var(--bog-rule);color:var(--bog-forest)}
+.section-menu summary{color:#52706c}
+.read-progress{border-left-color:var(--bog-rule);color:#a54771}
+.section-menu .menu-panel{
+  background:rgba(4,49,46,.98);
+  border-color:rgba(239,145,177,.22);
+}
+.section-menu .menu-panel a{color:#c8d9d5}
+.section-menu .menu-panel a:hover{color:#fff;background:rgba(239,145,177,.13)}
+
+section{
+  border-bottom-color:var(--bog-rule);
+  isolation:isolate;
+}
+#score,
+#financials,
+#market,
+#risk{
+  --sum-rule:rgba(6,63,58,.20);
+  --sum-divider:rgba(6,63,58,.13);
+  --sum-value:var(--bog-forest);
+  --sum-text:var(--bog-copy);
+  --sum-label-c:#607a76;
+  background:
+    radial-gradient(700px 360px at 96% 10%,rgba(239,145,177,.12),transparent 67%),
+    linear-gradient(180deg,var(--bog-paper),var(--bog-paper-2));
+  color:var(--bog-ink);
+}
+#segments,
+#demand,
+#component-scoring{
+  --sum-rule:rgba(122,54,95,.20);
+  --sum-divider:rgba(122,54,95,.13);
+  --sum-value:var(--bog-forest);
+  --sum-text:#4c5653;
+  --sum-label-c:#735e68;
+  background:
+    radial-gradient(820px 440px at 100% 0%,rgba(255,255,255,.72),transparent 68%),
+    linear-gradient(145deg,#f9edf2 0%,var(--bog-blush) 52%,#f1d8e3 100%);
+  color:var(--bog-ink);
+}
+#overview,
+#orderbook,
+#frameworks,
+#strategy{
+  background:
+    radial-gradient(820px 500px at 94% 8%,rgba(239,145,177,.20),transparent 66%),
+    radial-gradient(660px 460px at 0% 100%,rgba(198,101,140,.13),transparent 68%),
+    linear-gradient(150deg,#063f3a 0%,#0a504a 58%,#173d3b 100%);
+  color:#fff;
+  border-bottom-color:rgba(255,255,255,.13);
+}
+#overview::after,
+#orderbook::after,
+#frameworks::after,
+#strategy::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  opacity:.18;
+  background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:linear-gradient(90deg,transparent,black 18%,black 82%,transparent);
+  pointer-events:none;
+}
+:is(#score,#segments,#financials,#market,#demand,#risk,#component-scoring)::before{color:rgba(6,63,58,.18)}
+:is(#score,#segments,#financials,#market,#demand,#risk,#component-scoring) .slabel{color:#a54771}
+:is(#score,#segments,#financials,#market,#demand,#risk,#component-scoring) .slabel::before{color:#68807c}
+:is(#score,#segments,#financials,#market,#demand,#risk,#component-scoring) h2,
+:is(#score,#segments,#financials,#market,#demand,#risk,#component-scoring) h3{color:var(--bog-forest)}
+:is(#score,#segments,#financials,#market,#demand,#risk,#component-scoring) .lede{color:var(--bog-copy)}
+:is(#score,#segments,#financials,#market,#demand,#risk,#component-scoring) .expand > summary{
+  color:#914064;
+  border-color:rgba(145,64,100,.38);
+}
+:is(#score,#segments,#financials,#market,#demand,#risk,#component-scoring) .expand > summary:hover{
+  background:#914064;
+  border-color:#914064;
+  color:#fff;
+}
+
+#score .scoredial{
+  background:conic-gradient(var(--salmon) calc(var(--score) * 1%),rgba(6,63,58,.10) 0);
+  box-shadow:0 18px 42px rgba(6,63,58,.10);
+}
+#score .scoredial::before{background:#fff}
+#score .dialinner b{color:var(--bog-forest)}
+#score .dialinner span{color:#607a76}
+#score .dialinner em{color:#9d416a}
+#score .catbar > span{color:#4f6965}
+#score .catbar > span b{color:var(--bog-forest)}
+#score .catbar i{
+  background:linear-gradient(90deg,#0b7771 0%,var(--salmon) calc(var(--pct) * 1%),rgba(6,63,58,.10) calc(var(--pct) * 1%));
+}
+#score .gradebox div{color:#607a76}
+#score .gradebox b{color:var(--bog-forest)}
+
+/* White research objects sit against all three section colours. */
+.card,
+.card:nth-child(even),
+.card.outline,
+.card.outline:nth-child(even),
+.showgrid > .show:first-child,
+.switching-case .card.stat,
+.grid > .card:not(.stat):not(.show),
+.chain > .card,
+section :is(.wrap,.expand-body) > .card:not(.stat),
+.grid > .card:not(.stat):not(.show):nth-child(even),
+.chain > .card:nth-child(even),
+section :is(.wrap,.expand-body) > .card:not(.stat):nth-child(even){
+  background:rgba(255,255,255,.94);
+  border:1px solid rgba(6,63,58,.13);
+  border-top:3px solid rgba(198,101,140,.78);
+  border-radius:6px;
+  color:var(--bog-ink);
+  box-shadow:0 18px 46px rgba(6,63,58,.10);
+  backdrop-filter:none;
+}
+.card:nth-child(even),
+.card.outline:nth-child(even){border-top-color:rgba(10,91,83,.78)}
+.card h3,
+.card.stat .l,
+.card .fact-v,
+.card.stat .v,
+.card .srow b,
+.card p b,
+.grid > .card:not(.stat):not(.show) h3,
+.chain > .card h3,
+section :is(.wrap,.expand-body) > .card:not(.stat) h3{color:var(--bog-forest)}
+.card p,
+.card .showdesc p,
+.grid > .card:not(.stat):not(.show) p,
+.chain > .card p,
+section :is(.wrap,.expand-body) > .card:not(.stat) p{color:var(--bog-copy)}
+.card [style*="var(--ink)"]{color:var(--bog-forest) !important}
+.card .srow span,
+.card .share span,
+.card .showrev span{color:#607a76}
+.card .srow{border-bottom-color:rgba(6,63,58,.13)}
+.card .showrev{border-top-color:rgba(6,63,58,.13)}
+.card .projs figcaption{color:#55706b}
+
+figure.chart{
+  background:
+    radial-gradient(720px 360px at 100% 0%,rgba(239,145,177,.12),transparent 68%),
+    radial-gradient(620px 320px at 0% 100%,rgba(10,91,83,.08),transparent 70%),
+    #fff;
+  border-color:rgba(6,63,58,.15);
+  color:var(--bog-ink);
+  box-shadow:0 26px 70px rgba(6,63,58,.12);
+}
+figure.chart::before{border-color:rgba(198,101,140,.24)}
+figure.chart::after{background:radial-gradient(ellipse at center,rgba(198,101,140,.11),transparent 68%)}
+figure.chart .ct{color:var(--bog-forest)}
+figure.chart .cs,
+figure.chart .legend{color:#5a716d}
+figure.chart .tick{fill:#667d79}
+figure.chart .vlab{fill:var(--bog-ink)}
+figure.chart .gl{stroke:rgba(6,63,58,.11)}
+figure.chart .bl{stroke:rgba(6,63,58,.25)}
+figure.chart svg .dot{stroke:#fff}
+svg.viz .axis-label{fill:#58716d}
+svg.viz .note-text{fill:var(--bog-forest)}
+.curator-note{border-left-color:rgba(198,101,140,.76)}
+.curator-note strong,
+.risk-detail h3,
+.outlook-card h3{color:var(--bog-forest)}
+.curator-note p,
+.risk-detail p,
+.outlook-card p{color:#526b67}
+.source-caption{border-top-color:rgba(6,63,58,.13);color:#718682}
+.source-caption a{color:#8e4166}
+.lift-hold div,
+.outlook-stats div{border-top-color:rgba(6,63,58,.15)}
+.lift-hold b,
+.outlook-stats b{color:var(--bog-forest)}
+.lift-hold span,
+.outlook-stats span{color:#607a76}
+.scenario-buttons button,
+.risk-chip{border-color:rgba(198,101,140,.48);color:var(--bog-forest)}
+.scenario-buttons button[aria-pressed="true"],
+.risk-chip[aria-pressed="true"]{background:var(--salmon);color:var(--bog-forest)}
+.roadmap-step{
+  border-color:rgba(6,63,58,.14);
+  border-top-color:var(--salmon);
+  background:linear-gradient(160deg,#fff,#faeaf1);
+}
+.roadmap-step h3{color:var(--bog-forest)}
+.roadmap-step p{color:var(--bog-copy)}
+.roadmap-step small{color:#6c817d}
+
+.tblwrap{
+  background:#fff;
+  border:1px solid rgba(6,63,58,.13);
+  border-radius:6px;
+  box-shadow:0 18px 46px rgba(6,63,58,.10);
+}
+thead th{background:linear-gradient(180deg,#0d675f,#063f3a)}
+tbody tr:nth-child(odd) td{background:#fffdfb}
+tbody tr:nth-child(even) td{background:#f8eaf0}
+td{border-bottom-color:#fff;color:#45615d}
+td:first-child,
+tr.total td{color:var(--bog-forest)}
+
+#demand .formula,
+.rws-feature{
+  background:linear-gradient(145deg,#07504a,#163f3d);
+  border-color:rgba(239,145,177,.30);
+  color:#fff;
+}
+#demand .formula code,
+#demand .formula .leg b{color:#fff}
+#demand .formula .leg{color:#c8d8d5}
+.takeaway-rail{
+  background:linear-gradient(145deg,rgba(5,65,60,.97),rgba(67,25,55,.94));
+  border:1px solid rgba(239,145,177,.18);
+  border-top:3px solid var(--salmon);
+  box-shadow:0 20px 56px rgba(6,63,58,.22);
+}
+footer{
+  background:linear-gradient(145deg,#063f3a,#122f2e 68%,#32182d);
+  border-top-color:rgba(239,145,177,.22);
+}
+@media(max-width:720px){
+  nav{background:rgba(255,253,251,.97)}
+  .card,
+  figure.chart,
+  .tblwrap{box-shadow:0 14px 34px rgba(6,63,58,.09)}
+}
 </style>
 </head>
 <body>
