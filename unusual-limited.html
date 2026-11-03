@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UnUsUaL Limited Analysis | Beyond Our Gallery</title>
+<meta name="description" content="Beyond Our Gallery's strategy and commercial analysis of UnUsUaL Limited (SGX: 1D1), including its 32.4 research score, concert economics, audit uncertainty, ownership risks and recovery gates.">
+<meta property="og:title" content="UnUsUaL Limited Analysis | Beyond Our Gallery">
+<meta property="og:description" content="A 32.4/100 business-quality analysis of UnUsUaL Limited: arena-scale execution discounted by a disclaimed audit and unsettled control.">
+<meta property="og:image" content="assets/unusual-confetti.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/svg+xml" href="/assets/bog-mark.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ecd9e8">
+<style>
+:root{
+  color-scheme:light;
+  --ink:#092f2d;
+  --ink-2:#35504d;
+  --deep:#062f2b;
+  --wine:#9f174d;
+  --wine-2:#c62b66;
+  --pink:#ef91b1;
+  --pink-soft:#f6dce5;
+  --paper:#fbf8f6;
+  --paper-2:#f2e9ec;
+  --line:#d8c8ce;
+  --muted:#687674;
+  --positive:#16705f;
+  --caution:#9b5a00;
+  --critical:#b12a35;
+  --mm2-blue:#1652a0;
+  --display:"Cormorant Garamond", Georgia, serif;
+  --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{
+  margin:0;
+  overflow-x:clip;
+  background:linear-gradient(180deg,#fff 0%,var(--paper) 58%,#fff 100%);
+  color:var(--ink);
+  font:500 16px/1.6 var(--body);
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input{font:inherit}
+button{color:inherit}
+.wrap{width:min(1220px,calc(100% - 40px));margin:0 auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.route-progress{position:fixed;inset:0 auto auto 0;z-index:90;width:0;height:3px;background:linear-gradient(90deg,var(--wine),var(--pink),#098c84);box-shadow:0 0 14px rgba(239,145,177,.5)}
+.site-nav{position:sticky;top:0;z-index:80;background:rgba(255,253,251,.92);border-bottom:1px solid rgba(9,47,45,.12);backdrop-filter:blur(18px)}
+.nav-inner{min-height:68px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none;white-space:nowrap}
+.brand img{width:36px;height:36px;object-fit:cover;border:1px solid rgba(9,47,45,.14)}
+.brand strong{font-size:13px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.primary-nav{display:flex;align-items:center;gap:22px}
+.primary-nav>a,.sections-menu>summary{font-size:12px;font-weight:800;text-decoration:none;cursor:pointer;white-space:nowrap}
+.primary-nav>a:hover,.primary-nav>a:focus-visible,.sections-menu>summary:hover,.sections-menu>summary:focus-visible{color:var(--wine)}
+.sections-menu{position:relative}
+.sections-menu>summary{list-style:none;display:flex;align-items:center;gap:6px}
+.sections-menu>summary::-webkit-details-marker{display:none}
+.sections-menu>summary::after{content:"+";font-size:16px;color:var(--wine)}
+.sections-menu[open]>summary::after{content:"-"}
+.sections-popover{position:absolute;right:0;top:36px;width:245px;padding:12px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px rgba(9,47,45,.18)}
+.sections-popover a{display:block;padding:8px 10px;font-size:12px;font-weight:750;text-decoration:none}
+.sections-popover a:hover,.sections-popover a:focus-visible{background:var(--paper-2);color:var(--wine)}
+.reading-progress{display:flex;align-items:center;gap:6px;border-left:1px solid var(--line);padding-left:16px;color:var(--muted);font-size:11px;font-weight:900;letter-spacing:.12em}
+.reading-progress b{color:var(--wine)}
+.back-home{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(144,0,49,.3);padding:7px 11px;text-decoration:none;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.back-home:hover,.back-home:focus-visible{background:var(--wine);border-color:var(--wine);color:#fff}
+
+.hero{position:relative;overflow:hidden;min-height:720px;border-bottom:1px solid var(--line);background:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 0 54%,rgba(239,145,177,.12) 54% 72%,rgba(6,47,43,.06) 72%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,.92fr) minmax(430px,1.08fr);align-items:center;gap:58px;min-height:720px;padding:76px 0 66px}
+.eyebrow{margin:0 0 12px;color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1{margin-bottom:0;font:700 clamp(58px,7.3vw,102px)/.82 var(--display);letter-spacing:0}
+.hero-thesis{max-width:650px;margin:24px 0 0;font:600 clamp(24px,3vw,39px)/1.04 var(--display);color:var(--wine)}
+.hero-copy>p:not(.eyebrow):not(.hero-thesis){max-width:650px;margin:20px 0 0;color:var(--ink-2);font-size:16px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero-meta span{border:1px solid rgba(9,47,45,.18);padding:7px 10px;background:rgba(255,255,255,.8);font-size:11px;font-weight:850;letter-spacing:.07em;text-transform:uppercase}
+.hero-actions{display:flex;align-items:center;gap:18px;margin-top:30px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;background:var(--wine);border:1px solid var(--wine);color:#fff;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;transition:transform .18s ease,background .18s ease}
+.button:hover,.button:focus-visible{background:var(--deep);border-color:var(--deep);transform:translateY(-2px)}
+.text-link{color:var(--wine);font-size:12px;font-weight:900;text-underline-offset:4px}
+.hero-art{position:relative;min-height:520px}
+.hero-image{position:absolute;inset:0 0 0 6%;overflow:hidden;box-shadow:0 28px 90px rgba(6,47,43,.2)}
+.hero-image img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.hero:hover .hero-image img{transform:scale(1.025)}
+.hero-logo{position:absolute;left:-12px;top:48px;width:112px;height:112px;padding:18px;background:var(--wine);box-shadow:0 18px 40px rgba(144,0,49,.27)}
+.hero-logo img{width:100%;height:100%;object-fit:cover}
+.hero-score{position:absolute;right:-8px;bottom:38px;width:188px;min-height:188px;padding:26px;background:var(--deep);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 22px 60px rgba(6,47,43,.3)}
+.hero-score span{font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#c9e0dc}
+.hero-score b{font:700 61px/.9 var(--display);color:var(--pink)}
+.hero-score em{margin-top:7px;font-size:11px;font-style:normal;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.hero-caption{position:absolute;left:0;bottom:22px;max-width:250px;padding:12px 14px;background:#fff;border-left:3px solid var(--wine);font-size:10px;font-weight:750;color:var(--muted)}
+
+.reading-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:46px;align-items:start;width:min(1220px,calc(100% - 40px));margin:0 auto}
+.analysis-main{min-width:0}
+.analysis-section{position:relative;padding:74px 0;border-bottom:1px solid var(--line);scroll-margin-top:70px}
+.analysis-section::before{content:attr(data-number);position:absolute;right:0;top:69px;color:rgba(144,0,49,.14);font:700 54px/1 var(--display)}
+.section-kicker{margin:0 0 10px;color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+h2{max-width:850px;margin-bottom:0;font:700 clamp(36px,4.9vw,62px)/.93 var(--display);letter-spacing:0}
+.lede{max-width:780px;margin:16px 0 0;color:var(--ink-2);font-size:16px}
+.section-grid{display:grid;gap:18px;margin-top:30px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.metric{padding:20px 0;border-top:2px solid var(--wine)}
+.metric b{display:block;font:700 35px/1 var(--display);color:var(--wine)}
+.metric span{display:block;margin-top:7px;color:var(--muted);font-size:11px;font-weight:800;line-height:1.45;text-transform:uppercase;letter-spacing:.07em}
+.callout{margin-top:28px;padding:24px 26px;border-left:4px solid var(--pink);background:var(--paper-2)}
+.callout strong{display:block;font:700 24px/1.08 var(--display)}
+.callout p{margin:8px 0 0;color:var(--ink-2);font-size:14px}
+
+.thesis-rail{position:sticky;top:96px;margin-top:74px;border-top:4px solid var(--wine);padding-top:18px}
+.thesis-rail .rail-label{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.rail-item{padding:14px 0;border-bottom:1px solid var(--line)}
+.rail-item span{display:block;margin-bottom:5px;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+.rail-item strong{display:block;font-size:12px;line-height:1.5}
+
+.figure{min-width:0;max-width:100%;margin:34px 0 0;border:1px solid rgba(9,47,45,.16);background:#fff;box-shadow:0 14px 44px rgba(9,47,45,.08)}
+.figure-head{display:flex;align-items:start;justify-content:space-between;gap:20px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.figure-label{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.figure-head h3{margin:5px 0 0;font:700 24px/1.02 var(--display)}
+.figure-source{max-width:240px;text-align:right;color:var(--muted);font-size:10px;line-height:1.5}
+.figure-canvas{width:100%;min-width:0;max-width:100%;padding:24px;overflow-x:auto}
+.curator-note{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:18px 20px;border-top:1px solid var(--line);background:var(--paper)}
+.curator-note b{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.curator-note p{margin:0;color:var(--ink-2);font:600 19px/1.2 var(--display)}
+.benchmark{display:grid;gap:18px;min-width:560px}
+.benchmark-row{display:grid;grid-template-columns:160px 1fr 52px;align-items:center;gap:14px;font-size:12px;font-weight:800}
+.benchmark-track{position:relative;height:2px;background:#d8cecf}
+.benchmark-track::after{content:"";position:absolute;left:0;top:-2px;width:calc(var(--value) * 1%);height:6px;background:linear-gradient(90deg,var(--deep),var(--wine));transform-origin:left;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.benchmark-track i{position:absolute;z-index:2;left:calc(var(--value) * 1%);top:50%;width:15px;height:15px;border:4px solid #fff;border-radius:50%;background:var(--wine);box-shadow:0 0 0 1px var(--wine);transform:translate(-50%,-50%) scale(0);transition:transform .6s .45s ease}
+.is-visible .benchmark-track::after{transform:scaleX(1)}
+.is-visible .benchmark-track i{transform:translate(-50%,-50%) scale(1)}
+
+.category-bars{display:grid;gap:16px}
+.category-bar{display:grid;grid-template-columns:175px 1fr 74px;align-items:center;gap:14px;font-size:12px;font-weight:800}
+.bar-track{height:8px;background:#e5dadd;overflow:hidden}
+.bar-fill{display:block;width:calc(var(--pct) * 1%);height:100%;background:linear-gradient(90deg,var(--wine),var(--pink));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.is-visible .bar-fill{transform:scaleX(1)}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px}
+.project{position:relative;min-height:360px;overflow:hidden;background:var(--deep);color:#fff}
+.project img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease,filter .55s ease}
+.project::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(3,26,24,.93))}
+.project:hover img,.project:focus-within img{transform:scale(1.045);filter:saturate(1.06)}
+.project-info{position:absolute;z-index:2;inset:auto 20px 18px}
+.project-info span{font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:#ffd1e0}
+.project-info h3{margin:5px 0 5px;font:700 28px/1 var(--display)}
+.project-info p{margin:0;color:#e3efed;font-size:12px;line-height:1.5}
+
+.segment-split{display:grid;grid-template-columns:1.45fr .55fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.segment-block{min-height:230px;padding:26px;background:#fff}
+.segment-block.art{background:var(--deep);color:#fff}
+.segment-block b{font:700 51px/1 var(--display);color:var(--pink)}
+.segment-block h3{margin:13px 0 8px;font:700 25px/1 var(--display)}
+.segment-block p{margin:0;color:var(--ink-2);font-size:13px}
+.segment-block.art p{color:#cfdfdd}
+.segment-growth{display:flex;gap:16px;margin-top:20px;padding-top:14px;border-top:1px solid rgba(255,255,255,.17)}
+.segment-growth span{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+
+.financial-svg{display:block;width:100%;min-width:660px;height:auto}
+.financial-svg text{font-family:var(--body);fill:var(--muted);font-size:11px;font-weight:700}
+.financial-svg .gridline{stroke:#e7dddf;stroke-width:1}
+.financial-svg .bar{fill:var(--wine);transform-box:fill-box;transform-origin:center bottom;transform:scaleY(0);transition:transform .8s ease}
+.financial-svg .line{fill:none;stroke:var(--deep);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s .3s ease}
+.financial-svg .dot{fill:var(--pink);stroke:#fff;stroke-width:3;opacity:0;transition:opacity .2s 1s ease}
+.is-visible .financial-svg .bar{transform:scaleY(1)}
+.is-visible .financial-svg .line{stroke-dashoffset:0}
+.is-visible .financial-svg .dot{opacity:1}
+
+.cash-bridge{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px;min-width:660px}
+.bridge-step{min-height:155px;padding:20px;background:var(--paper);border-top:3px solid var(--wine)}
+.bridge-step strong{display:block;font:700 35px/1 var(--display);color:var(--wine)}
+.bridge-step span{display:block;margin-top:9px;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.bridge-arrow{color:var(--pink);font-size:28px;font-weight:900}
+
+.booking-bars{display:grid;grid-template-columns:repeat(3,1fr);align-items:end;gap:34px;height:260px;min-width:560px;padding:0 28px 28px;border-bottom:1px solid var(--line)}
+.booking-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.booking-col b{font:700 24px/1 var(--display);color:var(--wine)}
+.booking-col i{display:block;width:min(100%,90px);height:calc(var(--height) * 1%);min-height:30px;background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.booking-col span{font-size:11px;font-weight:800;color:var(--muted)}
+.is-visible .booking-col i{transform:scaleY(1)}
+
+.peer-plot{position:relative;min-width:620px;height:300px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);background:repeating-linear-gradient(to top,transparent 0 59px,rgba(9,47,45,.07) 59px 60px)}
+.peer-point{position:absolute;left:var(--x);bottom:var(--y);transform:translate(-50%,50%);display:flex;align-items:center;gap:8px}
+.peer-point i{width:18px;height:18px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 6px rgba(144,0,49,.12)}
+.peer-point.keywords i{background:var(--deep);box-shadow:0 0 0 6px rgba(6,47,43,.12)}
+.peer-point span{padding:5px 7px;background:#fff;border:1px solid var(--line);font-size:10px;font-weight:900;white-space:nowrap}
+.axis-label{position:absolute;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.axis-label.x{right:0;bottom:-27px}.axis-label.y{left:-16px;top:-22px}
+
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);margin-top:32px;border-top:3px solid var(--deep)}
+.timeline-step{position:relative;padding:24px 18px 0 0}
+.timeline-step::before{content:"";position:absolute;left:0;top:-8px;width:13px;height:13px;border-radius:50%;background:var(--pink);border:2px solid #fff;box-shadow:0 0 0 1px var(--deep)}
+.timeline-step b{font-size:10px;color:var(--wine);letter-spacing:.14em;text-transform:uppercase}
+.timeline-step h3{margin:7px 0;font:700 22px/1 var(--display)}
+.timeline-step p{margin:0;color:var(--ink-2);font-size:12px}
+
+.force-grid{display:grid;gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.force-row{display:grid;grid-template-columns:180px 120px 1fr;gap:18px;padding:15px 18px;background:#fff;align-items:center}
+.force-row b{font-size:12px}.force-row span{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:var(--critical)}
+.force-row p{margin:0;color:var(--ink-2);font-size:12px}
+
+.risk-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.64fr);gap:24px;margin-top:30px}
+.risk-matrix{position:relative;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,104px);gap:1px;background:var(--line);border:1px solid var(--line)}
+.risk-cell{background:#fff}
+.risk-cell:nth-child(3),.risk-cell:nth-child(6),.risk-cell:nth-child(9){background:#fbf1f3}
+.risk-cell:nth-child(1),.risk-cell:nth-child(2),.risk-cell:nth-child(4){background:#f3f8f6}
+.risk-dot{position:absolute;border:1px solid rgba(144,0,49,.35);background:rgba(255,255,255,.95);padding:7px 9px;cursor:pointer;font-size:10px;font-weight:900;box-shadow:0 6px 16px rgba(9,47,45,.12)}
+.risk-dot:hover,.risk-dot:focus-visible,.risk-dot[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.risk-detail{min-height:314px;padding:24px;background:var(--deep);color:#fff}
+.risk-detail .risk-level{color:var(--pink);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.risk-detail h3{margin:12px 0 18px;font:700 31px/1 var(--display)}
+.risk-detail dl{margin:0}.risk-detail dt{margin-top:14px;color:#a9c9c4;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.risk-detail dd{margin:4px 0 0;font-size:12px;line-height:1.55}
+.matrix-label{margin-top:8px;color:var(--muted);font-size:10px;font-weight:800;text-align:center;text-transform:uppercase;letter-spacing:.08em}
+
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px}
+.gate{position:relative;min-height:280px;padding:24px 20px;border:1px solid var(--line);background:#fff}
+.gate+.gate{border-left:0}
+.gate::after{content:"";position:absolute;right:-8px;top:42px;z-index:2;width:14px;height:14px;border-top:2px solid var(--wine);border-right:2px solid var(--wine);transform:rotate(45deg);background:#fff}
+.gate:last-child::after{display:none}
+.gate-num{color:var(--wine);font:700 34px/1 var(--display)}
+.gate h3{margin:14px 0 9px;font:700 23px/1 var(--display)}
+.gate p{margin:0;color:var(--ink-2);font-size:12px}
+.gate-exit{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:10px;font-weight:850;line-height:1.5;text-transform:uppercase;letter-spacing:.06em}
+
+.scenario-control{display:flex;gap:8px;margin-top:28px}
+.scenario-control button{min-width:104px;padding:9px 13px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+.scenario-control button:hover,.scenario-control button:focus-visible,.scenario-control button[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.scenario-output{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:1px;margin-top:12px;background:var(--line);border:1px solid var(--line)}
+.scenario-lead,.scenario-stat{padding:24px;background:#fff}
+.scenario-lead{background:var(--deep);color:#fff}
+.scenario-lead span,.scenario-stat span{display:block;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.scenario-lead span{color:#a9c9c4}
+.scenario-lead strong,.scenario-stat strong{display:block;margin-top:9px;font:700 36px/1 var(--display);color:var(--pink)}
+.scenario-stat strong{color:var(--wine)}
+.scenario-lead p,.scenario-stat p{margin:9px 0 0;font-size:11px;color:#d9e7e5}.scenario-stat p{color:var(--ink-2)}
+
+.score-details{min-width:0;max-width:100%;margin-top:12px;border:1px solid var(--line);background:#fff;overflow:hidden}
+.score-details summary{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:17px 18px;cursor:pointer;font-size:13px;font-weight:850;list-style:none}
+.score-details summary::-webkit-details-marker{display:none}
+.score-details summary b{color:var(--wine)}
+.score-details[open] summary{border-bottom:1px solid var(--line);background:var(--paper-2)}
+.score-table-wrap{width:100%;max-width:100%;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:650px;font-size:12px}
+th,td{padding:11px 14px;border-bottom:1px solid #eadfe2;text-align:right;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+th:last-child,td:last-child{text-align:left;white-space:normal}
+thead th{background:var(--deep);color:#fff;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+tbody tr:last-child td{border-bottom:0}
+
+/* Restored source-review depth */
+.insight-band{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:30px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.insight-note{min-width:0;padding:22px 24px 22px 0}
+.insight-note+.insight-note{padding-left:24px;border-left:1px solid var(--line)}
+.insight-note span{display:block;color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.insight-note strong{display:block;margin-top:7px;font:700 24px/1.05 var(--display);color:var(--ink)}
+.insight-note p{margin:8px 0 0;color:var(--ink-2);font-size:12px;line-height:1.55}
+.research-dossier{margin-top:28px;border-top:3px solid var(--deep);border-bottom:1px solid var(--line);background:#fff}
+.research-dossier>summary{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:18px;row-gap:5px;padding:18px 0;cursor:pointer;list-style:none}
+.research-dossier>summary::-webkit-details-marker{display:none}
+.research-dossier>summary span{grid-column:1;grid-row:1;display:block;color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.research-dossier>summary b{grid-column:1;grid-row:2;display:block;font:700 23px/1.08 var(--display)}
+.research-dossier>summary::after{content:"+";grid-column:2;grid-row:1 / span 2;display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--wine);color:var(--wine);font-size:20px;font-weight:700}
+.research-dossier[open]>summary::after{content:"-";background:var(--wine);color:#fff}
+.dossier-body{padding:4px 0 30px;border-top:1px solid var(--line)}
+.dossier-intro{max-width:790px;margin:22px 0 0;color:var(--ink-2);font-size:13px}
+.dossier-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dossier-item{padding:19px 20px 20px 0}
+.dossier-item+.dossier-item{padding-left:20px;border-left:1px solid var(--line)}
+.dossier-item span{color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.dossier-item h3{margin:7px 0 7px;font:700 22px/1.02 var(--display)}
+.dossier-item p{margin:0;color:var(--ink-2);font-size:12px;line-height:1.55}
+.dossier-table{margin-top:22px;border:1px solid var(--line);overflow-x:auto}
+.dossier-table table{min-width:820px}
+.dossier-table.numeric th,.dossier-table.numeric td{text-align:right}
+.dossier-table.numeric th:first-child,.dossier-table.numeric td:first-child{text-align:left}
+.dossier-table th:last-child,.dossier-table td:last-child{white-space:normal}
+.dossier-caption{margin:10px 0 0;color:var(--muted);font-size:10px;line-height:1.5}
+.model-box{margin-top:22px;padding:22px 24px;background:var(--deep);color:#fff}
+.model-box code{display:block;overflow-x:auto;color:#ffd0df;font:700 13px/1.65 var(--body);white-space:nowrap}
+.model-box p{margin:10px 0 0;color:#c7dad7;font-size:11px}
+.bottom-line-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.bottom-line-grid article{min-height:210px;padding:24px;background:#fff}
+.bottom-line-grid article:nth-child(2){background:var(--deep);color:#fff}
+.bottom-line-grid span{color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.bottom-line-grid article:nth-child(2) span{color:var(--pink)}
+.bottom-line-grid h3{margin:10px 0 9px;font:700 26px/1 var(--display)}
+.bottom-line-grid p{margin:0;color:var(--ink-2);font-size:12px}
+.bottom-line-grid article:nth-child(2) p{color:#c9dbd8}
+
+.sources{padding:72px 0;background:var(--deep);color:#fff}
+.sources-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px}
+.sources h2{font-size:44px}.sources p,.sources li{color:#c9dbd8;font-size:12px}.sources a{color:#fff;text-underline-offset:3px}.sources ul{margin:22px 0 0;padding-left:18px}.sources .disclaimer{padding-left:24px;border-left:3px solid var(--pink)}
+.page-footer{padding:28px 0;background:#032522;color:#abc4c0;font-size:11px}
+.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center}.footer-row a{color:#fff}
+
+[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+[data-reveal].is-visible{opacity:1;transform:none}
+:focus-visible{outline:3px solid rgba(239,145,177,.75);outline-offset:3px}
+
+/* Company-specific editorial exhibits */
+.hero-image img{object-position:center}
+.hero-score b{font-size:58px}
+.project.tall{min-height:500px;grid-row:span 2}
+.project.tall img{object-position:center 12%}
+.project.wide{grid-column:span 1}
+.segment-stack{display:grid;gap:10px;margin-top:30px}
+.segment-row{display:grid;grid-template-columns:190px 1fr 72px;gap:14px;align-items:center;font-size:12px;font-weight:850}
+.segment-track{height:38px;background:#eadde2;overflow:hidden}
+.segment-fill{height:100%;width:calc(var(--share) * 1%);min-width:6px;background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .85s ease}
+.segment-row:nth-child(2) .segment-fill{background:var(--pink)}
+.segment-row:nth-child(3) .segment-fill{background:#77a69f}
+.is-visible .segment-fill{transform:scaleX(1)}
+.segment-row strong{text-align:right;color:var(--wine)}
+.working-bars{display:grid;grid-template-columns:repeat(4,1fr);align-items:end;gap:24px;height:300px;min-width:620px;padding:24px 36px 32px;border-bottom:1px solid var(--line)}
+.working-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.working-col b{font:700 23px/1 var(--display);color:var(--wine)}
+.working-col i{display:block;width:min(100%,88px);height:calc(var(--height) * 1%);background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.working-col span{font-size:10px;font-weight:850;color:var(--muted);text-align:center;text-transform:uppercase}
+.is-visible .working-col i{transform:scaleY(1)}
+.slate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.slate-item{min-height:180px;padding:22px;background:#fff}
+.slate-item:nth-child(1){background:var(--deep);color:#fff}
+.slate-item span{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.slate-item:nth-child(1) span{color:var(--pink)}
+.slate-item h3{margin:10px 0 8px;font:700 25px/1 var(--display)}
+.slate-item p{margin:0;color:var(--ink-2);font-size:12px}
+.slate-item:nth-child(1) p{color:#ccdedb}
+.peer-compare{display:grid;gap:13px;min-width:600px}
+.peer-row{display:grid;grid-template-columns:110px 1fr 100px 90px;gap:12px;align-items:center;font-size:11px;font-weight:850}
+.peer-track{height:14px;background:#eadde2;overflow:hidden}
+.peer-track i{display:block;height:100%;width:calc(var(--size) * 1%);background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.peer-row:nth-child(2) .peer-track i{background:linear-gradient(90deg,#597f79,var(--pink))}
+.is-visible .peer-track i{transform:scaleX(1)}
+.peer-row b{color:var(--wine)}
+.score-callout{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;margin-top:28px;padding:26px;background:linear-gradient(145deg,var(--deep),#174944);color:#fff}
+.score-callout strong{font:700 76px/.8 var(--display);color:var(--pink)}
+.score-callout p{margin:0;color:#d8e6e4;font-size:14px}
+.fragile{color:var(--critical)!important}
+.financial-svg .margin-label{fill:#fff;stroke:var(--deep);stroke-width:3px;paint-order:stroke;stroke-linejoin:round;font-weight:900}
+
+.hero-logo.unusual-brand{left:-20px;top:46px;width:170px;height:92px;padding:13px 18px;background:#fff;border-top:4px solid var(--wine)}
+.hero-logo.unusual-brand img{object-fit:contain}
+.hero-image img{object-position:center 25%}
+.debt-bars{display:grid;gap:13px;min-width:590px}
+.debt-row{display:grid;grid-template-columns:160px 1fr 80px;gap:14px;align-items:center;font-size:11px;font-weight:850}
+.debt-track{height:28px;background:#eadde2;overflow:hidden}
+.debt-track i{display:block;height:100%;width:calc(var(--size) * 1%);background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.debt-row:nth-child(2) .debt-track i{background:linear-gradient(90deg,var(--mm2-blue),var(--pink))}
+.is-visible .debt-track i{transform:scaleX(1)}
+.ownership{display:grid;grid-template-columns:2.49fr 1fr;min-width:560px;height:94px;overflow:hidden}
+.ownership div{display:flex;align-items:center;justify-content:center;padding:12px;text-align:center;font-size:11px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+.ownership .incoming{background:var(--deep);color:#fff}.ownership .existing{background:var(--pink-soft);color:var(--wine)}
+.cinema-bars{display:flex;align-items:end;gap:44px;height:280px;min-width:560px;padding:20px 46px 30px;border-bottom:1px solid var(--line)}
+.cinema-col{flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}
+.cinema-col b{font:700 24px/1 var(--display);color:var(--wine)}
+.cinema-col i{display:block;width:min(100%,105px);height:calc(var(--height) * 1%);min-height:4px;background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.cinema-col:nth-child(5) i{background:var(--deep)}
+.cinema-col span{font-size:10px;font-weight:850;color:var(--muted)}
+.is-visible .cinema-col i{transform:scaleY(1)}
+.waterfall{display:grid;grid-template-columns:repeat(5,1fr);align-items:end;gap:9px;height:280px;min-width:650px;padding:20px 18px 30px;border-bottom:1px solid var(--line)}
+.water-step{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}
+.water-step b{font:700 20px/1 var(--display);color:var(--wine)}
+.water-step i{display:block;width:80%;height:calc(var(--height) * 1%);min-height:6px;background:var(--wine);transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.water-step.positive i{background:var(--deep)}
+.water-step span{font-size:9px;font-weight:850;color:var(--muted);text-align:center;text-transform:uppercase}
+.is-visible .water-step i{transform:scaleY(1)}
+.outcome-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.outcome-card{padding:24px;background:#fff}
+.outcome-card.active{background:var(--deep);color:#fff}
+.outcome-card span{font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--wine)}
+.outcome-card.active span{color:var(--pink)}
+.outcome-card h3{margin:8px 0 10px;font:700 27px/1 var(--display)}
+.outcome-card p{margin:0;color:var(--ink-2);font-size:12px}.outcome-card.active p{color:#d3e3e0}
+.outcome-card ul{padding-left:16px;margin:14px 0 0;font-size:11px}.outcome-card li+li{margin-top:6px}
+.status-strip{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;border:1px solid var(--line)}
+.status-strip article{padding:19px;background:#fff;border-right:1px solid var(--line)}.status-strip article:last-child{border:0}
+.status-strip b{display:block;font:700 28px/1 var(--display);color:var(--wine)}.status-strip span{display:block;margin-top:7px;color:var(--muted);font-size:10px;font-weight:850;text-transform:uppercase}
+
+@media(max-width:1060px){
+  .primary-nav>a:nth-of-type(2),.primary-nav>a:nth-of-type(4){display:none}
+  .reading-layout{grid-template-columns:1fr}.thesis-rail{display:none}
+  .hero-grid{grid-template-columns:minmax(0,.9fr) minmax(380px,1.1fr);gap:34px}
+}
+@media(max-width:820px){
+  .wrap,.reading-layout{width:min(100% - 28px,1220px)}
+  .site-nav .primary-nav>a{display:none}.reading-progress{display:none}.nav-inner{gap:13px}.brand strong{display:none}
+  .hero{min-height:0}.hero-grid{grid-template-columns:1fr;min-height:0;padding:56px 0 48px}.hero-art{min-height:490px}.hero-image{left:0}.hero-logo{left:12px}.hero-score{right:12px}
+  .analysis-section{padding:58px 0}.analysis-section::before{top:55px;font-size:42px}
+  .g4,.g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .portfolio-grid,.g2,.risk-layout,.sources-grid{grid-template-columns:1fr}
+  .roadmap{grid-template-columns:1fr 1fr}.gate:nth-child(3){border-left:1px solid var(--line)}.gate::after{display:none}
+  .timeline{grid-template-columns:1fr 1fr;gap:24px 0}.scenario-output{grid-template-columns:1fr 1fr}.force-row{grid-template-columns:130px 95px 1fr}
+  .project.tall{grid-row:auto;min-height:400px}.working-bars{min-width:560px}.score-callout{grid-template-columns:140px 1fr}.score-callout strong{font-size:62px}.outcome-grid{grid-template-columns:1fr}.status-strip{grid-template-columns:1fr 1fr}.status-strip article:nth-child(2){border-right:0}.status-strip article:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .insight-band,.dossier-grid,.bottom-line-grid{grid-template-columns:1fr 1fr}
+  .insight-note:nth-child(3),.dossier-item:nth-child(3),.bottom-line-grid article:nth-child(3){border-top:1px solid var(--line);border-left:0;padding-left:0}
+}
+@media(max-width:560px){
+  .back-home{padding:7px 8px}.back-home span{display:none}.back-home span:first-child{display:inline}.sections-popover{position:fixed;right:14px;top:61px}
+  .hero-grid{gap:22px;padding:34px 0 28px}.hero-art{min-height:260px}.hero-logo{width:78px;height:78px;padding:12px;top:24px}.hero-score{width:132px;min-height:132px;padding:16px}.hero-score b{font-size:43px}.hero-caption{display:none}
+  h1{font-size:50px}.hero-thesis{font-size:24px}.hero-copy>p:not(.eyebrow):not(.hero-thesis){font-size:14px;line-height:1.55}.hero-meta{margin-top:20px}.hero-actions{align-items:flex-start;flex-direction:column;gap:9px;margin-top:22px}
+  .g4,.g3,.portfolio-grid,.roadmap,.scenario-output{grid-template-columns:1fr}
+  .project{min-height:330px}.curator-note{grid-template-columns:1fr;gap:6px}.figure-head{display:block}.figure-source{margin-top:8px;text-align:left}
+  .segment-split{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.force-row{grid-template-columns:1fr;gap:5px}.risk-matrix{grid-template-rows:repeat(3,116px)}
+  .cash-bridge{grid-template-columns:1fr;min-width:0}.bridge-arrow{justify-self:center;line-height:1;transform:rotate(90deg)}
+  .benchmark,.booking-bars{min-width:0}.benchmark-row{grid-template-columns:112px 1fr 42px;gap:8px}.booking-bars{gap:12px;padding-inline:8px}
+  .scenario-control{display:grid;grid-template-columns:repeat(3,1fr)}.scenario-control button{min-width:0}.footer-row{display:block}.footer-row a{display:inline-block;margin-top:12px}
+  .hero-logo.unusual-brand{left:10px;top:20px;width:128px;height:62px;padding:9px}.segment-row{grid-template-columns:108px 1fr 48px;gap:8px}.working-bars{min-width:500px}.slate-grid{grid-template-columns:1fr}.peer-compare{min-width:520px}.score-callout{grid-template-columns:1fr}.score-callout strong{font-size:58px}
+  .insight-band,.dossier-grid,.bottom-line-grid{grid-template-columns:1fr}
+  .insight-note,.insight-note+.insight-note,.dossier-item,.dossier-item+.dossier-item{padding:18px 0;border-top:1px solid var(--line);border-left:0}
+  .insight-note:first-child,.dossier-item:first-child{border-top:0}
+  .research-dossier>summary b{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}.bar-fill,.benchmark-track::after,.booking-col i,.financial-svg .bar{transform:none}.benchmark-track i{transform:translate(-50%,-50%) scale(1)}.financial-svg .line{stroke-dashoffset:0}.financial-svg .dot{opacity:1}}
+</style>
+</head>
+<body>
+<div class="route-progress" id="route-progress" aria-hidden="true"></div>
+<nav class="site-nav" aria-label="UnUsUaL Limited analysis navigation"><div class="wrap nav-inner"><a class="brand" href="index.html" aria-label="Beyond Our Gallery home"><img src="assets/bog-logo-mark.png" alt=""><strong>Beyond Our Gallery</strong></a><div class="primary-nav"><a href="#score">Score</a><a href="#business">Business</a><a href="#financials">Financials</a><a href="#risk">Risk</a><a href="#strategy">Strategy</a><details class="sections-menu"><summary>Sections</summary><div class="sections-popover"><a href="#score">00 Score</a><a href="#business">01 Company</a><a href="#segments">02 Divisions</a><a href="#financials">03 Financials</a><a href="#audit">04 Audit and control</a><a href="#valuation">05 Valuation</a><a href="#demand">06 Demand</a><a href="#frameworks">07 Industry</a><a href="#risk">08 Risk</a><a href="#strategy">09 Strategy</a></div></details></div><div class="reading-progress" aria-label="Reading progress"><b id="section-current">00</b><span>/ 09</span></div><a class="back-home" href="index.html"><span aria-hidden="true">&#8592;</span><span>Back home</span></a></div></nav>
+
+<header class="hero"><div class="wrap hero-grid"><div class="hero-copy" data-reveal><p class="eyebrow">Strategy and commercial review &middot; SGX: 1D1</p><h1>UnUsUaL<br>Limited</h1><p class="hero-thesis">A promoter that can fill arenas, with books nobody could sign off.</p><p>UnUsUaL has deep Asian artist relationships, its own production capability and a history of stadium-scale shows. The investment case is now governed by a disclaimed audit, a disputed asset and the unresolved sale of the former parent's controlling stake.</p><div class="hero-meta"><span>Live Events</span><span>Evidence grade C &middot; provisional</span><span>Updated 1 Nov 2026</span></div><div class="hero-actions"><a class="button" href="#score">Enter the analysis</a><a class="text-link" href="https://www.unusual.com.sg/" target="_blank" rel="noopener">Company website &#8599;</a></div></div><div class="hero-art" data-reveal><figure class="hero-image"><img src="assets/unusual-confetti.png" alt="A live concert produced by UnUsUaL with confetti and stage lighting"></figure><div class="hero-logo unusual-brand"><img src="assets/unusual-logo.png" alt="UnUsUaL Limited logo"></div><div class="hero-score"><span>Business quality score</span><b>32.4</b><em>Fragile &middot; provisional</em></div><div class="hero-caption">Exhibit 00 &middot; Arena-scale execution meets accounting uncertainty.</div></div></div></header>
+
+<div class="reading-layout"><main class="analysis-main">
+  <section class="analysis-section" id="score" data-number="00" data-index="0" data-thesis="A capable regional promoter whose business value is discounted by the reliability of its books." data-evidence="FY2023-25 produced S$31m of operating cash; FY2025-26 then lost S$32m." data-uncertainty="How the new auditor treats a S$7.48m investment and related partnership income." data-change="An unmodified FY2027 audit and a settled controlling owner would lift the score."><p class="section-kicker">00 &middot; Evidence &middot; Research score</p><h2>32.4 out of 100: real cash in good years, doubtful numbers now</h2><p class="lede">UnUsUaL sits in the Fragile band. Growth from the pandemic low and genuine cash generation earn points, but three loss years, a disclaimed audit, weak disclosure and receivership overhang keep the rating provisional.</p><div class="score-callout" data-reveal><strong>32.4</strong><p><b>Fragile &middot; sensitivity range 28-39.</b><br>This score measures business quality and future potential, not the share price.</p></div><div class="section-grid g2">
+      <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 00.1</span><h3>How does UnUsUaL compare?</h3></div><span class="figure-source">Beyond Our Gallery rubric &middot; 1 Nov 2026</span></div><div class="figure-canvas benchmark"><div class="benchmark-row"><span>mm2 Asia</span><div class="benchmark-track" style="--value:17.6"><i></i></div><b>17.6</b></div><div class="benchmark-row"><span>NoonTalk</span><div class="benchmark-track" style="--value:21"><i></i></div><b>21.0</b></div><div class="benchmark-row"><span>UnUsUaL</span><div class="benchmark-track" style="--value:32.4"><i></i></div><b>32.4</b></div><div class="benchmark-row"><span>Kingsmen</span><div class="benchmark-track" style="--value:59.3"><i></i></div><b>59.3</b></div></div><figcaption class="curator-note"><b>Curator's note</b><p>The score recognises a real operating franchise but cannot look through an audit disclaimer.</p></figcaption></figure>
+      <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 00.2</span><h3>What lifts and holds back the score?</h3></div><span class="figure-source">Points earned / category weight</span></div><div class="figure-canvas category-bars"><div class="category-bar"><span>Financial Strength</span><div class="bar-track"><i class="bar-fill" style="--pct:28.5"></i></div><b>11.4 / 40</b></div><div class="category-bar"><span>Market Position</span><div class="bar-track"><i class="bar-fill" style="--pct:35"></i></div><b>7.0 / 20</b></div><div class="category-bar"><span>Growth Opportunities</span><div class="bar-track"><i class="bar-fill" style="--pct:32.8"></i></div><b>8.2 / 25</b></div><div class="category-bar"><span>Risk Resilience</span><div class="bar-track"><i class="bar-fill" style="--pct:38.7"></i></div><b>5.8 / 15</b></div></div><figcaption class="curator-note"><b>Lift / drag</b><p>Cash conversion in good years lifts the score. Unreliable accounts and concentrated promotion revenue hold it back.</p></figcaption></figure>
+    </div><div style="margin-top:30px">
+      <details class="score-details"><summary><span>Financial Strength</span><b>11.4 / 40</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Revenue CAGR</td><td>6</td><td>5</td><td>6.0</td><td>+87% a year from a COVID low.</td></tr><tr><td>Net margin</td><td>7</td><td>0</td><td>0.0</td><td>Median -8.5%, excluding write-downs.</td></tr><tr><td>ROIC / ROE</td><td>9</td><td>0</td><td>0.0</td><td>Losses in three of five years.</td></tr><tr><td>Cash-flow stability</td><td>9</td><td>3</td><td>5.4</td><td>Free cash flow positive in four of five years.</td></tr><tr><td>Balance sheet</td><td>9</td><td>0</td><td>0.0</td><td>Net cash, but interest cover below 1.5x.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Market Position</span><b>7.0 / 20</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Brand recognition</td><td>2</td><td>3</td><td>1.2</td><td>Leading local promoter with regional reach.</td></tr><tr><td>Competitive advantage</td><td>7</td><td>1</td><td>1.4</td><td>Artist ties and kit, but no durable platform.</td></tr><tr><td>Market share</td><td>4</td><td>2</td><td>1.6</td><td>Not disclosed; rated 2 by rule.</td></tr><tr><td>Customer relationships</td><td>5</td><td>2</td><td>2.0</td><td>Not disclosed; rated 2 by rule.</td></tr><tr><td>Geographic reach</td><td>2</td><td>2</td><td>0.8</td><td>Geographic revenue not disclosed.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Growth Opportunities</span><b>8.2 / 25</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Industry growth</td><td>6</td><td>2</td><td>2.4</td><td>Live music grows about 4.6% a year.</td></tr><tr><td>Technology adoption</td><td>4</td><td>1</td><td>0.8</td><td>No platform or fan-data business disclosed.</td></tr><tr><td>New markets</td><td>6</td><td>2</td><td>2.4</td><td>Australia activity and a Chengdu venture.</td></tr><tr><td>Diversification</td><td>5</td><td>1</td><td>1.0</td><td>Promotion is 85.5% of revenue.</td></tr><tr><td>Partnerships</td><td>4</td><td>2</td><td>1.6</td><td>Binding deals include an unnamed party.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Risk Resilience</span><b>5.8 / 15</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Economic resilience</td><td>3</td><td>1</td><td>0.6</td><td>COVID cut revenue about 98%.</td></tr><tr><td>Customer diversification</td><td>4</td><td>2</td><td>1.6</td><td>Not disclosed; rated 2 by rule.</td></tr><tr><td>Technology resilience</td><td>3</td><td>2</td><td>1.2</td><td>Live shows endure; no tech response disclosed.</td></tr><tr><td>Regulatory resilience</td><td>2</td><td>3</td><td>1.2</td><td>Open accounting review and SGX queries.</td></tr><tr><td>Operational resilience</td><td>3</td><td>2</td><td>1.2</td><td>Founder-run and board rebuilt in 2026.</td></tr></tbody></table></div></details>
+    </div>
+  </section>
+
+  <section class="analysis-section" id="business" data-number="01" data-index="1" data-thesis="UnUsUaL routes Asian artists through Singapore, Kuala Lumpur and Australia using its own production capability." data-evidence="Promotion generated 85.5% of FY2026 revenue; the group operated across four cities." data-uncertainty="The artist network is concentrated in the founding brothers and may shift under a new owner." data-change="A buyer that funds the slate while retaining the operating team would protect the franchise."><p class="section-kicker">01 &middot; Exhibit &middot; Company snapshot</p><h2>A concert promoter built from the equipment up</h2><p class="lede">Established in 1997 as a stage, sound and lighting rental business, UnUsUaL grew into a regional producer and promoter. It listed in 2017 as an mm2 spin-off and now operates under the shadow of receivers controlling that parent's 61.1% stake.</p><div class="section-grid g4" data-reveal><div class="metric"><b>1997</b><span>Business established</span></div><div class="metric"><b>S$43.6m</b><span>FY2026 revenue</span></div><div class="metric"><b>85.5%</b><span>Revenue from promotion</span></div><div class="metric"><b>4 cities</b><span>Singapore, KL, Sydney, Melbourne</span></div></div>
+    <div class="portfolio-grid"><article class="project"><img src="assets/unusual-doh-tour.png" alt="Doh Kyung Soo Day Off concert tour artwork"><div class="project-info"><span>Promotion &middot; Singapore Indoor Stadium</span><h3>Doh Kyung Soo</h3><p>A repeat K-pop relationship linking fan demand, VIP yield and arena execution.</p></div></article><article class="project"><img src="assets/unusual-stage.png" alt="Concert stage produced by UnUsUaL"><div class="project-info"><span>Production &middot; Live arena systems</span><h3>Stage, sound and light</h3><p>In-house technical capability is the operating foundation beneath promotion.</p></div></article></div>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 01.1</span><h3>How does one show become revenue?</h3></div><span class="figure-source">FY2025-26 reports &middot; BOG analysis</span></div><div class="figure-canvas timeline"><div class="timeline-step"><b>01 &middot; Buy</b><h3>Secure the act</h3><p>Artist guarantees are committed before tickets sell.</p></div><div class="timeline-step"><b>02 &middot; Build</b><h3>Route the tour</h3><p>Venues, crews and equipment are fixed city by city.</p></div><div class="timeline-step"><b>03 &middot; Sell</b><h3>Fill the room</h3><p>Tickets, sponsors, VIP packages and merchandise create revenue.</p></div><div class="timeline-step"><b>04 &middot; Deliver</b><h3>Keep the remainder</h3><p>The promoter retains what is left after fixed commitments.</p></div></div><figcaption class="curator-note"><b>Economic link</b><p>Artist and venue costs consumed 96% of FY2026 revenue, and 107% in FY2025.</p></figcaption></figure>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Ownership, listing history and operating footprint</b></summary><div class="dossier-body"><div class="dossier-grid"><article class="dossier-item"><span>Control</span><h3>61.1% under receivers</h3><p>UOB-appointed receivers control the former parent's block; Hildrics funds held 8.1% and other holders 30.8%.</p></article><article class="dossier-item"><span>Leadership</span><h3>The Aw brothers</h3><p>Founder Leslie Aw leads promotion while Johnny Aw runs technical production and equipment.</p></article><article class="dossier-item"><span>Portfolio</span><h3>Asian and international acts</h3><p>The official portfolio includes Andy Lau, JJ Lin, Super Junior, Eric Chou, Westlife and many others.</p></article></div><p class="dossier-caption">The official site describes UnUsUaL as one of Asia's leading names in large-scale live events and concerts.</p></div></details>
+  </section>
+
+  <section class="analysis-section" id="segments" data-number="02" data-index="2" data-thesis="Promotion carries the group; only equipment rental produced a clear FY2026 profit." data-evidence="Promotion and production generated S$42.8m of revenue but both reported pre-tax losses." data-uncertainty="Whether a busier slate can restore promotion margin without repeating FY2025." data-change="A 15% full-year gross margin would demonstrate disciplined show selection."><p class="section-kicker">02 &middot; Exhibit &middot; Divisions</p><h2>One large segment, two small ones, and only the smallest profits</h2><p class="lede">Promotion is the scale engine and the risk engine. Production carries about S$3m a year of depreciation and write-downs; equipment rental is small but positive.</p><div class="section-grid g3" data-reveal><article class="segment-block art"><b>85.5%</b><h3>Promotion</h3><p>S$37.3m revenue; EBITDA +S$0.38m; pre-tax loss S$6.30m.</p></article><article class="segment-block"><b>12.6%</b><h3>Production</h3><p>S$5.49m revenue; EBITDA -S$0.94m; pre-tax loss S$3.85m.</p></article><article class="segment-block"><b>2.0%</b><h3>Equipment rental</h3><p>S$0.85m revenue and a positive S$0.46m pre-tax result.</p></article></div><div class="insight-band" data-reveal><article class="insight-note"><span>Promotion swing</span><strong>+S$6.4m</strong><p>EBITDA moved from -S$6.03m to +S$0.38m.</p></article><article class="insight-note"><span>Write-downs</span><strong>S$16.0m</strong><p>Asset write-downs across FY2025-26.</p></article><article class="insight-note"><span>Old receivables</span><strong>S$7.0m</strong><p>Trade receivables more than two years past due.</p></article></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Segment earnings and the production burden</b></summary><div class="dossier-body"><div class="dossier-table numeric"><table><thead><tr><th>Segment</th><th>FY2025 revenue</th><th>FY2026 revenue</th><th>FY2025 EBITDA</th><th>FY2026 EBITDA</th><th>FY2026 PBT</th></tr></thead><tbody><tr><td>Promotion</td><td>S$46.43m</td><td>S$37.29m</td><td>-S$6.03m</td><td>+S$0.38m</td><td>-S$6.30m</td></tr><tr><td>Production</td><td>S$5.41m</td><td>S$5.49m</td><td>-S$0.37m</td><td>-S$0.94m</td><td>-S$3.85m</td></tr><tr><td>Others</td><td>S$1.38m</td><td>S$0.85m</td><td>+S$0.79m</td><td>+S$0.46m</td><td>+S$0.46m</td></tr></tbody></table></div><p class="dossier-caption">Promotion's cash earnings almost recovered in FY2026, but legacy asset charges kept the segment deeply loss-making.</p></div></details>
+  </section>
+
+  <section class="analysis-section" id="financials" data-number="03" data-index="3" data-thesis="Two strong post-COVID years were followed by two loss years and a collapse in gross margin." data-evidence="Gross margin moved from 32.9% in FY2024 to -7.5% in FY2025 and 3.6% in FY2026." data-uncertainty="How much of the loss reflects show selection versus asset and accounting clean-up." data-change="Cash generation and margin must recover together, under audited numbers."><p class="section-kicker">03 &middot; Evidence &middot; Financials</p><h2>Revenue rides the touring cycle; margin decides the year</h2><p class="lede">Revenue recovered rapidly after COVID, peaked at S$74.4m and then fell 41%. The loss narrowed in FY2026 because gross profit improved and damage charges fell, not because the business grew.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 03.1</span><h3>What changed beneath the revenue line?</h3></div><span class="figure-source">S$ million and gross margin &middot; FY2022-26</span></div><div class="figure-canvas"><svg class="financial-svg" viewBox="0 0 760 330" role="img" aria-label="UnUsUaL revenue bars and gross margin line from FY2022 to FY2026"><line class="gridline" x1="70" y1="270" x2="710" y2="270"/><line class="gridline" x1="70" y1="190" x2="710" y2="190"/><line class="gridline" x1="70" y1="110" x2="710" y2="110"/><rect class="bar" x="105" y="260" width="70" height="10"/><rect class="bar" x="230" y="184" width="70" height="86"/><rect class="bar" x="355" y="51" width="70" height="219"/><rect class="bar" x="480" y="114" width="70" height="156"/><rect class="bar" x="605" y="142" width="70" height="128"/><path class="line" pathLength="1" d="M140 247 L265 104 L390 81 L515 210 L640 174"/><circle class="dot" cx="140" cy="247" r="6"/><circle class="dot" cx="265" cy="104" r="6"/><circle class="dot" cx="390" cy="81" r="6"/><circle class="dot" cx="515" cy="210" r="6"/><circle class="dot" cx="640" cy="174" r="6"/><text x="105" y="294">FY2022</text><text x="230" y="294">FY2023</text><text x="355" y="294">FY2024</text><text x="480" y="294">FY2025</text><text x="605" y="294">FY2026</text><text x="120" y="248">3.6</text><text x="245" y="173">29.2</text><text x="370" y="40">74.4</text><text x="495" y="103">53.2</text><text x="620" y="131">43.6</text></svg></div><figcaption class="curator-note"><b>Turning point</b><p>FY2024's 32.9% gross margin became a gross loss one year later, showing how quickly show economics reverse.</p></figcaption></figure>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>+87%</b><span>FY2022-26 revenue CAGR</span></div><div class="metric"><b>-8.5%</b><span>Median net margin ex write-downs</span></div><div class="metric"><b>S$29.9m</b><span>Operating cash FY2022-26</span></div><div class="metric"><b>S$18.5m</b><span>FY2026 equity</span></div></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Five-year income, cash and loss bridge</b></summary><div class="dossier-body"><div class="dossier-table numeric"><table><thead><tr><th>FY</th><th>Revenue</th><th>Gross margin</th><th>Net result</th><th>Operating cash</th></tr></thead><tbody><tr><td>2022</td><td>S$3.6m</td><td>-22.3%</td><td>-S$4.3m</td><td>+S$0.2m</td></tr><tr><td>2023</td><td>S$29.2m</td><td>25.9%</td><td>+S$1.8m</td><td>+S$10.8m</td></tr><tr><td>2024</td><td>S$74.4m</td><td>32.9%</td><td>+S$7.7m</td><td>+S$13.4m</td></tr><tr><td>2025</td><td>S$53.2m</td><td>-7.5%</td><td>-S$23.3m</td><td>+S$6.7m</td></tr><tr><td>2026</td><td>S$43.6m</td><td>3.6%</td><td>-S$9.1m</td><td>-S$1.3m</td></tr></tbody></table></div><div class="callout"><strong>The FY2026 loss narrowed by S$13.4m without revenue growth.</strong><p>Better gross profit added S$5.6m, smaller write-downs S$5.1m, lower credit losses S$1.6m and lower administration cost S$1.1m.</p></div></div></details>
+  </section>
+
+  <section class="analysis-section" id="audit" data-number="04" data-index="4" data-thesis="The audit issue and the change of control dominate every operating conclusion." data-evidence="The auditor disclaimed FY2026 over S$6.87m of partnership income and a S$7.48m asset tied to one unnamed counterparty." data-uncertainty="Whether Nexia confirms, impairs or restates the treatment in FY2027." data-change="Name the counterparty, recover or secure the asset and obtain an unmodified opinion."><p class="section-kicker">04 &middot; Evidence &middot; Audit and control</p><h2>An opinion the auditor would not give, over one counterparty</h2><p class="lede">The accounting review was advisory, not an audit. A new auditor must independently decide whether the partnership income, asset and removed receivables are supported.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 04.1</span><h3>Where does the accounting question flow?</h3></div><span class="figure-source">FY2026 filings and 18 Sep 2026 review update</span></div><div class="figure-canvas cash-bridge"><div class="bridge-step"><strong>S$6.87m</strong><span>Partnership income</span><p>First-half revenue reclassified as investment-derived profit sharing.</p></div><div class="bridge-arrow">&#8594;</div><div class="bridge-step"><strong>S$7.48m</strong><span>Other investment</span><p>S$3.28m paid in cash; adviser viewed it as a loan subject to loss testing.</p></div><div class="bridge-arrow">&#8594;</div><div class="bridge-step"><strong>FY2027</strong><span>New audit verdict</span><p>Nexia must reach its own view; the counterparty remained unnamed.</p></div></div><figcaption class="curator-note"><b>Why it matters</b><p>A full write-off would reduce book value from about 1.81 cents to roughly 1.08 cents a share.</p></figcaption></figure>
+    <div class="timeline" data-reveal><div class="timeline-step"><b>2017</b><h3>Listed at S$0.20</h3><p>Raised S$19.4m with mm2 retaining control.</p></div><div class="timeline-step"><b>March 2026</b><h3>Receivers appointed</h3><p>UOB put receivers over mm2's 61.1% block.</p></div><div class="timeline-step"><b>June 2026</b><h3>Audit disclaimed</h3><p>CLA Global TS gave no opinion and later stepped down.</p></div><div class="timeline-step"><b>August 2026</b><h3>Board rebuilt</h3><p>Three new independent directors joined after a one-week gap.</p></div></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Balance sheet, receivership and minority control</b></summary><div class="dossier-body"><div class="dossier-table numeric"><table><thead><tr><th>Item</th><th>FY2025</th><th>FY2026</th></tr></thead><tbody><tr><td>Cash</td><td>S$9.51m</td><td>S$6.47m</td></tr><tr><td>Other investment</td><td>-</td><td>S$7.48m</td></tr><tr><td>Receivables</td><td>S$3.60m</td><td>S$3.39m</td></tr><tr><td>Equipment</td><td>S$9.85m</td><td>S$7.25m</td></tr><tr><td>Total assets</td><td>S$37.47m</td><td>S$29.44m</td></tr><tr><td>Borrowings and leases</td><td>S$1.83m</td><td>S$4.31m</td></tr><tr><td>Equity</td><td>S$27.99m</td><td>S$18.47m</td></tr></tbody></table></div><p class="dossier-caption">A buyer crossing 30% would normally trigger a general offer under Singapore's Take-over Code.</p></div></details>
+  </section>
+
+  <section class="analysis-section" id="valuation" data-number="05" data-index="5" data-thesis="The market prices UnUsUaL below book because it doubts the book." data-evidence="At S$0.015 the company was valued at S$15.3m, about 0.83 times reported book value." data-uncertainty="The value of the disputed asset and the price of the controlling-block sale." data-change="A clean audit and fair change of control would allow operating value to re-emerge."><p class="section-kicker">05 &middot; Decision &middot; Valuation and scenarios</p><h2>Below book value, with the discount aimed at the accounts</h2><p class="lede">If the S$7.48m investment and S$1.83m of fair-value assets are treated as cash-like, the operating business was valued at only about S$3.8m. The discount is not only a margin view; it is a trust view.</p><div class="section-grid g4" data-reveal><div class="metric"><b>S$15.3m</b><span>Market value</span></div><div class="metric"><b>0.83x</b><span>Price to book</span></div><div class="metric"><b>0.30x</b><span>Enterprise value to sales</span></div><div class="metric"><b>-88%</b><span>Since 2017 listing</span></div></div>
+    <div class="outcome-grid" data-reveal><article class="outcome-card"><span>Bear</span><h3>-S$5.0m</h3><p>S$35m revenue at 0% gross margin; the asset is impaired and the control block sells cheaply.</p></article><article class="outcome-card active"><span>Base</span><h3>-S$1.4m</h3><p>S$45m revenue at 8% margin; a steady slate and a new owner retain management.</p></article><article class="outcome-card"><span>Bull</span><h3>+S$4.0m</h3><p>S$60m revenue at 15% margin; hit shows sell out and a clean audit returns.</p></article></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Peer margins and scenario assumptions</b></summary><div class="dossier-body"><div class="dossier-table"><table><thead><tr><th>Company</th><th>Business</th><th>Revenue</th><th>Gross margin</th><th>Net margin</th></tr></thead><tbody><tr><td>UnUsUaL</td><td>Promotion and production</td><td>S$43.6m</td><td>3.6%</td><td>-20.9%</td></tr><tr><td>Live Nation</td><td>Concerts, ticketing, venues</td><td>US$25.2bn</td><td>n/a</td><td>2.0%</td></tr><tr><td>G.H.Y</td><td>TV, film and reduced concerts</td><td>RMB511m</td><td>19.2%</td><td>1.7%</td></tr><tr><td>NoonTalk</td><td>Talent, production and events</td><td>S$3.8m</td><td>-17.6%</td><td>-66.5%</td></tr></tbody></table></div><p class="dossier-caption">FY2028 scenarios hold overhead near FY2026's S$5m. They are analytical cases, not company guidance.</p></div></details>
+  </section>
+
+  <section class="analysis-section" id="demand" data-number="06" data-index="6" data-thesis="The artist fee is fixed before the audience reveals itself." data-evidence="An illustrative show with 95 of committed cost and 110 at sell-out breaks even near 86% sold." data-uncertainty="A few soft shows can reverse a full year's economics." data-change="Sponsors, capped fees and multi-city routing should be secured before committing."><p class="section-kicker">06 &middot; Evidence &middot; Demand economics</p><h2>The promoter sits between two sides that both hold power</h2><p class="lede">Artists choose the promoter offering the best guarantee; fans choose the specific artist. The promoter absorbs the mismatch between a fixed fee and uncertain sell-through.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 06.1</span><h3>How quickly does a soft room become a loss?</h3></div><span class="figure-source">Illustrative show economics &middot; sell-out revenue = 110</span></div><div class="figure-canvas booking-bars"><div class="booking-col"><b>+15</b><i style="--height:100"></i><span>100% sold</span></div><div class="booking-col"><b>+4</b><i style="--height:80"></i><span>90% sold</span></div><div class="booking-col"><b>-7</b><i style="--height:58"></i><span>80% sold</span></div><div class="booking-col"><b>-18</b><i style="--height:36"></i><span>70% sold</span></div></div><figcaption class="curator-note"><b>Decision line</b><p>Break-even is around 86% sold when committed cost is 95. The illustration shows why a few weak dates can sink a year.</p></figcaption></figure>
+    <div class="timeline" data-reveal><div class="timeline-step"><b>Trigger</b><h3>Consumer confidence</h3><p>Fans and sponsors decide how much demand exists.</p></div><div class="timeline-step"><b>Commit</b><h3>Artist and venue fees</h3><p>Costs are locked months before the show.</p></div><div class="timeline-step"><b>Sell</b><h3>Tickets and packages</h3><p>Act, price, fan club and city determine take-up.</p></div><div class="timeline-step"><b>Recognise</b><h3>Margin after the night</h3><p>The promoter keeps what remains after everyone else is paid.</p></div></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Demand channels and buyer logic</b></summary><div class="dossier-body"><div class="dossier-table"><table><thead><tr><th>Party or driver</th><th>What matters</th><th>Margin signal</th></tr></thead><tbody><tr><td>Artists and agents</td><td>Highest guarantee and safe market</td><td>Bids up cost</td></tr><tr><td>Fans</td><td>The act first, price second</td><td>Strong only for hits</td></tr><tr><td>Sponsors</td><td>Audience fit and size</td><td>Good when sold early</td></tr><tr><td>Consumer spending</td><td>Sell-through after fees are fixed</td><td>High exposure</td></tr><tr><td>Venues and labour</td><td>Local cost base</td><td>High exposure</td></tr><tr><td>Regional tourism</td><td>Travelling fans and city draw</td><td>Medium-high exposure</td></tr></tbody></table></div></div></details>
+  </section>
+
+  <section class="analysis-section" id="frameworks" data-number="07" data-index="7" data-thesis="UnUsUaL is strong on Asian acts and production, weak wherever a platform owns the economics." data-evidence="Supplier power is very high; artists and venues set the largest costs." data-uncertainty="Global promoters can bundle tours, ticketing, venues and fan data." data-change="Owned formats, VIP products and data partnerships would retain more of the night."><p class="section-kicker">07 &middot; Evidence &middot; Industry and competition</p><h2>Live music grows; the platforms keep most of the leverage</h2><p class="lede">Streaming does not replace being in the room, but that does not guarantee promoter margin. The largest players stabilise thin promotion returns with ticketing, venues and fan data.</p>
+    <div class="force-grid" data-reveal><div class="force-row"><b>Supplier power</b><span>Very high</span><p>Artists set fees; venue operators set most running costs.</p></div><div class="force-row"><b>Rivalry</b><span>High</span><p>Global and local promoters bid for the same tours.</p></div><div class="force-row"><b>New entrants</b><span>Medium-high</span><p>Contacts and cash for guarantees are the main barriers.</p></div><div class="force-row"><b>Buyer power</b><span>Medium</span><p>Fans pay for hit acts and skip weaker ones.</p></div><div class="force-row"><b>Substitutes</b><span>Low-medium</span><p>Streaming does not replace live presence.</p></div></div>
+    <div class="insight-band" data-reveal><article class="insight-note"><span>Live music</span><strong>~4.6%</strong><p>Annual ticket-sales growth forecast to 2030.</p></article><article class="insight-note"><span>Singapore cost</span><strong>+25-30%</strong><p>Reported staging premium versus Seoul, Bangkok or Jakarta.</p></article><article class="insight-note"><span>Live Nation scale</span><strong>US$25.2bn</strong><p>2025 revenue, roughly 750 times UnUsUaL's.</p></article></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Competitive position and the Singapore concert hub</b></summary><div class="dossier-body"><div class="dossier-table"><table><thead><tr><th>Capability</th><th>UnUsUaL</th><th>Live Nation</th><th>AEG</th><th>Local independents</th></tr></thead><tbody><tr><td>Asian artist relationships</td><td>Strong</td><td>Strong</td><td>Moderate</td><td>Moderate</td></tr><tr><td>Global mega-tours</td><td>Low</td><td>Very strong</td><td>Very strong</td><td>Low</td></tr><tr><td>In-house production</td><td>Strong</td><td>Strong</td><td>Strong</td><td>Varies</td></tr><tr><td>Ticketing and fan data</td><td>Low</td><td>Very strong</td><td>Strong</td><td>Low</td></tr><tr><td>Multi-city routing</td><td>Moderate</td><td>Very strong</td><td>Strong</td><td>Low</td></tr><tr><td>Reporting credibility</td><td>Weak</td><td>Strong</td><td>Private</td><td>Private</td></tr></tbody></table></div><div class="callout"><strong>Singapore is a regional stage, but mostly for other promoters' biggest tours.</strong><p>UnUsUaL's niche is Mandopop, K-pop and legacy acts routed through Singapore, Kuala Lumpur and Australia.</p></div></div></details>
+  </section>
+
+  <section class="analysis-section" id="risk" data-number="08" data-index="8" data-thesis="The largest risk is that the numbers themselves change." data-evidence="A full write-off of the disputed asset would remove about 40% of reported book value." data-uncertainty="The block sale, audit result and next concert slate can each reset the case." data-change="An audited balance sheet and transparent owner would reduce the valuation discount."><p class="section-kicker">08 &middot; Decision &middot; Risk matrix</p><h2>Six risks, led by the numbers themselves</h2><p class="lede">Select a risk to inspect its trigger and mitigation. Probability and impact are stated in words, so the matrix does not depend on colour.</p>
+    <div class="risk-layout"><div><div class="risk-matrix" aria-label="Likelihood and impact matrix"><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><button class="risk-dot" style="left:70%;top:18%" data-risk="accounts" aria-pressed="true">Accounts</button><button class="risk-dot" style="left:78%;top:38%" data-risk="control" aria-pressed="false">Control</button><button class="risk-dot" style="left:52%;top:20%" data-risk="shows" aria-pressed="false">Shows</button><button class="risk-dot" style="left:78%;top:55%" data-risk="costs" aria-pressed="false">Costs</button><button class="risk-dot" style="left:52%;top:60%" data-risk="receivables" aria-pressed="false">Debtors</button><button class="risk-dot" style="left:48%;top:28%" data-risk="people" aria-pressed="false">People</button></div><div class="matrix-label">Likelihood &#8594; &middot; Impact rises upward</div></div><aside class="risk-detail" aria-live="polite"><span class="risk-level" id="risk-level">Medium-high likelihood / High impact</span><h3 id="risk-title">Accounts are restated</h3><dl><dt>What goes wrong</dt><dd id="risk-desc">The S$7.48m asset or past partnership income is reduced.</dd><dt>Trigger</dt><dd id="risk-trigger">Interim results or the FY2027 Nexia audit changes the treatment.</dd><dt>Mitigation</dt><dd id="risk-mitigation">Signed confirmations, recovery and independent audit evidence.</dd></dl></aside></div>
+    <div class="insight-band" data-reveal><article class="insight-note"><span>Margin sensitivity</span><strong>S$0.44m</strong><p>Value of one gross-margin point on FY2026 revenue.</p></article><article class="insight-note"><span>Asset sensitivity</span><strong>S$0.75m</strong><p>Book value lost for each 10% impairment.</p></article><article class="insight-note"><span>Sell-through</span><strong>~86%</strong><p>Illustrative break-even for a fixed-cost show.</p></article></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Governance, board transition and sensitivity</b></summary><div class="dossier-body"><div class="dossier-grid"><article class="dossier-item"><span>Audit</span><h3>Disclaimer</h3><p>CLA Global TS gave no opinion on FY2026 and then stepped down.</p></article><article class="dossier-item"><span>Board</span><h3>Rebuilt in one week</h3><p>Only the two founding brothers remained from 27 July to 3 August before three independents joined.</p></article><article class="dossier-item"><span>Related parties</span><h3>S$0.45m rent</h3><p>The office lease is with Axcel Properties, an interested person.</p></article></div><p class="dossier-caption">Every other strategic gain remains discounted while the accounts are disclaimed.</p></div></details>
+  </section>
+
+  <section class="analysis-section" id="strategy" data-number="09" data-index="9" data-thesis="Clean up, price, settle and own, in that order." data-evidence="At 0.83 times book, the market already signals that operating upside is secondary to audit and control." data-uncertainty="A new owner could fund the slate, change management or pursue a low offer." data-change="Each gate has a visible proof point before the next should begin."><p class="section-kicker">09 &middot; Decision &middot; Strategy and outlook</p><h2>Four gates: clean up, price, settle, own</h2><p class="lede">Growth cannot outrun a credibility discount. The next slate should be priced around capped risk and early sponsorship, while ownership of ticketing, packages and formats gradually retains more value.</p>
+    <div class="roadmap" data-reveal><article class="gate"><span class="gate-num">01</span><h3>Clean up the books</h3><p>Name the counterparty and secure or recover the S$7.48m asset.</p><div class="gate-exit">Proof: unmodified audit opinion</div></article><article class="gate"><span class="gate-num">02</span><h3>Price the risk first</h3><p>Use revenue shares or capped fees; sell sponsors before booking.</p><div class="gate-exit">Proof: full-year margin at least 15%</div></article><article class="gate"><span class="gate-num">03</span><h3>Settle the owner</h3><p>Back a buyer that funds shows and treats minorities fairly.</p><div class="gate-exit">Proof: completed sale and named chair</div></article><article class="gate"><span class="gate-num">04</span><h3>Own more of the night</h3><p>Build VIP packages, ticketing links and owned festivals.</p><div class="gate-exit">Proof: 25% of gross profit from owned layers</div></article></div>
+    <p class="section-kicker" style="margin-top:54px">Interactive FY2028 scenario</p><h2 style="font-size:clamp(31px,4vw,50px)">What happens when margin moves?</h2><div class="scenario-control" role="group" aria-label="FY2028 scenario selector"><button type="button" data-scenario="bear" aria-pressed="false">Bear</button><button type="button" data-scenario="base" aria-pressed="true">Base</button><button type="button" data-scenario="bull" aria-pressed="false">Bull</button></div><div class="scenario-output" aria-live="polite"><div class="scenario-lead"><span>Selected case</span><strong id="scenario-name">Base</strong><p id="scenario-note">A steady slate, more selective bidding and a new owner who retains management.</p></div><div class="scenario-stat"><span>Revenue</span><strong id="scenario-revenue">S$45m</strong><p>Illustrative</p></div><div class="scenario-stat"><span>Gross margin</span><strong id="scenario-growth">8%</strong><p>Below the 11.5% overhead threshold</p></div><div class="scenario-stat"><span>Net result</span><strong id="scenario-profit">-S$1.4m</strong><p id="scenario-score-note">Audit clean-up still required</p></div></div>
+    <div class="bottom-line-grid" data-reveal><article><span>What is working</span><h3>Artist access and execution</h3><p>The company still routes recognised acts across multiple Asian and Australian cities.</p></article><article><span>What is broken</span><h3>Trust and consistency</h3><p>Losses, write-downs and an audit disclaimer obscure the value of the franchise.</p></article><article><span>What to watch</span><h3>Audit, owner, slate</h3><p>FY2027 opinion, the 61.1% block sale and full-year gross margin.</p></article></div><div class="callout"><strong>Final view: UnUsUaL still knows how to fill a stadium; it must prove where the money ends up.</strong><p>The score rises with a clean audit, settled control and 15% margin. It falls if the disputed asset is impaired or the next slate repeats the loss cycle.</p></div>
+  </section>
+</main><aside class="thesis-rail" aria-label="Current research takeaway"><span class="rail-label">Research takeaway</span><div class="rail-item"><span>Current thesis</span><strong id="rail-thesis">A capable regional promoter whose business value is discounted by the reliability of its books.</strong></div><div class="rail-item"><span>Strongest evidence</span><strong id="rail-evidence">FY2023-25 produced S$31m of operating cash.</strong></div><div class="rail-item"><span>Main uncertainty</span><strong id="rail-uncertainty">The FY2027 audit treatment of the S$7.48m asset.</strong></div><div class="rail-item"><span>What changes the score</span><strong id="rail-change">A clean audit and settled controlling owner.</strong></div></aside></div>
+
+<section class="sources" id="sources"><div class="wrap sources-grid"><div><p class="eyebrow" style="color:var(--pink)">Sources and evidence</p><h2>What this analysis rests on</h2><ul><li>UnUsUaL FY2022-FY2026 annual reports and financial results</li><li>Audit disclaimer, auditor change and September 2026 accounting review</li><li>Receivership, Hildrics, board and SGX query filings</li><li>Official event portfolio and company profile</li><li>The supplied 36-page UnUsUaL strategic analysis</li></ul><p>Evidence grade C, provisional. About 46% of weighted evidence is audited or independently verified.</p></div><div class="disclaimer"><p class="eyebrow" style="color:var(--pink)">Research standard</p><p>Figures are in Singapore dollars unless stated. This is independent research for education, not investment advice or a price target.</p><p>Company and concert imagery was supplied with the research brief and is presented as editorial evidence.</p></div></div></section>
+<footer class="page-footer"><div class="wrap footer-row"><span>Beyond Our Gallery &middot; UnUsUaL Limited (SGX: 1D1) &middot; Jiarun Yang &middot; 1 November 2026</span><a href="index.html">Back to company gallery</a></div></footer>
+<script>
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;const revealItems=document.querySelectorAll('[data-reveal], .figure');if(reduceMotion){revealItems.forEach(el=>el.classList.add('is-visible'));}else{const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}}),{threshold:.14,rootMargin:'0px 0px -40px'});revealItems.forEach(el=>revealObserver.observe(el));}
+const sections=[...document.querySelectorAll('.analysis-section')];const rail={thesis:document.getElementById('rail-thesis'),evidence:document.getElementById('rail-evidence'),uncertainty:document.getElementById('rail-uncertainty'),change:document.getElementById('rail-change')};const current=document.getElementById('section-current');let activeSectionRaf=0;function updateActiveSection(){activeSectionRaf=0;if(!sections.length)return;const probe=scrollY+Math.min(innerHeight*.32,260);let active=sections[0];sections.forEach(section=>{if(section.offsetTop<=probe)active=section;});current.textContent=String(active.dataset.index).padStart(2,'0');rail.thesis.textContent=active.dataset.thesis;rail.evidence.textContent=active.dataset.evidence;rail.uncertainty.textContent=active.dataset.uncertainty;rail.change.textContent=active.dataset.change;}addEventListener('scroll',()=>{if(!activeSectionRaf)activeSectionRaf=requestAnimationFrame(updateActiveSection);},{passive:true});addEventListener('resize',updateActiveSection);updateActiveSection();const route=document.getElementById('route-progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;route.style.width=(max>0?scrollY/max*100:0)+'%';}addEventListener('scroll',updateProgress,{passive:true});updateProgress();document.querySelectorAll('.sections-popover a').forEach(a=>a.addEventListener('click',()=>a.closest('details').removeAttribute('open')));
+const risks={accounts:{level:'Medium-high likelihood / High impact',title:'Accounts are restated',desc:'The S$7.48m asset or past partnership income is reduced.',trigger:'Interim results or the FY2027 Nexia audit changes the treatment.',mitigation:'Signed confirmations, recovery and independent audit evidence.'},control:{level:'High likelihood / Medium-high impact',title:'Change of control',desc:'A buyer may have different plans or make a low offer.',trigger:'Receiver sale notices or a general-offer announcement.',mitigation:'Take-over rules and an independent board.'},shows:{level:'Medium likelihood / High impact',title:'Show losses',desc:'A few weak dates erase the full year\'s margin.',trigger:'Sell-through softens or artist fees rise.',mitigation:'Selective bidding, capped fees and pre-sold sponsors.'},costs:{level:'High likelihood / Medium impact',title:'Rising costs',desc:'Artist, venue and labour costs squeeze show economics.',trigger:'Half-year gross margin declines.',mitigation:'Multi-city routing and back-to-back shows on one setup.'},receivables:{level:'Medium likelihood / Medium impact',title:'Old receivables',desc:'S$7.0m of debtors more than two years old remain exposed.',trigger:'Collections slow or credit-loss charges return.',mitigation:'Revised repayment plans and tighter terms.'},people:{level:'Medium likelihood / High impact',title:'Key-person concentration',desc:'The founding brothers hold core artist relationships.',trigger:'Management changes after a block sale.',mitigation:'Retain the operating team and broaden relationship ownership.'}};document.querySelectorAll('[data-risk]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-risk]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');const r=risks[btn.dataset.risk];document.getElementById('risk-level').textContent=r.level;document.getElementById('risk-title').textContent=r.title;document.getElementById('risk-desc').textContent=r.desc;document.getElementById('risk-trigger').textContent=r.trigger;document.getElementById('risk-mitigation').textContent=r.mitigation;}));
+const scenarios={bear:{name:'Bear',revenue:'S$35m',growth:'0%',profit:'-S$5.0m',note:'Fees keep rising, the asset is impaired and the control block sells cheaply.',scoreNote:'More balance-sheet erosion'},base:{name:'Base',revenue:'S$45m',growth:'8%',profit:'-S$1.4m',note:'A steady slate, more selective bidding and a new owner who retains management.',scoreNote:'Audit clean-up still required'},bull:{name:'Bull',revenue:'S$60m',growth:'15%',profit:'+S$4.0m',note:'Hit shows sell out, the investment is recovered and a clean audit returns.',scoreNote:'Franchise value re-emerges'}};document.querySelectorAll('[data-scenario]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-scenario]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');const s=scenarios[btn.dataset.scenario];document.getElementById('scenario-name').textContent=s.name;document.getElementById('scenario-revenue').textContent=s.revenue;document.getElementById('scenario-growth').textContent=s.growth;document.getElementById('scenario-profit').textContent=s.profit;document.getElementById('scenario-note').textContent=s.note;document.getElementById('scenario-score-note').textContent=s.scoreNote;}));
+</script></body>
