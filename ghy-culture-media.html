@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G.H.Y Culture &amp; Media Analysis | Beyond Our Gallery</title>
+<meta name="description" content="Beyond Our Gallery's strategy and commercial analysis of G.H.Y Culture &amp; Media (SGX: XJB), including its 35.1 research score, franchise IP, financials, working capital, risks and scenarios.">
+<meta property="og:title" content="G.H.Y Culture &amp; Media Analysis | Beyond Our Gallery">
+<meta property="og:description" content="A 35.1/100 business-quality analysis of G.H.Y Culture &amp; Media: proven franchise IP inside a model that pays the producer last.">
+<meta property="og:image" content="assets/ghy-collage.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/svg+xml" href="/assets/bog-mark.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ecd9e8">
+<style>
+:root{
+  color-scheme:light;
+  --ink:#092f2d;
+  --ink-2:#35504d;
+  --deep:#062f2b;
+  --wine:#9f174d;
+  --wine-2:#c62b66;
+  --pink:#ef91b1;
+  --pink-soft:#f6dce5;
+  --paper:#fbf8f6;
+  --paper-2:#f2e9ec;
+  --line:#d8c8ce;
+  --muted:#687674;
+  --positive:#16705f;
+  --caution:#9b5a00;
+  --critical:#b12a35;
+  --display:"Cormorant Garamond", Georgia, serif;
+  --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{
+  margin:0;
+  overflow-x:clip;
+  background:linear-gradient(180deg,#fff 0%,var(--paper) 58%,#fff 100%);
+  color:var(--ink);
+  font:500 16px/1.6 var(--body);
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input{font:inherit}
+button{color:inherit}
+.wrap{width:min(1220px,calc(100% - 40px));margin:0 auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.route-progress{position:fixed;inset:0 auto auto 0;z-index:90;width:0;height:3px;background:linear-gradient(90deg,var(--wine),var(--pink),#098c84);box-shadow:0 0 14px rgba(239,145,177,.5)}
+.site-nav{position:sticky;top:0;z-index:80;background:rgba(255,253,251,.92);border-bottom:1px solid rgba(9,47,45,.12);backdrop-filter:blur(18px)}
+.nav-inner{min-height:68px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none;white-space:nowrap}
+.brand img{width:36px;height:36px;object-fit:cover;border:1px solid rgba(9,47,45,.14)}
+.brand strong{font-size:13px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.primary-nav{display:flex;align-items:center;gap:22px}
+.primary-nav>a,.sections-menu>summary{font-size:12px;font-weight:800;text-decoration:none;cursor:pointer;white-space:nowrap}
+.primary-nav>a:hover,.primary-nav>a:focus-visible,.sections-menu>summary:hover,.sections-menu>summary:focus-visible{color:var(--wine)}
+.sections-menu{position:relative}
+.sections-menu>summary{list-style:none;display:flex;align-items:center;gap:6px}
+.sections-menu>summary::-webkit-details-marker{display:none}
+.sections-menu>summary::after{content:"+";font-size:16px;color:var(--wine)}
+.sections-menu[open]>summary::after{content:"-"}
+.sections-popover{position:absolute;right:0;top:36px;width:245px;padding:12px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px rgba(9,47,45,.18)}
+.sections-popover a{display:block;padding:8px 10px;font-size:12px;font-weight:750;text-decoration:none}
+.sections-popover a:hover,.sections-popover a:focus-visible{background:var(--paper-2);color:var(--wine)}
+.reading-progress{display:flex;align-items:center;gap:6px;border-left:1px solid var(--line);padding-left:16px;color:var(--muted);font-size:11px;font-weight:900;letter-spacing:.12em}
+.reading-progress b{color:var(--wine)}
+.back-home{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(144,0,49,.3);padding:7px 11px;text-decoration:none;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.back-home:hover,.back-home:focus-visible{background:var(--wine);border-color:var(--wine);color:#fff}
+
+.hero{position:relative;overflow:hidden;min-height:720px;border-bottom:1px solid var(--line);background:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 0 54%,rgba(239,145,177,.12) 54% 72%,rgba(6,47,43,.06) 72%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,.92fr) minmax(430px,1.08fr);align-items:center;gap:58px;min-height:720px;padding:76px 0 66px}
+.eyebrow{margin:0 0 12px;color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1{margin-bottom:0;font:700 clamp(58px,7.3vw,102px)/.82 var(--display);letter-spacing:0}
+.hero-thesis{max-width:650px;margin:24px 0 0;font:600 clamp(24px,3vw,39px)/1.04 var(--display);color:var(--wine)}
+.hero-copy>p:not(.eyebrow):not(.hero-thesis){max-width:650px;margin:20px 0 0;color:var(--ink-2);font-size:16px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero-meta span{border:1px solid rgba(9,47,45,.18);padding:7px 10px;background:rgba(255,255,255,.8);font-size:11px;font-weight:850;letter-spacing:.07em;text-transform:uppercase}
+.hero-actions{display:flex;align-items:center;gap:18px;margin-top:30px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;background:var(--wine);border:1px solid var(--wine);color:#fff;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;transition:transform .18s ease,background .18s ease}
+.button:hover,.button:focus-visible{background:var(--deep);border-color:var(--deep);transform:translateY(-2px)}
+.text-link{color:var(--wine);font-size:12px;font-weight:900;text-underline-offset:4px}
+.hero-art{position:relative;min-height:520px}
+.hero-image{position:absolute;inset:0 0 0 6%;overflow:hidden;box-shadow:0 28px 90px rgba(6,47,43,.2)}
+.hero-image img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.hero:hover .hero-image img{transform:scale(1.025)}
+.hero-logo{position:absolute;left:-12px;top:48px;width:112px;height:112px;padding:18px;background:var(--wine);box-shadow:0 18px 40px rgba(144,0,49,.27)}
+.hero-logo img{width:100%;height:100%;object-fit:cover}
+.hero-score{position:absolute;right:-8px;bottom:38px;width:188px;min-height:188px;padding:26px;background:var(--deep);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 22px 60px rgba(6,47,43,.3)}
+.hero-score span{font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#c9e0dc}
+.hero-score b{font:700 61px/.9 var(--display);color:var(--pink)}
+.hero-score em{margin-top:7px;font-size:11px;font-style:normal;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.hero-caption{position:absolute;left:0;bottom:22px;max-width:250px;padding:12px 14px;background:#fff;border-left:3px solid var(--wine);font-size:10px;font-weight:750;color:var(--muted)}
+
+.reading-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:46px;align-items:start;width:min(1220px,calc(100% - 40px));margin:0 auto}
+.analysis-main{min-width:0}
+.analysis-section{position:relative;padding:74px 0;border-bottom:1px solid var(--line);scroll-margin-top:70px}
+.analysis-section::before{content:attr(data-number);position:absolute;right:0;top:69px;color:rgba(144,0,49,.14);font:700 54px/1 var(--display)}
+.section-kicker{margin:0 0 10px;color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+h2{max-width:850px;margin-bottom:0;font:700 clamp(36px,4.9vw,62px)/.93 var(--display);letter-spacing:0}
+.lede{max-width:780px;margin:16px 0 0;color:var(--ink-2);font-size:16px}
+.section-grid{display:grid;gap:18px;margin-top:30px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.metric{padding:20px 0;border-top:2px solid var(--wine)}
+.metric b{display:block;font:700 35px/1 var(--display);color:var(--wine)}
+.metric span{display:block;margin-top:7px;color:var(--muted);font-size:11px;font-weight:800;line-height:1.45;text-transform:uppercase;letter-spacing:.07em}
+.callout{margin-top:28px;padding:24px 26px;border-left:4px solid var(--pink);background:var(--paper-2)}
+.callout strong{display:block;font:700 24px/1.08 var(--display)}
+.callout p{margin:8px 0 0;color:var(--ink-2);font-size:14px}
+
+.thesis-rail{position:sticky;top:96px;margin-top:74px;border-top:4px solid var(--wine);padding-top:18px}
+.thesis-rail .rail-label{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.rail-item{padding:14px 0;border-bottom:1px solid var(--line)}
+.rail-item span{display:block;margin-bottom:5px;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+.rail-item strong{display:block;font-size:12px;line-height:1.5}
+
+.figure{min-width:0;max-width:100%;margin:34px 0 0;border:1px solid rgba(9,47,45,.16);background:#fff;box-shadow:0 14px 44px rgba(9,47,45,.08)}
+.figure-head{display:flex;align-items:start;justify-content:space-between;gap:20px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.figure-label{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.figure-head h3{margin:5px 0 0;font:700 24px/1.02 var(--display)}
+.figure-source{max-width:240px;text-align:right;color:var(--muted);font-size:10px;line-height:1.5}
+.figure-canvas{width:100%;min-width:0;max-width:100%;padding:24px;overflow-x:auto}
+.curator-note{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:18px 20px;border-top:1px solid var(--line);background:var(--paper)}
+.curator-note b{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.curator-note p{margin:0;color:var(--ink-2);font:600 19px/1.2 var(--display)}
+.benchmark{display:grid;gap:18px;min-width:560px}
+.benchmark-row{display:grid;grid-template-columns:160px 1fr 52px;align-items:center;gap:14px;font-size:12px;font-weight:800}
+.benchmark-track{position:relative;height:2px;background:#d8cecf}
+.benchmark-track::after{content:"";position:absolute;left:0;top:-2px;width:calc(var(--value) * 1%);height:6px;background:linear-gradient(90deg,var(--deep),var(--wine));transform-origin:left;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.benchmark-track i{position:absolute;z-index:2;left:calc(var(--value) * 1%);top:50%;width:15px;height:15px;border:4px solid #fff;border-radius:50%;background:var(--wine);box-shadow:0 0 0 1px var(--wine);transform:translate(-50%,-50%) scale(0);transition:transform .6s .45s ease}
+.is-visible .benchmark-track::after{transform:scaleX(1)}
+.is-visible .benchmark-track i{transform:translate(-50%,-50%) scale(1)}
+
+.category-bars{display:grid;gap:16px}
+.category-bar{display:grid;grid-template-columns:175px 1fr 74px;align-items:center;gap:14px;font-size:12px;font-weight:800}
+.bar-track{height:8px;background:#e5dadd;overflow:hidden}
+.bar-fill{display:block;width:calc(var(--pct) * 1%);height:100%;background:linear-gradient(90deg,var(--wine),var(--pink));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.is-visible .bar-fill{transform:scaleX(1)}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px}
+.project{position:relative;min-height:360px;overflow:hidden;background:var(--deep);color:#fff}
+.project img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease,filter .55s ease}
+.project::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(3,26,24,.93))}
+.project:hover img,.project:focus-within img{transform:scale(1.045);filter:saturate(1.06)}
+.project-info{position:absolute;z-index:2;inset:auto 20px 18px}
+.project-info span{font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:#ffd1e0}
+.project-info h3{margin:5px 0 5px;font:700 28px/1 var(--display)}
+.project-info p{margin:0;color:#e3efed;font-size:12px;line-height:1.5}
+
+.segment-split{display:grid;grid-template-columns:1.45fr .55fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.segment-block{min-height:230px;padding:26px;background:#fff}
+.segment-block.art{background:var(--deep);color:#fff}
+.segment-block b{font:700 51px/1 var(--display);color:var(--pink)}
+.segment-block h3{margin:13px 0 8px;font:700 25px/1 var(--display)}
+.segment-block p{margin:0;color:var(--ink-2);font-size:13px}
+.segment-block.art p{color:#cfdfdd}
+.segment-growth{display:flex;gap:16px;margin-top:20px;padding-top:14px;border-top:1px solid rgba(255,255,255,.17)}
+.segment-growth span{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+
+.financial-svg{display:block;width:100%;min-width:660px;height:auto}
+.financial-svg text{font-family:var(--body);fill:var(--muted);font-size:11px;font-weight:700}
+.financial-svg .gridline{stroke:#e7dddf;stroke-width:1}
+.financial-svg .bar{fill:var(--wine);transform-box:fill-box;transform-origin:center bottom;transform:scaleY(0);transition:transform .8s ease}
+.financial-svg .line{fill:none;stroke:var(--deep);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s .3s ease}
+.financial-svg .dot{fill:var(--pink);stroke:#fff;stroke-width:3;opacity:0;transition:opacity .2s 1s ease}
+.is-visible .financial-svg .bar{transform:scaleY(1)}
+.is-visible .financial-svg .line{stroke-dashoffset:0}
+.is-visible .financial-svg .dot{opacity:1}
+
+.cash-bridge{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px;min-width:660px}
+.bridge-step{min-height:155px;padding:20px;background:var(--paper);border-top:3px solid var(--wine)}
+.bridge-step strong{display:block;font:700 35px/1 var(--display);color:var(--wine)}
+.bridge-step span{display:block;margin-top:9px;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.bridge-arrow{color:var(--pink);font-size:28px;font-weight:900}
+
+.booking-bars{display:grid;grid-template-columns:repeat(3,1fr);align-items:end;gap:34px;height:260px;min-width:560px;padding:0 28px 28px;border-bottom:1px solid var(--line)}
+.booking-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.booking-col b{font:700 24px/1 var(--display);color:var(--wine)}
+.booking-col i{display:block;width:min(100%,90px);height:calc(var(--height) * 1%);min-height:30px;background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.booking-col span{font-size:11px;font-weight:800;color:var(--muted)}
+.is-visible .booking-col i{transform:scaleY(1)}
+
+.peer-plot{position:relative;min-width:620px;height:300px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);background:repeating-linear-gradient(to top,transparent 0 59px,rgba(9,47,45,.07) 59px 60px)}
+.peer-point{position:absolute;left:var(--x);bottom:var(--y);transform:translate(-50%,50%);display:flex;align-items:center;gap:8px}
+.peer-point i{width:18px;height:18px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 6px rgba(144,0,49,.12)}
+.peer-point.keywords i{background:var(--deep);box-shadow:0 0 0 6px rgba(6,47,43,.12)}
+.peer-point span{padding:5px 7px;background:#fff;border:1px solid var(--line);font-size:10px;font-weight:900;white-space:nowrap}
+.axis-label{position:absolute;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.axis-label.x{right:0;bottom:-27px}.axis-label.y{left:-16px;top:-22px}
+
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);margin-top:32px;border-top:3px solid var(--deep)}
+.timeline-step{position:relative;padding:24px 18px 0 0}
+.timeline-step::before{content:"";position:absolute;left:0;top:-8px;width:13px;height:13px;border-radius:50%;background:var(--pink);border:2px solid #fff;box-shadow:0 0 0 1px var(--deep)}
+.timeline-step b{font-size:10px;color:var(--wine);letter-spacing:.14em;text-transform:uppercase}
+.timeline-step h3{margin:7px 0;font:700 22px/1 var(--display)}
+.timeline-step p{margin:0;color:var(--ink-2);font-size:12px}
+
+.force-grid{display:grid;gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.force-row{display:grid;grid-template-columns:180px 120px 1fr;gap:18px;padding:15px 18px;background:#fff;align-items:center}
+.force-row b{font-size:12px}.force-row span{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:var(--critical)}
+.force-row p{margin:0;color:var(--ink-2);font-size:12px}
+
+.risk-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.64fr);gap:24px;margin-top:30px}
+.risk-matrix{position:relative;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,104px);gap:1px;background:var(--line);border:1px solid var(--line)}
+.risk-cell{background:#fff}
+.risk-cell:nth-child(3),.risk-cell:nth-child(6),.risk-cell:nth-child(9){background:#fbf1f3}
+.risk-cell:nth-child(1),.risk-cell:nth-child(2),.risk-cell:nth-child(4){background:#f3f8f6}
+.risk-dot{position:absolute;border:1px solid rgba(144,0,49,.35);background:rgba(255,255,255,.95);padding:7px 9px;cursor:pointer;font-size:10px;font-weight:900;box-shadow:0 6px 16px rgba(9,47,45,.12)}
+.risk-dot:hover,.risk-dot:focus-visible,.risk-dot[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.risk-detail{min-height:314px;padding:24px;background:var(--deep);color:#fff}
+.risk-detail .risk-level{color:var(--pink);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.risk-detail h3{margin:12px 0 18px;font:700 31px/1 var(--display)}
+.risk-detail dl{margin:0}.risk-detail dt{margin-top:14px;color:#a9c9c4;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.risk-detail dd{margin:4px 0 0;font-size:12px;line-height:1.55}
+.matrix-label{margin-top:8px;color:var(--muted);font-size:10px;font-weight:800;text-align:center;text-transform:uppercase;letter-spacing:.08em}
+
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px}
+.gate{position:relative;min-height:280px;padding:24px 20px;border:1px solid var(--line);background:#fff}
+.gate+.gate{border-left:0}
+.gate::after{content:"";position:absolute;right:-8px;top:42px;z-index:2;width:14px;height:14px;border-top:2px solid var(--wine);border-right:2px solid var(--wine);transform:rotate(45deg);background:#fff}
+.gate:last-child::after{display:none}
+.gate-num{color:var(--wine);font:700 34px/1 var(--display)}
+.gate h3{margin:14px 0 9px;font:700 23px/1 var(--display)}
+.gate p{margin:0;color:var(--ink-2);font-size:12px}
+.gate-exit{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:10px;font-weight:850;line-height:1.5;text-transform:uppercase;letter-spacing:.06em}
+
+.scenario-control{display:flex;gap:8px;margin-top:28px}
+.scenario-control button{min-width:104px;padding:9px 13px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+.scenario-control button:hover,.scenario-control button:focus-visible,.scenario-control button[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.scenario-output{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:1px;margin-top:12px;background:var(--line);border:1px solid var(--line)}
+.scenario-lead,.scenario-stat{padding:24px;background:#fff}
+.scenario-lead{background:var(--deep);color:#fff}
+.scenario-lead span,.scenario-stat span{display:block;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.scenario-lead span{color:#a9c9c4}
+.scenario-lead strong,.scenario-stat strong{display:block;margin-top:9px;font:700 36px/1 var(--display);color:var(--pink)}
+.scenario-stat strong{color:var(--wine)}
+.scenario-lead p,.scenario-stat p{margin:9px 0 0;font-size:11px;color:#d9e7e5}.scenario-stat p{color:var(--ink-2)}
+
+.score-details{min-width:0;max-width:100%;margin-top:12px;border:1px solid var(--line);background:#fff;overflow:hidden}
+.score-details summary{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:17px 18px;cursor:pointer;font-size:13px;font-weight:850;list-style:none}
+.score-details summary::-webkit-details-marker{display:none}
+.score-details summary b{color:var(--wine)}
+.score-details[open] summary{border-bottom:1px solid var(--line);background:var(--paper-2)}
+.score-table-wrap{width:100%;max-width:100%;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:650px;font-size:12px}
+th,td{padding:11px 14px;border-bottom:1px solid #eadfe2;text-align:right;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+th:last-child,td:last-child{text-align:left;white-space:normal}
+thead th{background:var(--deep);color:#fff;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+tbody tr:last-child td{border-bottom:0}
+
+.sources{padding:72px 0;background:var(--deep);color:#fff}
+.sources-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px}
+.sources h2{font-size:44px}.sources p,.sources li{color:#c9dbd8;font-size:12px}.sources a{color:#fff;text-underline-offset:3px}.sources ul{margin:22px 0 0;padding-left:18px}.sources .disclaimer{padding-left:24px;border-left:3px solid var(--pink)}
+.page-footer{padding:28px 0;background:#032522;color:#abc4c0;font-size:11px}
+.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center}.footer-row a{color:#fff}
+
+[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+[data-reveal].is-visible{opacity:1;transform:none}
+:focus-visible{outline:3px solid rgba(239,145,177,.75);outline-offset:3px}
+
+/* G.H.Y editorial exhibits */
+.hero-logo.ghy-brand{left:-28px;top:42px;width:190px;height:82px;padding:12px 14px;background:#fff;border-top:4px solid var(--wine)}
+.hero-logo.ghy-brand img{object-fit:contain}
+.hero-image img{object-position:center}
+.hero-score b{font-size:58px}
+.project.tall{min-height:500px;grid-row:span 2}
+.project.tall img{object-position:center 12%}
+.project.wide{grid-column:span 1}
+.segment-stack{display:grid;gap:10px;margin-top:30px}
+.segment-row{display:grid;grid-template-columns:190px 1fr 72px;gap:14px;align-items:center;font-size:12px;font-weight:850}
+.segment-track{height:38px;background:#eadde2;overflow:hidden}
+.segment-fill{height:100%;width:calc(var(--share) * 1%);min-width:6px;background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .85s ease}
+.segment-row:nth-child(2) .segment-fill{background:var(--pink)}
+.segment-row:nth-child(3) .segment-fill{background:#77a69f}
+.is-visible .segment-fill{transform:scaleX(1)}
+.segment-row strong{text-align:right;color:var(--wine)}
+.working-bars{display:grid;grid-template-columns:repeat(4,1fr);align-items:end;gap:24px;height:300px;min-width:620px;padding:24px 36px 32px;border-bottom:1px solid var(--line)}
+.working-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.working-col b{font:700 23px/1 var(--display);color:var(--wine)}
+.working-col i{display:block;width:min(100%,88px);height:calc(var(--height) * 1%);background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.working-col span{font-size:10px;font-weight:850;color:var(--muted);text-align:center;text-transform:uppercase}
+.is-visible .working-col i{transform:scaleY(1)}
+.slate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.slate-item{min-height:180px;padding:22px;background:#fff}
+.slate-item:nth-child(1){background:var(--deep);color:#fff}
+.slate-item span{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.slate-item:nth-child(1) span{color:var(--pink)}
+.slate-item h3{margin:10px 0 8px;font:700 25px/1 var(--display)}
+.slate-item p{margin:0;color:var(--ink-2);font-size:12px}
+.slate-item:nth-child(1) p{color:#ccdedb}
+.peer-compare{display:grid;gap:13px;min-width:600px}
+.peer-row{display:grid;grid-template-columns:110px 1fr 100px 90px;gap:12px;align-items:center;font-size:11px;font-weight:850}
+.peer-track{height:14px;background:#eadde2;overflow:hidden}
+.peer-track i{display:block;height:100%;width:calc(var(--size) * 1%);background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.peer-row:nth-child(2) .peer-track i{background:linear-gradient(90deg,#597f79,var(--pink))}
+.is-visible .peer-track i{transform:scaleX(1)}
+.peer-row b{color:var(--wine)}
+.score-callout{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;margin-top:28px;padding:26px;background:linear-gradient(145deg,var(--deep),#174944);color:#fff}
+.score-callout strong{font:700 76px/.8 var(--display);color:var(--pink)}
+.score-callout p{margin:0;color:#d8e6e4;font-size:14px}
+.fragile{color:var(--critical)!important}
+.financial-svg .margin-label{fill:#fff;stroke:var(--deep);stroke-width:3px;paint-order:stroke;stroke-linejoin:round;font-weight:900}
+
+@media(max-width:1060px){
+  .primary-nav>a:nth-of-type(2),.primary-nav>a:nth-of-type(4){display:none}
+  .reading-layout{grid-template-columns:1fr}.thesis-rail{display:none}
+  .hero-grid{grid-template-columns:minmax(0,.9fr) minmax(380px,1.1fr);gap:34px}
+}
+@media(max-width:820px){
+  .wrap,.reading-layout{width:min(100% - 28px,1220px)}
+  .site-nav .primary-nav>a{display:none}.reading-progress{display:none}.nav-inner{gap:13px}.brand strong{display:none}
+  .hero{min-height:0}.hero-grid{grid-template-columns:1fr;min-height:0;padding:56px 0 48px}.hero-art{min-height:490px}.hero-image{left:0}.hero-logo{left:12px}.hero-score{right:12px}
+  .analysis-section{padding:58px 0}.analysis-section::before{top:55px;font-size:42px}
+  .g4,.g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .portfolio-grid,.g2,.risk-layout,.sources-grid{grid-template-columns:1fr}
+  .roadmap{grid-template-columns:1fr 1fr}.gate:nth-child(3){border-left:1px solid var(--line)}.gate::after{display:none}
+  .timeline{grid-template-columns:1fr 1fr;gap:24px 0}.scenario-output{grid-template-columns:1fr 1fr}.force-row{grid-template-columns:130px 95px 1fr}
+  .project.tall{grid-row:auto;min-height:400px}.working-bars{min-width:560px}.score-callout{grid-template-columns:140px 1fr}.score-callout strong{font-size:62px}
+}
+@media(max-width:560px){
+  .back-home{padding:7px 8px}.back-home span{display:none}.back-home span:first-child{display:inline}.sections-popover{position:fixed;right:14px;top:61px}
+  .hero-grid{gap:22px;padding:34px 0 28px}.hero-art{min-height:260px}.hero-logo{width:78px;height:78px;padding:12px;top:24px}.hero-score{width:132px;min-height:132px;padding:16px}.hero-score b{font-size:43px}.hero-caption{display:none}
+  h1{font-size:50px}.hero-thesis{font-size:24px}.hero-copy>p:not(.eyebrow):not(.hero-thesis){font-size:14px;line-height:1.55}.hero-meta{margin-top:20px}.hero-actions{align-items:flex-start;flex-direction:column;gap:9px;margin-top:22px}
+  .g4,.g3,.portfolio-grid,.roadmap,.scenario-output{grid-template-columns:1fr}
+  .project{min-height:330px}.curator-note{grid-template-columns:1fr;gap:6px}.figure-head{display:block}.figure-source{margin-top:8px;text-align:left}
+  .segment-split{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.force-row{grid-template-columns:1fr;gap:5px}.risk-matrix{grid-template-rows:repeat(3,116px)}
+  .cash-bridge{grid-template-columns:1fr;min-width:0}.bridge-arrow{justify-self:center;line-height:1;transform:rotate(90deg)}
+  .benchmark,.booking-bars{min-width:0}.benchmark-row{grid-template-columns:112px 1fr 42px;gap:8px}.booking-bars{gap:12px;padding-inline:8px}
+  .scenario-control{display:grid;grid-template-columns:repeat(3,1fr)}.scenario-control button{min-width:0}.footer-row{display:block}.footer-row a{display:inline-block;margin-top:12px}
+  .hero-logo.ghy-brand{left:10px;top:20px;width:128px;height:62px;padding:9px}.segment-row{grid-template-columns:108px 1fr 48px;gap:8px}.working-bars{min-width:500px}.slate-grid{grid-template-columns:1fr}.peer-compare{min-width:520px}.score-callout{grid-template-columns:1fr}.score-callout strong{font-size:58px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}.bar-fill,.benchmark-track::after,.booking-col i,.financial-svg .bar{transform:none}.benchmark-track i{transform:translate(-50%,-50%) scale(1)}.financial-svg .line{stroke-dashoffset:0}.financial-svg .dot{opacity:1}}
+</style>
+</head>
+<body>
+<div class="route-progress" id="route-progress" aria-hidden="true"></div>
+
+<nav class="site-nav" aria-label="G.H.Y Culture and Media analysis navigation">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Beyond Our Gallery home"><img src="assets/bog-logo-mark.png" alt=""><strong>Beyond Our Gallery</strong></a>
+    <div class="primary-nav">
+      <a href="#score">Score</a><a href="#business">Business</a><a href="#financials">Financials</a><a href="#risk">Risk</a><a href="#outlook">Outlook</a>
+      <details class="sections-menu"><summary>Sections</summary><div class="sections-popover">
+        <a href="#score">00 Score</a><a href="#business">01 Business</a><a href="#portfolio">02 Portfolio</a><a href="#segments">03 Segments</a><a href="#financials">04 Financials</a><a href="#cash">05 Cash and balance sheet</a><a href="#demand">06 Slate and demand</a><a href="#market">07 Market and peers</a><a href="#frameworks">08 Frameworks</a><a href="#risk">09 Risk</a><a href="#outlook">10 Strategy and outlook</a>
+      </div></details>
+    </div>
+    <div class="reading-progress" aria-label="Reading progress"><b id="section-current">00</b><span>/ 10</span></div>
+    <a class="back-home" href="index.html"><span aria-hidden="true">&#8592;</span><span>Back home</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow">Strategy and commercial review &middot; SGX: XJB</p>
+      <h1>G.H.Y Culture<br>&amp; Media</h1>
+      <p class="hero-thesis">A proven franchise inside a model that pays the producer last.</p>
+      <p>G.H.Y makes long-form and micro dramas for China's largest platforms, then carries the script, approval, production and collection risk. Strange Tales of Tang Dynasty proves the franchise model; cash conversion shows why proof is not yet enough.</p>
+      <div class="hero-meta"><span>Film &amp; Media</span><span>Evidence grade B</span><span>Updated 31 Oct 2026</span></div>
+      <div class="hero-actions"><a class="button" href="#score">Enter the analysis</a><a class="text-link" href="https://ghyculturemedia.com/" target="_blank" rel="noopener">Company website &#8599;</a></div>
+    </div>
+    <div class="hero-art" data-reveal>
+      <figure class="hero-image"><img src="assets/ghy-sisterhood.webp" alt="Sisterhood drama ensemble produced by G.H.Y Culture and Media"></figure>
+      <div class="hero-logo ghy-brand"><img src="assets/ghy-logo.webp" alt="G.H.Y Culture and Media logo"></div>
+      <div class="hero-score"><span>Business quality score</span><b>35.1</b><em>Fragile</em></div>
+      <div class="hero-caption">Exhibit 00 &middot; Sisterhood. Cross-border Singapore-China storytelling.</div>
+    </div>
+  </div>
+</header>
+
+<div class="reading-layout">
+<main class="analysis-main">
+  <section class="analysis-section" id="score" data-number="00" data-index="0" data-thesis="Franchise IP is real, but financial resilience is not." data-evidence="Financial Strength contributes only 8.5 of 40 points; Market Position holds up at 9.6 of 20." data-uncertainty="Whether profit-sharing franchises can convert delayed upside into cash before liquidity tightens." data-change="Positive free cash flow, lower receivable days and repeatable gross margins above 18% would lift the score.">
+    <p class="section-kicker">00 &middot; Evidence &middot; Research score</p>
+    <h2>35.1 out of 100: the franchise cannot carry the balance sheet</h2>
+    <p class="lede">G.H.Y sits in the Fragile band. Franchise IP keeps Market Position close to Kingsmen's, but five-year losses, negative cumulative free cash flow and rising bank debt overwhelm that strength.</p>
+    <div class="score-callout" data-reveal><strong>35.1</strong><p><b>Fragile &middot; sensitivity range 30-38.</b><br>The label describes business quality and future potential. It is not a buy or sell call.</p></div>
+    <div class="section-grid g2">
+      <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 00.1</span><h3>How far is G.H.Y from a resilient peer?</h3></div><span class="figure-source">Beyond Our Gallery rubric &middot; 31 Oct 2026</span></div><div class="figure-canvas benchmark">
+        <div class="benchmark-row"><span>Vividthree</span><div class="benchmark-track" style="--value:22.6"><i></i></div><b>22.6</b></div>
+        <div class="benchmark-row"><span>G.H.Y</span><div class="benchmark-track" style="--value:35.1"><i></i></div><b>35.1</b></div>
+        <div class="benchmark-row"><span>Weak threshold</span><div class="benchmark-track" style="--value:40"><i></i></div><b>40.0</b></div>
+        <div class="benchmark-row"><span>Kingsmen</span><div class="benchmark-track" style="--value:59.3"><i></i></div><b>59.3</b></div>
+      </div><figcaption class="curator-note"><b>Curator's note</b><p>The gap to Kingsmen is almost entirely financial: 8.5 versus 24.3 points in Financial Strength.</p></figcaption></figure>
+      <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 00.2</span><h3>What lifts and holds back the score?</h3></div><span class="figure-source">Points earned / category weight</span></div><div class="figure-canvas category-bars">
+        <div class="category-bar"><span>Financial Strength</span><div class="bar-track"><i class="bar-fill" style="--pct:21.25"></i></div><b>8.5 / 40</b></div>
+        <div class="category-bar"><span>Market Position</span><div class="bar-track"><i class="bar-fill" style="--pct:48"></i></div><b>9.6 / 20</b></div>
+        <div class="category-bar"><span>Growth Opportunities</span><div class="bar-track"><i class="bar-fill" style="--pct:44"></i></div><b>11.0 / 25</b></div>
+        <div class="category-bar"><span>Risk Resilience</span><div class="bar-track"><i class="bar-fill" style="--pct:40"></i></div><b>6.0 / 15</b></div>
+      </div><figcaption class="curator-note"><b>Lift / drag</b><p>Owned IP and iQIYI partnerships lift the score. Cash flow, buyer power and one-country concentration hold it back.</p></figcaption></figure>
+    </div>
+    <div style="margin-top:30px">
+      <details class="score-details"><summary><span>Financial Strength</span><b>8.5 / 40</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Five-year revenue CAGR</td><td>6</td><td>3.0</td><td>3.6</td><td>6.3% a year in RMB.</td></tr><tr><td>Net profit margin</td><td>7</td><td>0.4</td><td>0.6</td><td>Five-year median -13.3% excluding the football charge.</td></tr><tr><td>ROIC / ROE</td><td>9</td><td>0.4</td><td>0.7</td><td>Five-year median ROE about -6.5%.</td></tr><tr><td>Cash-flow stability</td><td>9</td><td>1.0</td><td>1.8</td><td>Positive free cash flow in two of five years.</td></tr><tr><td>Balance-sheet strength</td><td>9</td><td>1.0</td><td>1.8</td><td>Net cash at FY2025, net debt by June 2026.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Market Position</span><b>9.6 / 20</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Brand recognition</td><td>2</td><td>3.0</td><td>1.2</td><td>Asian Academy and Golden Rooster recognition.</td></tr><tr><td>Competitive advantage</td><td>7</td><td>3.0</td><td>4.2</td><td>Franchise IP is slow to copy, but lacks a margin premium.</td></tr><tr><td>Market share</td><td>4</td><td>1.0</td><td>0.8</td><td>TV revenue is about 3% of one buyer's content budget.</td></tr><tr><td>Customer relationships</td><td>5</td><td>3.0</td><td>3.0</td><td>Repeat iQIYI seasons; retention is undisclosed.</td></tr><tr><td>Geographic reach</td><td>2</td><td>1.0</td><td>0.4</td><td>China generated 96.9% of FY2025 revenue.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Growth Opportunities</span><b>11.0 / 25</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Industry growth</td><td>6</td><td>2.0</td><td>2.4</td><td>Long-form spending is soft; micro-drama is growing.</td></tr><tr><td>Technology adoption</td><td>4</td><td>1.0</td><td>0.8</td><td>AI is in production; benefits remain unquantified.</td></tr><tr><td>New-market expansion</td><td>6</td><td>3.0</td><td>3.6</td><td>Micro-drama teams and releases are live.</td></tr><tr><td>Revenue diversification</td><td>5</td><td>1.0</td><td>1.0</td><td>TV and film were 95.5% of revenue.</td></tr><tr><td>Strategic partnerships</td><td>4</td><td>4.0</td><td>3.2</td><td>Binding iQIYI co-productions and park ventures.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Risk Resilience</span><b>6.0 / 15</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Economic resilience</td><td>3</td><td>1.0</td><td>0.6</td><td>Losses in FY2022, FY2023 and FY2024.</td></tr><tr><td>Customer diversification</td><td>4</td><td>2.0</td><td>1.6</td><td>Four platforms dominate demand.</td></tr><tr><td>Technology resilience</td><td>3</td><td>3.0</td><td>1.8</td><td>Premium drama is difficult to automate.</td></tr><tr><td>Regulatory resilience</td><td>2</td><td>2.0</td><td>0.8</td><td>Licence- and VIE-dependent in one regime.</td></tr><tr><td>Operational resilience</td><td>3</td><td>2.0</td><td>1.2</td><td>Founder-centric with event-loss precedent.</td></tr></tbody></table></div></details>
+    </div>
+  </section>
+
+  <section class="analysis-section" id="business" data-number="01" data-index="1" data-thesis="G.H.Y is a founder-controlled producer with franchise ambitions." data-evidence="TV and film produced RMB488.1m of FY2025 revenue and the Tang franchise now spans series, micro-dramas and an iQIYI Land theatre." data-uncertainty="Most economics still sit in commissioned production where four platforms set price and payment terms." data-change="Disclosed franchise licensing and profit-share economics would prove the move upstream.">
+    <p class="section-kicker">01 &middot; Exhibit &middot; The business</p><h2>One story engine, three ways to monetize attention</h2><p class="lede">The group develops and produces screen content, presents selected concerts, and supports its slate with talent, costumes, props and training. Its edge is story ownership; its constraint is the cash cycle between greenlight and payment.</p>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>RMB511.2m</b><span>FY2025 revenue &middot; +22.4%</span></div><div class="metric"><b>RMB8.7m</b><span>FY2025 profit after tax</span></div><div class="metric"><b>96.9%</b><span>Revenue from China</span></div><div class="metric"><b>~62%</b><span>Founder-controlled ownership</span></div></div>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 01.1</span><h3>How does a viewer signal become shareholder value?</h3></div><span class="figure-source">G.H.Y annual report &middot; Beyond Our Gallery</span></div><div class="figure-canvas cash-bridge"><div class="bridge-step"><strong>01</strong><span>Platform demand</span><p>Subscriptions and advertising shape buyer budgets.</p></div><div class="bridge-arrow">&#8594;</div><div class="bridge-step"><strong>02-03</strong><span>IP, approval, delivery</span><p>Track record wins the greenlight; scripts become approved titles.</p></div><div class="bridge-arrow">&#8594;</div><div class="bridge-step"><strong>04</strong><span>Margin and cash</span><p>Deal terms, budget control and collection decide value.</p></div></div><figcaption class="curator-note"><b>Decision lens</b><p>Demand reaches G.H.Y late. Cash reaches it later still.</p></figcaption></figure>
+  </section>
+
+  <section class="analysis-section" id="portfolio" data-number="02" data-index="2" data-thesis="Franchise continuity is G.H.Y's clearest moat." data-evidence="Tang improved from Douban 8.0 to 8.6, added a third season, micro-drama spin-offs and an immersive theatre." data-uncertainty="The group does not disclose the revenue or margin captured from franchise extensions." data-change="Title-level economics showing repeatable franchise returns would deepen the moat case.">
+    <p class="section-kicker">02 &middot; Exhibit &middot; Portfolio</p><h2>The art is varied; the economic question is repeatability</h2><p class="lede">Project images are treated as exhibits: each title matters only to the extent that audience memory lowers the risk of the next greenlight.</p>
+    <div class="portfolio-grid">
+      <article class="project tall" data-reveal><img src="assets/ghy-carnival.webp" alt="Jay Chou Carnival world tour poster"><div class="project-info"><span>Live events &middot; Malaysia</span><h3>Jay Chou Carnival</h3><p>Why it matters: stadium touring can be large, but scarce superstar dates make it an option rather than a stable segment.</p></div></article>
+      <article class="project" data-reveal><img src="assets/ghy-tang-dynasty.webp" alt="Strange Tales of Tang Dynasty drama artwork"><div class="project-info"><span>iQIYI &middot; Franchise IP</span><h3>Strange Tales of Tang Dynasty</h3><p>Why it matters: the franchise supports sequels, spin-offs and offline licensing that a rival cannot simply rebid.</p></div></article>
+      <article class="project" data-reveal><img src="assets/ghy-sisterhood.webp" alt="Sisterhood drama ensemble artwork"><div class="project-info"><span>CCTV-8 and iQIYI &middot; Nanyang drama</span><h3>Sisterhood</h3><p>Why it matters: Singapore-China stories are a cultural niche that differentiates G.H.Y from larger mainland peers.</p></div></article>
+    </div>
+  </section>
+
+  <section class="analysis-section" id="segments" data-number="03" data-index="3" data-thesis="Television and film now carry almost the whole company." data-evidence="The core segment generated 95.5% of FY2025 revenue and 95.4% of gross profit." data-uncertainty="Profit-sharing lowered 1H2026 TV gross margin to 3.9% while upside remained deferred." data-change="A measurable contribution from franchises, micro-dramas or live events would improve portfolio quality.">
+    <p class="section-kicker">03 &middot; Evidence &middot; Segments</p><h2>One segment earns 95% of revenue; the others are sub-scale</h2><p class="lede">Concerts were 45.9% of FY2023 revenue and only 3.2% two years later. The portfolio has contracted back to the core just as G.H.Y changes the core's deal model.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 03.1</span><h3>Where does FY2025 revenue sit?</h3></div><span class="figure-source">G.H.Y FY2025 results &middot; RMB511.2m total</span></div><div class="figure-canvas segment-stack">
+      <div class="segment-row"><span>TV and film</span><div class="segment-track"><i class="segment-fill" style="--share:95.5"></i></div><strong>95.5%</strong></div><div class="segment-row"><span>Concerts</span><div class="segment-track"><i class="segment-fill" style="--share:3.2"></i></div><strong>3.2%</strong></div><div class="segment-row"><span>Others</span><div class="segment-track"><i class="segment-fill" style="--share:1.3"></i></div><strong>1.3%</strong></div>
+    </div><figcaption class="curator-note"><b>Curator's note</b><p>Revenue concentration makes title timing look like strategy. Portfolio quality improves only when a second engine becomes material.</p></figcaption></figure>
+    <div class="section-grid g3" data-reveal><div class="metric"><b>19.2%</b><span>TV and film gross margin</span></div><div class="metric"><b>15.2%</b><span>Concert gross margin</span></div><div class="metric"><b>29.9%</b><span>Others gross margin on 1.3% of sales</span></div></div>
+  </section>
+
+  <section class="analysis-section" id="financials" data-number="04" data-index="4" data-thesis="FY2025 recovered, but the recovery did not hold into 1H2026." data-evidence="Revenue reached RMB511.2m and gross margin recovered to 19.2% in FY2025." data-uncertainty="1H2026 gross margin fell to 4.3% and the group lost RMB31.4m." data-change="A second half above the 18% break-even gross margin would make recovery evidence credible.">
+    <p class="section-kicker">04 &middot; Evidence &middot; Financials</p><h2>Revenue recovered; margin still decides whether the slate creates value</h2><p class="lede">FY2025 was the only profitable year since FY2021. The gross-profit recovery was real, but government grants exceeded pre-tax profit and the next half-year returned to loss.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 04.1</span><h3>Did the revenue recovery rebuild economics?</h3></div><span class="figure-source">G.H.Y results FY2021-25 &middot; Revenue RMBm</span></div><div class="figure-canvas"><svg class="financial-svg" viewBox="0 0 700 340" role="img" aria-label="G.H.Y revenue and gross margin from FY2021 to FY2025.">
+      <line class="gridline" x1="70" y1="260" x2="650" y2="260"/><line class="gridline" x1="70" y1="220" x2="650" y2="220"/><line class="gridline" x1="70" y1="180" x2="650" y2="180"/><line class="gridline" x1="70" y1="140" x2="650" y2="140"/><line class="gridline" x1="70" y1="100" x2="650" y2="100"/><line class="gridline" x1="70" y1="60" x2="650" y2="60"/>
+      <text x="34" y="264">0</text><text x="28" y="224">110</text><text x="28" y="184">220</text><text x="28" y="144">330</text><text x="28" y="104">440</text><text x="28" y="64">550</text>
+      <rect class="bar" x="94" y="115" width="62" height="145"/><rect class="bar" x="204" y="179" width="62" height="81"/><rect class="bar" x="314" y="119" width="62" height="141"/><rect class="bar" x="424" y="108" width="62" height="152"/><rect class="bar" x="534" y="74" width="62" height="186"/>
+      <path class="line" pathLength="1" d="M125 116 L235 90 L345 120 L455 199 L565 151"/><circle class="dot" cx="125" cy="116" r="6"/><circle class="dot" cx="235" cy="90" r="6"/><circle class="dot" cx="345" cy="120" r="6"/><circle class="dot" cx="455" cy="199" r="6"/><circle class="dot" cx="565" cy="151" r="6"/>
+      <text x="100" y="284">FY2021</text><text x="210" y="284">FY2022</text><text x="320" y="284">FY2023</text><text x="430" y="284">FY2024</text><text x="540" y="284">FY2025</text>
+      <text x="99" y="105">399.9</text><text x="209" y="169">223.2</text><text x="319" y="109">388.0</text><text x="429" y="98">417.6</text><text x="539" y="64">511.2</text>
+      <text class="margin-label" x="103" y="137">26.1%</text><text class="margin-label" x="213" y="81">31.2%</text><text class="margin-label" x="323" y="142">25.2%</text><text class="margin-label" x="433" y="221">10.0%</text><text class="margin-label" x="543" y="173">19.2%</text>
+      <rect x="468" y="304" width="12" height="12" fill="var(--wine)"/><text x="486" y="314">Revenue</text><line x1="552" y1="310" x2="572" y2="310" stroke="var(--deep)" stroke-width="3"/><text x="580" y="314">Gross margin</text>
+    </svg></div><figcaption class="curator-note"><b>Turning point</b><p>FY2025's 19.2% margin recovered from a 10.0% trough. 1H2026 then fell to 4.3%.</p></figcaption></figure>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>RMB8.7m</b><span>FY2025 profit after tax</span></div><div class="metric"><b>RMB13.5m</b><span>Government grants</span></div><div class="metric"><b>-RMB31.4m</b><span>1H2026 net result</span></div><div class="metric"><b>~18%</b><span>Break-even gross margin</span></div></div>
+  </section>
+
+  <section class="analysis-section" id="cash" data-number="05" data-index="5" data-thesis="The balance sheet is a content slate financed for much larger buyers." data-evidence="Content working capital reached RMB404.7m at FY2025 and receivable days rose to 137." data-uncertainty="Net cash of RMB17.8m became net debt of RMB51.9m by June 2026." data-change="Receivable days below 100 and positive free cash flow would release the pressure.">
+    <p class="section-kicker">05 &middot; Evidence &middot; Cash and balance sheet</p><h2>G.H.Y funds the slate, then waits four to five months to be paid</h2><p class="lede">Trade receivables, contract assets and productions in progress absorb the balance sheet. The problem is not simply debt; it is a widening gap between delivery and collection.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 05.1</span><h3>How much capital is trapped in the production cycle?</h3></div><span class="figure-source">G.H.Y statements of financial position &middot; RMBm</span></div><div class="figure-canvas working-bars"><div class="working-col"><b>344.5</b><i style="--height:84"></i><span>Dec 2023</span></div><div class="working-col"><b>410.8</b><i style="--height:100"></i><span>Dec 2024</span></div><div class="working-col"><b>404.7</b><i style="--height:98"></i><span>Dec 2025</span></div><div class="working-col"><b>290.8</b><i style="--height:71"></i><span>Jun 2026</span></div></div><figcaption class="curator-note"><b>Collection risk</b><p>FY2025 trade receivable days rose to 137 from 78, while customer advances fell sharply from their 2023 level.</p></figcaption></figure>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>-RMB57.3m</b><span>FY2025 free cash flow</span></div><div class="metric"><b>137 days</b><span>Trade receivable days</span></div><div class="metric"><b>RMB51.9m</b><span>Net debt at June 2026</span></div><div class="metric"><b>RMB136.0m</b><span>IPO proceeds still unspent</span></div></div>
+    <div class="callout"><strong>Paying a dividend while cash flow is negative makes liquidity a decision, not only an outcome.</strong><p>G.H.Y returned about RMB9.9m through dividend and buybacks in FY2025 against negative free cash flow.</p></div>
+  </section>
+
+  <section class="analysis-section" id="demand" data-number="06" data-index="6" data-thesis="Demand arrives through platform budgets, title by title, with long lags." data-evidence="iQIYI revenue fell in 2025 while G.H.Y TV revenue rose 67% because delayed titles were delivered." data-uncertainty="Viewer demand and G.H.Y revenue can move in opposite directions for several reporting periods." data-change="Title-level pipeline and deal-type disclosure would make the outlook forecastable.">
+    <p class="section-kicker">06 &middot; Evidence &middot; Slate and demand</p><h2>End demand moves first; G.H.Y's income statement moves last</h2><p class="lede">Viewer time and advertising shape platform budgets. Platforms then choose a handful of titles, approvals follow, revenue is recognized on delivery, and cash arrives months later.</p>
+    <div class="timeline" data-reveal><article class="timeline-step"><b>End demand</b><h3>Viewers and advertisers</h3><p>Subscriptions, ads and micro-drama payments set the buyers' budget envelope.</p></article><article class="timeline-step"><b>6-18 months</b><h3>Platform budget</h3><p>iQIYI, Tencent, Youku and CCTV greenlight titles, increasingly around proven IP.</p></article><article class="timeline-step"><b>6-24 months</b><h3>Approval and delivery</h3><p>Scripts, shoots and schedules determine when a completed title reaches the platform.</p></article><article class="timeline-step"><b>Months later</b><h3>Recognition and cash</h3><p>Revenue appears on delivery or over production; collection follows after the buyer accepts it.</p></article></div>
+    <div class="slate-grid" data-reveal><article class="slate-item"><span>Franchise core</span><h3>Strange Tales of Tang Dynasty 3</h3><p>Premiered November 2025. The wider franchise includes record-setting micro-drama spin-offs and an iQIYI Land theatre.</p></article><article class="slate-item"><span>Mid-length</span><h3>The Ferryman: 10 Years</h3><p>Ended June 2026 with a reported iQIYI heat record of 8,661.</p></article><article class="slate-item"><span>Broadcast</span><h3>My Destiny</h3><p>On air from March 2026 on CCTV-8.</p></article><article class="slate-item"><span>AI-assisted</span><h3>Beautiful Fairytale</h3><p>Shot through June 2026 as a planned franchise; timing remains part of the FY2026 outcome.</p></article></div>
+  </section>
+
+  <section class="analysis-section" id="market" data-number="07" data-index="7" data-thesis="G.H.Y has valuable IP but less scale, cash and collection power than Linmon." data-evidence="Linmon earned 1.7 times G.H.Y's revenue, with a 26.6% gross margin and about 60 receivable days." data-uncertainty="The market cannot price G.H.Y's franchise extensions without disclosed economics." data-change="Peer-level disclosure of micro-drama revenue and title returns would narrow the information discount.">
+    <p class="section-kicker">07 &middot; Evidence &middot; Market and peers</p><h2>Franchise IP differentiates G.H.Y; scale and cash still belong to the peer</h2><p class="lede">The closest listed comparison, Linmon Media, is larger, more profitable and paid faster. G.H.Y's answer is not to imitate its scale, but to quantify the value of the franchise niche Linmon cannot copy.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 07.1</span><h3>Where does the peer gap come from?</h3></div><span class="figure-source">FY2025 company results &middot; RMB</span></div><div class="figure-canvas peer-compare"><div class="peer-row"><span>G.H.Y</span><div class="peer-track"><i style="--size:59"></i></div><b>RMB511m</b><span>19.2% margin</span></div><div class="peer-row"><span>Linmon</span><div class="peer-track"><i style="--size:100"></i></div><b>RMB863m</b><span>26.6% margin</span></div></div><figcaption class="curator-note"><b>Curator's note</b><p>Linmon also held RMB782.8m of cash and disclosed micro-drama revenue. G.H.Y held RMB89.4m and does not.</p></figcaption></figure>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>S$0.053</b><span>Share price &middot; 29 Oct 2026</span></div><div class="metric"><b>S$56.6m</b><span>Market capitalization</span></div><div class="metric"><b>~40x</b><span>FY2025 price / earnings</span></div><div class="metric"><b>~0.7x</b><span>Trailing enterprise value / sales</span></div></div>
+  </section>
+
+  <section class="analysis-section" id="frameworks" data-number="08" data-index="8" data-thesis="G.H.Y is a price-taker where most revenue sits and a price-maker only where it owns IP." data-evidence="Four platforms dominate buying while 95.5% of G.H.Y revenue remains in TV and film production." data-uncertainty="Franchise economics are hidden inside segment totals." data-change="More upstream licensing and disclosed profit-share returns would turn IP recognition into moat evidence.">
+    <p class="section-kicker">08 &middot; Decision &middot; Strategic frameworks</p><h2>Buyer power is very high; the moat lives upstream</h2><p class="lede">Commissioned production sits between powerful buyers and crowded supply. Owned franchises change the equation because no rival can sell the same sequel, spin-off or immersive extension.</p>
+    <div class="force-grid" data-reveal><div class="force-row"><b>Competitive rivalry</b><span>High</span><p>Long-form filings rose while platform budgets stayed flat; micro-drama supply exploded.</p></div><div class="force-row"><b>Buyer power</b><span>Very high</span><p>Four major platforms commission most long-form drama, and G.H.Y waits about 137 days to be paid.</p></div><div class="force-row"><b>Supplier power</b><span>Moderate</span><p>Stars and writers are scarce, but cast-pay rules and in-house creative leadership limit the pressure.</p></div><div class="force-row"><b>New entrants</b><span>Split</span><p>Long-form requires trust and approval; AI micro-drama is cheap to enter.</p></div><div class="force-row"><b>Substitutes</b><span>Rising</span><p>Short video, games and AI-generated content compete for the same evenings.</p></div></div>
+    <div class="callout"><strong>Verdict: move revenue out of the middle.</strong><p>Franchises, profit-sharing, micro-drama spin-offs and offline licensing are all attempts to capture the hit rent instead of only the production fee.</p></div>
+  </section>
+
+  <section class="analysis-section" id="risk" data-number="09" data-index="9" data-thesis="The central risk is liquidity tightening before franchise upside arrives." data-evidence="Receivables, contract assets and productions in progress absorbed more than RMB400m at FY2025." data-uncertainty="Profit-share titles reduce upfront margin while their later upside is unknowable." data-change="Positive free cash flow and a lower net-debt trajectory would reduce the Fragile rating.">
+    <p class="section-kicker">09 &middot; Decision &middot; Risk matrix</p><h2>Six risks converge on cash timing</h2><p class="lede">Select a risk to inspect its trigger and mitigation. Labels carry the status so meaning is not dependent on colour.</p>
+    <div class="risk-layout"><div><div class="risk-matrix" aria-label="Likelihood and impact matrix"><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div>
+      <button class="risk-dot" style="left:76%;top:18%" data-risk="payments" aria-pressed="true">Payments</button><button class="risk-dot" style="left:70%;top:44%" data-risk="hits" aria-pressed="false">Hit risk</button><button class="risk-dot" style="left:48%;top:28%" data-risk="approval" aria-pressed="false">Approval</button><button class="risk-dot" style="left:53%;top:53%" data-risk="liquidity" aria-pressed="false">Liquidity</button><button class="risk-dot" style="left:24%;top:50%" data-risk="events" aria-pressed="false">Events</button><button class="risk-dot" style="left:22%;top:75%" data-risk="governance" aria-pressed="false">VIE</button>
+    </div><div class="matrix-label">Likelihood &#8594; &middot; Impact rises upward</div></div><aside class="risk-detail" aria-live="polite"><span class="risk-level" id="risk-level">High likelihood / High impact</span><h3 id="risk-title">Platform payment and concentration</h3><dl><dt>What goes wrong</dt><dd id="risk-desc">Receivables and contract assets rise, forcing more bank borrowing while a small group of buyers retains leverage.</dd><dt>Trigger</dt><dd id="risk-trigger">Receivable days remain above 130 or contract-asset ageing worsens.</dd><dt>Mitigation</dt><dd id="risk-mitigation">Milestone advances, factoring and a slate spread across multiple platforms.</dd></dl></aside></div>
+  </section>
+
+  <section class="analysis-section" id="outlook" data-number="10" data-index="10" data-thesis="The strategy should protect cash before pursuing more upside." data-evidence="A 37-day reduction in receivable days could free roughly RMB52m, almost all of 1H2026's operating outflow." data-uncertainty="Even the supplied bull case leaves FY2026 loss-making." data-change="A profitable second half, receivable improvement and no new event loss would move the thesis forward.">
+    <p class="section-kicker">10 &middot; Decision &middot; Strategy and outlook</p><h2>Four gates before the next franchise bet</h2><p class="lede">The sequence matters: collect cash, concentrate creative capital on proven IP, use micro-drama to test cheaply, and refuse uncapped live-event risk.</p>
+    <div class="roadmap" data-reveal><article class="gate"><span class="gate-num">01</span><h3>Get paid like a lender</h3><p>Tie billing to milestones and factor platform receivables.</p><div class="gate-exit">Exit proof: receivable days below 100</div></article><article class="gate"><span class="gate-num">02</span><h3>Back proven IP</h3><p>Prioritize sequels and accept profit-share only where a franchise has evidence.</p><div class="gate-exit">Exit proof: TV gross margin above 18%</div></article><article class="gate"><span class="gate-num">03</span><h3>Use micro as R&amp;D</h3><p>Test worlds and characters cheaply, then promote winners to long-form.</p><div class="gate-exit">Exit proof: disclosed micro-drama returns</div></article><article class="gate"><span class="gate-num">04</span><h3>Live with a floor</h3><p>Co-promote with capped fees, presale gates and cancellation cover.</p><div class="gate-exit">Exit proof: no uncapped promoter exposure</div></article></div>
+    <p class="section-kicker" style="margin-top:54px">Interactive FY2026 scenario</p><h2 style="font-size:clamp(31px,4vw,50px)">Can the second half repair the year?</h2>
+    <div class="scenario-control" role="group" aria-label="FY2026 scenario selector"><button type="button" data-scenario="bear" aria-pressed="false">Bear</button><button type="button" data-scenario="base" aria-pressed="true">Base</button><button type="button" data-scenario="bull" aria-pressed="false">Bull</button></div>
+    <div class="scenario-output" aria-live="polite"><div class="scenario-lead"><span>Selected case</span><strong id="scenario-name">Base</strong><p id="scenario-note">RMB280m of 2H revenue at a 13.0% gross margin.</p></div><div class="scenario-stat"><span>FY2026 revenue</span><strong id="scenario-revenue">RMB442m</strong><p>Illustrative model</p></div><div class="scenario-stat"><span>Growth on FY2025</span><strong id="scenario-growth">-13.5%</strong><p>Versus RMB511.2m</p></div><div class="scenario-stat"><span>Pre-tax result</span><strong id="scenario-profit">~-RMB44m</strong><p id="scenario-score-note">Still loss-making</p></div></div>
+    <div class="callout"><strong>Final view: G.H.Y owns valuable stories, but the company is financing the wait.</strong><p>The score rises with repeatable franchise economics and cash collection. It falls if net debt grows while dividends and undeployed IPO proceeds remain untouched.</p></div>
+  </section>
+</main>
+
+<aside class="thesis-rail" aria-label="Current research takeaway"><span class="rail-label">Research takeaway</span><div class="rail-item"><span>Current thesis</span><strong id="rail-thesis">Franchise IP is real, but financial resilience is not.</strong></div><div class="rail-item"><span>Strongest evidence</span><strong id="rail-evidence">Financial Strength contributes only 8.5 of 40 points.</strong></div><div class="rail-item"><span>Main uncertainty</span><strong id="rail-uncertainty">Whether delayed franchise upside arrives before liquidity tightens.</strong></div><div class="rail-item"><span>What changes the score</span><strong id="rail-change">Positive free cash flow and repeatable margins above 18%.</strong></div></aside>
+</div>
+
+<section class="sources" id="sources"><div class="wrap sources-grid"><div><p class="eyebrow" style="color:var(--pink)">Sources and evidence</p><h2>What this analysis rests on</h2><ul><li>G.H.Y FY2021-FY2025 results, annual report and IPO materials</li><li>Half-year results to 30 June 2026 and corporate development announcements</li><li>iQIYI, Linmon Media, Huace, Strawbear and UnUsUaL disclosures</li><li>NRTA, China Association of Performing Arts, Lighthouse and cited industry reporting</li><li>The supplied 38-slide G.H.Y Culture &amp; Media strategic review</li></ul><p>Evidence grade B. Retention, title-level profit-share economics and technology benefits remain partly undisclosed.</p></div><div class="disclaimer"><p class="eyebrow" style="color:var(--pink)">Research standard</p><p>Figures are in renminbi unless stated. Market data are as of 29 October 2026. This is independent research for education, not an investment recommendation or price target.</p><p>Drama and concert artwork was supplied with the research brief and is presented as editorial portfolio evidence.</p></div></div></section>
+
+<footer class="page-footer"><div class="wrap footer-row"><span>Beyond Our Gallery &middot; G.H.Y Culture &amp; Media Holding Co., Limited (SGX: XJB) &middot; Jiarun Yang &middot; 31 October 2026</span><a href="index.html">Back to company gallery</a></div></footer>
+
+<script>
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const revealItems=document.querySelectorAll('[data-reveal], .figure');
+if(reduceMotion){revealItems.forEach(el=>el.classList.add('is-visible'));}else{const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}}),{threshold:.14,rootMargin:'0px 0px -40px'});revealItems.forEach(el=>revealObserver.observe(el));}
+
+const sections=[...document.querySelectorAll('.analysis-section')];
+const rail={thesis:document.getElementById('rail-thesis'),evidence:document.getElementById('rail-evidence'),uncertainty:document.getElementById('rail-uncertainty'),change:document.getElementById('rail-change')};
+const current=document.getElementById('section-current');
+const sectionObserver=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(!visible)return;const s=visible.target;current.textContent=String(s.dataset.index).padStart(2,'0');rail.thesis.textContent=s.dataset.thesis;rail.evidence.textContent=s.dataset.evidence;rail.uncertainty.textContent=s.dataset.uncertainty;rail.change.textContent=s.dataset.change;},{threshold:[.15,.3,.5],rootMargin:'-18% 0px -52%'});
+sections.forEach(s=>sectionObserver.observe(s));
+const route=document.getElementById('route-progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;route.style.width=(max>0?scrollY/max*100:0)+'%';}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+document.querySelectorAll('.sections-popover a').forEach(a=>a.addEventListener('click',()=>a.closest('details').removeAttribute('open')));
+
+const risks={payments:{level:'High likelihood / High impact',title:'Platform payment and concentration',desc:'Receivables and contract assets rise, forcing more bank borrowing while a small group of buyers retains leverage.',trigger:'Receivable days remain above 130 or contract-asset ageing worsens.',mitigation:'Milestone advances, factoring and a slate spread across multiple platforms.'},hits:{level:'High likelihood / Medium-high impact',title:'Profit-share hit risk',desc:'Upfront margins collapse while the company waits to learn whether a title is a hit.',trigger:'Heat, audience scores and half-year margins remain weak after release.',mitigation:'Franchise-first greenlights and minimum guarantees.'},approval:{level:'Medium-high likelihood / High impact',title:'Approval and broadcast delay',desc:'Revenue slips between periods or productions are written off before release.',trigger:'Filing status stalls or work-in-progress impairments rise.',mitigation:'Early filing, proven genres and diversified delivery dates.'},liquidity:{level:'Medium-high likelihood / High impact',title:'Liquidity and refinancing',desc:'Net debt rises while dividends, productions and platform collections compete for cash.',trigger:'Operating cash remains negative and bank borrowings climb.',mitigation:'Release working capital, pause payouts and gate new projects.'},events:{level:'Medium likelihood / High impact',title:'Live-event counterparty risk',desc:'A cancellation produces a loss far larger than ordinary segment profit.',trigger:'Large deposits or artist fees sit outside cancellation cover.',mitigation:'Co-promotion, presale gates and capped exposure.'},governance:{level:'Medium likelihood / Medium-high impact',title:'Governance and VIE structure',desc:'Founder control, thin free float and contract control of PRC entities can widen the valuation discount.',trigger:'VIE rules, related-party activity or undeployed capital attract scrutiny.',mitigation:'Independent oversight and fuller capital-allocation disclosure.'}};
+document.querySelectorAll('[data-risk]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-risk]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');const r=risks[btn.dataset.risk];document.getElementById('risk-level').textContent=r.level;document.getElementById('risk-title').textContent=r.title;document.getElementById('risk-desc').textContent=r.desc;document.getElementById('risk-trigger').textContent=r.trigger;document.getElementById('risk-mitigation').textContent=r.mitigation;}));
+
+const scenarios={bear:{name:'Bear',revenue:'RMB382m',growth:'-25.3%',profit:'~-RMB62m',note:'RMB220m of 2H revenue at an 8.0% gross margin.',scoreNote:'Liquidity pressure rises'},base:{name:'Base',revenue:'RMB442m',growth:'-13.5%',profit:'~-RMB44m',note:'RMB280m of 2H revenue at a 13.0% gross margin.',scoreNote:'Still loss-making'},bull:{name:'Bull',revenue:'RMB493.5m',growth:'-3.5%',profit:'~-RMB24m',note:'RMB331.5m of 2H revenue at a 16.9% gross margin.',scoreNote:'Recovery, not break-even'}};
+document.querySelectorAll('[data-scenario]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-scenario]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');const s=scenarios[btn.dataset.scenario];document.getElementById('scenario-name').textContent=s.name;document.getElementById('scenario-revenue').textContent=s.revenue;document.getElementById('scenario-growth').textContent=s.growth;document.getElementById('scenario-profit').textContent=s.profit;document.getElementById('scenario-note').textContent=s.note;document.getElementById('scenario-score-note').textContent=s.scoreNote;}));
+</script>
+</body>
