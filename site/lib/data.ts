@@ -19,7 +19,7 @@ export const companies: Company[] = [
     image: "/mockup/media/strategy-visitors.jpg",
     thesis: "A regional experience-design platform with improving margins and an expanding attractions pipeline.",
     href: "/kingsmen-creatives.html",
-    updated: "29 Sep 2026",
+    updated: "27 Oct 2026",
     metrics: [76, 84, 79, 70],
   },
   {
@@ -30,7 +30,7 @@ export const companies: Company[] = [
     image: "/mockup/media/straco-flyer-skyline.webp",
     thesis: "Durable attraction economics and balance-sheet strength, tempered by concentrated assets.",
     href: "/straco-corporation.html",
-    updated: "26 Sep 2026",
+    updated: "26 Oct 2026",
     metrics: [88, 74, 58, 68],
   },
   {
@@ -41,7 +41,7 @@ export const companies: Company[] = [
     image: "/mockup/media/exm-krisflyer.jpg",
     thesis: "A connected content platform whose recovery rests on debt discipline and monetising its rights library.",
     href: "#company-gallery",
-    updated: "01 Oct 2026",
+    updated: "31 Oct 2026",
     metrics: [57, 76, 71, 64],
   },
   {
@@ -52,7 +52,7 @@ export const companies: Company[] = [
     image: "/mockup/media/eta-expo-pavilion.jpg",
     thesis: "A proven live-entertainment operator with regional scale and inherently lumpy event economics.",
     href: "#company-gallery",
-    updated: "30 Sep 2026",
+    updated: "01 Nov 2026",
     metrics: [72, 80, 75, 57],
   },
   {
@@ -63,7 +63,7 @@ export const companies: Company[] = [
     image: "/mockup/media/rd-bicentennial.jpg",
     thesis: "A cross-border cultural producer with valuable capabilities, but uneven project visibility.",
     href: "#company-gallery",
-    updated: "28 Sep 2026",
+    updated: "31 Oct 2026",
     metrics: [61, 70, 69, 59],
   },
   {
@@ -74,7 +74,7 @@ export const companies: Company[] = [
     image: "/mockup/media/rci-singtel.jpg",
     thesis: "An emerging talent and production network with optionality, limited today by its smaller earnings base.",
     href: "#company-gallery",
-    updated: "27 Sep 2026",
+    updated: "30 Oct 2026",
     metrics: [54, 64, 72, 58],
   },
 ];
