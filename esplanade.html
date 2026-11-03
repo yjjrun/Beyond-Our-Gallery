@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Esplanade Analysis | Beyond Our Gallery</title>
+<meta name="description" content="Beyond Our Gallery's strategy and commercial review of The Esplanade Co Ltd, including its 56.7 institutional-quality score, income engines, funding gap, risks and strategic options.">
+<meta property="og:title" content="The Esplanade Analysis | Beyond Our Gallery">
+<meta property="og:description" content="A 56.7/100 institutional-quality review of Singapore's national performing arts centre: strong reserves and market position inside break-even economics.">
+<meta property="og:image" content="assets/esplanade-night.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/svg+xml" href="/assets/bog-mark.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ecd9e8">
+<style>
+:root{
+  color-scheme:light;
+  --ink:#092f2d;
+  --ink-2:#35504d;
+  --deep:#062f2b;
+  --wine:#9f174d;
+  --wine-2:#c62b66;
+  --pink:#ef91b1;
+  --pink-soft:#f6dce5;
+  --paper:#fbf8f6;
+  --paper-2:#f2e9ec;
+  --line:#d8c8ce;
+  --muted:#687674;
+  --positive:#16705f;
+  --caution:#9b5a00;
+  --critical:#b12a35;
+  --mm2-blue:#1652a0;
+  --display:"Cormorant Garamond", Georgia, serif;
+  --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{
+  margin:0;
+  overflow-x:clip;
+  background:linear-gradient(180deg,#fff 0%,var(--paper) 58%,#fff 100%);
+  color:var(--ink);
+  font:500 16px/1.6 var(--body);
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input{font:inherit}
+button{color:inherit}
+.wrap{width:min(1220px,calc(100% - 40px));margin:0 auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.route-progress{position:fixed;inset:0 auto auto 0;z-index:90;width:0;height:3px;background:linear-gradient(90deg,var(--wine),var(--pink),#098c84);box-shadow:0 0 14px rgba(239,145,177,.5)}
+.site-nav{position:sticky;top:0;z-index:80;background:rgba(255,253,251,.92);border-bottom:1px solid rgba(9,47,45,.12);backdrop-filter:blur(18px)}
+.nav-inner{min-height:68px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none;white-space:nowrap}
+.brand img{width:36px;height:36px;object-fit:cover;border:1px solid rgba(9,47,45,.14)}
+.brand strong{font-size:13px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.primary-nav{display:flex;align-items:center;gap:22px}
+.primary-nav>a,.sections-menu>summary{font-size:12px;font-weight:800;text-decoration:none;cursor:pointer;white-space:nowrap}
+.primary-nav>a:hover,.primary-nav>a:focus-visible,.sections-menu>summary:hover,.sections-menu>summary:focus-visible{color:var(--wine)}
+.sections-menu{position:relative}
+.sections-menu>summary{list-style:none;display:flex;align-items:center;gap:6px}
+.sections-menu>summary::-webkit-details-marker{display:none}
+.sections-menu>summary::after{content:"+";font-size:16px;color:var(--wine)}
+.sections-menu[open]>summary::after{content:"-"}
+.sections-popover{position:absolute;right:0;top:36px;width:245px;padding:12px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px rgba(9,47,45,.18)}
+.sections-popover a{display:block;padding:8px 10px;font-size:12px;font-weight:750;text-decoration:none}
+.sections-popover a:hover,.sections-popover a:focus-visible{background:var(--paper-2);color:var(--wine)}
+.reading-progress{display:flex;align-items:center;gap:6px;border-left:1px solid var(--line);padding-left:16px;color:var(--muted);font-size:11px;font-weight:900;letter-spacing:.12em}
+.reading-progress b{color:var(--wine)}
+.back-home{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(144,0,49,.3);padding:7px 11px;text-decoration:none;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.back-home:hover,.back-home:focus-visible{background:var(--wine);border-color:var(--wine);color:#fff}
+
+.hero{position:relative;overflow:hidden;min-height:720px;border-bottom:1px solid var(--line);background:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 0 54%,rgba(239,145,177,.12) 54% 72%,rgba(6,47,43,.06) 72%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,.92fr) minmax(430px,1.08fr);align-items:center;gap:58px;min-height:720px;padding:76px 0 66px}
+.eyebrow{margin:0 0 12px;color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1{margin-bottom:0;font:700 clamp(58px,7.3vw,102px)/.82 var(--display);letter-spacing:0}
+.hero-thesis{max-width:650px;margin:24px 0 0;font:600 clamp(24px,3vw,39px)/1.04 var(--display);color:var(--wine)}
+.hero-copy>p:not(.eyebrow):not(.hero-thesis){max-width:650px;margin:20px 0 0;color:var(--ink-2);font-size:16px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero-meta span{border:1px solid rgba(9,47,45,.18);padding:7px 10px;background:rgba(255,255,255,.8);font-size:11px;font-weight:850;letter-spacing:.07em;text-transform:uppercase}
+.hero-actions{display:flex;align-items:center;gap:18px;margin-top:30px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;background:var(--wine);border:1px solid var(--wine);color:#fff;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;transition:transform .18s ease,background .18s ease}
+.button:hover,.button:focus-visible{background:var(--deep);border-color:var(--deep);transform:translateY(-2px)}
+.text-link{color:var(--wine);font-size:12px;font-weight:900;text-underline-offset:4px}
+.hero-art{position:relative;min-height:520px}
+.hero-image{position:absolute;inset:0 0 0 6%;overflow:hidden;box-shadow:0 28px 90px rgba(6,47,43,.2)}
+.hero-image img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.hero:hover .hero-image img{transform:scale(1.025)}
+.hero-logo{position:absolute;left:-12px;top:48px;width:112px;height:112px;padding:18px;background:var(--wine);box-shadow:0 18px 40px rgba(144,0,49,.27)}
+.hero-logo img{width:100%;height:100%;object-fit:cover}
+.hero-score{position:absolute;right:-8px;bottom:38px;width:188px;min-height:188px;padding:26px;background:var(--deep);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 22px 60px rgba(6,47,43,.3)}
+.hero-score span{font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#c9e0dc}
+.hero-score b{font:700 61px/.9 var(--display);color:var(--pink)}
+.hero-score em{margin-top:7px;font-size:11px;font-style:normal;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.hero-caption{position:absolute;left:0;bottom:22px;max-width:250px;padding:12px 14px;background:#fff;border-left:3px solid var(--wine);font-size:10px;font-weight:750;color:var(--muted)}
+
+.reading-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:46px;align-items:start;width:min(1220px,calc(100% - 40px));margin:0 auto}
+.analysis-main{min-width:0}
+.analysis-section{position:relative;padding:74px 0;border-bottom:1px solid var(--line);scroll-margin-top:70px}
+.analysis-section::before{content:attr(data-number);position:absolute;right:0;top:69px;color:rgba(144,0,49,.14);font:700 54px/1 var(--display)}
+.section-kicker{margin:0 0 10px;color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+h2{max-width:850px;margin-bottom:0;font:700 clamp(36px,4.9vw,62px)/.93 var(--display);letter-spacing:0}
+.lede{max-width:780px;margin:16px 0 0;color:var(--ink-2);font-size:16px}
+.section-grid{display:grid;gap:18px;margin-top:30px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.metric{padding:20px 0;border-top:2px solid var(--wine)}
+.metric b{display:block;font:700 35px/1 var(--display);color:var(--wine)}
+.metric span{display:block;margin-top:7px;color:var(--muted);font-size:11px;font-weight:800;line-height:1.45;text-transform:uppercase;letter-spacing:.07em}
+.callout{margin-top:28px;padding:24px 26px;border-left:4px solid var(--pink);background:var(--paper-2)}
+.callout strong{display:block;font:700 24px/1.08 var(--display)}
+.callout p{margin:8px 0 0;color:var(--ink-2);font-size:14px}
+
+.thesis-rail{position:sticky;top:96px;margin-top:74px;border-top:4px solid var(--wine);padding-top:18px}
+.thesis-rail .rail-label{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.rail-item{padding:14px 0;border-bottom:1px solid var(--line)}
+.rail-item span{display:block;margin-bottom:5px;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+.rail-item strong{display:block;font-size:12px;line-height:1.5}
+
+.figure{min-width:0;max-width:100%;margin:34px 0 0;border:1px solid rgba(9,47,45,.16);background:#fff;box-shadow:0 14px 44px rgba(9,47,45,.08)}
+.figure-head{display:flex;align-items:start;justify-content:space-between;gap:20px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.figure-label{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.figure-head h3{margin:5px 0 0;font:700 24px/1.02 var(--display)}
+.figure-source{max-width:240px;text-align:right;color:var(--muted);font-size:10px;line-height:1.5}
+.figure-canvas{width:100%;min-width:0;max-width:100%;padding:24px;overflow-x:auto}
+.curator-note{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:18px 20px;border-top:1px solid var(--line);background:var(--paper)}
+.curator-note b{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.curator-note p{margin:0;color:var(--ink-2);font:600 19px/1.2 var(--display)}
+.benchmark{display:grid;gap:18px;min-width:560px}
+.benchmark-row{display:grid;grid-template-columns:160px 1fr 52px;align-items:center;gap:14px;font-size:12px;font-weight:800}
+.benchmark-track{position:relative;height:2px;background:#d8cecf}
+.benchmark-track::after{content:"";position:absolute;left:0;top:-2px;width:calc(var(--value) * 1%);height:6px;background:linear-gradient(90deg,var(--deep),var(--wine));transform-origin:left;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.benchmark-track i{position:absolute;z-index:2;left:calc(var(--value) * 1%);top:50%;width:15px;height:15px;border:4px solid #fff;border-radius:50%;background:var(--wine);box-shadow:0 0 0 1px var(--wine);transform:translate(-50%,-50%) scale(0);transition:transform .6s .45s ease}
+.is-visible .benchmark-track::after{transform:scaleX(1)}
+.is-visible .benchmark-track i{transform:translate(-50%,-50%) scale(1)}
+
+.category-bars{display:grid;gap:16px}
+.category-bar{display:grid;grid-template-columns:175px 1fr 74px;align-items:center;gap:14px;font-size:12px;font-weight:800}
+.bar-track{height:8px;background:#e5dadd;overflow:hidden}
+.bar-fill{display:block;width:calc(var(--pct) * 1%);height:100%;background:linear-gradient(90deg,var(--wine),var(--pink));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.is-visible .bar-fill{transform:scaleX(1)}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px}
+.project{position:relative;min-height:360px;overflow:hidden;background:var(--deep);color:#fff}
+.project img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease,filter .55s ease}
+.project::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(3,26,24,.93))}
+.project:hover img,.project:focus-within img{transform:scale(1.045);filter:saturate(1.06)}
+.project-info{position:absolute;z-index:2;inset:auto 20px 18px}
+.project-info span{font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:#ffd1e0}
+.project-info h3{margin:5px 0 5px;font:700 28px/1 var(--display)}
+.project-info p{margin:0;color:#e3efed;font-size:12px;line-height:1.5}
+
+.segment-split{display:grid;grid-template-columns:1.45fr .55fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.segment-block{min-height:230px;padding:26px;background:#fff}
+.segment-block.art{background:var(--deep);color:#fff}
+.segment-block b{font:700 51px/1 var(--display);color:var(--pink)}
+.segment-block h3{margin:13px 0 8px;font:700 25px/1 var(--display)}
+.segment-block p{margin:0;color:var(--ink-2);font-size:13px}
+.segment-block.art p{color:#cfdfdd}
+.segment-growth{display:flex;gap:16px;margin-top:20px;padding-top:14px;border-top:1px solid rgba(255,255,255,.17)}
+.segment-growth span{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+
+.financial-svg{display:block;width:100%;min-width:660px;height:auto}
+.financial-svg text{font-family:var(--body);fill:var(--muted);font-size:11px;font-weight:700}
+.financial-svg .gridline{stroke:#e7dddf;stroke-width:1}
+.financial-svg .bar{fill:var(--wine);transform-box:fill-box;transform-origin:center bottom;transform:scaleY(0);transition:transform .8s ease}
+.financial-svg .line{fill:none;stroke:var(--deep);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s .3s ease}
+.financial-svg .dot{fill:var(--pink);stroke:#fff;stroke-width:3;opacity:0;transition:opacity .2s 1s ease}
+.is-visible .financial-svg .bar{transform:scaleY(1)}
+.is-visible .financial-svg .line{stroke-dashoffset:0}
+.is-visible .financial-svg .dot{opacity:1}
+
+.cash-bridge{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px;min-width:660px}
+.bridge-step{min-height:155px;padding:20px;background:var(--paper);border-top:3px solid var(--wine)}
+.bridge-step strong{display:block;font:700 35px/1 var(--display);color:var(--wine)}
+.bridge-step span{display:block;margin-top:9px;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.bridge-arrow{color:var(--pink);font-size:28px;font-weight:900}
+
+.booking-bars{display:grid;grid-template-columns:repeat(3,1fr);align-items:end;gap:34px;height:260px;min-width:560px;padding:0 28px 28px;border-bottom:1px solid var(--line)}
+.booking-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.booking-col b{font:700 24px/1 var(--display);color:var(--wine)}
+.booking-col i{display:block;width:min(100%,90px);height:calc(var(--height) * 1%);min-height:30px;background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.booking-col span{font-size:11px;font-weight:800;color:var(--muted)}
+.is-visible .booking-col i{transform:scaleY(1)}
+
+.peer-plot{position:relative;min-width:620px;height:300px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);background:repeating-linear-gradient(to top,transparent 0 59px,rgba(9,47,45,.07) 59px 60px)}
+.peer-point{position:absolute;left:var(--x);bottom:var(--y);transform:translate(-50%,50%);display:flex;align-items:center;gap:8px}
+.peer-point i{width:18px;height:18px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 6px rgba(144,0,49,.12)}
+.peer-point.keywords i{background:var(--deep);box-shadow:0 0 0 6px rgba(6,47,43,.12)}
+.peer-point span{padding:5px 7px;background:#fff;border:1px solid var(--line);font-size:10px;font-weight:900;white-space:nowrap}
+.axis-label{position:absolute;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.axis-label.x{right:0;bottom:-27px}.axis-label.y{left:-16px;top:-22px}
+
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);margin-top:32px;border-top:3px solid var(--deep)}
+.timeline-step{position:relative;padding:24px 18px 0 0}
+.timeline-step::before{content:"";position:absolute;left:0;top:-8px;width:13px;height:13px;border-radius:50%;background:var(--pink);border:2px solid #fff;box-shadow:0 0 0 1px var(--deep)}
+.timeline-step b{font-size:10px;color:var(--wine);letter-spacing:.14em;text-transform:uppercase}
+.timeline-step h3{margin:7px 0;font:700 22px/1 var(--display)}
+.timeline-step p{margin:0;color:var(--ink-2);font-size:12px}
+
+.force-grid{display:grid;gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.force-row{display:grid;grid-template-columns:180px 120px 1fr;gap:18px;padding:15px 18px;background:#fff;align-items:center}
+.force-row b{font-size:12px}.force-row span{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:var(--critical)}
+.force-row p{margin:0;color:var(--ink-2);font-size:12px}
+
+.risk-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.64fr);gap:24px;margin-top:30px}
+.risk-matrix{position:relative;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,104px);gap:1px;background:var(--line);border:1px solid var(--line)}
+.risk-cell{background:#fff}
+.risk-cell:nth-child(3),.risk-cell:nth-child(6),.risk-cell:nth-child(9){background:#fbf1f3}
+.risk-cell:nth-child(1),.risk-cell:nth-child(2),.risk-cell:nth-child(4){background:#f3f8f6}
+.risk-dot{position:absolute;border:1px solid rgba(144,0,49,.35);background:rgba(255,255,255,.95);padding:7px 9px;cursor:pointer;font-size:10px;font-weight:900;box-shadow:0 6px 16px rgba(9,47,45,.12)}
+.risk-dot:hover,.risk-dot:focus-visible,.risk-dot[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.risk-detail{min-height:314px;padding:24px;background:var(--deep);color:#fff}
+.risk-detail .risk-level{color:var(--pink);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.risk-detail h3{margin:12px 0 18px;font:700 31px/1 var(--display)}
+.risk-detail dl{margin:0}.risk-detail dt{margin-top:14px;color:#a9c9c4;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.risk-detail dd{margin:4px 0 0;font-size:12px;line-height:1.55}
+.matrix-label{margin-top:8px;color:var(--muted);font-size:10px;font-weight:800;text-align:center;text-transform:uppercase;letter-spacing:.08em}
+
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px}
+.gate{position:relative;min-height:280px;padding:24px 20px;border:1px solid var(--line);background:#fff}
+.gate+.gate{border-left:0}
+.gate::after{content:"";position:absolute;right:-8px;top:42px;z-index:2;width:14px;height:14px;border-top:2px solid var(--wine);border-right:2px solid var(--wine);transform:rotate(45deg);background:#fff}
+.gate:last-child::after{display:none}
+.gate-num{color:var(--wine);font:700 34px/1 var(--display)}
+.gate h3{margin:14px 0 9px;font:700 23px/1 var(--display)}
+.gate p{margin:0;color:var(--ink-2);font-size:12px}
+.gate-exit{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:10px;font-weight:850;line-height:1.5;text-transform:uppercase;letter-spacing:.06em}
+
+.scenario-control{display:flex;gap:8px;margin-top:28px}
+.scenario-control button{min-width:104px;padding:9px 13px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+.scenario-control button:hover,.scenario-control button:focus-visible,.scenario-control button[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.scenario-output{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:1px;margin-top:12px;background:var(--line);border:1px solid var(--line)}
+.scenario-lead,.scenario-stat{padding:24px;background:#fff}
+.scenario-lead{background:var(--deep);color:#fff}
+.scenario-lead span,.scenario-stat span{display:block;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.scenario-lead span{color:#a9c9c4}
+.scenario-lead strong,.scenario-stat strong{display:block;margin-top:9px;font:700 36px/1 var(--display);color:var(--pink)}
+.scenario-stat strong{color:var(--wine)}
+.scenario-lead p,.scenario-stat p{margin:9px 0 0;font-size:11px;color:#d9e7e5}.scenario-stat p{color:var(--ink-2)}
+
+.score-details{min-width:0;max-width:100%;margin-top:12px;border:1px solid var(--line);background:#fff;overflow:hidden}
+.score-details summary{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:17px 18px;cursor:pointer;font-size:13px;font-weight:850;list-style:none}
+.score-details summary::-webkit-details-marker{display:none}
+.score-details summary b{color:var(--wine)}
+.score-details[open] summary{border-bottom:1px solid var(--line);background:var(--paper-2)}
+.score-table-wrap{width:100%;max-width:100%;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:650px;font-size:12px}
+th,td{padding:11px 14px;border-bottom:1px solid #eadfe2;text-align:right;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+th:last-child,td:last-child{text-align:left;white-space:normal}
+thead th{background:var(--deep);color:#fff;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+tbody tr:last-child td{border-bottom:0}
+
+/* Restored source-review depth */
+.insight-band{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:30px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.insight-note{min-width:0;padding:22px 24px 22px 0}
+.insight-note+.insight-note{padding-left:24px;border-left:1px solid var(--line)}
+.insight-note span{display:block;color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.insight-note strong{display:block;margin-top:7px;font:700 24px/1.05 var(--display);color:var(--ink)}
+.insight-note p{margin:8px 0 0;color:var(--ink-2);font-size:12px;line-height:1.55}
+.research-dossier{margin-top:28px;border-top:3px solid var(--deep);border-bottom:1px solid var(--line);background:#fff}
+.research-dossier>summary{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:18px;row-gap:5px;padding:18px 0;cursor:pointer;list-style:none}
+.research-dossier>summary::-webkit-details-marker{display:none}
+.research-dossier>summary span{grid-column:1;grid-row:1;display:block;color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.research-dossier>summary b{grid-column:1;grid-row:2;display:block;font:700 23px/1.08 var(--display)}
+.research-dossier>summary::after{content:"+";grid-column:2;grid-row:1 / span 2;display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--wine);color:var(--wine);font-size:20px;font-weight:700}
+.research-dossier[open]>summary::after{content:"-";background:var(--wine);color:#fff}
+.dossier-body{padding:4px 0 30px;border-top:1px solid var(--line)}
+.dossier-intro{max-width:790px;margin:22px 0 0;color:var(--ink-2);font-size:13px}
+.dossier-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dossier-item{padding:19px 20px 20px 0}
+.dossier-item+.dossier-item{padding-left:20px;border-left:1px solid var(--line)}
+.dossier-item span{color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.dossier-item h3{margin:7px 0 7px;font:700 22px/1.02 var(--display)}
+.dossier-item p{margin:0;color:var(--ink-2);font-size:12px;line-height:1.55}
+.dossier-table{margin-top:22px;border:1px solid var(--line);overflow-x:auto}
+.dossier-table table{min-width:820px}
+.dossier-table.numeric th,.dossier-table.numeric td{text-align:right}
+.dossier-table.numeric th:first-child,.dossier-table.numeric td:first-child{text-align:left}
+.dossier-table th:last-child,.dossier-table td:last-child{white-space:normal}
+.dossier-caption{margin:10px 0 0;color:var(--muted);font-size:10px;line-height:1.5}
+.model-box{margin-top:22px;padding:22px 24px;background:var(--deep);color:#fff}
+.model-box code{display:block;overflow-x:auto;color:#ffd0df;font:700 13px/1.65 var(--body);white-space:nowrap}
+.model-box p{margin:10px 0 0;color:#c7dad7;font-size:11px}
+.bottom-line-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.bottom-line-grid article{min-height:210px;padding:24px;background:#fff}
+.bottom-line-grid article:nth-child(2){background:var(--deep);color:#fff}
+.bottom-line-grid span{color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.bottom-line-grid article:nth-child(2) span{color:var(--pink)}
+.bottom-line-grid h3{margin:10px 0 9px;font:700 26px/1 var(--display)}
+.bottom-line-grid p{margin:0;color:var(--ink-2);font-size:12px}
+.bottom-line-grid article:nth-child(2) p{color:#c9dbd8}
+
+.sources{padding:72px 0;background:var(--deep);color:#fff}
+.sources-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px}
+.sources h2{font-size:44px}.sources p,.sources li{color:#c9dbd8;font-size:12px}.sources a{color:#fff;text-underline-offset:3px}.sources ul{margin:22px 0 0;padding-left:18px}.sources .disclaimer{padding-left:24px;border-left:3px solid var(--pink)}
+.page-footer{padding:28px 0;background:#032522;color:#abc4c0;font-size:11px}
+.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center}.footer-row a{color:#fff}
+
+[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+[data-reveal].is-visible{opacity:1;transform:none}
+:focus-visible{outline:3px solid rgba(239,145,177,.75);outline-offset:3px}
+
+/* Company-specific editorial exhibits */
+.hero-image img{object-position:center}
+.hero-score b{font-size:58px}
+.project.tall{min-height:500px;grid-row:span 2}
+.project.tall img{object-position:center 12%}
+.project.wide{grid-column:span 1}
+.segment-stack{display:grid;gap:10px;margin-top:30px}
+.segment-row{display:grid;grid-template-columns:190px 1fr 72px;gap:14px;align-items:center;font-size:12px;font-weight:850}
+.segment-track{height:38px;background:#eadde2;overflow:hidden}
+.segment-fill{height:100%;width:calc(var(--share) * 1%);min-width:6px;background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .85s ease}
+.segment-row:nth-child(2) .segment-fill{background:var(--pink)}
+.segment-row:nth-child(3) .segment-fill{background:#77a69f}
+.is-visible .segment-fill{transform:scaleX(1)}
+.segment-row strong{text-align:right;color:var(--wine)}
+.working-bars{display:grid;grid-template-columns:repeat(4,1fr);align-items:end;gap:24px;height:300px;min-width:620px;padding:24px 36px 32px;border-bottom:1px solid var(--line)}
+.working-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.working-col b{font:700 23px/1 var(--display);color:var(--wine)}
+.working-col i{display:block;width:min(100%,88px);height:calc(var(--height) * 1%);background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.working-col span{font-size:10px;font-weight:850;color:var(--muted);text-align:center;text-transform:uppercase}
+.is-visible .working-col i{transform:scaleY(1)}
+.slate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.slate-item{min-height:180px;padding:22px;background:#fff}
+.slate-item:nth-child(1){background:var(--deep);color:#fff}
+.slate-item span{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.slate-item:nth-child(1) span{color:var(--pink)}
+.slate-item h3{margin:10px 0 8px;font:700 25px/1 var(--display)}
+.slate-item p{margin:0;color:var(--ink-2);font-size:12px}
+.slate-item:nth-child(1) p{color:#ccdedb}
+.peer-compare{display:grid;gap:13px;min-width:600px}
+.peer-row{display:grid;grid-template-columns:110px 1fr 100px 90px;gap:12px;align-items:center;font-size:11px;font-weight:850}
+.peer-track{height:14px;background:#eadde2;overflow:hidden}
+.peer-track i{display:block;height:100%;width:calc(var(--size) * 1%);background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.peer-row:nth-child(2) .peer-track i{background:linear-gradient(90deg,#597f79,var(--pink))}
+.is-visible .peer-track i{transform:scaleX(1)}
+.peer-row b{color:var(--wine)}
+.score-callout{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;margin-top:28px;padding:26px;background:linear-gradient(145deg,var(--deep),#174944);color:#fff}
+.score-callout strong{font:700 76px/.8 var(--display);color:var(--pink)}
+.score-callout p{margin:0;color:#d8e6e4;font-size:14px}
+.fragile{color:var(--critical)!important}
+.financial-svg .margin-label{fill:#fff;stroke:var(--deep);stroke-width:3px;paint-order:stroke;stroke-linejoin:round;font-weight:900}
+
+.hero-logo.mm2-brand{left:-20px;top:46px;width:170px;height:92px;padding:13px 18px;background:#fff;border-top:4px solid var(--wine)}
+.hero-logo.mm2-brand img{object-fit:contain}
+.hero-image img{object-position:center 25%}
+.debt-bars{display:grid;gap:13px;min-width:590px}
+.debt-row{display:grid;grid-template-columns:160px 1fr 80px;gap:14px;align-items:center;font-size:11px;font-weight:850}
+.debt-track{height:28px;background:#eadde2;overflow:hidden}
+.debt-track i{display:block;height:100%;width:calc(var(--size) * 1%);background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.debt-row:nth-child(2) .debt-track i{background:linear-gradient(90deg,var(--mm2-blue),var(--pink))}
+.is-visible .debt-track i{transform:scaleX(1)}
+.ownership{display:grid;grid-template-columns:2.49fr 1fr;min-width:560px;height:94px;overflow:hidden}
+.ownership div{display:flex;align-items:center;justify-content:center;padding:12px;text-align:center;font-size:11px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+.ownership .incoming{background:var(--deep);color:#fff}.ownership .existing{background:var(--pink-soft);color:var(--wine)}
+.cinema-bars{display:flex;align-items:end;gap:44px;height:280px;min-width:560px;padding:20px 46px 30px;border-bottom:1px solid var(--line)}
+.cinema-col{flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}
+.cinema-col b{font:700 24px/1 var(--display);color:var(--wine)}
+.cinema-col i{display:block;width:min(100%,105px);height:calc(var(--height) * 1%);min-height:4px;background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.cinema-col:nth-child(5) i{background:var(--deep)}
+.cinema-col span{font-size:10px;font-weight:850;color:var(--muted)}
+.is-visible .cinema-col i{transform:scaleY(1)}
+.waterfall{display:grid;grid-template-columns:repeat(5,1fr);align-items:end;gap:9px;height:280px;min-width:650px;padding:20px 18px 30px;border-bottom:1px solid var(--line)}
+.water-step{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}
+.water-step b{font:700 20px/1 var(--display);color:var(--wine)}
+.water-step i{display:block;width:80%;height:calc(var(--height) * 1%);min-height:6px;background:var(--wine);transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.water-step.positive i{background:var(--deep)}
+.water-step span{font-size:9px;font-weight:850;color:var(--muted);text-align:center;text-transform:uppercase}
+.is-visible .water-step i{transform:scaleY(1)}
+.outcome-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.outcome-card{padding:24px;background:#fff}
+.outcome-card.active{background:var(--deep);color:#fff}
+.outcome-card span{font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--wine)}
+.outcome-card.active span{color:var(--pink)}
+.outcome-card h3{margin:8px 0 10px;font:700 27px/1 var(--display)}
+.outcome-card p{margin:0;color:var(--ink-2);font-size:12px}.outcome-card.active p{color:#d3e3e0}
+.outcome-card ul{padding-left:16px;margin:14px 0 0;font-size:11px}.outcome-card li+li{margin-top:6px}
+.status-strip{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;border:1px solid var(--line)}
+.status-strip article{padding:19px;background:#fff;border-right:1px solid var(--line)}.status-strip article:last-child{border:0}
+.status-strip b{display:block;font:700 28px/1 var(--display);color:var(--wine)}.status-strip span{display:block;margin-top:7px;color:var(--muted);font-size:10px;font-weight:850;text-transform:uppercase}
+
+@media(max-width:1060px){
+  .primary-nav>a:nth-of-type(2),.primary-nav>a:nth-of-type(4){display:none}
+  .reading-layout{grid-template-columns:1fr}.thesis-rail{display:none}
+  .hero-grid{grid-template-columns:minmax(0,.9fr) minmax(380px,1.1fr);gap:34px}
+}
+@media(max-width:820px){
+  .wrap,.reading-layout{width:min(100% - 28px,1220px)}
+  .site-nav .primary-nav>a{display:none}.reading-progress{display:none}.nav-inner{gap:13px}.brand strong{display:none}
+  .hero{min-height:0}.hero-grid{grid-template-columns:1fr;min-height:0;padding:56px 0 48px}.hero-art{min-height:490px}.hero-image{left:0}.hero-logo{left:12px}.hero-score{right:12px}
+  .analysis-section{padding:58px 0}.analysis-section::before{top:55px;font-size:42px}
+  .g4,.g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .portfolio-grid,.g2,.risk-layout,.sources-grid{grid-template-columns:1fr}
+  .roadmap{grid-template-columns:1fr 1fr}.gate:nth-child(3){border-left:1px solid var(--line)}.gate::after{display:none}
+  .timeline{grid-template-columns:1fr 1fr;gap:24px 0}.scenario-output{grid-template-columns:1fr 1fr}.force-row{grid-template-columns:130px 95px 1fr}
+  .project.tall{grid-row:auto;min-height:400px}.working-bars{min-width:560px}.score-callout{grid-template-columns:140px 1fr}.score-callout strong{font-size:62px}.outcome-grid{grid-template-columns:1fr}.status-strip{grid-template-columns:1fr 1fr}.status-strip article:nth-child(2){border-right:0}.status-strip article:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .insight-band,.dossier-grid,.bottom-line-grid{grid-template-columns:1fr 1fr}
+  .insight-note:nth-child(3),.dossier-item:nth-child(3),.bottom-line-grid article:nth-child(3){border-top:1px solid var(--line);border-left:0;padding-left:0}
+}
+@media(max-width:560px){
+  .back-home{padding:7px 8px}.back-home span{display:none}.back-home span:first-child{display:inline}.sections-popover{position:fixed;right:14px;top:61px}
+  .hero-grid{gap:22px;padding:34px 0 28px}.hero-art{min-height:260px}.hero-logo{width:78px;height:78px;padding:12px;top:24px}.hero-score{width:132px;min-height:132px;padding:16px}.hero-score b{font-size:43px}.hero-caption{display:none}
+  h1{font-size:50px}.hero-thesis{font-size:24px}.hero-copy>p:not(.eyebrow):not(.hero-thesis){font-size:14px;line-height:1.55}.hero-meta{margin-top:20px}.hero-actions{align-items:flex-start;flex-direction:column;gap:9px;margin-top:22px}
+  .g4,.g3,.portfolio-grid,.roadmap,.scenario-output{grid-template-columns:1fr}
+  .project{min-height:330px}.curator-note{grid-template-columns:1fr;gap:6px}.figure-head{display:block}.figure-source{margin-top:8px;text-align:left}
+  .segment-split{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.force-row{grid-template-columns:1fr;gap:5px}.risk-matrix{grid-template-rows:repeat(3,116px)}
+  .cash-bridge{grid-template-columns:1fr;min-width:0}.bridge-arrow{justify-self:center;line-height:1;transform:rotate(90deg)}
+  .benchmark,.booking-bars{min-width:0}.benchmark-row{grid-template-columns:112px 1fr 42px;gap:8px}.booking-bars{gap:12px;padding-inline:8px}
+  .scenario-control{display:grid;grid-template-columns:repeat(3,1fr)}.scenario-control button{min-width:0}.footer-row{display:block}.footer-row a{display:inline-block;margin-top:12px}
+  .hero-logo.mm2-brand{left:10px;top:20px;width:128px;height:62px;padding:9px}.segment-row{grid-template-columns:108px 1fr 48px;gap:8px}.working-bars{min-width:500px}.slate-grid{grid-template-columns:1fr}.peer-compare{min-width:520px}.score-callout{grid-template-columns:1fr}.score-callout strong{font-size:58px}
+  .insight-band,.dossier-grid,.bottom-line-grid{grid-template-columns:1fr}
+  .insight-note,.insight-note+.insight-note,.dossier-item,.dossier-item+.dossier-item{padding:18px 0;border-top:1px solid var(--line);border-left:0}
+  .insight-note:first-child,.dossier-item:first-child{border-top:0}
+  .research-dossier>summary b{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}.bar-fill,.benchmark-track::after,.booking-col i,.financial-svg .bar{transform:none}.benchmark-track i{transform:translate(-50%,-50%) scale(1)}.financial-svg .line{stroke-dashoffset:0}.financial-svg .dot{opacity:1}}
+</style>
+</head>
+<body>
+<div class="route-progress" id="route-progress" aria-hidden="true"></div>
+
+<nav class="site-nav" aria-label="Esplanade analysis navigation">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Beyond Our Gallery home"><img src="assets/bog-logo-mark.png" alt=""><strong>Beyond Our Gallery</strong></a>
+    <div class="primary-nav">
+      <a href="#score">Score</a><a href="#organisation">Organisation</a><a href="#financials">Financials</a><a href="#risk">Risk</a><a href="#strategy">Strategy</a>
+      <details class="sections-menu"><summary>Sections</summary><div class="sections-popover">
+        <a href="#score">00 Score</a><a href="#organisation">01 Organisation</a><a href="#income">02 Income engines</a><a href="#financials">03 Financials</a><a href="#funding">04 Funding gap</a><a href="#market">05 Market</a><a href="#demand">06 Demand</a><a href="#frameworks">07 Frameworks</a><a href="#risk">08 Risk</a><a href="#strategy">09 Strategy</a>
+      </div></details>
+    </div>
+    <div class="reading-progress" aria-label="Reading progress"><b id="section-current">00</b><span>/ 09</span></div>
+    <a class="back-home" href="index.html"><span aria-hidden="true">&#8592;</span><span>Back home</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow">Strategy and commercial review &middot; National arts centre</p>
+      <h1>The<br>Esplanade</h1>
+      <p class="hero-thesis">A public-value institution with a commercial engine hidden beneath the stage.</p>
+      <p>Singapore's national performing arts centre is a presenter, venue operator, landlord and fundraiser in one waterfront campus. Its reserves and market position are strong; its economics are designed to break even and the grant must close a structural funding gap.</p>
+      <div class="hero-meta"><span>Charity &amp; IPC</span><span>Evidence grade B</span><span>Updated 1 Nov 2026</span></div>
+      <div class="hero-actions"><a class="button" href="#score">Enter the analysis</a><a class="text-link" href="https://www.esplanade.com/about-us/our-organisation" target="_blank" rel="noopener">Organisation website &#8599;</a></div>
+    </div>
+    <div class="hero-art" data-reveal>
+      <figure class="hero-image"><img src="assets/esplanade-night.png" alt="Esplanade Theatres on the Bay illuminated at night on Marina Bay"></figure>
+      <div class="hero-logo mm2-brand"><img src="assets/esplanade-logo.png" alt="Esplanade Theatres on the Bay Singapore logo"></div>
+      <div class="hero-score"><span>Institutional quality score</span><b>56.7</b><em>Satisfactory</em></div>
+      <div class="hero-caption">Exhibit 00 &middot; The public sees the art; the estate, grants and reserves carry the institution.</div>
+    </div>
+  </div>
+</header>
+
+<div class="reading-layout">
+<main class="analysis-main">
+  <section class="analysis-section" id="score" data-number="00" data-index="0" data-thesis="Reserves and a hard-to-copy campus lift the score; break-even economics hold it back." data-evidence="No debt, about eight months of reserves and roughly 32% of live audiences." data-uncertainty="How much of future earned income Esplanade can retain as grants adjust." data-change="Paid visitor products and durable positive cash flow after grants would raise the score.">
+    <p class="section-kicker">00 &middot; Evidence &middot; Research score</p><h2>56.7 out of 100: a strong institution with thin economics</h2><p class="lede">Esplanade sits in the Satisfactory band. Its market pillar is the strongest in the coverage universe, while a single campus, near-zero surplus and reliance on public funding constrain Financial Strength and Risk Resilience.</p>
+    <div class="score-callout" data-reveal><strong>56.7</strong><p><b>Satisfactory &middot; sensitivity range 53.6-59.8.</b><br>The framework measures organisational quality and resilience, not artistic merit or public value.</p></div>
+    <div class="section-grid g2">
+      <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 00.1</span><h3>Where does Esplanade sit in the coverage?</h3></div><span class="figure-source">Beyond Our Gallery rubric &middot; 1 Nov 2026</span></div><div class="figure-canvas benchmark"><div class="benchmark-row"><span>Vividthree</span><div class="benchmark-track" style="--value:22.6"><i></i></div><b>22.6</b></div><div class="benchmark-row"><span>Esplanade</span><div class="benchmark-track" style="--value:56.7"><i></i></div><b>56.7</b></div><div class="benchmark-row"><span>Kingsmen</span><div class="benchmark-track" style="--value:59.3"><i></i></div><b>59.3</b></div><div class="benchmark-row"><span>Winking</span><div class="benchmark-track" style="--value:67.4"><i></i></div><b>67.4</b></div></div><figcaption class="curator-note"><b>Curator's note</b><p>A charity built to break even cannot look like a cash-rich listed company on margins, but its moat is unusually durable.</p></figcaption></figure>
+      <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 00.2</span><h3>What lifts and holds back the score?</h3></div><span class="figure-source">Points earned / category weight</span></div><div class="figure-canvas category-bars"><div class="category-bar"><span>Financial Strength</span><div class="bar-track"><i class="bar-fill" style="--pct:50.25"></i></div><b>20.1 / 40</b></div><div class="category-bar"><span>Market Position</span><div class="bar-track"><i class="bar-fill" style="--pct:70"></i></div><b>14.0 / 20</b></div><div class="category-bar"><span>Growth Opportunities</span><div class="bar-track"><i class="bar-fill" style="--pct:53.6"></i></div><b>13.4 / 25</b></div><div class="category-bar"><span>Risk Resilience</span><div class="bar-track"><i class="bar-fill" style="--pct:61.3"></i></div><b>9.2 / 15</b></div></div><figcaption class="curator-note"><b>Lift / drag</b><p>Reserves, members and the campus lift the score. Thin margins, one geography and grant dependence hold it back.</p></figcaption></figure>
+    </div>
+    <div style="margin-top:30px">
+      <details class="score-details"><summary><span>Financial Strength</span><b>20.1 / 40</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Underlying income CAGR</td><td>6</td><td>2.0</td><td>2.4</td><td>+4.1% a year, FY2021/22-25/26.</td></tr><tr><td>Surplus margin</td><td>7</td><td>1.6</td><td>2.2</td><td>Five-year median near 0.9%.</td></tr><tr><td>ROE equivalent</td><td>9</td><td>1.6</td><td>2.9</td><td>Surplus on accumulated funds below 1%.</td></tr><tr><td>Cash-flow stability</td><td>9</td><td>2.0</td><td>3.6</td><td>Operating cash moves with grant timing.</td></tr><tr><td>Balance sheet</td><td>9</td><td>5.0</td><td>9.0</td><td>No borrowings and S$71.4m reserves.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Market Position</span><b>14.0 / 20</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Brand recognition</td><td>2</td><td>4</td><td>1.6</td><td>National arts centre and city icon.</td></tr><tr><td>Competitive advantage</td><td>7</td><td>4</td><td>5.6</td><td>Hard-to-copy campus, state backing and scale.</td></tr><tr><td>Market share</td><td>4</td><td>3</td><td>2.4</td><td>About 32% of live attendances.</td></tr><tr><td>Relationships</td><td>5</td><td>4</td><td>4.0</td><td>Members bought over 70% of Presents tickets.</td></tr><tr><td>Geographic reach</td><td>2</td><td>1</td><td>0.4</td><td>One campus by mandate.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Growth Opportunities</span><b>13.4 / 25</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Industry growth</td><td>6</td><td>2</td><td>2.4</td><td>Moderate media and tourism growth.</td></tr><tr><td>Technology adoption</td><td>4</td><td>3</td><td>2.4</td><td>Four venues rewired; 68% of attendance digital.</td></tr><tr><td>New markets</td><td>6</td><td>2</td><td>2.4</td><td>Waterfront Theatre adds mid-size capacity.</td></tr><tr><td>Diversification</td><td>5</td><td>3</td><td>3.0</td><td>Earned income spread; grants remain 56%.</td></tr><tr><td>Partnerships</td><td>4</td><td>4</td><td>3.2</td><td>Singtel, DBS Foundation and AXS.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Risk Resilience</span><b>9.2 / 15</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Economic resilience</td><td>3</td><td>1</td><td>0.6</td><td>Income fell 46% in FY2020/21.</td></tr><tr><td>Customer diversification</td><td>4</td><td>4</td><td>3.2</td><td>Thousands of buyers, hirers, tenants and donors.</td></tr><tr><td>Technology resilience</td><td>3</td><td>4</td><td>2.4</td><td>Live work is hard to replicate; digital widens reach.</td></tr><tr><td>Regulatory resilience</td><td>2</td><td>3</td><td>1.2</td><td>IPC status runs to March 2030.</td></tr><tr><td>Operational resilience</td><td>3</td><td>3</td><td>1.8</td><td>One campus carries all live output.</td></tr></tbody></table></div></details>
+    </div>
+  </section>
+
+  <section class="analysis-section" id="organisation" data-number="01" data-index="1" data-thesis="One campus combines public purpose, programmes, footfall and commercial recovery." data-evidence="4,311 activities generated 1.90m live attendances in FY2025/26." data-uncertainty="Reach is abundant; conversion into paid, giving and returning visitors is not." data-change="A measured visitor-product line would make the public asset commercially legible.">
+    <p class="section-kicker">01 &middot; Exhibit &middot; The organisation</p><h2>Three businesses inside two domes</h2><p class="lede">The Esplanade Co Ltd is a company limited by guarantee, registered charity and Institution of a Public Character. It presents art, rents venues and operates a mall and car park; MCCY funds the net gap.</p>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>2002</b><span>Centre opened</span></div><div class="metric"><b>4,311</b><span>Activities in FY2025/26</span></div><div class="metric"><b>1.90m</b><span>Live attendances</span></div><div class="metric"><b>6</b><span>Performance venues</span></div></div>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 01.1</span><h3>How does public money become public value?</h3></div><span class="figure-source">TECL FY2025/26 &middot; Beyond Our Gallery</span></div><div class="figure-canvas timeline"><div class="timeline-step"><b>01 &middot; Mandate</b><h3>Fund purpose</h3><p>MCCY and Tote Board support reach, inclusion and artists.</p></div><div class="timeline-step"><b>02 &middot; Programme</b><h3>Curate work</h3><p>Festivals, commissions and mostly free public activity.</p></div><div class="timeline-step"><b>03 &middot; Place</b><h3>Create footfall</h3><p>Six venues and a waterfront turn programmes into visits.</p></div><div class="timeline-step"><b>04 &middot; Recover</b><h3>Earn and raise</h3><p>Tickets, hire, rent and gifts cover 45% of cost.</p></div></div><figcaption class="curator-note"><b>Economic link</b><p>The activity visitors notice least, the estate, makes the most dependable contribution.</p></figcaption></figure>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Mandate, campus and operating edge</b></summary><div class="dossier-body"><div class="dossier-grid"><article class="dossier-item"><span>Status</span><h3>Charity + IPC</h3><p>No shares, dividends or share price. Tax-deductible giving status runs to 31 March 2030.</p></article><article class="dossier-item"><span>Venues</span><h3>Six stages</h3><p>Theatre, Concert Hall, Waterfront Theatre, two studios and the DBS Foundation Outdoor Theatre.</p></article><article class="dossier-item"><span>Integration</span><h3>Curate, host, let</h3><p>Free programming generates footfall; venue hire and estate income monetise the place around it.</p></article></div><p class="dossier-caption">Officially, Esplanade's mission is to entertain, engage, educate and inspire through the arts.</p></div></details>
+  </section>
+
+  <section class="analysis-section" id="income" data-number="02" data-index="2" data-thesis="Estate and venue hire carry the books; ticketing carries the mission." data-evidence="Rent, parking and venue hire generated 49% of FY2025/26 income." data-uncertainty="Ticket demand remains below 2019 despite strong recent growth." data-change="Higher visitor yield without reducing free access would improve recovery.">
+    <p class="section-kicker">02 &middot; Exhibit &middot; Income engines</p><h2>Four engines earn; grants close what they leave open</h2><p class="lede">FY2025/26 income was S$33.8m, or about S$30.9m without a one-off SISTIC gain. Estate income is the dependable base; venue hire monetises scarce halls; ticketing and giving are more mission-linked and more variable.</p>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>S$10.1m</b><span>Estate &middot; 29.9%</span></div><div class="metric"><b>S$6.5m</b><span>Venue hire &middot; 19.2%</span></div><div class="metric"><b>S$5.9m</b><span>Ticketing &middot; 17.6%</span></div><div class="metric"><b>S$3.7m</b><span>Giving &middot; 11.0%</span></div></div>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 02.1</span><h3>Which streams recovered beyond 2019?</h3></div><span class="figure-source">FY2025/26 versus FY2018/19</span></div><div class="figure-canvas category-bars"><div class="category-bar"><span>Mall &amp; rentals</span><div class="bar-track"><i class="bar-fill" style="--pct:60"></i></div><b>+19.8%</b></div><div class="category-bar"><span>Venue hire</span><div class="bar-track"><i class="bar-fill" style="--pct:78"></i></div><b>+46.1%</b></div><div class="category-bar"><span>Ticketing</span><div class="bar-track"><i class="bar-fill" style="--pct:39"></i></div><b>-9.6%</b></div><div class="category-bar"><span>Giving</span><div class="bar-track"><i class="bar-fill" style="--pct:25"></i></div><b>-34.4%</b></div></div><figcaption class="curator-note"><b>Read across</b><p>The estate and halls are above 2019. Paid audience demand and large-donor comparables are not.</p></figcaption></figure>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Stream-level economics and concentration</b></summary><div class="dossier-body"><div class="dossier-table numeric"><table><thead><tr><th>Stream</th><th>FY2025/26</th><th>Share</th><th>YoY</th><th>Driver</th></tr></thead><tbody><tr><td>Mall and rentals</td><td>S$8.70m</td><td>25.7%</td><td>+14.1%</td><td>Footfall and lease cycles</td></tr><tr><td>Venue hire</td><td>S$6.50m</td><td>19.2%</td><td>+14.1%</td><td>Venue days and hirers</td></tr><tr><td>Ticketing</td><td>S$5.94m</td><td>17.6%</td><td>+17.7%</td><td>Programme mix and members</td></tr><tr><td>Sponsorships &amp; donations</td><td>S$3.72m</td><td>11.0%</td><td>+20.3%</td><td>Campaigns and tax deductions</td></tr><tr><td>Car park</td><td>S$1.43m</td><td>4.2%</td><td>+8.2%</td><td>CBD and event traffic</td></tr><tr><td>Other income</td><td>S$7.55m</td><td>22.3%</td><td>+65.4%</td><td>Matching, interest and one-offs</td></tr></tbody></table></div><div class="callout"><strong>The steady base pays for artistic risk.</strong><p>Rent, hire and parking generated 49% of income. Tickets cover only about 37% of direct show cost before staff.</p></div></div></details>
+  </section>
+
+  <section class="analysis-section" id="financials" data-number="03" data-index="3" data-thesis="FY2025/26 improved, but less than the S$5.2m headline suggests." data-evidence="Removing the estimated S$2.91m SISTIC gain leaves about S$2.25m from operations." data-uncertainty="Whether cost recovery can rise without pricing away public access." data-change="Sustained underlying recovery above 50% would strengthen the financial pillar.">
+    <p class="section-kicker">03 &middot; Evidence &middot; Financials</p><h2>The grant sets the floor; earned income sets the margin</h2><p class="lede">Underlying income rose 13% while core costs rose 4%. Cost recovery reached 45%, the best since FY2019/20, but the operating margin remained roughly 3% on a S$71.5m cost base.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 03.1</span><h3>Did nine years of recovery close the gap?</h3></div><span class="figure-source">Income and cost recovery &middot; FY2017/18-25/26</span></div><div class="figure-canvas"><svg class="financial-svg" viewBox="0 0 760 330" role="img" aria-label="Income bars and cost recovery line"><line class="gridline" x1="55" y1="270" x2="725" y2="270"/><line class="gridline" x1="55" y1="190" x2="725" y2="190"/><line class="gridline" x1="55" y1="110" x2="725" y2="110"/><rect class="bar" x="70" y="82" width="48" height="188"/><rect class="bar" x="140" y="93" width="48" height="177"/><rect class="bar" x="210" y="110" width="48" height="160"/><rect class="bar" x="280" y="184" width="48" height="86"/><rect class="bar" x="350" y="112" width="48" height="158"/><rect class="bar" x="420" y="125" width="48" height="145"/><rect class="bar" x="490" y="110" width="48" height="160"/><rect class="bar" x="560" y="106" width="48" height="164"/><rect class="bar" x="630" y="67" width="48" height="203"/><path class="line" pathLength="1" d="M94 116 L164 108 L234 124 L304 180 L374 156 L444 172 L514 148 L584 148 L654 136"/><circle class="dot" cx="94" cy="116" r="5"/><circle class="dot" cx="164" cy="108" r="5"/><circle class="dot" cx="234" cy="124" r="5"/><circle class="dot" cx="304" cy="180" r="5"/><circle class="dot" cx="374" cy="156" r="5"/><circle class="dot" cx="444" cy="172" r="5"/><circle class="dot" cx="514" cy="148" r="5"/><circle class="dot" cx="584" cy="148" r="5"/><circle class="dot" cx="654" cy="136" r="5"/><text x="67" y="294">18</text><text x="137" y="294">19</text><text x="207" y="294">20</text><text x="277" y="294">21</text><text x="347" y="294">22</text><text x="417" y="294">23</text><text x="487" y="294">24</text><text x="557" y="294">25</text><text x="627" y="294">26</text></svg></div><figcaption class="curator-note"><b>Turning point</b><p>Income reached S$33.8m, but 45% recovery remains below the 52% achieved in FY2018/19.</p></figcaption></figure>
+    <div class="insight-band" data-reveal><article class="insight-note"><span>Headline surplus</span><strong>S$5.16m</strong><p>Includes the sale of control in SISTIC.</p></article><article class="insight-note"><span>One-off gain</span><strong>-S$2.91m</strong><p>Estimated gain removed for operating quality.</p></article><article class="insight-note"><span>Operating surplus</span><strong>~S$2.25m</strong><p>About 2.5 times the prior year on the same basis.</p></article></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Nine-year results and the FY2025/26 bridge</b></summary><div class="dossier-body"><div class="dossier-table numeric"><table><thead><tr><th>FY</th><th>Income</th><th>Costs ex rent</th><th>Grants</th><th>Result</th><th>Recovery</th></tr></thead><tbody><tr><td>2017/18</td><td>S$31.2m</td><td>S$63.1m</td><td>S$36.9m</td><td>S$5.1m</td><td>50%</td></tr><tr><td>2018/19</td><td>S$29.4m</td><td>S$59.4m</td><td>S$37.0m</td><td>S$7.0m</td><td>52%</td></tr><tr><td>2021/22</td><td>S$26.3m</td><td>S$69.4m</td><td>S$35.1m</td><td>-S$8.0m</td><td>40%</td></tr><tr><td>2023/24</td><td>S$26.6m</td><td>S$75.0m</td><td>S$49.0m</td><td>S$0.7m</td><td>42%</td></tr><tr><td>2024/25</td><td>S$27.3m</td><td>S$74.6m</td><td>S$47.5m</td><td>S$0.2m</td><td>42%</td></tr><tr><td>2025/26</td><td>S$33.8m</td><td>S$71.5m</td><td>S$43.1m</td><td>S$5.2m</td><td>45%</td></tr></tbody></table></div><p class="dossier-caption">Government rent is charged and fully subvented, so the review excludes the round trip from core cost analysis.</p></div></details>
+  </section>
+
+  <section class="analysis-section" id="funding" data-number="04" data-index="4" data-thesis="The underlying funding gap has settled near S$40m a year." data-evidence="Costs rose 20% since FY2018/19 while income excluding one-offs rose only 5%." data-uncertainty="Grant growth must keep pace with Baumol cost pressure." data-change="Earned-income retention and matching structures would improve incentives.">
+    <p class="section-kicker">04 &middot; Evidence &middot; Funding gap</p><h2>The gap has stopped widening, not disappeared</h2><p class="lede">Since FY2022/23, higher earned income has almost kept pace with higher core cost. The grant remains the balancing item, while S$71.4m of reserves bridge timing and shocks.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 04.1</span><h3>How much of FY2026/27 income is visible?</h3></div><span class="figure-source">Illustrative base case &middot; S$31.8m</span></div><div class="figure-canvas booking-bars"><div class="booking-col"><b>S$10.5m</b><i style="--height:82"></i><span>Recurring estate</span></div><div class="booking-col"><b>S$2.5m</b><i style="--height:31"></i><span>Booked</span></div><div class="booking-col"><b>S$0.7m</b><i style="--height:18"></i><span>Pledged</span></div><div class="booking-col"><b>S$18.1m</b><i style="--height:100"></i><span>To earn in-year</span></div></div><figcaption class="curator-note"><b>Read across</b><p>About 43% is recurring, booked or pledged; the other 57% still has to be sold or raised.</p></figcaption></figure>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>S$40.6m</b><span>FY2025/26 underlying gap</span></div><div class="metric"><b>+104%</b><span>Advance bookings</span></div><div class="metric"><b>S$13.8m</b><span>Capital works committed</span></div><div class="metric"><b>8 months</b><span>Reserves coverage</span></div></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Cash visibility, reserves and grant design</b></summary><div class="dossier-body"><div class="dossier-grid"><article class="dossier-item"><span>Visible base</span><h3>S$13.7m</h3><p>Recurring estate, advance bookings and pledged support are known before the year is fully sold.</p></article><article class="dossier-item"><span>Receivables</span><h3>S$18.6m</h3><p>Approved grants not yet received plus SISTIC sale proceeds due after year end.</p></article><article class="dossier-item"><span>Incentive</span><h3>Keep what is earned</h3><p>A grant that always fills the gap can weaken the return to commercial improvement.</p></article></div><div class="callout"><strong>The grant needs to rise about 3% a year just to stand still.</strong><p>If S$71.5m of cost and S$30.9m of income both grow 3%, the funding gap widens by roughly S$1.2m.</p></div></div></details>
+  </section>
+
+  <section class="analysis-section" id="market" data-number="05" data-index="5" data-thesis="Esplanade owns attention, not ticket spending." data-evidence="It drew about 32% of live attendances but under 1% of national ticket value." data-uncertainty="How much digital reach and membership can be converted without narrowing access." data-change="Tour, membership and giving revenue would monetise the landmark without repricing the mission.">
+    <p class="section-kicker">05 &middot; Evidence &middot; Market position</p><h2>A third of the audience, one percent of the ticket money</h2><p class="lede">The contradiction is intentional: roughly three-quarters of Presents activity is free. Esplanade's competitive position is measured better by reach, relationships and cost recovery than by box-office share.</p>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>~32%</b><span>Share of live attendance</span></div><div class="metric"><b>0.9%</b><span>Share of ticket sales</span></div><div class="metric"><b>166,000+</b><span>E&amp;Me members</span></div><div class="metric"><b>&gt;70%</b><span>Presents tickets bought by members</span></div></div>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 05.1</span><h3>Why do peers recover more cost?</h3></div><span class="figure-source">Latest reported years &middot; definitions differ</span></div><div class="figure-canvas benchmark"><div class="benchmark-row"><span>Canada NAC</span><div class="benchmark-track" style="--value:41"><i></i></div><b>41%</b></div><div class="benchmark-row"><span>Esplanade</span><div class="benchmark-track" style="--value:45"><i></i></div><b>45%</b></div><div class="benchmark-row"><span>Sydney Opera House</span><div class="benchmark-track" style="--value:82"><i></i></div><b>82%</b></div></div><figcaption class="curator-note"><b>Tourism is the gap</b><p>Sydney reported 457,525 paid tour patrons. Esplanade does not report a comparable paid-tour line.</p></figcaption></figure>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Members, audiences and peer context</b></summary><div class="dossier-body"><div class="insight-band"><article class="insight-note"><span>Member revenue</span><strong>~S$4.2m</strong><p>About 70% of Presents ticketing, up roughly 50%.</p></article><article class="insight-note"><span>Spend per member</span><strong>~S$25</strong><p>Depth matters more than headline member count.</p></article><article class="insight-note"><span>Digital reach</span><strong>4.10m</strong><p>68% of FY2025/26 attendances were digital.</p></article></div><p class="dossier-caption">Live attendance at 1.90m remained 29% below FY2018/19, while digital attendance had tripled.</p></div></details>
+  </section>
+
+  <section class="analysis-section" id="demand" data-number="06" data-index="6" data-thesis="One centre serves four commercial logics and one political logic." data-evidence="Estate, venue hire, box office and giving respond to different drivers and lags." data-uncertainty="The largest revenue source, the grant, is set through annual public policy." data-change="Stream-level forecasting and advance bookings can make the annual gap less reactive.">
+    <p class="section-kicker">06 &middot; Evidence &middot; Demand transmission</p><h2>Footfall, bookings, tickets and gifts move on different clocks</h2><p class="lede">No single macro driver governs Esplanade. Earned income feels shocks first; grants adjust later. Reserves bridge the lag between a fall in visits, bookings or deposit income and the next public-budget cycle.</p>
+    <div class="timeline" data-reveal><div class="timeline-step"><b>Estate</b><h3>Footfall-led</h3><p>Tourism and office traffic reprice slowly through leases.</p></div><div class="timeline-step"><b>Venue hire</b><h3>B2B, booked ahead</h3><p>Promoters and arts groups reserve halls 6-24 months out.</p></div><div class="timeline-step"><b>Box office</b><h3>B2C, price-sensitive</h3><p>Members dominate paid Presents demand.</p></div><div class="timeline-step"><b>Giving</b><h3>Relationship-led</h3><p>IPC status and matching funds turn gifts into leverage.</p></div></div>
+    <div class="callout"><strong>A fifth demand logic is political.</strong><p>S$43.1m of FY2025/26 grants were determined by public policy, making government support the institution's largest source of economic demand.</p></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Shock channels and Baumol cost disease</b></summary><div class="dossier-body"><div class="dossier-table"><table><thead><tr><th>Shock</th><th>Most exposed</th><th>Lag</th><th>FY2025/26 exposure</th></tr></thead><tbody><tr><td>Tourism</td><td>Estate</td><td>0-6 months</td><td>S$10.1m income</td></tr><tr><td>Corporate budgets</td><td>Hire and giving</td><td>6-18 months</td><td>S$10.2m combined</td></tr><tr><td>Household spending</td><td>Box office</td><td>0-12 months</td><td>S$5.9m</td></tr><tr><td>Government budget</td><td>Everything</td><td>Annual</td><td>S$43.1m grants</td></tr><tr><td>Interest rates</td><td>Other income</td><td>Immediate</td><td>Yield fell 2.46% to 1.15%</td></tr><tr><td>Wages and energy</td><td>Costs</td><td>Immediate</td><td>S$44.2m pay + property</td></tr></tbody></table></div><p class="dossier-caption">A quartet still needs four players. Pay follows the wider economy even when live-performance productivity cannot rise at the same rate.</p></div></details>
+  </section>
+
+  <section class="analysis-section" id="frameworks" data-number="07" data-index="7" data-thesis="The mandate is protected; attention and commercial bookings are contested." data-evidence="Entry threat is low for a national centre, while substitutes for leisure time are high." data-uncertainty="A 15,000-seat MBS arena changes the top end of the booking market." data-change="Owning the mid-size, festival and public-space niche keeps competition asymmetric.">
+    <p class="section-kicker">07 &middot; Evidence &middot; Frameworks</p><h2>A protected mandate in a contest for attention</h2><p class="lede">Commercial pressure lands on venue hire and ticketing, not on the grant. Esplanade's defence is what commercial halls do not offer: commissioning, festival depth, free programming and a civic waterfront place.</p>
+    <div class="force-grid" data-reveal><div class="force-row"><b>Audience rivalry</b><span>Moderate</span><p>MBS, The Star and Indoor Stadium compete for hirers and leisure time.</p></div><div class="force-row"><b>Buyer power</b><span>Low-moderate</span><p>Ticket buyers are fragmented; large promoters have alternatives.</p></div><div class="force-row"><b>Supplier power</b><span>Medium-high</span><p>Artists, specialised crews and energy suppliers set important costs.</p></div><div class="force-row"><b>New entrants</b><span>Low / rising</span><p>A rival national centre is unlikely; the new MBS arena changes capacity.</p></div><div class="force-row"><b>Substitutes</b><span>High</span><p>Streaming, stadium tours and travel compete for the leisure dollar.</p></div></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Public-value economics, PESTLE and competitive position</b></summary><div class="dossier-body"><div class="dossier-grid"><article class="dossier-item"><span>Merit good</span><h3>Free access corrects under-consumption</h3><p>About three-quarters of Presents activities reduce the price at the door to zero.</p></article><article class="dossier-item"><span>Externalities</span><h3>Benefits exceed ticket value</h3><p>City image, tourism, artist development, inclusion and civic life spill beyond buyers.</p></article><article class="dossier-item"><span>Public value</span><h3>S$22.7 per live attendance</h3><p>The grant is about S$7.2 per attendance when digital reach is included.</p></article></div><div class="callout"><strong>The estate pays for the art.</strong><p>Venue hire contributes positively; giving is high contribution but lumpy; Presents is negative by design, with ticketing covering about 37% of direct show costs.</p></div></div></details>
+  </section>
+
+  <section class="analysis-section" id="risk" data-number="08" data-index="8" data-thesis="The largest risk is political and slow; the most likely cost risks are fast." data-evidence="A 5% operating-grant cut would remove about S$2.0m, almost the entire operating surplus." data-uncertainty="Wage, energy and interest-rate pressure can arrive before funding resets." data-change="Eight months of reserves bridge shocks, but higher recovery must do the long-term work.">
+    <p class="section-kicker">08 &middot; Decision &middot; Risk matrix</p><h2>Where can the economics break?</h2><p class="lede">Select a risk to inspect its trigger and mitigation. The matrix distinguishes fast cost shocks from slower policy exposure and does not rely on colour alone.</p>
+    <div class="risk-layout"><div><div class="risk-matrix" aria-label="Likelihood and impact matrix"><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><button class="risk-dot" style="left:50%;top:18%" data-risk="grant" aria-pressed="true">Grant</button><button class="risk-dot" style="left:78%;top:46%" data-risk="cost" aria-pressed="false">Costs</button><button class="risk-dot" style="left:49%;top:50%" data-risk="tourism" aria-pressed="false">Footfall</button><button class="risk-dot" style="left:52%;top:57%" data-risk="venues" aria-pressed="false">Venues</button><button class="risk-dot" style="left:78%;top:78%" data-risk="rates" aria-pressed="false">Rates</button><button class="risk-dot" style="left:25%;top:20%" data-risk="cyber" aria-pressed="false">Cyber</button></div><div class="matrix-label">Likelihood &#8594; &middot; Impact rises upward</div></div><aside class="risk-detail" aria-live="polite"><span class="risk-level" id="risk-level">Medium likelihood / High impact</span><h3 id="risk-title">Operating grant flat or cut</h3><dl><dt>What goes wrong</dt><dd id="risk-desc">Each 5% cut removes about S$2.0m and most of the operating surplus.</dd><dt>Trigger</dt><dd id="risk-trigger">MCCY budget or the next arts-plan review resets support.</dd><dt>Mitigation</dt><dd id="risk-mitigation">Eight months of reserves plus higher earned and raised income.</dd></dl></aside></div>
+    <div class="insight-band" data-reveal><article class="insight-note"><span>5% grant cut</span><strong>-S$2.01m</strong><p>About 89% of the operating surplus.</p></article><article class="insight-note"><span>3% higher pay</span><strong>-S$0.86m</strong><p>Almost three times the benefit of 5% higher ticket sales.</p></article><article class="insight-note"><span>100bp lower deposits</span><strong>-S$0.55m</strong><p>Immediate pressure on other income.</p></article></div>
+    <details class="research-dossier"><summary><span>Full research notes</span><b>Risk register and resilience evidence</b></summary><div class="dossier-body"><div class="dossier-table"><table><thead><tr><th>Risk</th><th>Likelihood / impact</th><th>Leading indicator</th><th>Mitigant</th></tr></thead><tbody><tr><td>Grant flat or cut</td><td>Medium / High</td><td>MCCY budget</td><td>Reserves and recovery</td></tr><tr><td>Cost inflation</td><td>High / Medium</td><td>Wages and energy</td><td>Contracts and casual staffing</td></tr><tr><td>Tourism shock</td><td>Medium / Medium</td><td>Arrivals and occupancy</td><td>Local and tourist mix</td></tr><tr><td>New large venues</td><td>Medium / Medium</td><td>Promoter bookings</td><td>Mid-size niche</td></tr><tr><td>Falling rates</td><td>High / Low</td><td>SORA and deposits</td><td>Ladder maturities</td></tr><tr><td>Cyber breach</td><td>Low / High</td><td>Partner incidents</td><td>Controls and audits</td></tr></tbody></table></div><p class="dossier-caption">S$71.4m of reserves can bridge a bad year, not a decade of a growing structural gap.</p></div></details>
+  </section>
+
+  <section class="analysis-section" id="strategy" data-number="09" data-index="9" data-thesis="Monetise the visitor, deepen membership, match every gift and keep more of what is earned." data-evidence="Three commercial moves could add roughly S$6m of gross income." data-uncertainty="Retention terms with MCCY determine whether commercial effort compounds." data-change="Paid tours worth at least 5% of income would materially raise the score.">
+    <p class="section-kicker">09 &middot; Decision &middot; Strategy and outlook</p><h2>Earn more without making the art less public</h2><p class="lede">Ticket price is the last lever: a 5% increase raises only about S$0.30m. Visitor products, member depth, matched giving and an earned-income retention compact offer more value with less mission trade-off.</p>
+    <div class="roadmap" data-reveal><article class="gate"><span class="gate-num">01</span><h3>Monetise the visitor</h3><p>Paid architecture and backstage tours for a small share of tourists.</p><div class="gate-exit">Potential: ~S$2.1m gross</div></article><article class="gate"><span class="gate-num">02</span><h3>Deepen E&amp;Me</h3><p>Paid tiers, member previews and a giving ladder.</p><div class="gate-exit">Potential: +S$0.85m</div></article><article class="gate"><span class="gate-num">03</span><h3>Match every gift</h3><p>Build campaigns around public matching funds.</p><div class="gate-exit">Potential: +S$3.0m matched</div></article><article class="gate"><span class="gate-num">04</span><h3>Keep what is earned</h3><p>Agree that part of above-baseline income remains with Esplanade.</p><div class="gate-exit">Potential: +S$1.5m retained</div></article></div>
+    <p class="section-kicker" style="margin-top:54px">Interactive FY2026/27 outlook</p><h2 style="font-size:clamp(31px,4vw,50px)">What changes when income moves but cost does not wait?</h2>
+    <div class="scenario-control" role="group" aria-label="FY2026/27 scenario selector"><button type="button" data-scenario="bear" aria-pressed="false">Bear</button><button type="button" data-scenario="base" aria-pressed="true">Base</button><button type="button" data-scenario="bull" aria-pressed="false">Bull</button></div>
+    <div class="scenario-output" aria-live="polite"><div class="scenario-lead"><span>Selected case</span><strong id="scenario-name">Base</strong><p id="scenario-note">Underlying income grows modestly while core cost rises 3%.</p></div><div class="scenario-stat"><span>Income</span><strong id="scenario-revenue">S$31.8m</strong><p>Excludes SISTIC gain</p></div><div class="scenario-stat"><span>Cost recovery</span><strong id="scenario-growth">45.0%</strong><p>Flat year on year</p></div><div class="scenario-stat"><span>Surplus</span><strong id="scenario-profit">+S$1.1m</strong><p id="scenario-score-note">Gap remains S$41.8m</p></div></div>
+    <div class="bottom-line-grid" data-reveal><article><span>What is working</span><h3>Place and relationships</h3><p>A hard-to-copy campus, 166,000 members and strong advance bookings.</p></article><article><span>What is structural</span><h3>The funding gap</h3><p>Live work carries Baumol costs while much public programming is intentionally free.</p></article><article><span>What to watch</span><h3>Recovery and retention</h3><p>Whether earned income stays above 45% and whether funding design rewards improvement.</p></article></div>
+    <div class="callout"><strong>Final view: Esplanade's mission is not the weakness; the incentive design around it is the opportunity.</strong><p>The score rises with paid visitor products, durable cash flow and higher recovery. It falls if grants stall while pay and property costs keep compounding.</p></div>
+  </section>
+</main>
+
+<aside class="thesis-rail" aria-label="Current research takeaway"><span class="rail-label">Research takeaway</span><div class="rail-item"><span>Current thesis</span><strong id="rail-thesis">Reserves and a hard-to-copy campus lift the score; break-even economics hold it back.</strong></div><div class="rail-item"><span>Strongest evidence</span><strong id="rail-evidence">No debt and about eight months of reserves.</strong></div><div class="rail-item"><span>Main uncertainty</span><strong id="rail-uncertainty">How much earned income Esplanade can retain.</strong></div><div class="rail-item"><span>What changes the score</span><strong id="rail-change">Paid visitor products and durable positive cash flow.</strong></div></aside>
+</div>
+
+<section class="sources" id="sources"><div class="wrap sources-grid"><div><p class="eyebrow" style="color:var(--pink)">Sources and evidence</p><h2>What this analysis rests on</h2><ul><li>The Esplanade Co Ltd annual reports and audited statements, FY2017/18-FY2025/26</li><li>Esplanade FY2025 Impact Scorecard and official organisation information</li><li>Singapore Cultural Statistics, tourism outlook and Culture Pass updates</li><li>Sydney Opera House and National Arts Centre annual reports</li><li>The supplied 44-page Esplanade strategy and commercial review</li></ul><p>Evidence grade B. The review adapts a listed-company scorecard to a charity and removes one-off gains from growth and margin.</p></div><div class="disclaimer"><p class="eyebrow" style="color:var(--pink)">Research standard</p><p>Figures are in Singapore dollars unless stated. Data are as of 3 November 2026. This is independent research for education and is not affiliated with The Esplanade Co Ltd.</p><p>Institution imagery was supplied with the research brief and is presented as editorial evidence.</p></div></div></section>
+
+<footer class="page-footer"><div class="wrap footer-row"><span>Beyond Our Gallery &middot; The Esplanade Co Ltd &middot; Jiarun Yang &middot; 1 November 2026</span><a href="index.html">Back to company gallery</a></div></footer>
+
+<script>
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;const revealItems=document.querySelectorAll('[data-reveal], .figure');if(reduceMotion){revealItems.forEach(el=>el.classList.add('is-visible'));}else{const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}}),{threshold:.14,rootMargin:'0px 0px -40px'});revealItems.forEach(el=>revealObserver.observe(el));}
+const sections=[...document.querySelectorAll('.analysis-section')];const rail={thesis:document.getElementById('rail-thesis'),evidence:document.getElementById('rail-evidence'),uncertainty:document.getElementById('rail-uncertainty'),change:document.getElementById('rail-change')};const current=document.getElementById('section-current');let activeSectionRaf=0;function updateActiveSection(){activeSectionRaf=0;if(!sections.length)return;const probe=scrollY+Math.min(innerHeight*.32,260);let active=sections[0];sections.forEach(section=>{if(section.offsetTop<=probe)active=section;});current.textContent=String(active.dataset.index).padStart(2,'0');rail.thesis.textContent=active.dataset.thesis;rail.evidence.textContent=active.dataset.evidence;rail.uncertainty.textContent=active.dataset.uncertainty;rail.change.textContent=active.dataset.change;}addEventListener('scroll',()=>{if(!activeSectionRaf)activeSectionRaf=requestAnimationFrame(updateActiveSection);},{passive:true});addEventListener('resize',updateActiveSection);updateActiveSection();
+const route=document.getElementById('route-progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;route.style.width=(max>0?scrollY/max*100:0)+'%';}addEventListener('scroll',updateProgress,{passive:true});updateProgress();document.querySelectorAll('.sections-popover a').forEach(a=>a.addEventListener('click',()=>a.closest('details').removeAttribute('open')));
+const risks={grant:{level:'Medium likelihood / High impact',title:'Operating grant flat or cut',desc:'Each 5% cut removes about S$2.0m and most of the operating surplus.',trigger:'MCCY budget or the next arts-plan review resets support.',mitigation:'Eight months of reserves plus higher earned and raised income.'},cost:{level:'High likelihood / Medium impact',title:'Cost inflation',desc:'A 3% pay rise costs S$0.86m and 5% higher property cost removes S$0.78m.',trigger:'Wage indices and electricity tariffs rise.',mitigation:'Energy contracts, efficiency work and flexible staffing.'},tourism:{level:'Medium likelihood / Medium impact',title:'Tourism or footfall shock',desc:'Estate income of S$10.1m depends on visits, office traffic and events.',trigger:'Visitor arrivals or mall occupancy fall.',mitigation:'Balance tourist and local trade; protect the programme calendar.'},venues:{level:'Medium likelihood / Medium impact',title:'New large venues',desc:'Competing halls can pressure S$6.5m of venue-hire income.',trigger:'Promoters shift bookings as the MBS arena opens.',mitigation:'Own the mid-size, festival and waterfront niche.'},rates:{level:'High likelihood / Low impact',title:'Falling interest rates',desc:'Each 100bp decline costs roughly S$0.55m on deposits.',trigger:'SORA and deposit offers decline.',mitigation:'Ladder maturities while preserving liquidity.'},cyber:{level:'Low likelihood / High impact',title:'Cyber or data breach',desc:'A breach damages trust with 166,000 members.',trigger:'Incidents at Esplanade or ticketing partners.',mitigation:'Controls, vendor audits and tested incident response.'}};document.querySelectorAll('[data-risk]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-risk]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');const r=risks[btn.dataset.risk];document.getElementById('risk-level').textContent=r.level;document.getElementById('risk-title').textContent=r.title;document.getElementById('risk-desc').textContent=r.desc;document.getElementById('risk-trigger').textContent=r.trigger;document.getElementById('risk-mitigation').textContent=r.mitigation;}));
+const scenarios={bear:{name:'Bear',revenue:'S$29.6m',growth:'41.9%',profit:'-S$1.1m',note:'Income falls 4.2% while cost still rises 3%.',scoreNote:'Gap widens to S$44.0m'},base:{name:'Base',revenue:'S$31.8m',growth:'45.0%',profit:'+S$1.1m',note:'Underlying income grows modestly while core cost rises 3%.',scoreNote:'Gap remains S$41.8m'},bull:{name:'Bull',revenue:'S$33.7m',growth:'47.7%',profit:'+S$3.0m',note:'Estate, hire, ticketing and giving all outperform.',scoreNote:'Gap narrows to S$39.9m'}};document.querySelectorAll('[data-scenario]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-scenario]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');const s=scenarios[btn.dataset.scenario];document.getElementById('scenario-name').textContent=s.name;document.getElementById('scenario-revenue').textContent=s.revenue;document.getElementById('scenario-growth').textContent=s.growth;document.getElementById('scenario-profit').textContent=s.profit;document.getElementById('scenario-note').textContent=s.note;document.getElementById('scenario-score-note').textContent=s.scoreNote;}));
+</script>
+</body>

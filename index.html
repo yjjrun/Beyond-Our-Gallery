@@ -1202,7 +1202,7 @@ body.modal-open::before{
         <div>
           <p class="eyebrow">The company atlas</p>
           <h2 class="section-title" id="gallery-title">Explore the companies</h2>
-          <p class="section-copy">Nine companies, six sectors and one clearer view of Singapore's creative economy.</p>
+          <p class="section-copy">Ten organisations, six sectors and one clearer view of Singapore's creative economy.</p>
         </div>
         <div class="gallery-controls">
           <label class="gallery-search" aria-label="Search the company gallery">
@@ -1218,7 +1218,7 @@ body.modal-open::before{
             <button class="filter-btn" type="button" data-filter="Film & Media">Film &amp; Media</button>
             <button class="filter-btn" type="button" data-filter="Live Events">Live Events</button>
           </div>
-          <div class="results-note" id="results-note" aria-live="polite">Showing 9 companies</div>
+          <div class="results-note" id="results-note" aria-live="polite">Showing 10 organisations</div>
         </div>
       </div>
 
@@ -1409,23 +1409,46 @@ body.modal-open::before{
 
         <article class="company-card" data-sector="Film & Media" data-company="NoonTalk Media SEJ film media artiste talent production">
           <div class="company-media">
-            <img src="assets/value-design.jpg" alt="A creative production office representing media talent and production work">
+            <img src="assets/noontalk-exhibition.png" alt="NoonTalk Media exhibition with a wall of productions and artists">
             <span class="sector-badge">Film &amp; Media</span>
-            <span class="card-score"><span>Score</span><b>62</b></span>
+            <span class="card-score"><span>Score</span><b>21.0</b></span>
           </div>
           <div class="company-body">
             <span class="ticker">SGX: SEJ</span>
             <h3>NoonTalk Media</h3>
-            <p>Talent and production studio with regional ambition, small-cap constraints and brand-led optionality.</p>
+            <p>Recognisable Mandarin talent and new-format options inside a founder-funded project house still searching for margin.</p>
             <div class="mini-scores" aria-label="Miniature research scores">
-              <span class="mini-score"><span>Fin</span><i style="--mini:55"></i><b>55</b></span>
-              <span class="mini-score"><span>Mkt</span><i style="--mini:64"></i><b>64</b></span>
-              <span class="mini-score"><span>Grw</span><i style="--mini:68"></i><b>68</b></span>
-              <span class="mini-score"><span>Risk</span><i style="--mini:57"></i><b>57</b></span>
+              <span class="mini-score"><span>Fin</span><i style="--mini:0"></i><b>0</b></span>
+              <span class="mini-score"><span>Mkt</span><i style="--mini:27"></i><b>27</b></span>
+              <span class="mini-score"><span>Grw</span><i style="--mini:44"></i><b>44</b></span>
+              <span class="mini-score"><span>Risk</span><i style="--mini:31"></i><b>31</b></span>
             </div>
             <div class="card-foot">
               <span class="updated">Updated 30 Oct 2026</span>
-              <a class="text-link" href="#analysis-dialog" data-open-analysis="noontalk">View analysis <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+              <a class="text-link" href="noontalk-media.html">View analysis <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="company-card" data-sector="Experiential" data-company="The Esplanade Co Ltd theatres on the bay national arts centre charity IPC performing arts venue Singapore">
+          <div class="company-media">
+            <img src="assets/esplanade-night.png" alt="Esplanade Theatres on the Bay illuminated at night on Marina Bay">
+            <span class="sector-badge">Cultural Institution</span>
+            <span class="card-score"><span>Score</span><b>56.7</b></span>
+          </div>
+          <div class="company-body">
+            <span class="ticker">Non-listed &middot; Charity &amp; IPC</span>
+            <h3>The Esplanade Co Ltd</h3>
+            <p>A hard-to-copy national arts campus with strong reserves, deep audience reach and a structural public-funding gap.</p>
+            <div class="mini-scores" aria-label="Miniature institutional scores">
+              <span class="mini-score"><span>Fin</span><i style="--mini:50"></i><b>50</b></span>
+              <span class="mini-score"><span>Mkt</span><i style="--mini:70"></i><b>70</b></span>
+              <span class="mini-score"><span>Grw</span><i style="--mini:54"></i><b>54</b></span>
+              <span class="mini-score"><span>Risk</span><i style="--mini:61"></i><b>61</b></span>
+            </div>
+            <div class="card-foot">
+              <span class="updated">Updated 1 Nov 2026</span>
+              <a class="text-link" href="esplanade.html">View analysis <i data-lucide="arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </article>
@@ -1815,13 +1838,13 @@ const analysisData = {
   noontalk: {
     title: "NoonTalk Media",
     sector: "Film & Media / SGX: SEJ",
-    score: 62,
+    score: 21.0,
     updated: "Updated 30 Oct 2026",
-    copy: "Small-cap media and talent platform with regional ambition, where brand relevance needs to translate into scalable economics.",
+    copy: "A founder-funded Mandarin media house with recognisable talent and new-format options, still looking for sustainable project economics.",
     points: [
-      "Market position is strongest around talent, production and Chinese-language media identity.",
-      "Growth case rests on regional collaborations and higher-utilization content output.",
-      "Risk score reflects scale, customer concentration and public-market liquidity."
+      "Financial Strength scores zero under the methodology's going-concern rule.",
+      "FY2023-26 produced S$11.4m of losses and S$5.6m of operating cash burn.",
+      "A clean audit and four quarters of positive gross profit would lift the score."
     ]
   }
 };
