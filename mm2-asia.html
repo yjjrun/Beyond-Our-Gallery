@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mm2 Asia Analysis | Beyond Our Gallery</title>
+<meta name="description" content="Beyond Our Gallery's strategy and commercial analysis of mm2 Asia (SGX: 1B0), including its 17.6 research score, content economics, restructuring, creditor outcomes, risks and recovery gates.">
+<meta property="og:title" content="mm2 Asia Analysis | Beyond Our Gallery">
+<meta property="og:description" content="A 17.6/100 business-quality analysis of mm2 Asia: a restructuring case before a business case.">
+<meta property="og:image" content="assets/mm2-liang-popo-ah-beng.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/svg+xml" href="/assets/bog-mark.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ecd9e8">
+<style>
+:root{
+  color-scheme:light;
+  --ink:#092f2d;
+  --ink-2:#35504d;
+  --deep:#062f2b;
+  --wine:#9f174d;
+  --wine-2:#c62b66;
+  --pink:#ef91b1;
+  --pink-soft:#f6dce5;
+  --paper:#fbf8f6;
+  --paper-2:#f2e9ec;
+  --line:#d8c8ce;
+  --muted:#687674;
+  --positive:#16705f;
+  --caution:#9b5a00;
+  --critical:#b12a35;
+  --mm2-blue:#1652a0;
+  --display:"Cormorant Garamond", Georgia, serif;
+  --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{
+  margin:0;
+  overflow-x:clip;
+  background:linear-gradient(180deg,#fff 0%,var(--paper) 58%,#fff 100%);
+  color:var(--ink);
+  font:500 16px/1.6 var(--body);
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input{font:inherit}
+button{color:inherit}
+.wrap{width:min(1220px,calc(100% - 40px));margin:0 auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.route-progress{position:fixed;inset:0 auto auto 0;z-index:90;width:0;height:3px;background:linear-gradient(90deg,var(--wine),var(--pink),#098c84);box-shadow:0 0 14px rgba(239,145,177,.5)}
+.site-nav{position:sticky;top:0;z-index:80;background:rgba(255,253,251,.92);border-bottom:1px solid rgba(9,47,45,.12);backdrop-filter:blur(18px)}
+.nav-inner{min-height:68px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;text-decoration:none;white-space:nowrap}
+.brand img{width:36px;height:36px;object-fit:cover;border:1px solid rgba(9,47,45,.14)}
+.brand strong{font-size:13px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.primary-nav{display:flex;align-items:center;gap:22px}
+.primary-nav>a,.sections-menu>summary{font-size:12px;font-weight:800;text-decoration:none;cursor:pointer;white-space:nowrap}
+.primary-nav>a:hover,.primary-nav>a:focus-visible,.sections-menu>summary:hover,.sections-menu>summary:focus-visible{color:var(--wine)}
+.sections-menu{position:relative}
+.sections-menu>summary{list-style:none;display:flex;align-items:center;gap:6px}
+.sections-menu>summary::-webkit-details-marker{display:none}
+.sections-menu>summary::after{content:"+";font-size:16px;color:var(--wine)}
+.sections-menu[open]>summary::after{content:"-"}
+.sections-popover{position:absolute;right:0;top:36px;width:245px;padding:12px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px rgba(9,47,45,.18)}
+.sections-popover a{display:block;padding:8px 10px;font-size:12px;font-weight:750;text-decoration:none}
+.sections-popover a:hover,.sections-popover a:focus-visible{background:var(--paper-2);color:var(--wine)}
+.reading-progress{display:flex;align-items:center;gap:6px;border-left:1px solid var(--line);padding-left:16px;color:var(--muted);font-size:11px;font-weight:900;letter-spacing:.12em}
+.reading-progress b{color:var(--wine)}
+.back-home{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(144,0,49,.3);padding:7px 11px;text-decoration:none;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.back-home:hover,.back-home:focus-visible{background:var(--wine);border-color:var(--wine);color:#fff}
+
+.hero{position:relative;overflow:hidden;min-height:720px;border-bottom:1px solid var(--line);background:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 0 54%,rgba(239,145,177,.12) 54% 72%,rgba(6,47,43,.06) 72%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,.92fr) minmax(430px,1.08fr);align-items:center;gap:58px;min-height:720px;padding:76px 0 66px}
+.eyebrow{margin:0 0 12px;color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1{margin-bottom:0;font:700 clamp(58px,7.3vw,102px)/.82 var(--display);letter-spacing:0}
+.hero-thesis{max-width:650px;margin:24px 0 0;font:600 clamp(24px,3vw,39px)/1.04 var(--display);color:var(--wine)}
+.hero-copy>p:not(.eyebrow):not(.hero-thesis){max-width:650px;margin:20px 0 0;color:var(--ink-2);font-size:16px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero-meta span{border:1px solid rgba(9,47,45,.18);padding:7px 10px;background:rgba(255,255,255,.8);font-size:11px;font-weight:850;letter-spacing:.07em;text-transform:uppercase}
+.hero-actions{display:flex;align-items:center;gap:18px;margin-top:30px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;background:var(--wine);border:1px solid var(--wine);color:#fff;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;transition:transform .18s ease,background .18s ease}
+.button:hover,.button:focus-visible{background:var(--deep);border-color:var(--deep);transform:translateY(-2px)}
+.text-link{color:var(--wine);font-size:12px;font-weight:900;text-underline-offset:4px}
+.hero-art{position:relative;min-height:520px}
+.hero-image{position:absolute;inset:0 0 0 6%;overflow:hidden;box-shadow:0 28px 90px rgba(6,47,43,.2)}
+.hero-image img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.hero:hover .hero-image img{transform:scale(1.025)}
+.hero-logo{position:absolute;left:-12px;top:48px;width:112px;height:112px;padding:18px;background:var(--wine);box-shadow:0 18px 40px rgba(144,0,49,.27)}
+.hero-logo img{width:100%;height:100%;object-fit:cover}
+.hero-score{position:absolute;right:-8px;bottom:38px;width:188px;min-height:188px;padding:26px;background:var(--deep);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 22px 60px rgba(6,47,43,.3)}
+.hero-score span{font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#c9e0dc}
+.hero-score b{font:700 61px/.9 var(--display);color:var(--pink)}
+.hero-score em{margin-top:7px;font-size:11px;font-style:normal;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.hero-caption{position:absolute;left:0;bottom:22px;max-width:250px;padding:12px 14px;background:#fff;border-left:3px solid var(--wine);font-size:10px;font-weight:750;color:var(--muted)}
+
+.reading-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:46px;align-items:start;width:min(1220px,calc(100% - 40px));margin:0 auto}
+.analysis-main{min-width:0}
+.analysis-section{position:relative;padding:74px 0;border-bottom:1px solid var(--line);scroll-margin-top:70px}
+.analysis-section::before{content:attr(data-number);position:absolute;right:0;top:69px;color:rgba(144,0,49,.14);font:700 54px/1 var(--display)}
+.section-kicker{margin:0 0 10px;color:var(--wine);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+h2{max-width:850px;margin-bottom:0;font:700 clamp(36px,4.9vw,62px)/.93 var(--display);letter-spacing:0}
+.lede{max-width:780px;margin:16px 0 0;color:var(--ink-2);font-size:16px}
+.section-grid{display:grid;gap:18px;margin-top:30px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.metric{padding:20px 0;border-top:2px solid var(--wine)}
+.metric b{display:block;font:700 35px/1 var(--display);color:var(--wine)}
+.metric span{display:block;margin-top:7px;color:var(--muted);font-size:11px;font-weight:800;line-height:1.45;text-transform:uppercase;letter-spacing:.07em}
+.callout{margin-top:28px;padding:24px 26px;border-left:4px solid var(--pink);background:var(--paper-2)}
+.callout strong{display:block;font:700 24px/1.08 var(--display)}
+.callout p{margin:8px 0 0;color:var(--ink-2);font-size:14px}
+
+.thesis-rail{position:sticky;top:96px;margin-top:74px;border-top:4px solid var(--wine);padding-top:18px}
+.thesis-rail .rail-label{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.rail-item{padding:14px 0;border-bottom:1px solid var(--line)}
+.rail-item span{display:block;margin-bottom:5px;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+.rail-item strong{display:block;font-size:12px;line-height:1.5}
+
+.figure{min-width:0;max-width:100%;margin:34px 0 0;border:1px solid rgba(9,47,45,.16);background:#fff;box-shadow:0 14px 44px rgba(9,47,45,.08)}
+.figure-head{display:flex;align-items:start;justify-content:space-between;gap:20px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.figure-label{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.figure-head h3{margin:5px 0 0;font:700 24px/1.02 var(--display)}
+.figure-source{max-width:240px;text-align:right;color:var(--muted);font-size:10px;line-height:1.5}
+.figure-canvas{width:100%;min-width:0;max-width:100%;padding:24px;overflow-x:auto}
+.curator-note{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:18px 20px;border-top:1px solid var(--line);background:var(--paper)}
+.curator-note b{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.curator-note p{margin:0;color:var(--ink-2);font:600 19px/1.2 var(--display)}
+.benchmark{display:grid;gap:18px;min-width:560px}
+.benchmark-row{display:grid;grid-template-columns:160px 1fr 52px;align-items:center;gap:14px;font-size:12px;font-weight:800}
+.benchmark-track{position:relative;height:2px;background:#d8cecf}
+.benchmark-track::after{content:"";position:absolute;left:0;top:-2px;width:calc(var(--value) * 1%);height:6px;background:linear-gradient(90deg,var(--deep),var(--wine));transform-origin:left;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.benchmark-track i{position:absolute;z-index:2;left:calc(var(--value) * 1%);top:50%;width:15px;height:15px;border:4px solid #fff;border-radius:50%;background:var(--wine);box-shadow:0 0 0 1px var(--wine);transform:translate(-50%,-50%) scale(0);transition:transform .6s .45s ease}
+.is-visible .benchmark-track::after{transform:scaleX(1)}
+.is-visible .benchmark-track i{transform:translate(-50%,-50%) scale(1)}
+
+.category-bars{display:grid;gap:16px}
+.category-bar{display:grid;grid-template-columns:175px 1fr 74px;align-items:center;gap:14px;font-size:12px;font-weight:800}
+.bar-track{height:8px;background:#e5dadd;overflow:hidden}
+.bar-fill{display:block;width:calc(var(--pct) * 1%);height:100%;background:linear-gradient(90deg,var(--wine),var(--pink));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.is-visible .bar-fill{transform:scaleX(1)}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:32px}
+.project{position:relative;min-height:360px;overflow:hidden;background:var(--deep);color:#fff}
+.project img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease,filter .55s ease}
+.project::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(3,26,24,.93))}
+.project:hover img,.project:focus-within img{transform:scale(1.045);filter:saturate(1.06)}
+.project-info{position:absolute;z-index:2;inset:auto 20px 18px}
+.project-info span{font-size:9px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:#ffd1e0}
+.project-info h3{margin:5px 0 5px;font:700 28px/1 var(--display)}
+.project-info p{margin:0;color:#e3efed;font-size:12px;line-height:1.5}
+
+.segment-split{display:grid;grid-template-columns:1.45fr .55fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.segment-block{min-height:230px;padding:26px;background:#fff}
+.segment-block.art{background:var(--deep);color:#fff}
+.segment-block b{font:700 51px/1 var(--display);color:var(--pink)}
+.segment-block h3{margin:13px 0 8px;font:700 25px/1 var(--display)}
+.segment-block p{margin:0;color:var(--ink-2);font-size:13px}
+.segment-block.art p{color:#cfdfdd}
+.segment-growth{display:flex;gap:16px;margin-top:20px;padding-top:14px;border-top:1px solid rgba(255,255,255,.17)}
+.segment-growth span{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+
+.financial-svg{display:block;width:100%;min-width:660px;height:auto}
+.financial-svg text{font-family:var(--body);fill:var(--muted);font-size:11px;font-weight:700}
+.financial-svg .gridline{stroke:#e7dddf;stroke-width:1}
+.financial-svg .bar{fill:var(--wine);transform-box:fill-box;transform-origin:center bottom;transform:scaleY(0);transition:transform .8s ease}
+.financial-svg .line{fill:none;stroke:var(--deep);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s .3s ease}
+.financial-svg .dot{fill:var(--pink);stroke:#fff;stroke-width:3;opacity:0;transition:opacity .2s 1s ease}
+.is-visible .financial-svg .bar{transform:scaleY(1)}
+.is-visible .financial-svg .line{stroke-dashoffset:0}
+.is-visible .financial-svg .dot{opacity:1}
+
+.cash-bridge{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px;min-width:660px}
+.bridge-step{min-height:155px;padding:20px;background:var(--paper);border-top:3px solid var(--wine)}
+.bridge-step strong{display:block;font:700 35px/1 var(--display);color:var(--wine)}
+.bridge-step span{display:block;margin-top:9px;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.bridge-arrow{color:var(--pink);font-size:28px;font-weight:900}
+
+.booking-bars{display:grid;grid-template-columns:repeat(3,1fr);align-items:end;gap:34px;height:260px;min-width:560px;padding:0 28px 28px;border-bottom:1px solid var(--line)}
+.booking-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.booking-col b{font:700 24px/1 var(--display);color:var(--wine)}
+.booking-col i{display:block;width:min(100%,90px);height:calc(var(--height) * 1%);min-height:30px;background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.booking-col span{font-size:11px;font-weight:800;color:var(--muted)}
+.is-visible .booking-col i{transform:scaleY(1)}
+
+.peer-plot{position:relative;min-width:620px;height:300px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);background:repeating-linear-gradient(to top,transparent 0 59px,rgba(9,47,45,.07) 59px 60px)}
+.peer-point{position:absolute;left:var(--x);bottom:var(--y);transform:translate(-50%,50%);display:flex;align-items:center;gap:8px}
+.peer-point i{width:18px;height:18px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 6px rgba(144,0,49,.12)}
+.peer-point.keywords i{background:var(--deep);box-shadow:0 0 0 6px rgba(6,47,43,.12)}
+.peer-point span{padding:5px 7px;background:#fff;border:1px solid var(--line);font-size:10px;font-weight:900;white-space:nowrap}
+.axis-label{position:absolute;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.axis-label.x{right:0;bottom:-27px}.axis-label.y{left:-16px;top:-22px}
+
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);margin-top:32px;border-top:3px solid var(--deep)}
+.timeline-step{position:relative;padding:24px 18px 0 0}
+.timeline-step::before{content:"";position:absolute;left:0;top:-8px;width:13px;height:13px;border-radius:50%;background:var(--pink);border:2px solid #fff;box-shadow:0 0 0 1px var(--deep)}
+.timeline-step b{font-size:10px;color:var(--wine);letter-spacing:.14em;text-transform:uppercase}
+.timeline-step h3{margin:7px 0;font:700 22px/1 var(--display)}
+.timeline-step p{margin:0;color:var(--ink-2);font-size:12px}
+
+.force-grid{display:grid;gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.force-row{display:grid;grid-template-columns:180px 120px 1fr;gap:18px;padding:15px 18px;background:#fff;align-items:center}
+.force-row b{font-size:12px}.force-row span{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:var(--critical)}
+.force-row p{margin:0;color:var(--ink-2);font-size:12px}
+
+.risk-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.64fr);gap:24px;margin-top:30px}
+.risk-matrix{position:relative;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,104px);gap:1px;background:var(--line);border:1px solid var(--line)}
+.risk-cell{background:#fff}
+.risk-cell:nth-child(3),.risk-cell:nth-child(6),.risk-cell:nth-child(9){background:#fbf1f3}
+.risk-cell:nth-child(1),.risk-cell:nth-child(2),.risk-cell:nth-child(4){background:#f3f8f6}
+.risk-dot{position:absolute;border:1px solid rgba(144,0,49,.35);background:rgba(255,255,255,.95);padding:7px 9px;cursor:pointer;font-size:10px;font-weight:900;box-shadow:0 6px 16px rgba(9,47,45,.12)}
+.risk-dot:hover,.risk-dot:focus-visible,.risk-dot[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.risk-detail{min-height:314px;padding:24px;background:var(--deep);color:#fff}
+.risk-detail .risk-level{color:var(--pink);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.risk-detail h3{margin:12px 0 18px;font:700 31px/1 var(--display)}
+.risk-detail dl{margin:0}.risk-detail dt{margin-top:14px;color:#a9c9c4;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.risk-detail dd{margin:4px 0 0;font-size:12px;line-height:1.55}
+.matrix-label{margin-top:8px;color:var(--muted);font-size:10px;font-weight:800;text-align:center;text-transform:uppercase;letter-spacing:.08em}
+
+.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px}
+.gate{position:relative;min-height:280px;padding:24px 20px;border:1px solid var(--line);background:#fff}
+.gate+.gate{border-left:0}
+.gate::after{content:"";position:absolute;right:-8px;top:42px;z-index:2;width:14px;height:14px;border-top:2px solid var(--wine);border-right:2px solid var(--wine);transform:rotate(45deg);background:#fff}
+.gate:last-child::after{display:none}
+.gate-num{color:var(--wine);font:700 34px/1 var(--display)}
+.gate h3{margin:14px 0 9px;font:700 23px/1 var(--display)}
+.gate p{margin:0;color:var(--ink-2);font-size:12px}
+.gate-exit{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:10px;font-weight:850;line-height:1.5;text-transform:uppercase;letter-spacing:.06em}
+
+.scenario-control{display:flex;gap:8px;margin-top:28px}
+.scenario-control button{min-width:104px;padding:9px 13px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+.scenario-control button:hover,.scenario-control button:focus-visible,.scenario-control button[aria-pressed="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.scenario-output{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:1px;margin-top:12px;background:var(--line);border:1px solid var(--line)}
+.scenario-lead,.scenario-stat{padding:24px;background:#fff}
+.scenario-lead{background:var(--deep);color:#fff}
+.scenario-lead span,.scenario-stat span{display:block;color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.scenario-lead span{color:#a9c9c4}
+.scenario-lead strong,.scenario-stat strong{display:block;margin-top:9px;font:700 36px/1 var(--display);color:var(--pink)}
+.scenario-stat strong{color:var(--wine)}
+.scenario-lead p,.scenario-stat p{margin:9px 0 0;font-size:11px;color:#d9e7e5}.scenario-stat p{color:var(--ink-2)}
+
+.score-details{min-width:0;max-width:100%;margin-top:12px;border:1px solid var(--line);background:#fff;overflow:hidden}
+.score-details summary{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:17px 18px;cursor:pointer;font-size:13px;font-weight:850;list-style:none}
+.score-details summary::-webkit-details-marker{display:none}
+.score-details summary b{color:var(--wine)}
+.score-details[open] summary{border-bottom:1px solid var(--line);background:var(--paper-2)}
+.score-table-wrap{width:100%;max-width:100%;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:650px;font-size:12px}
+th,td{padding:11px 14px;border-bottom:1px solid #eadfe2;text-align:right;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+th:last-child,td:last-child{text-align:left;white-space:normal}
+thead th{background:var(--deep);color:#fff;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+tbody tr:last-child td{border-bottom:0}
+
+/* Restored source-review depth */
+.insight-band{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:30px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.insight-note{min-width:0;padding:22px 24px 22px 0}
+.insight-note+.insight-note{padding-left:24px;border-left:1px solid var(--line)}
+.insight-note span{display:block;color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.insight-note strong{display:block;margin-top:7px;font:700 24px/1.05 var(--display);color:var(--ink)}
+.insight-note p{margin:8px 0 0;color:var(--ink-2);font-size:12px;line-height:1.55}
+.research-dossier{margin-top:28px;border-top:3px solid var(--deep);border-bottom:1px solid var(--line);background:#fff}
+.research-dossier>summary{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:18px;row-gap:5px;padding:18px 0;cursor:pointer;list-style:none}
+.research-dossier>summary::-webkit-details-marker{display:none}
+.research-dossier>summary span{grid-column:1;grid-row:1;display:block;color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.research-dossier>summary b{grid-column:1;grid-row:2;display:block;font:700 23px/1.08 var(--display)}
+.research-dossier>summary::after{content:"+";grid-column:2;grid-row:1 / span 2;display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--wine);color:var(--wine);font-size:20px;font-weight:700}
+.research-dossier[open]>summary::after{content:"-";background:var(--wine);color:#fff}
+.dossier-body{padding:4px 0 30px;border-top:1px solid var(--line)}
+.dossier-intro{max-width:790px;margin:22px 0 0;color:var(--ink-2);font-size:13px}
+.dossier-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dossier-item{padding:19px 20px 20px 0}
+.dossier-item+.dossier-item{padding-left:20px;border-left:1px solid var(--line)}
+.dossier-item span{color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.dossier-item h3{margin:7px 0 7px;font:700 22px/1.02 var(--display)}
+.dossier-item p{margin:0;color:var(--ink-2);font-size:12px;line-height:1.55}
+.dossier-table{margin-top:22px;border:1px solid var(--line);overflow-x:auto}
+.dossier-table table{min-width:820px}
+.dossier-table.numeric th,.dossier-table.numeric td{text-align:right}
+.dossier-table.numeric th:first-child,.dossier-table.numeric td:first-child{text-align:left}
+.dossier-table th:last-child,.dossier-table td:last-child{white-space:normal}
+.dossier-caption{margin:10px 0 0;color:var(--muted);font-size:10px;line-height:1.5}
+.model-box{margin-top:22px;padding:22px 24px;background:var(--deep);color:#fff}
+.model-box code{display:block;overflow-x:auto;color:#ffd0df;font:700 13px/1.65 var(--body);white-space:nowrap}
+.model-box p{margin:10px 0 0;color:#c7dad7;font-size:11px}
+.bottom-line-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.bottom-line-grid article{min-height:210px;padding:24px;background:#fff}
+.bottom-line-grid article:nth-child(2){background:var(--deep);color:#fff}
+.bottom-line-grid span{color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.bottom-line-grid article:nth-child(2) span{color:var(--pink)}
+.bottom-line-grid h3{margin:10px 0 9px;font:700 26px/1 var(--display)}
+.bottom-line-grid p{margin:0;color:var(--ink-2);font-size:12px}
+.bottom-line-grid article:nth-child(2) p{color:#c9dbd8}
+
+.sources{padding:72px 0;background:var(--deep);color:#fff}
+.sources-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px}
+.sources h2{font-size:44px}.sources p,.sources li{color:#c9dbd8;font-size:12px}.sources a{color:#fff;text-underline-offset:3px}.sources ul{margin:22px 0 0;padding-left:18px}.sources .disclaimer{padding-left:24px;border-left:3px solid var(--pink)}
+.page-footer{padding:28px 0;background:#032522;color:#abc4c0;font-size:11px}
+.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center}.footer-row a{color:#fff}
+
+[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+[data-reveal].is-visible{opacity:1;transform:none}
+:focus-visible{outline:3px solid rgba(239,145,177,.75);outline-offset:3px}
+
+/* Company-specific editorial exhibits */
+.hero-image img{object-position:center}
+.hero-score b{font-size:58px}
+.project.tall{min-height:500px;grid-row:span 2}
+.project.tall img{object-position:center 12%}
+.project.wide{grid-column:span 1}
+.segment-stack{display:grid;gap:10px;margin-top:30px}
+.segment-row{display:grid;grid-template-columns:190px 1fr 72px;gap:14px;align-items:center;font-size:12px;font-weight:850}
+.segment-track{height:38px;background:#eadde2;overflow:hidden}
+.segment-fill{height:100%;width:calc(var(--share) * 1%);min-width:6px;background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .85s ease}
+.segment-row:nth-child(2) .segment-fill{background:var(--pink)}
+.segment-row:nth-child(3) .segment-fill{background:#77a69f}
+.is-visible .segment-fill{transform:scaleX(1)}
+.segment-row strong{text-align:right;color:var(--wine)}
+.working-bars{display:grid;grid-template-columns:repeat(4,1fr);align-items:end;gap:24px;height:300px;min-width:620px;padding:24px 36px 32px;border-bottom:1px solid var(--line)}
+.working-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}
+.working-col b{font:700 23px/1 var(--display);color:var(--wine)}
+.working-col i{display:block;width:min(100%,88px);height:calc(var(--height) * 1%);background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.working-col span{font-size:10px;font-weight:850;color:var(--muted);text-align:center;text-transform:uppercase}
+.is-visible .working-col i{transform:scaleY(1)}
+.slate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.slate-item{min-height:180px;padding:22px;background:#fff}
+.slate-item:nth-child(1){background:var(--deep);color:#fff}
+.slate-item span{color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.slate-item:nth-child(1) span{color:var(--pink)}
+.slate-item h3{margin:10px 0 8px;font:700 25px/1 var(--display)}
+.slate-item p{margin:0;color:var(--ink-2);font-size:12px}
+.slate-item:nth-child(1) p{color:#ccdedb}
+.peer-compare{display:grid;gap:13px;min-width:600px}
+.peer-row{display:grid;grid-template-columns:110px 1fr 100px 90px;gap:12px;align-items:center;font-size:11px;font-weight:850}
+.peer-track{height:14px;background:#eadde2;overflow:hidden}
+.peer-track i{display:block;height:100%;width:calc(var(--size) * 1%);background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.peer-row:nth-child(2) .peer-track i{background:linear-gradient(90deg,#597f79,var(--pink))}
+.is-visible .peer-track i{transform:scaleX(1)}
+.peer-row b{color:var(--wine)}
+.score-callout{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;margin-top:28px;padding:26px;background:linear-gradient(145deg,var(--deep),#174944);color:#fff}
+.score-callout strong{font:700 76px/.8 var(--display);color:var(--pink)}
+.score-callout p{margin:0;color:#d8e6e4;font-size:14px}
+.fragile{color:var(--critical)!important}
+.financial-svg .margin-label{fill:#fff;stroke:var(--deep);stroke-width:3px;paint-order:stroke;stroke-linejoin:round;font-weight:900}
+
+.hero-logo.mm2-brand{left:-20px;top:46px;width:170px;height:92px;padding:13px 18px;background:#fff;border-top:4px solid var(--mm2-blue)}
+.hero-logo.mm2-brand img{object-fit:contain}
+.hero-image img{object-position:center 25%}
+.debt-bars{display:grid;gap:13px;min-width:590px}
+.debt-row{display:grid;grid-template-columns:160px 1fr 80px;gap:14px;align-items:center;font-size:11px;font-weight:850}
+.debt-track{height:28px;background:#eadde2;overflow:hidden}
+.debt-track i{display:block;height:100%;width:calc(var(--size) * 1%);background:linear-gradient(90deg,var(--deep),var(--wine));transform:scaleX(0);transform-origin:left;transition:transform .8s ease}
+.debt-row:nth-child(2) .debt-track i{background:linear-gradient(90deg,var(--mm2-blue),var(--pink))}
+.is-visible .debt-track i{transform:scaleX(1)}
+.ownership{display:grid;grid-template-columns:2.49fr 1fr;min-width:560px;height:94px;overflow:hidden}
+.ownership div{display:flex;align-items:center;justify-content:center;padding:12px;text-align:center;font-size:11px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+.ownership .incoming{background:var(--deep);color:#fff}.ownership .existing{background:var(--pink-soft);color:var(--wine)}
+.cinema-bars{display:flex;align-items:end;gap:44px;height:280px;min-width:560px;padding:20px 46px 30px;border-bottom:1px solid var(--line)}
+.cinema-col{flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}
+.cinema-col b{font:700 24px/1 var(--display);color:var(--wine)}
+.cinema-col i{display:block;width:min(100%,105px);height:calc(var(--height) * 1%);min-height:4px;background:linear-gradient(180deg,var(--pink),var(--wine));transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.cinema-col:nth-child(5) i{background:var(--deep)}
+.cinema-col span{font-size:10px;font-weight:850;color:var(--muted)}
+.is-visible .cinema-col i{transform:scaleY(1)}
+.waterfall{display:grid;grid-template-columns:repeat(5,1fr);align-items:end;gap:9px;height:280px;min-width:650px;padding:20px 18px 30px;border-bottom:1px solid var(--line)}
+.water-step{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}
+.water-step b{font:700 20px/1 var(--display);color:var(--wine)}
+.water-step i{display:block;width:80%;height:calc(var(--height) * 1%);min-height:6px;background:var(--wine);transform:scaleY(0);transform-origin:bottom;transition:transform .8s ease}
+.water-step.positive i{background:var(--deep)}
+.water-step span{font-size:9px;font-weight:850;color:var(--muted);text-align:center;text-transform:uppercase}
+.is-visible .water-step i{transform:scaleY(1)}
+.outcome-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.outcome-card{padding:24px;background:#fff}
+.outcome-card.active{background:var(--deep);color:#fff}
+.outcome-card span{font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--wine)}
+.outcome-card.active span{color:var(--pink)}
+.outcome-card h3{margin:8px 0 10px;font:700 27px/1 var(--display)}
+.outcome-card p{margin:0;color:var(--ink-2);font-size:12px}.outcome-card.active p{color:#d3e3e0}
+.outcome-card ul{padding-left:16px;margin:14px 0 0;font-size:11px}.outcome-card li+li{margin-top:6px}
+.status-strip{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;border:1px solid var(--line)}
+.status-strip article{padding:19px;background:#fff;border-right:1px solid var(--line)}.status-strip article:last-child{border:0}
+.status-strip b{display:block;font:700 28px/1 var(--display);color:var(--wine)}.status-strip span{display:block;margin-top:7px;color:var(--muted);font-size:10px;font-weight:850;text-transform:uppercase}
+
+@media(max-width:1060px){
+  .primary-nav>a:nth-of-type(2),.primary-nav>a:nth-of-type(4){display:none}
+  .reading-layout{grid-template-columns:1fr}.thesis-rail{display:none}
+  .hero-grid{grid-template-columns:minmax(0,.9fr) minmax(380px,1.1fr);gap:34px}
+}
+@media(max-width:820px){
+  .wrap,.reading-layout{width:min(100% - 28px,1220px)}
+  .site-nav .primary-nav>a{display:none}.reading-progress{display:none}.nav-inner{gap:13px}.brand strong{display:none}
+  .hero{min-height:0}.hero-grid{grid-template-columns:1fr;min-height:0;padding:56px 0 48px}.hero-art{min-height:490px}.hero-image{left:0}.hero-logo{left:12px}.hero-score{right:12px}
+  .analysis-section{padding:58px 0}.analysis-section::before{top:55px;font-size:42px}
+  .g4,.g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .portfolio-grid,.g2,.risk-layout,.sources-grid{grid-template-columns:1fr}
+  .roadmap{grid-template-columns:1fr 1fr}.gate:nth-child(3){border-left:1px solid var(--line)}.gate::after{display:none}
+  .timeline{grid-template-columns:1fr 1fr;gap:24px 0}.scenario-output{grid-template-columns:1fr 1fr}.force-row{grid-template-columns:130px 95px 1fr}
+  .project.tall{grid-row:auto;min-height:400px}.working-bars{min-width:560px}.score-callout{grid-template-columns:140px 1fr}.score-callout strong{font-size:62px}.outcome-grid{grid-template-columns:1fr}.status-strip{grid-template-columns:1fr 1fr}.status-strip article:nth-child(2){border-right:0}.status-strip article:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .insight-band,.dossier-grid,.bottom-line-grid{grid-template-columns:1fr 1fr}
+  .insight-note:nth-child(3),.dossier-item:nth-child(3),.bottom-line-grid article:nth-child(3){border-top:1px solid var(--line);border-left:0;padding-left:0}
+}
+@media(max-width:560px){
+  .back-home{padding:7px 8px}.back-home span{display:none}.back-home span:first-child{display:inline}.sections-popover{position:fixed;right:14px;top:61px}
+  .hero-grid{gap:22px;padding:34px 0 28px}.hero-art{min-height:260px}.hero-logo{width:78px;height:78px;padding:12px;top:24px}.hero-score{width:132px;min-height:132px;padding:16px}.hero-score b{font-size:43px}.hero-caption{display:none}
+  h1{font-size:50px}.hero-thesis{font-size:24px}.hero-copy>p:not(.eyebrow):not(.hero-thesis){font-size:14px;line-height:1.55}.hero-meta{margin-top:20px}.hero-actions{align-items:flex-start;flex-direction:column;gap:9px;margin-top:22px}
+  .g4,.g3,.portfolio-grid,.roadmap,.scenario-output{grid-template-columns:1fr}
+  .project{min-height:330px}.curator-note{grid-template-columns:1fr;gap:6px}.figure-head{display:block}.figure-source{margin-top:8px;text-align:left}
+  .segment-split{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.force-row{grid-template-columns:1fr;gap:5px}.risk-matrix{grid-template-rows:repeat(3,116px)}
+  .cash-bridge{grid-template-columns:1fr;min-width:0}.bridge-arrow{justify-self:center;line-height:1;transform:rotate(90deg)}
+  .benchmark,.booking-bars{min-width:0}.benchmark-row{grid-template-columns:112px 1fr 42px;gap:8px}.booking-bars{gap:12px;padding-inline:8px}
+  .scenario-control{display:grid;grid-template-columns:repeat(3,1fr)}.scenario-control button{min-width:0}.footer-row{display:block}.footer-row a{display:inline-block;margin-top:12px}
+  .hero-logo.mm2-brand{left:10px;top:20px;width:128px;height:62px;padding:9px}.segment-row{grid-template-columns:108px 1fr 48px;gap:8px}.working-bars{min-width:500px}.slate-grid{grid-template-columns:1fr}.peer-compare{min-width:520px}.score-callout{grid-template-columns:1fr}.score-callout strong{font-size:58px}
+  .insight-band,.dossier-grid,.bottom-line-grid{grid-template-columns:1fr}
+  .insight-note,.insight-note+.insight-note,.dossier-item,.dossier-item+.dossier-item{padding:18px 0;border-top:1px solid var(--line);border-left:0}
+  .insight-note:first-child,.dossier-item:first-child{border-top:0}
+  .research-dossier>summary b{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}.bar-fill,.benchmark-track::after,.booking-col i,.financial-svg .bar{transform:none}.benchmark-track i{transform:translate(-50%,-50%) scale(1)}.financial-svg .line{stroke-dashoffset:0}.financial-svg .dot{opacity:1}}
+</style>
+</head>
+<body>
+<div class="route-progress" id="route-progress" aria-hidden="true"></div>
+
+<nav class="site-nav" aria-label="mm2 Asia analysis navigation">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Beyond Our Gallery home"><img src="assets/bog-logo-mark.png" alt=""><strong>Beyond Our Gallery</strong></a>
+    <div class="primary-nav">
+      <a href="#score">Score</a><a href="#business">Business</a><a href="#financials">Financials</a><a href="#restructuring">Restructuring</a><a href="#outlook">Outlook</a>
+      <details class="sections-menu"><summary>Sections</summary><div class="sections-popover">
+        <a href="#score">00 Score</a><a href="#business">01 Business</a><a href="#portfolio">02 Portfolio</a><a href="#segments">03 Segments</a><a href="#financials">04 Financials</a><a href="#cash">05 Cash and creditors</a><a href="#restructuring">06 Restructuring</a><a href="#market">07 Market and demand</a><a href="#frameworks">08 Frameworks</a><a href="#risk">09 Risk</a><a href="#outlook">10 Strategy and outlook</a>
+      </div></details>
+    </div>
+    <div class="reading-progress" aria-label="Reading progress"><b id="section-current">00</b><span>/ 10</span></div>
+    <a class="back-home" href="index.html"><span aria-hidden="true">&#8592;</span><span>Back home</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow">Strategy and commercial review &middot; SGX: 1B0</p>
+      <h1>mm2 Asia</h1>
+      <p class="hero-thesis">A restructuring case before a business case.</p>
+      <p>mm2 proved Singapore audiences will pay for local stories. It did not prove that those stories could carry cinemas, leases and acquisition debt. The remaining question is whether a content studio can survive the balance sheet built around it.</p>
+      <div class="hero-meta"><span>Film &amp; Media</span><span>Evidence grade C</span><span>Updated 1 Nov 2026</span></div>
+      <div class="hero-actions"><a class="button" href="#score">Enter the analysis</a><a class="text-link" href="https://www.mm2asia.com/" target="_blank" rel="noopener">Company website &#8599;</a></div>
+    </div>
+    <div class="hero-art" data-reveal>
+      <figure class="hero-image"><img src="assets/mm2-liang-popo-ah-beng.png" alt="Liang Po Po versus Ah Beng film poster distributed by mm2 Asia"></figure>
+      <div class="hero-logo mm2-brand"><img src="assets/mm2-logo.png" alt="mm2 Asia logo"></div>
+      <div class="hero-score"><span>Business quality score</span><b>17.6</b><em>Fragile</em></div>
+      <div class="hero-caption">Exhibit 00 &middot; Local comedy remains culturally resonant; the financing structure did not.</div>
+    </div>
+  </div>
+</header>
+
+<div class="reading-layout">
+<main class="analysis-main">
+  <section class="analysis-section" id="score" data-number="00" data-index="0" data-thesis="The rescue must work before the remaining content business can be valued." data-evidence="Liabilities exceeded assets by S$219.6m and Financial Strength contributes only 1.8 of 40 points." data-uncertainty="Whether creditors, shareholders, the court and SGX approve the scheme before 31 January 2027." data-change="Audited accounts, positive equity after the scheme and a funded slate would lift the score.">
+    <p class="section-kicker">00 &middot; Evidence &middot; Research score</p>
+    <h2>17.6 out of 100: the balance sheet decides the story</h2>
+    <p class="lede">mm2 sits deep in the Fragile band. Franchise films and regional distribution still have value, but capital deficiency, unaudited accounts and court protection impose the scoring ceiling.</p>
+    <div class="score-callout" data-reveal><strong>17.6</strong><p><b>Fragile &middot; sensitivity range 14-22.</b><br>This measures business quality and future potential. It is not a target price or trading recommendation.</p></div>
+    <div class="section-grid g2">
+      <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 00.1</span><h3>How far is mm2 from the coverage universe?</h3></div><span class="figure-source">Beyond Our Gallery rubric &middot; 1 Nov 2026</span></div><div class="figure-canvas benchmark">
+        <div class="benchmark-row"><span>mm2 Asia</span><div class="benchmark-track" style="--value:17.6"><i></i></div><b>17.6</b></div>
+        <div class="benchmark-row"><span>Vividthree</span><div class="benchmark-track" style="--value:22.6"><i></i></div><b>22.6</b></div>
+        <div class="benchmark-row"><span>Weak threshold</span><div class="benchmark-track" style="--value:40"><i></i></div><b>40.0</b></div>
+        <div class="benchmark-row"><span>Kingsmen</span><div class="benchmark-track" style="--value:59.3"><i></i></div><b>59.3</b></div>
+      </div><figcaption class="curator-note"><b>Curator's note</b><p>mm2 scores below every covered peer because insolvency conditions zero out most financial and resilience components.</p></figcaption></figure>
+      <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 00.2</span><h3>What lifts and holds back the score?</h3></div><span class="figure-source">Points earned / category weight</span></div><div class="figure-canvas category-bars">
+        <div class="category-bar"><span>Financial Strength</span><div class="bar-track"><i class="bar-fill" style="--pct:4.5"></i></div><b>1.8 / 40</b></div>
+        <div class="category-bar"><span>Market Position</span><div class="bar-track"><i class="bar-fill" style="--pct:21"></i></div><b>4.2 / 20</b></div>
+        <div class="category-bar"><span>Growth Opportunities</span><div class="bar-track"><i class="bar-fill" style="--pct:28"></i></div><b>7.0 / 25</b></div>
+        <div class="category-bar"><span>Risk Resilience</span><div class="bar-track"><i class="bar-fill" style="--pct:30.7"></i></div><b>4.6 / 15</b></div>
+      </div><figcaption class="curator-note"><b>Lift / drag</b><p>Known local franchises and overseas revenue lift the score. Insolvency, suspended trading and weak cash conversion hold it back.</p></figcaption></figure>
+    </div>
+    <div style="margin-top:30px">
+      <details class="score-details"><summary><span>Financial Strength</span><b>1.8 / 40</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Five-year revenue CAGR</td><td>6</td><td>0</td><td>0.0</td><td>-50% a year, FY2022-26.</td></tr><tr><td>Net profit margin</td><td>7</td><td>0</td><td>0.0</td><td>Losses every year; median margin -64%.</td></tr><tr><td>ROIC / ROE</td><td>9</td><td>0</td><td>0.0</td><td>Negative returns; equity of -S$219.6m.</td></tr><tr><td>Cash-flow stability</td><td>9</td><td>1</td><td>1.8</td><td>Free cash flow positive in at most two of five years.</td></tr><tr><td>Balance-sheet strength</td><td>9</td><td>0</td><td>0.0</td><td>Capital deficiency and a court moratorium.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Market Position</span><b>4.2 / 20</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Brand recognition</td><td>2</td><td>3</td><td>1.2</td><td>Known local franchises and five-market reach.</td></tr><tr><td>Competitive advantage</td><td>7</td><td>1</td><td>1.4</td><td>Franchise library, little capital to exploit it.</td></tr><tr><td>Market share</td><td>4</td><td>0</td><td>0.0</td><td>Cinema share fell from about 27% to zero.</td></tr><tr><td>Customer relationships</td><td>5</td><td>0</td><td>0.0</td><td>Content revenue fell 99% in FY2026.</td></tr><tr><td>Geographic reach</td><td>2</td><td>4</td><td>1.6</td><td>No country exceeded 40% of FY2025 revenue.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Growth Opportunities</span><b>7.0 / 25</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Industry growth</td><td>6</td><td>2</td><td>2.4</td><td>Entertainment and media grows, but exhibition is smaller.</td></tr><tr><td>Technology adoption</td><td>4</td><td>1</td><td>0.8</td><td>Digital platforms closed; no new capability disclosed.</td></tr><tr><td>New-market expansion</td><td>6</td><td>1</td><td>1.2</td><td>The group is leaving markets, not entering them.</td></tr><tr><td>Revenue diversification</td><td>5</td><td>1</td><td>1.0</td><td>Content is the only continuing business.</td></tr><tr><td>Strategic partnerships</td><td>4</td><td>2</td><td>1.6</td><td>Binding placement, with approvals pending.</td></tr></tbody></table></div></details>
+      <details class="score-details"><summary><span>Risk Resilience</span><b>4.6 / 15</b></summary><div class="score-table-wrap"><table><thead><tr><th>Component</th><th>Weight</th><th>Rating /5</th><th>Points</th><th>Assessment</th></tr></thead><tbody><tr><td>Economic resilience</td><td>3</td><td>0</td><td>0.0</td><td>Insolvency and emergency financing.</td></tr><tr><td>Customer diversification</td><td>4</td><td>2</td><td>1.6</td><td>Not disclosed, so rated 2 by rule.</td></tr><tr><td>Technology resilience</td><td>3</td><td>2</td><td>1.2</td><td>Not disclosed, so rated 2 by rule.</td></tr><tr><td>Regulatory resilience</td><td>2</td><td>3</td><td>1.2</td><td>CPF charges and Rule 1303(3) disclosure.</td></tr><tr><td>Operational resilience</td><td>3</td><td>1</td><td>0.6</td><td>Founder as interim CEO; three-person board.</td></tr></tbody></table></div></details>
+    </div>
+  </section>
+
+  <section class="analysis-section" id="business" data-number="01" data-index="1" data-thesis="A content studio expanded into cinemas and concerts, then contracted back to content." data-evidence="Content generated S$24.7m of FY2025 segment EBITDA while cinema associates lost S$79.9m." data-uncertainty="The surviving content team has almost no disclosed FY2026 revenue base." data-change="A funded slate with deposits, pre-sales and grants would make the remaining business investable.">
+    <p class="section-kicker">01 &middot; Exhibit &middot; The group</p><h2>Four businesses at the peak; one is left</h2><p class="lede">mm2 finances, produces and distributes Chinese-language films and series. Between 2015 and 2017 it added post-production, concerts and cinemas. By 2026 the screens were liquidated, the lender held the concert business and content was again the core.</p>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>2008</b><span>Founded by Melvin Ang</span></div><div class="metric"><b>S$165.1m</b><span>FY2025 group revenue</span></div><div class="metric"><b>61%</b><span>FY2025 revenue earned abroad</span></div><div class="metric"><b>1B0</b><span>SGX Mainboard &middot; suspended</span></div></div>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 01.1</span><h3>Where did the value chain break?</h3></div><span class="figure-source">mm2 FY2024-26 results &middot; Beyond Our Gallery</span></div><div class="figure-canvas cash-bridge"><div class="bridge-step"><strong>01</strong><span>Audience appetite</span><p>Local franchises and Greater China platform demand.</p></div><div class="bridge-arrow">&#8594;</div><div class="bridge-step"><strong>02-03</strong><span>Finance and deliver</span><p>Pre-sales and co-producers fund work; revenue is booked on delivery.</p></div><div class="bridge-arrow">&#8594;</div><div class="bridge-step"><strong>04</strong><span>Cash after debt</span><p>Receivables, leases and S$195m of borrowings absorbed the economics.</p></div></div><figcaption class="curator-note"><b>Decision lens</b><p>S$73.5m of content EBITDA in FY2023-25 became only S$14.4m of group operating cash.</p></figcaption></figure>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Company structure, ownership and the integration bet</b></summary>
+      <div class="dossier-body">
+        <p class="dossier-intro">The investment case changed twice: first from a studio into an integrated entertainment group, then from an integrated group into a court-protected content company. Both transitions matter when reading historical revenue.</p>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Origin and control</span><h3>Founder-led since 2008</h3><p>Melvin Ang founded the business in Malaysia and remains executive chairman and interim CEO. mm2 listed on Catalist in 2014 and moved to the Mainboard in 2017.</p></article>
+          <article class="dossier-item"><span>What it sells</span><h3>Content for five markets</h3><p>Films and series are financed, produced and licensed to cinemas, streamers and broadcasters. China, Taiwan and Hong Kong provided 51% of FY2025 revenue.</p></article>
+          <article class="dossier-item"><span>What changed</span><h3>Fixed costs overwhelmed stories</h3><p>Cinemas and concerts increased revenue but added rent, tour risk and debt. The continuing group is now almost entirely content, without the former downstream businesses.</p></article>
+        </div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>01 &middot; Develop</span><h3>Scripts, talent, finance</h3><p>Pre-sales, co-producers and IMDA grants can lower the capital mm2 must put at risk before a release.</p></article>
+          <article class="dossier-item"><span>02 &middot; Produce</span><h3>Create and finish</h3><p>Production once connected to Vividthree's post-production; the studio now has to buy or partner for more of the chain.</p></article>
+          <article class="dossier-item"><span>03 &middot; Distribute</span><h3>Own stories, not screens</h3><p>The original thesis was to keep more of each ticket. The outcome shows the lowest-margin step added the most fixed cost.</p></article>
+        </div>
+        <p class="dossier-caption">Source review pages 4-6 and 12. FY2025-26 figures are unaudited where noted.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="analysis-section" id="portfolio" data-number="02" data-index="2" data-thesis="Local-language franchises remain the clearest operating asset." data-evidence="Four Ah Boys to Men films took S$26.8m in Singapore and part two remains the local box-office record." data-uncertainty="The value and legal perimeter of the surviving library after restructuring are not fully disclosed." data-change="Library licensing and sequels contributing at least 25% of content revenue would strengthen the moat.">
+    <p class="section-kicker">02 &middot; Exhibit &middot; Portfolio</p><h2>The stories still travel; the businesses around them did not</h2><p class="lede">The supplied imagery spans the two sides of the case: culturally familiar films that can attract an audience, and cinema infrastructure whose economics collapsed when admissions fell.</p>
+    <div class="portfolio-grid">
+      <article class="project tall" data-reveal><img src="assets/mm2-liang-popo-ah-beng.png" alt="Liang Po Po versus Ah Beng film poster"><div class="project-info"><span>Film &middot; Singapore &middot; Local comedy</span><h3>Liang Po Po vs Ah Beng</h3><p>Why it matters: familiar characters and language can still create differentiated local demand.</p></div></article>
+      <article class="project" data-reveal><img src="assets/mm2-cathay-exterior.png" alt="Cathay Cineplex entrance at Downtown East"><div class="project-info"><span>Exhibition &middot; Singapore &middot; Former associate</span><h3>Cathay Cineplexes</h3><p>Why it matters: S$230m bought 64 screens, but shrinking admissions turned strategic integration into fixed-cost exposure.</p></div></article>
+      <article class="project" data-reveal><img src="assets/mm2-cathay-lobby.png" alt="Cathay Cineplexes lobby and illuminated sign"><div class="project-info"><span>Exhibition &middot; Singapore &middot; Closed 2025</span><h3>The last mile to the audience</h3><p>Why it matters: owning the screen did not protect cash when rents and debt remained fixed.</p></div></article>
+    </div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>Franchise proof</span><strong>S$26.8m from four films</strong><p>The Ah Boys to Men series shows that local characters can compound audience memory across sequels.</p></article>
+      <article class="insight-note"><span>Regional reach</span><strong>51% of FY2025 revenue</strong><p>China, Taiwan and Hong Kong supplied more than half of group revenue before the collapse.</p></article>
+      <article class="insight-note"><span>Exhibition lesson</span><strong>64 screens to zero</strong><p>Cathay closed its remaining cinemas on 1 September 2025, eight years after acquisition.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>The four businesses and what remains</b></summary>
+      <div class="dossier-body">
+        <p class="dossier-intro">At the FY2025 peak the portfolio looked diversified. Economically it was concentrated: content generated more than all group EBITDA, while concerts swung into loss and cinemas sat outside segment revenue as an associate.</p>
+        <div class="dossier-table"><table><thead><tr><th>Business</th><th>FY2025 position</th><th>2026 status</th><th>Economic signal</th></tr></thead><tbody>
+          <tr><td>Content</td><td>66.5% of revenue; S$24.7m EBITDA</td><td>Continuing</td><td>The only profitable core, but FY2026 revenue fell to S$1.1m.</td></tr>
+          <tr><td>Concerts / UnUsUaL</td><td>31.9% of revenue; -S$9.0m EBITDA</td><td>Lost to UOB in Mar 2026</td><td>A S$27m EBITDA swing in one year exposed event volatility.</td></tr>
+          <tr><td>Cinemas</td><td>S$79.9m associate loss</td><td>Liquidated Sep 2025</td><td>The S$230m acquisition ended with no screens and S$117.6m goodwill written off.</td></tr>
+          <tr><td>Digital / Vividthree</td><td>Deconsolidated associate</td><td>About 23% stake by Aug 2026</td><td>The post-production link survives only as a minority interest.</td></tr>
+        </tbody></table></div>
+        <p class="dossier-caption">Source review pages 6-10 and mm2 FY2025-26 results.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="analysis-section" id="segments" data-number="03" data-index="3" data-thesis="Content carried the group while every downstream expansion added volatility." data-evidence="Content produced S$24.7m of EBITDA; concerts lost S$9.0m and cinemas cost S$79.9m outside segment EBITDA." data-uncertainty="The FY2025 segment picture no longer describes the post-restructuring company." data-change="Content EBITDA converting fully to operating cash would prove the reset is working.">
+    <p class="section-kicker">03 &middot; Evidence &middot; Segment economics</p><h2>Content earned the EBITDA; everything around it consumed the value</h2><p class="lede">Two-thirds of FY2025 revenue came from content, but it generated more than all group EBITDA. Concerts erased part of that contribution and cinema losses sat outside the segment result.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 03.1</span><h3>Which segment actually carried FY2025?</h3></div><span class="figure-source">mm2 FY2025 unaudited results &middot; S$m</span></div><div class="figure-canvas segment-stack">
+      <div class="segment-row"><span>Content revenue</span><div class="segment-track"><i class="segment-fill" style="--share:66.5"></i></div><strong>109.8</strong></div><div class="segment-row"><span>Concert revenue</span><div class="segment-track"><i class="segment-fill" style="--share:31.9"></i></div><strong>52.6</strong></div><div class="segment-row"><span>Other revenue</span><div class="segment-track"><i class="segment-fill" style="--share:1.6"></i></div><strong>2.7</strong></div>
+    </div><figcaption class="curator-note"><b>Curator's note</b><p>Content's 22.5% EBITDA margin supported the group; concerts swung from +24.2% to -17.2% in one year.</p></figcaption></figure>
+    <div class="section-grid g3" data-reveal><div class="metric"><b>S$24.7m</b><span>FY2025 content EBITDA</span></div><div class="metric"><b>-S$9.0m</b><span>FY2025 concert EBITDA</span></div><div class="metric"><b>-S$79.9m</b><span>Cinema associate losses</span></div></div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>FY2024-25 segment economics and the portfolio problem</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table numeric"><table><thead><tr><th>Segment</th><th>FY2024 revenue</th><th>FY2025 revenue</th><th>FY2024 EBITDA</th><th>FY2025 EBITDA</th><th>FY2025 margin</th></tr></thead><tbody>
+          <tr><td>Content</td><td>115.1</td><td>109.8</td><td>24.9</td><td>24.7</td><td>22.5%</td></tr>
+          <tr><td>Concerts &amp; events</td><td>74.3</td><td>52.6</td><td>18.0</td><td>-9.0</td><td>-17.2%</td></tr>
+          <tr><td>Digital</td><td>7.1</td><td>-</td><td>-0.8</td><td>-</td><td>-</td></tr>
+          <tr><td>Others</td><td>2.3</td><td>2.7</td><td>-0.5</td><td>0.1</td><td>4.5%</td></tr>
+          <tr><td>Group</td><td>198.7</td><td>165.1</td><td>40.2</td><td>15.8</td><td>9.6%</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Concentration</span><h3>Content carried the group</h3><p>Two-thirds of revenue and more than all EBITDA came from content. The rest of the portfolio diluted rather than diversified earnings.</p></article>
+          <article class="dossier-item"><span>Volatility</span><h3>A S$27m swing</h3><p>Concert EBITDA moved from +S$18.0m to -S$9.0m on S$21.7m less revenue, showing the cost of tour and promotion risk.</p></article>
+          <article class="dossier-item"><span>Portfolio issue</span><h3>Cinemas sat off the page</h3><p>As associates, the cinemas cost S$79.9m in FY2025 without appearing in group revenue or segment EBITDA.</p></article>
+        </div>
+        <p class="dossier-caption">S$ million. Source review pages 11-13; FY2025 results were unaudited.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="analysis-section" id="financials" data-number="04" data-index="4" data-thesis="Five years of revenue produced S$472m of cumulative shareholder losses." data-evidence="FY2026 wrote off S$133.8m in cost of sales and S$42.1m of credit losses." data-uncertainty="Unaudited results make normalised earning power impossible to establish." data-change="Audited, positive operating cash after restructuring would establish a new baseline.">
+    <p class="section-kicker">04 &middot; Evidence &middot; Financials</p><h2>Revenue vanished; earlier profits were written back out</h2><p class="lede">FY2024 marked peak revenue and margin. A year later group margin fell to 10.4%; by FY2026 revenue was only S$4.7m and accumulated losses had reached S$485m.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 04.1</span><h3>What changed beneath the revenue line?</h3></div><span class="figure-source">mm2 FY2022-26 results &middot; Revenue S$m</span></div><div class="figure-canvas"><svg class="financial-svg" viewBox="0 0 700 340" role="img" aria-label="mm2 Asia revenue and gross margin from FY2022 to FY2026.">
+      <line class="gridline" x1="70" y1="260" x2="650" y2="260"/><line class="gridline" x1="70" y1="220" x2="650" y2="220"/><line class="gridline" x1="70" y1="180" x2="650" y2="180"/><line class="gridline" x1="70" y1="140" x2="650" y2="140"/><line class="gridline" x1="70" y1="100" x2="650" y2="100"/><line class="gridline" x1="70" y1="60" x2="650" y2="60"/>
+      <text x="34" y="264">0</text><text x="28" y="224">40</text><text x="28" y="184">80</text><text x="28" y="144">120</text><text x="28" y="104">160</text><text x="28" y="64">200</text>
+      <rect class="bar" x="94" y="183" width="62" height="77"/><rect class="bar" x="204" y="126" width="62" height="134"/><rect class="bar" x="314" y="61" width="62" height="199"/><rect class="bar" x="424" y="95" width="62" height="165"/><rect class="bar" x="534" y="255" width="62" height="5"/>
+      <path class="line" pathLength="1" d="M125 178 L235 144 L345 104 L455 221"/><circle class="dot" cx="125" cy="178" r="6"/><circle class="dot" cx="235" cy="144" r="6"/><circle class="dot" cx="345" cy="104" r="6"/><circle class="dot" cx="455" cy="221" r="6"/>
+      <text x="100" y="284">FY2022</text><text x="210" y="284">FY2023</text><text x="320" y="284">FY2024</text><text x="430" y="284">FY2025</text><text x="540" y="284">FY2026</text>
+      <text x="100" y="173">76.6</text><text x="210" y="116">133.4</text><text x="320" y="51">198.7</text><text x="430" y="85">165.1</text><text x="540" y="245">4.7</text>
+      <text class="margin-label" x="103" y="200">16.4%</text><text class="margin-label" x="213" y="166">21.1%</text><text class="margin-label" x="323" y="126">26.6%</text><text class="margin-label" x="433" y="243">10.4%</text><text class="margin-label" x="543" y="235">n/m</text>
+      <rect x="468" y="304" width="12" height="12" fill="var(--wine)"/><text x="486" y="314">Revenue</text><line x1="552" y1="310" x2="572" y2="310" stroke="var(--deep)" stroke-width="3"/><text x="580" y="314">Gross margin</text>
+    </svg></div><figcaption class="curator-note"><b>Turning point</b><p>Revenue recovered through FY2024; FY2025 margin collapsed, and FY2026 reversed much of the profit and asset value booked before it.</p></figcaption></figure>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>S$579m</b><span>Five-year cumulative revenue</span></div><div class="metric"><b>-S$472m</b><span>Cumulative shareholder losses</span></div><div class="metric"><b>-S$133.8m</b><span>FY2026 gross loss</span></div><div class="metric"><b>-S$219.6m</b><span>Equity at Mar 2026</span></div></div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>Earnings quality</span><strong>S$151.3m to S$28.9m</strong><p>Other current assets, including contract costs, collapsed between March 2025 and March 2026.</p></article>
+      <article class="insight-note"><span>Credit loss</span><strong>-S$42.1m</strong><p>FY2026 credit-loss charges cut receivables from S$99.5m to S$48.8m.</p></article>
+      <article class="insight-note"><span>Interpretation</span><strong>Not a normal year</strong><p>The FY2026 loss mostly reversed past profits and capitalised costs, so it cannot be treated as a run-rate loss.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Five-year income statement and FY2026 loss bridge</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table numeric"><table><thead><tr><th>Period</th><th>Revenue</th><th>Gross profit</th><th>Gross margin</th><th>EBITDA</th><th>Net loss*</th><th>Operating cash</th></tr></thead><tbody>
+          <tr><td>FY2022</td><td>76.6</td><td>12.6</td><td>16.4%</td><td>5.4</td><td>-35.0</td><td>n/d</td></tr>
+          <tr><td>FY2023</td><td>133.4</td><td>28.2</td><td>21.1%</td><td>24.5</td><td>-119.7</td><td>8.9</td></tr>
+          <tr><td>FY2024</td><td>198.7</td><td>52.9</td><td>26.6%</td><td>40.2</td><td>-5.7</td><td>4.9</td></tr>
+          <tr><td>FY2025</td><td>165.1</td><td>17.1</td><td>10.4%</td><td>15.8</td><td>-105.2</td><td>0.6</td></tr>
+          <tr><td>FY2026</td><td>4.7</td><td>-133.8</td><td>n/m</td><td>n/m</td><td>-206.3</td><td>-4.2</td></tr>
+        </tbody></table></div>
+        <p class="dossier-caption">S$ million except margins. *Attributable to owners. FY2025-26 results were unaudited.</p>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Write-offs</span><h3>-S$133.8m</h3><p>Cost of sales carried the largest FY2026 charge as older productions and contract costs were written down.</p></article>
+          <article class="dossier-item"><span>Credit losses</span><h3>-S$42.1m</h3><p>Collections failed behind reported revenue, reducing the remaining asset base available to creditors.</p></article>
+          <article class="dossier-item"><span>Other charges</span><h3>-S$68.8m</h3><p>Overheads, impairments, discontinued operations and interest were partly offset by fair-value gains, tax and other items.</p></article>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="analysis-section" id="cash" data-number="05" data-index="5" data-thesis="Creditors, not ordinary shareholders, now determine the capital structure." data-evidence="S$334m of liabilities stood against S$115m of assets at 31 March 2026." data-uncertainty="The timing and recoverability of S$48.8m of receivables remain unclear." data-change="A sanctioned scheme and audited post-restructuring balance sheet would reset the analysis.">
+    <p class="section-kicker">05 &middot; Evidence &middot; Cash and creditors</p><h2>Liabilities of S$334m sit against assets of S$115m</h2><p class="lede">All S$195.4m of borrowings were secured, S$145.1m were current and payables had risen to S$132.2m. The question is no longer refinancing on ordinary terms; it is how value is divided through the scheme.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 05.1</span><h3>Who has claims on the remaining value?</h3></div><span class="figure-source">mm2 FY2026 results and court filings &middot; S$m</span></div><div class="figure-canvas debt-bars"><div class="debt-row"><span>Secured borrowings</span><div class="debt-track"><i style="--size:100"></i></div><b>195.4</b></div><div class="debt-row"><span>Trade and other payables</span><div class="debt-track"><i style="--size:67.7"></i></div><b>132.2</b></div><div class="debt-row"><span>UOB demand</span><div class="debt-track"><i style="--size:38.2"></i></div><b>74.6</b></div><div class="debt-row"><span>Bondholders</span><div class="debt-track"><i style="--size:32.2"></i></div><b>&gt;63.0</b></div></div><figcaption class="curator-note"><b>Creditor hierarchy</b><p>Secured debt ranks ahead of ordinary holders; the proposed scheme pays unsecured creditors mostly in equity.</p></figcaption></figure>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>S$203.3m</b><span>Net current liabilities</span></div><div class="metric"><b>S$195.4m</b><span>Borrowings, all secured</span></div><div class="metric"><b>S$0.2m</b><span>Cash net of overdraft</span></div><div class="metric"><b>-S$219.6m</b><span>Capital deficiency</span></div></div>
+    <div class="callout"><strong>Operating profit never became enough cash to service the structure.</strong><p>Only S$14.4m of operating cash came from S$80.5m of EBITDA in FY2023-25, an 18% conversion rate.</p></div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Cash conversion and the creditor map</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table numeric"><table><thead><tr><th>Creditor</th><th>Claim</th><th>Status</th><th>Why it matters</th></tr></thead><tbody>
+          <tr><td>UOB</td><td>S$74.6m demanded</td><td>Secured lender; took UnUsUaL shares</td><td>Already enforced collateral while the moratorium was in place.</td></tr>
+          <tr><td>Bondholders</td><td>Over S$63m</td><td>Exchangeable and convertible bonds</td><td>Large unsecured class central to scheme approval.</td></tr>
+          <tr><td>Linkwasha</td><td>S$7.35m plus interest</td><td>Cathay-related creditor</td><td>The only creditor to oppose the moratorium.</td></tr>
+          <tr><td>Film investor</td><td>S$6.3m</td><td>High Court claim</td><td>Shows project-level claims can reach the operating subsidiary.</td></tr>
+          <tr><td>Cinema landlords</td><td>S$2.6m, S$0.8m and more</td><td>Claims under Cathay guarantees</td><td>Closed venues left liabilities at the parent.</td></tr>
+          <tr><td>Standard Chartered</td><td>S$0.9m</td><td>Demand under guarantees</td><td>Another claim linking old subsidiaries to the group.</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Cash conversion</span><h3>18%</h3><p>S$14.4m of operating cash against S$80.5m of group EBITDA in FY2023-25.</p></article>
+          <article class="dossier-item"><span>Interest burden</span><h3>S$15.9m</h3><p>FY2026 finance cost on only S$4.7m of revenue; just S$0.9m was paid during the year.</p></article>
+          <article class="dossier-item"><span>Collections</span><h3>S$48.8m</h3><p>Trade and other receivables remaining after S$42.1m of credit losses.</p></article>
+        </div>
+        <p class="dossier-caption">Source review pages 16-17. FY2026 results were unaudited and creditor claims can change through the scheme process.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="analysis-section" id="restructuring" data-number="06" data-index="6" data-thesis="The proposed scheme transfers control to the rescuer and converts creditor losses into equity." data-evidence="S$15m buys about 71% of mm2 before the debt swap and any rights issue." data-uncertainty="Creditor, EGM, whitewash and SGX approvals must align before the 31 January 2027 long-stop." data-change="Court sanction and trading resumption would move the case from survival to operating recovery.">
+    <p class="section-kicker">06 &middot; Decision &middot; Restructuring</p><h2>The rescue preserves an option, not the old company</h2><p class="lede">The proposed transaction offers unsecured creditors about 28 cents per dollar instead of an estimated 0-2.55 cents in liquidation. Existing holders retain less than 28.6% before further debt conversion and a possible rights issue.</p>
+    <div class="timeline" data-reveal><article class="timeline-step"><b>1 &middot; Court</b><h3>Moratorium</h3><p>Protection for mm2 and mm2 Entertainment while linked schemes are pursued.</p></article><article class="timeline-step"><b>2 &middot; Creditors</b><h3>Scheme votes</h3><p>Claims and guarantees are released in exchange for scheme consideration.</p></article><article class="timeline-step"><b>3 &middot; Capital</b><h3>S$15m placement</h3><p>16.34bn shares at S$0.000918: S$11.5m for debt, S$3.5m for working capital.</p></article><article class="timeline-step"><b>4 &middot; Market</b><h3>Resumption</h3><p>SGX must accept a resumption proposal before the long-stop date.</p></article></div>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 06.1</span><h3>Who owns the company after the placement?</h3></div><span class="figure-source">Before creditor swap and any rights issue</span></div><div class="figure-canvas"><div class="ownership"><div class="incoming">MMRA / Hildrics &middot; about 71.4%</div><div class="existing">Existing holders &middot; 28.6%</div></div></div><figcaption class="curator-note"><b>Curator's note</b><p>The placement price is 69.4% below the last trade and values the enlarged company at about S$21m.</p></figcaption></figure>
+    <div class="outcome-grid" data-reveal><article class="outcome-card"><span>Bear</span><h3>Liquidation</h3><p>No new money; shares delist.</p><ul><li>Creditors: 0-2.55 cents per dollar</li><li>Existing holders: approximately nil</li></ul></article><article class="outcome-card active"><span>Base</span><h3>Scheme as proposed</h3><p>S$15m placement plus up to S$10m rights issue.</p><ul><li>Creditors: about 28 cents, mostly shares</li><li>Existing holders: under 28.6%</li></ul></article><article class="outcome-card"><span>Bull</span><h3>Scheme and recovery</h3><p>The same recapitalisation, then a cash-producing slate.</p><ul><li>Creditors recover more if equity rises</li><li>Holders keep a small stake in a viable studio</li></ul></article></div>
+    <div class="status-strip" data-reveal><article><b>28c</b><span>Proposed creditor recovery / S$1</span></article><article><b>S$3.5m</b><span>Placement working capital</span></article><article><b>-69.4%</b><span>Placement discount to last trade</span></article><article><b>31 Jan 2027</b><span>Transaction long-stop</span></article></div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Distress timeline, approvals and outcome conditions</b></summary>
+      <div class="dossier-body">
+        <p class="dossier-intro">The first placement agreed in July 2025 lapsed. The current plan must pass four constituencies in sequence; failure at any gate risks liquidation or prolonged suspension.</p>
+        <div class="dossier-table"><table><thead><tr><th>Date</th><th>Event</th><th>Economic meaning</th></tr></thead><tbody>
+          <tr><td>30 Jun 2024</td><td>Cathay closes AMK Hub</td><td>The screen network contracts to 43 Singapore screens.</td></tr>
+          <tr><td>27 Mar 2025</td><td>Cathay JEM closes</td><td>A landlord takes back the site as fixed-cost pressure intensifies.</td></tr>
+          <tr><td>1 Sep 2025</td><td>Last Cathay cinemas close</td><td>The S$230m integration thesis ends in liquidation.</td></tr>
+          <tr><td>7-11 Nov 2025</td><td>UOB demands S$74.6m; shares suspend</td><td>The group seeks court protection and loses normal market access.</td></tr>
+          <tr><td>10 Dec 2025</td><td>High Court grants moratorium</td><td>Enforcement is paused while restructuring is pursued.</td></tr>
+          <tr><td>9 Mar 2026</td><td>MMRA term sheet; UOB takes UnUsUaL</td><td>The proposed rescuer arrives as another operating asset leaves.</td></tr>
+          <tr><td>16 Jul 2026</td><td>S$15m placement agreement</td><td>Most future equity moves to the new investor.</td></tr>
+          <tr><td>18 Sep 2026</td><td>Creditor meetings allowed; waiver granted</td><td>The plan advances, but votes and SGX approval remain outstanding.</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Creditor gate</span><h3>Linked schemes</h3><p>Class approvals are required for the compromises and releases to bind creditors.</p></article>
+          <article class="dossier-item"><span>Shareholder gate</span><h3>EGM and whitewash</h3><p>The massive placement and change in control require votes with conflicted parties excluded where applicable.</p></article>
+          <article class="dossier-item"><span>Market gate</span><h3>SGX resumption</h3><p>Even a sanctioned scheme does not itself restore trading; the exchange must accept the resumption proposal.</p></article>
+        </div>
+        <p class="dossier-caption">Source review pages 18-20; [2025] SGHC 251 and mm2 placement announcements. Dates and terms remain subject to the live restructuring process.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="analysis-section" id="market" data-number="07" data-index="7" data-thesis="The growing value pools reward stories and franchises, not cinema real estate." data-evidence="Singapore admissions fell 58% from 2019 to 2025 while local franchise films still led domestic box office." data-uncertainty="A restructured mm2 may lack the capital to fund even the attractive content opportunities." data-change="Pre-sold franchise projects and recurring library revenue would align growth with cash discipline.">
+    <p class="section-kicker">07 &middot; Evidence &middot; Market and demand</p><h2>The audience shrank; the cinema leader took the rest</h2><p class="lede">Singapore box office roughly halved from 2019. Golden Village increased share while Cathay fell to zero, confirming that exhibition rewards scale. The surviving opportunity is upstream: franchise sequels, regional co-productions and licensing.</p>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 07.1</span><h3>How far did the Singapore cinema market fall?</h3></div><span class="figure-source">IMDA and data.gov.sg &middot; Net box office S$m</span></div><div class="figure-canvas cinema-bars"><div class="cinema-col"><b>175.4</b><i style="--height:100"></i><span>2019</span></div><div class="cinema-col"><b>99.5</b><i style="--height:57"></i><span>2022</span></div><div class="cinema-col"><b>100.0</b><i style="--height:57"></i><span>2023</span></div><div class="cinema-col"><b>88.2</b><i style="--height:50"></i><span>2024</span></div><div class="cinema-col"><b>~80.5</b><i style="--height:46"></i><span>2025e</span></div></div><figcaption class="curator-note"><b>Curator's note</b><p>Admissions fell from 18.5m to 7.7m. Fixed rents were signed for the larger audience and did not shrink with it.</p></figcaption></figure>
+    <div class="section-grid g4" data-reveal><div class="metric"><b>62%</b><span>Golden Village share &middot; 1H2026</span></div><div class="metric"><b>0</b><span>Cathay screens after Sep 2025</span></div><div class="metric"><b>51%</b><span>FY2025 revenue from Greater China</span></div><div class="metric"><b>S$20m</b><span>Market value at suspension</span></div></div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>B2B commissioning</span><strong>6-18 month lag</strong><p>Greater China platform budgets drive series commissions, but revenue appears only after production and acceptance.</p></article>
+      <article class="insight-note"><span>Hit-driven box office</span><strong>S$26.8m franchise</strong><p>Four Ah Boys to Men films show that familiar local characters retain market power even as overall admissions fall.</p></article>
+      <article class="insight-note"><span>Event-driven live</span><strong>Lost after FY2025</strong><p>Concert demand can be strong, but mm2 no longer controls UnUsUaL after UOB enforced its share charge.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Demand transmission, peers and the market position left behind</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table numeric"><table><thead><tr><th>Company</th><th>Year</th><th>Revenue</th><th>Operating margin measure</th><th>Net margin</th><th>Profitable?</th></tr></thead><tbody>
+          <tr><td>mm2 Asia</td><td>FY26</td><td>S$4.7m</td><td>n/m</td><td>n/m</td><td>No</td></tr>
+          <tr><td>UnUsUaL</td><td>FY26</td><td>S$43.6m</td><td>Gross 3.6%</td><td>-20.9%</td><td>No</td></tr>
+          <tr><td>Golden Village owner</td><td>FY25</td><td>HK$673m</td><td>Gross 66%</td><td>8.4%</td><td>Yes</td></tr>
+          <tr><td>PPB film / GSC</td><td>FY25</td><td>RM682m</td><td>Pre-tax 10.1%</td><td>-</td><td>Yes</td></tr>
+          <tr><td>CJ CGV</td><td>FY25</td><td>KRW2.28tn</td><td>EBITDA 16.7%</td><td>-6.3%</td><td>No</td></tr>
+          <tr><td>Cinemark</td><td>FY25</td><td>US$3.12bn</td><td>EBITDA 18.6%</td><td>4.4%</td><td>Yes</td></tr>
+          <tr><td>Live Nation</td><td>FY25</td><td>US$25.2bn</td><td>Adjusted op. 9.4%</td><td>2.0%</td><td>Yes</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Exhibition</span><h3>Scale is the moat</h3><p>Golden Village and GSC remained profitable; smaller Singapore and Malaysia cinema chains closed.</p></article>
+          <article class="dossier-item"><span>Content</span><h3>Stories can still travel</h3><p>Local franchises and Greater China distribution remain differentiated assets if they can be funded without new leverage.</p></article>
+          <article class="dossier-item"><span>Investor implication</span><h3>Do not value the old mix</h3><p>The last-traded market value carried S$195m of debt and no longer corresponds to the post-scheme ownership or business perimeter.</p></article>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="analysis-section" id="frameworks" data-number="08" data-index="8" data-thesis="mm2 had pricing power only where it owned stories." data-evidence="Content earned a 22.5% FY2025 EBITDA margin; exhibition and live added fixed cost or event risk." data-uncertainty="The remaining franchise library and its future economics are not separately valued." data-change="A content-only model with pre-funded projects would align the moat with the capital structure.">
+    <p class="section-kicker">08 &middot; Decision &middot; Strategic frameworks</p><h2>Squeezed at every step it entered</h2><p class="lede">Production sits between powerful platforms, talent and fickle audiences. Exhibition then added landlords, fixed rent and substitutes; live entertainment added artist economics and lumpy demand.</p>
+    <div class="force-grid" data-reveal><div class="force-row"><b>Competitive rivalry</b><span>High</span><p>Regional studios and streamer originals compete for attention; Golden Village dominates local exhibition.</p></div><div class="force-row"><b>Buyer power</b><span>High</span><p>A handful of platforms buy series and pay after delivery; audiences choose film by film.</p></div><div class="force-row"><b>Supplier power</b><span>Moderate-high</span><p>Star directors, artists and landlords all command terms that a smaller balance sheet cannot easily resist.</p></div><div class="force-row"><b>New entrants</b><span>Moderate</span><p>Production needs little fixed capital but scarce financing; exhibition requires scale and real estate.</p></div><div class="force-row"><b>Substitutes</b><span>High</span><p>Streaming, short video, games and live events compete for the same evening and discretionary dollar.</p></div></div>
+    <div class="callout"><strong>Verdict: own IP, not leases.</strong><p>The content-only restructuring retreats to the one stage where mm2 had a differentiated franchise library and positive segment economics.</p></div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>Upstream &middot; Content</span><strong>22.5% margin</strong><p>Franchises, local-language know-how and grants gave mm2 its only durable pricing power.</p></article>
+      <article class="insight-note"><span>Midstream &middot; Exhibition</span><strong>12.3% to losses</strong><p>Cinema EBITDA margin was already below the group in FY2018 before S$79.9m of FY2025 associate losses.</p></article>
+      <article class="insight-note"><span>Downstream &middot; Live</span><strong>+24% to -17%</strong><p>Concert EBITDA margin swung across one year, exposing the lumpy economics of tours and promotion.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>PESTLE, fixed-cost economics and where the moat was</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Political</span><h3>State funding shapes local content</h3><p>IMDA co-funding lowers project capital, while Greater China approvals gate a market worth 51% of FY2025 revenue.</p></article>
+          <article class="dossier-item"><span>Economic</span><h3>Credit matters more than GDP</h3><p>S$15.9m of finance costs stood against S$4.7m of FY2026 revenue; leases signed for 2019 audiences outlasted them.</p></article>
+          <article class="dossier-item"><span>Social</span><h3>Viewing moved; local stories remain</h3><p>Streaming and short video reduced cinema visits, but Malaysian films took 36.5% of local admissions in 2025.</p></article>
+        </div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Technological</span><h3>Streaming widens and shortens</h3><p>Digital platforms expand distribution while compressing theatrical windows; production tools lower costs for rivals too.</p></article>
+          <article class="dossier-item"><span>Legal</span><h3>Insolvency rules now govern</h3><p>The court moratorium, schemes, guarantees, CPF charges and SGX Rule 1303(3) shape every operating decision.</p></article>
+          <article class="dossier-item"><span>Environmental</span><h3>The footprint has shrunk</h3><p>Cinema closure reduces the energy-heavy part of the group; no current emissions data was found.</p></article>
+        </div>
+        <div class="model-box"><code>Illustrative cinema EBITDA = revenue - 67.5% fixed costs - 20.2% variable costs</code><code>A 10% revenue fall cuts EBITDA by about 65%; a 20% fall turns it negative</code><p>This is an illustration, not Cathay's accounts. It explains why a moderate audience shock can create a disproportionate loss in exhibition.</p></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Film economics</span><h3>A one-off bet</h3><p>Costs are committed before audiences decide; sequels and pre-sales can lower but not remove hit risk.</p></article>
+          <article class="dossier-item"><span>Cinema economics</span><h3>A fixed-cost machine</h3><p>Rent, staff and utilities remain payable whether ten people attend or a hundred.</p></article>
+          <article class="dossier-item"><span>Debt economics</span><h3>A fixed timetable</h3><p>Interest falls due on schedule while film revenue and receivables arrive late.</p></article>
+        </div>
+        <p class="dossier-caption">Source review pages 26-30. The fixed-cost model is illustrative and is not a reconstruction of Cathay's private accounts.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="analysis-section" id="risk" data-number="09" data-index="9" data-thesis="The primary risk is that the rescue fails before the content business can restart." data-evidence="Trading is suspended, accounts are unaudited and every base-case step still needs approval." data-uncertainty="Even a successful scheme may leave too little working capital for a competitive slate." data-change="Completed approvals, audited accounts and cash-backed projects would reduce the Fragile rating.">
+    <p class="section-kicker">09 &middot; Decision &middot; Risk matrix</p><h2>Six risks, led by the plan itself failing</h2><p class="lede">Select a risk to inspect its trigger and mitigation. Labels state probability and impact so meaning is not dependent on red or green colour.</p>
+    <div class="risk-layout"><div><div class="risk-matrix" aria-label="Likelihood and impact matrix"><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div>
+      <button class="risk-dot" style="left:72%;top:16%" data-risk="scheme" aria-pressed="true">Scheme</button><button class="risk-dot" style="left:78%;top:44%" data-risk="resumption" aria-pressed="false">Resumption</button><button class="risk-dot" style="left:72%;top:68%" data-risk="receivables" aria-pressed="false">Collections</button><button class="risk-dot" style="left:48%;top:31%" data-risk="capital" aria-pressed="false">Capital</button><button class="risk-dot" style="left:44%;top:56%" data-risk="control" aria-pressed="false">Control</button><button class="risk-dot" style="left:22%;top:56%" data-risk="people" aria-pressed="false">People</button>
+    </div><div class="matrix-label">Likelihood &#8594; &middot; Impact rises upward</div></div><aside class="risk-detail" aria-live="polite"><span class="risk-level" id="risk-level">Medium likelihood / Very high impact</span><h3 id="risk-title">Scheme or EGM fails</h3><dl><dt>What goes wrong</dt><dd id="risk-desc">Liquidation leaves creditors with 0-2.55 cents per dollar and ordinary holders with approximately nothing.</dd><dt>Trigger</dt><dd id="risk-trigger">Creditor vote tallies or the whitewash vote fail to reach the required thresholds.</dd><dt>Mitigation</dt><dd id="risk-mitigation">Majority creditor support, clear independent advice and committed new money.</dd></dl></aside></div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Complete risk register and governance implications</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table"><table><thead><tr><th>Risk</th><th>Probability / impact</th><th>How economics are damaged</th><th>Leading indicator</th><th>Primary mitigation</th></tr></thead><tbody>
+          <tr><td>Scheme or EGM fails</td><td>Medium / Very high</td><td>Liquidation produces almost no recovery for holders.</td><td>Creditor and whitewash vote tallies</td><td>Creditor support and committed new money</td></tr>
+          <tr><td>No trading resumption</td><td>Medium-high / High</td><td>Equity remains untradeable and harder to raise.</td><td>SGX reply to the resumption proposal</td><td>Meet all placement and resumption conditions</td></tr>
+          <tr><td>Unpaid receivables</td><td>High / High</td><td>More write-downs leave less cash for a slate.</td><td>Credit losses and ageing</td><td>Deposits and pre-sales before filming</td></tr>
+          <tr><td>Thin working capital</td><td>Medium-high / High</td><td>S$3.5m may not fund enough projects to restart.</td><td>Monthly cash and project starts</td><td>Rights issue, grants and project finance</td></tr>
+          <tr><td>Concentrated control</td><td>Medium / Medium-high</td><td>One group becomes lender, creditor and owner.</td><td>Terms of related financing</td><td>Independent adviser and shareholder votes</td></tr>
+          <tr><td>People and legal</td><td>Medium / Medium</td><td>Founder dependence, CPF charges and guarantees impede recovery.</td><td>Court outcomes and board changes</td><td>Scheme releases and independent oversight</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Accounts</span><h3>Two unaudited years</h3><p>FY2025 and FY2026 results were neither audited nor reviewed, closing ordinary bank-credit channels.</p></article>
+          <article class="dossier-item"><span>Going concern</span><h3>Rule 1303(3)</h3><p>The board said in November 2025 it could not demonstrate that the group remained a going concern.</p></article>
+          <article class="dossier-item"><span>Board</span><h3>Three directors</h3><p>The board had contracted after independent directors and the chief restructuring officer left.</p></article>
+        </div>
+        <div class="insight-band">
+          <article class="insight-note"><span>Employee trust</span><strong>S$219k CPF owed</strong><p>Part-payments were ordered by the State Courts; talent trust matters to a studio built on project crews.</p></article>
+          <article class="insight-note"><span>Connected rescue</span><strong>Creditor becomes controller</strong><p>The incoming owner is already linked to the rescue financing, increasing the need for independent advice.</p></article>
+          <article class="insight-note"><span>Data quality</span><strong>Evidence grade C</strong><p>Only about 46% of weighted evidence is audited or independent.</p></article>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="analysis-section" id="outlook" data-number="10" data-index="10" data-thesis="Survive, collect, own and disclose, in that order." data-evidence="Growth before cash discipline repeats the S$73.5m EBITDA to S$14.4m operating-cash failure." data-uncertainty="The base case fixes debt on paper but does not prove customers will fund the next slate." data-change="Trading resumption, cash-backed projects and an unmodified audit opinion would raise conviction.">
+    <p class="section-kicker">10 &middot; Decision &middot; Strategy and outlook</p><h2>Four gates, in order: survive, collect, own, disclose</h2><p class="lede">No operating strategy matters until the scheme closes. After that, projects should be funded by deposits, pre-sales or grants; growth without cash conversion would rebuild the same problem.</p>
+    <div class="roadmap" data-reveal><article class="gate"><span class="gate-num">01</span><h3>Close the scheme</h3><p>Win creditor, EGM and whitewash votes, complete the placement and resume trading.</p><div class="gate-exit">Proof: shares trade again</div></article><article class="gate"><span class="gate-num">02</span><h3>Cash before profit</h3><p>Fund only work backed by deposits, platform pre-sales or public grants.</p><div class="gate-exit">Proof: operating cash at least equals EBITDA</div></article><article class="gate"><span class="gate-num">03</span><h3>Own IP, not leases</h3><p>Prioritise sequels, library licensing and co-productions; avoid screens and tours.</p><div class="gate-exit">Proof: library and licensing at least 25% of content revenue</div></article><article class="gate"><span class="gate-num">04</span><h3>Report to rebuild trust</h3><p>Publish audited accounts, receivable ageing and project-level cash disclosure.</p><div class="gate-exit">Proof: an unmodified audit opinion</div></article></div>
+    <p class="section-kicker" style="margin-top:54px">Interactive restructuring scenario</p><h2 style="font-size:clamp(31px,4vw,50px)">What survives in each outcome?</h2>
+    <div class="scenario-control" role="group" aria-label="Restructuring outcome selector"><button type="button" data-scenario="bear" aria-pressed="false">Bear</button><button type="button" data-scenario="base" aria-pressed="true">Base</button><button type="button" data-scenario="bull" aria-pressed="false">Bull</button></div>
+    <div class="scenario-output" aria-live="polite"><div class="scenario-lead"><span>Selected case</span><strong id="scenario-name">Base</strong><p id="scenario-note">Scheme completes as proposed and trading resumes if SGX agrees.</p></div><div class="scenario-stat"><span>Unsecured creditors</span><strong id="scenario-revenue">~28c / S$1</strong><p>Mostly new shares</p></div><div class="scenario-stat"><span>Existing holders</span><strong id="scenario-growth">&lt;28.6%</strong><p>Before rights and debt swap</p></div><div class="scenario-stat"><span>New money</span><strong id="scenario-profit">S$15m</strong><p id="scenario-score-note">S$3.5m for working capital</p></div></div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>Interest sensitivity</span><strong>~S$71m revenue</strong><p>Content revenue needed to cover S$15.9m of interest at FY2025's 22.5% segment margin.</p></article>
+      <article class="insight-note"><span>Collection sensitivity</span><strong>S$4.9m per 10%</strong><p>Each tenth of the S$48.8m receivable balance not collected consumes about a third of the new working capital.</p></article>
+      <article class="insight-note"><span>Dilution</span><strong>28.6% remains</strong><p>Existing holders' share after the placement, before debt conversion and any rights issue.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Scenario assumptions and recovery proof</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table numeric"><table><thead><tr><th>Outcome</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead><tbody>
+          <tr><td>New money</td><td>None</td><td>S$15m placement plus up to S$10m rights</td><td>The same, then cash from a new slate</td></tr>
+          <tr><td>Unsecured creditors</td><td>0-2.55c per dollar</td><td>About 28c, mostly new shares</td><td>Above 28c if the shares rise</td></tr>
+          <tr><td>MMRA / Hildrics</td><td>-</td><td>About 71% before swap and rights</td><td>Control of a recovering asset</td></tr>
+          <tr><td>Existing holders</td><td>Approximately nil</td><td>Under 28.6%</td><td>Small stake in a larger viable company</td></tr>
+          <tr><td>What must go right</td><td>-</td><td>Scheme, EGM, waiver and SGX approval</td><td>Profitable projects that also produce cash</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Survival proof</span><h3>Scheme and resumption</h3><p>Votes, sanction and SGX acceptance must all complete before valuation can move beyond liquidation logic.</p></article>
+          <article class="dossier-item"><span>Operating proof</span><h3>Cash equals EBITDA</h3><p>For a full year, operating cash should at least match reported EBITDA.</p></article>
+          <article class="dossier-item"><span>Governance proof</span><h3>Audit and disclosure</h3><p>An unmodified opinion and project-level cash reporting would replace assumptions with evidence.</p></article>
+        </div>
+        <p class="dossier-caption">Beyond Our Gallery scenarios based on court materials and the July 2026 placement announcement. This is not company guidance.</p>
+      </div>
+    </details>
+    <div class="bottom-line-grid" data-reveal>
+      <article><span>What is working</span><h3>Story recognition</h3><p>Local franchises and Greater China distribution show mm2 can create content audiences remember.</p></article>
+      <article><span>What is broken</span><h3>Capital conversion</h3><p>Five years produced S$472m of losses, a S$219.6m capital deficiency and court protection.</p></article>
+      <article><span>What to watch</span><h3>Four approvals and one slate</h3><p>Creditor votes, EGM, waiver, SGX resumption and whether the first post-scheme projects produce cash.</p></article>
+    </div>
+    <div class="callout"><strong>Final view: mm2 was good at making hits and poor at turning them into cash.</strong><p>The score rises only after the scheme, audit and a cash-producing slate. It falls if the plan fails, trading cannot resume or the remaining receivables are written down.</p></div>
+  </section>
+</main>
+
+<aside class="thesis-rail" aria-label="Current research takeaway"><span class="rail-label">Research takeaway</span><div class="rail-item"><span>Current thesis</span><strong id="rail-thesis">The rescue must work before the content business can be valued.</strong></div><div class="rail-item"><span>Strongest evidence</span><strong id="rail-evidence">Liabilities exceeded assets by S$219.6m.</strong></div><div class="rail-item"><span>Main uncertainty</span><strong id="rail-uncertainty">Whether every approval lands before 31 January 2027.</strong></div><div class="rail-item"><span>What changes the score</span><strong id="rail-change">Audited accounts, positive equity and a funded slate.</strong></div></aside>
+</div>
+
+<section class="sources" id="sources"><div class="wrap sources-grid"><div><p class="eyebrow" style="color:var(--pink)">Sources and evidence</p><h2>What this analysis rests on</h2><ul><li>mm2 Asia FY2024 annual report and FY2025-FY2026 unaudited results</li><li>Re mm2 Asia Ltd [2025] SGHC 251 and SGX restructuring announcements</li><li>The July 2026 MMRA placement agreement and Securities Industry Council waiver</li><li>IMDA cinema data and peer filings from HKEX, Bursa, KRX, SEC and SGX</li><li>The supplied 42-page mm2 Asia strategic review</li></ul><p>Evidence grade C. About 46% of weighted evidence is audited or independent; FY2025-26 results were neither audited nor reviewed.</p></div><div class="disclaimer"><p class="eyebrow" style="color:var(--pink)">Research standard</p><p>Figures are in Singapore dollars unless stated. Data are as of 3 November 2026. This is independent research for education, not an investment recommendation or price target.</p><p>Company and film imagery was supplied with the research brief and is presented as editorial portfolio evidence.</p></div></div></section>
+
+<footer class="page-footer"><div class="wrap footer-row"><span>Beyond Our Gallery &middot; mm2 Asia Ltd. (SGX: 1B0) &middot; Jiarun Yang &middot; 1 November 2026</span><a href="index.html">Back to company gallery</a></div></footer>
+
+<script>
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const revealItems=document.querySelectorAll('[data-reveal], .figure');
+if(reduceMotion){revealItems.forEach(el=>el.classList.add('is-visible'));}else{const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}}),{threshold:.14,rootMargin:'0px 0px -40px'});revealItems.forEach(el=>revealObserver.observe(el));}
+
+const sections=[...document.querySelectorAll('.analysis-section')];
+const rail={thesis:document.getElementById('rail-thesis'),evidence:document.getElementById('rail-evidence'),uncertainty:document.getElementById('rail-uncertainty'),change:document.getElementById('rail-change')};
+const current=document.getElementById('section-current');
+let activeSectionRaf=0;
+function updateActiveSection(){activeSectionRaf=0;if(!sections.length)return;const probe=scrollY+Math.min(innerHeight*.32,260);let active=sections[0];sections.forEach(section=>{if(section.offsetTop<=probe)active=section;});current.textContent=String(active.dataset.index).padStart(2,'0');rail.thesis.textContent=active.dataset.thesis;rail.evidence.textContent=active.dataset.evidence;rail.uncertainty.textContent=active.dataset.uncertainty;rail.change.textContent=active.dataset.change;}
+addEventListener('scroll',()=>{if(!activeSectionRaf)activeSectionRaf=requestAnimationFrame(updateActiveSection);},{passive:true});
+addEventListener('resize',updateActiveSection);
+updateActiveSection();
+const route=document.getElementById('route-progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;route.style.width=(max>0?scrollY/max*100:0)+'%';}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+document.querySelectorAll('.sections-popover a').forEach(a=>a.addEventListener('click',()=>a.closest('details').removeAttribute('open')));
+
+const risks={scheme:{level:'Medium likelihood / Very high impact',title:'Scheme or EGM fails',desc:'Liquidation leaves creditors with 0-2.55 cents per dollar and ordinary holders with approximately nothing.',trigger:'Creditor vote tallies or the whitewash vote fail to reach the required thresholds.',mitigation:'Majority creditor support, clear independent advice and committed new money.'},resumption:{level:'Medium-high likelihood / High impact',title:'No trading resumption',desc:'Shares remain suspended and equity becomes harder to raise even after a scheme.',trigger:'SGX does not accept the resumption proposal or placement conditions are unmet.',mitigation:'Complete the placement, audit and every exchange condition before the long-stop.'},receivables:{level:'High likelihood / High impact',title:'Unpaid receivables',desc:'More write-downs reduce cash available to restart content production.',trigger:'Credit losses rise from the FY2026 S$42.1m charge or ageing worsens.',mitigation:'Require deposits, pre-sales and tighter collection milestones before filming.'},capital:{level:'Medium-high likelihood / High impact',title:'Thin working capital',desc:'The S$3.5m placement allocation may not fund a competitive slate.',trigger:'Monthly cash declines or funded project starts stall.',mitigation:'Use rights proceeds, grants, co-producers and project-level finance.'},control:{level:'Medium likelihood / Medium-high impact',title:'Concentrated control',desc:'The incoming controller is also connected to rescue financing and creditor interests.',trigger:'Related financing lacks independent terms or minority approval.',mitigation:'Independent adviser scrutiny and clear shareholder votes.'},people:{level:'Medium likelihood / Medium impact',title:'People and legal exposure',desc:'Founder dependence, CPF charges and legacy guarantees can impede operating recovery.',trigger:'Court outcomes worsen or key creative and finance leaders leave.',mitigation:'Scheme releases, board rebuilding and timely employee payments.'}};
+document.querySelectorAll('[data-risk]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-risk]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');const r=risks[btn.dataset.risk];document.getElementById('risk-level').textContent=r.level;document.getElementById('risk-title').textContent=r.title;document.getElementById('risk-desc').textContent=r.desc;document.getElementById('risk-trigger').textContent=r.trigger;document.getElementById('risk-mitigation').textContent=r.mitigation;}));
+
+const scenarios={bear:{name:'Bear',revenue:'0-2.55c / S$1',growth:'~Nil',profit:'None',note:'The scheme fails, liquidation follows and the shares are delisted.',scoreNote:'No recovery capital'},base:{name:'Base',revenue:'~28c / S$1',growth:'<28.6%',profit:'S$15m',note:'Scheme completes as proposed and trading resumes if SGX agrees.',scoreNote:'S$3.5m for working capital'},bull:{name:'Bull',revenue:'>28c / S$1',growth:'Small stake',profit:'S$15m+',note:'The scheme completes and a funded slate begins producing operating cash.',scoreNote:'Recovery funds the next slate'}};
+document.querySelectorAll('[data-scenario]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-scenario]').forEach(b=>b.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');const s=scenarios[btn.dataset.scenario];document.getElementById('scenario-name').textContent=s.name;document.getElementById('scenario-revenue').textContent=s.revenue;document.getElementById('scenario-growth').textContent=s.growth;document.getElementById('scenario-profit').textContent=s.profit;document.getElementById('scenario-note').textContent=s.note;document.getElementById('scenario-score-note').textContent=s.scoreNote;}));
+</script>
+</body>
