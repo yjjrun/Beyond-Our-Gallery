@@ -3198,6 +3198,209 @@ footer{
   figure.chart,
   .tblwrap{box-shadow:0 14px 34px rgba(6,63,58,.09)}
 }
+
+/* ---------- opening gallery stage ---------- */
+header.hero{
+  position:relative;
+  isolation:isolate;
+  display:grid;
+  align-items:center;
+  min-height:clamp(640px,calc(100svh - 92px),780px);
+  padding:72px 0 76px;
+  overflow:hidden;
+  color:#fff;
+  background:
+    linear-gradient(110deg,rgba(3,35,33,.99) 0%,rgba(5,61,56,.96) 48%,rgba(61,24,50,.93) 100%),
+    #063f3a;
+}
+header.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(90deg,rgba(3,31,30,.96) 0%,rgba(3,31,30,.83) 39%,rgba(3,31,30,.20) 67%,rgba(42,17,36,.34) 100%),
+    linear-gradient(180deg,rgba(255,255,255,.02),transparent 54%,rgba(239,145,177,.09));
+  pointer-events:none;
+}
+header.hero::after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:3;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(239,145,177,.80),rgba(139,215,199,.68),transparent);
+  pointer-events:none;
+}
+header.hero > .wrap{
+  position:relative;
+  z-index:2;
+  width:100%;
+}
+.hero-atmosphere{
+  position:absolute;
+  inset:-10% -4%;
+  z-index:0;
+  overflow:hidden;
+  pointer-events:none;
+}
+.hero-ghost{
+  --hero-drift:0px;
+  --hero-tilt:0deg;
+  position:absolute;
+  margin:0;
+  overflow:hidden;
+  border:1px solid rgba(239,145,177,.24);
+  opacity:.15;
+  transform:translate3d(0,var(--hero-drift),0) rotate(var(--hero-tilt));
+  filter:saturate(.70) contrast(1.08);
+  box-shadow:0 24px 70px rgba(0,0,0,.18);
+  will-change:transform;
+}
+.hero-ghost img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  mix-blend-mode:screen;
+}
+.hero-ghost::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(145deg,rgba(6,63,58,.20),rgba(198,101,140,.26));
+}
+.hero-ghost--ocean{
+  top:-3%;
+  left:39%;
+  width:min(620px,44vw);
+  aspect-ratio:1.55;
+  --hero-tilt:-2deg;
+}
+.hero-ghost--krisflyer{
+  bottom:-13%;
+  left:-3%;
+  width:min(470px,34vw);
+  aspect-ratio:1.45;
+  --hero-tilt:3deg;
+  opacity:.11;
+}
+.hero-ghost--retail{
+  top:9%;
+  right:-8%;
+  width:min(480px,34vw);
+  aspect-ratio:1.35;
+  --hero-tilt:2deg;
+  opacity:.13;
+}
+.hero-ghost--visitors{
+  right:19%;
+  bottom:-15%;
+  width:min(700px,50vw);
+  aspect-ratio:2.05;
+  --hero-tilt:-1deg;
+  opacity:.09;
+}
+.hero-copy{
+  position:relative;
+  z-index:2;
+  padding:26px 0;
+}
+.hero .kicker{
+  margin-bottom:20px;
+  color:#f7c5d7;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-shadow:0 2px 18px rgba(0,0,0,.34);
+}
+.hero h1{
+  max-width:760px;
+  color:#fff;
+  font-size:88px;
+  line-height:.88;
+  letter-spacing:0;
+  text-shadow:0 8px 34px rgba(0,0,0,.32);
+}
+.hero h1 .title-line{color:#f3a7c1}
+.hero h1 .rule{
+  width:176px;
+  height:4px;
+  margin-top:28px;
+  background:linear-gradient(90deg,#ef91b1,#8bd7c7);
+}
+.hero p.sub{
+  max-width:690px;
+  margin-top:28px;
+  color:#f4fbf9;
+  font-size:17px;
+  line-height:1.62;
+  font-weight:500;
+  text-shadow:0 3px 22px rgba(0,0,0,.38);
+}
+.hero p.sub strong{
+  display:block;
+  color:#fff;
+  font-size:20px;
+  line-height:1.42;
+  font-weight:800;
+}
+.hero p.sub span{
+  display:block;
+  margin-top:8px;
+  color:#d7e5e2;
+}
+.hero .byline{
+  margin-top:26px;
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+}
+.hero .byline .btg{color:#f3aec6}
+.hero-media{
+  z-index:2;
+  border-color:rgba(255,255,255,.30);
+  box-shadow:0 30px 86px rgba(0,0,0,.40),0 0 0 10px rgba(239,145,177,.08);
+}
+
+@media(max-width:900px){
+  header.hero{min-height:680px;padding:62px 0 66px}
+  .hero h1{font-size:70px}
+  .hero .wrap{grid-template-columns:minmax(0,1.12fr) minmax(270px,.88fr);gap:30px}
+  .hero-media{width:min(340px,100%)}
+  .hero-ghost--krisflyer{left:-14%;width:42vw}
+  .hero-ghost--retail{right:-14%;width:42vw}
+}
+@media(max-width:720px){
+  header.hero{min-height:0;padding:54px 0 66px}
+  header.hero::before{
+    background:
+      linear-gradient(180deg,rgba(3,31,30,.96) 0%,rgba(3,31,30,.88) 58%,rgba(34,17,31,.58) 100%),
+      linear-gradient(90deg,rgba(3,31,30,.84),rgba(42,17,36,.28));
+  }
+  .hero .wrap{grid-template-columns:1fr;gap:30px}
+  .hero-copy{padding:0}
+  .hero .kicker{font-size:11px;line-height:1.5}
+  .hero h1{font-size:54px;line-height:.90}
+  .hero h1 .rule{width:136px;margin-top:22px}
+  .hero p.sub{font-size:16px;line-height:1.58}
+  .hero p.sub strong{font-size:18px}
+  .hero-media{width:min(270px,76vw)}
+  .hero-ghost{opacity:.08}
+  .hero-ghost--ocean{top:5%;left:34%;width:74vw}
+  .hero-ghost--krisflyer{bottom:3%;left:-40%;width:86vw}
+  .hero-ghost--retail,
+  .hero-ghost--visitors{display:none}
+}
+@media(max-width:480px){
+  .hero h1{font-size:46px}
+  .hero-media{width:min(244px,72vw)}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-ghost{transform:rotate(var(--hero-tilt))}
+}
 </style>
 </head>
 <body>
@@ -3246,11 +3449,18 @@ footer{
   </dl>
 </aside>
 
-<header class="hero"><div class="wrap">
+<header class="hero">
+  <div class="hero-atmosphere" aria-hidden="true">
+    <figure class="hero-ghost hero-ghost--ocean" data-hero-depth="-72"><img src="assets/eta-oceanarium.jpg" alt=""></figure>
+    <figure class="hero-ghost hero-ghost--krisflyer" data-hero-depth="48"><img src="assets/exm-krisflyer.jpg" alt=""></figure>
+    <figure class="hero-ghost hero-ghost--retail" data-hero-depth="-42"><img src="assets/rci-on-running.jpg" alt=""></figure>
+    <figure class="hero-ghost hero-ghost--visitors" data-hero-depth="68"><img src="assets/strategy-visitors.jpg" alt=""></figure>
+  </div>
+  <div class="wrap">
   <div class="hero-copy">
     <div class="kicker">A strategy and commercial review of</div>
     <h1>Kingsmen<br><span class="title-line">Creatives<span class="rule"></span></span></h1>
-    <p class="sub">Kingsmen Creatives designs and builds the places where brands meet people — museum galleries, theme-park attractions, interactive flagship stores and live brand events. A design-and-build contractor for the experience economy: the client buys a finished, fitted-out space, and Kingsmen carries the creative work, fabrication, logistics and installation risk needed to deliver it.</p>
+    <p class="sub"><strong>Kingsmen designs and builds the places where brands meet people.</strong><span>From museum galleries and theme-park attractions to interactive flagship stores and live events, it carries the creative, fabrication, logistics and installation risk required to deliver the finished experience.</span></p>
     <div class="byline">By Jiarun Yang, 27 October 2026<span class="btg">Beyond Our Gallery</span></div>
   </div>
   <div class="hero-media" aria-label="Featured Kingsmen projects">
@@ -4911,6 +5121,29 @@ if(REDUCE){
     restore = [];
     sync();
   });
+
+  /* Project fragments move at separate depths while the opening leaves view. */
+  var heroStage = document.querySelector('header.hero');
+  var heroLayers = heroStage ? Array.prototype.slice.call(heroStage.querySelectorAll('[data-hero-depth]')) : [];
+  var heroMotionRaf = 0;
+  function updateHeroMotion(){
+    heroMotionRaf = 0;
+    if(!heroStage || REDUCE) return;
+    var rect = heroStage.getBoundingClientRect();
+    if(rect.bottom < 0 || rect.top > window.innerHeight) return;
+    var progress = Math.max(0, Math.min(1, -rect.top / Math.max(rect.height, 1)));
+    heroLayers.forEach(function(layer){
+      var distance = Number(layer.dataset.heroDepth) || 0;
+      layer.style.setProperty('--hero-drift', (progress * distance).toFixed(2) + 'px');
+    });
+  }
+  function requestHeroMotion(){
+    if(!heroMotionRaf) heroMotionRaf = requestAnimationFrame(updateHeroMotion);
+  }
+  window.addEventListener('scroll', requestHeroMotion, { passive:true });
+  window.addEventListener('resize', requestHeroMotion);
+  window.addEventListener('load', updateHeroMotion);
+  updateHeroMotion();
 
   /* Reading progress + persistent takeaway rail. */
   var sections = Array.prototype.slice.call(document.querySelectorAll('section[id][data-index]'));
