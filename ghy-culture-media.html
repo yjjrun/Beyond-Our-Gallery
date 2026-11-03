@@ -260,6 +260,52 @@ th:last-child,td:last-child{text-align:left;white-space:normal}
 thead th{background:var(--deep);color:#fff;font-size:10px;letter-spacing:.06em;text-transform:uppercase}
 tbody tr:last-child td{border-bottom:0}
 
+/* Restored source-review depth */
+.insight-band{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:30px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.insight-note{min-width:0;padding:22px 24px 22px 0}
+.insight-note+.insight-note{padding-left:24px;border-left:1px solid var(--line)}
+.insight-note span{display:block;color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.insight-note strong{display:block;margin-top:7px;font:700 24px/1.05 var(--display);color:var(--ink)}
+.insight-note p{margin:8px 0 0;color:var(--ink-2);font-size:12px;line-height:1.55}
+.research-dossier{margin-top:28px;border-top:3px solid var(--deep);border-bottom:1px solid var(--line);background:#fff}
+.research-dossier>summary{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:18px;row-gap:5px;padding:18px 0;cursor:pointer;list-style:none}
+.research-dossier>summary::-webkit-details-marker{display:none}
+.research-dossier>summary span{grid-column:1;grid-row:1;display:block;color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.research-dossier>summary b{grid-column:1;grid-row:2;display:block;font:700 23px/1.08 var(--display)}
+.research-dossier>summary::after{content:"+";grid-column:2;grid-row:1 / span 2;display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--wine);color:var(--wine);font-size:20px;font-weight:700}
+.research-dossier[open]>summary::after{content:"-";background:var(--wine);color:#fff}
+.dossier-body{padding:4px 0 30px;border-top:1px solid var(--line)}
+.dossier-intro{max-width:790px;margin:22px 0 0;color:var(--ink-2);font-size:13px}
+.dossier-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dossier-item{padding:19px 20px 20px 0}
+.dossier-item+.dossier-item{padding-left:20px;border-left:1px solid var(--line)}
+.dossier-item span{color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.dossier-item h3{margin:7px 0 7px;font:700 22px/1.02 var(--display)}
+.dossier-item p{margin:0;color:var(--ink-2);font-size:12px;line-height:1.55}
+.dossier-table{margin-top:22px;border:1px solid var(--line);overflow-x:auto}
+.dossier-table table{min-width:820px}
+.dossier-table.numeric th,.dossier-table.numeric td{text-align:right}
+.dossier-table.numeric th:first-child,.dossier-table.numeric td:first-child{text-align:left}
+.dossier-table th:last-child,.dossier-table td:last-child{white-space:normal}
+.dossier-caption{margin:10px 0 0;color:var(--muted);font-size:10px;line-height:1.5}
+.model-box{margin-top:22px;padding:22px 24px;background:var(--deep);color:#fff}
+.model-box code{display:block;overflow-x:auto;color:#ffd0df;font:700 13px/1.65 var(--body);white-space:nowrap}
+.model-box p{margin:10px 0 0;color:#c7dad7;font-size:11px}
+.bottom-line-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:30px;background:var(--line);border:1px solid var(--line)}
+.bottom-line-grid article{min-height:210px;padding:24px;background:#fff}
+.bottom-line-grid article:nth-child(2){background:var(--deep);color:#fff}
+.bottom-line-grid span{color:var(--wine);font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.bottom-line-grid article:nth-child(2) span{color:var(--pink)}
+.bottom-line-grid h3{margin:10px 0 9px;font:700 26px/1 var(--display)}
+.bottom-line-grid p{margin:0;color:var(--ink-2);font-size:12px}
+.bottom-line-grid article:nth-child(2) p{color:#c9dbd8}
+
 .sources{padding:72px 0;background:var(--deep);color:#fff}
 .sources-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px}
 .sources h2{font-size:44px}.sources p,.sources li{color:#c9dbd8;font-size:12px}.sources a{color:#fff;text-underline-offset:3px}.sources ul{margin:22px 0 0;padding-left:18px}.sources .disclaimer{padding-left:24px;border-left:3px solid var(--pink)}
@@ -328,6 +374,8 @@ tbody tr:last-child td{border-bottom:0}
   .roadmap{grid-template-columns:1fr 1fr}.gate:nth-child(3){border-left:1px solid var(--line)}.gate::after{display:none}
   .timeline{grid-template-columns:1fr 1fr;gap:24px 0}.scenario-output{grid-template-columns:1fr 1fr}.force-row{grid-template-columns:130px 95px 1fr}
   .project.tall{grid-row:auto;min-height:400px}.working-bars{min-width:560px}.score-callout{grid-template-columns:140px 1fr}.score-callout strong{font-size:62px}
+  .insight-band,.dossier-grid,.bottom-line-grid{grid-template-columns:1fr 1fr}
+  .insight-note:nth-child(3),.dossier-item:nth-child(3),.bottom-line-grid article:nth-child(3){border-top:1px solid var(--line);border-left:0;padding-left:0}
 }
 @media(max-width:560px){
   .back-home{padding:7px 8px}.back-home span{display:none}.back-home span:first-child{display:inline}.sections-popover{position:fixed;right:14px;top:61px}
@@ -340,6 +388,10 @@ tbody tr:last-child td{border-bottom:0}
   .benchmark,.booking-bars{min-width:0}.benchmark-row{grid-template-columns:112px 1fr 42px;gap:8px}.booking-bars{gap:12px;padding-inline:8px}
   .scenario-control{display:grid;grid-template-columns:repeat(3,1fr)}.scenario-control button{min-width:0}.footer-row{display:block}.footer-row a{display:inline-block;margin-top:12px}
   .hero-logo.ghy-brand{left:10px;top:20px;width:128px;height:62px;padding:9px}.segment-row{grid-template-columns:108px 1fr 48px;gap:8px}.working-bars{min-width:500px}.slate-grid{grid-template-columns:1fr}.peer-compare{min-width:520px}.score-callout{grid-template-columns:1fr}.score-callout strong{font-size:58px}
+  .insight-band,.dossier-grid,.bottom-line-grid{grid-template-columns:1fr}
+  .insight-note,.insight-note+.insight-note,.dossier-item,.dossier-item+.dossier-item{padding:18px 0;border-top:1px solid var(--line);border-left:0}
+  .insight-note:first-child,.dossier-item:first-child{border-top:0}
+  .research-dossier>summary b{font-size:20px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}.bar-fill,.benchmark-track::after,.booking-col i,.financial-svg .bar{transform:none}.benchmark-track i{transform:translate(-50%,-50%) scale(1)}.financial-svg .line{stroke-dashoffset:0}.financial-svg .dot{opacity:1}}
 </style>
@@ -413,6 +465,23 @@ tbody tr:last-child td{border-bottom:0}
     <p class="section-kicker">01 &middot; Exhibit &middot; The business</p><h2>One story engine, three ways to monetize attention</h2><p class="lede">The group develops and produces screen content, presents selected concerts, and supports its slate with talent, costumes, props and training. Its edge is story ownership; its constraint is the cash cycle between greenlight and payment.</p>
     <div class="section-grid g4" data-reveal><div class="metric"><b>RMB511.2m</b><span>FY2025 revenue &middot; +22.4%</span></div><div class="metric"><b>RMB8.7m</b><span>FY2025 profit after tax</span></div><div class="metric"><b>96.9%</b><span>Revenue from China</span></div><div class="metric"><b>~62%</b><span>Founder-controlled ownership</span></div></div>
     <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 01.1</span><h3>How does a viewer signal become shareholder value?</h3></div><span class="figure-source">G.H.Y annual report &middot; Beyond Our Gallery</span></div><div class="figure-canvas cash-bridge"><div class="bridge-step"><strong>01</strong><span>Platform demand</span><p>Subscriptions and advertising shape buyer budgets.</p></div><div class="bridge-arrow">&#8594;</div><div class="bridge-step"><strong>02-03</strong><span>IP, approval, delivery</span><p>Track record wins the greenlight; scripts become approved titles.</p></div><div class="bridge-arrow">&#8594;</div><div class="bridge-step"><strong>04</strong><span>Margin and cash</span><p>Deal terms, budget control and collection decide value.</p></div></div><figcaption class="curator-note"><b>Decision lens</b><p>Demand reaches G.H.Y late. Cash reaches it later still.</p></figcaption></figure>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Company structure, ownership and where value is captured</b></summary>
+      <div class="dossier-body">
+        <p class="dossier-intro">G.H.Y is not simply a studio. It combines a founder-led story engine, production capacity, platform relationships and selective live-event exposure, but almost all reported economics still come from commissioned screen production.</p>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Origin and control</span><h3>Built around Guo Jingyu</h3><p>Founded in 2018 around a director-producer with roughly three decades in Chinese television. Guo controls about 62% through Kang Ru Investments; his spouse Yue Lina is an executive director.</p></article>
+          <article class="dossier-item"><span>Public-market context</span><h3>Listed at S$0.66</h3><p>G.H.Y joined the SGX Mainboard on 18 December 2020. At S$0.053 on 29 October 2026, the shares were down about 92% from the offer price and traded only intermittently.</p></article>
+          <article class="dossier-item"><span>Operating footprint</span><h3>Singapore parent, China engine</h3><p>The group is headquartered across Singapore and the PRC. China generated 96.9% of FY2025 revenue through entities controlled by VIE contracts; overseas concert markets contributed no FY2025 revenue.</p></article>
+        </div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>01 &middot; IP and script</span><h3>Own the world</h3><p>Original stories, franchise bibles and in-house writing create the only asset a rival cannot bid away.</p></article>
+          <article class="dossier-item"><span>02 &middot; Production</span><h3>Execute the slate</h3><p>Directing, casting, costumes, sets and AI-assisted workflows turn IP into an approved, deliverable title.</p></article>
+          <article class="dossier-item"><span>03-04 &middot; Capture</span><h3>License, share and extend</h3><p>Fixed fees create near-term revenue; profit share, sequels, micro-dramas and iQIYI Land create delayed franchise upside.</p></article>
+        </div>
+        <p class="dossier-caption">Source review slides 2-4 and 9. Ownership and market-price observations are date-sensitive.</p>
+      </div>
+    </details>
   </section>
 
   <section class="analysis-section" id="portfolio" data-number="02" data-index="2" data-thesis="Franchise continuity is G.H.Y's clearest moat." data-evidence="Tang improved from Douban 8.0 to 8.6, added a third season, micro-drama spin-offs and an immersive theatre." data-uncertainty="The group does not disclose the revenue or margin captured from franchise extensions." data-change="Title-level economics showing repeatable franchise returns would deepen the moat case.">
@@ -422,6 +491,27 @@ tbody tr:last-child td{border-bottom:0}
       <article class="project" data-reveal><img src="assets/ghy-tang-dynasty.webp" alt="Strange Tales of Tang Dynasty drama artwork"><div class="project-info"><span>iQIYI &middot; Franchise IP</span><h3>Strange Tales of Tang Dynasty</h3><p>Why it matters: the franchise supports sequels, spin-offs and offline licensing that a rival cannot simply rebid.</p></div></article>
       <article class="project" data-reveal><img src="assets/ghy-sisterhood.webp" alt="Sisterhood drama ensemble artwork"><div class="project-info"><span>CCTV-8 and iQIYI &middot; Nanyang drama</span><h3>Sisterhood</h3><p>Why it matters: Singapore-China stories are a cultural niche that differentiates G.H.Y from larger mainland peers.</p></div></article>
     </div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>Franchise proof</span><strong>Douban 8.0 to 8.6</strong><p>Tang improved its audience score between seasons, won an Asian Academy award and supported a third season.</p></article>
+      <article class="insight-note"><span>Format extension</span><strong>Two record-setting spin-offs</strong><p>Micro-drama extensions and a mid-length Ferryman title test whether known worlds travel into cheaper formats.</p></article>
+      <article class="insight-note"><span>Offline extension</span><strong>iQIYI Land theatre</strong><p>Tang entered an immersive theatre in Yangzhou; G.H.Y later took minority stakes in Beijing and Kaifeng park ventures.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Title slate, partners and status</b></summary>
+      <div class="dossier-body">
+        <p class="dossier-intro">The slate matters title by title. Delivery timing determines reported revenue, while format, partner and deal structure determine whether a successful audience result becomes cash.</p>
+        <div class="dossier-table"><table><thead><tr><th>Title</th><th>Format</th><th>Partner</th><th>Status and economic signal</th></tr></thead><tbody>
+          <tr><td>Strange Tales of Tang Dynasty 3</td><td>Long-form drama</td><td>iQIYI, co-producer</td><td>Premiered 8 Nov 2025; the core franchise asset.</td></tr>
+          <tr><td>The Ferryman: 10 Years</td><td>Mid-length drama</td><td>iQIYI</td><td>Ended Jun 2026 with a reported heat record of 8,661.</td></tr>
+          <tr><td>My Destiny</td><td>TV drama</td><td>CCTV-8</td><td>On air from 7 Mar 2026; evidence of broadcast reach.</td></tr>
+          <tr><td>Beautiful Fairytale</td><td>Fantasy, AI-assisted</td><td>iQIYI joint production</td><td>Shot through roughly Jun 2026 as a planned franchise.</td></tr>
+          <tr><td>Tang spin-offs</td><td>Two micro-dramas</td><td>iQIYI</td><td>Reportedly broke platform micro-drama records.</td></tr>
+          <tr><td>The Red Cradle / Reviving Youth</td><td>Drama / TV show</td><td>Not disclosed</td><td>Recognised in 1H2026 revenue.</td></tr>
+          <tr><td>Jolin Tsai PLEASURE, Changsha</td><td>Concert</td><td>Not applicable</td><td>Staged 21 Mar 2026 after a quiet FY2025.</td></tr>
+        </tbody></table></div>
+        <p class="dossier-caption">Source review slide 16; G.H.Y FY2025 annual report, 1H2026 results and cited corporate announcements.</p>
+      </div>
+    </details>
   </section>
 
   <section class="analysis-section" id="segments" data-number="03" data-index="3" data-thesis="Television and film now carry almost the whole company." data-evidence="The core segment generated 95.5% of FY2025 revenue and 95.4% of gross profit." data-uncertainty="Profit-sharing lowered 1H2026 TV gross margin to 3.9% while upside remained deferred." data-change="A measurable contribution from franchises, micro-dramas or live events would improve portfolio quality.">
@@ -430,6 +520,23 @@ tbody tr:last-child td{border-bottom:0}
       <div class="segment-row"><span>TV and film</span><div class="segment-track"><i class="segment-fill" style="--share:95.5"></i></div><strong>95.5%</strong></div><div class="segment-row"><span>Concerts</span><div class="segment-track"><i class="segment-fill" style="--share:3.2"></i></div><strong>3.2%</strong></div><div class="segment-row"><span>Others</span><div class="segment-track"><i class="segment-fill" style="--share:1.3"></i></div><strong>1.3%</strong></div>
     </div><figcaption class="curator-note"><b>Curator's note</b><p>Revenue concentration makes title timing look like strategy. Portfolio quality improves only when a second engine becomes material.</p></figcaption></figure>
     <div class="section-grid g3" data-reveal><div class="metric"><b>19.2%</b><span>TV and film gross margin</span></div><div class="metric"><b>15.2%</b><span>Concert gross margin</span></div><div class="metric"><b>29.9%</b><span>Others gross margin on 1.3% of sales</span></div></div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>FY2025 segment economics and the concentration problem</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table numeric"><table><thead><tr><th>FY2025 segment</th><th>Revenue</th><th>Share</th><th>Gross profit</th><th>Gross margin</th><th>YoY revenue</th></tr></thead><tbody>
+          <tr><td>TV Program &amp; Film Production</td><td>RMB488.1m</td><td>95.5%</td><td>RMB93.9m</td><td>19.2%</td><td>+66.9%</td></tr>
+          <tr><td>Concert Production</td><td>RMB16.5m</td><td>3.2%</td><td>RMB2.5m</td><td>15.2%</td><td>-85.8%</td></tr>
+          <tr><td>Others</td><td>RMB6.6m</td><td>1.3%</td><td>RMB2.0m</td><td>29.9%</td><td>-24.2%</td></tr>
+          <tr><td>Group</td><td>RMB511.2m</td><td>100.0%</td><td>RMB98.4m</td><td>19.2%</td><td>+22.4%</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Concentration</span><h3>TV carries the group</h3><p>Screen production supplied 95.5% of revenue and 95.4% of gross profit. A handful of delivery acceptances can move the whole year.</p></article>
+          <article class="dossier-item"><span>Volatility</span><h3>Concerts came and went</h3><p>Live events were 45.9% of FY2023 revenue and roughly 60% of gross profit, then only 3.2% of FY2025 revenue.</p></article>
+          <article class="dossier-item"><span>Deal-model risk</span><h3>Upside was deferred</h3><p>TV gross margin fell to 3.9% in 1H2026 as profit-sharing reduced upfront economics while leaving hit upside for later.</p></article>
+        </div>
+        <p class="dossier-caption">G.H.Y discloses segment revenue and gross profit, not segment operating profit.</p>
+      </div>
+    </details>
   </section>
 
   <section class="analysis-section" id="financials" data-number="04" data-index="4" data-thesis="FY2025 recovered, but the recovery did not hold into 1H2026." data-evidence="Revenue reached RMB511.2m and gross margin recovered to 19.2% in FY2025." data-uncertainty="1H2026 gross margin fell to 4.3% and the group lost RMB31.4m." data-change="A second half above the 18% break-even gross margin would make recovery evidence credible.">
@@ -445,31 +552,151 @@ tbody tr:last-child td{border-bottom:0}
       <rect x="468" y="304" width="12" height="12" fill="var(--wine)"/><text x="486" y="314">Revenue</text><line x1="552" y1="310" x2="572" y2="310" stroke="var(--deep)" stroke-width="3"/><text x="580" y="314">Gross margin</text>
     </svg></div><figcaption class="curator-note"><b>Turning point</b><p>FY2025's 19.2% margin recovered from a 10.0% trough. 1H2026 then fell to 4.3%.</p></figcaption></figure>
     <div class="section-grid g4" data-reveal><div class="metric"><b>RMB8.7m</b><span>FY2025 profit after tax</span></div><div class="metric"><b>RMB13.5m</b><span>Government grants</span></div><div class="metric"><b>-RMB31.4m</b><span>1H2026 net result</span></div><div class="metric"><b>~18%</b><span>Break-even gross margin</span></div></div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>Five-year result</span><strong>-RMB222m</strong><p>Cumulative net result from FY2021 to FY2025. FY2025 was the only profitable year after FY2021.</p></article>
+      <article class="insight-note"><span>Earnings quality</span><strong>Grants were 2.1x PBT</strong><p>Removing RMB13.5m of government grants from RMB6.4m of pre-tax profit gives an indicative loss of roughly RMB7.1m.</p></article>
+      <article class="insight-note"><span>Operating leverage</span><strong>1% of sales ~ 15% of PBT</strong><p>At the FY2025 cost base, small changes in revenue or gross margin move pre-tax profit disproportionately.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Five-year income statement and earnings-quality bridge</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table numeric"><table><thead><tr><th>Period</th><th>Revenue</th><th>Gross profit</th><th>Gross margin</th><th>Pre-tax result</th><th>Net result</th><th>Net margin</th></tr></thead><tbody>
+          <tr><td>FY2021</td><td>399.9</td><td>104.4</td><td>26.1%</td><td>31.9</td><td>16.6</td><td>4.2%</td></tr>
+          <tr><td>FY2022</td><td>223.2</td><td>69.5</td><td>31.2%</td><td>-54.4</td><td>-51.1</td><td>-22.9%</td></tr>
+          <tr><td>FY2023</td><td>388.0</td><td>97.9</td><td>25.2%</td><td>-57.8</td><td>-51.7</td><td>-13.3%</td></tr>
+          <tr><td>FY2024</td><td>417.6</td><td>41.9</td><td>10.0%</td><td>-156.3</td><td>-144.3</td><td>-34.5%</td></tr>
+          <tr><td>FY2025</td><td>511.2</td><td>98.4</td><td>19.2%</td><td>6.4</td><td>8.7</td><td>1.7%</td></tr>
+          <tr><td>1H2026</td><td>162.0</td><td>6.9</td><td>4.3%</td><td>-36.5</td><td>-31.4</td><td>-19.4%</td></tr>
+        </tbody></table></div>
+        <p class="dossier-caption">RMB million except margins. FY2021-FY2022 were reported in Singapore dollars and converted in the source review.</p>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Gross recovery</span><h3>RMB98.4m</h3><p>FY2025 gross profit rose 135% as revenue increased 22.4% and the gross margin recovered by 9.2 percentage points.</p></article>
+          <article class="dossier-item"><span>Normalisation check</span><h3>About -RMB7.1m</h3><p>Pre-tax result after removing disclosed government grants. This does not remove impairments or expected-credit-loss charges.</p></article>
+          <article class="dossier-item"><span>What broke next</span><h3>4.3% margin</h3><p>1H2026 profit-sharing and title mix pulled the group below its roughly 18% gross-margin break-even level.</p></article>
+        </div>
+      </div>
+    </details>
   </section>
 
   <section class="analysis-section" id="cash" data-number="05" data-index="5" data-thesis="The balance sheet is a content slate financed for much larger buyers." data-evidence="Content working capital reached RMB404.7m at FY2025 and receivable days rose to 137." data-uncertainty="Net cash of RMB17.8m became net debt of RMB51.9m by June 2026." data-change="Receivable days below 100 and positive free cash flow would release the pressure.">
     <p class="section-kicker">05 &middot; Evidence &middot; Cash and balance sheet</p><h2>G.H.Y funds the slate, then waits four to five months to be paid</h2><p class="lede">Trade receivables, contract assets and productions in progress absorb the balance sheet. The problem is not simply debt; it is a widening gap between delivery and collection.</p>
-    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 05.1</span><h3>How much capital is trapped in the production cycle?</h3></div><span class="figure-source">G.H.Y statements of financial position &middot; RMBm</span></div><div class="figure-canvas working-bars"><div class="working-col"><b>344.5</b><i style="--height:84"></i><span>Dec 2023</span></div><div class="working-col"><b>410.8</b><i style="--height:100"></i><span>Dec 2024</span></div><div class="working-col"><b>404.7</b><i style="--height:98"></i><span>Dec 2025</span></div><div class="working-col"><b>290.8</b><i style="--height:71"></i><span>Jun 2026</span></div></div><figcaption class="curator-note"><b>Collection risk</b><p>FY2025 trade receivable days rose to 137 from 78, while customer advances fell sharply from their 2023 level.</p></figcaption></figure>
+    <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 05.1</span><h3>How much capital is trapped in the production cycle?</h3></div><span class="figure-source">G.H.Y statements of financial position &middot; RMBm</span></div><div class="figure-canvas working-bars"><div class="working-col"><b>344.5</b><i style="--height:84"></i><span>Dec 2023</span></div><div class="working-col"><b>290.8</b><i style="--height:71"></i><span>Dec 2024</span></div><div class="working-col"><b>410.8</b><i style="--height:100"></i><span>Dec 2025</span></div><div class="working-col"><b>404.7</b><i style="--height:98"></i><span>Jun 2026</span></div></div><figcaption class="curator-note"><b>Collection risk</b><p>FY2025 trade receivable days rose to 137 from 78, while customer advances fell sharply from their 2023 level.</p></figcaption></figure>
     <div class="section-grid g4" data-reveal><div class="metric"><b>-RMB57.3m</b><span>FY2025 free cash flow</span></div><div class="metric"><b>137 days</b><span>Trade receivable days</span></div><div class="metric"><b>RMB51.9m</b><span>Net debt at June 2026</span></div><div class="metric"><b>RMB136.0m</b><span>IPO proceeds still unspent</span></div></div>
     <div class="callout"><strong>Paying a dividend while cash flow is negative makes liquidity a decision, not only an outcome.</strong><p>G.H.Y returned about RMB9.9m through dividend and buybacks in FY2025 against negative free cash flow.</p></div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Cash-flow history and what sits inside working capital</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table numeric"><table><thead><tr><th>Period</th><th>Operating cash flow</th><th>Free cash flow</th><th>Trade receivables</th><th>Contract assets</th><th>Productions in progress</th><th>Total content working capital</th></tr></thead><tbody>
+          <tr><td>FY2021 / Dec 2021</td><td>-222.3</td><td>-235.2</td><td colspan="4">Detailed working-capital composition not shown in the source slide</td></tr>
+          <tr><td>FY2022 / Dec 2022</td><td>29.0</td><td>15.2</td><td colspan="4">Detailed working-capital composition not shown in the source slide</td></tr>
+          <tr><td>FY2023 / Dec 2023</td><td>12.7</td><td>7.4</td><td>145.5</td><td>17.6</td><td>181.4</td><td>344.5</td></tr>
+          <tr><td>FY2024 / Dec 2024</td><td>-35.0</td><td>-55.1</td><td>157.2</td><td>44.4</td><td>89.1</td><td>290.8</td></tr>
+          <tr><td>FY2025 / Dec 2025</td><td>-53.5</td><td>-57.3</td><td>131.3</td><td>87.9</td><td>191.6</td><td>410.8</td></tr>
+          <tr><td>Jun 2026 balance</td><td colspan="2">1H operating outflow: -53.2</td><td>139.7</td><td>109.7</td><td>155.3</td><td>404.7</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Five-year cash record</span><h3>Positive twice</h3><p>Free cash flow was positive only in FY2022 and FY2023. Cumulative free cash flow across FY2021-FY2025 was roughly negative RMB325m.</p></article>
+          <article class="dossier-item"><span>Funding swing</span><h3>-RMB239m</h3><p>RMB187.5m of net cash at Dec 2023 became RMB51.9m of net debt by Jun 2026 as collections slowed and bank loans rose.</p></article>
+          <article class="dossier-item"><span>Customer advances</span><h3>RMB4.7m</h3><p>Advances at Dec 2025 were down from RMB89.1m two years earlier, leaving G.H.Y to finance more of the production cycle itself.</p></article>
+        </div>
+        <p class="dossier-caption">RMB million. Free cash flow is operating cash flow less purchases of plant, equipment and intangibles. The Dec 2023 contract-asset value is the residual implied by the source total.</p>
+      </div>
+    </details>
   </section>
 
   <section class="analysis-section" id="demand" data-number="06" data-index="6" data-thesis="Demand arrives through platform budgets, title by title, with long lags." data-evidence="iQIYI revenue fell in 2025 while G.H.Y TV revenue rose 67% because delayed titles were delivered." data-uncertainty="Viewer demand and G.H.Y revenue can move in opposite directions for several reporting periods." data-change="Title-level pipeline and deal-type disclosure would make the outlook forecastable.">
     <p class="section-kicker">06 &middot; Evidence &middot; Slate and demand</p><h2>End demand moves first; G.H.Y's income statement moves last</h2><p class="lede">Viewer time and advertising shape platform budgets. Platforms then choose a handful of titles, approvals follow, revenue is recognized on delivery, and cash arrives months later.</p>
     <div class="timeline" data-reveal><article class="timeline-step"><b>End demand</b><h3>Viewers and advertisers</h3><p>Subscriptions, ads and micro-drama payments set the buyers' budget envelope.</p></article><article class="timeline-step"><b>6-18 months</b><h3>Platform budget</h3><p>iQIYI, Tencent, Youku and CCTV greenlight titles, increasingly around proven IP.</p></article><article class="timeline-step"><b>6-24 months</b><h3>Approval and delivery</h3><p>Scripts, shoots and schedules determine when a completed title reaches the platform.</p></article><article class="timeline-step"><b>Months later</b><h3>Recognition and cash</h3><p>Revenue appears on delivery or over production; collection follows after the buyer accepts it.</p></article></div>
     <div class="slate-grid" data-reveal><article class="slate-item"><span>Franchise core</span><h3>Strange Tales of Tang Dynasty 3</h3><p>Premiered November 2025. The wider franchise includes record-setting micro-drama spin-offs and an iQIYI Land theatre.</p></article><article class="slate-item"><span>Mid-length</span><h3>The Ferryman: 10 Years</h3><p>Ended June 2026 with a reported iQIYI heat record of 8,661.</p></article><article class="slate-item"><span>Broadcast</span><h3>My Destiny</h3><p>On air from March 2026 on CCTV-8.</p></article><article class="slate-item"><span>AI-assisted</span><h3>Beautiful Fairytale</h3><p>Shot through June 2026 as a planned franchise; timing remains part of the FY2026 outcome.</p></article></div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>B2B derived demand</span><strong>Platforms pay, viewers decide</strong><p>Subscriptions and advertising shape buyer budgets, but G.H.Y sees the signal only when a platform greenlights a title.</p></article>
+      <article class="insight-note"><span>Fan-driven live</span><strong>Demand is not the constraint</strong><p>Large-show box office reached RMB32.4bn in 2025; scarce superstar dates and artist economics constrain G.H.Y.</p></article>
+      <article class="insight-note"><span>Policy and culture</span><strong>Calendars matter</strong><p>CCTV slots, approvals, Nanyang stories and local production grants can matter as much as audience ratings.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Demand transmission, industry shifts and reporting lags</b></summary>
+      <div class="dossier-body">
+        <p class="dossier-intro">No single macro variable explains all three businesses. Screen production reacts to platform budgets with long lags, concerts react quickly to fan spending, and policy-linked projects follow approval and cultural calendars.</p>
+        <div class="dossier-table"><table><thead><tr><th>Economic variable</th><th>Transmission channel</th><th>Most exposed</th><th>Likely lag</th><th>Observed consequence</th></tr></thead><tbody>
+          <tr><td>Platform subscriptions and ads</td><td>Content budgets at iQIYI, Tencent and Youku</td><td>TV and film</td><td>6-18 months</td><td>iQIYI revenue fell 7% in 2025; platforms leaned harder on proven IP and profit share.</td></tr>
+          <tr><td>Consumer spending</td><td>Concert tickets and paid micro-drama episodes</td><td>Concerts / micro-dramas</td><td>0-6 months</td><td>Presales and pay-per-episode income move before long-form delivery revenue.</td></tr>
+          <tr><td>Regulation and approvals</td><td>NRTA filing, review and scheduling</td><td>TV and film</td><td>6-24 months</td><td>Delayed delivery shifts revenue; RMB16.5m of productions was written off in FY2024.</td></tr>
+          <tr><td>Interest rates and credit</td><td>Bank funding of working capital</td><td>Group</td><td>Immediate</td><td>Finance costs rose 40% in 1H2026 as bank borrowings reached RMB126.8m.</td></tr>
+          <tr><td>SGD / RMB</td><td>SGD functional currency with RMB earnings</td><td>Group</td><td>Immediate</td><td>S$8.8m FX loss in FY2022 and RMB10.4m translation loss in 1H2026.</td></tr>
+          <tr><td>AI production cost</td><td>Lower cost per finished minute</td><td>Micro-dramas</td><td>Persistent</td><td>G.H.Y can produce more cheaply, but the same technology also floods the supply side.</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Micro-dramas</span><h3>RMB100bn, crowded fast</h3><p>Users exceeded 800m and the market passed RMB100bn in 2025, but 430,000 titles appeared in Jan-Aug 2026 and more than 90% were AI-generated.</p></article>
+          <article class="dossier-item"><span>Live music</span><h3>RMB32.4bn box office</h3><p>China's 5,000-plus-seat shows drew 43.4m attendees in 2025. The bottleneck is access to superstar tours, not fan demand.</p></article>
+          <article class="dossier-item"><span>Long-form</span><h3>Fewer, safer bets</h3><p>iQIYI content spend slipped 2% to RMB15.45bn while drama filings increased 33%, favouring proven IP and co-production.</p></article>
+        </div>
+        <p class="dossier-caption">The FY2025 disconnect is instructive: iQIYI revenue fell 7%, yet G.H.Y TV revenue rose 67% as delayed titles were delivered. Revenue tracks acceptance dates before it tracks current demand.</p>
+      </div>
+    </details>
   </section>
 
   <section class="analysis-section" id="market" data-number="07" data-index="7" data-thesis="G.H.Y has valuable IP but less scale, cash and collection power than Linmon." data-evidence="Linmon earned 1.7 times G.H.Y's revenue, with a 26.6% gross margin and about 60 receivable days." data-uncertainty="The market cannot price G.H.Y's franchise extensions without disclosed economics." data-change="Peer-level disclosure of micro-drama revenue and title returns would narrow the information discount.">
     <p class="section-kicker">07 &middot; Evidence &middot; Market and peers</p><h2>Franchise IP differentiates G.H.Y; scale and cash still belong to the peer</h2><p class="lede">The closest listed comparison, Linmon Media, is larger, more profitable and paid faster. G.H.Y's answer is not to imitate its scale, but to quantify the value of the franchise niche Linmon cannot copy.</p>
     <figure class="figure" data-reveal><div class="figure-head"><div><span class="figure-label">Figure 07.1</span><h3>Where does the peer gap come from?</h3></div><span class="figure-source">FY2025 company results &middot; RMB</span></div><div class="figure-canvas peer-compare"><div class="peer-row"><span>G.H.Y</span><div class="peer-track"><i style="--size:59"></i></div><b>RMB511m</b><span>19.2% margin</span></div><div class="peer-row"><span>Linmon</span><div class="peer-track"><i style="--size:100"></i></div><b>RMB863m</b><span>26.6% margin</span></div></div><figcaption class="curator-note"><b>Curator's note</b><p>Linmon also held RMB782.8m of cash and disclosed micro-drama revenue. G.H.Y held RMB89.4m and does not.</p></figcaption></figure>
     <div class="section-grid g4" data-reveal><div class="metric"><b>S$0.053</b><span>Share price &middot; 29 Oct 2026</span></div><div class="metric"><b>S$56.6m</b><span>Market capitalization</span></div><div class="metric"><b>~40x</b><span>FY2025 price / earnings</span></div><div class="metric"><b>~0.7x</b><span>Trailing enterprise value / sales</span></div></div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>Buyer scale</span><strong>About 3.2%</strong><p>G.H.Y's entire FY2025 TV and film revenue was roughly 3.2% of iQIYI's content budget, before considering three other major buyers.</p></article>
+      <article class="insight-note"><span>Balance-sheet gap</span><strong>RMB89m vs RMB783m</strong><p>Year-end cash at G.H.Y and Linmon respectively. The closest peer can finance more titles and wait longer for collections.</p></article>
+      <article class="insight-note"><span>Disclosure gap</span><strong>141 Linmon short dramas</strong><p>Linmon discloses title counts, short-drama revenue and overseas sales. G.H.Y does not yet give investors the same franchise evidence.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Peer set and the capability G.H.Y can defend</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table numeric"><table><thead><tr><th>Capability</th><th>G.H.Y</th><th>Huace</th><th>Linmon</th><th>Strawbear</th><th>UnUsUaL</th></tr></thead><tbody>
+          <tr><td>FY2025 revenue</td><td>RMB511m</td><td>RMB2,828m</td><td>RMB863m</td><td>RMB1,029m</td><td>S$34m, 1H</td></tr>
+          <tr><td>Gross margin</td><td>19.2%</td><td>23.3%</td><td>26.6%</td><td>11.3%</td><td>12.6%, 1H</td></tr>
+          <tr><td>Net margin</td><td>1.7%</td><td>6.8%, core 0.7%</td><td>3.5%</td><td>-0.2%</td><td>4.5%, 1H</td></tr>
+          <tr><td>Overseas revenue share</td><td>3.1%</td><td>6.6%</td><td>10.3%</td><td>Not disclosed</td><td>Singapore-based</td></tr>
+          <tr><td>Long-form drama</td><td>Strong</td><td>Very strong</td><td>Strong</td><td>Strong</td><td>None</td></tr>
+          <tr><td>Micro-dramas</td><td>Developing</td><td>Not disclosed</td><td>Strong, 141 titles</td><td>Not disclosed</td><td>None</td></tr>
+          <tr><td>Concerts and live</td><td>Moderate</td><td>Low</td><td>Low</td><td>Low</td><td>Very strong</td></tr>
+          <tr><td>Owned franchise IP</td><td>Strong</td><td>Strong</td><td>Strong</td><td>Moderate</td><td>Low</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Where G.H.Y loses</span><h3>Scale and staying power</h3><p>Huace and Linmon are larger, while Linmon's 60 receivable days compare with about 137 at G.H.Y.</p></article>
+          <article class="dossier-item"><span>Where G.H.Y differs</span><h3>Nanyang plus auteur IP</h3><p>Singapore-China stories, founder-led franchises and online-to-offline extensions are harder for a larger peer to reproduce.</p></article>
+          <article class="dossier-item"><span>Investor implication</span><h3>Disclose the proof</h3><p>Title counts, micro-drama revenue, receivable ageing and franchise profit share would make the differentiation measurable.</p></article>
+        </div>
+      </div>
+    </details>
   </section>
 
   <section class="analysis-section" id="frameworks" data-number="08" data-index="8" data-thesis="G.H.Y is a price-taker where most revenue sits and a price-maker only where it owns IP." data-evidence="Four platforms dominate buying while 95.5% of G.H.Y revenue remains in TV and film production." data-uncertainty="Franchise economics are hidden inside segment totals." data-change="More upstream licensing and disclosed profit-share returns would turn IP recognition into moat evidence.">
     <p class="section-kicker">08 &middot; Decision &middot; Strategic frameworks</p><h2>Buyer power is very high; the moat lives upstream</h2><p class="lede">Commissioned production sits between powerful buyers and crowded supply. Owned franchises change the equation because no rival can sell the same sequel, spin-off or immersive extension.</p>
     <div class="force-grid" data-reveal><div class="force-row"><b>Competitive rivalry</b><span>High</span><p>Long-form filings rose while platform budgets stayed flat; micro-drama supply exploded.</p></div><div class="force-row"><b>Buyer power</b><span>Very high</span><p>Four major platforms commission most long-form drama, and G.H.Y waits about 137 days to be paid.</p></div><div class="force-row"><b>Supplier power</b><span>Moderate</span><p>Stars and writers are scarce, but cast-pay rules and in-house creative leadership limit the pressure.</p></div><div class="force-row"><b>New entrants</b><span>Split</span><p>Long-form requires trust and approval; AI micro-drama is cheap to enter.</p></div><div class="force-row"><b>Substitutes</b><span>Rising</span><p>Short video, games and AI-generated content compete for the same evenings.</p></div></div>
     <div class="callout"><strong>Verdict: move revenue out of the middle.</strong><p>Franchises, profit-sharing, micro-drama spin-offs and offline licensing are all attempts to capture the hit rent instead of only the production fee.</p></div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>Upstream &middot; IP</span><strong>Economics undisclosed</strong><p>This is where switching costs bite: no rival can offer Tang, but G.H.Y does not separate the franchise's return.</p></article>
+      <article class="insight-note"><span>Midstream &middot; Production</span><strong>19.2% to 3.9%</strong><p>FY2025 and 1H2026 TV gross margins show the part of the chain where buyer power and title timing dominate.</p></article>
+      <article class="insight-note"><span>Downstream &middot; Live</span><strong>15% to 33%</strong><p>Concert margins can look attractive, but superstar rent and cancellation tail risk sit with the promoter.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>PESTLE, hit economics and the franchise premium</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Political</span><h3>Approval creates demand</h3><p>NRTA filing and CCTV scheduling shape which titles can exist. Singapore-China ties support Nanyang stories; grants equalled 2.1 times FY2025 pre-tax profit.</p></article>
+          <article class="dossier-item"><span>Economic</span><h3>Budgets and FX</h3><p>Platform spending follows subscriptions and ads. RMB earnings inside an SGD functional currency created material FX and translation losses.</p></article>
+          <article class="dossier-item"><span>Social</span><h3>Attention is splitting</h3><p>Micro-drama users exceeded 800m while live music drew fans across provinces. Long-form competes with both poles.</p></article>
+        </div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Technological</span><h3>AI cuts both ways</h3><p>G.H.Y runs two AI teams and signed an Alibaba Cloud MOU, but cheap generation also expands supply dramatically.</p></article>
+          <article class="dossier-item"><span>Legal</span><h3>Review and VIE rules</h3><p>Micro-drama review tiers and AI labels add process; VIE contracts control PRC entities that generated 96.9% of revenue.</p></article>
+          <article class="dossier-item"><span>Environmental</span><h3>Lower materiality</h3><p>Sets, travel and physical experiences create impacts, while SGX climate disclosure adds cost for a small issuer.</p></article>
+        </div>
+        <div class="model-box"><code>Pr(Hit) = f(franchise, platform, budget, format, year)</code><code>Gross margin = f(hit, profit share, hit x profit share, delay, platform)</code><p>The analytical question is whether franchise status raises hit probability, and whether profit share pays only when a title succeeds. Approval and broadcast delays must be separated from title quality.</p></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Experience-good problem</span><h3>Nobody knows before release</h3><p>Demand for a drama is uncertain until audiences see it; outcomes follow a power law, making a few hits disproportionately valuable.</p></article>
+          <article class="dossier-item"><span>Franchise response</span><h3>Turn luck into odds</h3><p>A sequel carries audience memory, proven characters and platform evidence. Tang's rising score and spin-offs support that case.</p></article>
+          <article class="dossier-item"><span>Capture problem</span><h3>Own upside, fund the wait</h3><p>Fixed fees surrender hit rent. Profit share keeps it, but transfers funding and flop risk to G.H.Y before the audience verdict arrives.</p></article>
+        </div>
+        <p class="dossier-caption">The source review's switching-cost illustration shows the mechanism, not company guidance: a platform may rationally pay more for franchise hit probability than it saves by changing producer.</p>
+      </div>
+    </details>
   </section>
 
   <section class="analysis-section" id="risk" data-number="09" data-index="9" data-thesis="The central risk is liquidity tightening before franchise upside arrives." data-evidence="Receivables, contract assets and productions in progress absorbed more than RMB400m at FY2025." data-uncertainty="Profit-share titles reduce upfront margin while their later upside is unknowable." data-change="Positive free cash flow and a lower net-debt trajectory would reduce the Fragile rating.">
@@ -477,14 +704,67 @@ tbody tr:last-child td{border-bottom:0}
     <div class="risk-layout"><div><div class="risk-matrix" aria-label="Likelihood and impact matrix"><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div><div class="risk-cell"></div>
       <button class="risk-dot" style="left:76%;top:18%" data-risk="payments" aria-pressed="true">Payments</button><button class="risk-dot" style="left:70%;top:44%" data-risk="hits" aria-pressed="false">Hit risk</button><button class="risk-dot" style="left:48%;top:28%" data-risk="approval" aria-pressed="false">Approval</button><button class="risk-dot" style="left:53%;top:53%" data-risk="liquidity" aria-pressed="false">Liquidity</button><button class="risk-dot" style="left:24%;top:50%" data-risk="events" aria-pressed="false">Events</button><button class="risk-dot" style="left:22%;top:75%" data-risk="governance" aria-pressed="false">VIE</button>
     </div><div class="matrix-label">Likelihood &#8594; &middot; Impact rises upward</div></div><aside class="risk-detail" aria-live="polite"><span class="risk-level" id="risk-level">High likelihood / High impact</span><h3 id="risk-title">Platform payment and concentration</h3><dl><dt>What goes wrong</dt><dd id="risk-desc">Receivables and contract assets rise, forcing more bank borrowing while a small group of buyers retains leverage.</dd><dt>Trigger</dt><dd id="risk-trigger">Receivable days remain above 130 or contract-asset ageing worsens.</dd><dt>Mitigation</dt><dd id="risk-mitigation">Milestone advances, factoring and a slate spread across multiple platforms.</dd></dl></aside></div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Complete risk register and governance implications</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table"><table><thead><tr><th>Risk</th><th>Probability / impact</th><th>How economics are damaged</th><th>Leading indicator</th><th>Primary mitigation</th></tr></thead><tbody>
+          <tr><td>Platform payment and concentration</td><td>High / High</td><td>Receivables, credit losses and bank debt rise.</td><td>Receivable days; contract-asset ageing</td><td>Advances, factoring and a multi-platform slate</td></tr>
+          <tr><td>Profit-share hit risk</td><td>High / Medium-high</td><td>Margins collapse while G.H.Y waits for hits.</td><td>Heat index; Douban; half-year margin</td><td>Franchise-first selection and minimum guarantees</td></tr>
+          <tr><td>Approval and broadcast delay</td><td>Medium-high / High</td><td>Revenue slips or productions are written off.</td><td>Filing status; work-in-progress write-offs</td><td>Early filing and genre choice</td></tr>
+          <tr><td>Liquidity and refinancing</td><td>Medium-high / High</td><td>Net debt grows and the dividend comes under pressure.</td><td>Net cash; operating cash flow</td><td>Release working capital and gate new projects</td></tr>
+          <tr><td>Live-event counterparty</td><td>Medium / High</td><td>A cancellation creates a loss far beyond segment profit.</td><td>Fee terms; deposits at risk</td><td>Co-promotion and cancellation cover</td></tr>
+          <tr><td>Governance and structure</td><td>Medium / Medium-high</td><td>VIE and minority-shareholder exposure widen the discount.</td><td>VIE rules; free float; related-party activity</td><td>Independent oversight and fuller disclosure</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Founder alignment</span><h3>62.4% controlled</h3><p>Guo Jingyu has a strong economic reason to build long-term value, but also controls the votes that matter.</p></article>
+          <article class="dossier-item"><span>Structure risk</span><h3>96.9% via VIE</h3><p>PRC media earnings are controlled by contract rather than equity. The prospectus itself flags enforcement uncertainty.</p></article>
+          <article class="dossier-item"><span>Capital allocation</span><h3>RMB9.9m returned</h3><p>Dividend and buybacks were funded in a year with negative RMB57.3m free cash flow, while the company later borrowed more.</p></article>
+        </div>
+        <div class="insight-band">
+          <article class="insight-note"><span>Dividend</span><strong>0.10 S cents</strong><p>Paid every year since listing, including four loss years; roughly RMB5.9m annually at the source review's exchange rate.</p></article>
+          <article class="insight-note"><span>IPO funds</span><strong>RMB136m unspent</strong><p>RMB99.5m remained earmarked for concert expansion, exceeding unrestricted cash of RMB75.0m at Jun 2026.</p></article>
+          <article class="insight-note"><span>Market liquidity</span><strong>15-20% free float</strong><p>The shares traded on few days. The quoted price is a weak signal where turnover is so thin.</p></article>
+        </div>
+      </div>
+    </details>
   </section>
 
   <section class="analysis-section" id="outlook" data-number="10" data-index="10" data-thesis="The strategy should protect cash before pursuing more upside." data-evidence="A 37-day reduction in receivable days could free roughly RMB52m, almost all of 1H2026's operating outflow." data-uncertainty="Even the supplied bull case leaves FY2026 loss-making." data-change="A profitable second half, receivable improvement and no new event loss would move the thesis forward.">
     <p class="section-kicker">10 &middot; Decision &middot; Strategy and outlook</p><h2>Four gates before the next franchise bet</h2><p class="lede">The sequence matters: collect cash, concentrate creative capital on proven IP, use micro-drama to test cheaply, and refuse uncapped live-event risk.</p>
-    <div class="roadmap" data-reveal><article class="gate"><span class="gate-num">01</span><h3>Get paid like a lender</h3><p>Tie billing to milestones and factor platform receivables.</p><div class="gate-exit">Exit proof: receivable days below 100</div></article><article class="gate"><span class="gate-num">02</span><h3>Back proven IP</h3><p>Prioritize sequels and accept profit-share only where a franchise has evidence.</p><div class="gate-exit">Exit proof: TV gross margin above 18%</div></article><article class="gate"><span class="gate-num">03</span><h3>Use micro as R&amp;D</h3><p>Test worlds and characters cheaply, then promote winners to long-form.</p><div class="gate-exit">Exit proof: disclosed micro-drama returns</div></article><article class="gate"><span class="gate-num">04</span><h3>Live with a floor</h3><p>Co-promote with capped fees, presale gates and cancellation cover.</p><div class="gate-exit">Exit proof: no uncapped promoter exposure</div></article></div>
+    <div class="roadmap" data-reveal><article class="gate"><span class="gate-num">01</span><h3>Get paid like a lender</h3><p>Tie billing to milestones and factor platform receivables. Cutting receivable days from 137 to 100 could release roughly RMB52m.</p><div class="gate-exit">Exit proof: receivable days below 100</div></article><article class="gate"><span class="gate-num">02</span><h3>Back proven IP</h3><p>Prioritize sequels and accept profit-share only where a franchise has evidence. Two margin points are worth about RMB9.8m.</p><div class="gate-exit">Exit proof: TV gross margin above 18%</div></article><article class="gate"><span class="gate-num">03</span><h3>Use micro as R&amp;D</h3><p>Ten RMB1m pilots would cost RMB10m; promote only proven worlds and characters to long-form.</p><div class="gate-exit">Exit proof: disclosed micro-drama returns</div></article><article class="gate"><span class="gate-num">04</span><h3>Live with a floor</h3><p>Use capped fees, presale gates and cancellation cover. Never repeat an event loss on the scale of RMB86.1m.</p><div class="gate-exit">Exit proof: no uncapped promoter exposure</div></article></div>
     <p class="section-kicker" style="margin-top:54px">Interactive FY2026 scenario</p><h2 style="font-size:clamp(31px,4vw,50px)">Can the second half repair the year?</h2>
     <div class="scenario-control" role="group" aria-label="FY2026 scenario selector"><button type="button" data-scenario="bear" aria-pressed="false">Bear</button><button type="button" data-scenario="base" aria-pressed="true">Base</button><button type="button" data-scenario="bull" aria-pressed="false">Bull</button></div>
     <div class="scenario-output" aria-live="polite"><div class="scenario-lead"><span>Selected case</span><strong id="scenario-name">Base</strong><p id="scenario-note">RMB280m of 2H revenue at a 13.0% gross margin.</p></div><div class="scenario-stat"><span>FY2026 revenue</span><strong id="scenario-revenue">RMB442m</strong><p>Illustrative model</p></div><div class="scenario-stat"><span>Growth on FY2025</span><strong id="scenario-growth">-13.5%</strong><p>Versus RMB511.2m</p></div><div class="scenario-stat"><span>Pre-tax result</span><strong id="scenario-profit">~-RMB44m</strong><p id="scenario-score-note">Still loss-making</p></div></div>
+    <div class="insight-band" data-reveal>
+      <article class="insight-note"><span>Revenue sensitivity</span><strong>+/-5% moves PBT about 77%</strong><p>At the FY2025 cost base: roughly RMB1.5m, RMB6.4m and RMB11.3m of pre-tax profit across the three revenue cases.</p></article>
+      <article class="insight-note"><span>Margin sensitivity</span><strong>1 point = RMB5.1m</strong><p>About 80% of FY2025 pre-tax profit. Break-even gross margin was roughly 18.0%, or 20.6% without grants.</p></article>
+      <article class="insight-note"><span>Cost sensitivity</span><strong>3% shock = RMB12.4m</strong><p>A 3% cost-of-sales increase with no pass-through equals about 1.9 times FY2025 pre-tax profit.</p></article>
+    </div>
+    <details class="research-dossier">
+      <summary><span>Full research notes</span><b>Scenario assumptions and what the model does not promise</b></summary>
+      <div class="dossier-body">
+        <div class="dossier-table numeric"><table><thead><tr><th>Illustrative FY2026 model</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead><tbody>
+          <tr><td>1H2026 revenue, actual</td><td>162.0</td><td>162.0</td><td>162.0</td></tr>
+          <tr><td>2H2026 revenue</td><td>220.0</td><td>280.0</td><td>331.5</td></tr>
+          <tr><td>FY2026 revenue</td><td>382.0</td><td>442.0</td><td>493.5</td></tr>
+          <tr><td>Growth vs FY2025</td><td>-25.3%</td><td>-13.5%</td><td>-3.5%</td></tr>
+          <tr><td>2H2026 gross margin</td><td>8.0%</td><td>13.0%</td><td>16.9%</td></tr>
+          <tr><td>FY2026 gross margin</td><td>6.4%</td><td>9.8%</td><td>12.8%</td></tr>
+          <tr><td>FY2026 pre-tax result</td><td>About -62</td><td>About -44</td><td>About -24</td></tr>
+        </tbody></table></div>
+        <div class="dossier-grid">
+          <article class="dossier-item"><span>Anchor</span><h3>Start with the booked half</h3><p>All cases begin with actual 1H2026 revenue of RMB162.0m and the RMB36.5m pre-tax loss already incurred.</p></article>
+          <article class="dossier-item"><span>Second-half range</span><h3>Use recent delivery history</h3><p>Revenue is anchored to 2H2024-2H2025 and trimmed for profit-share deals that defer upfront recognition.</p></article>
+          <article class="dossier-item"><span>Key conclusion</span><h3>Even bull remains loss-making</h3><p>The bull case repeats 2H2025 revenue and margin, yet cannot fully repair the weak first half.</p></article>
+        </div>
+        <p class="dossier-caption">Illustrative Beyond Our Gallery model, not company guidance or a forecast. It is designed to expose which assumptions must change for break-even.</p>
+      </div>
+    </details>
+    <div class="bottom-line-grid" data-reveal>
+      <article><span>What is working</span><h3>Franchise evidence</h3><p>Tang improved from Douban 8.0 to 8.6, won an Asian Academy award and entered an iQIYI Land theatre. Ferryman set a reported mid-length heat record; FY2025 TV margin reached 19.2%.</p></article>
+      <article><span>What is broken</span><h3>Cash conversion</h3><p>FY2025 free cash flow was negative RMB57.3m, receivable days reached 137 and net cash became RMB51.9m of net debt by Jun 2026. The 1H2026 margin was 4.3%.</p></article>
+      <article><span>What to watch</span><h3>Proof in the next half</h3><p>Beautiful Fairytale deliveries, receivable days, net debt, the dividend, micro-drama disclosure and recovery of the Al Nassr-related receivable.</p></article>
+    </div>
     <div class="callout"><strong>Final view: G.H.Y owns valuable stories, but the company is financing the wait.</strong><p>The score rises with repeatable franchise economics and cash collection. It falls if net debt grows while dividends and undeployed IPO proceeds remain untouched.</p></div>
   </section>
 </main>
@@ -504,8 +784,11 @@ if(reduceMotion){revealItems.forEach(el=>el.classList.add('is-visible'));}else{c
 const sections=[...document.querySelectorAll('.analysis-section')];
 const rail={thesis:document.getElementById('rail-thesis'),evidence:document.getElementById('rail-evidence'),uncertainty:document.getElementById('rail-uncertainty'),change:document.getElementById('rail-change')};
 const current=document.getElementById('section-current');
-const sectionObserver=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(!visible)return;const s=visible.target;current.textContent=String(s.dataset.index).padStart(2,'0');rail.thesis.textContent=s.dataset.thesis;rail.evidence.textContent=s.dataset.evidence;rail.uncertainty.textContent=s.dataset.uncertainty;rail.change.textContent=s.dataset.change;},{threshold:[.15,.3,.5],rootMargin:'-18% 0px -52%'});
-sections.forEach(s=>sectionObserver.observe(s));
+let activeSectionRaf=0;
+function updateActiveSection(){activeSectionRaf=0;if(!sections.length)return;const probe=scrollY+Math.min(innerHeight*.32,260);let active=sections[0];sections.forEach(section=>{if(section.offsetTop<=probe)active=section;});current.textContent=String(active.dataset.index).padStart(2,'0');rail.thesis.textContent=active.dataset.thesis;rail.evidence.textContent=active.dataset.evidence;rail.uncertainty.textContent=active.dataset.uncertainty;rail.change.textContent=active.dataset.change;}
+addEventListener('scroll',()=>{if(!activeSectionRaf)activeSectionRaf=requestAnimationFrame(updateActiveSection);},{passive:true});
+addEventListener('resize',updateActiveSection);
+updateActiveSection();
 const route=document.getElementById('route-progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;route.style.width=(max>0?scrollY/max*100:0)+'%';}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
 document.querySelectorAll('.sections-popover a').forEach(a=>a.addEventListener('click',()=>a.closest('details').removeAttribute('open')));
 
