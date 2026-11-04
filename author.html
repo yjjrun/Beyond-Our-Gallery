@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jiarun Yang - Founder &amp; Author | Beyond Our Gallery</title>
+<meta name="description" content="Meet Jiarun Yang, founder and author of Beyond Our Gallery, and learn about the financial, creative and audience perspectives behind the research.">
+<meta property="og:title" content="Jiarun Yang - Founder &amp; Author | Beyond Our Gallery">
+<meta property="og:description" content="The researcher behind Beyond Our Gallery's work on Singapore's under-covered creative economy companies.">
+<meta property="og:image" content="https://beyondourgallery.com/assets/jiarun-yang-portrait.jpg">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/svg+xml" href="/assets/bog-mark.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#092f2d">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Jiarun Yang",
+  "jobTitle":"Founder and Author",
+  "url":"https://beyondourgallery.com/author.html",
+  "image":"https://beyondourgallery.com/assets/jiarun-yang-portrait.jpg",
+  "sameAs":["https://www.linkedin.com/in/jiarunyang/"],
+  "worksFor":{"@type":"Organization","name":"Beyond Our Gallery","url":"https://beyondourgallery.com/"},
+  "alumniOf":{"@type":"EducationalOrganization","name":"Raffles Institution"},
+  "award":"Individual Gold Medal, 2025 International Economics Olympiad"
+}
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<style>
+:root{
+  color-scheme:light;
+  --ink:#092f2d;
+  --deep:#062f2b;
+  --teal:#077a78;
+  --rose:#c6658c;
+  --rose-2:#ef91b1;
+  --plum:#8f5177;
+  --paper:#fbf8f6;
+  --paper-2:#f2e7eb;
+  --line:#d9cbd0;
+  --muted:#526562;
+  --white:#fffdfb;
+  --display:"Cormorant Garamond", Georgia, serif;
+  --script:"Allura", "Brush Script MT", cursive;
+  --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px, calc(100% - 40px));margin:0 auto}
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:30;
+  background:rgba(255,253,251,.92);
+  border-bottom:1px solid rgba(9,47,45,.12);
+  backdrop-filter:blur(18px);
+}
+.nav{
+  min-height:74px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:28px;
+}
+.brand{display:flex;align-items:center;gap:10px;min-width:220px}
+.brand img{
+  width:42px;
+  height:42px;
+  object-fit:cover;
+  border:1px solid rgba(9,47,45,.16);
+  background:#f4dce5;
+}
+.brand-wordmark{display:flex;flex-direction:column;gap:1px}
+.brand-wordmark strong{font-size:17px;font-weight:900;letter-spacing:0;line-height:1}
+.brand-wordmark strong span{color:var(--rose)}
+.brand-wordmark small{color:var(--teal);font-size:9px;font-weight:900;letter-spacing:.28em;line-height:1}
+.nav-links{display:flex;justify-content:center;gap:26px}
+.nav-links a{color:#263c3b;font-size:14px;font-weight:700;padding:8px 0}
+.nav-links a:hover,.nav-links a:focus-visible,.nav-links a[aria-current="page"]{color:var(--rose)}
+.back-link,.button,.text-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  font-weight:800;
+}
+.back-link{font-size:14px;color:var(--ink)}
+.back-link:hover,.back-link:focus-visible{color:var(--rose)}
+.back-link svg,.button svg,.text-link svg{width:18px;height:18px;flex:0 0 auto}
+.author-hero{
+  position:relative;
+  min-height:min(760px, calc(100svh - 90px));
+  overflow:hidden;
+  isolation:isolate;
+  background:#272c2f;
+  color:var(--white);
+}
+.author-hero-image{
+  position:absolute;
+  inset:0 0 0 auto;
+  width:54%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 26%;
+  filter:saturate(.84) contrast(1.04);
+  z-index:-3;
+}
+.author-hero::before{
+  content:"";
+  position:absolute;
+  inset:0 46% 0 0;
+  z-index:-2;
+  background:var(--deep);
+}
+.author-hero::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:48%;
+  width:9%;
+  z-index:-1;
+  background:rgba(6,47,43,.66);
+  transform:skewX(-8deg);
+  transform-origin:bottom;
+}
+.hero-inner{
+  min-height:min(760px, calc(100svh - 90px));
+  display:flex;
+  align-items:center;
+  padding:60px 0 70px;
+}
+.hero-copy{width:min(590px, 49%);position:relative}
+.hero-kicker{
+  margin:0 0 18px;
+  color:var(--rose-2);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+.author-hero h1{
+  margin:0;
+  font-family:var(--display);
+  font-size:clamp(72px, 9vw, 132px);
+  font-weight:700;
+  line-height:.74;
+  letter-spacing:0;
+}
+.author-hero h1 span{
+  display:block;
+  margin:18px 0 0 clamp(42px, 6vw, 86px);
+  color:var(--rose-2);
+  font-family:var(--script);
+  font-size:.68em;
+  font-weight:400;
+  line-height:.8;
+}
+.hero-summary{
+  max-width:570px;
+  margin:32px 0 0;
+  color:#e6efed;
+  font-size:clamp(17px, 1.6vw, 21px);
+  line-height:1.45;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:30px}
+.button{
+  min-height:48px;
+  border-radius:8px;
+  background:var(--rose);
+  color:#fff;
+  padding:0 22px;
+  font-size:15px;
+  transition:transform .18s ease,background .18s ease;
+}
+.button:hover,.button:focus-visible{background:#b8567d;transform:translateY(-2px)}
+.text-link{border-bottom:1px solid currentColor;padding:0 0 2px}
+.text-link:hover,.text-link:focus-visible{color:var(--rose-2)}
+.hero-index{
+  position:absolute;
+  right:28px;
+  bottom:26px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#fff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.hero-index::before{content:"";width:74px;height:1px;background:var(--rose-2)}
+.section{padding:92px 0}
+.section-kicker{
+  margin:0 0 12px;
+  color:var(--plum);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+.section h2{
+  margin:0;
+  font-family:var(--display);
+  font-size:clamp(44px, 6vw, 76px);
+  line-height:.92;
+  letter-spacing:0;
+}
+.biography{background:var(--white)}
+.bio-grid{display:grid;grid-template-columns:minmax(240px,.68fr) minmax(0,1.32fr);gap:clamp(48px,8vw,110px);align-items:start}
+.bio-side{position:sticky;top:112px}
+.bio-side p{max-width:330px;margin:24px 0 0;color:var(--muted);font-size:14px}
+.bio-copy{border-top:1px solid var(--line);padding-top:28px}
+.bio-copy p{
+  margin:0 0 24px;
+  color:#294542;
+  font-family:var(--display);
+  font-size:clamp(24px,2.6vw,35px);
+  line-height:1.28;
+}
+.bio-copy p:first-child::first-letter{
+  float:left;
+  margin:4px 9px 0 0;
+  color:var(--rose);
+  font-size:3.1em;
+  font-weight:700;
+  line-height:.7;
+}
+.lenses{background:var(--deep);color:var(--white)}
+.lenses .section-kicker{color:var(--rose-2)}
+.lenses-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.lenses-intro{margin:0;color:#c8d9d6;max-width:520px}
+.lens-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:48px;background:rgba(255,255,255,.14)}
+.lens{
+  min-height:300px;
+  padding:34px;
+  background:var(--deep);
+  position:relative;
+  overflow:hidden;
+}
+.lens::after{
+  content:attr(data-number);
+  position:absolute;
+  right:18px;
+  bottom:-28px;
+  color:rgba(239,145,177,.12);
+  font-family:var(--display);
+  font-size:124px;
+  font-weight:700;
+  line-height:1;
+}
+.lens svg{width:26px;height:26px;color:var(--rose-2)}
+.lens h3{margin:58px 0 12px;font-family:var(--display);font-size:31px;line-height:1}
+.lens p{margin:0;position:relative;z-index:1;color:#c8d9d6;font-size:14px}
+.path{background:#f2e7eb}
+.path-grid{display:grid;grid-template-columns:minmax(280px,.75fr) minmax(0,1.25fr);gap:clamp(48px,8vw,110px)}
+.path-heading p{max-width:420px;margin:22px 0 0;color:var(--muted)}
+.timeline{border-top:1px solid rgba(9,47,45,.25)}
+.milestone{display:grid;grid-template-columns:110px 1fr;gap:28px;padding:30px 0;border-bottom:1px solid rgba(9,47,45,.18)}
+.milestone time,.milestone .time-label{color:var(--plum);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.milestone h3{margin:0;font-family:var(--display);font-size:29px;line-height:1.1}
+.milestone p{margin:8px 0 0;color:#48605d;font-size:14px}
+.milestone .text-link{margin-top:12px;color:var(--teal);font-size:13px}
+.principles{background:var(--white)}
+.principles-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:clamp(48px,8vw,105px);align-items:start}
+.principle-list{margin-top:42px}
+.principle{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--line)}
+.principle:last-child{border-bottom:1px solid var(--line)}
+.principle span{color:var(--rose);font-family:var(--display);font-size:24px;font-weight:700}
+.principle h3{margin:0;font-size:17px}
+.principle p{margin:7px 0 0;color:var(--muted);font-size:14px}
+.profile-note{border-left:4px solid var(--rose);background:var(--paper-2);padding:30px}
+.profile-note blockquote{margin:0;font-family:var(--display);font-size:31px;line-height:1.16}
+.profile-note p{margin:24px 0 0;color:var(--muted);font-size:13px}
+.profile-links{display:flex;flex-wrap:wrap;gap:18px;margin-top:28px}
+.profile-links .text-link:hover,.profile-links .text-link:focus-visible{color:var(--rose)}
+.research{background:#eef1ee}
+.research-head{display:flex;justify-content:space-between;gap:30px;align-items:end}
+.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.research-card{background:var(--white);border:1px solid rgba(9,47,45,.13);transition:transform .2s ease,box-shadow .2s ease}
+.research-card:hover,.research-card:focus-visible{transform:translateY(-4px);box-shadow:0 18px 48px rgba(9,47,45,.13)}
+.research-card img{width:100%;height:190px;object-fit:cover}
+.research-card div{padding:22px}
+.research-card small{color:var(--plum);font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.research-card h3{margin:10px 0 0;font-family:var(--display);font-size:30px;line-height:1}
+.research-card p{margin:12px 0 0;color:var(--muted);font-size:13px}
+.site-footer{background:#061f1d;color:#c9dbd8;padding:46px 0}
+.footer-grid{display:grid;grid-template-columns:minmax(260px,1fr) auto;gap:30px;align-items:start}
+.footer-logo{width:250px;max-width:100%;margin-bottom:18px;border:1px solid rgba(255,255,255,.12)}
+.site-footer p{margin:0;max-width:760px;font-size:13px}
+.footer-links{display:grid;grid-template-columns:repeat(2,max-content);gap:10px 26px}
+.footer-links a{font-size:13px;font-weight:800}
+.footer-links a:hover,.footer-links a:focus-visible{color:var(--rose-2)}
+[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+[data-reveal].is-visible{opacity:1;transform:none}
+@media (max-width:980px){
+  .nav{grid-template-columns:1fr auto}
+  .nav-links{order:3;grid-column:1/-1;justify-content:flex-start;overflow-x:auto;padding-bottom:14px}
+  .author-hero-image{width:56%}
+  .author-hero::before{right:44%}
+  .author-hero::after{left:50%;width:8%}
+  .hero-copy{width:51%}
+  .bio-grid,.path-grid,.principles-layout{grid-template-columns:1fr}
+  .bio-side{position:static}
+  .lenses-head{grid-template-columns:1fr}
+  .research-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:700px){
+  .wrap{width:min(100% - 28px,1180px)}
+  .site-header{position:relative}
+  .nav{grid-template-columns:1fr;gap:12px;padding:14px 0}
+  .brand{min-width:0}
+  .back-link{position:absolute;right:0;top:26px}
+  .nav-links{gap:18px;padding-bottom:4px}
+  .author-hero{min-height:0;background:var(--deep)}
+  .author-hero-image{inset:0;width:100%;height:230px;object-position:50% 18%}
+  .author-hero::before{inset:210px 0 0;background:var(--deep)}
+  .author-hero::after{display:none}
+  .hero-inner{display:block;min-height:0;padding:230px 0 30px}
+  .hero-copy{width:100%}
+  .hero-kicker{margin-bottom:8px}
+  .author-hero h1{font-size:clamp(54px,16vw,64px)}
+  .author-hero h1 span{margin:7px 0 0 34px}
+  .hero-summary{margin-top:14px;font-size:15px}
+  .hero-actions{gap:12px;margin-top:18px}
+  .hero-actions .button{min-height:44px;padding:0 16px}
+  .hero-index{display:none}
+  .section{padding:66px 0}
+  .bio-copy p{font-size:25px}
+  .lens-grid,.research-grid{grid-template-columns:1fr}
+  .lens{min-height:250px}
+  .milestone{grid-template-columns:1fr;gap:8px}
+  .research-head{display:block}
+  .research-head .text-link{margin-top:20px}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}
+  [data-reveal]{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Beyond Our Gallery home">
+      <img src="assets/bog-mark.svg" alt="">
+      <span class="brand-wordmark">
+        <strong>BEYOND OUR <span>GALLERY</span></strong>
+        <small>SGX ART &amp; MEDIA RESEARCH</small>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html#company-gallery">Companies</a>
+      <a href="index.html#latest-research">Research</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="author.html" aria-current="page">About</a>
+    </nav>
+    <a class="back-link" href="index.html"><i data-lucide="arrow-left" aria-hidden="true"></i> Home</a>
+  </div>
+</header>
+
+<main>
+  <section class="author-hero" aria-labelledby="author-name">
+    <img class="author-hero-image" src="assets/jiarun-yang-portrait.jpg" alt="Portrait of Jiarun Yang in a navy suit">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="hero-kicker">Founder &amp; Author</p>
+        <h1 id="author-name">Jiarun <span>Yang</span></h1>
+        <p class="hero-summary">Researching the businesses behind Singapore's creative economy, where financial evidence meets consumer behaviour, storytelling and artistic identity.</p>
+        <div class="hero-actions">
+          <a class="button" href="index.html#company-gallery">Explore the research <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          <a class="text-link" href="https://www.linkedin.com/in/jiarunyang/" target="_blank" rel="noopener">LinkedIn <i data-lucide="external-link" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-index" aria-hidden="true">Researcher &middot; Artist &middot; Builder</div>
+  </section>
+
+  <section class="section biography" aria-labelledby="biography-title">
+    <div class="wrap bio-grid">
+      <div class="bio-side" data-reveal>
+        <p class="section-kicker">Biography</p>
+        <h2 id="biography-title">A wider lens on creative value.</h2>
+        <p>Beyond Our Gallery was founded to make under-covered creative businesses more legible to readers without flattening what makes them distinctive.</p>
+      </div>
+      <div class="bio-copy" data-reveal>
+        <p>Jiarun Yang founded Beyond Our Gallery to explore the businesses behind Singapore's creative economy. His research examines how companies turn creativity into sustainable commercial value, connecting financial analysis with an understanding of consumer behaviour, storytelling and artistic identity.</p>
+        <p>A Raffles Institution graduate, Jiarun captained Singapore's team at the 2025 International Economics Olympiad and earned an individual gold medal. During an internship at Norias SG, he developed Python tools to analyse institutional investment holdings, deepening his experience in financial research and data analysis.</p>
+        <p>His interest in creative businesses also comes from making art himself. After more than a decade in the Nanyang Academy of Fine Arts' Young Artist Programme, he founded The Acrylic Project, an initiative combining upcycling, sustainable art and arts education.</p>
+        <p>Through Beyond Our Gallery, Jiarun brings these perspectives together to make overlooked companies more accessible. He is particularly interested in how creative businesses distinguish themselves, build lasting demand and capture the value of their work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section lenses" aria-labelledby="lenses-title">
+    <div class="wrap">
+      <div class="lenses-head" data-reveal>
+        <div>
+          <p class="section-kicker">The research lens</p>
+          <h2 id="lenses-title">Three ways of seeing the same business.</h2>
+        </div>
+        <p class="lenses-intro">The site treats a creative company as more than a set of accounts. Quality emerges from the relationship between economics, identity and audience demand.</p>
+      </div>
+      <div class="lens-grid">
+        <article class="lens" data-number="01" data-reveal>
+          <i data-lucide="chart-no-axes-combined" aria-hidden="true"></i>
+          <h3>Financial evidence</h3>
+          <p>Primary filings, cash conversion, margins, returns and operating metrics establish what the business has already proved.</p>
+        </article>
+        <article class="lens" data-number="02" data-reveal>
+          <i data-lucide="palette" aria-hidden="true"></i>
+          <h3>Creative identity</h3>
+          <p>Brand, craft, intellectual property and artistic differentiation explain why a company may be difficult to replace.</p>
+        </article>
+        <article class="lens" data-number="03" data-reveal>
+          <i data-lucide="users" aria-hidden="true"></i>
+          <h3>Audience behaviour</h3>
+          <p>Attention only becomes durable value when audiences return, recommend, pay and deepen their relationship with the work.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section path" aria-labelledby="path-title">
+    <div class="wrap path-grid">
+      <div class="path-heading" data-reveal>
+        <p class="section-kicker">Selected path</p>
+        <h2 id="path-title">Built across economics, data and art.</h2>
+        <p>Each part of the path informs how Beyond Our Gallery asks questions and evaluates evidence.</p>
+      </div>
+      <div class="timeline" data-reveal>
+        <article class="milestone">
+          <time datetime="2025">2025</time>
+          <div><h3>International Economics Olympiad</h3><p>Captained Singapore's team and earned an individual gold medal. Singapore finished first in the overall team results.</p><a class="text-link" href="https://2025.ieo-official.org/results" target="_blank" rel="noopener">Official results <i data-lucide="external-link" aria-hidden="true"></i></a></div>
+        </article>
+        <article class="milestone">
+          <span class="time-label">Research practice</span>
+          <div><h3>Norias SG</h3><p>Developed Python tools to analyse institutional investment holdings during an internship in financial research and data analysis.</p></div>
+        </article>
+        <article class="milestone">
+          <span class="time-label">Creative practice</span>
+          <div><h3>NAFA Young Artist Programme</h3><p>Spent more than a decade developing an artistic practice through the Nanyang Academy of Fine Arts.</p></div>
+        </article>
+        <article class="milestone">
+          <span class="time-label">Founder</span>
+          <div><h3>The Acrylic Project</h3><p>Founded an initiative bringing together upcycling, sustainable art and arts education.</p></div>
+        </article>
+        <article class="milestone">
+          <span class="time-label">Today</span>
+          <div><h3>Beyond Our Gallery</h3><p>Builds source-led research that connects business quality with the creative decisions that produce demand.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section principles" aria-labelledby="principles-title">
+    <div class="wrap principles-layout">
+      <div data-reveal>
+        <p class="section-kicker">Author's approach</p>
+        <h2 id="principles-title">Evidence first. Context always.</h2>
+        <div class="principle-list">
+          <article class="principle"><span>01</span><div><h3>Start with primary sources</h3><p>Company filings, annual reports and direct operating disclosures anchor the analysis before interpretation begins.</p></div></article>
+          <article class="principle"><span>02</span><div><h3>Separate fact from judgement</h3><p>Reported figures, calculations, assumptions and undisclosed data are labelled so readers can see where certainty ends.</p></div></article>
+          <article class="principle"><span>03</span><div><h3>Make the score explainable</h3><p>The fixed methodology organises evidence for comparison; it does not replace the underlying research or a reader's judgement.</p></div></article>
+          <article class="principle"><span>04</span><div><h3>Remain editorially independent</h3><p>Beyond Our Gallery does not publish paid ratings and is not sponsored by the companies it covers.</p></div></article>
+        </div>
+      </div>
+      <aside class="profile-note" data-reveal>
+        <blockquote>Creative businesses deserve the same analytical rigour as any other company, without losing sight of why their work matters.</blockquote>
+        <p>Beyond Our Gallery is published for general information and education. Its scores are research tools, not investment recommendations.</p>
+        <div class="profile-links">
+          <a class="text-link" href="methodology.html">Read the methodology <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          <a class="text-link" href="mailto:hello@beyondourgallery.com">Contact Jiarun <i data-lucide="mail" aria-hidden="true"></i></a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section research" aria-labelledby="research-title">
+    <div class="wrap">
+      <div class="research-head" data-reveal>
+        <div><p class="section-kicker">Selected research</p><h2 id="research-title">Recent company analysis.</h2></div>
+        <a class="text-link" href="index.html#company-gallery">View all companies <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="research-grid">
+        <a class="research-card" href="kingsmen-creatives.html" data-reveal>
+          <img src="assets/strategy-visitors.jpg" alt="Visitors inside an immersive exhibition space">
+          <div><small>Experiential &middot; SGX: 5MZ</small><h3>Kingsmen Creatives</h3><p>How project execution, regional scale and cash conversion shape the quality of an experience-design business.</p></div>
+        </a>
+        <a class="research-card" href="straco-corporation.html" data-reveal>
+          <img src="assets/straco-soa.jpg" alt="Underwater attraction operated by Straco Corporation">
+          <div><small>Attractions &middot; SGX: S85</small><h3>Straco Corporation</h3><p>A high-margin attractions portfolio tested against concentration, reinvestment and demand recovery.</p></div>
+        </a>
+        <a class="research-card" href="winking-studios.html" data-reveal>
+          <img src="assets/winking-songs-of-silence.webp" alt="Illustrated fantasy artwork from Winking Studios' portfolio">
+          <div><small>Games &amp; media &middot; SGX: WKS</small><h3>Winking Studios</h3><p>Scale, bookings and net cash meet the unresolved economics of artist productivity and margin.</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <img class="footer-logo" src="assets/bog-logo-lockup.png" alt="Beyond Our Gallery, SGX Art and Media Research">
+      <p>Investment disclaimer: Beyond Our Gallery is published for general information and education only. Nothing on this site is financial advice, a recommendation, an offer or a solicitation to buy or sell securities.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="author.html">Author</a>
+      <a href="mailto:hello@beyondourgallery.com">Contact</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="index.html#standards">Research standards</a>
+      <a href="index.html#standards">Privacy policy</a>
+      <a href="#top">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  if (window.lucide) window.lucide.createIcons();
+  const items = document.querySelectorAll("[data-reveal]");
+  if (!items.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    items.forEach(item => item.classList.add("is-visible"));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {threshold:.14});
+  items.forEach(item => observer.observe(item));
+});
+</script>
+</body>
+</html>
