@@ -1,0 +1,277 @@
+/* Company identities layered over the shared Beyond Our Gallery editorial system. */
+body[class*="company-"]{
+  --bog-pink:#c6658c;
+  --bog-green:#0a4a45;
+  overflow-x:clip;
+}
+.dezign-theme,.polaris-theme{overflow-x:clip}
+.opm-section{overflow:clip}
+
+/* Kingsmen: signal red, ink black, with a small BOG pink counterpoint. */
+.company-kingsmen{
+  --page:#151315;
+  --salmon:#f36a70;
+  --red:#ed1c24;
+  --deepred:#821116;
+  --redtext:#c71920;
+  --surface:#fff;
+  --surface2:#f4f1f1;
+  --ink:#201b1d;
+  --ink2:#5b5356;
+  --muted:#81777b;
+  --grid:#ded6d8;
+  --baseline:#c9bec1;
+  --s1:#ed1c24;
+  --s2:#231f20;
+  --s3:#f36a70;
+  --s4:#c6658c;
+  --seq250:#f5969a;
+  --seq400:#ed1c24;
+  --seq550:#821116;
+  --bog-paper:#fffdfc;
+  --bog-paper-2:#f6f3f3;
+  --bog-blush:#f9e7e8;
+  --bog-blush-2:#f3d5d7;
+  --bog-forest:#231f20;
+  --bog-forest-2:#721116;
+  --bog-ink:#231f20;
+  --bog-copy:#5c5356;
+  --bog-rule:rgba(35,31,32,.17);
+}
+.company-kingsmen .route-progress{background:linear-gradient(90deg,#231f20,#ed1c24 62%,var(--bog-pink))}
+.company-kingsmen .card{background:linear-gradient(180deg,#fff 0%,#f4f1f1 100%)}
+.company-kingsmen header.hero{
+  background:
+    linear-gradient(110deg,rgba(20,16,17,.99) 0%,rgba(35,31,32,.97) 50%,rgba(112,12,18,.94) 100%),
+    #231f20;
+}
+.company-kingsmen header.hero::before{
+  background:
+    linear-gradient(90deg,rgba(18,15,16,.97) 0%,rgba(28,23,25,.87) 42%,rgba(35,31,32,.28) 69%,rgba(128,14,21,.38) 100%),
+    linear-gradient(180deg,rgba(255,255,255,.02),transparent 54%,rgba(237,28,36,.10));
+}
+.company-kingsmen header.hero::after{background:linear-gradient(90deg,transparent,#ed1c24,#f36a70,var(--bog-pink),transparent)}
+.company-kingsmen .hero .kicker{color:#ffb2b5}
+.company-kingsmen .hero h1 .title-line{color:#f1474d}
+.company-kingsmen .hero h1 .rule{background:linear-gradient(90deg,#ed1c24,#f36a70 74%,var(--bog-pink))}
+.company-kingsmen .hero .byline .btg{color:#ff9da1}
+.company-kingsmen .hero-media{box-shadow:0 30px 86px rgba(0,0,0,.45),0 0 0 10px rgba(237,28,36,.09)}
+.company-kingsmen .hero-ghost{border-color:rgba(237,28,36,.30)}
+.company-kingsmen .hero-ghost::after{background:linear-gradient(145deg,rgba(35,31,32,.20),rgba(237,28,36,.28))}
+.company-kingsmen nav{box-shadow:0 8px 28px rgba(35,31,32,.06)}
+.company-kingsmen nav a:hover,.company-kingsmen nav a[aria-current="true"],.company-kingsmen .read-progress{color:#c71920}
+.company-kingsmen #score,.company-kingsmen #financials,.company-kingsmen #market,.company-kingsmen #risk{
+  --sum-rule:rgba(35,31,32,.20);
+  --sum-divider:rgba(35,31,32,.13);
+  --sum-label-c:#74696d;
+  background:radial-gradient(700px 360px at 96% 10%,rgba(237,28,36,.08),transparent 67%),linear-gradient(180deg,var(--bog-paper),var(--bog-paper-2));
+}
+.company-kingsmen #segments,.company-kingsmen #demand,.company-kingsmen #component-scoring{
+  --sum-rule:rgba(130,17,22,.20);
+  --sum-divider:rgba(130,17,22,.13);
+  --sum-label-c:#775e62;
+  background:radial-gradient(820px 440px at 100% 0%,rgba(255,255,255,.76),transparent 68%),linear-gradient(145deg,#fdf7f7,var(--bog-blush) 52%,#f5dadd);
+}
+.company-kingsmen #overview,.company-kingsmen #orderbook,.company-kingsmen #frameworks,.company-kingsmen #strategy{
+  background:radial-gradient(820px 500px at 94% 8%,rgba(237,28,36,.18),transparent 66%),radial-gradient(660px 460px at 0% 100%,rgba(198,101,140,.10),transparent 68%),linear-gradient(150deg,#171415 0%,#292123 58%,#5f1116 100%);
+}
+.company-kingsmen :is(#score,#segments,#financials,#market,#demand,#risk,#component-scoring) .slabel{color:#b61a21}
+.company-kingsmen #score .scoredial{background:conic-gradient(#ed1c24 calc(var(--score) * 1%),rgba(35,31,32,.10) 0);box-shadow:0 18px 42px rgba(35,31,32,.10)}
+.company-kingsmen #score .catbar i{background:linear-gradient(90deg,#231f20 0%,#ed1c24 calc(var(--pct) * 1%),rgba(35,31,32,.10) calc(var(--pct) * 1%))}
+.company-kingsmen .card,.company-kingsmen .card:nth-child(even),.company-kingsmen .card.outline,.company-kingsmen .grid>.card:not(.stat):not(.show),.company-kingsmen .chain>.card,.company-kingsmen section :is(.wrap,.expand-body)>.card:not(.stat){border-color:rgba(35,31,32,.13);border-top-color:rgba(237,28,36,.80);box-shadow:0 18px 46px rgba(35,31,32,.09)}
+.company-kingsmen .card:nth-child(even),.company-kingsmen .card.outline:nth-child(even){border-top-color:rgba(35,31,32,.76)}
+.company-kingsmen figure.chart{background:radial-gradient(720px 360px at 100% 0%,rgba(237,28,36,.09),transparent 68%),radial-gradient(620px 320px at 0% 100%,rgba(35,31,32,.06),transparent 70%),#fff;border-color:rgba(35,31,32,.15);box-shadow:0 26px 70px rgba(35,31,32,.10)}
+.company-kingsmen thead th{background:linear-gradient(180deg,#3b3235,#231f20)}
+.company-kingsmen tbody tr:nth-child(even) td{background:#faecee}
+.company-kingsmen #demand .formula,.company-kingsmen .rws-feature{background:linear-gradient(145deg,#231f20,#651116);border-color:rgba(237,28,36,.30)}
+.company-kingsmen .takeaway-rail{background:linear-gradient(145deg,rgba(35,31,32,.98),rgba(101,17,22,.96));border-color:rgba(237,28,36,.20);box-shadow:0 20px 56px rgba(35,31,32,.24)}
+.company-kingsmen footer{background:linear-gradient(145deg,#171415,#231f20 68%,#681015);border-top-color:rgba(237,28,36,.28)}
+@media(max-width:720px){.company-kingsmen header.hero::before{background:linear-gradient(180deg,rgba(18,15,16,.97),rgba(35,31,32,.90) 58%,rgba(104,16,22,.65))}}
+
+/* Straco: attraction orange and the pale blue-white of its emblem. */
+.company-straco{
+  --page:#fffaf2;
+  --orange:#f29100;
+  --orangelight:#ffb431;
+  --orangedeep:#8f4d00;
+  --orangetext:#9a5100;
+  --emblem:#eff3fa;
+  --surface:#fff;
+  --surface2:#fff7e8;
+  --ink:#2d2113;
+  --ink2:#63513d;
+  --grid:#e6d7c3;
+}
+.company-straco .route-progress{background:linear-gradient(90deg,#f29100 0 60%,#b8d1e8 60% 82%,var(--bog-green) 82%)}
+
+/* Winking: the studio's burgundy, softened by BOG pink. */
+.company-winking{
+  --ink:#2d0b19;
+  --ink-2:#62404d;
+  --deep:#50001d;
+  --wine:#970036;
+  --wine-2:#bd245b;
+  --pink:#e997b4;
+  --pink-soft:#f8e4eb;
+  --paper:#fffafa;
+  --paper-2:#f5eaee;
+  --line:#dfcbd3;
+  --muted:#78656c;
+}
+.company-winking .route-progress{background:linear-gradient(90deg,#50001d,#970036 68%,#e997b4)}
+
+/* Vividthree: lime and technical grey, with darker lime reserved for text. */
+.company-vividthree{
+  --ink:#24282a;
+  --ink-2:#50575a;
+  --deep:#252a2d;
+  --wine:#5a720b;
+  --wine-2:#a9d32d;
+  --pink:#92989b;
+  --pink-soft:#eef4db;
+  --paper:#fcfdf9;
+  --paper-2:#f0f3eb;
+  --line:#d6dbcc;
+  --muted:#697074;
+}
+.company-vividthree .route-progress{background:linear-gradient(90deg,#252a2d,#9fc828 70%,var(--bog-pink))}
+
+/* Lum Chang Creations: heritage burgundy and architectural gold. */
+.company-lumchang{
+  --ink:#361313;
+  --ink-2:#604747;
+  --deep:#300b0c;
+  --wine:#651718;
+  --wine-2:#8e2929;
+  --pink:#b99a59;
+  --pink-soft:#f1eadb;
+  --paper:#fdfbf7;
+  --paper-2:#f3ede2;
+  --line:#dacfb9;
+  --muted:#766b5c;
+}
+.company-lumchang .route-progress{background:linear-gradient(90deg,#4a0e0f,#7c2020 56%,#b99a59)}
+
+/* mm2: cinema blue, silver and a quiet BOG pink endpoint. */
+.company-mm2{
+  --ink:#142a43;
+  --ink-2:#45586d;
+  --deep:#0e2d53;
+  --wine:#1652a0;
+  --wine-2:#2f74c5;
+  --pink:#8e969d;
+  --pink-soft:#e9eef4;
+  --paper:#fbfcfe;
+  --paper-2:#edf2f7;
+  --line:#cbd5df;
+  --muted:#647181;
+  --mm2-blue:#1652a0;
+}
+.company-mm2 .route-progress{background:linear-gradient(90deg,#123c73,#1764bd 70%,#9da3a8)}
+
+/* UnUsUaL: concert black with BOG pink used as the live-stage accent. */
+.company-unusual{
+  --ink:#1d191b;
+  --ink-2:#554e51;
+  --deep:#171315;
+  --wine:#282224;
+  --wine-2:#5a4e53;
+  --pink:#c6658c;
+  --pink-soft:#f4e8ed;
+  --paper:#fdfcfc;
+  --paper-2:#f0edee;
+  --line:#d7d1d3;
+  --muted:#70696c;
+}
+.company-unusual .route-progress{background:linear-gradient(90deg,#171315 0 58%,var(--bog-pink) 58% 82%,var(--bog-green) 82%)}
+
+/* G.H.Y: broadcast red and celebratory gold. */
+.company-ghy{
+  --ink:#321314;
+  --ink-2:#66494a;
+  --deep:#5b090d;
+  --wine:#bd101b;
+  --wine-2:#e2212d;
+  --pink:#f2b71c;
+  --pink-soft:#fff2d2;
+  --paper:#fffdf9;
+  --paper-2:#f8eee7;
+  --line:#e4cfc2;
+  --muted:#786864;
+}
+.company-ghy .route-progress{background:linear-gradient(90deg,#9f0811,#ed1c24 64%,#f4b91f)}
+
+/* NoonTalk: warm orange and production black. */
+.company-noontalk{
+  --ink:#2d231b;
+  --ink-2:#66594e;
+  --deep:#2a211c;
+  --wine:#a95a00;
+  --wine-2:#f4a72e;
+  --pink:#f4a72e;
+  --pink-soft:#fff0d9;
+  --paper:#fffdf9;
+  --paper-2:#f7eee3;
+  --line:#e2d4c4;
+  --muted:#786d63;
+}
+.company-noontalk .route-progress{background:linear-gradient(90deg,#2a211c,#f4a72e 72%,var(--bog-pink))}
+
+/* Esplanade: bay teal with the canopy's purple and orange facets. */
+.company-esplanade{
+  --ink:#083941;
+  --ink-2:#426269;
+  --deep:#073f49;
+  --wine:#00778f;
+  --wine-2:#00a0ba;
+  --pink:#f27a13;
+  --pink-soft:#e8f2f3;
+  --paper:#fbfdfd;
+  --paper-2:#eaf3f4;
+  --line:#c8dadd;
+  --muted:#61777c;
+}
+.company-esplanade .route-progress{background:linear-gradient(90deg,#008da8 0 48%,#75065a 48% 76%,#f27a13 76%)}
+.company-esplanade .metric:nth-child(3){border-top-color:#75065a}
+
+/* Shared multi-accent details. Primary text remains on contrast-safe dark tones. */
+.company-vividthree .score-row:nth-child(2n) .score-fill,
+.company-mm2 .score-row:nth-child(2n) .score-fill,
+.company-ghy .score-row:nth-child(2n) .score-fill,
+.company-noontalk .score-row:nth-child(2n) .score-fill,
+.company-esplanade .score-row:nth-child(2n) .score-fill{background:var(--pink)}
+.company-esplanade .score-row:nth-child(3) .score-fill{background:#f27a13}
+.company-ghy .metric:nth-child(even),.company-lumchang .metric:nth-child(even),.company-esplanade .metric:nth-child(even){border-top-color:var(--pink)}
+
+/* Polaris: all five star facets become part of the analytical language. */
+.polaris-theme{
+  --accent:#078d78;
+  --accent-2:#ef9a22;
+  --accent-soft:#e5f1ec;
+  --deep:#201a20;
+  --ink:#272126;
+  --ink-2:#585057;
+  --paper:#faf9f7;
+  --paper-2:#eeeae8;
+  --line:#d8d0d3;
+  --polaris-blue:#2d9bb0;
+  --polaris-green:#43a64a;
+  --polaris-yellow:#c6d51f;
+  --polaris-orange:#e68b1d;
+  --polaris-purple:#743f80;
+}
+.polaris-theme .route-progress{background:linear-gradient(90deg,var(--polaris-blue),var(--polaris-green),var(--polaris-yellow),var(--polaris-orange),var(--polaris-purple))}
+.polaris-theme .polaris-mark{filter:none;mix-blend-mode:normal;background:#fff;padding:15px;box-shadow:0 14px 36px rgba(0,0,0,.22)}
+.polaris-theme .score-row:nth-child(1) .score-fill,.polaris-theme .category-bar:nth-child(1) .bar-fill{background:var(--polaris-blue)}
+.polaris-theme .score-row:nth-child(2) .score-fill,.polaris-theme .category-bar:nth-child(2) .bar-fill{background:var(--polaris-green)}
+.polaris-theme .score-row:nth-child(3) .score-fill,.polaris-theme .category-bar:nth-child(3) .bar-fill{background:var(--polaris-orange)}
+.polaris-theme .score-row:nth-child(4) .score-fill,.polaris-theme .category-bar:nth-child(4) .bar-fill{background:var(--polaris-purple)}
+.polaris-theme .metric:nth-child(2){border-top-color:var(--polaris-blue)}
+.polaris-theme .metric:nth-child(3){border-top-color:var(--polaris-orange)}
+.polaris-theme .metric:nth-child(4){border-top-color:var(--polaris-purple)}
+.polaris-theme .timeline-step:nth-child(2)::before{background:var(--polaris-blue)}
+.polaris-theme .timeline-step:nth-child(3)::before{background:var(--polaris-orange)}
+.polaris-theme .timeline-step:nth-child(4)::before{background:var(--polaris-purple)}
+
+/* Dezign is intentionally restrained; BOG colors remain only as minor connective notes. */
+.dezign-theme .route-progress{background:linear-gradient(90deg,#927652 0 72%,#0a4a45 72% 88%,#c6658c 88%)}
