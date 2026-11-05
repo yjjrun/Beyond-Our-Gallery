@@ -275,3 +275,116 @@ body[class*="company-"]{
 
 /* Dezign is intentionally restrained; BOG colors remain only as minor connective notes. */
 .dezign-theme .route-progress{background:linear-gradient(90deg,#927652 0 72%,#0a4a45 72% 88%,#c6658c 88%)}
+
+/* Exhibition rooms: alternate quiet reading space, textured evidence and photography. */
+body[class*="company-"]{
+  --room-tint:var(--paper-2,#f4f0ef);
+  --room-deep:var(--deep,#0a4a45);
+  --room-photo:linear-gradient(135deg,var(--room-tint),var(--paper,#fff));
+  --room-photo-2:var(--room-photo);
+}
+body.company-winking{--room-tint:#f6e7ed;--room-deep:#50001d;--room-photo:url("winking-silver-and-blood.webp");--room-photo-2:url("winking-the-land.webp")}
+body.company-vividthree{--room-tint:#eef4dc;--room-deep:#252a2d;--room-photo:url("vividthree-vibransea.jpg");--room-photo-2:url("vividthree-chingay.jpg")}
+body.company-lumchang{--room-tint:#f3eadc;--room-deep:#300b0c;--room-photo:url("lum-chang-temasek-shophouse.webp");--room-photo-2:url("lum-chang-baba-house.webp")}
+body.company-mm2{--room-tint:#e8eff6;--room-deep:#0e2d53;--room-photo:url("mm2-cathay-lobby.png");--room-photo-2:url("mm2-liang-popo-ah-beng.png")}
+body.company-unusual{--room-tint:#eee9eb;--room-deep:#171315;--room-photo:url("unusual-stage.png");--room-photo-2:url("unusual-confetti.png")}
+body.company-ghy{--room-tint:#fff1d5;--room-deep:#5b090d;--room-photo:url("ghy-sisterhood.webp");--room-photo-2:url("ghy-collage.webp")}
+body.company-noontalk{--room-tint:#fff0db;--room-deep:#2a211c;--room-photo:url("noontalk-exhibition.png");--room-photo-2:url("noontalk-exhibition.png")}
+body.company-esplanade{--room-tint:#e6f1f3;--room-deep:#073f49;--room-photo:url("esplanade-night.png");--room-photo-2:url("esplanade-night.png")}
+.dezign-theme{--room-tint:#f2ece3;--room-deep:#332b24;--room-photo:url("dezign-chanel-holiday.jpg");--room-photo-2:url("dezign-team.jpg")}
+.polaris-theme{
+  --room-tint:#edf4ef;
+  --room-deep:#201a20;
+  --room-photo:linear-gradient(118deg,rgba(45,155,176,.88) 0 20%,rgba(67,166,74,.84) 20% 39%,rgba(198,213,31,.80) 39% 57%,rgba(230,139,29,.82) 57% 77%,rgba(116,63,128,.88) 77%);
+  --room-photo-2:linear-gradient(145deg,rgba(116,63,128,.90),rgba(45,155,176,.84) 34%,rgba(67,166,74,.82) 58%,rgba(230,139,29,.86));
+}
+
+.reading-layout .analysis-section{
+  isolation:isolate;
+  z-index:0;
+}
+.reading-layout .analysis-section::before{z-index:2}
+.reading-layout .analysis-section::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0 calc(50% - 50vw);
+  background-color:var(--paper,#fff);
+  background-image:linear-gradient(rgba(255,255,255,.76),rgba(255,255,255,.76)),repeating-linear-gradient(90deg,transparent 0 47px,color-mix(in srgb,var(--line) 22%,transparent) 47px 48px);
+}
+.reading-layout .analysis-section:is([data-index="2"],[data-index="4"],[data-index="6"],[data-index="8"],[data-index="10"])::after{
+  background-color:var(--room-tint);
+  background-image:
+    linear-gradient(115deg,color-mix(in srgb,var(--room-tint) 98%,transparent),color-mix(in srgb,var(--room-tint) 88%,transparent)),
+    repeating-linear-gradient(135deg,transparent 0 23px,color-mix(in srgb,var(--accent,var(--wine,var(--bog-pink))) 7%,transparent) 23px 24px);
+}
+.reading-layout .analysis-section#business::after{
+  background-color:var(--room-tint);
+  background-image:
+    linear-gradient(90deg,var(--room-tint) 0 48%,color-mix(in srgb,var(--room-tint) 82%,transparent) 72%,color-mix(in srgb,var(--room-tint) 46%,transparent) 100%),
+    var(--room-photo);
+  background-position:center,right center;
+  background-size:auto,cover;
+  background-repeat:no-repeat;
+}
+.reading-layout .analysis-section#demand::after{
+  background-color:var(--room-tint);
+  background-image:
+    linear-gradient(90deg,color-mix(in srgb,var(--room-tint) 96%,transparent) 0 58%,color-mix(in srgb,var(--room-tint) 55%,transparent) 100%),
+    var(--room-photo-2);
+  background-position:center,right center;
+  background-size:auto,cover;
+  background-repeat:no-repeat;
+}
+.reading-layout .analysis-section#portfolio::after{
+  background-color:var(--room-deep);
+  background-image:
+    linear-gradient(120deg,color-mix(in srgb,var(--room-deep) 98%,transparent),color-mix(in srgb,var(--room-deep) 84%,transparent)),
+    repeating-linear-gradient(100deg,transparent 0 72px,rgba(255,255,255,.045) 72px 73px);
+}
+.reading-layout .analysis-section#portfolio>.section-kicker{color:var(--accent-2,var(--pink,#ef91b1))}
+.reading-layout .analysis-section#portfolio>h2{color:#fff}
+.reading-layout .analysis-section#portfolio>.lede{color:rgba(255,255,255,.78)}
+.reading-layout .analysis-section#portfolio>.section-grid .metric{border-top-color:var(--accent-2,var(--pink,#ef91b1))}
+.reading-layout .analysis-section#portfolio>.section-grid .metric b{color:#fff}
+.reading-layout .analysis-section#portfolio>.section-grid .metric span{color:rgba(255,255,255,.72)}
+.reading-layout .analysis-section#portfolio::before{color:rgba(255,255,255,.14)}
+.reading-layout .thesis-rail{
+  margin-inline:-14px;
+  padding:18px 14px 16px;
+  background:color-mix(in srgb,var(--paper,#fff) 92%,transparent);
+  border-right:1px solid color-mix(in srgb,var(--line) 70%,transparent);
+  box-shadow:0 18px 45px color-mix(in srgb,var(--deep,#0a4a45) 10%,transparent);
+  backdrop-filter:blur(14px);
+}
+
+/* The two bespoke reports already alternate rooms; these lines add tactile depth. */
+.company-kingsmen :is(#score,#financials,#market,#risk)::after,
+.company-kingsmen :is(#segments,#demand,#component-scoring)::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:repeating-linear-gradient(135deg,transparent 0 27px,rgba(35,31,32,.022) 27px 28px);
+}
+.company-straco :is(#score,#financials,#component-scoring,#valuation,#risk)::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:repeating-linear-gradient(135deg,transparent 0 25px,rgba(143,77,0,.028) 25px 26px);
+}
+
+@media(max-width:760px){
+  .reading-layout .analysis-section#business::after,
+  .reading-layout .analysis-section#demand::after{
+    background-image:linear-gradient(180deg,var(--room-tint) 0 62%,color-mix(in srgb,var(--room-tint) 56%,transparent) 100%),var(--room-photo);
+    background-position:center,64% center;
+  }
+  .reading-layout .analysis-section#demand::after{background-image:linear-gradient(180deg,var(--room-tint) 0 62%,color-mix(in srgb,var(--room-tint) 56%,transparent) 100%),var(--room-photo-2)}
+  .reading-layout .thesis-rail{margin-inline:0;padding-inline:0;background:transparent;border-right:0;box-shadow:none;backdrop-filter:none}
+}
+
+@media(prefers-reduced-transparency:reduce){
+  .reading-layout .thesis-rail{background:var(--paper,#fff);backdrop-filter:none}
+}
